@@ -1,4 +1,4 @@
-# Scutum Admin Template (Vue.js version)
+# HekaMinium MES Application
 
 ## Quick Setup
 
@@ -20,4 +20,4 @@ $ yarn start
 $ yarn run generate
 ```
 
-For detailed explanation on how things works, check Scutum Admin documentation.
+For detailed explanation on how things works, check Heka documentation.
