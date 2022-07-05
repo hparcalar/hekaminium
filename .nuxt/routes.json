@@ -1,0 +1,850 @@
+[
+  {
+    "name": "account_auth",
+    "path": "/account_auth",
+    "component": "/home/hakan/Projects/HekaMinium/pages/account_auth.vue",
+    "chunkName": "pages/account_auth",
+    "_name": "_1bb89a48"
+  },
+  {
+    "name": "login_page",
+    "path": "/login_page",
+    "component": "/home/hakan/Projects/HekaMinium/pages/login_page.vue",
+    "chunkName": "pages/login_page",
+    "_name": "_50add507"
+  },
+  {
+    "name": "login_page_auth",
+    "path": "/login_page_auth",
+    "component": "/home/hakan/Projects/HekaMinium/pages/login_page_auth.vue",
+    "chunkName": "pages/login_page_auth",
+    "_name": "_daaa8ee0"
+  },
+  {
+    "name": "components-accordion",
+    "path": "/components/accordion",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/accordion.vue",
+    "chunkName": "pages/components/accordion",
+    "_name": "_a5b0011e"
+  },
+  {
+    "name": "components-alert",
+    "path": "/components/alert",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/alert.vue",
+    "chunkName": "pages/components/alert",
+    "_name": "_0abd0a05"
+  },
+  {
+    "name": "components-animations",
+    "path": "/components/animations",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/animations.vue",
+    "chunkName": "pages/components/animations",
+    "_name": "_4aebbf16"
+  },
+  {
+    "name": "components-avatars",
+    "path": "/components/avatars",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/avatars.vue",
+    "chunkName": "pages/components/avatars",
+    "_name": "_404ae8ba"
+  },
+  {
+    "name": "components-badge_label",
+    "path": "/components/badge_label",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/badge_label.vue",
+    "chunkName": "pages/components/badge_label",
+    "_name": "_33e1ed7e"
+  },
+  {
+    "name": "components-base",
+    "path": "/components/base",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/base.vue",
+    "chunkName": "pages/components/base",
+    "_name": "_f8947290"
+  },
+  {
+    "name": "components-breadcrumb",
+    "path": "/components/breadcrumb",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/breadcrumb.vue",
+    "chunkName": "pages/components/breadcrumb",
+    "_name": "_9959a0ac"
+  },
+  {
+    "name": "components-buttons",
+    "path": "/components/buttons",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/buttons.vue",
+    "chunkName": "pages/components/buttons",
+    "_name": "_5f4de56a"
+  },
+  {
+    "name": "components-cards",
+    "path": "/components/cards",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/cards.vue",
+    "chunkName": "pages/components/cards",
+    "_name": "_54580c8c"
+  },
+  {
+    "name": "components-color_palette",
+    "path": "/components/color_palette",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/color_palette.vue",
+    "chunkName": "pages/components/color_palette",
+    "_name": "_7b5b5fc8"
+  },
+  {
+    "name": "components-drop_dropdowns",
+    "path": "/components/drop_dropdowns",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/drop_dropdowns.vue",
+    "chunkName": "pages/components/drop_dropdowns",
+    "_name": "_b5368c4e"
+  },
+  {
+    "name": "components-fab_buttons",
+    "path": "/components/fab_buttons",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/fab_buttons.vue",
+    "chunkName": "pages/components/fab_buttons",
+    "_name": "_ec57a89c"
+  },
+  {
+    "name": "components-fancy_footer",
+    "path": "/components/fancy_footer",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/fancy_footer.vue",
+    "chunkName": "pages/components/fancy_footer",
+    "_name": "_6393de90"
+  },
+  {
+    "name": "components-fancy_toolbar",
+    "path": "/components/fancy_toolbar",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/fancy_toolbar.vue",
+    "chunkName": "pages/components/fancy_toolbar",
+    "_name": "_25ecdb2e"
+  },
+  {
+    "name": "components-filters",
+    "path": "/components/filters",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/filters.vue",
+    "chunkName": "pages/components/filters",
+    "_name": "_d9be0638"
+  },
+  {
+    "name": "components-footer",
+    "path": "/components/footer",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/footer.vue",
+    "chunkName": "pages/components/footer",
+    "_name": "_31bdc8c2"
+  },
+  {
+    "name": "components-grid",
+    "path": "/components/grid",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/grid.vue",
+    "chunkName": "pages/components/grid",
+    "_name": "_0571eea6"
+  },
+  {
+    "name": "components-height",
+    "path": "/components/height",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/height.vue",
+    "chunkName": "pages/components/height",
+    "_name": "_35e6fe4e"
+  },
+  {
+    "name": "components-icons",
+    "path": "/components/icons",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/icons.vue",
+    "chunkName": "pages/components/icons",
+    "_name": "_1012c4c3"
+  },
+  {
+    "name": "components-lists",
+    "path": "/components/lists",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/lists.vue",
+    "chunkName": "pages/components/lists",
+    "_name": "_19fd1fbe"
+  },
+  {
+    "name": "components-masonry",
+    "path": "/components/masonry",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/masonry.vue",
+    "chunkName": "pages/components/masonry",
+    "_name": "_3407bba4"
+  },
+  {
+    "name": "components-modals_dialogs",
+    "path": "/components/modals_dialogs",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/modals_dialogs.vue",
+    "chunkName": "pages/components/modals_dialogs",
+    "_name": "_68816e0e"
+  },
+  {
+    "name": "components-notifications",
+    "path": "/components/notifications",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/notifications.vue",
+    "chunkName": "pages/components/notifications",
+    "_name": "_3530ce91"
+  },
+  {
+    "name": "components-overlay",
+    "path": "/components/overlay",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/overlay.vue",
+    "chunkName": "pages/components/overlay",
+    "_name": "_a23b2a8e"
+  },
+  {
+    "name": "components-pagination",
+    "path": "/components/pagination",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/pagination.vue",
+    "chunkName": "pages/components/pagination",
+    "_name": "_aeacd87e"
+  },
+  {
+    "name": "components-progress_spinners",
+    "path": "/components/progress_spinners",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/progress_spinners.vue",
+    "chunkName": "pages/components/progress_spinners",
+    "_name": "_d27ccb16"
+  },
+  {
+    "name": "components-scrollable",
+    "path": "/components/scrollable",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/scrollable.vue",
+    "chunkName": "pages/components/scrollable",
+    "_name": "_4605db4e"
+  },
+  {
+    "name": "components-slider",
+    "path": "/components/slider",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/slider.vue",
+    "chunkName": "pages/components/slider",
+    "_name": "_1f007908"
+  },
+  {
+    "name": "components-sortable",
+    "path": "/components/sortable",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/sortable.vue",
+    "chunkName": "pages/components/sortable",
+    "_name": "_7524e0df"
+  },
+  {
+    "name": "components-swipe_list",
+    "path": "/components/swipe_list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/swipe_list.vue",
+    "chunkName": "pages/components/swipe_list",
+    "_name": "_0fab43ac"
+  },
+  {
+    "name": "components-tables",
+    "path": "/components/tables",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/tables.vue",
+    "chunkName": "pages/components/tables",
+    "_name": "_f71e46e8"
+  },
+  {
+    "name": "components-tabs",
+    "path": "/components/tabs",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/tabs.vue",
+    "chunkName": "pages/components/tabs",
+    "_name": "_95645636"
+  },
+  {
+    "name": "components-timeline",
+    "path": "/components/timeline",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/timeline.vue",
+    "chunkName": "pages/components/timeline",
+    "_name": "_766adca8"
+  },
+  {
+    "name": "components-toolbar",
+    "path": "/components/toolbar",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/toolbar.vue",
+    "chunkName": "pages/components/toolbar",
+    "_name": "_335c2464"
+  },
+  {
+    "name": "components-tooltips",
+    "path": "/components/tooltips",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/tooltips.vue",
+    "chunkName": "pages/components/tooltips",
+    "_name": "_2d7159b7"
+  },
+  {
+    "name": "components-transitions",
+    "path": "/components/transitions",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/transitions.vue",
+    "chunkName": "pages/components/transitions",
+    "_name": "_1cf4a6b2"
+  },
+  {
+    "name": "components-width",
+    "path": "/components/width",
+    "component": "/home/hakan/Projects/HekaMinium/pages/components/width.vue",
+    "chunkName": "pages/components/width",
+    "_name": "_5ed5696f"
+  },
+  {
+    "name": "dashboard-v1",
+    "path": "/dashboard/v1",
+    "component": "/home/hakan/Projects/HekaMinium/pages/dashboard/v1.vue",
+    "chunkName": "pages/dashboard/v1",
+    "_name": "_1ed22038"
+  },
+  {
+    "name": "dashboard-v2",
+    "path": "/dashboard/v2",
+    "component": "/home/hakan/Projects/HekaMinium/pages/dashboard/v2.vue",
+    "chunkName": "pages/dashboard/v2",
+    "_name": "_1ee037b9"
+  },
+  {
+    "name": "forms-dynamic_fields",
+    "path": "/forms/dynamic_fields",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/dynamic_fields.vue",
+    "chunkName": "pages/forms/dynamic_fields",
+    "_name": "_30ce197b"
+  },
+  {
+    "name": "forms-regular_elements",
+    "path": "/forms/regular_elements",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/regular_elements.vue",
+    "chunkName": "pages/forms/regular_elements",
+    "_name": "_69dd69fc"
+  },
+  {
+    "name": "forms-validation",
+    "path": "/forms/validation",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/validation.vue",
+    "chunkName": "pages/forms/validation",
+    "_name": "_f67d7f8a"
+  },
+  {
+    "name": "forms-wizard",
+    "path": "/forms/wizard",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/wizard.vue",
+    "chunkName": "pages/forms/wizard",
+    "children": [
+      {
+        "name": "forms-wizard-step1",
+        "path": "step1",
+        "component": "/home/hakan/Projects/HekaMinium/pages/forms/wizard/step1.vue",
+        "chunkName": "pages/forms/wizard/step1",
+        "_name": "_b5a11afa"
+      },
+      {
+        "name": "forms-wizard-step2",
+        "path": "step2",
+        "component": "/home/hakan/Projects/HekaMinium/pages/forms/wizard/step2.vue",
+        "chunkName": "pages/forms/wizard/step2",
+        "_name": "_b584ebf8"
+      },
+      {
+        "name": "forms-wizard-step3",
+        "path": "step3",
+        "component": "/home/hakan/Projects/HekaMinium/pages/forms/wizard/step3.vue",
+        "chunkName": "pages/forms/wizard/step3",
+        "_name": "_b568bcf6"
+      }
+    ],
+    "_name": "_3b0a4da6"
+  },
+  {
+    "name": "layout-boxed",
+    "path": "/layout/boxed",
+    "component": "/home/hakan/Projects/HekaMinium/pages/layout/boxed.vue",
+    "chunkName": "pages/layout/boxed",
+    "_name": "_235e5d32"
+  },
+  {
+    "name": "layout-mini_sidebar",
+    "path": "/layout/mini_sidebar",
+    "component": "/home/hakan/Projects/HekaMinium/pages/layout/mini_sidebar.vue",
+    "chunkName": "pages/layout/mini_sidebar",
+    "_name": "_1d592447"
+  },
+  {
+    "name": "layout-offcanvas_sidebar",
+    "path": "/layout/offcanvas_sidebar",
+    "component": "/home/hakan/Projects/HekaMinium/pages/layout/offcanvas_sidebar.vue",
+    "chunkName": "pages/layout/offcanvas_sidebar",
+    "_name": "_0006803e"
+  },
+  {
+    "name": "layout-top_menu",
+    "path": "/layout/top_menu",
+    "component": "/home/hakan/Projects/HekaMinium/pages/layout/top_menu.vue",
+    "chunkName": "pages/layout/top_menu",
+    "_name": "_741b31dc"
+  },
+  {
+    "name": "pages-blank",
+    "path": "/pages/blank",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/blank.vue",
+    "chunkName": "pages/pages/blank",
+    "_name": "_0335c952"
+  },
+  {
+    "name": "pages-blank_header_expanded",
+    "path": "/pages/blank_header_expanded",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/blank_header_expanded.vue",
+    "chunkName": "pages/pages/blank_header_expanded",
+    "_name": "_0752717a"
+  },
+  {
+    "name": "pages-chat",
+    "path": "/pages/chat",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/chat.vue",
+    "chunkName": "pages/pages/chat",
+    "_name": "_d71641b6"
+  },
+  {
+    "name": "pages-contact_list",
+    "path": "/pages/contact_list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/contact_list.vue",
+    "chunkName": "pages/pages/contact_list",
+    "_name": "_35f795aa"
+  },
+  {
+    "name": "pages-contact_list_single",
+    "path": "/pages/contact_list_single",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/contact_list_single.vue",
+    "chunkName": "pages/pages/contact_list_single",
+    "_name": "_43fde5a6"
+  },
+  {
+    "name": "pages-data_visualization",
+    "path": "/pages/data_visualization",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/data_visualization.vue",
+    "chunkName": "pages/pages/data_visualization",
+    "_name": "_138f4648"
+  },
+  {
+    "name": "pages-gallery",
+    "path": "/pages/gallery",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/gallery.vue",
+    "chunkName": "pages/pages/gallery",
+    "_name": "_28b82395"
+  },
+  {
+    "name": "pages-help_faq",
+    "path": "/pages/help_faq",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/help_faq.vue",
+    "chunkName": "pages/pages/help_faq",
+    "_name": "_e9a86b36"
+  },
+  {
+    "path": "/pages/invoices",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/invoices.vue",
+    "chunkName": "pages/pages/invoices",
+    "children": [
+      {
+        "name": "pages-invoices",
+        "path": "",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/invoices/index.vue",
+        "chunkName": "pages/pages/invoices/index",
+        "_name": "_3c60e976"
+      },
+      {
+        "name": "pages-invoices-new",
+        "path": "new",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/invoices/new.vue",
+        "chunkName": "pages/pages/invoices/new",
+        "_name": "_3e9ca644"
+      },
+      {
+        "name": "pages-invoices-id",
+        "path": ":id",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/invoices/_id.vue",
+        "chunkName": "pages/pages/invoices/_id",
+        "_name": "_2ae6d15e"
+      }
+    ],
+    "_name": "_3c8a5533"
+  },
+  {
+    "name": "pages-issues",
+    "path": "/pages/issues",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/issues.vue",
+    "chunkName": "pages/pages/issues",
+    "children": [
+      {
+        "name": "pages-issues-details",
+        "path": "details",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/issues/details.vue",
+        "chunkName": "pages/pages/issues/details",
+        "children": [
+          {
+            "name": "pages-issues-details-id",
+            "path": ":id?",
+            "component": "/home/hakan/Projects/HekaMinium/pages/pages/issues/details/_id.vue",
+            "chunkName": "pages/pages/issues/details/_id",
+            "_name": "_245743a5"
+          }
+        ],
+        "_name": "_022502fa"
+      },
+      {
+        "name": "pages-issues-list",
+        "path": "list",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/issues/list.vue",
+        "chunkName": "pages/pages/issues/list",
+        "_name": "_1dc22dd4"
+      }
+    ],
+    "_name": "_43aec447"
+  },
+  {
+    "path": "/pages/mailbox",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/mailbox.vue",
+    "chunkName": "pages/pages/mailbox",
+    "children": [
+      {
+        "name": "pages-mailbox",
+        "path": "",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/mailbox/index.vue",
+        "chunkName": "pages/pages/mailbox/index",
+        "_name": "_7585253a"
+      },
+      {
+        "name": "pages-mailbox-compose",
+        "path": "compose",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/mailbox/compose.vue",
+        "chunkName": "pages/pages/mailbox/compose",
+        "_name": "_352ccc0c"
+      },
+      {
+        "name": "pages-mailbox-message-id",
+        "path": "message/:id?",
+        "component": "/home/hakan/Projects/HekaMinium/pages/pages/mailbox/message/_id.vue",
+        "chunkName": "pages/pages/mailbox/message/_id",
+        "_name": "_48d6b7cc"
+      }
+    ],
+    "_name": "_4567b3f7"
+  },
+  {
+    "name": "pages-notes",
+    "path": "/pages/notes",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/notes.vue",
+    "chunkName": "pages/pages/notes",
+    "_name": "_07695a44"
+  },
+  {
+    "name": "pages-poi_listing",
+    "path": "/pages/poi_listing",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/poi_listing.vue",
+    "chunkName": "pages/pages/poi_listing",
+    "_name": "_039f21d2"
+  },
+  {
+    "name": "pages-pricing_tables",
+    "path": "/pages/pricing_tables",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/pricing_tables.vue",
+    "chunkName": "pages/pages/pricing_tables",
+    "_name": "_40ff88ea"
+  },
+  {
+    "name": "pages-settings",
+    "path": "/pages/settings",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/settings.vue",
+    "chunkName": "pages/pages/settings",
+    "_name": "_d8fbf020"
+  },
+  {
+    "name": "pages-task_board",
+    "path": "/pages/task_board",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/task_board.vue",
+    "chunkName": "pages/pages/task_board",
+    "_name": "_1ae715b9"
+  },
+  {
+    "name": "pages-user_profile",
+    "path": "/pages/user_profile",
+    "component": "/home/hakan/Projects/HekaMinium/pages/pages/user_profile.vue",
+    "chunkName": "pages/pages/user_profile",
+    "_name": "_0bb63182"
+  },
+  {
+    "name": "plugins-ajax",
+    "path": "/plugins/ajax",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/ajax.vue",
+    "chunkName": "pages/plugins/ajax",
+    "_name": "_3d053f11"
+  },
+  {
+    "name": "plugins-calendar",
+    "path": "/plugins/calendar",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/calendar.vue",
+    "chunkName": "pages/plugins/calendar",
+    "_name": "_1b71f4af"
+  },
+  {
+    "name": "plugins-calendar_events",
+    "path": "/plugins/calendar_events",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/calendar_events.vue",
+    "chunkName": "pages/plugins/calendar_events",
+    "_name": "_57963ad9"
+  },
+  {
+    "name": "plugins-charts",
+    "path": "/plugins/charts",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/charts.vue",
+    "chunkName": "pages/plugins/charts",
+    "_name": "_0a7f5c86"
+  },
+  {
+    "name": "plugins-code_editor",
+    "path": "/plugins/code_editor",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/code_editor.vue",
+    "chunkName": "pages/plugins/code_editor",
+    "_name": "_73b8669e"
+  },
+  {
+    "name": "plugins-data_grid",
+    "path": "/plugins/data_grid",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/data_grid.vue",
+    "chunkName": "pages/plugins/data_grid",
+    "_name": "_15b7111a"
+  },
+  {
+    "name": "plugins-datatables",
+    "path": "/plugins/datatables",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/datatables.vue",
+    "chunkName": "pages/plugins/datatables",
+    "_name": "_57971d40"
+  },
+  {
+    "name": "plugins-diff_tool",
+    "path": "/plugins/diff_tool",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/diff_tool.vue",
+    "chunkName": "pages/plugins/diff_tool",
+    "_name": "_b2c7df1e"
+  },
+  {
+    "name": "plugins-gantt_chart",
+    "path": "/plugins/gantt_chart",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/gantt_chart.vue",
+    "chunkName": "pages/plugins/gantt_chart",
+    "_name": "_42d6965c"
+  },
+  {
+    "name": "plugins-google_maps",
+    "path": "/plugins/google_maps",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/google_maps.vue",
+    "chunkName": "pages/plugins/google_maps",
+    "_name": "_eeba6f08"
+  },
+  {
+    "name": "plugins-idle_timeout",
+    "path": "/plugins/idle_timeout",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/idle_timeout.vue",
+    "chunkName": "pages/plugins/idle_timeout",
+    "_name": "_41ce68e7"
+  },
+  {
+    "name": "plugins-image_cropper",
+    "path": "/plugins/image_cropper",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/image_cropper.vue",
+    "chunkName": "pages/plugins/image_cropper",
+    "_name": "_1f135188"
+  },
+  {
+    "name": "plugins-push_notifications",
+    "path": "/plugins/push_notifications",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/push_notifications.vue",
+    "chunkName": "pages/plugins/push_notifications",
+    "_name": "_28649798"
+  },
+  {
+    "name": "plugins-tour",
+    "path": "/plugins/tour",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/tour.vue",
+    "chunkName": "pages/plugins/tour",
+    "_name": "_1d071b49"
+  },
+  {
+    "name": "plugins-tree",
+    "path": "/plugins/tree",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/tree.vue",
+    "chunkName": "pages/plugins/tree",
+    "_name": "_c095dce2"
+  },
+  {
+    "name": "plugins-vector_maps",
+    "path": "/plugins/vector_maps",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/vector_maps.vue",
+    "chunkName": "pages/plugins/vector_maps",
+    "_name": "_561e10b2"
+  },
+  {
+    "name": "plugins-vue_good_table",
+    "path": "/plugins/vue_good_table",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plugins/vue_good_table.vue",
+    "chunkName": "pages/plugins/vue_good_table",
+    "_name": "_2f780156"
+  },
+  {
+    "name": "forms-advanced_elements-checkbox_radio",
+    "path": "/forms/advanced_elements/checkbox_radio",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/checkbox_radio.vue",
+    "chunkName": "pages/forms/advanced_elements/checkbox_radio",
+    "_name": "_2a1c833c"
+  },
+  {
+    "name": "forms-advanced_elements-color_picker",
+    "path": "/forms/advanced_elements/color_picker",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/color_picker.vue",
+    "chunkName": "pages/forms/advanced_elements/color_picker",
+    "_name": "_3629d767"
+  },
+  {
+    "name": "forms-advanced_elements-date_picker",
+    "path": "/forms/advanced_elements/date_picker",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/date_picker.vue",
+    "chunkName": "pages/forms/advanced_elements/date_picker",
+    "_name": "_1e60b05c"
+  },
+  {
+    "name": "forms-advanced_elements-date_range_picker",
+    "path": "/forms/advanced_elements/date_range_picker",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/date_range_picker.vue",
+    "chunkName": "pages/forms/advanced_elements/date_range_picker",
+    "_name": "_669a1b14"
+  },
+  {
+    "name": "forms-advanced_elements-inputmask",
+    "path": "/forms/advanced_elements/inputmask",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/inputmask.vue",
+    "chunkName": "pages/forms/advanced_elements/inputmask",
+    "_name": "_1ac3aaee"
+  },
+  {
+    "name": "forms-advanced_elements-multiselect",
+    "path": "/forms/advanced_elements/multiselect",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/multiselect.vue",
+    "chunkName": "pages/forms/advanced_elements/multiselect",
+    "_name": "_fdc83bf0"
+  },
+  {
+    "name": "forms-advanced_elements-range_slider",
+    "path": "/forms/advanced_elements/range_slider",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/range_slider.vue",
+    "chunkName": "pages/forms/advanced_elements/range_slider",
+    "_name": "_05f91020"
+  },
+  {
+    "name": "forms-advanced_elements-rating",
+    "path": "/forms/advanced_elements/rating",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/rating.vue",
+    "chunkName": "pages/forms/advanced_elements/rating",
+    "_name": "_3cf4765a"
+  },
+  {
+    "name": "forms-advanced_elements-select2",
+    "path": "/forms/advanced_elements/select2",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/select2.vue",
+    "chunkName": "pages/forms/advanced_elements/select2",
+    "_name": "_565ebe49"
+  },
+  {
+    "name": "forms-advanced_elements-switches",
+    "path": "/forms/advanced_elements/switches",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/switches.vue",
+    "chunkName": "pages/forms/advanced_elements/switches",
+    "_name": "_bec86842"
+  },
+  {
+    "name": "forms-advanced_elements-time_picker",
+    "path": "/forms/advanced_elements/time_picker",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/time_picker.vue",
+    "chunkName": "pages/forms/advanced_elements/time_picker",
+    "_name": "_17df6b53"
+  },
+  {
+    "name": "forms-examples-advertising_evaluation_form",
+    "path": "/forms/examples/advertising_evaluation_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/advertising_evaluation_form.vue",
+    "chunkName": "pages/forms/examples/advertising_evaluation_form",
+    "_name": "_b2dd9e70"
+  },
+  {
+    "name": "forms-examples-booking_form",
+    "path": "/forms/examples/booking_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/booking_form.vue",
+    "chunkName": "pages/forms/examples/booking_form",
+    "_name": "_37f838c4"
+  },
+  {
+    "name": "forms-examples-car_rental_form",
+    "path": "/forms/examples/car_rental_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/car_rental_form.vue",
+    "chunkName": "pages/forms/examples/car_rental_form",
+    "_name": "_13efcde0"
+  },
+  {
+    "name": "forms-examples-checkout_form",
+    "path": "/forms/examples/checkout_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/checkout_form.vue",
+    "chunkName": "pages/forms/examples/checkout_form",
+    "_name": "_0770aace"
+  },
+  {
+    "name": "forms-examples-contact_forms",
+    "path": "/forms/examples/contact_forms",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/contact_forms.vue",
+    "chunkName": "pages/forms/examples/contact_forms",
+    "_name": "_4ea1804c"
+  },
+  {
+    "name": "forms-examples-job_application_form",
+    "path": "/forms/examples/job_application_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/job_application_form.vue",
+    "chunkName": "pages/forms/examples/job_application_form",
+    "_name": "_5b5e506e"
+  },
+  {
+    "name": "forms-examples-medical_history_form",
+    "path": "/forms/examples/medical_history_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/medical_history_form.vue",
+    "chunkName": "pages/forms/examples/medical_history_form",
+    "_name": "_ec154c9e"
+  },
+  {
+    "name": "forms-examples-registration_form",
+    "path": "/forms/examples/registration_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/registration_form.vue",
+    "chunkName": "pages/forms/examples/registration_form",
+    "_name": "_3b0f6e86"
+  },
+  {
+    "name": "forms-examples-rental_application_form",
+    "path": "/forms/examples/rental_application_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/rental_application_form.vue",
+    "chunkName": "pages/forms/examples/rental_application_form",
+    "_name": "_0677ad0a"
+  },
+  {
+    "name": "forms-examples-transaction_feedback_form",
+    "path": "/forms/examples/transaction_feedback_form",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/examples/transaction_feedback_form.vue",
+    "chunkName": "pages/forms/examples/transaction_feedback_form",
+    "_name": "_47ed2e19"
+  },
+  {
+    "name": "forms-wysiwyg-ckeditor",
+    "path": "/forms/wysiwyg/ckeditor",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/wysiwyg/ckeditor.vue",
+    "chunkName": "pages/forms/wysiwyg/ckeditor",
+    "_name": "_1a97ead9"
+  },
+  {
+    "name": "forms-wysiwyg-quill",
+    "path": "/forms/wysiwyg/quill",
+    "component": "/home/hakan/Projects/HekaMinium/pages/forms/wysiwyg/quill.vue",
+    "chunkName": "pages/forms/wysiwyg/quill",
+    "_name": "_6362abb1"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/hakan/Projects/HekaMinium/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_311db640"
+  }
+]
