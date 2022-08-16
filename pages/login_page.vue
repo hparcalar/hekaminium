@@ -12,6 +12,13 @@
 					<div id="sc-login-form" class="sc-toggle-login-register sc-toggle-login-password">
 						<div class="sc-login-page-inner">
 							<div class="uk-margin-medium">
+								<ScInput v-model="loginData.plantCode">
+									<label>
+										İşletme Kodu
+									</label>
+								</ScInput>
+							</div>
+							<div class="uk-margin-medium">
 								<ScInput v-model="loginData.login">
 									<label>
 										Kullanıcı Adı
@@ -31,10 +38,10 @@
 								</div> -->
 							</div>
 							<div class="uk-margin-large-top">
-								<nuxt-link to="/" class="sc-button sc-button-large sc-button-block sc-button-primary"
+								<button type="button" @click="tryLogin" class="sc-button sc-button-large sc-button-block sc-button-primary"
 								style="background-color: #326295;text-transform: none;">
 									Giriş Yap
-								</nuxt-link>
+								</button>
 								<!-- <div class="uk-child-width-1-3 uk-grid-medium uk-margin-medium-top" data-uk-grid>
 									<div>
 										<a href="javascript:void(0)" class="sc-button sc-button-social sc-button-facebook uk-width-1-1 uk-flex-center">
@@ -65,65 +72,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="sc-register-form" class="sc-toggle-login-register" hidden>
-						<div class="sc-login-page-inner">
-							<div class="uk-margin-medium">
-								<ScInput v-model="registerData.name">
-									<label>
-										Name
-									</label>
-								</ScInput>
-							</div>
-							<div class="uk-margin-medium">
-								<ScInput v-model="registerData.email">
-									<label>
-										Email
-									</label>
-								</ScInput>
-							</div>
-							<div class="uk-margin-medium">
-								<ScInput v-model="registerData.password">
-									<label>
-										Password
-									</label>
-								</ScInput>
-							</div>
-							<div class="uk-margin-large-top">
-								<button class="sc-button sc-button-large sc-button-block sc-button-secondary">
-									Sign Up
-								</button>
-								<div class="uk-margin-large-top uk-flex uk-flex-middle uk-flex-center">
-									<a href="javascript:void(0)" class="sc-text-semibold" data-uk-toggle="target: .sc-toggle-login-register; animation: uk-animation-scale-up">
-										Back to login form
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="sc-password-form" class="sc-toggle-login-password" hidden>
-						<div class="sc-login-page-inner">
-							<div class="uk-margin-medium">
-								Please enter your email address. You will receive a link to reset your password.
-							</div>
-							<div class="uk-margin-medium">
-								<ScInput v-model="recoverPassEmail">
-									<label>
-										Email
-									</label>
-								</ScInput>
-							</div>
-							<div class="uk-margin-large-top">
-								<button class="sc-button sc-button-large sc-button-block sc-button-primary">
-									Reset Password
-								</button>
-								<div class="uk-margin-large-top uk-flex uk-flex-middle uk-flex-center">
-									<a href="javascript:void(0)" class="sc-text-semibold" data-uk-toggle="target: .sc-toggle-login-password; animation: uk-animation-scale-up">
-										Back to login form
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</ScCardBody>
 			</ScCard>
 		</div>
@@ -132,6 +81,8 @@
 
 <script>
 import ScInput from '~/components/Input'
+import { useApi } from '../composable/useApi';
+import { useUserSession } from '../composable/userSession';
 
 export default {
 	name: 'LoginPage',
@@ -142,7 +93,8 @@ export default {
 	data: () => ({
 		loginData: {
 			login: '',
-			password: ''
+			password: '',
+			plantCode: '',
 		},
 		registerData: {
 			name: '',
@@ -162,6 +114,30 @@ export default {
 		},
 		appLogoLight () {
 			return require('~/assets/img/login-logo.png');
+		}
+	},
+	methods: {
+		async tryLogin(){
+			try {
+				const api = useApi();
+				const postResult = await api.post('User/LoginSysUser', {
+					login: this.loginData.login,
+					password: this.loginData.password,
+					plantCode: this.loginData.plantCode,
+				});
+
+				if (postResult.status == 200){
+					const userSession = useUserSession();
+					userSession.setToken = postResult.data.Token;
+					userSession.setUser = {
+						id: postResult.data.RecordId,
+						name: postResult.data.InfoMessage,
+					};
+					window.location.href = '/';
+				}
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	}
 }

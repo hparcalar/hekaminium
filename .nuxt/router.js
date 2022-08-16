@@ -5,8 +5,12 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _1bb89a48 = () => interopDefault(import('../pages/account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
+const _e06c81ba = () => interopDefault(import('../pages/firm/index.vue' /* webpackChunkName: "pages/firm/index" */))
+const _2a2ade7e = () => interopDefault(import('../pages/firm-category/index.vue' /* webpackChunkName: "pages/firm-category/index" */))
 const _50add507 = () => interopDefault(import('../pages/login_page.vue' /* webpackChunkName: "pages/login_page" */))
 const _daaa8ee0 = () => interopDefault(import('../pages/login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
+const _63adc9bc = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
+const _1bd76a17 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
 const _a5b0011e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _0abd0a05 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
 const _4aebbf16 = () => interopDefault(import('../pages/components/animations.vue' /* webpackChunkName: "pages/components/animations" */))
@@ -46,6 +50,8 @@ const _1cf4a6b2 = () => interopDefault(import('../pages/components/transitions.v
 const _5ed5696f = () => interopDefault(import('../pages/components/width.vue' /* webpackChunkName: "pages/components/width" */))
 const _1ed22038 = () => interopDefault(import('../pages/dashboard/v1.vue' /* webpackChunkName: "pages/dashboard/v1" */))
 const _1ee037b9 = () => interopDefault(import('../pages/dashboard/v2.vue' /* webpackChunkName: "pages/dashboard/v2" */))
+const _6bd455a2 = () => interopDefault(import('../pages/firm-category/list.vue' /* webpackChunkName: "pages/firm-category/list" */))
+const _5b976746 = () => interopDefault(import('../pages/firm/list.vue' /* webpackChunkName: "pages/firm/list" */))
 const _30ce197b = () => interopDefault(import('../pages/forms/dynamic_fields.vue' /* webpackChunkName: "pages/forms/dynamic_fields" */))
 const _69dd69fc = () => interopDefault(import('../pages/forms/regular_elements.vue' /* webpackChunkName: "pages/forms/regular_elements" */))
 const _f67d7f8a = () => interopDefault(import('../pages/forms/validation.vue' /* webpackChunkName: "pages/forms/validation" */))
@@ -83,6 +89,7 @@ const _40ff88ea = () => interopDefault(import('../pages/pages/pricing_tables.vue
 const _d8fbf020 = () => interopDefault(import('../pages/pages/settings.vue' /* webpackChunkName: "pages/pages/settings" */))
 const _1ae715b9 = () => interopDefault(import('../pages/pages/task_board.vue' /* webpackChunkName: "pages/pages/task_board" */))
 const _0bb63182 = () => interopDefault(import('../pages/pages/user_profile.vue' /* webpackChunkName: "pages/pages/user_profile" */))
+const _5e6feab8 = () => interopDefault(import('../pages/plant/list.vue' /* webpackChunkName: "pages/plant/list" */))
 const _3d053f11 = () => interopDefault(import('../pages/plugins/ajax.vue' /* webpackChunkName: "pages/plugins/ajax" */))
 const _1b71f4af = () => interopDefault(import('../pages/plugins/calendar.vue' /* webpackChunkName: "pages/plugins/calendar" */))
 const _57963ad9 = () => interopDefault(import('../pages/plugins/calendar_events.vue' /* webpackChunkName: "pages/plugins/calendar_events" */))
@@ -100,6 +107,7 @@ const _1d071b49 = () => interopDefault(import('../pages/plugins/tour.vue' /* web
 const _c095dce2 = () => interopDefault(import('../pages/plugins/tree.vue' /* webpackChunkName: "pages/plugins/tree" */))
 const _561e10b2 = () => interopDefault(import('../pages/plugins/vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
 const _2f780156 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
+const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
 const _3629d767 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
 const _1e60b05c = () => interopDefault(import('../pages/forms/advanced_elements/date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
@@ -141,6 +149,14 @@ export const routerOptions = {
     component: _1bb89a48,
     name: "account_auth"
   }, {
+    path: "/firm",
+    component: _e06c81ba,
+    name: "firm"
+  }, {
+    path: "/firm-category",
+    component: _2a2ade7e,
+    name: "firm-category"
+  }, {
     path: "/login_page",
     component: _50add507,
     name: "login_page"
@@ -148,6 +164,14 @@ export const routerOptions = {
     path: "/login_page_auth",
     component: _daaa8ee0,
     name: "login_page_auth"
+  }, {
+    path: "/plant",
+    component: _63adc9bc,
+    name: "plant"
+  }, {
+    path: "/project-category",
+    component: _1bd76a17,
+    name: "project-category"
   }, {
     path: "/components/accordion",
     component: _a5b0011e,
@@ -305,6 +329,14 @@ export const routerOptions = {
     component: _1ee037b9,
     name: "dashboard-v2"
   }, {
+    path: "/firm-category/list",
+    component: _6bd455a2,
+    name: "firm-category-list"
+  }, {
+    path: "/firm/list",
+    component: _5b976746,
+    name: "firm-list"
+  }, {
     path: "/forms/dynamic_fields",
     component: _30ce197b,
     name: "forms-dynamic_fields"
@@ -456,6 +488,10 @@ export const routerOptions = {
     component: _0bb63182,
     name: "pages-user_profile"
   }, {
+    path: "/plant/list",
+    component: _5e6feab8,
+    name: "plant-list"
+  }, {
     path: "/plugins/ajax",
     component: _3d053f11,
     name: "plugins-ajax"
@@ -523,6 +559,10 @@ export const routerOptions = {
     path: "/plugins/vue_good_table",
     component: _2f780156,
     name: "plugins-vue_good_table"
+  }, {
+    path: "/project-category/list",
+    component: _210b72e9,
+    name: "project-category-list"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
     component: _2a1c833c,

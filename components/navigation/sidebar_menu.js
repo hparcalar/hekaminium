@@ -35,82 +35,104 @@ export const menuEntries = [
 	},
 	{
 		id: uniqueID(),
-		title: "Satış",
-		icon: "mdi mdi-percent",
-		page: "/sales",
+		title: "Proje Yönetimi",
+		icon: "mdi mdi-memory",
+		page: "/project",
 		isOpen: false,
 		level: 0,
 		submenu: [
+			{
+				id: uniqueID(),
+				title: "Projeler",
+				icon: "mdi mdi-format-list-bulleted-square",
+				page: "/project"
+			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
-				title: "Sipariş",
-				page: "/sales/order"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-receipt",
-				title: "İrsaliye",
-				page: "/sales/receipt"
-			}
-		]
-	},
-	{
-		id: uniqueID(),
-		title: "Planlama",
-		icon: "mdi mdi-floor-plan",
-		page: "/planning",
-		isOpen: false,
-		level: 0,
-		submenu: [
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-sitemap",
-				title: "Hammadde İhtiyaçları",
-				page: "/planning/item-needs"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-arrow-decision",
-				title: "Üretim Planlama",
-				page: "/planning/production"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-truck-fast-outline",
-				title: "Sevkiyat Planlama",
-				page: "/planning/delivery"
-			}
-		]
-	},
-	{
-		id: uniqueID(),
-		title: "Üretim",
-		icon: "mdi mdi-factory",
-		page: "/production",
-		isOpen: false,
-		level: 0,
-		submenu: [
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-cast",
-				title: "Üretim İzleme",
-				page: "/production/live"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-selection-ellipse-arrow-inside",
-				title: "Üretim Hareketleri",
-				page: "/production/operations"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-wrench",
-				title: "Bakım Yönetimi",
-				page: "/production/maintenance"
+				title: "Güncel Durum Analizi",
+				page: "/project/live-analysis"
 			},
 		]
 	},
+	// {
+	// 	id: uniqueID(),
+	// 	title: "Satış",
+	// 	icon: "mdi mdi-percent",
+	// 	page: "/sales",
+	// 	isOpen: false,
+	// 	level: 0,
+	// 	submenu: [
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-bookmark-outline",
+	// 			title: "Sipariş",
+	// 			page: "/sales/order"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-receipt",
+	// 			title: "İrsaliye",
+	// 			page: "/sales/receipt"
+	// 		}
+	// 	]
+	// },
+	// {
+	// 	id: uniqueID(),
+	// 	title: "Planlama",
+	// 	icon: "mdi mdi-floor-plan",
+	// 	page: "/planning",
+	// 	isOpen: false,
+	// 	level: 0,
+	// 	submenu: [
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-sitemap",
+	// 			title: "Hammadde İhtiyaçları",
+	// 			page: "/planning/item-needs"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-arrow-decision",
+	// 			title: "Üretim Planlama",
+	// 			page: "/planning/production"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-truck-fast-outline",
+	// 			title: "Sevkiyat Planlama",
+	// 			page: "/planning/delivery"
+	// 		}
+	// 	]
+	// },
+	// {
+	// 	id: uniqueID(),
+	// 	title: "Üretim",
+	// 	icon: "mdi mdi-factory",
+	// 	page: "/production",
+	// 	isOpen: false,
+	// 	level: 0,
+	// 	submenu: [
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-cast",
+	// 			title: "Üretim İzleme",
+	// 			page: "/production/live"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-selection-ellipse-arrow-inside",
+	// 			title: "Üretim Hareketleri",
+	// 			page: "/production/operations"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-wrench",
+	// 			title: "Bakım Yönetimi",
+	// 			page: "/production/maintenance"
+	// 		},
+	// 	]
+	// },
 	{
 		id: uniqueID(),
 		title: "Depo",
@@ -176,59 +198,65 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Firma",
 				icon: "mdi mdi-account-box",
-				page: "/definitions/trade/firm"
+				page: "/firm/list"
 			},
 			{
 				id: uniqueID(),
 				title: "Firma Kategorisi",
 				icon: "mdi mdi-folder-multiple",
-				page: "/definitions/trade/firm-category"
+				page: "/firm-category/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Proje Kategorisi",
+				icon: "mdi mdi-folder-multiple",
+				page: "/project-category/list"
 			}
 		]
 	},
-	{
-		id: uniqueID(),
-		title: "Üretim Yönetimi",
-		icon: "mdi mdi-factory",
-		page: "/definitions/production",
-		isOpen: false,
-		level: 0,
-		submenu: [
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-road",
-				title: "Üretim Hattı",
-				page: "/definitions/production/production-line"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-chip",
-				title: "Makine",
-				page: "/definitions/production/machine"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-transit-connection-variant",
-				title: "Proses",
-				page: "/definitions/production/process"
-			},
-			{
-				id: uniqueID(),
-				icon: "mdi mdi-routes",
-				title: "Rota",
-				page: "/definitions/production/route"
-			},
-		]
-	},
+	// {
+	// 	id: uniqueID(),
+	// 	title: "Üretim Yönetimi",
+	// 	icon: "mdi mdi-factory",
+	// 	page: "/definitions/production",
+	// 	isOpen: false,
+	// 	level: 0,
+	// 	submenu: [
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-road",
+	// 			title: "Üretim Hattı",
+	// 			page: "/definitions/production/production-line"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-chip",
+	// 			title: "Makine",
+	// 			page: "/definitions/production/machine"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-transit-connection-variant",
+	// 			title: "Proses",
+	// 			page: "/definitions/production/process"
+	// 		},
+	// 		{
+	// 			id: uniqueID(),
+	// 			icon: "mdi mdi-routes",
+	// 			title: "Rota",
+	// 			page: "/definitions/production/route"
+	// 		},
+	// 	]
+	// },
 	{
 		section_title: "ANALİZ"
 	},
-	{
-		id: uniqueID(),
-		title: "Üretim Verimliliği",
-		page: "/dashboard/v1",
-		icon: "mdi mdi-monitor-dashboard",
-	},
+	// {
+	// 	id: uniqueID(),
+	// 	title: "Üretim Verimliliği",
+	// 	page: "/dashboard/v1",
+	// 	icon: "mdi mdi-monitor-dashboard",
+	// },
 	{
 		id: uniqueID(),
 		title: "Satış İstatistikleri",
@@ -261,7 +289,7 @@ export const menuEntries = [
 	{
 		id: uniqueID(),
 		title: "İşletmeler",
-		page: "/plant",
+		page: "/plant/list",
 		icon: "mdi mdi-office-building",
 	},
 	{

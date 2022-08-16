@@ -31,7 +31,12 @@ export default {
 		data: {
 			type: Array,
 			default: () => [],
-			required: true
+			required: false
+		},
+		customColumns: {
+			type: Array,
+			default: () => [],
+			required: false,
 		},
 		options: {
 			type: Object,
@@ -64,19 +69,29 @@ export default {
 		},
 		headers () {
 			let names = [];
-			Object.keys(this.data[0]).map(k => {
-				let name = k.replace(/_/g, ' ');
-				names.push(name.charAt(0).toUpperCase() + name.slice(1))
-			});
+
+			if (this.customColumns && this.customColumns.length > 0)
+				names = this.customColumns.map(d => d.title);
+			else
+				Object.keys(this.data[0]).map(k => {
+					let name = k.replace(/_/g, ' ');
+					names.push(name.charAt(0).toUpperCase() + name.slice(1))
+				});
+
 			return names
 		},
 		columns () {
 			let columns = [];
-			Object.keys(this.data[0]).map(k => {
-				columns.push({
-					data: k
-				})
-			});
+
+			if (this.customColumns && this.customColumns.length > 0)
+				columns = [...this.customColumns];
+			else
+				Object.keys(this.data[0]).map(k => {
+					columns.push({
+						data: k
+					})
+				});
+				
 			return columns;
 		},
 		...mapState([
@@ -97,16 +112,23 @@ export default {
 				let uniq = newIds.filter(k => {
 					return !oldIds.includes(k)
 				});
-				if (uniq.length) {
+				if (uniq.length && oldLength > 0) {
 					const newEl = newVal.filter(obj => {
 						return obj.id === uniq[0]
 					});
 					this.$dt.row.add(newEl[0]).draw('full-hold');
 				}
+				else if (uniq.length && oldLength == 0){
+					for (let i = 0; i < newVal.length; i++) {
+						const element = newVal[i];
+						this.$dt.row.add(element).draw('full-hold');;
+					}
+				}
 			} else {
 				let uniq = oldIds.filter(k => {
 					return !newIds.includes(k)
 				});
+				
 				if (uniq.length) {
 					this.$dt.row(':eq('+ uniq[0] +')').remove().draw('full-hold')
 				}

@@ -22,6 +22,7 @@ import Footer from '~/components/Footer.vue';
 import FancyFooter from '~/components/FancyFooter.vue';
 import FancyToolbar from '~/components/FancyToolbar.vue';
 import { ScProgressOverlayRoot } from '~/components/progress'
+import { useUserSession } from '~/composable/userSession'
 
 // main styles
 require('assets/scss/main.scss');
@@ -146,6 +147,8 @@ export default {
 		this.HTMLClasses.activeTheme = (this.vxAppTheme !== 'theme-default') ? 'sc-' + this.vxAppTheme : '';
 	},
 	mounted () {
+		this.checkLogin();
+
 		this.$nextTick(() => {
 			if(scMq.mediumMin()) {
 				this.HTMLClasses.sidebarMainExpanded = this.$store.getters.sidebarMainState ? '' : 'sc-sidebar-main-slide';
@@ -164,6 +167,14 @@ export default {
 		mergeHTMLClasses () {
 			const HTML = document.getElementsByTagName("html")[0] || document.querySelector("html");
 			HTML.className = Object.keys(this.HTMLClasses).map(key => { return this.HTMLClasses[key] }).join(' ').trim();
+		},
+
+		async checkLogin() {
+			const session = useUserSession();
+			const tokenResult = await session.checkToken();
+			if (tokenResult == false){
+				window.location.href = '/login_page';
+			}
 		}
 	}
 }

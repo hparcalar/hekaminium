@@ -172,18 +172,18 @@
 							<ul class="uk-nav uk-nav-navbar">
 								<li>
 									<nuxt-link to="/pages/user_profile">
-										Profile
+										{{ user.name }}
 									</nuxt-link>
 								</li>
 								<li>
 									<nuxt-link to="/pages/settings">
-										Settings
+										Ayarlar
 									</nuxt-link>
 								</li>
 								<li>
-									<nuxt-link to="/login_page">
-										Log Out
-									</nuxt-link>
+									<a @click="logoutUser">
+										Çıkış Yap
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -203,6 +203,8 @@ import { scMq } from '~/assets/js/utils'
 import ScFullscreen from '~/components/FullScreen.vue';
 import ScTopMenu from '~/components/topmenu/TopMenu.vue';
 import { scHelpers } from "~/assets/js/utils";
+import { useUserSession } from '../composable/userSession';
+
 const { uniqueID } = scHelpers;
 
 export default {
@@ -213,6 +215,7 @@ export default {
 	},
 	data: () => ({
 		user: {
+			name: '',
 			avatar: require('~/assets/img/avatars/avatar_default_sm.png'),
 			messages: [
 				{
@@ -496,6 +499,9 @@ export default {
 		// sticky header
 		var options = scMq.mediumMax() ? { showOnUp: true, animation: "uk-animation-slide-top" } : {};
 		UIkit.sticky(this.$refs.header, options);
+
+		const userSession = useUserSession();
+		this.user.name = userSession.user.name;
 	},
 	methods: {
 		toggleMainSidebar () {
@@ -516,6 +522,11 @@ export default {
 		},
 		isActiveLang (code) {
 			return code === this.vxActiveLocale
+		},
+		logoutUser (){
+			const userSession = useUserSession();
+			userSession.logoutUser();
+			window.location.href = '/login_page';
 		}
 	}
 }

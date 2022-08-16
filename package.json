@@ -5,7 +5,7 @@
 	"author": "tzd",
 	"private": true,
 	"scripts": {
-		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt --port 3010",
+		"dev": "nuxt --port 3010",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
@@ -32,6 +32,7 @@
 		"@taoqf/quill-image-resize-module": "^3.0.1",
 		"accounting-big": "^1.0.1",
 		"autosize": "^4.0.2",
+		"axios": "^0.27.2",
 		"billboard.js": "~1.11",
 		"chance": "^1.1.7",
 		"chart.js": "^2.9.4",

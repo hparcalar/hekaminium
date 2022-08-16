@@ -7,6 +7,20 @@
     "_name": "_1bb89a48"
   },
   {
+    "name": "firm",
+    "path": "/firm",
+    "component": "/home/hakan/Projects/HekaMinium/pages/firm/index.vue",
+    "chunkName": "pages/firm/index",
+    "_name": "_e06c81ba"
+  },
+  {
+    "name": "firm-category",
+    "path": "/firm-category",
+    "component": "/home/hakan/Projects/HekaMinium/pages/firm-category/index.vue",
+    "chunkName": "pages/firm-category/index",
+    "_name": "_2a2ade7e"
+  },
+  {
     "name": "login_page",
     "path": "/login_page",
     "component": "/home/hakan/Projects/HekaMinium/pages/login_page.vue",
@@ -19,6 +33,20 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/login_page_auth.vue",
     "chunkName": "pages/login_page_auth",
     "_name": "_daaa8ee0"
+  },
+  {
+    "name": "plant",
+    "path": "/plant",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plant/index.vue",
+    "chunkName": "pages/plant/index",
+    "_name": "_63adc9bc"
+  },
+  {
+    "name": "project-category",
+    "path": "/project-category",
+    "component": "/home/hakan/Projects/HekaMinium/pages/project-category/index.vue",
+    "chunkName": "pages/project-category/index",
+    "_name": "_1bd76a17"
   },
   {
     "name": "components-accordion",
@@ -294,6 +322,20 @@
     "_name": "_1ee037b9"
   },
   {
+    "name": "firm-category-list",
+    "path": "/firm-category/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/firm-category/list.vue",
+    "chunkName": "pages/firm-category/list",
+    "_name": "_6bd455a2"
+  },
+  {
+    "name": "firm-list",
+    "path": "/firm/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/firm/list.vue",
+    "chunkName": "pages/firm/list",
+    "_name": "_5b976746"
+  },
+  {
     "name": "forms-dynamic_fields",
     "path": "/forms/dynamic_fields",
     "component": "/home/hakan/Projects/HekaMinium/pages/forms/dynamic_fields.vue",
@@ -561,6 +603,13 @@
     "_name": "_0bb63182"
   },
   {
+    "name": "plant-list",
+    "path": "/plant/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/plant/list.vue",
+    "chunkName": "pages/plant/list",
+    "_name": "_5e6feab8"
+  },
+  {
     "name": "plugins-ajax",
     "path": "/plugins/ajax",
     "component": "/home/hakan/Projects/HekaMinium/pages/plugins/ajax.vue",
@@ -678,6 +727,13 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/plugins/vue_good_table.vue",
     "chunkName": "pages/plugins/vue_good_table",
     "_name": "_2f780156"
+  },
+  {
+    "name": "project-category-list",
+    "path": "/project-category/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/project-category/list.vue",
+    "chunkName": "pages/project-category/list",
+    "_name": "_210b72e9"
   },
   {
     "name": "forms-advanced_elements-checkbox_radio",
