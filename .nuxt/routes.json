@@ -42,6 +42,13 @@
     "_name": "_63adc9bc"
   },
   {
+    "name": "project",
+    "path": "/project",
+    "component": "/home/hakan/Projects/HekaMinium/pages/project/index.vue",
+    "chunkName": "pages/project/index",
+    "_name": "_fccbd92c"
+  },
+  {
     "name": "project-category",
     "path": "/project-category",
     "component": "/home/hakan/Projects/HekaMinium/pages/project-category/index.vue",
@@ -736,6 +743,20 @@
     "_name": "_210b72e9"
   },
   {
+    "name": "project-list",
+    "path": "/project/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/project/list.vue",
+    "chunkName": "pages/project/list",
+    "_name": "_af165994"
+  },
+  {
+    "name": "user-member",
+    "path": "/user/member",
+    "component": "/home/hakan/Projects/HekaMinium/pages/user/member/index.vue",
+    "chunkName": "pages/user/member/index",
+    "_name": "_06e9ff22"
+  },
+  {
     "name": "forms-advanced_elements-checkbox_radio",
     "path": "/forms/advanced_elements/checkbox_radio",
     "component": "/home/hakan/Projects/HekaMinium/pages/forms/advanced_elements/checkbox_radio.vue",
@@ -895,6 +916,13 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/forms/wysiwyg/quill.vue",
     "chunkName": "pages/forms/wysiwyg/quill",
     "_name": "_6362abb1"
+  },
+  {
+    "name": "user-member-list",
+    "path": "/user/member/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/user/member/list.vue",
+    "chunkName": "pages/user/member/list",
+    "_name": "_7adfb191"
   },
   {
     "name": "index",

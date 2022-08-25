@@ -127,11 +127,15 @@ export default {
 				});
 
 				if (postResult.status == 200){
+					const plantCode = this.loginData.plantCode;
+
 					const userSession = useUserSession();
 					userSession.setToken = postResult.data.Token;
 					userSession.setUser = {
 						id: postResult.data.RecordId,
 						name: postResult.data.InfoMessage,
+						plantId: postResult.data.PlantId,
+						plantCode: plantCode,
 					};
 					window.location.href = '/';
 				}

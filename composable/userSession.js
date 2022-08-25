@@ -1,6 +1,6 @@
 import { useApi } from '~/composable/useApi';
 
-function logoutUser(){
+export function logoutUser(){
   localStorage.removeItem('user')
   localStorage.removeItem('token')
   localStorage.removeItem('dict')

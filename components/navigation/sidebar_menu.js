@@ -45,7 +45,7 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Projeler",
 				icon: "mdi mdi-format-list-bulleted-square",
-				page: "/project"
+				page: "/project/list"
 			},
 			{
 				id: uniqueID(),
@@ -277,12 +277,12 @@ export const menuEntries = [
 			{
 				id: uniqueID(),
 				title: "Rol",
-				page: "/user/role"
+				page: "/user/role/list"
 			},
 			{
 				id: uniqueID(),
 				title: "Kullanıcı",
-				page: "/user/member"
+				page: "/user/member/list"
 			}
 		]
 	},

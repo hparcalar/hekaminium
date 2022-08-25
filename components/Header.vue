@@ -172,7 +172,7 @@
 							<ul class="uk-nav uk-nav-navbar">
 								<li>
 									<nuxt-link to="/pages/user_profile">
-										{{ user.name }}
+										<b>{{user.name}}</b> <i><small>{{user.plantCode}}</small></i>
 									</nuxt-link>
 								</li>
 								<li>
@@ -203,7 +203,7 @@ import { scMq } from '~/assets/js/utils'
 import ScFullscreen from '~/components/FullScreen.vue';
 import ScTopMenu from '~/components/topmenu/TopMenu.vue';
 import { scHelpers } from "~/assets/js/utils";
-import { useUserSession } from '../composable/userSession';
+import { useUserSession, logoutUser } from '~/composable/userSession';
 
 const { uniqueID } = scHelpers;
 
@@ -216,6 +216,7 @@ export default {
 	data: () => ({
 		user: {
 			name: '',
+			plantCode: '',
 			avatar: require('~/assets/img/avatars/avatar_default_sm.png'),
 			messages: [
 				{
@@ -502,6 +503,7 @@ export default {
 
 		const userSession = useUserSession();
 		this.user.name = userSession.user.name;
+		this.user.plantCode = userSession.user.plantCode;
 	},
 	methods: {
 		toggleMainSidebar () {
@@ -524,8 +526,7 @@ export default {
 			return code === this.vxActiveLocale
 		},
 		logoutUser (){
-			const userSession = useUserSession();
-			userSession.logoutUser();
+			logoutUser();
 			window.location.href = '/login_page';
 		}
 	}

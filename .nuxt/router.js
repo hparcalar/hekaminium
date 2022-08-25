@@ -10,6 +10,7 @@ const _2a2ade7e = () => interopDefault(import('../pages/firm-category/index.vue'
 const _50add507 = () => interopDefault(import('../pages/login_page.vue' /* webpackChunkName: "pages/login_page" */))
 const _daaa8ee0 = () => interopDefault(import('../pages/login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
 const _63adc9bc = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
+const _fccbd92c = () => interopDefault(import('../pages/project/index.vue' /* webpackChunkName: "pages/project/index" */))
 const _1bd76a17 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
 const _a5b0011e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _0abd0a05 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
@@ -108,6 +109,8 @@ const _c095dce2 = () => interopDefault(import('../pages/plugins/tree.vue' /* web
 const _561e10b2 = () => interopDefault(import('../pages/plugins/vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
 const _2f780156 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
 const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
+const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
+const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
 const _3629d767 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
 const _1e60b05c = () => interopDefault(import('../pages/forms/advanced_elements/date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
@@ -131,6 +134,7 @@ const _0677ad0a = () => interopDefault(import('../pages/forms/examples/rental_ap
 const _47ed2e19 = () => interopDefault(import('../pages/forms/examples/transaction_feedback_form.vue' /* webpackChunkName: "pages/forms/examples/transaction_feedback_form" */))
 const _1a97ead9 = () => interopDefault(import('../pages/forms/wysiwyg/ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
 const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
+const _7adfb191 = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
 const _311db640 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -168,6 +172,10 @@ export const routerOptions = {
     path: "/plant",
     component: _63adc9bc,
     name: "plant"
+  }, {
+    path: "/project",
+    component: _fccbd92c,
+    name: "project"
   }, {
     path: "/project-category",
     component: _1bd76a17,
@@ -564,6 +572,14 @@ export const routerOptions = {
     component: _210b72e9,
     name: "project-category-list"
   }, {
+    path: "/project/list",
+    component: _af165994,
+    name: "project-list"
+  }, {
+    path: "/user/member",
+    component: _06e9ff22,
+    name: "user-member"
+  }, {
     path: "/forms/advanced_elements/checkbox_radio",
     component: _2a1c833c,
     name: "forms-advanced_elements-checkbox_radio"
@@ -655,6 +671,10 @@ export const routerOptions = {
     path: "/forms/wysiwyg/quill",
     component: _6362abb1,
     name: "forms-wysiwyg-quill"
+  }, {
+    path: "/user/member/list",
+    component: _7adfb191,
+    name: "user-member-list"
   }, {
     path: "/",
     component: _311db640,
