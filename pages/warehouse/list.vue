@@ -6,7 +6,7 @@
 					<div class="uk-flex-middle uk-grid-small uk-grid" data-uk-grid>
 						<div class="uk-flex-1">
 							<ScCardTitle>
-								Kullanıcılar
+								Depo Tanımı
                                 <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
@@ -42,7 +42,7 @@
 				<ScCardBody>
 					<client-only>
 						<Datatable
-							id="sc-dt-buttons-table"
+							id="sc-dt-warehouse-table"
 							ref="buttonsTable"
 							:data="visualData"
 							:options="dtDOptions"
@@ -62,7 +62,7 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 
 export default {
-    name: 'UserList',
+    name: 'WarehouseList',
     components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		PrettyCheck
@@ -71,18 +71,18 @@ export default {
 		return {
 			visualData: [],
 			dtColumns: [
-				{ data: "userCode", title: "Kullanıcı Kodu", visible: true, },
-				{ data: "userName", title: "Kullanıcı Adı", visible: true, },
+				{ data: "warehouseCode", title: "Depo Kodu", visible: true, },
+				{ data: "warehouseName", title: "Depo Adı", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
 				"stateSave": true,
 				stateSaveCallback (settings, data) {
-					localStorage.setItem( 'userListTableView', JSON.stringify(data) )
+					localStorage.setItem( 'warehouseListTableView', JSON.stringify(data) )
 				},
 				stateLoadCallback (settings) {
-					const dtState = JSON.parse( localStorage.getItem( 'userListTableView' ) );
+					const dtState = JSON.parse( localStorage.getItem( 'warehouseListTableView' ) );
 					return dtState;
 				},
 				buttons: [
@@ -119,13 +119,13 @@ export default {
 	},
     async mounted (){
         const api = useApi();
-        const rawData = (await api.get('User')).data;
+        const rawData = (await api.get('Warehouse')).data;
 
         this.visualData = rawData;
 
 		if (this.$refs.buttonsTable){
 			// this.$refs.buttonsTable.$dt.state().clear()
-			console.log(this.$refs.buttonsTable);
+			// console.log(this.$refs.buttonsTable);
 			// console.log(this.$refs.buttonsTable.$dt.state().clear());
 		}
 		
@@ -135,7 +135,7 @@ export default {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
 
-            const ls = JSON.parse( localStorage.getItem( 'userListTableView' ) );
+            const ls = JSON.parse( localStorage.getItem( 'warehouseListTableView' ) );
 			this.$refs.buttonsTable.headers.forEach( (value, i) => {
 				this.dtDHeaders.push({
 					'name': value,
@@ -149,10 +149,10 @@ export default {
 			column.visible(e).draw('page');
 		},
         clickDetail: function (e, dt, type, indexes){
-			this.$router.push('/user/member?id=' + this.visualData[indexes[0]].id);
+			this.$router.push('/warehouse?id=' + this.visualData[indexes[0]].id);
         },
         newRecord(){
-            this.$router.push('/user/member');
+            this.$router.push('/warehouse');
         }
     }
 }

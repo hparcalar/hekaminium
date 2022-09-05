@@ -75,6 +75,7 @@ export default {
 				{ data: "projectName", title: "Proje Adı", visible: true, },
                 { data: "projectCategoryName", title: "Kategorisi", visible: true, },
                 { data: "firmName", title: "Müşteri", visible: true, },
+				{ data: "projectStatusText", title: "Durum", visible: true, }
 			],
 			dtDHeaders: [],
 			dtDOptions: {

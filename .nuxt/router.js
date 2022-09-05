@@ -7,11 +7,14 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _1bb89a48 = () => interopDefault(import('../pages/account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
 const _e06c81ba = () => interopDefault(import('../pages/firm/index.vue' /* webpackChunkName: "pages/firm/index" */))
 const _2a2ade7e = () => interopDefault(import('../pages/firm-category/index.vue' /* webpackChunkName: "pages/firm-category/index" */))
+const _10fefdb8 = () => interopDefault(import('../pages/item/index.vue' /* webpackChunkName: "pages/item/index" */))
+const _2cba3789 = () => interopDefault(import('../pages/item-category/index.vue' /* webpackChunkName: "pages/item-category/index" */))
 const _50add507 = () => interopDefault(import('../pages/login_page.vue' /* webpackChunkName: "pages/login_page" */))
 const _daaa8ee0 = () => interopDefault(import('../pages/login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
 const _63adc9bc = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
 const _fccbd92c = () => interopDefault(import('../pages/project/index.vue' /* webpackChunkName: "pages/project/index" */))
 const _1bd76a17 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
+const _d8c09dd8 = () => interopDefault(import('../pages/warehouse/index.vue' /* webpackChunkName: "pages/warehouse/index" */))
 const _a5b0011e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _0abd0a05 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
 const _4aebbf16 = () => interopDefault(import('../pages/components/animations.vue' /* webpackChunkName: "pages/components/animations" */))
@@ -60,6 +63,8 @@ const _3b0a4da6 = () => interopDefault(import('../pages/forms/wizard.vue' /* web
 const _b5a11afa = () => interopDefault(import('../pages/forms/wizard/step1.vue' /* webpackChunkName: "pages/forms/wizard/step1" */))
 const _b584ebf8 = () => interopDefault(import('../pages/forms/wizard/step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
 const _b568bcf6 = () => interopDefault(import('../pages/forms/wizard/step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
+const _727fa192 = () => interopDefault(import('../pages/item-category/list.vue' /* webpackChunkName: "pages/item-category/list" */))
+const _62c26728 = () => interopDefault(import('../pages/item/list.vue' /* webpackChunkName: "pages/item/list" */))
 const _235e5d32 = () => interopDefault(import('../pages/layout/boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
 const _1d592447 = () => interopDefault(import('../pages/layout/mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
 const _0006803e = () => interopDefault(import('../pages/layout/offcanvas_sidebar.vue' /* webpackChunkName: "pages/layout/offcanvas_sidebar" */))
@@ -111,6 +116,7 @@ const _2f780156 = () => interopDefault(import('../pages/plugins/vue_good_table.v
 const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
 const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
 const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
+const _7c604f68 = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
 const _3629d767 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
 const _1e60b05c = () => interopDefault(import('../pages/forms/advanced_elements/date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
@@ -161,6 +167,14 @@ export const routerOptions = {
     component: _2a2ade7e,
     name: "firm-category"
   }, {
+    path: "/item",
+    component: _10fefdb8,
+    name: "item"
+  }, {
+    path: "/item-category",
+    component: _2cba3789,
+    name: "item-category"
+  }, {
     path: "/login_page",
     component: _50add507,
     name: "login_page"
@@ -180,6 +194,10 @@ export const routerOptions = {
     path: "/project-category",
     component: _1bd76a17,
     name: "project-category"
+  }, {
+    path: "/warehouse",
+    component: _d8c09dd8,
+    name: "warehouse"
   }, {
     path: "/components/accordion",
     component: _a5b0011e,
@@ -373,6 +391,14 @@ export const routerOptions = {
       component: _b568bcf6,
       name: "forms-wizard-step3"
     }]
+  }, {
+    path: "/item-category/list",
+    component: _727fa192,
+    name: "item-category-list"
+  }, {
+    path: "/item/list",
+    component: _62c26728,
+    name: "item-list"
   }, {
     path: "/layout/boxed",
     component: _235e5d32,
@@ -579,6 +605,10 @@ export const routerOptions = {
     path: "/user/member",
     component: _06e9ff22,
     name: "user-member"
+  }, {
+    path: "/warehouse/list",
+    component: _7c604f68,
+    name: "warehouse-list"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
     component: _2a1c833c,

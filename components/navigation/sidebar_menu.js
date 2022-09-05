@@ -170,19 +170,19 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Stok",
 				icon: "mdi mdi-sitemap",
-				page: "/definitions/material/item"
+				page: "/item/list"
 			},
 			{
 				id: uniqueID(),
 				title: "Depo",
 				icon: "mdi mdi-warehouse",
-				page: "/definitions/material/warehouse"
+				page: "/warehouse/list"
 			},
 			{
 				id: uniqueID(),
 				title: "Stok Kategorisi",
 				icon: "mdi mdi-folder-multiple",
-				page: "/definitions/material/item-category"
+				page: "/item-category/list"
 			}
 		]
 	},

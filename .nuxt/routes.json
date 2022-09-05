@@ -21,6 +21,20 @@
     "_name": "_2a2ade7e"
   },
   {
+    "name": "item",
+    "path": "/item",
+    "component": "/home/hakan/Projects/HekaMinium/pages/item/index.vue",
+    "chunkName": "pages/item/index",
+    "_name": "_10fefdb8"
+  },
+  {
+    "name": "item-category",
+    "path": "/item-category",
+    "component": "/home/hakan/Projects/HekaMinium/pages/item-category/index.vue",
+    "chunkName": "pages/item-category/index",
+    "_name": "_2cba3789"
+  },
+  {
     "name": "login_page",
     "path": "/login_page",
     "component": "/home/hakan/Projects/HekaMinium/pages/login_page.vue",
@@ -54,6 +68,13 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/project-category/index.vue",
     "chunkName": "pages/project-category/index",
     "_name": "_1bd76a17"
+  },
+  {
+    "name": "warehouse",
+    "path": "/warehouse",
+    "component": "/home/hakan/Projects/HekaMinium/pages/warehouse/index.vue",
+    "chunkName": "pages/warehouse/index",
+    "_name": "_d8c09dd8"
   },
   {
     "name": "components-accordion",
@@ -392,6 +413,20 @@
       }
     ],
     "_name": "_3b0a4da6"
+  },
+  {
+    "name": "item-category-list",
+    "path": "/item-category/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/item-category/list.vue",
+    "chunkName": "pages/item-category/list",
+    "_name": "_727fa192"
+  },
+  {
+    "name": "item-list",
+    "path": "/item/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/item/list.vue",
+    "chunkName": "pages/item/list",
+    "_name": "_62c26728"
   },
   {
     "name": "layout-boxed",
@@ -755,6 +790,13 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/user/member/index.vue",
     "chunkName": "pages/user/member/index",
     "_name": "_06e9ff22"
+  },
+  {
+    "name": "warehouse-list",
+    "path": "/warehouse/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/warehouse/list.vue",
+    "chunkName": "pages/warehouse/list",
+    "_name": "_7c604f68"
   },
   {
     "name": "forms-advanced_elements-checkbox_radio",
