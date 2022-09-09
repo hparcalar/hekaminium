@@ -100,39 +100,42 @@ export default {
 	},
 	watch: {
 		dtData (newVal, oldVal) {
-			const newLength = newVal.length;
-			const oldLength = oldVal.length;
-			const newIds = newVal.map(k => {
-				return k.id
-			});
-			const oldIds = oldVal.map(k => {
-				return k.id
-			});
-			if(newLength > oldLength) {
-				let uniq = newIds.filter(k => {
-					return !oldIds.includes(k)
-				});
-				if (uniq.length && oldLength > 0) {
-					const newEl = newVal.filter(obj => {
-						return obj.id === uniq[0]
-					});
-					this.$dt.row.add(newEl[0]).draw('full-hold');
-				}
-				else if (uniq.length && oldLength == 0){
-					for (let i = 0; i < newVal.length; i++) {
-						const element = newVal[i];
-						this.$dt.row.add(element).draw('full-hold');;
-					}
-				}
-			} else {
-				let uniq = oldIds.filter(k => {
-					return !newIds.includes(k)
-				});
+			if (this.$dt)
+				this.$dt.clear().rows.add(newVal).draw();
+
+			// const newLength = newVal.length;
+			// const oldLength = oldVal.length;
+			// const newIds = newVal.map(k => {
+			// 	return k.id
+			// });
+			// const oldIds = oldVal.map(k => {
+			// 	return k.id
+			// });
+			// if(newLength > oldLength) {
+			// 	let uniq = newIds.filter(k => {
+			// 		return !oldIds.includes(k)
+			// 	});
+			// 	if (uniq.length && oldLength > 0) {
+			// 		const newEl = newVal.filter(obj => {
+			// 			return obj.id === uniq[0]
+			// 		});
+			// 		this.$dt.row.add(newEl[0]).draw('full-hold');
+			// 	}
+			// 	else if (uniq.length && oldLength == 0){
+			// 		for (let i = 0; i < newVal.length; i++) {
+			// 			const element = newVal[i];
+			// 			this.$dt.row.add(element).draw('full-hold');;
+			// 		}
+			// 	}
+			// } else {
+			// 	let uniq = oldIds.filter(k => {
+			// 		return !newIds.includes(k)
+			// 	});
 				
-				if (uniq.length) {
-					this.$dt.row(':eq('+ uniq[0] +')').remove().draw('full-hold')
-				}
-			}
+			// 	if (uniq.length) {
+			// 		this.$dt.row(':eq('+ uniq[0] +')').remove().draw('full-hold')
+			// 	}
+			// }
 		},
 		vxSidebarMainExpanded () {
 			if(scMq.mediumMin()) {
@@ -140,6 +143,12 @@ export default {
 					$('#' + this.id).resize()
 				}, 300);
 			}
+		}
+	},
+	beforeDestroy(){
+		if ( $.fn.dataTable.isDataTable( '#' + this.id ) ) {
+			const existingTable = $('#' + this.id).DataTable();
+			existingTable.destroy();
 		}
 	},
 	mounted () {
@@ -178,11 +187,25 @@ export default {
 				}
 			}
 		}
+
 		$('#' + this.id).DataTable(options);
-		if(this.customEvents.length) {
-			this.customEvents.forEach(event => {
-				this.$dt.on(event.name, event.function)
-			})
+
+		// if (! $.fn.dataTable.isDataTable( '#' + this.id ) ) {
+		// 	$('#' + this.id).DataTable(options);
+		// }
+		// else{
+		// 	self.$dt = $('#' + this.id).DataTable();
+		// 	self.$dt.clear().rows.add(self.dtData).draw();
+		// }
+
+		try {
+			if(this.customEvents.length) {
+				this.customEvents.forEach(event => {
+					this.$dt.on(event.name, event.function)
+				})
+			}	
+		} catch (error) {
+			
 		}
 	}
 }

@@ -115,6 +115,8 @@ const _561e10b2 = () => interopDefault(import('../pages/plugins/vector_maps.vue'
 const _2f780156 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
 const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
 const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
+const _15dc5bce = () => interopDefault(import('../pages/purchasing/item-demand/index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
+const _17166816 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
 const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
 const _7c604f68 = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
@@ -140,6 +142,8 @@ const _0677ad0a = () => interopDefault(import('../pages/forms/examples/rental_ap
 const _47ed2e19 = () => interopDefault(import('../pages/forms/examples/transaction_feedback_form.vue' /* webpackChunkName: "pages/forms/examples/transaction_feedback_form" */))
 const _1a97ead9 = () => interopDefault(import('../pages/forms/wysiwyg/ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
 const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
+const _0279fab2 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
+const _b5f58dec = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
 const _7adfb191 = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
 const _311db640 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -602,6 +606,14 @@ export const routerOptions = {
     component: _af165994,
     name: "project-list"
   }, {
+    path: "/purchasing/item-demand",
+    component: _15dc5bce,
+    name: "purchasing-item-demand"
+  }, {
+    path: "/purchasing/item-order",
+    component: _17166816,
+    name: "purchasing-item-order"
+  }, {
     path: "/user/member",
     component: _06e9ff22,
     name: "user-member"
@@ -701,6 +713,14 @@ export const routerOptions = {
     path: "/forms/wysiwyg/quill",
     component: _6362abb1,
     name: "forms-wysiwyg-quill"
+  }, {
+    path: "/purchasing/item-demand/list",
+    component: _0279fab2,
+    name: "purchasing-item-demand-list"
+  }, {
+    path: "/purchasing/item-order/list",
+    component: _b5f58dec,
+    name: "purchasing-item-order-list"
   }, {
     path: "/user/member/list",
     component: _7adfb191,

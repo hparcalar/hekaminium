@@ -125,25 +125,25 @@
 													<li class="uk-active">
 														<div class="sc-padding-medium sc-padding-remove-top">
 															<div class="uk-flex-left uk-grid">
-																<button type="button" @click="showDemand" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+																<button type="button" @click="showNewDemand" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
 																	<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 																	Yeni Talep
 																</button>
 																<hr class="uk-divider-vertical" style="height:35px;" />
-																<div class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
-																	<button type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+																<div v-if="selectedDemandRow && selectedDemandRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+																	<button type="button" @click="showDemand" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
 																		Düzenle
 																	</button>
-																	<button type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+																	<button v-show="demandsAreReadyForApprove" @click="approveDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
 																		Onayla
 																	</button>
-																	<button type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+																	<button v-show="demandsAreReadyForDeny" @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
 																		Reddet
 																	</button>
-																	<button type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
+																	<button v-show="demandsAreReadyForDelete" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
 																		Sil
 																	</button>
@@ -159,8 +159,7 @@
 																		:options="dtOptions"
 																		:customColumns="dtDemandCols"
 																		:buttons="true"
-
-
+																		:customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]"
 																	></Datatable>
 																</client-only>
 															</div>
@@ -199,14 +198,18 @@
 			</div>
 		</div>
 
-		<div id="dlgDemand" class="uk-modal" data-uk-modal>
-			<div class="uk-modal-dialog uk-modal-body uk-width-2-3">
-				<ItemDemand 
-					:record-id="selectedDemandRow.id"
-					:project-id="formData.id"
-					:is-dialog="true"
-					:dialog-container="'dlgDemand'"
-				/>
+		<div id="dlgDemand" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<ItemDemand v-show="refreshDemandForm == true"
+						:record-id="selectedDemandRow.itemDemandId"
+						:project-id="formData.id"
+						:is-dialog="true"
+						:dialog-container="'dlgDemand'"
+						@onDemandSaved="bindDemands"
+						@onCancel="closeDemandDialog"
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -219,7 +222,7 @@ import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
-import { getQS } from '~/composable/useHelpers';
+import { getQS, dateToStr } from '~/composable/useHelpers';
 import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
 import moment from '~/plugins/moment'
 
@@ -256,9 +259,11 @@ export default {
             firmId: '',
             projectStatus: '0',
 		},
-		selectedDemandRow: { id:0 },
+		selectedDemandRow: { id:0, itemDemandId: 0 },
+		refreshDemandForm: false,
         categories: [],
 		demandList: [],
+		selectedDemandIndexes: [],
         firms: [],
 		statusList: [
 			{ id:'0', text: 'Bekleniyor' },
@@ -301,14 +306,77 @@ export default {
 			]
 		},
 		dtDemandCols: [
-			{ data: "demandDate", title: "Tarih", visible: true, },
+			{ data: "demandDate", title: "Tarih", visible: true, type:'date' },
+			{ data: "itemDemandNo", title: "Talep No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
 		]
 	}),
 	computed: {
-		
+		demandsAreReadyForApprove(){
+			let result = true;
+
+			if (this.selectedDemandIndexes.length == 0)
+				result = false;
+
+			if(result){
+				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+					const dmnIndex = this.selectedDemandIndexes[i];
+					const dmnObj = this.demandList[dmnIndex];
+					if (dmnObj.demandStatus != 0 && dmnObj.demandStatus != 4)
+					{
+						result = false;
+						break;
+					}
+				}
+			}
+
+			return result;
+		},
+		demandsAreReadyForDeny(){
+			let result = true;
+
+			if (this.selectedDemandIndexes.length == 0)
+				result = false;
+
+			if(result){
+				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+					const dmnIndex = this.selectedDemandIndexes[i];
+					const dmnObj = this.demandList[dmnIndex];
+					if (dmnObj.demandStatus >= 2)
+					{
+						result = false;
+						break;
+					}
+				}
+			}
+
+			return result;
+		},
+		demandsAreReadyForDelete(){
+			let result = true;
+
+			if (this.selectedDemandIndexes.length == 0)
+				result = false;
+
+			if(result){
+				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+					const dmnIndex = this.selectedDemandIndexes[i];
+					const dmnObj = this.demandList[dmnIndex];
+					if (dmnObj.demandStatus >= 2 && dmnObj.demandStatus != 4)
+					{
+						result = false;
+						break;
+					}
+				}
+			}
+
+			return result;
+		}
+	},
+	beforeDestroy(){
+		UIkit.modal('.uk-modal').$destroy(true);
 	},
 	async mounted () {
         const qsId = getQS('id');
@@ -358,9 +426,9 @@ export default {
                     this.formData = getData;
                 }
 
-				await bindDemands();
+				await this.bindDemands();
             } catch (error) {
-                
+                console.log(error);
             }
         },
 		async bindDemands(){
@@ -368,6 +436,10 @@ export default {
 			try {
 				const rawData = (await api.get('ItemDemand/OfProject/' + this.formData.id)).data;
 				if (rawData){
+					for (let i = 0; i < rawData.length; i++) {
+						const row = rawData[i];
+						row.demandDate = dateToStr(row.demandDate);
+					}
 					this.demandList = rawData;
 				}
 				else
@@ -412,11 +484,90 @@ export default {
 			}
 			UIkit.notification(text, config);
 		},
+		showNewDemand(){
+			this.selectedDemandRow = { id:0, itemDemandId: 0 };
+			this.showDemand();
+		},
 		showDemand(){
+			this.refreshDemandForm = false;
+			setTimeout(() => { this.refreshDemandForm = true; }, 100);
+
 			const modalElement = document.getElementById('dlgDemand');
 			modalElement.width = window.innerWidth * 0.7;
 			modalElement.height = window.innerHeight * 0.8;
 			UIkit.modal(modalElement).show();
+		},
+		closeDemandDialog(){
+			const modalElement = document.getElementById('dlgDemand');
+			UIkit.modal(modalElement).hide();
+		},
+		async approveDetails(){
+			const self = this;
+
+			UIkit.modal.confirm('Seçilen talepleri onaylamak istediğinizden emin misiniz?').then(
+				async function () {
+					const api = useApi();
+					try {
+						const demandIdList = [];
+						for (let i = 0; i < self.selectedDemandIndexes.length; i++) {
+							const dmnIndex = self.selectedDemandIndexes[i];
+							const dmnObj = self.demandList[dmnIndex];
+							demandIdList.push(dmnObj.id);
+						}
+
+						const api = useApi();
+						const postResult = (await api.post('ItemDemand/ApproveDetails', demandIdList)).data;
+						if (postResult.result){
+							self.showNotification('Onay işlemi başarılı.', false, 'success');
+							await self.bindDemands();
+						}
+						else
+							self.showNotification(postResult.errorMessage, false, 'error');
+					} catch (error) {
+						self.showNotification('Bir hata oluştu.', false, 'error');
+					}
+			});
+		},
+		async denyDetails(){
+			const self = this;
+
+			UIkit.modal.confirm('Seçilen talepleri reddetmek istediğinizden emin misiniz?').then(
+				async function () {
+					const api = useApi();
+					try {
+						const demandIdList = [];
+						for (let i = 0; i < self.selectedDemandIndexes.length; i++) {
+							const dmnIndex = self.selectedDemandIndexes[i];
+							const dmnObj = self.demandList[dmnIndex];
+							demandIdList.push(dmnObj.id);
+						}
+
+						const api = useApi();
+						const postResult = (await api.post('ItemDemand/DenyDetails', demandIdList)).data;
+						if (postResult.result){
+							self.showNotification('Red işlemi başarılı.', false, 'success');
+							await self.bindDemands();
+						}
+						else
+							self.showNotification(postResult.errorMessage, false, 'error');
+					} catch (error) {
+						self.showNotification('Bir hata oluştu.', false, 'error');
+					}
+			});
+		},
+		clickDemandRow: function (e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedDemandIndexes.push(selIndex);
+            this.selectedDemandRow = this.demandList[selIndex];
+        },
+		deselectDemandRow: function(e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedDemandIndexes = this.selectedDemandIndexes.filter(d => d != selIndex);
+			if (this.selectedDemandIndexes.length > 0){
+				this.selectedDemandRow = this.demandList[this.selectedDemandIndexes[0]];
+			}
+			else
+				this.selectedDemandRow = { id:0, itemDemandId: 0 };
 		}
 	},
 }

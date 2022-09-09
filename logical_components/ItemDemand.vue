@@ -1,12 +1,12 @@
 <template>
 	<div class="uk-flex-center uk-grid" data-uk-grid>
-        <div class="uk-width-2-3@l">
+        <div class="uk-width-3-3@l">
             <div v-if="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                     sc-round sc-border md-bg-grey-100
             ">
                 <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
                 <h4 class="md-color-gray-600 uk-margin-remove">
-                    Malzeme Talebi
+                    Satın Alma Talebi
                 </h4>
             </div>
             <form>
@@ -14,43 +14,53 @@
                     <!-- <legend class="uk-legend">
                         Talep Bilgileri
                     </legend> -->
-                    <div class="uk-child-width-1-1@m uk-grid" data-uk-grid>
+                    <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
                         <div>
                             <ScInput v-model="formData.receiptNo">
                                 <label>Talep No</label>
                             </ScInput>
                         </div>
                         <div>
-                            <client-only v-if="!isDialog">
+                            <client-only v-if="isDialog == false">
                                 <Select2
                                     v-model="formData.projectId"
                                     :options="projects"
                                     :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
                                 ></Select2>
                             </client-only>
-                            <ScInput v-else :value="currentProjectName" read-only="true">
+                            <ScInput v-else :value="currentProjectName" :read-only="true">
                                 <label>Proje</label>
                             </ScInput>
                         </div>
                     </div>
                 </fieldset>
 
-                <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
+                <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium sc-padding-remove-top">
                     <legend>
                         Malzeme Bilgileri
                     </legend>
                     <div class="uk-margin-medium uk-margin-remove-left">
-                        <div class="uk-button-group sc-padding-remove-left" style="height:34px;">
-                            <button type="button" @click="showDemandDetail" class="sc-button sc-button-default sc-button-small uk-width-1-3" style="height:34px;">
-                                <span data-uk-icon="icon: plus" class="uk-icon"></span>
-                            </button>
-                            <button type="button" class="sc-button sc-button-default sc-button-small uk-width-1-3" style="height:34px;">
-                                <span data-uk-icon="icon: pencil" class="uk-icon"></span>
-                            </button>
-                            <button type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-3" style="height:34px;">
-                                <span data-uk-icon="icon: trash" class="uk-icon"></span>
-                            </button>
+                        <div class="uk-grid">
+                            <div class="uk-width-1-3@l">
+                                <div class="uk-button-group sc-padding-remove-left" style="height:34px;">
+                                    <button type="button" @click="showNewDemandDetail" class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
+                                        <span data-uk-icon="icon: plus" class="uk-icon"></span>
+                                    </button>
+                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0" type="button" @click="removeDemandDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand" style="height:34px;">
+                                        <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="uk-width-2-3@l">
+                                <ItemDemandDetail
+                                    :detail-object="selectedDemandDetail"
+                                    :total-detail-count="details.length"
+                                    :is-dialog="false"
+                                    @onDetailSubmit="onDetailSaved"
+                                />
+                            </div>
                         </div>
+                        
                         <client-only>
                             <Datatable
                                 id="sc-dt-details-table"
@@ -59,7 +69,7 @@
                                 :options="dtOptions"
                                 :customColumns="dtDetailCols"
                                 :buttons="true"
-                                :customEvents="[{ name: 'select', function: clickDetail }]"
+                                :customEvents="[{ name: 'select', function: clickDetail }, { name:'deselect', function: deselectDetail }]"
                             ></Datatable>
                         </client-only>
                     </div>
@@ -81,17 +91,6 @@
                 </div>
             </form>
         </div>
-
-        <div id="dlgDemandDetail" class="uk-modal" data-uk-modal>
-			<div class="uk-modal-dialog uk-modal-body uk-width-2-3">
-				<!-- <ItemDemandDetail
-					:detail-object="{}"
-					:total-detail-count="0"
-					:is-dialog="true"
-					:dialog-container="'dlgDemandDetail'"
-				/> -->
-			</div>
-		</div>
     </div>
 </template>
 
@@ -101,8 +100,9 @@ import ScInput from '~/components/Input'
 import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
-// import ItemDemandDetail from './ItemDemandDetail.vue';
+import ItemDemandDetail from './ItemDemandDetail.vue';
 import { useApi } from '~/composable/useApi';
+import { useUserSession } from '~/composable/userSession';
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -110,6 +110,7 @@ if(process.client) {
 
 export default {
 	name: 'ItemDemand',
+    emits: ['onDemandSaved', 'onCancel'],
     props: {
         recordId: {
             required: true,
@@ -127,7 +128,7 @@ export default {
         dialogContainer: {
             type: String,
             default: '',
-        }
+        },
     },
 	components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
@@ -146,15 +147,18 @@ export default {
             plantId: null,
 			demandStatus: 0,
 		},
+        isMounting: false,
         details: [],
         projects: [],
         dtOptions: {
-			select: true,
+			select: {
+                style: 'single'
+            },
 			searching: false,
 			paging: false,
 		},
 		dtDetailCols: [
-			{ data: "demandDate", title: "Tarih", visible: true, },
+			{ data: "lineNumber", title: "Satır No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
@@ -175,9 +179,14 @@ export default {
         }
 	},
 	async mounted () {
+        this.isMounting = true;
         this.formData.id = this.recordId;
-        this.formData.projectId = this.projectId;
+
+        if (this.projectId && this.projectId > 0)
+            this.formData.projectId = this.projectId;
+
 		await this.bindModel();
+        this.isMounting = false;
 	},
 	methods: {
         async bindModel(){
@@ -192,24 +201,58 @@ export default {
                         };
                     })
 
-                const getData = (await api.get('ItemDemand/' + this.formData.id)).data;   
+                const getData = (await api.get('ItemDemand/' + this.formData.id)).data;
                 if (getData && getData.id > 0){
+                    getData.projectId = getData.projectId ? getData.projectId.toString() : null;
                     this.formData = getData;
+                    this.details = this.formData.details;
                 }
-                else
+                else{
                     this.formData.receiptNo = getData.receiptNo;
+                    this.details.splice(0, this.details.length);
+                }
 
             } catch (error) {
-                
+
+            }
+        },
+        onDetailSaved(detailParam){
+            const detailRow = detailParam.data;
+            if (detailParam.action == 'save'){
+                if (detailRow.id == 0){
+                    detailRow.newDetail = true,
+                    detailRow.id = detailRow.lineNumber;
+                    this.details.push(detailRow);
+                    this.showNewDemandDetail();
+                }
+                else {
+                    const existingDetail = this.details.find(d => d.id == detailRow.id);
+                    if (existingDetail){
+                        detailRow.newDetail = false;
+
+                        existingDetail.lineNumber = detailRow.lineNumber;
+                        existingDetail.itemId = detailRow.itemId;
+                        existingDetail.itemExplanation = detailRow.itemExplanation;
+                        existingDetail.quantity = detailRow.quantity;
+                        existingDetail.demandDate = detailRow.demandDate;
+                        existingDetail.newDetail = detailRow.newDetail;
+                    }
+                }
             }
         },
 		async onSubmit(){
             try {
+                this.formData.details = this.details;
+
+                const session = useUserSession();
+                this.formData.plantId = session.user.plantId;
+
                 const api = useApi();
                 const postResult = (await api.post('ItemDemand', this.formData)).data;
                 if (postResult.result){
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
+                    this.$emit('onDemandSaved');
 
                     if (this.isDialog)
                         UIkit.modal(document.getElementById(this.dialogContainer)).hide();
@@ -222,12 +265,29 @@ export default {
         },
         onCancel(){
             if (this.isDialog)
-                UIkit.modal(document.getElementById(this.dialogContainer)).hide();
+                this.$emit('onCancel'); //UIkit.modal(document.getElementById(this.dialogContainer)).hide();
             else
-                this.$router.push('/item-demand/list');
+                this.$router.push('/purchasing/item-demand/list');
         },
         async onDelete(){
 
+        },
+        removeDemandDetail(){
+            if (this.selectedDemandDetail){
+                const demandIndex = this.details.indexOf(this.selectedDemandDetail);
+                if (demandIndex > -1){
+                    this.details.splice(demandIndex, 1);
+
+                    let lineNumber = 1;
+                    for (let i = 0; i < this.details.length; i++) {
+                        const row = this.details[i];
+                        row.lineNumber = lineNumber;
+                        lineNumber++;
+                    }
+
+                    this.showNewDemandDetail();
+                }
+            }
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};
@@ -240,23 +300,34 @@ export default {
 			}
 			UIkit.notification(text, config);
 		},
-        showDemandDetail(){
-			const modalElement = document.getElementById('dlgDemandDetail');
-			modalElement.width = window.innerWidth * 0.7;
-			modalElement.height = window.innerHeight * 0.8;
-			UIkit.modal(modalElement).show();
-		},
-        clickDetail: function (e, dt, type, indexes){
-            this.selectedDemandDetail = this.details[indexes[0]];
+        showNewDemandDetail(){
+            this.selectedDemandDetail = { id:0 };
         },
+        clickDetail: function (e, dt, type, indexes){
+            try {
+                this.selectedDemandDetail = this.details[indexes[0]];   
+            } catch (error) {
+                
+            }
+        },
+        deselectDetail: function(){
+            this.selectedDemandDetail = { id:0 };
+        }
 	},
     watch: {
-        recordId: async(newVal, oldVal) => {
-            await bindModel();
+        recordId: async function(newVal, oldVal) {
+            // if (!this.isMounting){
+            //     this.formData.id = this.recordId;
+            //     await this.bindModel();
+            // }
+
+            this.formData.id = this.recordId;
+            await this.bindModel();
         },
-        projectId: (newVal, oldVal) => {
-            formData.projectId = newVal;
-        }
+        projectId: function(newVal, oldVal) {
+            if (this.formData)
+                this.formData.projectId = newVal;
+        },
     }
 }
 </script>

@@ -17,13 +17,13 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Talep",
 				icon: "mdi mdi-human-handsup",
-				page: "/purchasing/demand"
+				page: "/purchasing/item-demand/list"
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
 				title: "Sipariş",
-				page: "/purchasing/order"
+				page: "/purchasing/item-order/list"
 			},
 			{
 				id: uniqueID(),

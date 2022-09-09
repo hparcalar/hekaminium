@@ -1,22 +1,11 @@
 <template>
 	<div class="uk-flex-center uk-grid" data-uk-grid>
-        <div class="uk-width-2-3@l">
-            <div v-if="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
-                    sc-round sc-border md-bg-grey-100
-            ">
-                <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-                <h4 class="md-color-gray-600 uk-margin-remove">
-                    Talep Kalemi
-                </h4>
-            </div>
+        <div class="uk-width-3-3@l">
             <form>
-                <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
-                    <!-- <legend class="uk-legend">
-                        Talep Bilgileri
-                    </legend> -->
-                    <div class="uk-child-width-1-1@m uk-grid" data-uk-grid>
+                <fieldset class="uk-fieldset uk-fieldset-alt uk-background-muted sc-padding-medium">
+                    <div class="uk-child-width-1-3@m uk-grid sc-padding-remove-top" data-uk-grid>
                         <div>
-                            <ScInput v-model="formData.lineNumber">
+                            <ScInput v-model="formData.lineNumber" :type="'number'" :read-only="true">
                                 <label>Satır No</label>
                             </ScInput>
                         </div>
@@ -25,31 +14,27 @@
                                 <label>Malzeme Açıklama</label>
                             </ScInput>
                         </div>
-                        <!-- <div>
-                            <ItemSelector />
-                        </div> -->
                         <div>
-                            <ScInput v-model="itemData.itemName" read-only="true">
-                                <label>Malzeme Adı</label>
+                            <ScInput :type="'number'" v-model="formData.quantity">
+                                <label>Miktar</label>
                             </ScInput>
                         </div>
                     </div>
+                    <div class="uk-child-width-2-3@m uk-grid" data-uk-grid>
+                        <div class="uk-width-4-5@m">
+                            <client-only>
+                                <Select2
+                                    v-model="formData.itemId"
+                                    :options="itemList"
+                                    :settings="{ 'width': '100%', 'placeholder': 'Stok Seçiniz', 'allowClear': true }"
+                                ></Select2>
+                            </client-only>
+                        </div>
+                        <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-width-1-5@m" style="height:34px;">
+                            <span :data-uk-icon="'icon:' + detailObject.id > 0 ? 'check' : 'plus'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
+                        </button>
+                    </div>
                 </fieldset>
-
-                <div class="uk-margin-large-top">
-                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-                        Kaydet
-                    </button>
-                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
-                        Vazgeç
-                    </button>
-                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-large">
-                        <span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-                        Sil
-                    </button>
-                </div>
             </form>
         </div>
     </div>
@@ -61,8 +46,8 @@ import ScInput from '~/components/Input'
 import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
-// import ItemSelector from '~/custom_inputs/ItemSelector.vue';
 import { useApi } from '~/composable/useApi';
+import moment from '~/plugins/moment'
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -92,7 +77,6 @@ export default {
     emits: ['onDetailSubmit'],
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
-        // ItemSelector,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -103,30 +87,76 @@ export default {
             id: 0,
 			lineNumber: 0,
 			itemId: null,
+            itemName: '',
             itemExplanation: '',
             explanation: '',
             unitId: null,
             quantity: 0,
             netQuantity: 0,
 			demandStatus: 0,
+            demandDate: null,
+            newDetail: true,
 		},
-        itemData: {
-            itemName: '',
-        }
+        itemList: [],
 	}),
 	async mounted () {
-        // this.formData.id = this.recordId;
-        // this.formData.projectId = this.projectId;
 		await this.bindModel();
 	},
 	methods: {
         async bindModel(){
+            const api = useApi();
+            try {
+                this.itemList = (await api.get('Item')).data.map((d) => {
+                    return {
+                        id: d.id,
+                        text: d.itemName,
+                    };
+                });
+            } catch (error) {
+                
+            }
+
             this.formData = this.detailObject;
+            try {
+                this.formData.itemId = this.formData.itemId ? this.formData.itemId.toString() : null;   
+            } catch (error) {
+                
+            }
             if (this.formData.id <= 0){
                 this.formData.lineNumber = this.totalDetailCount + 1;
             }
         },
-		async onSubmit(){
+		onSubmit(){
+            const self = this;
+
+            if (!this.formData.itemId)
+            {
+                this.showNotification('Bir stok seçmelisiniz.', false, 'error');
+                return;
+            }
+
+            if (!this.formData.quantity || this.formData.quantity <= 0){
+                this.showNotification('Miktar 0 dan büyük olmalıdır.', false, 'error');
+                return;
+            }
+
+            // #region VALIDATE ROW DATA
+            if (!this.formData.demandDate)
+                this.formData.demandDate = self.$moment().format('YYYY-DD-MM');
+
+            const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
+            if (selectedItem)
+                this.formData.itemName = selectedItem.text;
+
+            if (!this.formData.demandStatus)
+                this.formData.demandStatus = 0;
+            this.formData.statusText = this.formData.demandStatus == 0 ? 'Onay bekleniyor' :
+                                       this.formData.demandStatus == 1 ? 'Onaylandı' :
+                                       this.formData.demandStatus == 2 ? 'Sipariş verildi' :
+                                       this.formData.demandStatus == 3 ? 'Sipariş teslim alındı' : 
+                                       this.formData.demandStatus == 4 ? 'Sipariş iptal edildi' : '';
+            // #endregion
+            
             this.$emit('onDetailSubmit', {
                 action: 'save',
                 data: this.formData,
@@ -138,12 +168,6 @@ export default {
                 data: this.formData,
             });
             UIkit.modal(document.getElementById(this.dialogContainer)).hide();
-        },
-        async onDelete(){
-            this.$emit('onDetailSubmit', {
-                action: 'delete',
-                data: this.formData,
-            });
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};
@@ -158,7 +182,13 @@ export default {
 		}
 	},
     watch: {
-        detailObject: async(newVal, oldVal) => {
+        detailObject: {
+            handler: async function (newVal, oldVal) {
+                await this.bindModel();
+            },
+            deep: true,
+        },
+        totalDetailCount: async function(newVal, oldVal){
             await this.bindModel();
         }
     }
