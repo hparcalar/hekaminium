@@ -343,6 +343,8 @@ export default {
 
                     if (this.isDialog)
                         UIkit.modal(document.getElementById(this.dialogContainer)).hide();
+                    else
+                        this.$router.go(-1);
                 }
                 else
                     this.showNotification(postResult.errorMessage, false, 'error');
@@ -357,7 +359,27 @@ export default {
                 this.$router.push('/purchasing/item-order/list');
         },
         async onDelete(){
+            const self = this;
+            UIkit.modal.confirm('Bu siparişi silmek istediğinizden emin misiniz?').then(
+				async function () {
+					try {
+                        const api = useApi();
+                        const delResult = (await api.delete('ItemOrder/' + self.formData.id)).data;
+                        if (delResult.result){
+                            self.showNotification('Silme işlemi başarılı', false, 'success');
+                            this.$emit('onOrderSaved');
 
+                            if (self.isDialog)
+                                UIkit.modal(document.getElementById(self.dialogContainer)).hide();
+                            else
+                            self.$router.go(-1);
+                        }
+                        else
+                            self.showNotification(delResult.errorMessage, false, 'error');
+                    } catch (error) {
+                        
+                    }
+			});
         },
         removeOrderDetail(){
             const self = this;

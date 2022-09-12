@@ -144,6 +144,7 @@ const _47ed2e19 = () => interopDefault(import('../pages/forms/examples/transacti
 const _1a97ead9 = () => interopDefault(import('../pages/forms/wysiwyg/ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
 const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
 const _0279fab2 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
+const _023c6e50 = () => interopDefault(import('../pages/purchasing/item-demand/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
 const _b5f58dec = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
 const _7adfb191 = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
 const _41163cb5 = () => interopDefault(import('../pages/user/role/list.vue' /* webpackChunkName: "pages/user/role/list" */))
@@ -723,6 +724,10 @@ export const routerOptions = {
     path: "/purchasing/item-demand/list",
     component: _0279fab2,
     name: "purchasing-item-demand-list"
+  }, {
+    path: "/purchasing/item-demand/waiting-for-approve",
+    component: _023c6e50,
+    name: "purchasing-item-demand-waiting-for-approve"
   }, {
     path: "/purchasing/item-order/list",
     component: _b5f58dec,

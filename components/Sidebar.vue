@@ -55,14 +55,12 @@ export default {
 	},
 	beforeMount(){
 		const session = useUserSession();
-			setAuthDictionary(session.user.sections);
+		setAuthDictionary(session.user.sections);
 	},
 	mounted () {
 		const self = this;
 
 		this.$nextTick(() => {
-			
-
 			if(scMq.mediumMax() || this.$store.getters['sidebarOffcanvasState']) {
 				// activate UIKit offcanvas
 				UIkit.offcanvas(document.getElementById('sc-sidebar-main'), {

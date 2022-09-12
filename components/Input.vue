@@ -111,7 +111,7 @@ export default {
 		}
 	},
 	data: () => ({
-		inputFocused: false
+		inputFocused: false,
 	}),
 	computed: {
 		modeClass () {
@@ -160,6 +160,9 @@ export default {
 			}
 			this.$emit('keyUp');
 		}
-	}
+	},
+	watch: {
+		
+	},
 }
 </script>

@@ -39,7 +39,16 @@ export const menuEntries = [
 				icon: "mdi mdi-receipt",
 				title: "İrsaliye",
 				page: "/purchasing/receipt"
-			}
+			},
+			{
+				id: uniqueID(),
+				title: "Bekleyen Talepler",
+				icon: "mdi mdi-clock",
+				page: "/purchasing/item-demand/waiting-for-approve",
+				visible: function(){
+					return checkAuth('ItemDemandApproval');
+				},
+			},
 		]
 	},
 	{

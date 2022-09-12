@@ -19,13 +19,9 @@
                             </client-only>
                         </div>
                         <div>
-                            <client-only>
-                                <Select2
-                                    v-model="formData.projectId"
-                                    :options="projectList"
-                                    :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
-                                ></Select2>
-                            </client-only>
+                            <ScInput v-model="formData.costName">
+                                <label>Kalem Adı</label>
+                            </ScInput>
                         </div>
                         <div>
                             <ScInput :type="'number'" v-model="formData.quantity" @change="calculateTotal">
@@ -48,50 +44,28 @@
                             </ScInput>
                         </div>
                         <div>
-                            <PrettyCheck name="taxIncluded" v-model="formData.taxIncluded" :value="false" class="p-icon" @change="calculateTotal">
-                                <i slot="extra" class="icon mdi mdi-check"></i>
-                                Kdv Dahil
-                            </PrettyCheck>
-                        </div>
-                        <div>
-                            <ScInput :type="'number'" v-model="formData.taxRate" @change="calculateTotal">
-                                <label>Kdv %</label>
-                            </ScInput>
-                        </div>
-                        <div>
                             <ScInput :type="'number'" v-model="formData.unitPrice" @change="calculateTotal">
                                 <label>Birim Fiyat</label>
                             </ScInput>
                         </div>
                         <div class="uk-child-width-1-2@m uk-grid">
                             <div>
-                                <ScInput :type="'number'" v-model="formData.overallTotal" :read-only="true">
-                                    <label>Satır Tutarı</label>
+                                <ScInput :type="'number'" v-model="formData.forexOverallTotal" :read-only="true">
+                                    <label>Tutar</label>
                                 </ScInput>
                             </div>
                             <div>
-                                <ScInput :type="'number'" v-model="formData.overallTotalLocal" :read-only="true">
+                                <ScInput :type="'number'" v-model="formData.overallTotal" :read-only="true">
                                     <label>TL Tutarı</label>
                                 </ScInput>
                             </div>
                         </div>
 
                         <div class="uk-width-2-2@m">
-                            <ScInput v-model="formData.explanation">
-                                <label>Açıklama</label>
-                            </ScInput>
+                            <ScTextarea v-model="formData.explanation" placeholder="Açıklama"></ScTextarea>
                         </div>
                     </div>
                     <div class="uk-child-width-1-2 uk-grid">
-                        <div>
-                            <client-only>
-                                <Select2
-                                    v-model="formData.receiptStatus"
-                                    :options="statusList"
-                                    :settings="{ 'width': '100%', 'placeholder': 'Durum', 'allowClear': true }"
-                                ></Select2>
-                            </client-only>
-                        </div>
                         <div>
                             <button type="button" @click="onSubmit" class="sc-button sc-button-primary uk-margin-medium" style="height:34px;margin-top:15px;">
                                 <span :data-uk-icon="'icon:' + detailObject.id > 0 ? 'check' : 'plus'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
@@ -139,7 +113,7 @@ export default {
             default: '',
         }
     },
-    emits: ['onDetailSubmit'],
+    emits: ['onCostItemSubmit'],
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
 		ScInput,
@@ -152,32 +126,21 @@ export default {
 		formData: {
             id: 0,
 			lineNumber: 0,
+            costName: '',
 			itemId: null,
-            projectId: null,
             forexId: null,
             forexRate: 0,
-            taxIncluded: false,
-            taxRate: 18,
             itemName: '',
             explanation: '',
-            unitId: null,
             unitPrice: 0,
             quantity: 0,
             netQuantity: 0,
-			receiptStatus: 0,
             overallTotal: 0,
-            overallTotalLocal: 0,
+            forexOverallTotal: 0,
             newDetail: true,
 		},
         itemList: [],
         forexList: [],
-        projectList: [],
-        statusList: [
-            { id:0, text: 'Oluşturuldu' },
-            { id:1, text: 'Onaylandı' },
-            { id:2, text: 'Tamamlandı' },
-            { id:3, text: 'İptal edildi' },
-        ],
 	}),
 	async mounted () {
         this.isMounting = true;
@@ -191,30 +154,25 @@ export default {
                 this.formData = {
                     id: 0,
                     lineNumber: 0,
+                    costName: '',
                     itemId: null,
-                    projectId: null,
                     forexId: null,
                     forexRate: 0,
-                    taxIncluded: false,
-                    taxRate: 18,
                     itemName: '',
                     explanation: '',
-                    unitId: null,
                     unitPrice: 0,
                     quantity: 0,
                     netQuantity: 0,
-                    receiptStatus: 0,
                     overallTotal: 0,
+                    forexOverallTotal: 0,
                     newDetail: true,
                 };
             }
             try {
                 this.formData.itemId = this.formData.itemId ? this.formData.itemId.toString() : null;   
-                this.formData.forexId = this.formData.forexId ? this.formData.forexId.toString() : null;   
-                this.formData.projectId = this.formData.projectId ? this.formData.projectId.toString() : null;   
-                this.formData.receiptStatus = this.formData.receiptStatus ? this.formData.receiptStatus.toString() : null;   
+                this.formData.forexId = this.formData.forexId ? this.formData.forexId.toString() : null;     
             } catch (error) {
-                console.log(error);
+                
             }
             if (this.formData.id <= 0){
                 this.formData.lineNumber = this.totalDetailCount + 1;
@@ -246,26 +204,14 @@ export default {
                 
             }
 
-            // fetch projects for selection
-            try {
-                this.projectList = (await api.get('Project')).data.map((d) => {
-                    return {
-                        id: d.id,
-                        text: d.projectName,
-                    };
-                });
-            } catch (error) {
-                
-            }
-
             this.calculateTotal();
         },
 		onSubmit(){
             const self = this;
 
-            if (!this.formData.itemId)
+            if (!this.formData.itemId && this.formData.costName.length == 0)
             {
-                this.showNotification('Bir stok seçmelisiniz.', false, 'error');
+                this.showNotification('Bir stok seçmelisiniz veya kalem açıklaması girmelisiniz.', false, 'error');
                 return;
             }
 
@@ -275,36 +221,25 @@ export default {
             }
 
             // #region VALIDATE ROW DATA
+            console.log(this.formData.itemId);
             const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
             if (selectedItem)
                 this.formData.itemName = selectedItem.text;
+            else
+                this.formData.itemName = '';
 
             const selectedForex = this.forexList.find(d => d.id == this.formData.forexId);
             if (selectedForex)
                 this.formData.forexCode = selectedForex.text;
-
-            const selectedProject = this.projectList.find(d => d.id == this.formData.projectId);
-            if (selectedProject)
-                this.formData.projectName = selectedProject.text;
-
-            if (!this.formData.receiptStatus)
-                this.formData.receiptStatus = 0;
-            this.formData.statusText = this.formData.receiptStatus == 0 ? 'Oluşturuldu' :
-                                       this.formData.receiptStatus == 1 ? 'Onaylandı' :
-                                       this.formData.receiptStatus == 2 ? 'Tamamlandı' :
-                                       this.formData.receiptStatus == 3 ? 'İptal edildi' : ''; 
             // #endregion
             
-            this.$emit('onDetailSubmit', {
+            this.$emit('onCostItemSubmit', {
                 action: 'save',
                 data: { ...this.formData },
             });
         },
         onCancel(){
-            this.$emit('onDetailSubmit', {
-                action: 'cancel',
-                data: this.formData,
-            });
+            this.$emit('onCancel');
             UIkit.modal(document.getElementById(this.dialogContainer)).hide();
         },
         showNotification (text, pos, status, persistent) {
@@ -321,14 +256,13 @@ export default {
         calculateTotal(){
             try {
                 const subTotal = this.formData.quantity * this.formData.unitPrice;
-                const taxTotal = subTotal * this.formData.taxRate;
-                this.formData.overallTotal = this.formData.taxIncluded ? subTotal : (subTotal + taxTotal);
 
                 let forexRate = 1;
                 if(this.formData.forexId && this.formData.forexId > 0)
                     forexRate = this.formData.forexRate;
 
-                this.formData.overallTotalLocal = this.formData.overallTotal * forexRate;
+                this.formData.forexOverallTotal = subTotal;
+                this.formData.overallTotal = this.formData.forexOverallTotal * forexRate;
             } catch (error) {
                 
             }

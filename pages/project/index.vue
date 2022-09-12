@@ -2,7 +2,7 @@
 	<div id="sc-page-wrapper">
 		<div id="sc-page-content">
 			<div class="uk-flex-center uk-grid" data-uk-grid>
-				<div class="uk-width-2-3@l">
+				<div class="uk-width-3-3@l">
 					<div class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                          sc-round sc-border md-bg-grey-100
                     ">
@@ -72,10 +72,14 @@
 												</client-only>
 											</div>
 											<div>
-												<ScInput v-model="formData.startDate" :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr placeholder="Başlama Tarihi" mode="outline"></ScInput>
+												<ScInput v-model="formData.startDate" :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr mode="outline">
+													<label>Başlama Tarihi</label>
+												</ScInput>
 											</div>
 											<div>
-												<ScInput v-model="formData.deadlineDate" :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr placeholder="Termin Tarihi" mode="outline"></ScInput>
+												<ScInput v-model="formData.deadlineDate" :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr mode="outline">
+													<label>Termin Tarihi</label>
+												</ScInput>
 											</div>
 											<div>
 												<ScInput v-model="formData.responsiblePerson">
@@ -106,7 +110,7 @@
 												<ul class="uk-tab-left" data-uk-tab="connect: .sc-switcher-left">
 													<li class="uk-active">
 														<a href="javascript:void(0)">
-															Malzeme Listesi
+															İhtiyaç Listesi
 														</a>
 													</li>
 													<li>
@@ -147,7 +151,7 @@
 																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
 																		Düzenle
 																	</button>
-																	<button v-show="selectedCostItemIndexes.length > 0" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
+																	<button v-show="selectedCostItemIndexes.length > 0" @click="deleteCostItem" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
 																		Sil
 																	</button>
@@ -166,6 +170,9 @@
 																		:customEvents="[{ name: 'select', function: clickCostItemRow }, { name: 'deselect', function: deselectCostItemRow }]"
 																	></Datatable>
 																</client-only>
+															</div>
+															<div class="uk-margin-small uk-margin-remove-left uk-align-right">
+																<span v-if="hasViewAuth('ProjectBudgetView')" class="uk-label uk-text-bold">Toplam Tutar: {{ totalOfCostItems }}</span>
 															</div>
 														</div>
 													</li>
@@ -225,13 +232,19 @@
 									<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
 										<div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
 											<div>
-												<ScTextarea v-model="formData.explanation" placeholder="Genel Açıklama"></ScTextarea>
+												<ScTextarea v-model="formData.explanation">
+													<label>Genel Açıklama</label>
+												</ScTextarea>
 											</div>
 											<div>
-												<ScTextarea v-model="formData.meetingExplanation" placeholder="Görüşme Sonuçları"></ScTextarea>
+												<ScTextarea v-model="formData.meetingExplanation">
+													<label>Görüşme Sonuçları</label>
+												</ScTextarea>
 											</div>
 											<div>
-												<ScTextarea v-model="formData.criticalExplanation" placeholder="Kritik Açıklamalar"></ScTextarea>
+												<ScTextarea v-model="formData.criticalExplanation">
+													<label>Kritik Açıklamalar</label>
+												</ScTextarea>
 											</div>
 										</div>
 									</fieldset>
@@ -277,7 +290,14 @@
 		<div id="dlgCostItem" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					
+					<ProjectCostItem v-show="refreshCostItemForm == true"
+						:detail-object="selectedCostItemRow"
+						:total-detail-count="formData.costItems.length"
+						:is-dialog="true"
+						:dialog-container="'dlgCostItem'"
+						@onCostItemSubmit="onCostItemSubmit"
+						@onCancel="closeCostItemDialog"
+					/>
 				</div>
 			</div>
 		</div>
@@ -310,6 +330,7 @@ export default {
 		Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		Select2: process.client ? () => import('~/components/Select2') : null,
 		ItemDemand: process.client ? () => import('~/logical_components/ItemDemand') : null,
+		ProjectCostItem: process.client ? () => import('~/logical_components/ProjectCostItem') : null,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -334,6 +355,7 @@ export default {
             projectStatus: '0',
 			costItems: [],
 		},
+		formSession: useUserSession(),
 		selectedDemandRow: { id:0, itemDemandId: 0 },
 		selectedCostItemRow: { id:0 },
 		refreshDemandForm: false,
@@ -382,7 +404,7 @@ export default {
 					title: 'Yazdır',
 					autoPrint: true
 				}
-			]
+			],
 		},
 		dtDemandCols: [
 			{ data: "demandDate", title: "Tarih", visible: true, type:'date' },
@@ -392,13 +414,12 @@ export default {
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
 		dtCostItemCols: [
-			{ data: "createdDate", title: "Tarih", visible: true, type:'date' },
 			{ data: "lineNumber", title: "Sıra No", visible: true, },
-			{ data: "costTypeText", title: "Türü", visible: true, },
+			{ data: "itemName", title: "Stok", visible: true, },
 			{ data: "costName", title: "Açıklama", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
-			{ data: "overallTotal", title: "Tutar", visible: true, },
-			{ data: "costStatusText", title: "Durum", visible: true, },
+			{ data: "overallTotal", title: "Tutar", visible: false, render: function(data){ return(new Intl.NumberFormat('tr-TR').format(data)); }},
+			// { data: "costStatusText", title: "Durum", visible: true, },
 		]
 	}),
 	computed: {
@@ -462,6 +483,13 @@ export default {
 
 			return result;
 		},
+		totalOfCostItems(){
+			let totalVal = 0;
+			if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
+				totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a,b) => a + b);
+			
+			return new Intl.NumberFormat('tr-TR').format(totalVal);
+		}
 	},
 	beforeDestroy(){
 		UIkit.modal('.uk-modal').$destroy(true);
@@ -472,6 +500,12 @@ export default {
         else this.formData.id = 0;
 
 		await this.bindModel();
+	},
+	beforeMount(){
+		const costCol = this.dtCostItemCols.find(d => d.data == 'overallTotal');
+		if (costCol){
+			costCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
 	},
 	methods: {
         async bindModel(){
@@ -492,7 +526,6 @@ export default {
                 if (firmData)
                     this.firms = firmData.map((d) => {
                         return {
-                            
 							id: d.id.toString(),
                             text: d.firmName,
                         };
@@ -534,7 +567,7 @@ export default {
 
 				await this.bindDemands();
             } catch (error) {
-                console.log(error);
+                
             }
         },
 		async bindDemands(){
@@ -556,7 +589,7 @@ export default {
 		},
 		async onSubmit(){
             try {
-				const postData = this.formData;
+				const postData = { ...this.formData };
 				postData.firmId = postData.firmId.length == 0 ? null : parseInt(postData.firmId);
 				postData.projectStatus = postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
 				postData.projectCategoryId = postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
@@ -622,6 +655,54 @@ export default {
 			const modalElement = document.getElementById('dlgDemand');
 			UIkit.modal(modalElement).hide();
 		},
+		closeCostItemDialog(){
+			const modalElement = document.getElementById('dlgCostItem');
+			UIkit.modal(modalElement).hide();
+		},
+		onCostItemSubmit(detailParam){
+			const detailRow = detailParam.data;
+            if (detailParam.action == 'save'){
+                if (detailRow.id == 0){
+                    detailRow.newDetail = true,
+                    detailRow.id = detailRow.lineNumber;
+                    this.formData.costItems.push(detailRow);
+                }
+                else {
+                    const existingDetail = this.formData.costItems.find(d => d.id == detailRow.id);
+                    if (existingDetail){
+                        detailRow.newDetail = false;
+
+                        existingDetail.lineNumber = detailRow.lineNumber;
+                        existingDetail.itemId = detailRow.itemId;
+                        existingDetail.costName = detailRow.costName;
+                        existingDetail.quantity = detailRow.quantity;
+						existingDetail.forexId = detailRow.forexId;
+						existingDetail.forexRate = detailRow.forexRate;
+						existingDetail.unitPrice = detailRow.unitPrice;
+						existingDetail.overallTotal = detailRow.overallTotal;
+						existingDetail.forexOverallTotal = detailRow.forexOverallTotal;
+						existingDetail.explanation = detailRow.explanation;
+                        existingDetail.newDetail = detailRow.newDetail;
+                    }
+                }
+
+				const modalElement = document.getElementById('dlgCostItem');
+				UIkit.modal(modalElement).hide();
+            }
+		},
+		deleteCostItem(){
+			const self = this;
+
+			UIkit.modal.confirm('Seçilen kalemleri silmek istediğinizden emin misiniz?').then(
+				async function () {
+					for (let i = 0; i < self.selectedCostItemIndexes.length; i++) {
+						const costIndex = self.selectedCostItemIndexes[i];
+						if(costIndex > -1){
+							self.formData.costItems.splice(costIndex,1);
+						}	
+					}
+			});
+		},
 		async approveDetails(){
 			const self = this;
 
@@ -677,8 +758,9 @@ export default {
 			});
 		},
 		hasViewAuth(sectionKey){
-			const session = useUserSession();
-			return session.checkAuthSection(sectionKey);
+			if (this.formSession && this.formSession.checkAuthSection)
+				return this.formSession.checkAuthSection(sectionKey);
+			return false;
 		},
 		clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];

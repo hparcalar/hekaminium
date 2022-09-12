@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<table :id="id" class="uk-table uk-table-striped uk-table-middle" :class="[tableClass]" style="width:100%">
+		<table :id="id" class="uk-table uk-table-striped uk-table-responsive uk-table-small" :class="[tableClass]" style="width:100%">
 			<thead>
 				<tr>
 					<th v-for="header in headers" :key="header" class="uk-text-nowrap">

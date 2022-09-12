@@ -988,6 +988,13 @@
     "_name": "_0279fab2"
   },
   {
+    "name": "purchasing-item-demand-waiting-for-approve",
+    "path": "/purchasing/item-demand/waiting-for-approve",
+    "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-demand/waiting-for-approve.vue",
+    "chunkName": "pages/purchasing/item-demand/waiting-for-approve",
+    "_name": "_023c6e50"
+  },
+  {
     "name": "purchasing-item-order-list",
     "path": "/purchasing/item-order/list",
     "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-order/list.vue",
