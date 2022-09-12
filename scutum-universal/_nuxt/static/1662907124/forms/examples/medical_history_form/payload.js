@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/examples/medical_history_form", {data:[{}],fetch:{},mutations:[]});

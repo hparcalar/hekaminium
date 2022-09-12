@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/examples/rental_application_form", {data:[{}],fetch:{},mutations:[]});

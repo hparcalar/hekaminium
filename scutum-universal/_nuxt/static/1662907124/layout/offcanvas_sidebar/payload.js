@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/layout/offcanvas_sidebar", {data:[{}],fetch:{},mutations:[]});

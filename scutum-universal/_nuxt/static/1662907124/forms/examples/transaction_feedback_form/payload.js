@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/examples/transaction_feedback_form", {data:[{}],fetch:{},mutations:[]});

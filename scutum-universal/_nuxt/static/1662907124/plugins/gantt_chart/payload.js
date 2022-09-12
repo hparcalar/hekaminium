@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/plugins/gantt_chart", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/fab_buttons", {data:[{}],fetch:{},mutations:[]});

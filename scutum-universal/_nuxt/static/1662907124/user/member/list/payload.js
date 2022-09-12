@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/user/member/list", {data:[{}],fetch:{},mutations:[]});

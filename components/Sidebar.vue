@@ -15,7 +15,8 @@
 import { mapState } from 'vuex'
 import ScMenuList from './navigation/MenuList';
 import { scMq } from '~/assets/js/utils'
-import { menuEntries } from './navigation/sidebar_menu'
+import { menuEntries, setAuthDictionary } from './navigation/sidebar_menu'
+import { useUserSession } from '~/composable/userSession';
 
 require('~/plugins/vue2-touch-events')
 
@@ -52,9 +53,16 @@ export default {
 			})
 		}
 	},
+	beforeMount(){
+		const session = useUserSession();
+			setAuthDictionary(session.user.sections);
+	},
 	mounted () {
 		const self = this;
+
 		this.$nextTick(() => {
+			
+
 			if(scMq.mediumMax() || this.$store.getters['sidebarOffcanvasState']) {
 				// activate UIKit offcanvas
 				UIkit.offcanvas(document.getElementById('sc-sidebar-main'), {
@@ -68,6 +76,8 @@ export default {
 				self.$store.commit('sidebarMainToggle', false);
 			}
 		})
+
+		
 	},
 	methods: {
 		closeSidebar (direction, event) {

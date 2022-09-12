@@ -118,6 +118,7 @@ const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* web
 const _15dc5bce = () => interopDefault(import('../pages/purchasing/item-demand/index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
 const _17166816 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
 const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
+const _05b44c6a = () => interopDefault(import('../pages/user/role/index.vue' /* webpackChunkName: "pages/user/role/index" */))
 const _7c604f68 = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
 const _3629d767 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
@@ -145,6 +146,7 @@ const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue'
 const _0279fab2 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
 const _b5f58dec = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
 const _7adfb191 = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
+const _41163cb5 = () => interopDefault(import('../pages/user/role/list.vue' /* webpackChunkName: "pages/user/role/list" */))
 const _311db640 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -618,6 +620,10 @@ export const routerOptions = {
     component: _06e9ff22,
     name: "user-member"
   }, {
+    path: "/user/role",
+    component: _05b44c6a,
+    name: "user-role"
+  }, {
     path: "/warehouse/list",
     component: _7c604f68,
     name: "warehouse-list"
@@ -725,6 +731,10 @@ export const routerOptions = {
     path: "/user/member/list",
     component: _7adfb191,
     name: "user-member-list"
+  }, {
+    path: "/user/role/list",
+    component: _41163cb5,
+    name: "user-role-list"
   }, {
     path: "/",
     component: _311db640,

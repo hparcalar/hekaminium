@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/advanced_elements/color_picker", {data:[{}],fetch:{},mutations:[]});

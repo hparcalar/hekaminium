@@ -27,6 +27,15 @@
 										<label>Kullanıcı Adı</label>
 									</ScInput>
 								</div>
+								<div>
+                                    <client-only>
+                                        <Select2
+                                            v-model="formData.sysRoleId"
+                                            :options="roleList"
+                                            :settings="{ 'width': '100%', 'placeholder': 'Rol', 'allowClear': true }"
+                                        ></Select2>
+                                    </client-only>
+								</div>
                                 <div>
 									<ScInput v-model="formData.password" type="password">
 										<label>Parola</label>
@@ -88,9 +97,11 @@ export default {
 			userCode: '',
 			userName: '',
             explanation:'',
+			sysRoleId: null,
             plantId: null,
 			isActive: true,
 		},
+		roleList: [],
 	}),
 	computed: {
 		
@@ -110,8 +121,17 @@ export default {
 
             const api = useApi();
             try {
-                const getData = (await api.get('User/' + this.formData.id)).data;   
+				const rawRoleData = (await api.get('User/Role')).data;
+				if (rawRoleData){
+					this.roleList = rawRoleData.map((d) => {
+						return  {id: d.id.toString(),
+						text: d.roleName,};
+					});
+				}
+
+                const getData = (await api.get('User/' + this.formData.id)).data;
                 if (getData && getData.id > 0){
+					getData.sysRoleId = getData.sysRoleId ? getData.sysRoleId.toString() : null;
                     this.formData = getData;
                 }
             } catch (error) {
@@ -125,6 +145,8 @@ export default {
                 if (postResult.result){
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
+
+					this.$router.go(-1);
                 }
                 else
                     this.showNotification(postResult.errorMessage, false, 'error');

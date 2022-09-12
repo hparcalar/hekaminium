@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pages/task_board", {data:[{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/wysiwyg/quill", {data:[{}],fetch:{},mutations:[]});

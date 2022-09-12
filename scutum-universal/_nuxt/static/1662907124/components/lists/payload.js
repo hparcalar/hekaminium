@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/lists", {data:[{}],fetch:{},mutations:[]});

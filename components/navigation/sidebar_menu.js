@@ -1,6 +1,15 @@
 import { scHelpers } from "~/assets/js/utils";
 const { uniqueID } = scHelpers;
 
+let _authDictionary = [];
+export const setAuthDictionary = function(dict){
+	_authDictionary = dict;
+} 
+
+function checkAuth(sectionKey){
+	return _authDictionary.some(d => d.SectionKey == sectionKey && d.CanRead == true);
+}
+
 export const menuEntries = [
 	{
 		section_title: "Süreçler"
@@ -156,7 +165,10 @@ export const menuEntries = [
 		]
 	},
 	{
-		section_title: "TANIMLAR"
+		section_title: "TANIMLAR",
+		visible: function(){
+			return checkAuth('Definitions');
+		},
 	},
 	{
 		id: uniqueID(),
@@ -164,6 +176,9 @@ export const menuEntries = [
 		page: "/definitions/material",
 		icon: "mdi mdi-archive",
 		isOpen: false,
+		visible: function(){
+			return checkAuth('Definitions');
+		},
 		level: 0,
 		submenu: [
 			{
@@ -192,6 +207,9 @@ export const menuEntries = [
 		page: "/definitions/trade",
 		icon: "mdi mdi-account-supervisor-circle",
 		isOpen: false,
+		visible: function(){
+			return checkAuth('Definitions');
+		},
 		level: 0,
 		submenu: [
 			{
@@ -264,7 +282,10 @@ export const menuEntries = [
 		icon: "mdi mdi-chart-bar",
 	},
 	{
-		section_title: "SİSTEM"
+		section_title: "SİSTEM",
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
 	},
 	{
 		id: uniqueID(),
@@ -272,6 +293,9 @@ export const menuEntries = [
 		page: "/user",
 		icon: "mdi mdi-account-key",
 		isOpen: false,
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
 		level: 0,
 		submenu: [
 			{
@@ -291,18 +315,27 @@ export const menuEntries = [
 		title: "İşletmeler",
 		page: "/plant/list",
 		icon: "mdi mdi-office-building",
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
 	},
 	{
 		id: uniqueID(),
 		title: "Uygulama Ayarları",
 		page: "/settings",
 		icon: "mdi mdi-tune",
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
 	},
 	{
 		id: uniqueID(),
 		title: "Veri Yedekleme",
 		page: "/backup",
 		icon: "mdi mdi-backup-restore",
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
 	},
 ];
 

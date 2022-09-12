@@ -12,7 +12,7 @@
 						</h4>
 					</div>
 					<div>
-						<ul data-uk-tab>
+							<ul data-uk-tab>
 								<li class="uk-active">
 									<a href="javascript:void(0)">
 										Genel Bilgiler
@@ -21,6 +21,11 @@
 								<li>
 									<a href="javascript:void(0)">
 										Malzeme Yönetimi
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										Notlar
 									</a>
 								</li>
 								<li>
@@ -46,6 +51,7 @@
 													<label>Proje Adı</label>
 												</ScInput>
 											</div>
+											
 											<div>
 												<client-only>
 													<Select2
@@ -72,7 +78,9 @@
 												<ScInput v-model="formData.deadlineDate" :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr placeholder="Termin Tarihi" mode="outline"></ScInput>
 											</div>
 											<div>
-												<ScTextarea v-model="formData.explanation" placeholder="Genel Açıklama"></ScTextarea>
+												<ScInput v-model="formData.responsiblePerson">
+													<label>Firma Yetkilisi</label>
+												</ScInput>
 											</div>
 											<div>
 												<client-only>
@@ -83,9 +91,13 @@
 													></Select2>
 												</client-only>
 											</div>
+											<div v-if="hasViewAuth('ProjectBudgetView')">
+												<ScInput v-model="formData.budget" type="number">
+													<label>Proje Bedeli</label>
+												</ScInput>
+											</div>
 										</div>
 									</fieldset>
-
 								</li>
 								<li>
 									<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
@@ -93,6 +105,11 @@
 											<div class="uk-width-1-4">
 												<ul class="uk-tab-left" data-uk-tab="connect: .sc-switcher-left">
 													<li class="uk-active">
+														<a href="javascript:void(0)">
+															Malzeme Listesi
+														</a>
+													</li>
+													<li>
 														<a href="javascript:void(0)">
 															Talepler
 														</a>
@@ -112,17 +129,48 @@
 															Tüketim Durumu
 														</a>
 													</li>
-													<li>
-														<a href="javascript:void(0)">
-															Mevcut Malzemeler
-														</a>
-													</li>
 												</ul>
 											</div>
 											<div class="uk-width-3-4"> 
 												<ul class="uk-switcher sc-switcher-left">
-													<!-- DEMAND LIST CONTENT -->
+													<!-- COST ITEM LIST CONTENT -->
 													<li class="uk-active">
+														<div class="sc-padding-medium sc-padding-remove-top">
+															<div class="uk-flex-left uk-grid">
+																<button type="button" @click="showNewCostItem" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+																	<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+																	Yeni Kalem
+																</button>
+																<hr class="uk-divider-vertical" style="height:35px;" />
+																<div v-if="selectedCostItemRow && selectedCostItemRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+																	<button type="button" @click="showCostItem" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
+																		Düzenle
+																	</button>
+																	<button v-show="selectedCostItemIndexes.length > 0" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
+																		<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
+																		Sil
+																	</button>
+																</div>
+																
+															</div>
+															<div class="uk-margin-medium uk-margin-remove-left">
+																<client-only>
+																	<Datatable
+																		id="sc-dt-cost-items-table"
+																		ref="costItemsTable"
+																		:data="formData.costItems"
+																		:options="dtOptions"
+																		:customColumns="dtCostItemCols"
+																		:buttons="true"
+																		:customEvents="[{ name: 'select', function: clickCostItemRow }, { name: 'deselect', function: deselectCostItemRow }]"
+																	></Datatable>
+																</client-only>
+															</div>
+														</div>
+													</li>
+													<!-- DEMAND LIST CONTENT -->
+													<li>
 														<div class="sc-padding-medium sc-padding-remove-top">
 															<div class="uk-flex-left uk-grid">
 																<button type="button" @click="showNewDemand" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
@@ -130,7 +178,7 @@
 																	Yeni Talep
 																</button>
 																<hr class="uk-divider-vertical" style="height:35px;" />
-																<div v-if="selectedDemandRow && selectedDemandRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+																<div v-if="hasViewAuth('ItemDemandApproval') && selectedDemandRow && selectedDemandRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
 																	<button type="button" @click="showDemand" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
 																		Düzenle
@@ -164,13 +212,26 @@
 																</client-only>
 															</div>
 														</div>
-														
 													</li>
 													<li>Sipariş içerik</li>
 													<li>İrsaliye içerik</li>
 													<li>Tüketim içerik</li>
-													<li>Mevcut malzemeler içerik</li>
 												</ul>
+											</div>
+										</div>
+									</fieldset>
+								</li>
+								<li>
+									<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
+										<div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
+											<div>
+												<ScTextarea v-model="formData.explanation" placeholder="Genel Açıklama"></ScTextarea>
+											</div>
+											<div>
+												<ScTextarea v-model="formData.meetingExplanation" placeholder="Görüşme Sonuçları"></ScTextarea>
+											</div>
+											<div>
+												<ScTextarea v-model="formData.criticalExplanation" placeholder="Kritik Açıklamalar"></ScTextarea>
 											</div>
 										</div>
 									</fieldset>
@@ -212,6 +273,14 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="dlgCostItem" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -225,6 +294,7 @@ import { useApi } from '~/composable/useApi';
 import { getQS, dateToStr } from '~/composable/useHelpers';
 import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
 import moment from '~/plugins/moment'
+import { useUserSession } from '~/composable/userSession';
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -235,7 +305,7 @@ if(process.client) {
 }
 
 export default {
-	name: 'FirmForm',
+	name: 'ProjectForm',
 	components: {
 		Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		Select2: process.client ? () => import('~/components/Select2') : null,
@@ -251,30 +321,39 @@ export default {
 			projectCode: '',
 			projectName: '',
             explanation:'',
+			responsiblePerson: '',
+			meetingExplanation: '',
+			criticalExplanation: '',
 			startDate: null,
 			deadlineDate: null,
+			budget: 0,
             plantId: null,
 			isActive: true,
             projectCategoryId: '',
             firmId: '',
             projectStatus: '0',
+			costItems: [],
 		},
 		selectedDemandRow: { id:0, itemDemandId: 0 },
+		selectedCostItemRow: { id:0 },
 		refreshDemandForm: false,
+		refreshCostItemForm: false,
         categories: [],
 		demandList: [],
 		selectedDemandIndexes: [],
+		selectedCostItemIndexes: [],
         firms: [],
 		statusList: [
-			{ id:'0', text: 'Bekleniyor' },
-			{ id:'1', text: 'Çalışılıyor' },
-			{ id:'2', text: 'Tamamlandı' },
-			{ id:'3', text: 'İptal edildi' },
+			{ id:'0', text: 'Teklif verilecek' },
+			{ id:'1', text: 'Teklif verildi' },
+			{ id:'2', text: 'Onaylandı' },
+			{ id:'3', text: 'Tamamlandı' },
+			{ id:'4', text: 'İptal edildi' },
 		],
 		dtOptions: {
 			select: true,
-			searching: false,
-			paging: false,
+			searching: true,
+			paging: true,
 			buttons: [
 				{
 					extend: "copyHtml5",
@@ -311,6 +390,15 @@ export default {
 			{ data: "itemName", title: "Stok Adı", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
+		],
+		dtCostItemCols: [
+			{ data: "createdDate", title: "Tarih", visible: true, type:'date' },
+			{ data: "lineNumber", title: "Sıra No", visible: true, },
+			{ data: "costTypeText", title: "Türü", visible: true, },
+			{ data: "costName", title: "Açıklama", visible: true, },
+			{ data: "quantity", title: "Miktar", visible: true, },
+			{ data: "overallTotal", title: "Tutar", visible: true, },
+			{ data: "costStatusText", title: "Durum", visible: true, },
 		]
 	}),
 	computed: {
@@ -373,7 +461,7 @@ export default {
 			}
 
 			return result;
-		}
+		},
 	},
 	beforeDestroy(){
 		UIkit.modal('.uk-modal').$destroy(true);
@@ -425,6 +513,24 @@ export default {
 
                     this.formData = getData;
                 }
+				else{
+					this.formData = {
+						id: 0,
+						projectCode: '',
+						projectName: '',
+						explanation:'',
+						responsiblePerson: '',
+						startDate: null,
+						deadlineDate: null,
+						budget: 0,
+						plantId: null,
+						isActive: true,
+						projectCategoryId: '',
+						firmId: '',
+						projectStatus: '0',
+						costItems: [],
+					};
+				}
 
 				await this.bindDemands();
             } catch (error) {
@@ -460,6 +566,8 @@ export default {
                 if (postResult.result){
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
+
+					this.$router.go(-1);
                 }
                 else
                     this.showNotification(postResult.errorMessage, false, 'error');
@@ -493,6 +601,19 @@ export default {
 			setTimeout(() => { this.refreshDemandForm = true; }, 100);
 
 			const modalElement = document.getElementById('dlgDemand');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+		},
+		showNewCostItem(){
+			this.selectedCostItemRow = { id:0 };
+			this.showCostItem();
+		},
+		showCostItem(){
+			this.refreshCostItemForm = false;
+			setTimeout(() => { this.refreshCostItemForm = true; }, 100);
+
+			const modalElement = document.getElementById('dlgCostItem');
 			modalElement.width = window.innerWidth * 0.7;
 			modalElement.height = window.innerHeight * 0.8;
 			UIkit.modal(modalElement).show();
@@ -555,6 +676,10 @@ export default {
 					}
 			});
 		},
+		hasViewAuth(sectionKey){
+			const session = useUserSession();
+			return session.checkAuthSection(sectionKey);
+		},
 		clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];
 			this.selectedDemandIndexes.push(selIndex);
@@ -568,6 +693,20 @@ export default {
 			}
 			else
 				this.selectedDemandRow = { id:0, itemDemandId: 0 };
+		},
+		clickCostItemRow: function (e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedCostItemIndexes.push(selIndex);
+            this.selectedCostItemRow = this.formData.costItems[selIndex];
+        },
+		deselectCostItemRow: function(e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedCostItemIndexes = this.selectedCostItemIndexes.filter(d => d != selIndex);
+			if (this.selectedCostItemIndexes.length > 0){
+				this.selectedCostItemRow = this.formData.costItems[this.selectedCostItemIndexes[0]];
+			}
+			else
+				this.selectedCostItemRow = { id:0 };
 		}
 	},
 }

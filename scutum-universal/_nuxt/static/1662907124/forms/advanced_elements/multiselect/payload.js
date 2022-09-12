@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/advanced_elements/multiselect", {data:[{}],fetch:{},mutations:[]});

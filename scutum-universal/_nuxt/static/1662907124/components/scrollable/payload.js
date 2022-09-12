@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/scrollable", {data:[{}],fetch:{},mutations:[]});

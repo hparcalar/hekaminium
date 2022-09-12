@@ -136,6 +136,7 @@ export default {
 						name: postResult.data.InfoMessage,
 						plantId: postResult.data.PlantId,
 						plantCode: plantCode,
+						sections: postResult.data.AdditionalData ? JSON.parse(postResult.data.AdditionalData).Sections : [],
 					};
 					window.location.href = '/';
 				}

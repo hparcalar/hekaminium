@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/forms/validation", {data:[{}],fetch:{},mutations:[]});

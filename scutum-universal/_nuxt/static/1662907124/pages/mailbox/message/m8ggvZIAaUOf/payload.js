@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pages/mailbox/message/m8ggvZIAaUOf", {data:[{},{}],fetch:{},mutations:[]});

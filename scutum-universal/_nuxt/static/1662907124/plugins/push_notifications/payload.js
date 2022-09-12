@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/plugins/push_notifications", {data:[{}],fetch:{},mutations:[]});

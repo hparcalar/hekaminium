@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/layout/boxed", {data:[{}],fetch:{},mutations:[]});

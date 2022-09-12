@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pages/invoices/320a9171-9e92-3406-ba1f-0e686d914f73", {data:[{},{}],fetch:{},mutations:[]});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/plugins/code_editor", {data:[{}],fetch:{},mutations:[]});

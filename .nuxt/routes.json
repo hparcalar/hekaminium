@@ -806,6 +806,13 @@
     "_name": "_06e9ff22"
   },
   {
+    "name": "user-role",
+    "path": "/user/role",
+    "component": "/home/hakan/Projects/HekaMinium/pages/user/role/index.vue",
+    "chunkName": "pages/user/role/index",
+    "_name": "_05b44c6a"
+  },
+  {
     "name": "warehouse-list",
     "path": "/warehouse/list",
     "component": "/home/hakan/Projects/HekaMinium/pages/warehouse/list.vue",
@@ -993,6 +1000,13 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/user/member/list.vue",
     "chunkName": "pages/user/member/list",
     "_name": "_7adfb191"
+  },
+  {
+    "name": "user-role-list",
+    "path": "/user/role/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/user/role/list.vue",
+    "chunkName": "pages/user/role/list",
+    "_name": "_41163cb5"
   },
   {
     "name": "index",

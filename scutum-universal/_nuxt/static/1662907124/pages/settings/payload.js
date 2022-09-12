@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pages/settings", {data:[{}],fetch:{},mutations:[]});

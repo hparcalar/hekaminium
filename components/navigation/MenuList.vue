@@ -7,6 +7,7 @@
 	>
 		<li
 			v-for="item in menuItems"
+			v-if="!item.visible || item.visible()"
 			:key="item.id"
 			:class="{
 				'sc-has-submenu': item.submenu && item.submenu.length,
@@ -91,6 +92,19 @@ export default {
 				this.setSectionOpen(k)
 			}
 		});
+	},
+	data: () => ({
+		// menuItems: [],
+	}),
+	watch: {
+		// menuData: {
+		// 	handler: function(oldVal,newVal){
+		// 		this.menuItems = newVal;
+		// 		console.log('change');
+		// 		console.log(newVal);
+		// 	},
+		// 	deep: true,
+		// }
 	},
 	methods: {
 		pageChild (item) {

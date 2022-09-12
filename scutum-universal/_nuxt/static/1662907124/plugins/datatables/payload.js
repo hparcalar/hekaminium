@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/plugins/datatables", {data:[{}],fetch:{},mutations:[]});

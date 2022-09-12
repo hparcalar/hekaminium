@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/components/drop_dropdowns", {data:[{}],fetch:{},mutations:[]});

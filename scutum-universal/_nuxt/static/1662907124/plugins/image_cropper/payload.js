@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/plugins/image_cropper", {data:[{}],fetch:{},mutations:[]});

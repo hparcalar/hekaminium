@@ -118,6 +118,8 @@ export default {
                 if (postResult.result){
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
+
+					this.$router.go(-1);
                 }
                 else
                     this.showNotification(postResult.errorMessage, false, 'error');

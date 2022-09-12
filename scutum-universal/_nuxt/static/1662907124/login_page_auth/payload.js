@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/login_page_auth", {data:[{}],fetch:{},mutations:[]});

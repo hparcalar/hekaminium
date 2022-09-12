@@ -162,6 +162,8 @@ export default {
 		// uncomment following line to activate user theme (material design colors)
 		// this.HTMLClasses.activeTheme = 'sc-theme-user-md';
 		this.mergeHTMLClasses()
+
+
 	},
 	methods: {
 		mergeHTMLClasses () {
