@@ -1,11 +1,11 @@
 <template>
 	<div class="uk-display-inline-block">
-		<div v-if="status" class="sc-avatar-wrapper" :class="wrapperClass">
+		<div v-show="status" class="sc-avatar-wrapper" :class="wrapperClass">
 			<span class="sc-user-status" :class="status"></span>
 			<img :src="avatarSrc" :alt="alt" class="sc-avatar" :class="extraClass">
 		</div>
 		<img
-			v-if="!status"
+			v-show="!status"
 			:src="avatarSrc"
 			:alt="alt"
 			class="sc-avatar"

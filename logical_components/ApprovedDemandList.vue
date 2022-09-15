@@ -14,7 +14,7 @@
                     ></Datatable>
                 </client-only>
             </div>
-            <div v-if="isDialog == true" class="uk-margin-large-top">
+            <div v-show="isDialog == true" class="uk-margin-large-top">
                 <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
                     <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
                     Aktar
@@ -72,6 +72,8 @@ export default {
 			{ data: "demandDate", title: "Tarih", visible: true, type:'date' },
 			{ data: "itemDemandNo", title: "Talep No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, },
+            { data: "partNo", title: "Parça Kodu", visible: true, },
+			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],

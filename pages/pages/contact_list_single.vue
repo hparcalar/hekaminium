@@ -121,53 +121,53 @@
 										<div class="sc-timeline-date">
 											{{ item.dateAlt1 }}
 										</div>
-										<div v-if="item.icon !== ''" class="sc-timeline-icon" :class="[item.colorAlt1]">
+										<div v-show="item.icon !== ''" class="sc-timeline-icon" :class="[item.colorAlt1]">
 											<i :class="['mdi', item.icon]"></i>
 										</div>
 										<div :class="['sc-timeline-body', item.extraClass]">
 											<h4 class="sc-timeline-header">
 												{{ item.title | capitalize }}
-												<span v-if="item.category">
+												<span v-show="item.category">
 													in
-													<a v-if="item.titleLink !== ''" :href="item.titleLink">
+													<a v-show="item.titleLink !== ''" :href="item.titleLink">
 														{{ item.category | capitalize }}
 													</a>
-													<span v-if="item.titleLink === ''">
+													<span v-show="item.titleLink === ''">
 														{{ item.category | capitalize }}
 													</span>
 													category
 												</span>
-												<span v-if="item.user">
-													<a v-if="item.user !== ''" :href="item.titleLink">
+												<span v-show="item.user">
+													<a v-show="item.user !== ''" :href="item.titleLink">
 														{{ item.user | capitalize }}
 													</a>
-													<span v-if="item.titleLink === ''">
+													<span v-show="item.titleLink === ''">
 														{{ item.category | capitalize }}
 													</span>
-													<span v-if="item.tasks.length">
+													<span v-show="item.tasks.length">
 														have completed 4 tasks
 													</span>
 												</span>
 											</h4>
-											<span v-if="item.meta" class="sc-timeline-meta">
+											<span v-show="item.meta" class="sc-timeline-meta">
 												23 comments; 14 pingbacks
 											</span>
-											<hr v-if="(item.images.length || item.content !== '') && !item.tasks.length">
-											<div v-if="item.images.length || item.content !== '' || item.tasks.length" class="sc-timeline-content">
-												<p v-if="item.content !== '' " class="uk-margin-remove">
+											<hr v-show="(item.images.length || item.content !== '') && !item.tasks.length">
+											<div v-show="item.images.length || item.content !== '' || item.tasks.length" class="sc-timeline-content">
+												<p v-show="item.content !== '' " class="uk-margin-remove">
 													{{ item.content }}
 												</p>
-												<ul v-if="item.images" class="sc-list-images uk-list uk-list-inline">
+												<ul v-show="item.images" class="sc-list-images uk-list uk-list-inline">
 													<li v-for="image in item.images" :key="image">
 														<ScPhoto :image-id="image" size="md"></ScPhoto>
 													</li>
 												</ul>
-												<ul v-if="item.tasks.length" class="sc-list-shadow uk-margin-top">
+												<ul v-show="item.tasks.length" class="sc-list-shadow uk-margin-top">
 													<li v-for="task in item.tasks" :key="task.id">
 														<a href="javascript:void(0)">
 															{{ task.title }}
 														</a>
-														<p v-if="task.loggedTime !== '' " class="sc-list-secondary-text uk-text-small">
+														<p v-show="task.loggedTime !== '' " class="sc-list-secondary-text uk-text-small">
 															Loged time: {{ task.loggedTime }}
 														</p>
 													</li>

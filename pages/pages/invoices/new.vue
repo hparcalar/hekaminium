@@ -112,10 +112,10 @@
 						</div>
 					</div>
 					<div class="uk-margin-left">
-						<a v-if="invoice.items.length === (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-primary" @click="addItem($event)">
+						<a v-show="invoice.items.length === (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-primary" @click="addItem($event)">
 							<i class="mdi mdi-plus"></i>
 						</a>
-						<a v-if="invoice.items.length !== (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-danger" @click="removeItem($event,item.id)">
+						<a v-show="invoice.items.length !== (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-danger" @click="removeItem($event,item.id)">
 							<i class="mdi mdi-trash-can-outline"></i>
 						</a>
 					</div>

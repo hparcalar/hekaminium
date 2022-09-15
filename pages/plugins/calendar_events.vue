@@ -13,7 +13,7 @@
 						/>
 					</client-only>
 					<ScTransition
-						v-if="dayEvents.length"
+						v-show="dayEvents.length"
 						group
 						stagger
 						name="slideBottom"

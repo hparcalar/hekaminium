@@ -5,23 +5,54 @@
                 <fieldset class="uk-fieldset uk-fieldset-alt uk-background-muted sc-padding-medium">
                     <div class="uk-child-width-1-2@m uk-grid sc-padding-remove-top" data-uk-grid>
                         <div>
-                            <ScInput v-model="formData.lineNumber" :type="'number'" :read-only="true">
-                                <label>Satır No</label>
-                            </ScInput>
+                            <div class="uk-grid">
+                                <div class="uk-width-1-3">
+                                    <ScInput v-model="formData.lineNumber" :type="'number'" :read-only="true">
+                                        <label>Satır No</label>
+                                    </ScInput>
+                                </div>
+
+                                <div class="uk-width-2-3">
+                                    <ScInput v-model="formData.costName">
+                                        <label>Kalem Adı</label>
+                                    </ScInput>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <client-only>
-                                <Select2
-                                    v-model="formData.itemId"
-                                    :options="itemList"
-                                    :settings="{ 'width': '100%', 'placeholder': 'Stok Seçiniz', 'allowClear': true }"
-                                ></Select2>
-                            </client-only>
+                            <div class="uk-grid">
+                                <div class="uk-width-3-5">
+                                    <div>
+                                        <client-only>
+                                            <Select2
+                                                v-model="formData.itemId"
+                                                :options="itemList"
+                                                :settings="{ 'width': '100%', 'placeholder': 'Stok Seçiniz', 'allowClear': true }"
+                                            ></Select2>
+                                        </client-only>
+                                    </div>
+                                </div>
+                                <div class="uk-width-2-5">
+                                    <button type="button" @click="showNewItemDialog" class="sc-button sc-button-primary sc-button-small uk-margin-medium" style="height:34px;margin-top:15px;">
+                                        <span :data-uk-icon="'icon: plus'" class="uk-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                        
                         <div>
-                            <ScInput v-model="formData.costName">
-                                <label>Kalem Adı</label>
-                            </ScInput>
+                            <div class="uk-grid">
+                                <div class="uk-width-1-2">
+                                    <ScInput v-model="formData.partNo">
+                                        <label>Parça Kodu</label>
+                                    </ScInput>
+                                </div>
+                                <div class="uk-width-1-2">
+                                    <ScInput v-model="formData.partDimensions">
+                                        <label>Boyutlar</label>
+                                    </ScInput>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <ScInput :type="'number'" v-model="formData.quantity" @change="calculateTotal">
@@ -75,6 +106,20 @@
                 </fieldset>
             </form>
         </div>
+
+        <div id="dlgItemDefinition" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<ItemDefinition v-if="refreshItemDialog"
+						:record-id="0"
+						:is-dialog="true"
+						:dialog-container="'dlgItemDefinition'"
+						@onItemSaved="bindItems"
+						@onCancel="closeItemDefDialog"
+					/>
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 
@@ -116,6 +161,7 @@ export default {
     emits: ['onCostItemSubmit'],
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
+        ItemDefinition: process.client ? () => import('~/definition_components/ItemDefinition') : null,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -127,8 +173,8 @@ export default {
             id: 0,
 			lineNumber: 0,
             costName: '',
-			itemId: null,
-            forexId: null,
+			itemId: '',
+            forexId: '',
             forexRate: 0,
             itemName: '',
             explanation: '',
@@ -138,7 +184,10 @@ export default {
             overallTotal: 0,
             forexOverallTotal: 0,
             newDetail: true,
+            partNo: '',
+            partDimensions: '',
 		},
+        refreshItemDialog: false,
         itemList: [],
         forexList: [],
 	}),
@@ -166,8 +215,11 @@ export default {
                     overallTotal: 0,
                     forexOverallTotal: 0,
                     newDetail: true,
+                    partNo: '',
+                    partDimensions: '',
                 };
             }
+
             try {
                 this.formData.itemId = this.formData.itemId ? this.formData.itemId.toString() : null;   
                 this.formData.forexId = this.formData.forexId ? this.formData.forexId.toString() : null;     
@@ -205,6 +257,20 @@ export default {
             }
 
             this.calculateTotal();
+        },
+        async bindItems(){
+            // fetch items for selection
+            try {
+                const api = useApi();
+                this.itemList = (await api.get('Item')).data.map((d) => {
+                    return {
+                        id: d.id,
+                        text: d.itemName,
+                    };
+                });
+            } catch (error) {
+                
+            }
         },
 		onSubmit(){
             const self = this;
@@ -267,6 +333,19 @@ export default {
                 
             }
         },
+        showNewItemDialog(){
+            this.refreshItemDialog = false;
+			setTimeout(() => { this.refreshItemDialog = true; }, 200);
+
+			const modalElement = document.getElementById('dlgItemDefinition');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+        },
+        closeItemDefDialog(){
+			const modalElement = document.getElementById('dlgItemDefinition');
+			UIkit.modal(modalElement).hide();
+		},
         async updateLiveForexRate(val){
             const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
 

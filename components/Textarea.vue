@@ -29,7 +29,7 @@
 			@keyup="txtKeyUp"
 		>
 		</textarea>
-		<span v-if="mode !== 'outline'" class="sc-input-bar"></span>
+		<span v-show="mode !== 'outline'" class="sc-input-bar"></span>
 	</div>
 </template>
 

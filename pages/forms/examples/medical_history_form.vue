@@ -38,7 +38,7 @@
 									<PrettyCheck v-model="userData.questions[index].value" :value="question.value" class="p-switch">
 										{{ question.text }}
 									</PrettyCheck>
-									<div v-if="question.input" v-show="question.value" class="uk-margin-small-top uk-margin-medium-bottom">
+									<div v-show="question.input && question.value" class="uk-margin-small-top uk-margin-medium-bottom">
 										<ScInput v-model="userData.questions[index].moreInfo" placeholder="Please add more info..." mode="outline"></ScInput>
 									</div>
 								</div>

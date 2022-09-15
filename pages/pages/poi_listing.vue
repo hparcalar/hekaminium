@@ -23,10 +23,10 @@
 							:class="{ 'uk-active': currentMarker.id === poi.id }"
 							@click="toggleInfoWindow(poi, index)"
 						>
-							<span v-if="poi.main" class="sc-text-semibold md-color-red-600">
+							<span v-show="poi.main" class="sc-text-semibold md-color-red-600">
 								{{ poi.title }}
 							</span>
-							<p v-else class="sc-text-semibold uk-margin-remove uk-text-truncate" :title="poi.title">
+							<p v-show="!poi.main" class="sc-text-semibold uk-margin-remove uk-text-truncate" :title="poi.title">
 								{{ poi.title }}
 							</p>
 							<p class="sc-color-secondary uk-text-truncate uk-margin-remove" :title="poi.address">
@@ -55,7 +55,7 @@
 							@click="toggleInfoWindow(m, index)"
 						/>
 						<InfoWindow
-							v-if="isWindowOpen"
+							v-show="isWindowOpen"
 							:marker-obj="currentMarkerObject"
 							:marker="currentMarker"
 							@close="onInfoWindowClose"
@@ -75,10 +75,10 @@
 						:class="{ 'uk-active': currentMarker.id === poi.id }"
 						@click="toggleInfoWindow(poi, index)"
 					>
-						<span v-if="poi.main" class="sc-text-semibold md-color-red-600">
+						<span v-show="poi.main" class="sc-text-semibold md-color-red-600">
 							{{ poi.title }}
 						</span>
-						<p v-else class="sc-text-semibold uk-margin-remove uk-text-truncate" :title="poi.title">
+						<p v-show="!poi.main" class="sc-text-semibold uk-margin-remove uk-text-truncate" :title="poi.title">
 							{{ poi.title }}
 						</p>
 						<p class="sc-color-secondary uk-text-truncate uk-margin-remove" :title="poi.address">

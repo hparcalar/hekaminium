@@ -71,12 +71,12 @@
 									<h2 class="sc-task-card-title">
 										{{ task.title }}
 									</h2>
-									<div v-if="task.tags.length">
+									<div v-show="task.tags.length">
 										<span v-for="tag in task.tags" :key="tag" class="uk-badge uk-margin-mini-right" :class="[tagColor(tag)]">
 											{{ tag }}
 										</span>
 									</div>
-									<div v-if="task.assignee.length" class="sc-task-card-assignee">
+									<div v-show="task.assignee.length" class="sc-task-card-assignee">
 										<a v-for="assignee in task.assignee.slice(0,3)"
 											:key="assignee"
 											href="javascript:void(0)"
@@ -85,11 +85,11 @@
 										>
 											<img v-rjs="assigneeAvatar(assignee, true)" :src="assigneeAvatar(assignee)" alt="">
 										</a>
-										<a v-if="task.assignee.length > 3" href="javascript:void(0)">
+										<a v-show="task.assignee.length > 3" href="javascript:void(0)">
 											+{{ (task.assignee.length - 3) }} more
 										</a>
 									</div>
-									<div v-if="task.progress"
+									<div v-show="task.progress"
 										class="sc-progress sc-progress-small uk-margin-small-top"
 										:title="task.progress + '%'"
 									>
@@ -172,12 +172,12 @@
 											<h2 class="sc-task-card-title">
 												{{ task.title }}
 											</h2>
-											<div v-if="task.tags.length" class="uk-flex uk-margin-small-top">
+											<div v-show="task.tags.length" class="uk-flex uk-margin-small-top">
 												<span v-for="tag in task.tags" :key="tag" class="uk-badge uk-margin-mini-right" :class="[tagColor(tag)]">
 													{{ tag }}
 												</span>
 											</div>
-											<div v-if="task.assignee.length" class="sc-task-card-assignee">
+											<div v-show="task.assignee.length" class="sc-task-card-assignee">
 												<a v-for="assignee in task.assignee.slice(0,3)"
 													:key="assignee"
 													href="javascript:void(0)"
@@ -186,11 +186,11 @@
 												>
 													<img v-rjs="assigneeAvatar(assignee, true)" :src="assigneeAvatar(assignee)" alt="">
 												</a>
-												<a v-if="task.assignee.length > 3" href="javascript:void(0)">
+												<a v-show="task.assignee.length > 3" href="javascript:void(0)">
 													+{{ (task.assignee.length - 3) }} more
 												</a>
 											</div>
-											<div v-if="task.progress"
+											<div v-show="task.progress"
 												class="sc-progress sc-progress-small uk-margin-small-top"
 												:title="task.progress + '%'"
 											>
@@ -218,30 +218,30 @@
 		<div id="sc-task-modal" class="uk-flex-top uk-modal" data-uk-modal>
 			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 				<button class="uk-modal-close-default" type="button" data-uk-close></button>
-				<div v-if="modalData">
+				<div v-show="modalData">
 					<h2 class="uk-modal-title">
 						{{ modalData.title }}
 					</h2>
-					<div v-if="modalData.tags.length" class="uk-flex uk-flex-middle">
+					<div v-show="modalData.tags.length" class="uk-flex uk-flex-middle">
 						<span v-for="tag in modalData.tags" :key="tag" class="uk-badge uk-margin-mini-right" :class="[tagColor(tag)]">
 							{{ tag }}
 						</span>
 					</div>
 					<div class="uk-margin-medium-top" data-uk-grid>
 						<div class="uk-flex-1">
-							<div v-if="modalData.description !== ''" class="sc-task-modal-description">
+							<div v-show="modalData.description !== ''" class="sc-task-modal-description">
 								<p>{{ modalData.description }}</p>
 							</div>
 						</div>
 						<div class="uk-width-1-4@m">
 							<div class="uk-text-medium md-bg-grey-100 sc-padding-medium">
-								<div v-if="modalData.date">
+								<div v-show="modalData.date">
 									<span class="uk-text-muted uk-margin-small-right">
 										date:
 									</span> {{ modalData.date }}
 								</div>
-								<hr v-if="modalData.list !== ''" class="uk-margin-small">
-								<div v-if="modalData.list !== ''">
+								<hr v-show="modalData.list !== ''" class="uk-margin-small">
+								<div v-show="modalData.list !== ''">
 									<span class="uk-text-muted uk-margin-small-right">
 										in list:
 									</span>
@@ -249,8 +249,8 @@
 										{{ modalData.list_long }}
 									</a>
 								</div>
-								<hr v-if="modalData.progress" class="uk-margin-small">
-								<div v-if="modalData.progress">
+								<hr v-show="modalData.progress" class="uk-margin-small">
+								<div v-show="modalData.progress">
 									<span class="uk-text-muted">
 										progress:
 									</span>
@@ -258,8 +258,8 @@
 										<div class="sc-progress-bar" :class="[progressColor(modalData.progress)]" :style="{ 'width': modalData.progress + '%' }"></div>
 									</div>
 								</div>
-								<hr v-if="modalData.assignee.length" class="uk-margin-small">
-								<div v-if="modalData.assignee.length">
+								<hr v-show="modalData.assignee.length" class="uk-margin-small">
+								<div v-show="modalData.assignee.length">
 									<span class="uk-text-muted">
 										assignees:
 									</span>
@@ -273,7 +273,7 @@
 											<img v-rjs="assigneeAvatar(assignee, true)" :src="assigneeAvatar(assignee)" alt="" class="uk-border-circle">
 										</a>
 									</div>
-									<a v-if="modalData.assignee.length > 3" href="javascript:void(0)" class="uk-text-small uk-margin-small-top uk-display-inline-block">
+									<a v-show="modalData.assignee.length > 3" href="javascript:void(0)" class="uk-text-small uk-margin-small-top uk-display-inline-block">
 										+{{ (modalData.assignee.length - 3) }} more
 									</a>
 								</div>
@@ -357,12 +357,12 @@
 							<h2 class="sc-task-card-title">
 								{{ task.title }}
 							</h2>
-							<div v-if="task.tags.length">
+							<div v-show="task.tags.length">
 								<span v-for="tag in task.tags" :key="tag" class="uk-badge uk-margin-mini-right" :class="[tagColor(tag)]">
 									{{ tag }}
 								</span>
 							</div>
-							<div v-if="task.assignee.length" class="sc-task-card-assignee">
+							<div v-show="task.assignee.length" class="sc-task-card-assignee">
 								<a v-for="assignee in task.assignee.slice(0,3)"
 									:key="assignee"
 									href="javascript:void(0)"
@@ -371,11 +371,11 @@
 								>
 									<img v-rjs="assigneeAvatar(assignee, true)" :src="assigneeAvatar(assignee)" alt="">
 								</a>
-								<a v-if="task.assignee.length > 3" href="javascript:void(0)">
+								<a v-show="task.assignee.length > 3" href="javascript:void(0)">
 									+{{ (task.assignee.length - 3) }} more
 								</a>
 							</div>
-							<div v-if="task.progress"
+							<div v-show="task.progress"
 								class="sc-progress sc-progress-small uk-margin-small-top"
 								:title="task.progress + '%'"
 							>

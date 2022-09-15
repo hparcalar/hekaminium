@@ -43,7 +43,7 @@
 														<i slot="extra" class="icon mdi mdi-check"></i>
 														{{ option.value }}
 													</PrettyCheck>
-													<input v-if="option.input" v-model="userData.seenMediumOther" type="text" class="uk-input uk-display-inline-block uk-form-width-small uk-margin-small-left uk-form-small">
+													<input v-show="option.input" v-model="userData.seenMediumOther" type="text" class="uk-input uk-display-inline-block uk-form-width-small uk-margin-small-left uk-form-small">
 												</li>
 											</ul>
 										</div>

@@ -87,18 +87,18 @@
 												</ScInput>
 											</div>
 											<div>
+												<ScInput v-model="formData.quantity" type="number">
+													<label>Proje Adedi</label>
+												</ScInput>
+											</div>
+											<div>
 												<client-only>
 													<Select2
 														v-model="formData.projectStatus"
 														:options="statusList"
 														:settings="{ 'width': '100%', 'placeholder': 'Proje Durumu', 'allowClear': true }"
-													></Select2>
+													><label>Proje Durumu</label></Select2>
 												</client-only>
-											</div>
-											<div v-if="hasViewAuth('ProjectBudgetView')">
-												<ScInput v-model="formData.budget" type="number">
-													<label>Proje Bedeli</label>
-												</ScInput>
 											</div>
 										</div>
 									</fieldset>
@@ -146,7 +146,7 @@
 																	Yeni Kalem
 																</button>
 																<hr class="uk-divider-vertical" style="height:35px;" />
-																<div v-if="selectedCostItemRow && selectedCostItemRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+																<div v-show="selectedCostItemRow && selectedCostItemRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
 																	<button type="button" @click="showCostItem" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
 																		Düzenle
@@ -171,21 +171,53 @@
 																	></Datatable>
 																</client-only>
 															</div>
-															<div class="uk-margin-small uk-margin-remove-left uk-align-right">
-																<span v-if="hasViewAuth('ProjectBudgetView')" class="uk-label uk-text-bold">Toplam Tutar: {{ totalOfCostItems }}</span>
+															<div class="uk-grid">
+																<div class="uk-width-2-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="formData.profitRate" @change="calculateTotal" type="number">
+																		<label>Kar Marjı(%)</label>
+																	</ScInput>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<client-only>
+																		<Select2
+																			v-model="formData.forexId"
+																			:options="forexList"
+																			@change="updateLiveForexRate"
+																			:settings="{ 'width': '100%', 'placeholder': 'Döviz Cinsi', 'allowClear': true }"
+																		><label>Döviz Cinsi</label></Select2>
+																	</client-only>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="formData.forexRate" @change="calculateForexTotal" type="number">
+																		<label>Döviz Kuru</label>
+																	</ScInput>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="fOfferForexPrice" @change="calculateLocalTotal">
+																		<label>Döviz Bedeli</label>
+																	</ScInput>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="fOfferPrice" @change="calculateForexTotal">
+																		<label>TL Bedeli</label>
+																	</ScInput>
+																</div>
 															</div>
+															<!-- <div class="uk-margin-small uk-margin-remove-left uk-align-right">
+																<span v-show="hasViewAuth('ProjectBudgetView')" class="uk-label uk-text-bold">Toplam Tutar: {{ totalOfCostItems }}</span>
+															</div> -->
 														</div>
 													</li>
 													<!-- DEMAND LIST CONTENT -->
 													<li>
 														<div class="sc-padding-medium sc-padding-remove-top">
 															<div class="uk-flex-left uk-grid">
-																<button type="button" @click="showNewDemand" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+																<button v-show="formData.projectStatus == 3" type="button" @click="showNewDemand" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
 																	<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 																	Yeni Talep
 																</button>
 																<hr class="uk-divider-vertical" style="height:35px;" />
-																<div v-if="hasViewAuth('ItemDemandApproval') && selectedDemandRow && selectedDemandRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+																<div v-show="hasViewAuth('ItemDemandApproval') && selectedDemandRow && selectedDemandRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
 																	<button type="button" @click="showDemand" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 																		<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
 																		Düzenle
@@ -254,17 +286,14 @@
 						</div>
 					<form>	
 						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-								<span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-								Kaydet
+							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+								<span data-uk-icon="icon: check" class="uk-icon"></span>
 							</button>
-							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
-								<span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
-								Vazgeç
+							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
 							</button>
-                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-large">
-								<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-								Sil
+                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+								<span data-uk-icon="icon: trash" class="uk-icon"></span>
 							</button>
 						</div>
 					</form>
@@ -275,7 +304,7 @@
 		<div id="dlgDemand" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<ItemDemand v-show="refreshDemandForm == true"
+					<ItemDemand v-if="refreshDemandForm == true"
 						:record-id="selectedDemandRow.itemDemandId"
 						:project-id="formData.id"
 						:is-dialog="true"
@@ -290,7 +319,7 @@
 		<div id="dlgCostItem" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<ProjectCostItem v-show="refreshCostItemForm == true"
+					<ProjectCostItem v-if="refreshCostItemForm == true"
 						:detail-object="selectedCostItemRow"
 						:total-detail-count="formData.costItems.length"
 						:is-dialog="true"
@@ -314,6 +343,7 @@ import { useApi } from '~/composable/useApi';
 import { getQS, dateToStr } from '~/composable/useHelpers';
 import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
 import moment from '~/plugins/moment'
+import axios, { AxiosInstance } from 'axios'
 import { useUserSession } from '~/composable/userSession';
 
 if(process.client) {
@@ -353,24 +383,31 @@ export default {
             projectCategoryId: '',
             firmId: '',
             projectStatus: '0',
+			quantity: 1,
+			forexId: null,
+			profitRate: null,
+			offerPrice: null,
+			forexRate: null,
+			offerForexPrice: null,
 			costItems: [],
 		},
-		formSession: useUserSession(),
 		selectedDemandRow: { id:0, itemDemandId: 0 },
 		selectedCostItemRow: { id:0 },
 		refreshDemandForm: false,
 		refreshCostItemForm: false,
         categories: [],
 		demandList: [],
+		forexList: [],
 		selectedDemandIndexes: [],
 		selectedCostItemIndexes: [],
         firms: [],
 		statusList: [
-			{ id:'0', text: 'Teklif verilecek' },
-			{ id:'1', text: 'Teklif verildi' },
-			{ id:'2', text: 'Onaylandı' },
-			{ id:'3', text: 'Tamamlandı' },
-			{ id:'4', text: 'İptal edildi' },
+			{ id:'0', text: 'Oluşturuldu' },
+			{ id:'1', text: 'Teklif verilecek' },
+			{ id:'2', text: 'Teklif verildi' },
+			{ id:'3', text: 'Onaylandı' },
+			{ id:'4', text: 'Tamamlandı' },
+			{ id:'5', text: 'İptal edildi' },
 		],
 		dtOptions: {
 			select: true,
@@ -410,13 +447,16 @@ export default {
 			{ data: "demandDate", title: "Tarih", visible: true, type:'date' },
 			{ data: "itemDemandNo", title: "Talep No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, },
+			{ data: "partNo", title: "Parça Kodu", visible: true, },
+			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
 		dtCostItemCols: [
 			{ data: "lineNumber", title: "Sıra No", visible: true, },
-			{ data: "itemName", title: "Stok", visible: true, },
-			{ data: "costName", title: "Açıklama", visible: true, },
+			{ data: "itemName", title: "Stok", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.costName; } },
+			{ data: "partNo", title: "Parça Kodu", visible: true, },
+			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "overallTotal", title: "Tutar", visible: false, render: function(data){ return(new Intl.NumberFormat('tr-TR').format(data)); }},
 			// { data: "costStatusText", title: "Durum", visible: true, },
@@ -483,12 +523,33 @@ export default {
 
 			return result;
 		},
-		totalOfCostItems(){
-			let totalVal = 0;
-			if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
-				totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a,b) => a + b);
-			
-			return new Intl.NumberFormat('tr-TR').format(totalVal);
+		fOfferPrice:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.offerPrice);
+			},
+			set: function(val){
+				if (!val || val.length == 0)
+					this.formData.offerPrice = null;
+				else{
+					let procStr = val.replace('.', '').replace('.', '').replace('.','')
+						.replace(',','.');
+					this.formData.offerPrice = parseFloat(procStr);
+				}
+			}
+		},
+		fOfferForexPrice: {
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.offerForexPrice);
+			},
+			set: function(val){
+				if (!val || val.length == 0)
+					this.formData.offerForexPrice = null;
+				else{
+					let procStr = val.replace('.', '').replace('.', '').replace('.','')
+						.replace(',','.');
+					this.formData.offerForexPrice = parseFloat(procStr);
+				}
+			}
 		}
 	},
 	beforeDestroy(){
@@ -531,6 +592,15 @@ export default {
                         };
                     });
 
+				const forexData = (await api.get('Forex')).data;
+                if (forexData)
+                    this.forexList = forexData.map((d) => {
+                        return {
+							id: d.id.toString(),
+                            text: d.forexName,
+                        };
+                    });
+
                 const getData = (await api.get('Project/' + this.formData.id)).data;
                 if (getData && getData.id > 0){
 					if (getData.startDate && getData.startDate.length > 0){
@@ -543,6 +613,7 @@ export default {
 					getData.firmId = getData.firmId == null ? '' : getData.firmId.toString();
 					getData.projectStatus = getData.projectStatus == null ? '0' : getData.projectStatus.toString();
 					getData.projectCategoryId = getData.projectCategoryId == null ? '' : getData.projectCategoryId.toString();
+					getData.forexId = getData.forexId == null ? '' : getData.forexId.toString();
 
                     this.formData = getData;
                 }
@@ -553,6 +624,8 @@ export default {
 						projectName: '',
 						explanation:'',
 						responsiblePerson: '',
+						meetingExplanation: '',
+						criticalExplanation: '',
 						startDate: null,
 						deadlineDate: null,
 						budget: 0,
@@ -561,11 +634,21 @@ export default {
 						projectCategoryId: '',
 						firmId: '',
 						projectStatus: '0',
+						quantity: 1,
+						forexId: null,
+						profitRate: null,
+						offerPrice: null,
+						forexRate: null,
+						offerForexPrice: null,
 						costItems: [],
 					};
+
+					if (getData.projectCode)
+						this.formData.projectCode = getData.projectCode;
 				}
 
 				await this.bindDemands();
+				// this.calculateTotal();
             } catch (error) {
                 
             }
@@ -688,6 +771,8 @@ export default {
 
 				const modalElement = document.getElementById('dlgCostItem');
 				UIkit.modal(modalElement).hide();
+
+				this.calculateTotal();
             }
 		},
 		deleteCostItem(){
@@ -701,6 +786,8 @@ export default {
 							self.formData.costItems.splice(costIndex,1);
 						}	
 					}
+
+					self.calculateTotal();
 			});
 		},
 		async approveDetails(){
@@ -758,9 +845,19 @@ export default {
 			});
 		},
 		hasViewAuth(sectionKey){
-			if (this.formSession && this.formSession.checkAuthSection)
-				return this.formSession.checkAuthSection(sectionKey);
+			if (process.client){
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey);
+			}
 			return false;
+		},
+		onProfitRateChanged(){
+			let totalVal = 0;
+			if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
+				totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a,b) => a + b);
+
+			this.formData.offerPrice = totalVal + (totalVal * this.formData.profitRate / 100.0);
 		},
 		clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];
@@ -789,7 +886,65 @@ export default {
 			}
 			else
 				this.selectedCostItemRow = { id:0 };
-		}
+		},
+		calculateTotal(){
+			let totalVal = 0;
+			if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
+				totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a,b) => a + b);
+
+			this.formData.offerPrice = totalVal + (totalVal * this.formData.profitRate / 100.0);
+
+			let forexRate = 1;
+			if(this.formData.forexId && this.formData.forexId > 0)
+				forexRate = this.formData.forexRate;
+
+			if (forexRate && forexRate > 0)
+				this.formData.offerForexPrice = this.formData.offerPrice / forexRate;
+			else
+				this.formData.offerForexPrice = null;
+		},
+		calculateForexTotal(){
+			let forexRate = 1;
+			if(this.formData.forexId && this.formData.forexId > 0)
+				forexRate = this.formData.forexRate;
+
+			if (forexRate && forexRate > 0)
+				this.formData.offerForexPrice = this.formData.offerPrice / forexRate;
+			else
+				this.formData.offerForexPrice = null;
+		},
+		calculateLocalTotal(){
+			let forexRate = 1;
+			if(this.formData.forexId && this.formData.forexId > 0)
+				forexRate = this.formData.forexRate;
+
+			if (forexRate && forexRate > 0)
+				this.formData.offerPrice = this.formData.offerForexPrice * forexRate;
+		},
+		async updateLiveForexRate(val){
+            const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+
+            try {
+                // US DOLLAR, EURO
+                const api = axios.create();
+                const data = (await api.get(reqUri)).data;
+
+                this.formData.forexId = val.toString();
+
+                const selectedForex = this.forexList.find(d => d.id == parseInt(val));
+
+                const searchCode = selectedForex.text == 'EUR' ? 'EURO' : 
+                    selectedForex.text == 'USD' ? 'US DOLLAR' : selectedForex.text;
+
+                const foundForex = data.TCMB_AnlikKurBilgileri.find(d => d.CurrencyName == searchCode);
+                if(foundForex){
+                    this.formData.forexRate = foundForex.ForexSelling;
+                    this.calculateTotal();
+                }
+            } catch (error) {
+                this.formData.forexRate = null;
+            }
+        }
 	},
 }
 </script>

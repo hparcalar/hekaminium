@@ -3,7 +3,7 @@
         <div class="uk-width-3-3@l">
             <form>
                 <fieldset class="uk-fieldset uk-fieldset-alt uk-background-muted sc-padding-medium">
-                    <div class="uk-child-width-1-3@m uk-grid sc-padding-remove-top" data-uk-grid>
+                    <div class="uk-child-width-1-3@m uk-grid sc-padding-remove-top uk-margin-remove-top" data-uk-grid>
                         <div>
                             <ScInput v-model="formData.lineNumber" :type="'number'" :read-only="true">
                                 <label>Satır No</label>
@@ -20,23 +20,60 @@
                             </ScInput>
                         </div>
                     </div>
-                    <div class="uk-child-width-2-3@m uk-grid" data-uk-grid>
-                        <div class="uk-width-4-5@m">
-                            <client-only>
-                                <Select2
-                                    v-model="formData.itemId"
-                                    :options="itemList"
-                                    :settings="{ 'width': '100%', 'placeholder': 'Stok Seçiniz', 'allowClear': true }"
-                                ></Select2>
-                            </client-only>
+                    <div class="uk-child-width-1-2@m uk-grid sc-padding-remove-top uk-margin-small" data-uk-grid>
+                        <div>
+                            <ScInput v-model="formData.partNo">
+                                <label>Parça Kodu</label>
+                            </ScInput>
                         </div>
-                        <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-width-1-5@m" style="height:34px;">
-                            <span :data-uk-icon="'icon:' + detailObject.id > 0 ? 'check' : 'plus'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
+                        <div>
+                            <ScInput v-model="formData.partDimensions">
+                                <label>Boyutlar</label>
+                            </ScInput>
+                        </div>
+                    </div>
+                    <div class="uk-child-width-2-3@m uk-grid uk-margin-small" data-uk-grid>
+                        <div class="uk-width-4-5@m">
+                            <div class="uk-grid">
+                                <div class="uk-width-3-5">
+                                    <div>
+                                        <client-only>
+                                            <Select2
+                                                v-model="formData.itemId"
+                                                :options="itemList"
+                                                :settings="{ 'width': '100%', 'placeholder': 'Stok Seçiniz', 'allowClear': true }"
+                                            ></Select2>
+                                        </client-only>
+                                    </div>
+                                </div>
+                                <div class="uk-width-2-5">
+                                    <button type="button" @click="showNewItemDialog" class="sc-button sc-button-primary sc-button-small uk-margin-medium" style="height:34px;margin-top:15px;">
+                                        <span :data-uk-icon="'icon: plus'" class="uk-icon"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-margin-medium uk-margin-remove-top uk-width-1-5@m" style="height:34px;">
+                            <span :data-uk-icon="'icon: ' + detailObject.id > 0 ? 'check' : 'plus'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
                         </button>
                     </div>
                 </fieldset>
             </form>
         </div>
+
+        <div id="dlgItemDefinition" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<ItemDefinition v-if="refreshItemDialog"
+						:record-id="0"
+						:is-dialog="true"
+						:dialog-container="'dlgItemDefinition'"
+						@onItemSaved="bindItems"
+						@onCancel="closeItemDefDialog"
+					/>
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 
@@ -77,6 +114,7 @@ export default {
     emits: ['onDetailSubmit'],
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
+        ItemDefinition: process.client ? () => import('~/definition_components/ItemDefinition') : null,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -96,8 +134,11 @@ export default {
 			demandStatus: 0,
             demandDate: null,
             newDetail: true,
+            partNo: '',
+            partDimensions: '',
 		},
         itemList: [],
+        refreshItemDialog: false,
 	}),
 	async mounted () {
 		await this.bindModel();
@@ -126,14 +167,28 @@ export default {
                 this.formData.lineNumber = this.totalDetailCount + 1;
             }
         },
+        async bindItems(){
+            // fetch items for selection
+            try {
+                const api = useApi();
+                this.itemList = (await api.get('Item')).data.map((d) => {
+                    return {
+                        id: d.id,
+                        text: d.itemName,
+                    };
+                });
+            } catch (error) {
+                
+            }
+        },
 		onSubmit(){
             const self = this;
 
-            if (!this.formData.itemId)
-            {
-                this.showNotification('Bir stok seçmelisiniz.', false, 'error');
-                return;
-            }
+            // if (!this.formData.itemId)
+            // {
+            //     this.showNotification('Bir stok seçmelisiniz.', false, 'error');
+            //     return;
+            // }
 
             if (!this.formData.quantity || this.formData.quantity <= 0){
                 this.showNotification('Miktar 0 dan büyük olmalıdır.', false, 'error');
@@ -148,8 +203,12 @@ export default {
             if (selectedItem)
                 this.formData.itemName = selectedItem.text;
 
+            if (!this.formData.itemName)
+                this.formData.itemName = '';
+
             if (!this.formData.demandStatus)
                 this.formData.demandStatus = 0;
+                
             this.formData.statusText = this.formData.demandStatus == 0 ? 'Onay bekleniyor' :
                                        this.formData.demandStatus == 1 ? 'Onaylandı' :
                                        this.formData.demandStatus == 2 ? 'Sipariş verildi' :
@@ -179,7 +238,20 @@ export default {
 				config.pos = pos;
 			}
 			UIkit.notification(text, config);
-		}
+		},
+        showNewItemDialog(){
+            this.refreshItemDialog = false;
+			setTimeout(() => { this.refreshItemDialog = true; }, 200);
+
+			const modalElement = document.getElementById('dlgItemDefinition');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+        },
+        closeItemDefDialog(){
+			const modalElement = document.getElementById('dlgItemDefinition');
+			UIkit.modal(modalElement).hide();
+		},
 	},
     watch: {
         detailObject: {

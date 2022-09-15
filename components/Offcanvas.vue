@@ -1,5 +1,5 @@
 <template>
-	<div v-if="vxOffcanvasPresent" id="sc-offcanvas" data-uk-offcanvas="flip: true; container: '#nuxt-wrapper'">
+	<div v-show="vxOffcanvasPresent" id="sc-offcanvas" data-uk-offcanvas="flip: true; container: '#nuxt-wrapper'">
 		<div class="uk-offcanvas-bar" :class="extraClass">
 			<slot></slot>
 		</div>

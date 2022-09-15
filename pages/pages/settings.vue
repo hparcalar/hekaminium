@@ -239,10 +239,10 @@
 																{{ user.phone }}
 															</td>
 															<td class="uk-table-shrink">
-																<span v-if="user.status === 'active'" class="uk-label uk-label-success">
+																<span v-show="user.status === 'active'" class="uk-label uk-label-success">
 																	{{ user.status }}
 																</span>
-																<span v-if="user.status === 'disabled'" class="uk-label uk-label-danger">
+																<span v-show="user.status === 'disabled'" class="uk-label uk-label-danger">
 																	{{ user.status }}
 																</span>
 															</td>
@@ -476,10 +476,10 @@
 																{{ plugin.description }}
 															</td>
 															<td class="uk-table-shrink">
-																<span v-if="plugin.status === 'active'" class="uk-label uk-label-success">
+																<span v-show="plugin.status === 'active'" class="uk-label uk-label-success">
 																	{{ plugin.status }}
 																</span>
-																<span v-if="plugin.status === 'disabled'" class="uk-label md-bg-grey-500">
+																<span v-show="plugin.status === 'disabled'" class="uk-label md-bg-grey-500">
 																	{{ plugin.status }}
 																</span>
 															</td>

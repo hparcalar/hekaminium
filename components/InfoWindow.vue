@@ -6,13 +6,13 @@
 		<div class="sc-iw-title">
 			{{ marker.title }}
 		</div>
-		<div v-if="marker.info" class="sc-iw-body">
+		<div v-show="marker.info" class="sc-iw-body">
 			{{ marker.info }}
 		</div>
-		<div v-else class="sc-iw-body">
+		<div v-show="!marker.info" class="sc-iw-body">
 			{{ marker.address }}
 		</div>
-		<div v-if="marker.link" class="sc-iw-footer">
+		<div v-show="marker.link" class="sc-iw-footer">
 			<a :href="marker.link.url" class="sc-link-external" target="_blank">
 				<span>{{ marker.link.text }}</span>
 			</a>

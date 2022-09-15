@@ -42,10 +42,10 @@
 										</div>
 									</div>
 									<div class="uk-width-auto@m uk-flex-middle">
-										<a v-if="dynamicFields.length === (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-primary" @click="addUser($event)">
+										<a v-show="dynamicFields.length === (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-primary" @click="addUser($event)">
 											<i class="mdi mdi-plus"></i>
 										</a>
-										<a v-if="dynamicFields.length !== (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-danger" @click="removeUser($event,item.id)">
+										<a v-show="dynamicFields.length !== (index + 1)" href="javascript:void(0)" class="sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-danger" @click="removeUser($event,item.id)">
 											<i class="mdi mdi-trash-can-outline"></i>
 										</a>
 									</div>

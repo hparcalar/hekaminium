@@ -15,7 +15,7 @@
 					</span>
 				</div>
 				<ul class="sc-vue-errors">
-					<li v-if="!$v.userData.userTitle.required">
+					<li v-show="!$v.userData.userTitle.required">
 						Field is required
 					</li>
 				</ul>
@@ -25,10 +25,10 @@
 					<label>First Name *</label>
 				</ScInput>
 				<ul class="sc-vue-errors">
-					<li v-if="!$v.userData.firstName.required">
+					<li v-show="!$v.userData.firstName.required">
 						Field is required
 					</li>
-					<li v-if="!$v.userData.firstName.minLength">
+					<li v-show="!$v.userData.firstName.minLength">
 						First Name must have at least {{ $v.userData.firstName.$params.minLength.min }} letters.
 					</li>
 				</ul>
@@ -38,7 +38,7 @@
 					<label>last Name *</label>
 				</ScInput>
 				<ul class="sc-vue-errors">
-					<li v-if="!$v.userData.lastName.required">
+					<li v-show="!$v.userData.lastName.required">
 						Field is required
 					</li>
 				</ul>
@@ -50,10 +50,10 @@
 					<label>Email *</label>
 				</ScInput>
 				<ul class="sc-vue-errors">
-					<li v-if="!$v.userData.email.required">
+					<li v-show="!$v.userData.email.required">
 						Field is required
 					</li>
-					<li v-if="!$v.userData.email.email">
+					<li v-show="!$v.userData.email.email">
 						This value should be a valid email
 					</li>
 				</ul>
@@ -127,10 +127,10 @@
 						</div>
 					</div>
 					<div class="uk-width-auto@m uk-flex-middle">
-						<a v-if="userData.addresses.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addAddress($event)">
+						<a v-show="userData.addresses.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addAddress($event)">
 							<i class="mdi mdi-plus-box-outline sc-icon-24"></i>
 						</a>
-						<a v-if="userData.addresses.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeAddress($event,item.id)">
+						<a v-show="userData.addresses.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeAddress($event,item.id)">
 							<i class="mdi mdi-minus-box-outline sc-icon-24"></i>
 						</a>
 					</div>

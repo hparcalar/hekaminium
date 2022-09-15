@@ -9,7 +9,7 @@
 			:aria-selected="tab.active"
 		>
 			<slot name="title">
-				<i v-if="tab.icon !== ''" class="step-icon" :class="tab.icon"></i>
+				<i v-show="tab.icon !== ''" class="step-icon" :class="tab.icon"></i>
 				<span>
 					{{ tab.title }}
 					<span class="sub-text">

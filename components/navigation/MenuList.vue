@@ -7,7 +7,7 @@
 	>
 		<li
 			v-for="item in menuItems"
-			v-if="!item.visible || item.visible()"
+			v-show="!item.visible || item.visible()"
 			:key="item.id"
 			:class="{
 				'sc-has-submenu': item.submenu && item.submenu.length,
@@ -54,7 +54,7 @@
 				@leave="tLeave"
 				@leave-cancelled="tLeaveCancelled"
 			>
-				<ScMenuList v-if="item.submenu && item.submenu.length" v-show="item.isOpen" :menu-data="item.submenu"></ScMenuList>
+				<ScMenuList v-show="item.submenu && item.submenu.length && item.isOpen" :menu-data="item.submenu"></ScMenuList>
 			</transition>
 		</li>
 	</ul>
@@ -87,24 +87,18 @@ export default {
 		}
 	},
 	created () {
-		this.menuItems.forEach(k => {
-			if (typeof k.submenu !== 'undefined') {
-				this.setSectionOpen(k)
-			}
-		});
+		this.buildMenuItems();
 	},
 	data: () => ({
 		// menuItems: [],
 	}),
 	watch: {
-		// menuData: {
-		// 	handler: function(oldVal,newVal){
-		// 		this.menuItems = newVal;
-		// 		console.log('change');
-		// 		console.log(newVal);
-		// 	},
-		// 	deep: true,
-		// }
+		menuData: {
+			handler: function(oldVal,newVal){
+				this.buildMenuItems();
+			},
+			deep: true,
+		}
 	},
 	methods: {
 		pageChild (item) {
@@ -175,6 +169,14 @@ export default {
 		},
 		tLeaveCancelled (el) {
 			velocity(el, 'stop')
+		},
+		buildMenuItems(){
+			if (this.menuItems)
+				this.menuItems.forEach(k => {
+					if (typeof k.submenu !== 'undefined') {
+						this.setSectionOpen(k)
+					}
+				});
 		}
 	}
 }

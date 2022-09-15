@@ -3,7 +3,7 @@
 		<div id="sc-page-top-bar" class="sc-top-bar">
 			<div class="sc-top-bar-aside uk-visible@l"></div>
 			<div class="sc-top-bar-content uk-flex-1">
-				<PrettyCheck v-if="$route.name === 'pages-mailbox'"
+				<PrettyCheck v-show="$route.name === 'pages-mailbox'"
 					v-model="mailbox.checkAll"
 					class="p-icon"
 					:indeterminate.sync="mailbox.checkAllInd"
@@ -13,8 +13,8 @@
 					<i slot="indeterminate-extra" class="icon mdi mdi-minus"></i>
 					<label slot="indeterminate-label"></label>
 				</PrettyCheck>
-				<div v-if="$route.name !== 'pages-mailbox-compose'" class="sc-actions" :class="{'uk-margin-medium-left': $route.name === 'pages-mailbox'}">
-					<a v-if="$route.name === 'pages-mailbox-message-id'"
+				<div v-show="$route.name !== 'pages-mailbox-compose'" class="sc-actions" :class="{'uk-margin-medium-left': $route.name === 'pages-mailbox'}">
+					<a v-show="$route.name === 'pages-mailbox-message-id'"
 						v-waves.block
 						href="javascript:void(0)"
 						class="sc-actions-icon"
@@ -24,7 +24,7 @@
 					>
 						<i class="mdi mdi-arrow-left"></i>
 					</a>
-					<a v-if="$route.name === 'pages-mailbox'"
+					<a v-show="$route.name === 'pages-mailbox'"
 						v-waves.block
 						href="javascript:void(0)"
 						class="sc-actions-icon"
@@ -117,7 +117,7 @@
 			</div>
 		</div>
 		<client-only>
-			<ScOffcanvas v-if="$route.name === 'pages-mailbox'" :key="mailboxOffcanvas">
+			<ScOffcanvas v-show="$route.name === 'pages-mailbox'" :key="mailboxOffcanvas">
 				<p class="uk-text-large uk-margin-small">
 					Folders
 				</p>
@@ -129,7 +129,7 @@
 				</ul>
 			</ScOffcanvas>
 		</client-only>
-		<div v-if="$route.name === 'pages-mailbox'" class="sc-fab-page-wrapper uk-hidden@l">
+		<div v-show="$route.name === 'pages-mailbox'" class="sc-fab-page-wrapper uk-hidden@l">
 			<a href="javascript:void(0)" class="sc-fab sc-fab-large sc-fab-danger" @click="composeMessage"><i class="mdi mdi-plus"></i></a>
 		</div>
 	</div>

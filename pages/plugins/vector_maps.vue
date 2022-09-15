@@ -153,9 +153,9 @@
 								</div>
 							</div>
 						</ScCardHeader>
-						<ScCardBody v-if="vmMultiMap">
+						<ScCardBody v-show="vmMultiMap">
 							<VectorMap
-								v-if="vmMultiMap"
+								v-show="vmMultiMap"
 								:key="vmMultiMap"
 								class="sc-js-vmap"
 								:config="vmMulti"

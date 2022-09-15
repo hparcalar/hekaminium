@@ -47,20 +47,20 @@
 											<li class="uk-text-large">
 												<i class="mdi mdi-check uk-margin-right md-color-green-500"></i>{{ table.features.users }}
 											</li>
-											<li v-if="!table.features.mailchimp" class="uk-text-large">
+											<li v-show="!table.features.mailchimp" class="uk-text-large">
 												<i class="mdi mdi-check uk-margin-right md-color-grey-400"></i><span class="md-color-grey-400">
 													Mailchimp Integration
 												</span>
 											</li>
-											<li v-else class="uk-text-large">
+											<li v-show="table.features.mailchimp" class="uk-text-large">
 												<i class="mdi mdi-check uk-margin-right md-color-green-500"></i>Mailchimp Integration
 											</li>
-											<li v-if="!table.features.support" class="uk-text-large">
+											<li v-show="!table.features.support" class="uk-text-large">
 												<i class="mdi mdi-check uk-margin-right md-color-grey-400"></i><span class="md-color-grey-400">
 													24/7 Support
 												</span>
 											</li>
-											<li v-else class="uk-text-large">
+											<li v-show="table.features.support" class="uk-text-large">
 												<i class="mdi mdi-check uk-margin-right md-color-green-500"></i>24/7 Support
 											</li>
 										</ul>

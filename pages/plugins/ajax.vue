@@ -9,7 +9,7 @@
 								<span>Click To Edit</span>
 							</p>
 							<transition name="slide-bottom-medium" mode="out-in">
-								<div v-if="userEditActive" key="userPreview">
+								<div v-show="userEditActive" key="userPreview">
 									<div class="sc-round sc-border uk-margin sc-padding">
 										<div class="uk-margin">
 											<ScInput v-model="userTemp.firstName">
@@ -39,7 +39,7 @@
 										</div>
 									</div>
 								</div>
-								<div v-else key="userForm">
+								<div v-show="!userEditActive" key="userForm">
 									<div class="sc-round sc-border uk-margin sc-padding">
 										<div class="uk-margin-small">
 											<strong>First Name</strong>: {{ user.firstName }}
@@ -53,12 +53,12 @@
 										<div class="uk-margin-small">
 											<strong>Company</strong>: {{ user.company }}
 										</div>
-										<div v-if="user.active">
+										<div v-show="user.active">
 											<span class="uk-label uk-label-success">
 												Active
 											</span>
 										</div>
-										<div v-else>
+										<div v-show="!user.active">
 											<span class="uk-label md-bg-grey-500">
 												Inactive
 											</span>
@@ -68,10 +68,10 @@
 							</transition>
 							<div class="uk-margin-top uk-flex uk-flex-middle">
 								<transition name="fade" mode="out-in">
-									<button v-if="!userEditActive" class="sc-button sc-button-primary" @click.prevent="editUser()">
+									<button v-show="!userEditActive" class="sc-button sc-button-primary" @click.prevent="editUser()">
 										Edit User
 									</button>
-									<div v-else>
+									<div v-show="userEditActive">
 										<button class="sc-button sc-button-primary" @click.prevent="saveUserData()">
 											Save
 										</button>
@@ -89,11 +89,11 @@
 								<span>Lazy loading</span>
 							</p>
 							<transition name="scale-up" mode="out-in">
-								<div v-if="!imageLoading" key="randomImage" class="uk-text-center">
-									<img v-if="imageLoaded" :src="randomImage" class="sc-round uk-height-medium" alt="">
+								<div v-show="!imageLoading" key="randomImage" class="uk-text-center">
+									<img v-show="imageLoaded" :src="randomImage" class="sc-round uk-height-medium" alt="">
 								</div>
-								<div v-else key="randomImageProgress" class="uk-flex uk-flex-center uk-flex-middle" :class="{'uk-height-medium': imageLoaded}">
-									<ScProgressCircular v-if="imageLoaded" size="md"></ScProgressCircular>
+								<div v-show="imageLoading" key="randomImageProgress" class="uk-flex uk-flex-center uk-flex-middle" :class="{'uk-height-medium': imageLoaded}">
+									<ScProgressCircular v-show="imageLoaded" size="md"></ScProgressCircular>
 								</div>
 							</transition>
 							<div class="uk-margin uk-flex uk-flex-middle">
@@ -190,7 +190,7 @@
 									</TransitionGroup>
 								</table>
 							</div>
-							<div v-if="loadOffset !== jsonUsersLength" class="uk-flex uk-flex-middle uk-margin-top">
+							<div v-show="loadOffset !== jsonUsersLength" class="uk-flex uk-flex-middle uk-margin-top">
 								<button class="sc-button sc-button-primary" @click.prevent="loadMoreUsers()">
 									Load More Users &hellip;
 								</button>

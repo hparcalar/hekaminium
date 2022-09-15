@@ -85,7 +85,7 @@
 											:placeholder="'Search (min. 3 char) ...'"
 										>
 											<i class="mdi mdi-magnify uk-form-icon"></i>
-											<a v-if="mdIconsSearch !== '' && mdIconsSearch.length > 2" href="javascript:void(0)" class="uk-form-icon uk-form-icon-flip" @click.prevent="clearSearch"><i class="mdi mdi-close"></i></a>
+											<a v-show="mdIconsSearch !== '' && mdIconsSearch.length > 2" href="javascript:void(0)" class="uk-form-icon uk-form-icon-flip" @click.prevent="clearSearch"><i class="mdi mdi-close"></i></a>
 										</ScInput>
 									</div>
 								</client-only>

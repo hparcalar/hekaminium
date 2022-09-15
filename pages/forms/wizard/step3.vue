@@ -10,17 +10,17 @@
 			<span class="uk-text-muted uk-text-small">
 				email:
 			</span> {{ data.email }}<br>
-			<span v-if="data.phoneNumber !== ''">
+			<span v-show="data.phoneNumber !== ''">
 				<span class="uk-text-muted uk-text-small">
 					phone number:
 				</span> {{ data.phoneNumber }}<br>
 			</span>
-			<span v-if="data.company !== ''">
+			<span v-show="data.company !== ''">
 				<span class="uk-text-muted uk-text-small">
 					company:
 				</span> {{ data.company }}<br>
 			</span>
-			<span v-if="data.companyID !== ''">
+			<span v-show="data.companyID !== ''">
 				<span class="uk-text-muted uk-text-small">
 					company ID:
 				</span> {{ data.companyID }}<br>
@@ -32,16 +32,16 @@
 		<div class="uk-child-width-auto@m uk-grid-divider" data-uk-grid>
 			<div v-for="address in data.addresses" :key="address.id">
 				<address>
-					<span v-if="address.billingAddress">
+					<span v-show="address.billingAddress">
 						{{ address.billingAddress }}<br>
 					</span>
-					<span v-if="address.zipCode">
+					<span v-show="address.zipCode">
 						{{ address.zipCode }}<br>
 					</span>
-					<span v-if="address.city">
+					<span v-show="address.city">
 						{{ getCity(address.city) }}<br>
 					</span>
-					<span v-if="address.country">
+					<span v-show="address.country">
 						{{ getCountry(address.country) }}
 					</span>
 				</address>
@@ -57,12 +57,12 @@
 			</div>
 			<div class="uk-width-3-5@m sc-text-semibold">
 				{{ data.paymentMethod.name }}
-				<span v-if="data.paymentMethod.ccType && data.paymentMethod.name === 'Credit Card'">
+				<span v-show="data.paymentMethod.ccType && data.paymentMethod.name === 'Credit Card'">
 					( {{ data.paymentMethod.ccType | toUppercase }} )
 				</span>
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Number
 			</div>
@@ -70,7 +70,7 @@
 				{{ data.paymentMethod.ccNumber | hashCCnumber }}
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Expires
 			</div>
@@ -78,7 +78,7 @@
 				{{ data.paymentMethod.ccDate }}
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Credit Card'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Card Holder
 			</div>
@@ -86,7 +86,7 @@
 				{{ data.paymentMethod.ccHolder }}
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Paypal'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Paypal'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Account Name
 			</div>
@@ -94,7 +94,7 @@
 				{{ data.paymentMethod.ppAccount }}
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Amazon'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Amazon'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Account Name
 			</div>
@@ -102,7 +102,7 @@
 				{{ data.paymentMethod.amazonAccount }}
 			</div>
 		</div>
-		<div v-if="data.paymentMethod.name === 'Skrill'" class="uk-grid-small" data-uk-grid>
+		<div v-show="data.paymentMethod.name === 'Skrill'" class="uk-grid-small" data-uk-grid>
 			<div class="uk-width-1-5@m uk-text-muted">
 				Account Name
 			</div>

@@ -33,7 +33,7 @@
 											<nuxt-link :to="'/pages/invoices/' + invoice.id" class="uk-flex uk-flex-middle uk-width-1-1">
 												<span class="uk-display-block uk-flex-1 uk-text-truncate">
 													<span class="sc-text-semibold sc-js-list-number">
-														{{ invoice.number }} <span v-if="invoice.currency === 'EUR'" class="md-color-light-blue-500">
+														{{ invoice.number }} <span v-show="invoice.currency === 'EUR'" class="md-color-light-blue-500">
 															(EUR)
 														</span>
 													</span>
@@ -48,7 +48,7 @@
 														</span> {{ invoice.date }}
 													</span>
 												</span>
-												<span v-if="!invoice.paid" class="uk-label md-bg-red-500 sc-flex-no-shrink uk-margin-small-left">
+												<span v-show="!invoice.paid" class="uk-label md-bg-red-500 sc-flex-no-shrink uk-margin-small-left">
 													Unpaid
 												</span>
 											</nuxt-link>
@@ -76,7 +76,7 @@
 						<nuxt-link :to="'/pages/invoices/' + invoice.id" class="uk-flex uk-flex-middle uk-width-1-1">
 							<span class="uk-display-block uk-flex-1 uk-text-truncate">
 								<span class="sc-text-semibold sc-js-list-number">
-									{{ invoice.number }} <span v-if="invoice.currency === 'EUR'"
+									{{ invoice.number }} <span v-show="invoice.currency === 'EUR'"
 										class="md-color-light-blue-500"
 									>
 										(EUR)
@@ -93,7 +93,7 @@
 									</span> {{ invoice.date }}
 								</span>
 							</span>
-							<span v-if="!invoice.paid"
+							<span v-show="!invoice.paid"
 								class="uk-label md-bg-red-500 sc-flex-no-shrink uk-margin-small-left"
 							>
 								Unpaid

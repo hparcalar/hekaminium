@@ -19,6 +19,16 @@
                             </client-only>
                         </div>
                         <div>
+                            <ScInput v-model="formData.partNo">
+                                <label>Parça Kodu</label>
+                            </ScInput>
+                        </div>
+                        <div>
+                            <ScInput v-model="formData.partDimensions">
+                                <label>Boyutlar</label>
+                            </ScInput>
+                        </div>
+                        <div>
                             <client-only>
                                 <Select2
                                     v-model="formData.projectId"
@@ -59,20 +69,22 @@
                             </ScInput>
                         </div>
                         <div>
-                            <ScInput :type="'number'" v-model="formData.unitPrice" @change="calculateTotal">
+                            <ScInput :type="'number'" v-model="fUnitPrice" @change="calculateTotal">
                                 <label>Birim Fiyat</label>
                             </ScInput>
                         </div>
-                        <div class="uk-child-width-1-2@m uk-grid">
-                            <div>
-                                <ScInput :type="'number'" v-model="formData.overallTotal" :read-only="true">
-                                    <label>Satır Tutarı</label>
-                                </ScInput>
-                            </div>
-                            <div>
-                                <ScInput :type="'number'" v-model="formData.overallTotalLocal" :read-only="true">
-                                    <label>TL Tutarı</label>
-                                </ScInput>
+                        <div>
+                            <div class="uk-child-width-1-2@m uk-grid">
+                                <div>
+                                    <ScInput :type="'number'" v-model="fOverallTotal" :read-only="true">
+                                        <label>Satır Tutarı</label>
+                                    </ScInput>
+                                </div>
+                                <div>
+                                    <ScInput :type="'number'" v-model="fOverallLocal" :read-only="true">
+                                        <label>TL Tutarı</label>
+                                    </ScInput>
+                                </div>
                             </div>
                         </div>
 
@@ -166,7 +178,9 @@ export default {
             netQuantity: 0,
 			receiptStatus: 0,
             overallTotal: 0,
-            overallTotalLocal: 0,
+            overallLocal: 0,
+            partNo: '',
+            partDimensions: '',
             newDetail: true,
 		},
         itemList: [],
@@ -179,6 +193,50 @@ export default {
             { id:3, text: 'İptal edildi' },
         ],
 	}),
+    computed: {
+        fUnitPrice:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.unitPrice);
+			},
+			set: function(val){
+				if (!val || val.length == 0)
+					this.formData.unitPrice = null;
+				else{
+					let procStr = val.replace('.', '').replace('.', '').replace('.','')
+						.replace(',','.');
+					this.formData.unitPrice = parseFloat(procStr);
+				}
+			}
+		},
+        fOverallTotal:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.overallTotal);
+			},
+			set: function(val){
+				if (!val || val.length == 0)
+					this.formData.overallTotal = null;
+				else{
+					let procStr = val.replace('.', '').replace('.', '').replace('.','')
+						.replace(',','.');
+					this.formData.overallTotal = parseFloat(procStr);
+				}
+			}
+		},
+        fOverallLocal:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.overallLocal);
+			},
+			set: function(val){
+				if (!val || val.length == 0)
+					this.formData.overallLocal = null;
+				else{
+					let procStr = val.replace('.', '').replace('.', '').replace('.','')
+						.replace(',','.');
+					this.formData.overallLocal = parseFloat(procStr);
+				}
+			}
+		},
+    },
 	async mounted () {
         this.isMounting = true;
 		await this.bindModel();
@@ -205,6 +263,8 @@ export default {
                     netQuantity: 0,
                     receiptStatus: 0,
                     overallTotal: 0,
+                    partNo: '',
+                    partDimensions: '',
                     newDetail: true,
                 };
             }
@@ -214,7 +274,7 @@ export default {
                 this.formData.projectId = this.formData.projectId ? this.formData.projectId.toString() : null;   
                 this.formData.receiptStatus = this.formData.receiptStatus ? this.formData.receiptStatus.toString() : null;   
             } catch (error) {
-                console.log(error);
+                
             }
             if (this.formData.id <= 0){
                 this.formData.lineNumber = this.totalDetailCount + 1;
@@ -328,7 +388,7 @@ export default {
                 if(this.formData.forexId && this.formData.forexId > 0)
                     forexRate = this.formData.forexRate;
 
-                this.formData.overallTotalLocal = this.formData.overallTotal * forexRate;
+                this.formData.overallLocal = this.formData.overallTotal * forexRate;
             } catch (error) {
                 
             }

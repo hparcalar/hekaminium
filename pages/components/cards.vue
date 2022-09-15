@@ -199,7 +199,7 @@
 						name="scale-up"
 						@after-leave="cardCloseCallback"
 					>
-						<ScCard v-if="!cardAClosed" :collapsed="!cardACollapsed">
+						<ScCard v-show="!cardAClosed" :collapsed="!cardACollapsed">
 							<ScCardHeader>
 								<div class="uk-flex uk-flex-middle">
 									<div class="uk-flex-1">
@@ -262,7 +262,7 @@
 						name="scale-up"
 						@after-leave="cardCloseCallback"
 					>
-						<ScCard v-if="!cardDClosed" :collapsed="!cardDCollapsed">
+						<ScCard v-show="!cardDClosed" :collapsed="!cardDCollapsed">
 							<ScCardHeader>
 								<div class="uk-flex uk-flex-middle">
 									<div class="uk-flex-1">

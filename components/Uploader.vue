@@ -13,7 +13,7 @@
 				<i class="mdi mdi-upload"></i>
 			</label>
 		</div>
-		<template v-if="imageData">
+		<template v-show="imageData">
 			<label for="fileinput" class="sc-uploader-btn">
 				<i class="mdi mdi-reload"></i>
 			</label>
@@ -21,10 +21,10 @@
 				<i class="mdi mdi-trash-can-outline md-color-red-500"></i>
 			</span>
 		</template>
-		<div v-if="imageData" class="sc-uploader-preview">
+		<div v-show="imageData" class="sc-uploader-preview">
 			<img :src="imageData" alt="">
 		</div>
-		<div v-else class="sc-uploader-preview">
+		<div v-show="!imageData" class="sc-uploader-preview">
 			<img :src="require('~/assets/img/blank.gif')" alt="">
 		</div>
 	</div>

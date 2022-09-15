@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="actions">
-			<ul v-if="!hideButtons">
+			<ul v-show="!hideButtons">
 				<slot name="footer" v-bind="slotProps">
 					<li class="wizard-button-prev">
 						<span
@@ -44,7 +44,7 @@
 						</span>
 						<slot name="custom-buttons-left" v-bind="slotProps"></slot>
 					</li>
-					<li v-if="!isLastStep" class="wizard-button-next">
+					<li v-show="!isLastStep" class="wizard-button-next">
 						<slot name="custom-buttons-right" v-bind="slotProps"></slot>
 						<span
 							role="button"
@@ -59,7 +59,7 @@
 							</slot>
 						</span>
 					</li>
-					<li v-if="isLastStep" class="wizard-button-finish">
+					<li v-show="isLastStep" class="wizard-button-finish">
 						<slot name="custom-buttons-right" v-bind="slotProps"></slot>
 						<span
 							role="button"

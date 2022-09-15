@@ -81,8 +81,8 @@
 							Set to 8
 						</button>
 						<button class="sc-button" @click="setSliderSettings()">
-							<span v-if="rangeSlider.defaultCustomSettings">Change</span>
-							<span v-else>Restore</span>
+							<span v-show="rangeSlider.defaultCustomSettings">Change</span>
+							<span v-show="!rangeSlider.defaultCustomSettings">Restore</span>
 							settings
 						</button>
 					</div>

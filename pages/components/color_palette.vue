@@ -6,13 +6,13 @@
 					<ScCard>
 						<ScCardBody>
 							<h5>{{ color[0] }}</h5>
-							<div v-if="color[2]">
+							<div v-show="color[2]">
 								<div v-for="(variant,index) in variantsAccent" :key="variant" style="padding:12px 8px;" :class="setClass(index, color[0], color[1], variant)">
 									<small>.md-bg-{{ color[0] }}-{{ variant }}</small>
 									<br><small>.md-color-{{ color[0] }}-{{ variant }}</small>
 								</div>
 							</div>
-							<div v-if="!color[2]">
+							<div v-show="!color[2]">
 								<div v-for="(variant, index) in variantsNoAccent" :key="variant" style="padding:12px 8px;" :class="setClass(index, color[0], color[1], variant)">
 									<small>.md-bg-{{ color[0] }}-{{ variant }}</small>
 									<br><small>.md-color-{{ color[0] }}-{{ variant }}</small>

@@ -17,9 +17,9 @@
 							<div id="sc-dt-buttons"></div>
 						</div>
                         <div class="uk-width-auto@s">
-							<button class="sc-button sc-button-primary sc-button-flex" type="button">
+							<!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
 								Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
-							</button>
+							</button> -->
 							<div class="uk-dropdown uk-width-small" data-uk-drop="mode: click">
 								<div class="sc-padding-small">
 									<div v-for="(checkbox, index) in dtDHeaders" :key="index" class="uk-margin-small">
@@ -90,16 +90,16 @@ export default {
 					return dtState;
 				},
 				buttons: [
-					{
-						extend: "copyHtml5",
-						className: "sc-button",
-						text: 'Kopyala'
-					},
-					{
-						extend: "csvHtml5",
-						className: "sc-button",
-						text: 'CSV '
-					},
+					// {
+					// 	extend: "copyHtml5",
+					// 	className: "sc-button",
+					// 	text: 'Kopyala'
+					// },
+					// {
+					// 	extend: "csvHtml5",
+					// 	className: "sc-button",
+					// 	text: 'CSV '
+					// },
 					{
 						extend: "excelHtml5",
 						className: "sc-button",

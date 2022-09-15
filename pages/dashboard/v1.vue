@@ -191,7 +191,7 @@
 					<div class="uk-child-width-1-1@l uk-child-width-1-2@m uk-grid" data-uk-grid>
 						<div>
 							<Transition name="scale-up">
-								<ScCard v-if="!trafficCardClosed" ref="trafficCard">
+								<ScCard v-show="!trafficCardClosed" ref="trafficCard">
 									<ScCardHeader>
 										<div class="uk-flex uk-flex-middle">
 											<div class="uk-flex-1">
@@ -212,7 +212,7 @@
 						</div>
 						<div>
 							<Transition name="scale-up">
-								<ScCard v-if="!bestSellersCardClosed" ref="trafficCard">
+								<ScCard v-show="!bestSellersCardClosed" ref="trafficCard">
 									<ScCardHeader>
 										<div class="uk-flex uk-flex-middle">
 											<div class="uk-flex-1">

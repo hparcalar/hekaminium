@@ -14,10 +14,10 @@
 										<label>First Name *</label>
 									</ScInput>
 									<ul class="sc-vue-errors">
-										<li v-if="!$v.firstName.required">
+										<li v-show="!$v.firstName.required">
 											Field is required
 										</li>
-										<li v-if="!$v.firstName.minLength">
+										<li v-show="!$v.firstName.minLength">
 											First Name must have at least {{ $v.firstName.$params.minLength.min }} letters.
 										</li>
 									</ul>
@@ -30,10 +30,10 @@
 										<label>Email *</label>
 									</ScInput>
 									<ul class="sc-vue-errors">
-										<li v-if="!$v.email.required">
+										<li v-show="!$v.email.required">
 											Field is required
 										</li>
-										<li v-if="!$v.email.email">
+										<li v-show="!$v.email.email">
 											This value should be a valid email
 										</li>
 									</ul>
@@ -52,10 +52,10 @@
 											<label>Password *</label>
 										</ScInput>
 										<ul class="sc-vue-errors">
-											<li v-if="!$v.password.required">
+											<li v-show="!$v.password.required">
 												Password is required.
 											</li>
-											<li v-if="!$v.password.minLength">
+											<li v-show="!$v.password.minLength">
 												Password must have at least {{ $v.password.$params.minLength.min }} characters.
 											</li>
 										</ul>
@@ -70,7 +70,7 @@
 											<label>Repeat Password</label>
 										</ScInput>
 										<ul class="sc-vue-errors">
-											<li v-if="!$v.repeatPassword.sameAsPassword">
+											<li v-show="!$v.repeatPassword.sameAsPassword">
 												Passwords must be identical.
 											</li>
 										</ul>
@@ -83,7 +83,7 @@
 											<label>Info *</label>
 										</ScTextarea>
 										<ul class="sc-vue-errors">
-											<li v-if="!$v.info.required">
+											<li v-show="!$v.info.required">
 												Field is required
 											</li>
 										</ul>
@@ -108,7 +108,7 @@
 										></Select2>
 									</client-only>
 									<ul class="sc-vue-errors">
-										<li v-if="!$v.select2Users.required">
+										<li v-show="!$v.select2Users.required">
 											Field is required
 										</li>
 									</ul>
@@ -146,10 +146,10 @@
 										</div>
 									</div>
 									<ul class="sc-vue-errors sc-padding-remove-left">
-										<li v-if="!$v.checkboxes.required">
+										<li v-show="!$v.checkboxes.required">
 											This value is required.
 										</li>
-										<li v-if="!$v.checkboxes.minMaxCheck">
+										<li v-show="!$v.checkboxes.minMaxCheck">
 											You must select min {{ $v.checkboxes.$params.minMaxCheck.min }} and max {{ $v.checkboxes.$params.minMaxCheck.max }} choices.
 										</li>
 									</ul>

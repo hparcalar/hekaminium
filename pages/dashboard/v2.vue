@@ -79,12 +79,12 @@
 						</ScCardTitle>
 						<ScCardBody>
 							<BillboardChart
-								v-if="appMounted"
+								v-show="appMounted"
 								:options="revenueChart"
 								class="sc-chart"
 								@created="revenueChartLoaded = true"
 							></BillboardChart>
-							<div v-if="!revenueChartLoaded" class="sc-chart">
+							<div v-show="!revenueChartLoaded" class="sc-chart">
 								<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 									<div class="sc-spinner"></div>
 								</div>
@@ -99,12 +99,12 @@
 						</ScCardTitle>
 						<ScCardBody>
 							<BillboardChart
-								v-if="appMounted"
+								v-show="appMounted"
 								:options="emailSubscribers"
 								class="sc-chart"
 								@created="emailSubscribersLoaded = true"
 							></BillboardChart>
-							<div v-if="!emailSubscribersLoaded" class="sc-chart">
+							<div v-show="!emailSubscribersLoaded" class="sc-chart">
 								<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 									<div class="sc-spinner"></div>
 								</div>
@@ -119,12 +119,12 @@
 						</ScCardTitle>
 						<ScCardBody>
 							<BillboardChart
-								v-if="appMounted"
+								v-show="appMounted"
 								:options="returnsChart"
 								class="sc-chart"
 								@created="returnsChartLoaded = true"
 							></BillboardChart>
-							<div v-if="!returnsChartLoaded" class="sc-chart">
+							<div v-show="!returnsChartLoaded" class="sc-chart">
 								<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 									<div class="sc-spinner"></div>
 								</div>
@@ -170,14 +170,14 @@
 						<ScCardContent>
 							<div class="sc-padding-medium">
 								<BillboardChart
-									v-if="appMounted"
+									v-show="appMounted"
 									:key="activePeriod"
 									:options="salesReportChart"
 									class="sc-chart-large"
 									@created="salesReportChartLoaded = true"
 								>
 								</BillboardChart>
-								<div v-if="!salesReportChartLoaded" class="sc-chart">
+								<div v-show="!salesReportChartLoaded" class="sc-chart">
 									<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 										<div class="sc-spinner"></div>
 									</div>
@@ -192,12 +192,12 @@
 							Top Referals
 						</ScCardTitle>
 						<ScCardBody>
-							<BillboardChart v-if="appMounted" :options="referalsChart" class="sc-chart" @created="referalsChartLoaded = true">
+							<BillboardChart v-show="appMounted" :options="referalsChart" class="sc-chart" @created="referalsChartLoaded = true">
 								<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 									<div class="sc-spinner"></div>
 								</div>
 							</BillboardChart>
-							<div v-if="!referalsChartLoaded" class="sc-chart">
+							<div v-show="!referalsChartLoaded" class="sc-chart">
 								<div class="uk-flex uk-flex-middle uk-height-1-1 uk-flex-center">
 									<div class="sc-spinner"></div>
 								</div>
@@ -307,16 +307,16 @@
 										${{ order.price }}
 									</td>
 									<td>
-										<span v-if="order.status === 'pending'" class="uk-label uk-label-warning">
+										<span v-show="order.status === 'pending'" class="uk-label uk-label-warning">
 											{{ order.status }}
 										</span>
-										<span v-if="order.status === 'canceled'" class="uk-label uk-label-danger">
+										<span v-show="order.status === 'canceled'" class="uk-label uk-label-danger">
 											{{ order.status }}
 										</span>
-										<span v-if="order.status === 'on hold'" class="uk-label uk-label-default">
+										<span v-show="order.status === 'on hold'" class="uk-label uk-label-default">
 											{{ order.status }}
 										</span>
-										<span v-if="order.status === 'sent'" class="uk-label uk-label-success">
+										<span v-show="order.status === 'sent'" class="uk-label uk-label-success">
 											{{ order.status }}
 										</span>
 									</td>

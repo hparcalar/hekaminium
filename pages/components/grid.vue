@@ -200,9 +200,9 @@
 				<div v-for="index in 3" :key="index">
 					<ScCard>
 						<ScCardBody>
-							<span v-if="index === 1">&hellip;</span>
-							<span v-if="index === 2">&hellip;<br>&hellip;</span>
-							<span v-if="index === 3">&hellip;<br>&hellip;<br>&hellip;</span>
+							<span v-show="index === 1">&hellip;</span>
+							<span v-show="index === 2">&hellip;<br>&hellip;</span>
+							<span v-show="index === 3">&hellip;<br>&hellip;<br>&hellip;</span>
 						</ScCardBody>
 					</ScCard>
 				</div>

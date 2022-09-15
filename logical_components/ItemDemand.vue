@@ -1,7 +1,7 @@
 <template>
 	<div class="uk-flex-center uk-grid" data-uk-grid>
         <div class="uk-width-3-3@l">
-            <div v-if="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
+            <div v-show="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                     sc-round sc-border md-bg-grey-100
             ">
                 <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
@@ -16,19 +16,19 @@
                     </legend> -->
                     <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
                         <div>
-                            <ScInput v-model="formData.receiptNo">
+                            <ScInput v-model="formData.receiptNo" :read-only="true">
                                 <label>Talep No</label>
                             </ScInput>
                         </div>
                         <div>
-                            <client-only v-if="isDialog == false">
+                            <client-only v-show="isDialog == false">
                                 <Select2
                                     v-model="formData.projectId"
                                     :options="projects"
                                     :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
                                 ></Select2>
                             </client-only>
-                            <ScInput v-else :value="currentProjectName" :read-only="true">
+                            <ScInput v-show="isDialog == true" :value="currentProjectName" :read-only="true">
                                 <label>Proje</label>
                             </ScInput>
                         </div>
@@ -41,7 +41,7 @@
                     </legend>
                     <div class="uk-margin-medium uk-margin-remove-left">
                         <div class="uk-grid">
-                            <div class="uk-width-1-3@l">
+                            <div class="uk-width-1-5@l">
                                 <div class="uk-button-group sc-padding-remove-left" style="height:34px;">
                                     <button type="button" @click="showNewDemandDetail" class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
                                         <span data-uk-icon="icon: plus" class="uk-icon"></span>
@@ -51,7 +51,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="uk-width-2-3@l">
+                            <div class="uk-width-4-5@l">
                                 <ItemDemandDetail
                                     :detail-object="selectedDemandDetail"
                                     :total-detail-count="details.length"
@@ -76,17 +76,14 @@
                 </fieldset>
 
                 <div class="uk-margin-large-top">
-                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-                        Kaydet
+                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: check" class="uk-icon"></span>
                     </button>
-                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
-                        Vazgeç
+                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
                     </button>
-                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-large">
-                        <span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-                        Sil
+                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                        <span data-uk-icon="icon: trash" class="uk-icon"></span>
                     </button>
                 </div>
             </form>
@@ -159,7 +156,9 @@ export default {
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
-			{ data: "itemName", title: "Stok Adı", visible: true, },
+			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+            { data: "partNo", title: "Parça Kodu", visible: true, },
+            { data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
@@ -192,7 +191,7 @@ export default {
         async bindModel(){
             const api = useApi();
             try {
-                const projData = (await api.get('Project')).data;
+                const projData = (await api.get('Project/Demandable')).data;
                 if (projData)
                     this.projects = projData.map((d) => {
                         return {
@@ -242,7 +241,12 @@ export default {
         },
 		async onSubmit(){
             try {
-                this.formData.details = this.details;
+                this.formData.details = this.details.map((d) => {
+                    return {
+                        ...d,
+                        demandDate: null,
+                    }
+                });
 
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;

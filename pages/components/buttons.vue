@@ -483,8 +483,8 @@
 								</div>
 								<div>
 									<button class="sc-button" :class="{'sc-button-progress': btn1Loading}" :disabled="btn1LoadingEnd" @click.prevent="showBtn1Loading()">
-										<span v-if="!btn1LoadingEnd">Click Me</span>
-										<ScProgressCircular v-else></ScProgressCircular>
+										<span v-show="!btn1LoadingEnd">Click Me</span>
+										<ScProgressCircular v-show="btn1LoadingEnd"></ScProgressCircular>
 									</button>
 									<span class="uk-form-help-block uk-margin-remove-left">
 										Loading effect
@@ -492,8 +492,8 @@
 								</div>
 								<div>
 									<button class="sc-button sc-button-primary" :class="{'sc-button-progress': btn2Loading}" :disabled="btn2LoadingEnd" @click.prevent="showBtn2Loading()">
-										<span v-if="!btn2LoadingEnd">Click Me</span>
-										<ScProgressCircular v-else light></ScProgressCircular>
+										<span v-show="!btn2LoadingEnd">Click Me</span>
+										<ScProgressCircular v-show="btn2LoadingEnd" light></ScProgressCircular>
 									</button>
 									<span class="uk-form-help-block uk-margin-remove-left">
 										Loading effect (light)

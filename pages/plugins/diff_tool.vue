@@ -30,7 +30,7 @@
 						</div>
 					</div>
 					<div>
-						<button v-if="reloadButton" class="sc-button sc-button-secondary sc-button-mini" @click="compare()">
+						<button v-show="reloadButton" class="sc-button sc-button-secondary sc-button-mini" @click="compare()">
 							Compare
 						</button>
 					</div>

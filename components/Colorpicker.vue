@@ -10,8 +10,8 @@
 		]"
 		class="uk-flex"
 	>
-		<div v-if="!inline" class="sc-colorpicker-picker" :style="{'background-color': selectedColor}" @click="isActive(cpActive = !cpActive)"></div>
-		<div v-if="!inline" ref="dropdown" class="sc-colorpicker-dropdown" :style="{ width: cpWidth }">
+		<div v-show="!inline" class="sc-colorpicker-picker" :style="{'background-color': selectedColor}" @click="isActive(cpActive = !cpActive)"></div>
+		<div v-show="!inline" ref="dropdown" class="sc-colorpicker-dropdown" :style="{ width: cpWidth }">
 			<span
 				v-for="color in pallete"
 				:key="color"
@@ -20,7 +20,7 @@
 				@click="selectColor(color)"
 			></span>
 		</div>
-		<div v-if="inline" class="sc-colorpicker-colors">
+		<div v-show="inline" class="sc-colorpicker-colors">
 			<span
 				v-for="color in pallete"
 				:key="color"

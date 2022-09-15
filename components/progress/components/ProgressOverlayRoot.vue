@@ -1,5 +1,5 @@
 <template>
-	<div v-if="progressActive" class="sc-spinner-overlay fixed" :class="[progressEnter]">
+	<div v-show="progressActive" class="sc-spinner-overlay fixed" :class="[progressEnter]">
 		<ScProgressCircular></ScProgressCircular>
 	</div>
 </template>

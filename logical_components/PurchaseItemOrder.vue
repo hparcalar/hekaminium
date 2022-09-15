@@ -1,7 +1,7 @@
 <template>
 	<div class="uk-flex-center uk-grid" data-uk-grid>
         <div class="uk-width-3-3@l">
-            <div v-if="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
+            <div v-show="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                     sc-round sc-border md-bg-grey-100
             ">
                 <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
@@ -16,13 +16,23 @@
                     </legend> -->
                     <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
                         <div>
-                            <ScInput v-model="formData.receiptNo">
+                            <ScInput v-model="formData.receiptNo" :read-only="true">
                                 <label>Sipariş No</label>
                             </ScInput>
                         </div>
-                        <div>
-                            <ScInput v-model="formData.receiptDate" 
-                                :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr placeholder="Tarih" mode="outline"></ScInput>
+                        <div class="uk-child-width-1-2@m uk-grid">
+                            <div>
+                                <ScInput v-model="formData.receiptDate" 
+                                    :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr mode="outline">
+                                    <label>Sipariş Tarihi</label>
+                                </ScInput>
+                            </div>
+                            <div>
+                                <ScInput v-model="formData.deadlineDate" 
+                                    :config="{wrap:true, dateFormat: 'Y-m-d'}" v-flatpickr mode="outline">
+                                    <label>Termin Tarihi</label>
+                                </ScInput>
+                            </div>
                         </div>
                         <div>
                             <client-only>
@@ -82,21 +92,31 @@
                                 :customEvents="[{ name: 'select', function: clickDetail }, { name:'deselect', function: deselectDetail }]"
                             ></Datatable>
                         </client-only>
+
+                        <div class="uk-child-width-1-2@m uk-grid">
+                            <div v-show="hasViewAuth('ProjectBudgetView')">
+                                <ScInput v-model="fTotalForexPrice" :read-only="true">
+                                    <label>Döviz Tutarı</label>
+                                </ScInput>
+                            </div>
+                            <div v-show="hasViewAuth('ProjectBudgetView')">
+                                <ScInput v-model="fTotalPrice" :read-only="true">
+                                    <label>TL Tutarı</label>
+                                </ScInput>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
 
                 <div class="uk-margin-large-top">
-                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-                        Kaydet
+                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: check" class="uk-icon"></span>
                     </button>
-                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
-                        <span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
-                        Vazgeç
+                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
                     </button>
-                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-large">
-                        <span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-                        Sil
+                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                        <span data-uk-icon="icon: trash" class="uk-icon"></span>
                     </button>
                 </div>
             </form>
@@ -106,7 +126,7 @@
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
                     <PurchaseItemOrderDetail
-                        v-if="refreshDetailForm == true"
+                        v-show="refreshDetailForm == true"
                         :detail-object="selectedOrderDetail"
                         :total-detail-count="details.length"
                         :is-dialog="true"
@@ -121,7 +141,7 @@
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
                     <ApprovedDemandList
-                        v-if="refreshDemandList == true"
+                        v-show="refreshDemandList == true"
                         :is-dialog="true"
                         @onDemandsSelected="onDemandsSelected"
                         @onCancel="onDemandsClosed"
@@ -183,6 +203,7 @@ export default {
             id: 0,
 			receiptNo: '',
             receiptDate: null,
+            deadlineDate: null,
 			firmId: null,
             plantId: null,
             receiptType: 1,
@@ -203,12 +224,14 @@ export default {
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, },
+            { data: "partNo", title: "Parça Kodu", visible: true, },
+			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
             { data: "projectName", title: "Proje", visible: true, },
             { data: "forexCode", title: "Döviz", visible: true, },
-            { data: "unitPrice", title: "Birim Fiyat", visible: true, },
+            { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
             { data: "taxRate", title: "Kdv %", visible: true, },
-            { data: "overallTotal", title: "Tutar", visible: true, },
+            { data: "overallTotal", title: "Tutar", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
         selectedOrderDetail: {
@@ -216,7 +239,34 @@ export default {
         }
 	}),
 	computed: {
-		
+		fTotalPrice:{
+            get: function(){
+                if (this.details && this.details.length > 0){
+                    const subTotal = this.details.map(d => 
+                    (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice)
+                    + (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * (d.taxRate / 100.0)))
+                    .reduce((a,b) => a + b);
+
+                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                }
+                
+                return "0";
+            }
+        },
+        fTotalForexPrice: {
+            get: function(){
+                if (this.details && this.details.length > 0){
+                    const subTotal = this.details.map(d => 
+                        (d.forexId && d.forexId > 0 ? d.unitPrice : 0)
+                        + (d.taxIncluded == true ? d.unitPrice : (d.unitPrice * (d.taxRate / 100.0)))
+                    ).reduce((a,b) => a + b);
+
+                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                }
+                
+                return "0";
+            }
+        }
 	},
     beforeDestroy(){
 		UIkit.modal('.uk-modal').$destroy(true);
@@ -249,6 +299,10 @@ export default {
 
                 if (getData.receiptDate && getData.receiptDate.length > 0){
                     getData.receiptDate = self.$moment(getData.receiptDate).format('YYYY-MM-DD');
+                }
+
+                if (getData.deadlineDate && getData.deadlineDate.length > 0){
+                    getData.deadlineDate = self.$moment(getData.deadlineDate).format('YYYY-MM-DD');
                 }
 
                 if (getData && getData.id > 0){
@@ -295,6 +349,8 @@ export default {
                         existingDetail.overallTotal = detailRow.overallTotal;
                         existingDetail.forexCode = detailRow.forexCode;
                         existingDetail.projectName = detailRow.projectName;
+                        existingDetail.partNo = detailRow.partNo;
+                        existingDetail.partDimensions = detailRow.partDimensions;
                         existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
@@ -487,6 +543,8 @@ export default {
                         newRow.statusText = 'Sipariş oluşturuldu';
                         newRow.overallTotal = 0;
                         newRow.forexCode = '';
+                        newRow.partNo = demandDetail.partNo;
+                        newRow.partDimensions = demandDetail.partDimensions;
                         newRow.projectName = demandDetail.projectName;
 
                         self.details.push(newRow);
@@ -510,7 +568,15 @@ export default {
             } catch (error) {
                 
             }
-        }
+        },
+        hasViewAuth(sectionKey){
+			if (process.client){
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey);
+			}
+			return false;
+		},
 	},
     watch: {
         recordId: async function(newVal, oldVal) {

@@ -1,7 +1,7 @@
 <template>
 	<div class="vue-codemirror" :class="{ merge }">
-		<div v-if="merge" ref="mergeview"></div>
-		<textarea v-else ref="textarea" :name="name" :placeholder="placeholder"></textarea>
+		<div v-show="merge" ref="mergeview"></div>
+		<textarea v-show="!merge" ref="textarea" :name="name" :placeholder="placeholder"></textarea>
 		<slot></slot>
 	</div>
 </template>

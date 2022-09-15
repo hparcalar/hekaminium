@@ -25,7 +25,7 @@ module.exports = {
 		htmlAttrs: {
 			lang: 'en'
 		},
-		title: 'Scutum Admin',
+		title: 'HEKA',
 		meta: [
 			{ charset: 'utf-8' },
 			{
@@ -83,7 +83,7 @@ module.exports = {
 		{ src: '~/plugins/mixins.client.js' },
 		{ src: '~/plugins/waves.client.js' },
 		{ src: '~/plugins/retina.client.js' },
-		{ src: '~/plugins/vueVisible.client.js' }
+		{ src: '~/plugins/vueVisible.client.js' },
 	],
 	router: {
 		middleware: ['redirect'],

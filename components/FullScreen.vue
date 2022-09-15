@@ -1,6 +1,6 @@
 <template>
 	<a href="javascript:void(0)" @click.stop="toggleFullscreen">
-		<i v-if="!appFullscreen" class="mdi mdi-fullscreen"></i><i v-if="appFullscreen" class="mdi mdi-fullscreen-exit"></i>
+		<i v-show="!appFullscreen" class="mdi mdi-fullscreen"></i><i v-show="appFullscreen" class="mdi mdi-fullscreen-exit"></i>
 	</a>
 </template>
 

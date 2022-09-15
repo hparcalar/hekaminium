@@ -16,13 +16,13 @@
 					</li>
 				</ul>
 				<ul class="sc-vue-errors">
-					<li v-if="$v.userData.paymentMethod.$error">
+					<li v-show="$v.userData.paymentMethod.$error">
 						Choose payment method.
 					</li>
 				</ul>
 			</div>
 			<div class="uk-width-2-3@s uk-width-3-4@m more-info-section uk-flex uk-flex-middle">
-				<div v-if="userData.paymentMethod.name === ''" class="uk-text-center uk-width-2-3">
+				<div v-show="userData.paymentMethod.name === ''" class="uk-text-center uk-width-2-3">
 					Choose payment method.
 				</div>
 				<div v-show="userData.paymentMethod.name === 'Credit Card'" class="uk-width-1-1">

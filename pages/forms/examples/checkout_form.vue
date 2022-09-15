@@ -113,7 +113,7 @@
 									</ul>
 								</div>
 								<div class="uk-width-2-3@s uk-width-3-4@m more-info-section">
-									<div v-if="userData.paymentMethod.name === 'CC'">
+									<div v-show="userData.paymentMethod.name === 'CC'">
 										<div class="uk-margin">
 											<div class="cc-validate-wrapper">
 												<span class="cc-icon">
@@ -161,17 +161,17 @@
 											</div>
 										</div>
 									</div>
-									<div v-if="userData.paymentMethod.name === 'Paypal'">
+									<div v-show="userData.paymentMethod.name === 'Paypal'">
 										<ScInput v-model="userData.paymentMethod.ppAccount" mode="outline">
 											<label>Paypall Account</label>
 										</ScInput>
 									</div>
-									<div v-if="userData.paymentMethod.name === 'Amazon'">
+									<div v-show="userData.paymentMethod.name === 'Amazon'">
 										<ScInput v-model="userData.paymentMethod.amazonAccount" mode="outline">
 											<label>Amazon Account</label>
 										</ScInput>
 									</div>
-									<div v-if="userData.paymentMethod.name === 'Skrill'">
+									<div v-show="userData.paymentMethod.name === 'Skrill'">
 										<ScInput v-model="userData.paymentMethod.skrillAccount" mode="outline">
 											<label>Skrill Account</label>
 										</ScInput>

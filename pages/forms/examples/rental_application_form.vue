@@ -242,10 +242,10 @@
 														</div>
 													</div>
 													<div class="uk-width-auto@m uk-flex-middle">
-														<a v-if="userData.rentalHistory.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addRentHistory($event)">
+														<a v-show="userData.rentalHistory.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addRentHistory($event)">
 															<i class="mdi mdi-plus-box-outline sc-icon-24"></i>
 														</a>
-														<a v-if="userData.rentalHistory.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeRentHistory($event,item.id)">
+														<a v-show="userData.rentalHistory.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeRentHistory($event,item.id)">
 															<i class="mdi mdi-minus-box-outline sc-icon-24"></i>
 														</a>
 													</div>
@@ -307,10 +307,10 @@
 														</div>
 													</div>
 													<div class="uk-width-auto@m uk-flex-middle">
-														<a v-if="userData.personalReference.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addPersonalReference($event)">
+														<a v-show="userData.personalReference.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addPersonalReference($event)">
 															<i class="mdi mdi-plus-box-outline sc-icon-24"></i>
 														</a>
-														<a v-if="userData.personalReference.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removePersonalReference($event,item.id)">
+														<a v-show="userData.personalReference.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removePersonalReference($event,item.id)">
 															<i class="mdi mdi-minus-box-outline sc-icon-24"></i>
 														</a>
 													</div>

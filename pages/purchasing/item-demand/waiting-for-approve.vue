@@ -13,9 +13,9 @@
 							<div id="sc-dt-buttons"></div>
 						</div>
                         <div class="uk-width-auto@s">
-							<button class="sc-button sc-button-primary sc-button-flex" type="button">
+							<!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
 								Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
-							</button>
+							</button> -->
 							<div class="uk-dropdown uk-width-small" data-uk-drop="mode: click">
 								<div class="sc-padding-small">
 									<div v-for="(checkbox, index) in dtDHeaders" :key="index" class="uk-margin-small">
@@ -72,6 +72,7 @@
 <script>
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
+import { dateToStr } from '~/composable/useHelpers';
 
 export default {
     name: 'DemandsWaitingForApproveList',
@@ -86,32 +87,34 @@ export default {
                 { data: "demandDate", title: "Tarih", visible: true, type:'date' },
                 { data: "itemDemandNo", title: "Talep No", visible: true, },
                 { data: "projectName", title: "Proje Adı", visible: true, },
-                { data: "itemName", title: "Stok Adı", visible: true, },
+                { data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+				{ data: "partNo", title: "Parça Kodu", visible: true, },
+				{ data: "partDimensions", title: "Boyutlar", visible: true, },
                 { data: "quantity", title: "Miktar", visible: true, },
                 { data: "statusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
-				"stateSave": true,
-				stateSaveCallback (settings, data) {
-					localStorage.setItem( 'demandForApprovalListTableView', JSON.stringify(data) )
-				},
-				stateLoadCallback (settings) {
-					const dtState = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
-					return dtState;
-				},
+				"stateSave": false,
+				// stateSaveCallback (settings, data) {
+				// 	localStorage.setItem( 'demandForApprovalListTableView', JSON.stringify(data) )
+				// },
+				// stateLoadCallback (settings) {
+				// 	const dtState = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
+				// 	return dtState;
+				// },
 				buttons: [
-					{
-						extend: "copyHtml5",
-						className: "sc-button",
-						text: 'Kopyala'
-					},
-					{
-						extend: "csvHtml5",
-						className: "sc-button",
-						text: 'CSV '
-					},
+					// {
+					// 	extend: "copyHtml5",
+					// 	className: "sc-button",
+					// 	text: 'Kopyala'
+					// },
+					// {
+					// 	extend: "csvHtml5",
+					// 	className: "sc-button",
+					// 	text: 'CSV '
+					// },
 					{
 						extend: "excelHtml5",
 						className: "sc-button",
@@ -205,20 +208,25 @@ export default {
             const api = useApi();
             const rawData = (await api.get('ItemDemand/WaitingForApprove')).data;
 
-            this.visualData = rawData;
+            this.visualData = rawData.map((d) => {
+				return {
+					...d,
+					demandDate: dateToStr(d.demandDate),
+				}
+			});
         },
         dtButtonsInitialized () {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
 
-            const ls = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
-			this.$refs.buttonsTable.headers.forEach( (value, i) => {
-				this.dtDHeaders.push({
-					'name': value,
-					checked: ls.columns[i].visible,
-					disabled: i === 0
-				})
-			});
+            // const ls = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
+			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
+			// 	this.dtDHeaders.push({
+			// 		'name': value,
+			// 		checked: ls.columns[i].visible,
+			// 		disabled: i === 0
+			// 	})
+			// });
 		},
 		toggleCol (e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);

@@ -277,10 +277,10 @@
 														<ScInput v-model="item.major" extra-classes="uk-form-small" mode="outline"></ScInput>
 													</td>
 													<td class="uk-table-middle uk-text-center">
-														<a v-if="userData.education.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addEducation($event)">
+														<a v-show="userData.education.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addEducation($event)">
 															<i class="mdi mdi-plus sc-icon-24"></i>
 														</a>
-														<a v-if="userData.education.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeEducation($event,item.id)">
+														<a v-show="userData.education.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeEducation($event,item.id)">
 															<i class="mdi mdi-minus sc-icon-24"></i>
 														</a>
 													</td>
@@ -294,7 +294,7 @@
 								</h4>
 								<div class="md-bg-grey-100 sc-padding">
 									<div v-for="(item, index) in userData.emplHistory" :key="item.id" :class="{ 'uk-margin-medium-top' : index > 0 }">
-										<hr v-if="index > 0" class="uk-margin-medium">
+										<hr v-show="index > 0" class="uk-margin-medium">
 										<div class="uk-grid-match sc-form-section uk-grid" data-uk-grid>
 											<div class="uk-width-expand@m">
 												<div class="uk-child-width-1-2@s uk-grid" data-uk-grid>
@@ -383,10 +383,10 @@
 												</div>
 											</div>
 											<div class="uk-width-auto@m uk-flex-middle uk-text-center">
-												<a v-if="userData.emplHistory.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addEmployment($event)">
+												<a v-show="userData.emplHistory.length === (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="addEmployment($event)">
 													<i class="mdi mdi-plus-box-outline sc-icon-24"></i>
 												</a>
-												<a v-if="userData.emplHistory.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeEmployment($event,item.id)">
+												<a v-show="userData.emplHistory.length !== (index + 1)" href="javascript:void(0)" class="sc-color-primary" @click="removeEmployment($event,item.id)">
 													<i class="mdi mdi-minus-box-outline sc-icon-24"></i>
 												</a>
 											</div>

@@ -2,9 +2,9 @@
 	<header id="sc-header" ref="header">
 		<nav class="uk-navbar uk-navbar-container" data-uk-navbar="mode: click; duration: 360">
 			<div class="uk-navbar-left nav-overlay-small uk-margin-right uk-navbar-aside">
-				<a v-if="!vxTopMenuActive && !vxSidebarMiniActive" id="sc-sidebar-main-toggle" href="javascript:void(0)" @click.stop="toggleMainSidebar">
-					<i v-if="sidebarMainExpanded" class="mdi mdi-backburger" />
-					<i v-else class="mdi mdi-menu" />
+				<a v-show="!vxTopMenuActive && !vxSidebarMiniActive" id="sc-sidebar-main-toggle" href="javascript:void(0)" @click.stop="toggleMainSidebar">
+					<i v-show="sidebarMainExpanded" class="mdi mdi-backburger" />
+					<i v-show="!sidebarMainExpanded" class="mdi mdi-menu" />
 				</a>
 				<div class="sc-brand uk-visible@m">
 					<nuxt-link to="/">
@@ -12,7 +12,7 @@
 					</nuxt-link>
 				</div>
 			</div>
-			<div v-if="!vxTopMenuActive" class="uk-navbar-left nav-overlay uk-margin-right uk-visible@m">
+			<div v-show="!vxTopMenuActive" class="uk-navbar-left nav-overlay uk-margin-right uk-visible@m">
 				<ul class="uk-navbar-nav">
 					<li>
 						<a href="javascript:void(0)" class="md-color-white sc-padding-remove-left"><i class="mdi mdi-view-grid"></i></a>
@@ -59,7 +59,7 @@
 					</li>
 				</ul>
 			</div>
-			<div v-if="vxTopMenuActive" id="sc-top-menu" class="uk-navbar-left nav-overlay nav-overlay-small">
+			<div v-show="vxTopMenuActive" id="sc-top-menu" class="uk-navbar-left nav-overlay nav-overlay-small">
 				<ScTopMenu :menu-data="topMenuData" />
 			</div>
 			<div class="nav-overlay nav-overlay-small uk-navbar-right uk-flex-1" hidden>
@@ -120,8 +120,8 @@
 								<ul class="uk-list uk-list-divider">
 									<li v-for="message in user.messages" :key="message.id" class="sc-list-group">
 										<div class="sc-list-addon">
-											<img v-if="message.avatar.image" :src="message.avatar.image" class="sc-avatar" alt="">
-											<span v-if="!message.avatar.image" :title="message.from" :class="message.avatar.color" class="sc-avatar-initials">
+											<img v-show="message.avatar.image" :src="message.avatar.image" class="sc-avatar" alt="">
+											<span v-show="!message.avatar.image" :title="message.from" :class="message.avatar.color" class="sc-avatar-initials">
 												{{ message.from | initials }}
 											</span>
 										</div>
@@ -189,7 +189,7 @@
 						</div>
 					</li>
 				</ul>
-				<a v-if="vxOffcanvasPresent" href="javascript:void(0)" class="md-color-white uk-margin-left uk-hidden@l" @click="toggleOffcanvas">
+				<a v-show="vxOffcanvasPresent" href="javascript:void(0)" class="md-color-white uk-margin-left uk-hidden@l" @click="toggleOffcanvas">
 					<i v-show="!vxOffcanvasExpanded" class="mdi mdi-menu"></i><i v-show="vxOffcanvasExpanded" class="mdi mdi-arrow-right"></i>
 				</a>
 			</div>
@@ -501,9 +501,11 @@ export default {
 		var options = scMq.mediumMax() ? { showOnUp: true, animation: "uk-animation-slide-top" } : {};
 		UIkit.sticky(this.$refs.header, options);
 
-		const userSession = useUserSession();
-		this.user.name = userSession.user.name;
-		this.user.plantCode = userSession.user.plantCode;
+		if (process.client){
+			const userSession = useUserSession();
+			this.user.name = userSession.user.name;
+			this.user.plantCode = userSession.user.plantCode;
+		}
 	},
 	methods: {
 		toggleMainSidebar () {

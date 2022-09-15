@@ -95,7 +95,7 @@
 													<ScCardTitle>
 														{{ note.title }}
 													</ScCardTitle>
-													<span v-if="note.dueDate" class="uk-text-muted uk-text-small">
+													<span v-show="note.dueDate" class="uk-text-muted uk-text-small">
 														{{ note.dueDate }}
 													</span>
 												</div>
@@ -109,7 +109,7 @@
 											<p class="uk-margin-remove">
 												{{ note.body | stripHTML | truncate(100) }}
 											</p>
-											<ul v-if="note.checklist" class="uk-margin-top uk-list sc-el-clickable-exclude">
+											<ul v-show="note.checklist" class="uk-margin-top uk-list sc-el-clickable-exclude">
 												<li v-for="item in note.checklist" :key="item.id" class="uk-width-auto">
 													<PrettyCheck v-model="item.checked" class="p-icon">
 														<i slot="extra" class="icon mdi mdi-check"></i>
@@ -117,7 +117,7 @@
 													</PrettyCheck>
 												</li>
 											</ul>
-											<div v-if="note.labels" class="uk-flex uk-flex-middle">
+											<div v-show="note.labels" class="uk-flex uk-flex-middle">
 												<span v-for="label in note.labels" :key="label" class="mdi mdi-label sc-icon-24" :class="['md-color-' + labelColor(label)]"></span>
 											</div>
 										</ScCardBody>
@@ -140,15 +140,15 @@
 				<h2 class="uk-modal-title uk-margin-remove">
 					{{ singleNote.title }}
 				</h2>
-				<span v-if="singleNote.dueDate" class="uk-text-muted uk-text-small">
+				<span v-show="singleNote.dueDate" class="uk-text-muted uk-text-small">
 					{{ singleNote.dueDate }}
 				</span>
-				<div v-if="singleNote.labels" class="uk-flex uk-flex-middle">
+				<div v-show="singleNote.labels" class="uk-flex uk-flex-middle">
 					<span v-for="label in singleNote.labels" :key="label" class="mdi mdi-label sc-icon-24" :class="['md-color-' + labelColor(label)]"></span>
 				</div>
 				<!-- eslint-disable-next-line vue/no-v-html -->
 				<p class="uk-margin-top" v-html="singleNote.body"></p>
-				<ul v-if="singleNote.checklist" class="uk-margin-top uk-list">
+				<ul v-show="singleNote.checklist" class="uk-margin-top uk-list">
 					<li v-for="item in singleNote.checklist" :key="item.id">
 						<PrettyCheck v-model="item.checked" class="p-icon">
 							<i slot="extra" class="icon mdi mdi-check"></i>

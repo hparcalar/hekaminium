@@ -1,15 +1,15 @@
 <template>
 	<div class="uk-position-relative">
 		<slot></slot>
-		<template v-if="animate">
+		<template v-show="animate">
 			<transition name="fade">
-				<div v-if="activeAnimated" class="sc-overlay" :class="{'dimmed': dimmed}"></div>
+				<div v-show="activeAnimated" class="sc-overlay" :class="{'dimmed': dimmed}"></div>
 			</transition>
 		</template>
-		<template v-else>
-			<div v-if="active" class="sc-overlay dimmed"></div>
+		<template v-show="!animate">
+			<div v-show="active" class="sc-overlay dimmed"></div>
 		</template>
-		<template v-if="progress">
+		<template v-show="progress">
 			<ScProgressOverlay :active="active"></ScProgressOverlay>
 		</template>
 	</div>

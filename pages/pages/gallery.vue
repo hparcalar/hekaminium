@@ -22,10 +22,10 @@
 									</div>
 									<div class="sc-flex-no-shrink uk-margin-left sc-el-clickable" @click.prevent="ratePhoto(photo)">
 										<transition enter-active-class="uk-animation-scale-down sc-animation-slow" mode="out-in">
-											<span v-if="rating[photo.id]" key="rated" class="uk-display-block">
+											<span v-show="rating[photo.id]" key="rated" class="uk-display-block">
 												<i class="mdi mdi-heart md-color-red-600"></i>
 											</span>
-											<span v-else key="unrated" class="uk-display-block">
+											<span v-show="!rating[photo.id]" key="unrated" class="uk-display-block">
 												<i class="mdi mdi-heart-outline"></i>
 											</span>
 										</transition>

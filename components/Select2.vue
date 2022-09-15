@@ -105,7 +105,30 @@ export default {
 		}
 	},
 	mounted () {
-		this.select2 = $(this.$el)
+		this.bindSelectBox();
+	},
+	beforeDestroy () {
+		// this.select2.select2('destroy');
+		// this.$el.style.height = '45px';
+		// this.$el.style.visibility = 'hidden';
+	},
+	watch:{
+		options:{
+			handler: function(n,o){
+				this.bindSelectBox();
+			},
+			deep: true,
+		},
+		value:{
+			handler: function(n,o){
+				this.bindSelectBox();
+			},
+			deep: true,
+		}
+	},
+	methods: {
+		bindSelectBox(){
+			this.select2 = $(this.$el)
 			.find('select')
 			.select2({
 				...this.userSettings,
@@ -124,14 +147,8 @@ export default {
 					$dropdown.removeClass('uk-animation-slide-bottom-small').addClass("uk-animation-slide-top-small");
 				}
 			});
-		this.setValue(this.value);
-	},
-	beforeDestroy () {
-		this.select2.select2('destroy');
-		this.$el.style.height = '45px';
-		this.$el.style.visibility = 'hidden';
-	},
-	methods: {
+			this.setValue(this.value);
+		},
 		setOption (val = []) {
 			this.select2.empty();
 			this.select2.select2({

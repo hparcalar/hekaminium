@@ -12,11 +12,11 @@
 			<nuxt-link v-if="topMenuNode.url" :to="topMenuNode.url">
 				{{ $t(topMenuNode.title) }}
 			</nuxt-link>
-			<a v-else href="javascript:void(0)">
+			<a v-show="!topMenuNode.url" href="javascript:void(0)">
 				{{ $t(topMenuNode.title) }}
 			</a>
 			<transition name="menuFadeUp">
-				<ul v-if="topMenuNode.submenu" v-show="topMenuNode.isOpen">
+				<ul v-show="topMenuNode.submenu && topMenuNode.isOpen">
 					<li v-for="subNode in topMenuNode.submenu"
 						:key="subNode.id"
 						:class="{
@@ -29,11 +29,11 @@
 						<nuxt-link v-if="subNode.url" :to="subNode.url">
 							{{ $t(subNode.title) }}
 						</nuxt-link>
-						<a v-else href="javascript:void(0)">
+						<a v-show="!subNode.url" href="javascript:void(0)">
 							{{ $t(subNode.title) }}
 						</a>
 						<transition name="menuFadeUp">
-							<ScTopMenu v-if="subNode.submenu" v-show="subNode.isOpen" :menu-data="subNode.submenu" :is-root="false" />
+							<ScTopMenu v-show="subNode.submenu && subNode.isOpen" :menu-data="subNode.submenu" :is-root="false" />
 						</transition>
 					</li>
 				</ul>

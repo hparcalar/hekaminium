@@ -24,10 +24,10 @@
 				:data-index="index"
 				style="opacity: 0; transform: scaleX(0.2) scaleY(0.2)"
 			>
-				<a v-if="fab.href" :href="fab.href" class="sc-fab" :class="[fab.class]">
+				<a v-show="fab.href" :href="fab.href" class="sc-fab" :class="[fab.class]">
 					<i class="mdi" :class="[fab.icon]"></i>
 				</a>
-				<nuxt-link v-if="fab.to" :to="fab.to" class="sc-fab" :class="[fab.class]">
+				<nuxt-link v-show="fab.to" :to="fab.to" class="sc-fab" :class="[fab.class]">
 					<i class="mdi" :class="[fab.icon]"></i>
 				</nuxt-link>
 			</div>

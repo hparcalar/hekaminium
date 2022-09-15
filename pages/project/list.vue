@@ -17,9 +17,9 @@
 							<div id="sc-dt-buttons"></div>
 						</div>
                         <div class="uk-width-auto@s">
-							<button class="sc-button sc-button-primary sc-button-flex" type="button">
+							<!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
 								Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
-							</button>
+							</button> -->
 							<div class="uk-dropdown uk-width-small" data-uk-drop="mode: click">
 								<div class="sc-padding-small">
 									<div v-for="(checkbox, index) in dtDHeaders" :key="index" class="uk-margin-small">
@@ -60,6 +60,7 @@
 <script>
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
+import { useUserSession } from '~/composable/userSession';
 
 export default {
     name: 'ProjectList',
@@ -75,30 +76,34 @@ export default {
 				{ data: "projectName", title: "Proje Adı", visible: true, },
                 { data: "projectCategoryName", title: "Kategorisi", visible: true, },
                 { data: "firmName", title: "Müşteri", visible: true, },
+				{ data: "quantity", title: "Proje Adedi", visible: true, },
+				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
+				{ data: "forexName", title: "Döviz Cinsi", visible: false, },
+				{ data: "offerForexPrice", title: "Bedeli", visible: false, render: function(data, ev, row){ return row.forexId > 0 ? row.offerForexPrice : row.offerPrice } },
 				{ data: "projectStatusText", title: "Durum", visible: true, }
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
-				"stateSave": true,
-				stateSaveCallback (settings, data) {
-					localStorage.setItem( 'projectListTableView', JSON.stringify(data) )
-				},
-				stateLoadCallback (settings) {
-					const dtState = JSON.parse( localStorage.getItem( 'projectListTableView' ) );
-					return dtState;
-				},
+				"stateSave": false,
+				// stateSaveCallback (settings, data) {
+				// 	localStorage.setItem( 'projectListTableView', JSON.stringify(data) )
+				// },
+				// stateLoadCallback (settings) {
+				// 	const dtState = JSON.parse( localStorage.getItem( 'projectListTableView' ) );
+				// 	return dtState;
+				// },
 				buttons: [
-					{
-						extend: "copyHtml5",
-						className: "sc-button",
-						text: 'Kopyala'
-					},
-					{
-						extend: "csvHtml5",
-						className: "sc-button",
-						text: 'CSV '
-					},
+					// {
+					// 	extend: "copyHtml5",
+					// 	className: "sc-button",
+					// 	text: 'Kopyala'
+					// },
+					// {
+					// 	extend: "csvHtml5",
+					// 	className: "sc-button",
+					// 	text: 'CSV '
+					// },
 					{
 						extend: "excelHtml5",
 						className: "sc-button",
@@ -120,32 +125,51 @@ export default {
 			}
 		}
 	},
+	beforeMount(){
+		const costCol = this.dtColumns.find(d => d.data == 'forexName');
+		if (costCol){
+			costCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+
+		const budgetCol = this.dtColumns.find(d => d.data == 'offerForexPrice');
+		if (budgetCol){
+			budgetCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+
+		const profitCol = this.dtColumns.find(d => d.data == 'profitRate');
+		if (profitCol){
+			profitCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+	},
     async mounted (){
+		let targetUri = 'Project';
+		if (!this.hasViewAuth('ProjectManagement'))
+			targetUri = 'Project/AfterCreated';
+
         const api = useApi();
-        const rawData = (await api.get('Project')).data;
+        const rawData = (await api.get(targetUri)).data.map((d) => {
+			return {
+				...d,
+				offerForexPrice: new Intl.NumberFormat("tr-TR").format(d.offerForexPrice),
+				offerPrice: new Intl.NumberFormat("tr-TR").format(d.offerPrice),
+			}
+		});
 
         this.visualData = rawData;
-
-		if (this.$refs.buttonsTable){
-			// this.$refs.buttonsTable.$dt.state().clear()
-			console.log(this.$refs.buttonsTable);
-			// console.log(this.$refs.buttonsTable.$dt.state().clear());
-		}
-		
     },
     methods: {
         dtButtonsInitialized () {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
 
-            const ls = JSON.parse( localStorage.getItem( 'projectListTableView' ) );
-			this.$refs.buttonsTable.headers.forEach( (value, i) => {
-				this.dtDHeaders.push({
-					'name': value,
-					checked: ls.columns[i].visible,
-					disabled: i === 0
-				})
-			});
+            // const ls = JSON.parse( localStorage.getItem( 'projectListTableView' ) );
+			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
+			// 	this.dtDHeaders.push({
+			// 		'name': value,
+			// 		checked: ls.columns[i].visible,
+			// 		disabled: i === 0
+			// 	})
+			// });
 		},
 		toggleCol (e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);
@@ -156,7 +180,13 @@ export default {
         },
         newRecord(){
             this.$router.push('/project');
-        }
+        },
+		hasViewAuth(sectionKey){
+			const session = useUserSession();
+			if (session && session.checkAuthSection)
+				return session.checkAuthSection(sectionKey);
+			return false;
+		},
     }
 }
 </script>

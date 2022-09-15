@@ -30,7 +30,7 @@
 									</a>
 								</div>
 							</div>
-							<ul v-if="authError" class="sc-vue-errors uk-display-block">
+							<ul v-show="authError" class="sc-vue-errors uk-display-block">
 								<li>
 									{{ authError }}
 								</li>

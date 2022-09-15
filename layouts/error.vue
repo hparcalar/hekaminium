@@ -2,18 +2,18 @@
 	<div id="sc-page-wrapper" class="sc-error-page">
 		<div class="uk-flex uk-flex-center uk-height-1-1">
 			<div class="uk-width-1-2@l uk-width-2-3@m">
-				<div v-if="error.statusCode === 404">
+				<div v-show="error.statusCode === 404">
 					<h1 class="sc-error-title sc-padding-large">
 						<i class="mdi mdi-alert-outline"></i>
 						ERROR 404
 					</h1>
 					<div class="sc-padding-large">
-						<p v-if="!error.message">
+						<p v-show="!error.message">
 							The requested URL <span class="md-color-red-800">
 								{{ $route.path }}
 							</span> was not found on this server.
 						</p>
-						<p v-else>
+						<p v-show="error.message">
 							{{ error.message }}
 						</p>
 						<nuxt-link to="/">
@@ -21,7 +21,7 @@
 						</nuxt-link>
 					</div>
 				</div>
-				<div v-else-if="error.statusCode === 500">
+				<div v-show="error.statusCode === 500">
 					<h1 class="sc-error-title sc-padding-large">
 						<i class="mdi mdi-alert-outline"></i>
 						ERROR 500
@@ -36,7 +36,7 @@
 						</nuxt-link>
 					</div>
 				</div>
-				<div v-else>
+				<div v-show="error.statusCode != 400 && error.statusCode != 500">
 					<h1 class="sc-error-title sc-padding-large">
 						<i class="mdi mdi-alert-outline"></i>
 						An error occurred

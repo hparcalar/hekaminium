@@ -28,7 +28,7 @@
 			@input="$emit('input', $event.target.value)"
 			@keyup="inputKeyUp"
 		>
-		<span v-if="mode !== 'outline'" class="sc-input-bar"></span>
+		<span v-show="mode !== 'outline'" class="sc-input-bar"></span>
 		<slot name="help-inline"></slot>
 	</div>
 </template>

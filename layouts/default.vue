@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<Header ref="mainHeader" />
-		<FancyToolbar v-if="vxFancyToolbarActive"></FancyToolbar>
-		<Sidebar v-if="!vxTopMenuActive" />
+		<FancyToolbar v-show="vxFancyToolbarActive"></FancyToolbar>
+		<Sidebar v-show="!vxTopMenuActive" />
 		<nuxt />
-		<Footer v-if="vxFooterActive"></Footer>
-		<FancyFooter v-if="vxFancyFooterActive"></FancyFooter>
-		<StyleSwitcher></StyleSwitcher>
-		<div v-if="vxPageOverlay" class="sc-overlay dimmed sc-overlay-page"></div>
+		<Footer v-show="vxFooterActive"></Footer>
+		<FancyFooter v-show="vxFancyFooterActive"></FancyFooter>
+		<!-- <StyleSwitcher></StyleSwitcher> -->
+		<div v-show="vxPageOverlay" class="sc-overlay dimmed sc-overlay-page"></div>
 		<ScProgressOverlayRoot />
 	</div>
 </template>

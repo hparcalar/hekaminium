@@ -19,10 +19,10 @@
 												<li v-for="user in room.users" :key="user">
 													<a href="javascript:void(0)">
 														<span class="sc-user-status" :class="[userStatus(user)]"></span>
-														<strong v-if="user === 0">
+														<strong v-show="user === 0">
 															{{ userName(user) }}
 														</strong>
-														<span v-else>
+														<span v-show="user != 0">
 															{{ userName(user) }}
 														</span>
 													</a>
@@ -69,7 +69,7 @@
 											class="sc-chat-messages-wrapper"
 											:class="{ 'my': group.own }"
 										>
-											<template v-if="users[group.user].avatar">
+											<template v-show="users[group.user].avatar">
 												<a href="javascript:void(0)" class="sc-chat-message-avatar">
 													<img
 														v-rjs="userAvatar(group.user, true)"
@@ -80,27 +80,27 @@
 												</a>
 												<TransitionGroup name="fadeUp" tag="ul" class="sc-chat-messages">
 													<li v-for="message in group.messages" :key="message.id">
-														<p v-if="message.content" class="sc-chat-message-content">
+														<p v-show="message.content" class="sc-chat-message-content">
 															{{ message.content }}
 														</p>
-														<time v-if="message.time !== ''">
+														<time v-show="message.time !== ''">
 															{{ message.time }}
 														</time>
 													</li>
 												</TransitionGroup>
 											</template>
-											<div v-else>
-												<div v-if="!group.own" class="sc-chat-message-username">
+											<div v-show="!users[group.user].avatar">
+												<div v-show="!group.own" class="sc-chat-message-username">
 													<a href="javascript:void(0)">
 														{{ userName(group.user) }}
 													</a>
 												</div>
 												<TransitionGroup name="fadeUp" tag="ul" class="sc-chat-messages">
 													<li v-for="message in group.messages" :key="message.id">
-														<p v-if="message.content" class="sc-chat-message-content">
+														<p v-show="message.content" class="sc-chat-message-content">
 															{{ message.content }}
 														</p>
-														<time v-if="message.time !== ''">
+														<time v-show="message.time !== ''">
 															{{ message.time }}
 														</time>
 													</li>
@@ -189,13 +189,13 @@
 													<div class="sc-avatar-wrapper">
 														<span class="sc-user-status" :class="[user.status]"></span>
 														<img
-															v-if="user.avatar"
+															v-show="user.avatar"
 															v-rjs="userAvatar(user.avatar, true)"
 															:src="userAvatar(user.avatar)"
 															class="sc-avatar"
 															alt=""
 														>
-														<img v-else class="sc-avatar" alt="">
+														<img v-show="!user.avatar" class="sc-avatar" alt="">
 													</div>
 												</div>
 												<div class="sc-list-body">
@@ -273,13 +273,13 @@
 							<div class="sc-avatar-wrapper">
 								<span class="sc-user-status" :class="[user.status]"></span>
 								<img
-									v-if="user.avatar"
+									v-show="user.avatar"
 									v-rjs="userAvatar(user.avatar, true)"
 									:src="userAvatar(user.avatar)"
 									class="sc-avatar"
 									alt=""
 								>
-								<img v-else class="sc-avatar" alt="">
+								<img v-show="!user.avatar" class="sc-avatar" alt="">
 							</div>
 						</div>
 						<div class="sc-list-body">

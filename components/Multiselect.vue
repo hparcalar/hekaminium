@@ -1,6 +1,6 @@
 <template>
 	<select v-model="msValue" class="multiselect" multiple>
-		<slot v-if="options" name="options">
+		<slot v-show="options" name="options">
 			<option v-for="option in options" :key="option.value" :value="option.value">
 				{{ option.text }}
 			</option>

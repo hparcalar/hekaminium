@@ -44,17 +44,14 @@
                         </fieldset>
 
 						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-								<span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-								Kaydet
+							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+								<span data-uk-icon="icon: check" class="uk-icon"></span>
 							</button>
-							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
-								<span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
-								Vazgeç
+							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
 							</button>
-                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-large">
-								<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-								Sil
+                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+								<span data-uk-icon="icon: trash" class="uk-icon"></span>
 							</button>
 						</div>
 					</form>
@@ -101,6 +98,7 @@ export default {
             { sectionKey: 'Definitions', title: 'Tanım Yönetimi', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ProjectBudgetView', title: 'Proje Bedeli Görüntüleme', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ItemDemandApproval', title: 'Malzeme Talebi Onaylama', canRead: false, canWrite: false, canDelete: false, },
+            { sectionKey: 'ProjectManagement', title: 'Proje Yönetimi Yetkilisi', canRead: false, canWrite: false, canDelete: false, },
         ]
 	}),
 	computed: {

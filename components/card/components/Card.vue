@@ -12,7 +12,7 @@
 		]"
 	>
 		<slot></slot>
-		<div v-if="loading" class="sc-progress-card" :style="progressStyle">
+		<div v-show="loading" class="sc-progress-card" :style="progressStyle">
 			<ScProgressCircular size="lg"></ScProgressCircular>
 		</div>
 	</div>
