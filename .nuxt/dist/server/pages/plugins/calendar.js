@@ -1,7 +1,7 @@
 exports.ids = [117];
 exports.modules = {
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,7 +122,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(618);
+var content = __webpack_require__(626);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -134,13 +134,13 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 611:
+/***/ 619:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(612);
+var content = __webpack_require__(620);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -148,7 +148,7 @@ __webpack_require__(7).default("a88e35c8", content, true)
 
 /***/ }),
 
-/***/ 612:
+/***/ 620:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -162,13 +162,13 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 613:
+/***/ 621:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(614);
+var content = __webpack_require__(622);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -176,7 +176,7 @@ __webpack_require__(7).default("c00c367a", content, true)
 
 /***/ }),
 
-/***/ 614:
+/***/ 622:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -190,13 +190,13 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 615:
+/***/ 623:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(616);
+var content = __webpack_require__(624);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -204,7 +204,7 @@ __webpack_require__(7).default("019e1564", content, true)
 
 /***/ }),
 
-/***/ 616:
+/***/ 624:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -218,7 +218,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 617:
+/***/ 625:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -230,7 +230,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 618:
+/***/ 626:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -244,7 +244,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 791:
+/***/ 813:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -638,7 +638,7 @@ var check_default = /*#__PURE__*/__webpack_require__.n(check_);
 var ColumnToggle = __webpack_require__(287);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/plugins/calendar.vue?vue&type=script&lang=js&
 
@@ -649,11 +649,11 @@ const {
 
 
 
-__webpack_require__(611);
+__webpack_require__(619);
 
-__webpack_require__(613);
+__webpack_require__(621);
 
-__webpack_require__(615);
+__webpack_require__(623);
 
 /* harmony default export */ var calendarvue_type_script_lang_js_ = ({
   name: 'PluginsCalendar',
@@ -1279,7 +1279,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(617)
+  var style0 = __webpack_require__(625)
 if (style0.__inject__) style0.__inject__(context)
 
 }

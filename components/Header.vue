@@ -91,7 +91,7 @@
 					<li class="uk-visible@l">
 						<ScFullscreen id="sc-js-fullscreen-toggle" />
 					</li>
-					<li class="uk-visible@l">
+					<!-- <li class="uk-visible@l">
 						<a href="javascript:void(0)" class="sc-text-semibold sc-width-micro">
 							{{ vxActiveLocale }}
 						</a>
@@ -110,8 +110,8 @@
 								</li>
 							</ul>
 						</div>
-					</li>
-					<li>
+					</li> -->
+					<!-- <li>
 						<a href="javascript:void(0)">
 							<span class="mdi mdi-email"></span>
 						</a>
@@ -140,7 +140,7 @@
 								Show all in mailbox
 							</nuxt-link>
 						</div>
-					</li>
+					</li> -->
 					<li class="uk-visible@l">
 						<a href="javascript:void(0)">
 							<span class="mdi mdi-bell uk-display-inline-block">
@@ -175,11 +175,11 @@
 										<b>{{user.name}}</b> <i><small>{{user.plantCode}}</small></i>
 									</nuxt-link>
 								</li>
-								<li>
+								<!-- <li>
 									<nuxt-link to="/pages/settings">
 										Ayarlar
 									</nuxt-link>
-								</li>
+								</li> -->
 								<li>
 									<a @click="logoutUser">
 										Çıkış Yap
@@ -275,37 +275,37 @@ export default {
 				}
 			],
 			alerts: [
-				{
-					id: 1,
-					text: 'Information Page Not Found!',
-					icon: 'mdi-alert-outline',
-					color: 'md-color-red-600'
-				},
-				{
-					id: 2,
-					text: 'A new password has been sent to your e-mail address.',
-					icon: 'mdi-email-check-outline',
-					color: 'md-color-blue-600'
-				},
-				{
-					id: 3,
-					text: 'You do not have permission to access the API!',
-					icon: 'mdi-alert-outline',
-					color: 'md-color-red-600'
-				},
-				{
-					id: 4,
-					text: 'Your enquiry has been successfully sent.',
-					icon: 'mdi-check-all',
-					color: 'md-color-light-green-600'
-				}
+				// {
+				// 	id: 1,
+				// 	text: 'Information Page Not Found!',
+				// 	icon: 'mdi-alert-outline',
+				// 	color: 'md-color-red-600'
+				// },
+				// {
+				// 	id: 2,
+				// 	text: 'A new password has been sent to your e-mail address.',
+				// 	icon: 'mdi-email-check-outline',
+				// 	color: 'md-color-blue-600'
+				// },
+				// {
+				// 	id: 3,
+				// 	text: 'You do not have permission to access the API!',
+				// 	icon: 'mdi-alert-outline',
+				// 	color: 'md-color-red-600'
+				// },
+				// {
+				// 	id: 4,
+				// 	text: 'Your enquiry has been successfully sent.',
+				// 	icon: 'mdi-check-all',
+				// 	color: 'md-color-light-green-600'
+				// }
 			]
 		},
 		sidebarMainExpanded: true,
 		offcanvasExpanded: false,
 		offcanvasPresent: false,
 		logo: require('~/assets/img/logo.png'),
-		alertsEmpty: null,
+		alertsEmpty: true,
 		topMenuData: [
 			{
 				id: uniqueID(),

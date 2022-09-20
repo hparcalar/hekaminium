@@ -98,7 +98,8 @@ export default {
             { sectionKey: 'Definitions', title: 'Tanım Yönetimi', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ProjectBudgetView', title: 'Proje Bedeli Görüntüleme', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ItemDemandApproval', title: 'Malzeme Talebi Onaylama', canRead: false, canWrite: false, canDelete: false, },
-            { sectionKey: 'ProjectManagement', title: 'Proje Yönetimi Yetkilisi', canRead: false, canWrite: false, canDelete: false, },
+            { sectionKey: 'ItemOrderApproval', title: 'Sipariş Onaylama', canRead: false, canWrite: false, canDelete: false, },
+            { sectionKey: 'ProjectManagement', title: 'Proje Yönetimi', canRead: false, canWrite: false, canDelete: false, },
         ]
 	}),
 	computed: {

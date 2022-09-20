@@ -60,8 +60,8 @@ import ScInput from '~/components/Input'
 import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
-import { useApi } from '../../composable/useApi';
-import { getQS } from '../../composable/useHelpers';
+import { useApi } from '~/composable/useApi';
+import { getQS } from '~/composable/useHelpers';
 
 if(process.client) {
 	require('~/plugins/inputmask');	

@@ -36,34 +36,110 @@
 					</div>
 				</ScCardHeader>
 				<ScCardBody>
-                    <div class="uk-flex-left uk-grid">
-                        <div class="uk-button-group sc-padding-remove-left uk-width-expand uk-margin-medium" style="height:34px;">
-                            <button v-show="demandsAreReadyForApprove" @click="approveDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
-                                <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
-                                Onayla
-                            </button>
-                            <button v-show="demandsAreReadyForDeny" @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
-                                <span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
-                                Reddet
-                            </button>
-                            <button v-show="demandsAreReadyForDelete" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
-                                <span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
-                                Sil
-                            </button>
-                        </div>
-                    </div>
-					<client-only>
-						<Datatable
-							id="sc-dt-demands-waiting-for-approve-table"
-							ref="buttonsTable"
-							:data="visualData"
-							:options="dtDOptions"
-                            :customColumns="dtColumns"
-							:buttons="true"
-                            :customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]"
-							@initComplete="dtButtonsInitialized"
-						></Datatable>
-					</client-only>
+					<div class="uk-grid">
+						<div class="uk-width-3-5@m">
+							<div class="uk-flex-left uk-grid">
+								<div class="uk-button-group sc-padding-remove-left uk-width-expand uk-margin-medium" style="height:34px;">
+									<button v-show="demandsAreReadyForApprove" @click="createOrderDetail" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+										<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+										Grup Oluştur
+									</button>
+									<button v-show="demandsAreReadyForDeny" @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+										<span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
+										Reddet
+									</button>
+									<button v-show="demandsAreReadyForDelete" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
+										<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
+										Sil
+									</button>
+								</div>
+							</div>
+							<client-only>
+								<Datatable
+									id="sc-dt-demands-waiting-for-approve-table"
+									ref="buttonsTable"
+									:data="visualData"
+									:options="dtDOptions"
+									:customColumns="dtColumns"
+									:buttons="true"
+									:customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]"
+									@initComplete="dtButtonsInitialized"
+								></Datatable>
+							</client-only>
+						</div>
+						<div class="uk-width-2-5@m">
+							<h3>
+								Sipariş Kalemleri
+								<button type="button" @click="redirectOrderForm" style="float:right;"
+								class="sc-button sc-button-primary sc-button-small uk-margin-small-right">
+									<span data-uk-icon="icon: check" class="uk-icon"></span>Siparişi Oluştur
+								</button>
+							</h3>
+							<table class="uk-table uk-table-striped uk-table-responsive uk-table-small" style="width:100%">
+								<tr>
+									<th class="uk-text-nowrap">
+										#
+									</th>
+									<th class="uk-text-nowrap">
+										Sıra
+									</th>
+									<th class="uk-text-nowrap">
+										Açıklama
+									</th>
+									<th class="uk-text-nowrap">
+										Miktar
+									</th>
+									<th class="uk-text-nowrap">
+										#
+									</th>
+								</tr>
+								<!-- ORDER DETAILS -->
+								<tr v-for="(item,index) in orderDetails" :key="index">
+									<td>
+										<button type="button" @click="expandOrderDetail(item)" class="sc-button sc-button-default sc-button-small uk-margin-small-right">
+											<span :data-uk-icon="'icon:'+ (item.expanded ? 'minus' : 'plus')" class="uk-icon"></span>
+										</button>
+									</td>
+									<td><span style="display:block;margin-top:10px;">{{ (index + 1).toString() }}</span></td>
+									<td>
+										<ScInput v-model="item.itemExplanation" />
+									</td>
+									<td>
+										<ScInput v-model="item.quantity" :type="'number'" />
+									</td>
+									<td>
+										<button type="button" @click="removeOrderDetail(item)" 
+										class="sc-button sc-button-danger sc-button-small uk-margin-small-right">
+											<span data-uk-icon="icon: trash" class="uk-icon"></span>
+										</button>
+									</td>
+								</tr>
+								<!-- GROUPED DEMAND DETAILS DEPEND ON SELECTED ORDER DETAIL -->
+								<tr v-for="(item,index) in orderDetails" :key="index" v-if="item.expanded">
+									<td colspan="5">
+										<div v-if="item.expanded" class="uk-overflow-auto" style="max-height:250px;">
+											<div v-for="(demand, demandIndex) in item.demandDetails" 
+											:key="demandIndex" style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;"
+											class="uk-grid">
+												<div class="uk-width-4-5@m">
+													<p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}</p>
+													<p class="uk-padding-remove uk-margin-remove"><b>Açıklama:</b> {{ demand.itemExplanation }}</p>
+													<p class="uk-padding-remove uk-margin-remove"><b>Parça No:</b> {{ demand.partNo }}, <b>Boyut:</b> {{ demand.partDimensions }}, <b>Miktar:</b> {{ demand.quantity }}</p>
+												</div>
+												<div class="uk-width-1-5@m">
+													<button type="button" @click="removeDemandDetailFromOrder(item, demand)" 
+													class="sc-button sc-button-danger sc-button-small uk-margin-medium-top uk-margin-small-right">
+														<span data-uk-icon="icon: trash" class="uk-icon"></span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+                    
 				</ScCardBody>
 			</ScCard>
         </div>
@@ -73,12 +149,14 @@
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { dateToStr } from '~/composable/useHelpers';
+import ScInput from '~/components/Input'
 
 export default {
     name: 'DemandsWaitingForApproveList',
     components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		PrettyCheck
+		PrettyCheck,
+		ScInput,
     },
     data: () => {
 		return {
@@ -91,19 +169,16 @@ export default {
 				{ data: "partNo", title: "Parça Kodu", visible: true, },
 				{ data: "partDimensions", title: "Boyutlar", visible: true, },
                 { data: "quantity", title: "Miktar", visible: true, },
-                { data: "statusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
 				"stateSave": false,
-				// stateSaveCallback (settings, data) {
-				// 	localStorage.setItem( 'demandForApprovalListTableView', JSON.stringify(data) )
-				// },
-				// stateLoadCallback (settings) {
-				// 	const dtState = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
-				// 	return dtState;
-				// },
+				rowCallback: function(row, data, index) {
+					if (data.demandStatus == 4) {
+						$('td',row).addClass("demand-denied");
+					}
+				},
 				buttons: [
 					// {
 					// 	extend: "copyHtml5",
@@ -136,6 +211,7 @@ export default {
 			},
             selectedDemandRow: { id:0, itemDemandId: 0 },
             selectedDemandIndexes: [],
+			orderDetails: [],
 		}
 	},
     computed: {
@@ -218,15 +294,6 @@ export default {
         dtButtonsInitialized () {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
-
-            // const ls = JSON.parse( localStorage.getItem( 'demandForApprovalListTableView' ) );
-			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
-			// 	this.dtDHeaders.push({
-			// 		'name': value,
-			// 		checked: ls.columns[i].visible,
-			// 		disabled: i === 0
-			// 	})
-			// });
 		},
 		toggleCol (e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);
@@ -302,6 +369,63 @@ export default {
 					}
 			});
 		},
+		createOrderDetail(){
+			const demandList = [];
+			for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+				const dmnIndex = this.selectedDemandIndexes[i];
+				const dmnObj = this.visualData[dmnIndex];
+				demandList.push(dmnObj);
+			}
+
+			this.selectedDemandIndexes = [];
+			this.selectedDemandRow = {id:0};
+			this.visualData = this.visualData.filter(d => !demandList.some(m => m.id == d.id));
+
+			this.orderDetails.push({
+				expanded: false,
+				itemExplanation: 'Yeni Grup',
+				quantity: 1,
+				demandDetails: demandList,
+			});
+		},
+		removeDemandDetailFromOrder(orderDetail, demandDetail){
+			try {
+				const detailIndex = orderDetail.demandDetails.indexOf(demandDetail);
+				if (detailIndex > -1){
+					this.visualData.push(demandDetail);
+					orderDetail.demandDetails.splice(detailIndex,1);
+				}
+			} catch (error) {
+				
+			}
+		},
+		removeOrderDetail(orderDetail){
+			try {
+				const ordIndex = this.orderDetails.indexOf(orderDetail);
+				if (ordIndex > -1){
+					for (let i = 0; i < orderDetail.demandDetails.length; i++) {
+						const dmnDetail = orderDetail.demandDetails[i];
+						this.visualData.push(dmnDetail);
+					}
+
+					this.orderDetails.splice(ordIndex, 1);
+				}
+			} catch (error) {
+				console.error(error);
+			}
+		},
+		redirectOrderForm(){
+			if (process.client){
+				localStorage.setItem('grouped-demand-details', JSON.stringify(this.orderDetails));
+				this.$router.push('/purchasing/item-order');
+			}
+		},
+		expandOrderDetail(item){
+			if(!item.expanded)
+				item.expanded = true;
+			else
+				item.expanded = !item.expanded;
+		},
         showNotification (text, pos, status, persistent) {
 			var config = {};
 			config.timeout = persistent ? !persistent : 3000;
@@ -321,4 +445,9 @@ export default {
 	@import "~scss/common/variables_mixins";
 	@import "~scss/plugins/datatables";
 	@import '~scss/vue/_pretty_checkboxes';
+</style>
+<style type="text/css">
+	.demand-denied{
+		background-color: rgba(230, 50, 50, 0.3);
+	}
 </style>

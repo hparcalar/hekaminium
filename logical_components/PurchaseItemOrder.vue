@@ -43,11 +43,19 @@
                                 ></Select2>
                             </client-only>
                         </div>
-                        <div>
-                            <button type="button" @click="showApprovedDemands" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-                                <span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
-                                Onaylı Talepler
-                            </button>
+                        <div class="uk-child-width-1-2@m uk-grid">
+                            <div>
+                                <PrettyCheck name="isActive" v-model="formData.isContracted" :value="true" class="p-icon">
+                                    <i slot="extra" class="icon mdi mdi-check"></i>
+                                    Fason
+                                </PrettyCheck>
+                            </div>
+                            <div>
+                                <button type="button" @click="showApprovedDemands" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
+                                    <span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
+                                    Talep Seç
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
@@ -127,6 +135,7 @@
 				<div class="uk-modal-body">
                     <PurchaseItemOrderDetail
                         v-show="refreshDetailForm == true"
+                        :is-contracted="formData.isContracted"
                         :detail-object="selectedOrderDetail"
                         :total-detail-count="details.length"
                         :is-dialog="true"
@@ -206,6 +215,7 @@ export default {
             deadlineDate: null,
 			firmId: null,
             plantId: null,
+            isContracted: false,
             receiptType: 1,
 			receiptStatus: 0,
 		},
@@ -218,16 +228,21 @@ export default {
 			select: {
                 style: 'single'
             },
+            rowCallback: function(row, data, index) {
+                if (data.receiptStatus == 3) {
+                    $('td',row).addClass("bg-success");
+                }
+            },
 			searching: false,
 			paging: false,
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
-			{ data: "itemName", title: "Stok Adı", visible: true, },
+			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data,ev,row){ return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
-            { data: "projectName", title: "Proje", visible: true, },
+            // { data: "projectName", title: "Proje", visible: true, },
             { data: "forexCode", title: "Döviz", visible: true, },
             { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
             { data: "taxRate", title: "Kdv %", visible: true, },
@@ -316,6 +331,51 @@ export default {
                     this.details.splice(0, this.details.length);
                 }
 
+                // check if there is any demand groups in localStorage from waiting demands page
+                if (process.client){
+                    try {
+                        const localData = localStorage.getItem('grouped-demand-details');
+                        if (localData){
+                            const groupedDemands = JSON.parse(localData);
+                            if (groupedDemands && groupedDemands.length > 0){
+                                for (let i = 0; i < groupedDemands.length; i++) {
+                                    const demandGroup = groupedDemands[i];
+                                    const orderRow = { 
+                                        ...demandGroup,
+                                        lineNumber: i + 1,
+                                        id: i + 1,
+                                        partNo: null,
+                                        itemName: null,
+                                        partDimensions: null,
+                                        projectName: null,
+                                        forexCode: null,
+                                        receiptStatus: 0,
+                                        statusText: null,
+                                        taxRate: 0,
+                                        unitPrice: 0,
+                                        overallTotal: 0,
+                                        newRecord: true,
+                                        demandConsumes: demandGroup.demandDetails.map((d) => {
+                                            return {
+                                                ...d,
+                                                itemDemandDetailId: d.id,
+                                                id: 0,
+                                            };
+                                        }),
+                                    };
+
+                                    this.details.push(orderRow);
+                                }
+                            }
+
+                            localStorage.removeItem('grouped-demand-details');
+                        }
+
+                    } catch (error) {
+                        
+                    }
+                }
+
             } catch (error) {
                 
             }
@@ -351,6 +411,8 @@ export default {
                         existingDetail.projectName = detailRow.projectName;
                         existingDetail.partNo = detailRow.partNo;
                         existingDetail.partDimensions = detailRow.partDimensions;
+                        existingDetail.itemExplanation = detailRow.itemExplanation;
+                        existingDetail.demandConsumes = detailRow.demandConsumes;
                         existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
@@ -362,6 +424,12 @@ export default {
             try {
                 if (!this.formData.receiptDate){
                     this.showNotification('Tarih seçmelisiniz.', false, 'error');
+                    return;
+                }
+
+                if (!this.formData.isContracted && this.details.some(d => !d.itemId && (!d.demandConsumes || d.demandConsumes.length == 0)))
+                {
+                    this.showNotification('Stok seçilmeyen kalemler mevcut olduğu için kaydedilemez.', false, 'error');
                     return;
                 }
 
@@ -472,7 +540,7 @@ export default {
 			UIkit.notification(text, config);
 		},
         showNewOrderDetail(){
-            this.selectedOrderDetail = { id:0 };
+            this.selectedOrderDetail = { id:0, demandConsumes: [] };
             this.showOrderDetail();
         },
         showOrderDetail(){
@@ -521,7 +589,13 @@ export default {
                     if (!self.details.some(d => d.itemDemandDetailId == demandDetail.id)){
                         var newRow = {};
                         newRow.newDetail = true;
-                        newRow.itemDemandDetailId = demandDetail.id;
+                        newRow.demandConsumes = [
+                            {
+                                itemDemandDetailId: demandDetail.id,
+                                quantity: demandDetail.quantity,
+                            }
+                        ]
+                        // newRow.itemDemandDetailId = demandDetail.id; -- old algorithm
 
                         // assign new line number
                         const totalCount = self.details.length;
@@ -546,6 +620,7 @@ export default {
                         newRow.partNo = demandDetail.partNo;
                         newRow.partDimensions = demandDetail.partDimensions;
                         newRow.projectName = demandDetail.projectName;
+                        newRow.itemExplanation = demandDetail.itemExplanation;
 
                         self.details.push(newRow);
                     }
@@ -590,4 +665,9 @@ export default {
 <style lang="scss">
 	@import '~scss/vue/_pretty_checkboxes';
     @import "~scss/plugins/datatables";
+</style>
+<style type="text/css">
+.bg-success{
+    background-color: #11bf48;
+}
 </style>

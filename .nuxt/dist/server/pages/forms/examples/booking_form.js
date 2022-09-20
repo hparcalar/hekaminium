@@ -474,7 +474,7 @@ if (false) {}
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -527,7 +527,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./components/DateRangePicker.vue?vue&type=template&id=9996255a&
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./components/DateRangePicker.vue?vue&type=script&lang=js&
 __webpack_require__(124);
@@ -674,7 +674,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 824:
+/***/ 847:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -924,7 +924,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./pages/forms/examples/booking_form.vue?vue&type=template&id=1b33eb26&
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./components/Input.vue + 4 modules
 var Input = __webpack_require__(122);

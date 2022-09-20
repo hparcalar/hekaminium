@@ -260,7 +260,7 @@ module.exports = __webpack_require__.p + "img/wynand-van-poortvliet-761831-unspl
 
 /***/ }),
 
-/***/ 182:
+/***/ 181:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/briana-tozour-756151-unsplash.f4508bb.jpg";
@@ -477,21 +477,21 @@ module.exports = __webpack_require__.p + "img/wynand-van-poortvliet-761831-unspl
 
 /***/ }),
 
-/***/ 536:
+/***/ 543:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/avatar_default_md@2x.5eda6a7.png";
 
 /***/ }),
 
-/***/ 537:
+/***/ 544:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/avatar_default_md.8b4f4a9.png";
 
 /***/ }),
 
-/***/ 538:
+/***/ 545:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -503,7 +503,7 @@ var map = {
 	"./avantgarde-concept-763896-unsplash@2x.jpg": 253,
 	"./avantgarde-concept-763896-unsplash_md.jpg": 136,
 	"./avantgarde-concept-763896-unsplash_md@2x.jpg": 152,
-	"./briana-tozour-756151-unsplash.jpg": 182,
+	"./briana-tozour-756151-unsplash.jpg": 181,
 	"./briana-tozour-756151-unsplash@2x.jpg": 254,
 	"./briana-tozour-756151-unsplash_md.jpg": 153,
 	"./briana-tozour-756151-unsplash_md@2x.jpg": 154,
@@ -583,11 +583,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 538;
+webpackContext.id = 545;
 
 /***/ }),
 
-/***/ 723:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -646,7 +646,7 @@ var render = function render() {
     directives: [{
       name: "rjs",
       rawName: "v-rjs",
-      value: __webpack_require__(536),
+      value: __webpack_require__(543),
       expression: "require('~/assets/img/avatars/avatar_default_md@2x.png')"
     }],
     staticClass: "uk-border-circle",
@@ -1140,7 +1140,7 @@ const {
   }),
   computed: {
     avatarImg() {
-      return __webpack_require__(537);
+      return __webpack_require__(544);
     },
 
     cardImgSrc() {
@@ -1150,7 +1150,7 @@ const {
   },
   methods: {
     getBackgroundImage(image) {
-      return __webpack_require__(538)("./" + image);
+      return __webpack_require__(545)("./" + image);
     },
 
     loadContent() {

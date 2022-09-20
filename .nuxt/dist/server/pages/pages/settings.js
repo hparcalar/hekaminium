@@ -550,7 +550,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive("scSticky", {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(595);
+var content = __webpack_require__(602);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -568,7 +568,7 @@ module.exports.__inject__ = function (context) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(601);
+var content = __webpack_require__(608);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -580,7 +580,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 594:
+/***/ 601:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -592,7 +592,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 595:
+/***/ 602:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -606,13 +606,13 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 596:
+/***/ 603:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(597);
+var content = __webpack_require__(604);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -620,14 +620,14 @@ __webpack_require__(7).default("1224c93b", content, true)
 
 /***/ }),
 
-/***/ 597:
+/***/ 604:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(6);
 var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(53);
-var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(598);
-var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(599);
+var ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(605);
+var ___CSS_LOADER_URL_IMPORT_1___ = __webpack_require__(606);
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
@@ -639,21 +639,21 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 598:
+/***/ 605:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/flags.9d196f4.png";
 
 /***/ }),
 
-/***/ 599:
+/***/ 606:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/flags@2x.a5e4515.png";
 
 /***/ }),
 
-/***/ 600:
+/***/ 607:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -665,7 +665,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 601:
+/***/ 608:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -679,7 +679,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 701:
+/***/ 723:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1610,7 +1610,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(594)
+  var style0 = __webpack_require__(601)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -1655,7 +1655,7 @@ const countries = __webpack_require__(278);
 
 
 
-__webpack_require__(596);
+__webpack_require__(603);
 
 /* harmony default export */ var settingsvue_type_script_lang_js_ = ({
   name: 'PagesSettings',
@@ -1890,7 +1890,7 @@ __webpack_require__(596);
 
 function settings_injectStyles (context) {
   
-  var style0 = __webpack_require__(600)
+  var style0 = __webpack_require__(607)
 if (style0.__inject__) style0.__inject__(context)
 
 }

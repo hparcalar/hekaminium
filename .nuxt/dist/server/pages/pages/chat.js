@@ -205,7 +205,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -558,7 +558,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(577);
+var content = __webpack_require__(584);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -570,7 +570,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 574:
+/***/ 581:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -605,11 +605,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 574;
+webpackContext.id = 581;
 
 /***/ }),
 
-/***/ 575:
+/***/ 582:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -644,11 +644,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 575;
+webpackContext.id = 582;
 
 /***/ }),
 
-/***/ 576:
+/***/ 583:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -660,7 +660,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 577:
+/***/ 584:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -674,7 +674,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 768:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1148,7 +1148,7 @@ var utils = __webpack_require__(2);
 var Input = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./components/ColumnToggle.vue + 4 modules
 var ColumnToggle = __webpack_require__(287);
@@ -1336,9 +1336,9 @@ const chance = __webpack_require__(47).Chance();
       let avatar = number == 0 ? 'default' : '0' + number;
 
       if (retina) {
-        return __webpack_require__(574)("./avatar_" + avatar + "_sm@2x.png");
+        return __webpack_require__(581)("./avatar_" + avatar + "_sm@2x.png");
       } else {
-        return __webpack_require__(575)("./avatar_" + avatar + "_sm.png");
+        return __webpack_require__(582)("./avatar_" + avatar + "_sm.png");
       }
     },
 
@@ -1433,7 +1433,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(576)
+  var style0 = __webpack_require__(583)
 if (style0.__inject__) style0.__inject__(context)
 
 }

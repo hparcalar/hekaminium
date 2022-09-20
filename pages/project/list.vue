@@ -7,7 +7,7 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Projeler
-                                <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+                                <button type="button" @click="newRecord" v-if="this.hasViewAuth('ProjectManagement')" class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
 								</button>
@@ -182,9 +182,12 @@ export default {
             this.$router.push('/project');
         },
 		hasViewAuth(sectionKey){
-			const session = useUserSession();
-			if (session && session.checkAuthSection)
-				return session.checkAuthSection(sectionKey);
+			if (process.client){
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey);
+			}
+
 			return false;
 		},
     }

@@ -120,18 +120,11 @@ module.exports = __webpack_require__.p + "img/avatar_09_sm@2x.e046f9a.png";
 
 /***/ }),
 
-/***/ 181:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
-
-/***/ }),
-
-/***/ 186:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./avatar_01.png": 181,
+	"./avatar_01.png": 186,
 	"./avatar_010.png": 187,
 	"./avatar_010@2x.png": 188,
 	"./avatar_010_lg.png": 189,
@@ -231,7 +224,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 186;
+webpackContext.id = 185;
+
+/***/ }),
+
+/***/ 186:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
 
 /***/ }),
 
@@ -692,7 +692,7 @@ var staticRenderFns = [];
   },
   computed: {
     'avatarSrc'() {
-      return __webpack_require__(186)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
+      return __webpack_require__(185)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
     },
 
     'wrapperClass'() {
@@ -735,7 +735,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(542);
+var content = __webpack_require__(549);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -747,7 +747,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 541:
+/***/ 548:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -759,7 +759,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 542:
+/***/ 549:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -773,7 +773,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 733:
+/***/ 755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1456,7 +1456,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(541)
+  var style0 = __webpack_require__(548)
 if (style0.__inject__) style0.__inject__(context)
 
 }

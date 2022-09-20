@@ -1,7 +1,7 @@
 exports.ids = [42];
 exports.modules = {
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15,7 +15,7 @@ if (!vue__WEBPACK_IMPORTED_MODULE_0___default.a.moment) {
 
 /***/ }),
 
-/***/ 751:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -397,7 +397,7 @@ var utils = __webpack_require__(2);
 var external_d3_ = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard/v2.vue?vue&type=script&lang=js&
 

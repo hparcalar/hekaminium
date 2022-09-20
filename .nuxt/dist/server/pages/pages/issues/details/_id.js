@@ -120,18 +120,11 @@ module.exports = __webpack_require__.p + "img/avatar_09_sm@2x.e046f9a.png";
 
 /***/ }),
 
-/***/ 181:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
-
-/***/ }),
-
-/***/ 186:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./avatar_01.png": 181,
+	"./avatar_01.png": 186,
 	"./avatar_010.png": 187,
 	"./avatar_010@2x.png": 188,
 	"./avatar_010_lg.png": 189,
@@ -231,7 +224,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 186;
+webpackContext.id = 185;
+
+/***/ }),
+
+/***/ 186:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
 
 /***/ }),
 
@@ -692,7 +692,7 @@ var staticRenderFns = [];
   },
   computed: {
     'avatarSrc'() {
-      return __webpack_require__(186)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
+      return __webpack_require__(185)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
     },
 
     'wrapperClass'() {
@@ -729,7 +729,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 779:
+/***/ 801:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

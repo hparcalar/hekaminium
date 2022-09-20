@@ -91,7 +91,7 @@
 													<label>Proje Adedi</label>
 												</ScInput>
 											</div>
-											<div>
+											<div v-if="hasViewAuth('ProjectManagement')">
 												<client-only>
 													<Select2
 														v-model="formData.projectStatus"
@@ -106,7 +106,7 @@
 								<li>
 									<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
 										<div class="uk-grid" data-uk-grid>
-											<div class="uk-width-1-4">
+											<div class="uk-width-1-4@l">
 												<ul class="uk-tab-left" data-uk-tab="connect: .sc-switcher-left">
 													<li class="uk-active">
 														<a href="javascript:void(0)">
@@ -135,7 +135,7 @@
 													</li>
 												</ul>
 											</div>
-											<div class="uk-width-3-4"> 
+											<div class="uk-width-3-4@l"> 
 												<ul class="uk-switcher sc-switcher-left">
 													<!-- COST ITEM LIST CONTENT -->
 													<li class="uk-active">

@@ -7,7 +7,7 @@ exports.modules = {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(551);
+var content = __webpack_require__(558);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -19,13 +19,13 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 548:
+/***/ 555:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(549);
+var content = __webpack_require__(556);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -33,7 +33,7 @@ __webpack_require__(7).default("1a9ff9fe", content, true)
 
 /***/ }),
 
-/***/ 549:
+/***/ 556:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -47,7 +47,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 550:
+/***/ 557:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59,7 +59,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 551:
+/***/ 558:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -73,7 +73,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 742:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -241,7 +241,7 @@ var external_vue_swipe_actions_ = __webpack_require__(113);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/components/swipe_list.vue?vue&type=script&lang=js&
 
 
-__webpack_require__(548);
+__webpack_require__(555);
 
 /* harmony default export */ var swipe_listvue_type_script_lang_js_ = ({
   name: 'ComponentsSwipeList',
@@ -333,7 +333,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(550)
+  var style0 = __webpack_require__(557)
 if (style0.__inject__) style0.__inject__(context)
 
 }

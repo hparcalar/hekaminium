@@ -205,7 +205,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 183:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -217,7 +217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var hljs = __webpack_require__(101);
 
-__webpack_require__(184);
+__webpack_require__(183);
 
 hljs.registerLanguage('xml', __webpack_require__(102));
 hljs.registerLanguage('sql', __webpack_require__(103));
@@ -261,13 +261,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive('highlightjs', {
 
 /***/ }),
 
-/***/ 184:
+/***/ 183:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(185);
+var content = __webpack_require__(184);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -275,7 +275,7 @@ __webpack_require__(7).default("0efaf680", content, true)
 
 /***/ }),
 
-/***/ 185:
+/***/ 184:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -289,14 +289,14 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 539:
+/***/ 546:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"name\":\"500px\"},{\"name\":\"album\"},{\"name\":\"arrow-down\"},{\"name\":\"arrow-left\"},{\"name\":\"arrow-right\"},{\"name\":\"arrow-up\"},{\"name\":\"ban\"},{\"name\":\"behance\"},{\"name\":\"bell\"},{\"name\":\"bold\"},{\"name\":\"bolt\"},{\"name\":\"bookmark\"},{\"name\":\"calendar\"},{\"name\":\"camera\"},{\"name\":\"cart\"},{\"name\":\"check\"},{\"name\":\"chevron-double-left\"},{\"name\":\"chevron-double-right\"},{\"name\":\"chevron-down\"},{\"name\":\"chevron-left\"},{\"name\":\"chevron-right\"},{\"name\":\"chevron-up\"},{\"name\":\"clock\"},{\"name\":\"close\"},{\"name\":\"cloud-download\"},{\"name\":\"cloud-upload\"},{\"name\":\"code\"},{\"name\":\"cog\"},{\"name\":\"comment\"},{\"name\":\"commenting\"},{\"name\":\"comments\"},{\"name\":\"copy\"},{\"name\":\"credit-card\"},{\"name\":\"database\"},{\"name\":\"desktop\"},{\"name\":\"download\"},{\"name\":\"dribbble\"},{\"name\":\"expand\"},{\"name\":\"facebook\"},{\"name\":\"file\"},{\"name\":\"file-edit\"},{\"name\":\"file-pdf\"},{\"name\":\"file-text\"},{\"name\":\"flickr\"},{\"name\":\"folder\"},{\"name\":\"forward\"},{\"name\":\"foursquare\"},{\"name\":\"future\"},{\"name\":\"git-branch\"},{\"name\":\"git-fork\"},{\"name\":\"github\"},{\"name\":\"github-alt\"},{\"name\":\"gitter\"},{\"name\":\"google\"},{\"name\":\"google-plus\"},{\"name\":\"grid\"},{\"name\":\"happy\"},{\"name\":\"hashtag\"},{\"name\":\"heart\"},{\"name\":\"history\"},{\"name\":\"home\"},{\"name\":\"image\"},{\"name\":\"info\"},{\"name\":\"instagram\"},{\"name\":\"italic\"},{\"name\":\"joomla\"},{\"name\":\"laptop\"},{\"name\":\"lifesaver\"},{\"name\":\"link\"},{\"name\":\"linkedin\"},{\"name\":\"list\"},{\"name\":\"location\"},{\"name\":\"lock\"},{\"name\":\"mail\"},{\"name\":\"menu\"},{\"name\":\"microphone\"},{\"name\":\"minus\"},{\"name\":\"minus-circle\"},{\"name\":\"more\"},{\"name\":\"more-vertical\"},{\"name\":\"move\"},{\"name\":\"nut\"},{\"name\":\"pagekit\"},{\"name\":\"paint-bucket\"},{\"name\":\"pencil\"},{\"name\":\"phone\"},{\"name\":\"phone-landscape\"},{\"name\":\"pinterest\"},{\"name\":\"play\"},{\"name\":\"play-circle\"},{\"name\":\"plus\"},{\"name\":\"plus-circle\"},{\"name\":\"print\"},{\"name\":\"pull\"},{\"name\":\"push\"},{\"name\":\"question\"},{\"name\":\"quote-right\"},{\"name\":\"receiver\"},{\"name\":\"reddit\"},{\"name\":\"refresh\"},{\"name\":\"reply\"},{\"name\":\"rss\"},{\"name\":\"search\"},{\"name\":\"server\"},{\"name\":\"settings\"},{\"name\":\"shrink\"},{\"name\":\"sign-in\"},{\"name\":\"sign-out\"},{\"name\":\"social\"},{\"name\":\"soundcloud\"},{\"name\":\"star\"},{\"name\":\"strikethrough\"},{\"name\":\"table\"},{\"name\":\"tablet\"},{\"name\":\"tablet-landscape\"},{\"name\":\"tag\"},{\"name\":\"thumbnails\"},{\"name\":\"trash\"},{\"name\":\"triangle-down\"},{\"name\":\"triangle-left\"},{\"name\":\"triangle-right\"},{\"name\":\"triangle-up\"},{\"name\":\"tripadvisor\"},{\"name\":\"tumblr\"},{\"name\":\"tv\"},{\"name\":\"twitter\"},{\"name\":\"uikit\"},{\"name\":\"unlock\"},{\"name\":\"upload\"},{\"name\":\"user\"},{\"name\":\"users\"},{\"name\":\"video-camera\"},{\"name\":\"vimeo\"},{\"name\":\"warning\"},{\"name\":\"whatsapp\"},{\"name\":\"wordpress\"},{\"name\":\"world\"},{\"name\":\"xing\"},{\"name\":\"yelp\"},{\"name\":\"youtube\"}]");
 
 /***/ }),
 
-/***/ 540:
+/***/ 547:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5110,7 +5110,7 @@ Object.keys(_mdIcons).forEach(function (key) {
 
 /***/ }),
 
-/***/ 732:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5397,7 +5397,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./pages/components/icons.vue?vue&type=template&id=b03aef66&
 
 // EXTERNAL MODULE: ./data/pages/uikit-icons.json
-var uikit_icons = __webpack_require__(539);
+var uikit_icons = __webpack_require__(546);
 
 // EXTERNAL MODULE: ./components/Input.vue + 4 modules
 var Input = __webpack_require__(122);
@@ -5408,7 +5408,7 @@ var Input = __webpack_require__(122);
 
 var ClipboardJS = __webpack_require__(111);
 
-__webpack_require__(183);
+__webpack_require__(182);
 
 /* harmony default export */ var iconsvue_type_script_lang_js_ = ({
   name: 'ComponentsIcons',
@@ -5453,7 +5453,7 @@ __webpack_require__(183);
   },
 
   async asyncData() {
-    let data = __webpack_require__(540).default;
+    let data = __webpack_require__(547).default;
 
     return {
       mdIcons: data

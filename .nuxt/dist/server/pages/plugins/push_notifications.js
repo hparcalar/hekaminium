@@ -8,7 +8,7 @@ module.exports = __webpack_require__.p + "img/avatar_05_md@2x.e8b8026.png";
 
 /***/ }),
 
-/***/ 800:
+/***/ 822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

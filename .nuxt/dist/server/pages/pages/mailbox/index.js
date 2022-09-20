@@ -1,7 +1,7 @@
 exports.ids = [106];
 exports.modules = {
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21,7 +21,7 @@ if (!vue__WEBPACK_IMPORTED_MODULE_0___default.a.moment) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(589);
+var content = __webpack_require__(596);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -33,7 +33,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 588:
+/***/ 595:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 589:
+/***/ 596:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -59,7 +59,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 782:
+/***/ 804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -191,7 +191,7 @@ var check_ = __webpack_require__(96);
 var check_default = /*#__PURE__*/__webpack_require__.n(check_);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/pages/mailbox/index.vue?vue&type=script&lang=js&
 
@@ -279,7 +279,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(588)
+  var style0 = __webpack_require__(595)
 if (style0.__inject__) style0.__inject__(context)
 
 }

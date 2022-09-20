@@ -76,30 +76,19 @@ export default {
 				{ data: "receiptNo", title: "Sipariş No", visible: true, },
                 { data: "firmName", title: "Firma", visible: true, },
                 { data: "explanation", title: "Açıklama", visible: true, },
+				{ data: "isContracted", title: "Türü", visible: true, render: function(data){ return data ? 'Fason' : '-'; } },
                 { data: "statusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
-				"stateSave": true,
-				stateSaveCallback (settings, data) {
-					localStorage.setItem( 'purchaseOrderListTableView', JSON.stringify(data) )
-				},
-				stateLoadCallback (settings) {
-					const dtState = JSON.parse( localStorage.getItem( 'purchaseOrderListTableView' ) );
-					return dtState;
+				"stateSave": false,
+				rowCallback: function(row, data, index) {
+					if (data.isContracted == true) {
+						$('td',row).addClass("bg-warning");
+					}
 				},
 				buttons: [
-					// {
-					// 	extend: "copyHtml5",
-					// 	className: "sc-button",
-					// 	text: 'Kopyala'
-					// },
-					// {
-					// 	extend: "csvHtml5",
-					// 	className: "sc-button",
-					// 	text: 'CSV '
-					// },
 					{
 						extend: "excelHtml5",
 						className: "sc-button",
@@ -132,11 +121,11 @@ export default {
             };
         });
 
-		if (this.$refs.buttonsTable){
-			// this.$refs.buttonsTable.$dt.state().clear()
-			// console.log(this.$refs.buttonsTable);
-			// console.log(this.$refs.buttonsTable.$dt.state().clear());
-		}
+		// if (this.$refs.buttonsTable){
+		// 	this.$refs.buttonsTable.$dt.state().clear()
+		// 	console.log(this.$refs.buttonsTable);
+		// 	console.log(this.$refs.buttonsTable.$dt.state().clear());
+		// }
 		
     },
     methods: {
@@ -144,14 +133,14 @@ export default {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
 
-            const ls = JSON.parse( localStorage.getItem( 'purchaseOrderListTableView' ) );
-			this.$refs.buttonsTable.headers.forEach( (value, i) => {
-				this.dtDHeaders.push({
-					'name': value,
-					checked: ls.columns[i].visible,
-					disabled: i === 0
-				})
-			});
+            // const ls = JSON.parse( localStorage.getItem( 'purchaseOrderListTableView' ) );
+			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
+			// 	this.dtDHeaders.push({
+			// 		'name': value,
+			// 		checked: ls.columns[i].visible,
+			// 		disabled: i === 0
+			// 	})
+			// });
 		},
 		toggleCol (e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);
@@ -171,4 +160,9 @@ export default {
 	@import "~scss/common/variables_mixins";
 	@import "~scss/plugins/datatables";
 	@import '~scss/vue/_pretty_checkboxes';
+</style>
+<style type="text/css">
+.bg-warning{
+	background-color: #ebd810;
+}
 </style>

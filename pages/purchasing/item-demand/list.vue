@@ -76,30 +76,19 @@ export default {
 				{ data: "receiptNo", title: "Talep No", visible: true, },
                 { data: "projectName", title: "Proje", visible: true, },
                 { data: "explanation", title: "Açıklama", visible: true, },
+				{ data: "isContracted", title: "Türü", visible: true, render: function(data, ev, row){ return row && row.isContracted ? 'Fason' : '-'; } },
                 { data: "statusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
-				"stateSave": true,
-				stateSaveCallback (settings, data) {
-					localStorage.setItem( 'demandListTableView', JSON.stringify(data) )
-				},
-				stateLoadCallback (settings) {
-					const dtState = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
-					return dtState;
+				"stateSave": false,
+				rowCallback: function(row, data, index) {
+					if (data.isContracted == true) {
+						$('td',row).addClass("bg-warning");
+					}
 				},
 				buttons: [
-					// {
-					// 	extend: "copyHtml5",
-					// 	className: "sc-button",
-					// 	text: 'Kopyala'
-					// },
-					// {
-					// 	extend: "csvHtml5",
-					// 	className: "sc-button",
-					// 	text: 'CSV '
-					// },
 					{
 						extend: "excelHtml5",
 						className: "sc-button",
@@ -171,4 +160,9 @@ export default {
 	@import "~scss/common/variables_mixins";
 	@import "~scss/plugins/datatables";
 	@import '~scss/vue/_pretty_checkboxes';
+</style>
+<style type="text/css">
+.bg-warning{
+	background-color: #ebd810;
+}
 </style>

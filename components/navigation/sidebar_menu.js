@@ -38,7 +38,7 @@ export const menuEntries = [
 				id: uniqueID(),
 				icon: "mdi mdi-receipt",
 				title: "İrsaliye",
-				page: "/purchasing/receipt"
+				page: "/purchasing/item-receipt/list"
 			},
 			{
 				id: uniqueID(),
@@ -70,6 +70,15 @@ export const menuEntries = [
 				icon: "mdi mdi-bookmark-outline",
 				title: "Güncel Durum Analizi",
 				page: "/project/live-analysis"
+			},
+			{
+				id: uniqueID(),
+				title: "Bekleyen Siparişler",
+				icon: "mdi mdi-clock",
+				page: "/purchasing/item-order/waiting-for-approve",
+				visible: function(){
+					return checkAuth('ItemOrderApproval');
+				},
 			},
 		]
 	},

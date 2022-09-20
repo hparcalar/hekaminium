@@ -117,6 +117,7 @@ const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vu
 const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
 const _15dc5bce = () => interopDefault(import('../pages/purchasing/item-demand/index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
 const _17166816 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
+const _70321f40 = () => interopDefault(import('../pages/purchasing/item-receipt/index.vue' /* webpackChunkName: "pages/purchasing/item-receipt/index" */))
 const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
 const _05b44c6a = () => interopDefault(import('../pages/user/role/index.vue' /* webpackChunkName: "pages/user/role/index" */))
 const _7c604f68 = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
@@ -146,6 +147,8 @@ const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue'
 const _0279fab2 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
 const _023c6e50 = () => interopDefault(import('../pages/purchasing/item-demand/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
 const _b5f58dec = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
+const _601f74e6 = () => interopDefault(import('../pages/purchasing/item-order/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-order/waiting-for-approve" */))
+const _d13e16c0 = () => interopDefault(import('../pages/purchasing/item-receipt/list.vue' /* webpackChunkName: "pages/purchasing/item-receipt/list" */))
 const _7adfb191 = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
 const _41163cb5 = () => interopDefault(import('../pages/user/role/list.vue' /* webpackChunkName: "pages/user/role/list" */))
 const _311db640 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -617,6 +620,10 @@ export const routerOptions = {
     component: _17166816,
     name: "purchasing-item-order"
   }, {
+    path: "/purchasing/item-receipt",
+    component: _70321f40,
+    name: "purchasing-item-receipt"
+  }, {
     path: "/user/member",
     component: _06e9ff22,
     name: "user-member"
@@ -732,6 +739,14 @@ export const routerOptions = {
     path: "/purchasing/item-order/list",
     component: _b5f58dec,
     name: "purchasing-item-order-list"
+  }, {
+    path: "/purchasing/item-order/waiting-for-approve",
+    component: _601f74e6,
+    name: "purchasing-item-order-waiting-for-approve"
+  }, {
+    path: "/purchasing/item-receipt/list",
+    component: _d13e16c0,
+    name: "purchasing-item-receipt-list"
   }, {
     path: "/user/member/list",
     component: _7adfb191,

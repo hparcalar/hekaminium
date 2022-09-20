@@ -212,7 +212,7 @@ if (false) {}
 
 /***/ }),
 
-/***/ 183:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -224,7 +224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var hljs = __webpack_require__(101);
 
-__webpack_require__(184);
+__webpack_require__(183);
 
 hljs.registerLanguage('xml', __webpack_require__(102));
 hljs.registerLanguage('sql', __webpack_require__(103));
@@ -268,13 +268,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive('highlightjs', {
 
 /***/ }),
 
-/***/ 184:
+/***/ 183:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(185);
+var content = __webpack_require__(184);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -282,7 +282,7 @@ __webpack_require__(7).default("0efaf680", content, true)
 
 /***/ }),
 
-/***/ 185:
+/***/ 184:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -302,7 +302,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(639);
+var content = __webpack_require__(647);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -314,13 +314,13 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 636:
+/***/ 644:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(637);
+var content = __webpack_require__(645);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -328,7 +328,7 @@ __webpack_require__(7).default("1fa694fa", content, true)
 
 /***/ }),
 
-/***/ 637:
+/***/ 645:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -342,7 +342,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 638:
+/***/ 646:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -354,7 +354,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 639:
+/***/ 647:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -368,7 +368,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 801:
+/***/ 823:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -633,9 +633,9 @@ var Input = __webpack_require__(122);
 
 __webpack_require__(124);
 
-__webpack_require__(183);
+__webpack_require__(182);
 
-__webpack_require__(636);
+__webpack_require__(644);
 
 /* harmony default export */ var tourvue_type_script_lang_js_ = ({
   name: 'PluginsTour',
@@ -810,7 +810,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(638)
+  var style0 = __webpack_require__(646)
 if (style0.__inject__) style0.__inject__(context)
 
 }

@@ -205,7 +205,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -219,7 +219,7 @@ if (!vue__WEBPACK_IMPORTED_MODULE_0___default.a.moment) {
 
 /***/ }),
 
-/***/ 814:
+/***/ 837:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -461,7 +461,7 @@ var confirmDate_ = __webpack_require__(108);
 var confirmDate_default = /*#__PURE__*/__webpack_require__.n(confirmDate_);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // EXTERNAL MODULE: external "flatpickr/dist/l10n/fr.js"
 var fr_js_ = __webpack_require__(120);

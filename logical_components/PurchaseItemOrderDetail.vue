@@ -19,6 +19,11 @@
                             </client-only>
                         </div>
                         <div>
+                            <ScInput v-model="formData.itemExplanation">
+                                <label>Kalem Açıklama</label>
+                            </ScInput>
+                        </div>
+                        <div>
                             <ScInput v-model="formData.partNo">
                                 <label>Parça Kodu</label>
                             </ScInput>
@@ -28,7 +33,29 @@
                                 <label>Boyutlar</label>
                             </ScInput>
                         </div>
-                        <div>
+                        <div v-if="formData.demandConsumes && formData.demandConsumes.length > 0">
+                            <button type="button" @click="showRelatedDemandDetails" class="sc-button sc-button-primary uk-margin-medium" style="height:34px;margin-top:15px;">
+                                <span :data-uk-icon="'icon: list'" class="uk-icon"></span> Talep Kalemleri
+                            </button>
+                            <div v-if="demandsExpanded" class="uk-overflow-auto" style="max-height:250px;">
+                                <div v-for="(demand, demandIndex) in formData.demandConsumes" 
+                                :key="demandIndex" style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;"
+                                class="uk-grid">
+                                    <div class="uk-width-4-5@m">
+                                        <p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}</p>
+                                        <p class="uk-padding-remove uk-margin-remove"><b>Açıklama:</b> {{ demand.itemExplanation }}</p>
+                                        <p class="uk-padding-remove uk-margin-remove"><b>Parça No:</b> {{ demand.partNo }}, <b>Boyut:</b> {{ demand.partDimensions }}, <b>Miktar:</b> {{ demand.demandQuantity }}</p>
+                                    </div>
+                                    <div class="uk-width-1-5@m">
+                                        <button type="button" @click="removeDemandDetail(demand)" 
+                                        class="sc-button sc-button-danger sc-button-small uk-margin-medium-top uk-margin-small-right">
+                                            <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-else>
                             <client-only>
                                 <Select2
                                     v-model="formData.projectId"
@@ -100,6 +127,7 @@
                                 <Select2
                                     v-model="formData.receiptStatus"
                                     :options="statusList"
+                                    @change="receiptStatusChanged"
                                     :settings="{ 'width': '100%', 'placeholder': 'Durum', 'allowClear': true }"
                                 ></Select2>
                             </client-only>
@@ -142,6 +170,10 @@ export default {
             type: Number,
             default: 0,
         },
+        isContracted: {
+            type: Boolean,
+            default: false,
+        },
         isDialog: {
             type: Boolean,
             default: false,
@@ -181,17 +213,22 @@ export default {
             overallLocal: 0,
             partNo: '',
             partDimensions: '',
+            itemExplanation: '',
+            demandConsumes: [],
             newDetail: true,
 		},
         itemList: [],
         forexList: [],
         projectList: [],
+        demandsExpanded: false,
         statusList: [
             { id:0, text: 'Oluşturuldu' },
             { id:1, text: 'Onaylandı' },
-            { id:2, text: 'Tamamlandı' },
-            { id:3, text: 'İptal edildi' },
+            { id:2, text: 'İletildi' },
+            { id:3, text: 'Tamamlandı' },
+            { id:4, text: 'İptal edildi' },
         ],
+        currentReceiptStatus: 0,
 	}),
     computed: {
         fUnitPrice:{
@@ -265,6 +302,7 @@ export default {
                     overallTotal: 0,
                     partNo: '',
                     partDimensions: '',
+                    demandConsumes: [],
                     newDetail: true,
                 };
             }
@@ -319,15 +357,17 @@ export default {
             }
 
             this.calculateTotal();
+
+            this.currentReceiptStatus = this.formData.receiptStatus;
         },
 		onSubmit(){
             const self = this;
 
-            if (!this.formData.itemId)
-            {
-                this.showNotification('Bir stok seçmelisiniz.', false, 'error');
-                return;
-            }
+            // if (!this.formData.itemId && (!this.isContracted || (!this.demandConsumes || this.demandConsumes.length == 0)))
+            // {
+            //     this.showNotification('Bir stok seçmelisiniz.', false, 'error');
+            //     return;
+            // }
 
             if (!this.formData.quantity || this.formData.quantity <= 0){
                 this.showNotification('Miktar 0 dan büyük olmalıdır.', false, 'error');
@@ -338,6 +378,8 @@ export default {
             const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
             if (selectedItem)
                 this.formData.itemName = selectedItem.text;
+            else
+                this.formData.itemName = this.formData.itemExplanation;
 
             const selectedForex = this.forexList.find(d => d.id == this.formData.forexId);
             if (selectedForex)
@@ -415,6 +457,39 @@ export default {
                 }
             } catch (error) {
                 this.formData.forexRate = null;
+            }
+        },
+        showRelatedDemandDetails(){
+            this.demandsExpanded = !this.demandsExpanded;
+        },
+        removeDemandDetail(demand){
+            try {
+                const dIndex = this.demandConsumes.indexOf(demand);
+                if (dIndex > -1){
+                    this.demandConsumes.splice(dIndex, 1);
+                }
+            } catch (error) {
+                
+            }
+        },
+        receiptStatusChanged(val){
+            if (!this.currentReceiptStatus)
+                this.currentReceiptStatus = 0;
+
+            if (val == 1 && (this.currentReceiptStatus != 1)){
+                this.showNotification('Sipariş onay yetkiniz bulunmamaktadır.', false, 'error');
+                const self = this;
+                this.formData.receiptStatus = this.currentReceiptStatus;
+                // setTimeout(function() { self.formData.receiptStatus = self.currentReceiptStatus; }, 750);
+            }
+            else if (val == 2 && (this.currentReceiptStatus == 0 || this.currentReceiptStatus == 4)){
+                this.showNotification('Sipariş onaylanmadan ilerlenemez.', false, 'error');
+                const self = this;                
+                this.formData.receiptStatus = this.currentReceiptStatus;
+                // setTimeout(function() { self.formData.receiptStatus = self.currentReceiptStatus; }, 750);
+            }
+            else{
+                this.currentReceiptStatus = val;
             }
         }
 	},

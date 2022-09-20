@@ -1,7 +1,7 @@
 {
   "entry": "server.js",
   "files": {
-    "148.js": "148.js",
+    "151.js": "151.js",
     "lang-es-ES.js.js": "lang-es-ES.js.js",
     "lang-fr-FR.js.js": "lang-fr-FR.js.js",
     "pages/account_auth.js": "pages/account_auth.js",
@@ -143,6 +143,9 @@
     "pages/purchasing/item-demand/waiting-for-approve.js": "pages/purchasing/item-demand/waiting-for-approve.js",
     "pages/purchasing/item-order/index.js": "pages/purchasing/item-order/index.js",
     "pages/purchasing/item-order/list.js": "pages/purchasing/item-order/list.js",
+    "pages/purchasing/item-order/waiting-for-approve.js": "pages/purchasing/item-order/waiting-for-approve.js",
+    "pages/purchasing/item-receipt/index.js": "pages/purchasing/item-receipt/index.js",
+    "pages/purchasing/item-receipt/list.js": "pages/purchasing/item-receipt/list.js",
     "pages/user/member/index.js": "pages/user/member/index.js",
     "pages/user/member/list.js": "pages/user/member/list.js",
     "pages/user/role/index.js": "pages/user/role/index.js",
@@ -152,7 +155,7 @@
     "server.js": "server.js"
   },
   "maps": {
-    "148.js": "148.js.map",
+    "151.js": "151.js.map",
     "lang-es-ES.js.js": "lang-es-ES.js.js.map",
     "lang-fr-FR.js.js": "lang-fr-FR.js.js.map",
     "pages/account_auth.js": "pages/account_auth.js.map",
@@ -294,6 +297,9 @@
     "pages/purchasing/item-demand/waiting-for-approve.js": "pages/purchasing/item-demand/waiting-for-approve.js.map",
     "pages/purchasing/item-order/index.js": "pages/purchasing/item-order/index.js.map",
     "pages/purchasing/item-order/list.js": "pages/purchasing/item-order/list.js.map",
+    "pages/purchasing/item-order/waiting-for-approve.js": "pages/purchasing/item-order/waiting-for-approve.js.map",
+    "pages/purchasing/item-receipt/index.js": "pages/purchasing/item-receipt/index.js.map",
+    "pages/purchasing/item-receipt/list.js": "pages/purchasing/item-receipt/list.js.map",
     "pages/user/member/index.js": "pages/user/member/index.js.map",
     "pages/user/member/list.js": "pages/user/member/list.js.map",
     "pages/user/role/index.js": "pages/user/role/index.js.map",

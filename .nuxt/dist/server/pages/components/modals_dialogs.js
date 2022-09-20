@@ -8,14 +8,14 @@ module.exports = __webpack_require__.p + "img/ray-hennessy-763310-unsplash.cdff1
 
 /***/ }),
 
-/***/ 182:
+/***/ 181:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/briana-tozour-756151-unsplash.f4508bb.jpg";
 
 /***/ }),
 
-/***/ 735:
+/***/ 757:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -531,7 +531,7 @@ var staticRenderFns = [];
   }),
   computed: {
     bgImage() {
-      return __webpack_require__(182);
+      return __webpack_require__(181);
     },
 
     modalImage() {

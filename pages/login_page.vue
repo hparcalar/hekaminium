@@ -11,13 +11,13 @@
 					</div>
 					<div id="sc-login-form" class="sc-toggle-login-register sc-toggle-login-password">
 						<div class="sc-login-page-inner">
-							<div class="uk-margin-medium">
+							<!-- <div class="uk-margin-medium">
 								<ScInput v-model="loginData.plantCode">
 									<label>
 										İşletme Kodu
 									</label>
 								</ScInput>
-							</div>
+							</div> -->
 							<div class="uk-margin-medium">
 								<ScInput v-model="loginData.login">
 									<label>
@@ -94,7 +94,7 @@ export default {
 		loginData: {
 			login: '',
 			password: '',
-			plantCode: '',
+			plantCode: 'Butan',
 		},
 		registerData: {
 			name: '',
@@ -118,6 +118,7 @@ export default {
 	},
 	methods: {
 		async tryLogin(){
+			const self = this;
 			try {
 				const api = useApi();
 				const postResult = await api.post('User/LoginSysUser', {
@@ -140,9 +141,22 @@ export default {
 					};
 					window.location.href = '/';
 				}
+				else
+					self.showNotification('Hatalı giriş', false, 'error');
 			} catch (error) {
-				console.error(error);
+				self.showNotification('Hatalı giriş', false, 'error');
 			}
+		},
+		showNotification (text, pos, status, persistent) {
+			var config = {};
+			config.timeout = persistent ? !persistent : 3000;
+			if(status) {
+				config.status = status;
+			}
+			if(pos) {
+				config.pos = pos;
+			}
+			UIkit.notification(text, config);
 		}
 	}
 }

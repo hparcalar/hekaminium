@@ -212,14 +212,14 @@ module.exports = __webpack_require__.p + "img/login-logo.addd90a.png";
 
 /***/ }),
 
-/***/ 709:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/login_page.vue?vue&type=template&id=ae16877a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/login_page.vue?vue&type=template&id=31da9b5a&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -263,16 +263,6 @@ var render = function render() {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
     model: {
-      value: _vm.loginData.plantCode,
-      callback: function ($$v) {
-        _vm.$set(_vm.loginData, "plantCode", $$v);
-      },
-      expression: "loginData.plantCode"
-    }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tİşletme Kodu\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
-    staticClass: "uk-margin-medium"
-  }, [_c('ScInput', {
-    model: {
       value: _vm.loginData.login,
       callback: function ($$v) {
         _vm.$set(_vm.loginData, "login", $$v);
@@ -311,7 +301,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/login_page.vue?vue&type=template&id=ae16877a&
+// CONCATENATED MODULE: ./pages/login_page.vue?vue&type=template&id=31da9b5a&
 
 // EXTERNAL MODULE: ./components/Input.vue + 4 modules
 var Input = __webpack_require__(122);
@@ -336,7 +326,7 @@ var composable_userSession = __webpack_require__(8);
     loginData: {
       login: '',
       password: '',
-      plantCode: ''
+      plantCode: 'Butan'
     },
     registerData: {
       name: '',
@@ -364,6 +354,8 @@ var composable_userSession = __webpack_require__(8);
   },
   methods: {
     async tryLogin() {
+      const self = this;
+
       try {
         const api = Object(useApi["a" /* useApi */])();
         const postResult = await api.post('User/LoginSysUser', {
@@ -384,10 +376,25 @@ var composable_userSession = __webpack_require__(8);
             sections: postResult.data.AdditionalData ? JSON.parse(postResult.data.AdditionalData).Sections : []
           };
           window.location.href = '/';
-        }
+        } else self.showNotification('Hatalı giriş', false, 'error');
       } catch (error) {
-        console.error(error);
+        self.showNotification('Hatalı giriş', false, 'error');
       }
+    },
+
+    showNotification(text, pos, status, persistent) {
+      var config = {};
+      config.timeout = persistent ? !persistent : 3000;
+
+      if (status) {
+        config.status = status;
+      }
+
+      if (pos) {
+        config.pos = pos;
+      }
+
+      UIkit.notification(text, config);
     }
 
   }

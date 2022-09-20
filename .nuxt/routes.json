@@ -799,6 +799,13 @@
     "_name": "_17166816"
   },
   {
+    "name": "purchasing-item-receipt",
+    "path": "/purchasing/item-receipt",
+    "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-receipt/index.vue",
+    "chunkName": "pages/purchasing/item-receipt/index",
+    "_name": "_70321f40"
+  },
+  {
     "name": "user-member",
     "path": "/user/member",
     "component": "/home/hakan/Projects/HekaMinium/pages/user/member/index.vue",
@@ -1000,6 +1007,20 @@
     "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-order/list.vue",
     "chunkName": "pages/purchasing/item-order/list",
     "_name": "_b5f58dec"
+  },
+  {
+    "name": "purchasing-item-order-waiting-for-approve",
+    "path": "/purchasing/item-order/waiting-for-approve",
+    "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-order/waiting-for-approve.vue",
+    "chunkName": "pages/purchasing/item-order/waiting-for-approve",
+    "_name": "_601f74e6"
+  },
+  {
+    "name": "purchasing-item-receipt-list",
+    "path": "/purchasing/item-receipt/list",
+    "component": "/home/hakan/Projects/HekaMinium/pages/purchasing/item-receipt/list.vue",
+    "chunkName": "pages/purchasing/item-receipt/list",
+    "_name": "_d13e16c0"
   },
   {
     "name": "user-member-list",

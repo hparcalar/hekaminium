@@ -14,23 +14,31 @@
                     <!-- <legend class="uk-legend">
                         Talep Bilgileri
                     </legend> -->
-                    <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
-                        <div>
+                    <div class="uk-child-width-1-3@m uk-grid" data-uk-grid>
+                        <div class="uk-width-1-3@m">
                             <ScInput v-model="formData.receiptNo" :read-only="true">
                                 <label>Talep No</label>
                             </ScInput>
                         </div>
-                        <div>
-                            <client-only v-show="isDialog == false">
-                                <Select2
-                                    v-model="formData.projectId"
-                                    :options="projects"
-                                    :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
-                                ></Select2>
-                            </client-only>
-                            <ScInput v-show="isDialog == true" :value="currentProjectName" :read-only="true">
-                                <label>Proje</label>
-                            </ScInput>
+                        <div class="uk-width-2-3@m uk-child-width-1-2@m uk-grid">
+                            <div>
+                                <client-only v-show="isDialog == false">
+                                    <Select2
+                                        v-model="formData.projectId"
+                                        :options="projects"
+                                        :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
+                                    ></Select2>
+                                </client-only>
+                                <ScInput v-show="isDialog == true" :value="currentProjectName" :read-only="true">
+                                    <label>Proje</label>
+                                </ScInput>
+                            </div>
+                            <div>
+                                <PrettyCheck name="isActive" v-model="formData.isContracted" :value="true" class="p-icon">
+                                    <i slot="extra" class="icon mdi mdi-check"></i>
+                                    Fason
+                                </PrettyCheck>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
@@ -143,6 +151,7 @@ export default {
 			projectId: null,
             plantId: null,
 			demandStatus: 0,
+            isContracted: false,
 		},
         isMounting: false,
         details: [],
@@ -151,12 +160,20 @@ export default {
 			select: {
                 style: 'single'
             },
+            rowCallback: function(row, data, index) {
+                if (data.demandStatus == 2) {
+                    $('td',row).addClass("bg-light-blue");
+                }
+                else if (data.demandStatus == 3) {
+                    $('td',row).addClass("bg-success");
+                }
+            },
 			searching: false,
 			paging: false,
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
-			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "partNo", title: "Parça Kodu", visible: true, },
             { data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
@@ -221,6 +238,8 @@ export default {
                 if (detailRow.id == 0){
                     detailRow.newDetail = true,
                     detailRow.id = detailRow.lineNumber;
+                    detailRow.partNo = detailRow.partNo ?? '';
+                    detailRow.partDimensions = detailRow.partDimensions ?? '';
                     this.details.push(detailRow);
                     this.showNewDemandDetail();
                 }
@@ -234,6 +253,8 @@ export default {
                         existingDetail.itemExplanation = detailRow.itemExplanation;
                         existingDetail.quantity = detailRow.quantity;
                         existingDetail.demandDate = detailRow.demandDate;
+                        existingDetail.partNo = detailRow.partNo ?? '';
+                        existingDetail.partDimensions = detailRow.partDimensions ?? '';
                         existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
@@ -362,4 +383,12 @@ export default {
 <style lang="scss">
 	@import '~scss/vue/_pretty_checkboxes';
     @import "~scss/plugins/datatables";
+</style>
+<style type="text/css">
+.bg-success{
+    background-color: #11bf48;
+}
+.bg-light-blue{
+    background-color: #70c0e6;
+}
 </style>

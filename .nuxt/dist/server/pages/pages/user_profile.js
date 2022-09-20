@@ -1,12 +1,217 @@
 exports.ids = [113];
-exports.modules = Array(124).concat([
+exports.modules = Array(122).concat([
+/* 122 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=template&id=967aacc8&
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c('div', {
+    staticClass: "sc-input-wrapper",
+    class: {
+      'sc-input-wrapper-outline': _vm.mode === 'outline',
+      'sc-input-wrapper-disabled': _vm.disabled,
+      'sc-input-wrapper-danger': _vm.errorState,
+      'sc-input-wrapper-success': _vm.successState,
+      'sc-input-filled': _vm.value !== '' || _vm.state === 'fixed',
+      'sc-input-focus': _vm.inputFocused
+    }
+  }, [_vm._t("icon"), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" <input" + _vm._ssrAttr("id", _vm.id) + _vm._ssrAttr("name", _vm.name) + _vm._ssrAttr("placeholder", _vm.placeholder) + _vm._ssrAttr("type", _vm.type) + _vm._ssrAttr("disabled", _vm.disabled) + _vm._ssrAttr("readonly", _vm.readOnly) + _vm._ssrAttr("value", _vm.value) + _vm._ssrClass(null, ['uk-input', 'sc-vue-input', _vm.modeClass, _vm.inputErrorClass, _vm.inputSuccessClass, _vm.extraClasses]) + "> <span class=\"sc-input-bar\"" + _vm._ssrStyle(null, null, {
+    display: _vm.mode !== 'outline' ? '' : 'none'
+  }) + "></span> "), _vm._t("help-inline")], 2);
+};
+
+var staticRenderFns = [];
+
+// CONCATENATED MODULE: ./components/Input.vue?vue&type=template&id=967aacc8&
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=script&lang=js&
+/* harmony default export */ var Inputvue_type_script_lang_js_ = ({
+  name: 'ScInput',
+  props: {
+    id: {
+      type: String,
+      default: null
+    },
+    name: {
+      type: String,
+      default: null
+    },
+    type: {
+      type: String,
+      default: 'text'
+    },
+    value: {
+      type: [String, Object, Number],
+      default: ''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    readOnly: {
+      type: Boolean,
+      default: false
+    },
+    mode: {
+      type: String,
+      default: ''
+    },
+    state: {
+      type: String,
+      default: ''
+    },
+    extraClasses: {
+      type: String,
+      default: ''
+    },
+    successState: {
+      type: Boolean,
+      default: false
+    },
+    errorState: {
+      type: Boolean,
+      default: false
+    },
+    placeholder: {
+      type: String,
+      default: null
+    },
+    ukTooltip: {
+      type: Object,
+      default: null
+    },
+    focus: {
+      type: Function,
+      default: null
+    },
+    blur: {
+      type: Function,
+      default: null
+    },
+    change: {
+      type: Function,
+      default: null
+    },
+    keyUp: {
+      type: Function,
+      default: null
+    },
+    validator: {
+      type: Object,
+      default: null
+    }
+  },
+  data: () => ({
+    inputFocused: false
+  }),
+  computed: {
+    modeClass() {
+      return this.$props.mode === 'outline' ? 'sc-input-outline' : '';
+    },
+
+    inputErrorClass() {
+      return this.$props.errorState ? 'uk-form-danger' : '';
+    },
+
+    inputSuccessClass() {
+      return this.$props.successState ? 'uk-form-success' : '';
+    }
+
+  },
+
+  mounted() {
+    var self = this;
+
+    if (self.ukTooltip) {
+      UIkit.tooltip(self.$refs.input, self.ukTooltip);
+    }
+  },
+
+  methods: {
+    inputBlur() {
+      this.inputFocused = false;
+
+      if (this.blur) {
+        this.blur();
+      }
+
+      if (this.validator) {
+        this.validator.$touch();
+      }
+
+      this.$emit('blur');
+    },
+
+    inputFocus() {
+      this.inputFocused = true;
+
+      if (this.focus) {
+        this.focus();
+      }
+
+      this.$emit('focus');
+    },
+
+    inputChange() {
+      if (this.change) {
+        this.change();
+      }
+
+      this.$emit('change');
+    },
+
+    inputKeyUp() {
+      if (this.keyUp) {
+        this.keyUp();
+      }
+
+      this.$emit('keyUp');
+    }
+
+  },
+  watch: {}
+});
+// CONCATENATED MODULE: ./components/Input.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Inputvue_type_script_lang_js_ = (Inputvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(1);
+
+// CONCATENATED MODULE: ./components/Input.vue
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  components_Inputvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  "4fe89bca"
+  
+)
+
+/* harmony default export */ var Input = __webpack_exports__["a"] = (component.exports);
+
+/***/ }),
+/* 123 */,
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 if (false) {}
 
 /***/ }),
-/* 125 */
+/* 125 */,
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +224,6 @@ if (!vue__WEBPACK_IMPORTED_MODULE_0___default.a.moment) {
 }
 
 /***/ }),
-/* 126 */,
 /* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -347,23 +551,17 @@ module.exports = __webpack_require__.p + "img/wynand-van-poortvliet-761831-unspl
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
-
-/***/ }),
-/* 182 */
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = __webpack_require__.p + "img/briana-tozour-756151-unsplash.f4508bb.jpg";
 
 /***/ }),
+/* 182 */,
 /* 183 */,
 /* 184 */,
-/* 185 */,
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./avatar_01.png": 181,
+	"./avatar_01.png": 186,
 	"./avatar_010.png": 187,
 	"./avatar_010@2x.png": 188,
 	"./avatar_010_lg.png": 189,
@@ -463,7 +661,13 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 186;
+webpackContext.id = 185;
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
 
 /***/ }),
 /* 187 */
@@ -866,7 +1070,7 @@ var staticRenderFns = [];
   },
   computed: {
     'avatarSrc'() {
-      return __webpack_require__(186)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
+      return __webpack_require__(185)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
     },
 
     'wrapperClass'() {
@@ -1094,7 +1298,7 @@ var map = {
 	"./avantgarde-concept-763896-unsplash@2x.jpg": 253,
 	"./avantgarde-concept-763896-unsplash_md.jpg": 136,
 	"./avantgarde-concept-763896-unsplash_md@2x.jpg": 152,
-	"./briana-tozour-756151-unsplash.jpg": 182,
+	"./briana-tozour-756151-unsplash.jpg": 181,
 	"./briana-tozour-756151-unsplash@2x.jpg": 254,
 	"./briana-tozour-756151-unsplash_md.jpg": 153,
 	"./briana-tozour-756151-unsplash_md@2x.jpg": 154,
@@ -1528,7 +1732,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive("scSticky", {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(605);
+var content = __webpack_require__(613);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -1659,7 +1863,20 @@ module.exports.__inject__ = function (context) {
 /* 601 */,
 /* 602 */,
 /* 603 */,
-/* 604 */
+/* 604 */,
+/* 605 */,
+/* 606 */,
+/* 607 */,
+/* 608 */,
+/* 609 */,
+/* 610 */,
+/* 611 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_default.d1896e5.png";
+
+/***/ }),
+/* 612 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1670,7 +1887,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /***/ }),
-/* 605 */
+/* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -1683,14 +1900,6 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 
 /***/ }),
-/* 606 */,
-/* 607 */,
-/* 608 */,
-/* 609 */,
-/* 610 */,
-/* 611 */,
-/* 612 */,
-/* 613 */,
 /* 614 */,
 /* 615 */,
 /* 616 */,
@@ -1779,14 +1988,36 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /* 699 */,
 /* 700 */,
 /* 701 */,
-/* 702 */
+/* 702 */,
+/* 703 */,
+/* 704 */,
+/* 705 */,
+/* 706 */,
+/* 707 */,
+/* 708 */,
+/* 709 */,
+/* 710 */,
+/* 711 */,
+/* 712 */,
+/* 713 */,
+/* 714 */,
+/* 715 */,
+/* 716 */,
+/* 717 */,
+/* 718 */,
+/* 719 */,
+/* 720 */,
+/* 721 */,
+/* 722 */,
+/* 723 */,
+/* 724 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/pages/user_profile.vue?vue&type=template&id=2537555b&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/pages/user_profile.vue?vue&type=template&id=18911b36&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -1795,7 +2026,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-center\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-4-5@l\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\">", "</div>", [_c('client-only', [_c('ScCard', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-center\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-5-5@l\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\">", "</div>", [_c('client-only', [_c('ScCard', {
     directives: [{
       name: "sc-sticky",
       rawName: "v-sc-sticky",
@@ -1808,52 +2039,56 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-center uk-margin-bottom"
   }, [_c('ScUploader', {
     attrs: {
-      "image": __webpack_require__(181)
+      "image": __webpack_require__(611)
     }
   })], 1), _vm._v(" "), _c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.name) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-color-secondary uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.company) + "\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.plantCode) + "\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ul', {
     staticClass: "uk-list uk-list-divider"
   }, [_c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
-    staticClass: "sc-list-addon"
-  }, [_c('i', {
-    staticClass: "mdi mdi-email"
-  })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
   }, [_c('div', {
     staticClass: "sc-list-body-inner"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.email) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
-    staticClass: "sc-list-group"
   }, [_c('div', {
-    staticClass: "sc-list-addon"
-  }, [_c('i', {
-    staticClass: "mdi mdi-phone"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.phone) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
-    staticClass: "sc-list-group"
-  }, [_c('div', {
-    staticClass: "sc-list-addon"
-  }, [_c('i', {
-    staticClass: "mdi mdi-office-building"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.company) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
-    staticClass: "sc-list-group"
-  }, [_c('div', {
-    staticClass: "sc-list-addon"
-  }, [_c('i', {
-    staticClass: "mdi mdi-link"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "sc-list-body"
-  }, [_c('a', {
-    staticClass: "sc-link",
+    staticClass: "uk-child-width-1-1@m uk-grid"
+  }, [_c('div', [_c('ScInput', {
     attrs: {
-      "href": _vm.user.www
+      "type": "password"
+    },
+    model: {
+      value: _vm.firstPass,
+      callback: function ($$v) {
+        _vm.firstPass = $$v;
+      },
+      expression: "firstPass"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.user.www) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-expand@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
+  }, [_c('label', [_vm._v("Parola")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+    attrs: {
+      "type": "password"
+    },
+    model: {
+      value: _vm.secondPass,
+      callback: function ($$v) {
+        _vm.secondPass = $$v;
+      },
+      expression: "secondPass"
+    }
+  }, [_c('label', [_vm._v("Tekrar")])])], 1)]), _vm._v(" "), _c('button', {
+    staticClass: "sc-button sc-button-primary sc-button-medium uk-margin-small-top uk-margin-small-right",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": _vm.changePassword
+    }
+  }, [_c('span', {
+    staticClass: "uk-icon",
+    attrs: {
+      "data-uk-icon": "icon: check"
+    }
+  }), _vm._v(" Değiştir\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-expand@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-4@m uk-text-center uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -1869,211 +2104,12 @@ var render = function render() {
     }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(stat.number) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
       staticClass: "sc-color-secondary uk-margin-remove"
     }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(stat.cat) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
-  }), 0), _vm._v(" "), _c('h4', {
-    staticClass: "uk-heading-line uk-margin-large-top"
-  }, [_c('span', [_vm._v("Friends")])]), _vm._v(" "), _c('div', {
-    staticClass: "uk-flex uk-flex-wrap uk-grid-medium uk-grid",
-    attrs: {
-      "data-uk-grid": ""
-    }
-  }, _vm._l(_vm.friends, function (friend) {
-    return _c('div', {
-      key: friend.id
-    }, [_c('a', {
-      attrs: {
-        "href": "javascript:void(0)"
-      }
-    }, [_c('ScAvatar', {
-      attrs: {
-        "avatar-id": friend.avatar,
-        "status": friend.status
-      }
-    })], 1)]);
-  }), 0), _vm._v(" "), _c('h4', {
-    staticClass: "uk-heading-line uk-margin-large-top"
-  }, [_c('span', [_vm._v("Comments")])]), _vm._v(" "), _c('div', {
-    staticClass: "sc-round md-bg-grey-50 sc-padding"
-  }, [_c('ul', {
-    staticClass: "uk-list uk-list-divider uk-margin-bottom sc-list-align"
-  }, _vm._l(_vm.comments, function (comment) {
-    return _c('li', {
-      key: comment.id,
-      staticClass: "sc-list-group"
-    }, [_c('div', {
-      staticClass: "sc-list-body"
-    }, [_c('p', {
-      staticClass: "uk-margin-remove uk-text-small uk-text-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(comment.date) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
-      staticClass: "sc-link uk-text-large uk-text-truncate uk-display-block",
-      attrs: {
-        "href": "javascript:void(0)"
-      }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(comment.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
-      staticClass: "uk-margin-remove uk-text-wrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(comment.content) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
-  }), 0), _vm._v(" "), _c('button', {
-    staticClass: "sc-button sc-button-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tMore comments\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('h4', {
-    staticClass: "uk-heading-line uk-margin-large-top"
-  }, [_c('span', [_vm._v("Timeline")])]), _vm._v(" "), _c('div', {
-    staticClass: "sc-timeline"
-  }, _vm._l(_vm.timeline, function (item) {
-    return _c('div', {
-      key: item.id,
-      staticClass: "sc-timeline-item"
-    }, [_c('div', {
-      staticClass: "sc-timeline-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt1) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.icon !== '',
-        expression: "item.icon !== ''"
-      }],
-      staticClass: "sc-timeline-icon",
-      class: [item.colorAlt1]
-    }, [_c('i', {
-      class: ['mdi', item.icon]
-    })]), _vm._v(" "), _c('div', {
-      class: ['sc-timeline-body', item.extraClass]
-    }, [_c('h4', {
-      staticClass: "sc-timeline-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.category,
-        expression: "item.category"
-      }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tin\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.titleLink !== '',
-        expression: "item.titleLink !== ''"
-      }],
-      attrs: {
-        "href": item.titleLink
-      }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.titleLink === '',
-        expression: "item.titleLink === ''"
-      }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tcategory\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.user,
-        expression: "item.user"
-      }]
-    }, [_c('a', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.user !== '',
-        expression: "item.user !== ''"
-      }],
-      attrs: {
-        "href": item.titleLink
-      }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.titleLink === '',
-        expression: "item.titleLink === ''"
-      }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.tasks.length,
-        expression: "item.tasks.length"
-      }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.meta,
-        expression: "item.meta"
-      }],
-      staticClass: "sc-timeline-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.images.length || item.content !== '') && !item.tasks.length,
-        expression: "(item.images.length || item.content !== '') && !item.tasks.length"
-      }]
-    }), _vm._v(" "), _c('div', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.images.length || item.content !== '' || item.tasks.length,
-        expression: "item.images.length || item.content !== '' || item.tasks.length"
-      }],
-      staticClass: "sc-timeline-content"
-    }, [_c('p', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.content !== '',
-        expression: "item.content !== '' "
-      }],
-      staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.images,
-        expression: "item.images"
-      }],
-      staticClass: "sc-list-images uk-list uk-list-inline"
-    }, _vm._l(item.images, function (image) {
-      return _c('li', {
-        key: image
-      }, [_c('ScPhoto', {
-        attrs: {
-          "image-id": image,
-          "size": "md"
-        }
-      })], 1);
-    }), 0), _vm._v(" "), _c('ul', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: item.tasks.length,
-        expression: "item.tasks.length"
-      }],
-      staticClass: "sc-list-shadow uk-margin-top"
-    }, _vm._l(item.tasks, function (task) {
-      return _c('li', {
-        key: task.id
-      }, [_c('a', {
-        attrs: {
-          "href": "javascript:void(0)"
-        }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
-        directives: [{
-          name: "show",
-          rawName: "v-show",
-          value: task.loggedTime !== '',
-          expression: "task.loggedTime !== '' "
-        }],
-        staticClass: "sc-list-secondary-text uk-text-small"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
-    }), 0)])])]);
-  }), 0), _vm._v(" "), _c('h4', {
-    staticClass: "uk-heading-line uk-margin-large-top"
-  }, [_c('span', [_vm._v("Notes")])]), _vm._v(" "), _c('p', [_vm._v(_vm._s(_vm.user.note))])])], 1)], 1)], 2)])])]), _vm._ssrNode(" <div class=\"sc-fab-page-wrapper\"><a href=\"javascript:void(0)\" class=\"sc-fab sc-fab-secondary sc-fab-large\"><i class=\"mdi mdi-pencil\"></i></a></div>")], 2);
+  }), 0)])], 1)], 1)], 2)])])]), _vm._ssrNode(" <div class=\"sc-fab-page-wrapper\"><a href=\"javascript:void(0)\" class=\"sc-fab sc-fab-secondary sc-fab-large\"><i class=\"mdi mdi-pencil\"></i></a></div>")], 2);
 };
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/pages/user_profile.vue?vue&type=template&id=2537555b&
+// CONCATENATED MODULE: ./pages/pages/user_profile.vue?vue&type=template&id=18911b36&
 
 // EXTERNAL MODULE: ./assets/js/utils.js + 5 modules
 var utils = __webpack_require__(2);
@@ -2155,7 +2191,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(604)
+  var style0 = __webpack_require__(612)
 if (style0.__inject__) style0.__inject__(context)
 
 }
@@ -2174,11 +2210,20 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Uploader = (component.exports);
+// EXTERNAL MODULE: ./components/Input.vue + 4 modules
+var Input = __webpack_require__(122);
+
 // EXTERNAL MODULE: ./plugins/stickyKit.js
 var stickyKit = __webpack_require__(288);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
+
+// EXTERNAL MODULE: ./composable/userSession.js
+var userSession = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./composable/useApi.js
+var useApi = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/pages/user_profile.vue?vue&type=script&lang=js&
 
@@ -2198,12 +2243,16 @@ const {
 
 
 
+
+
+
 /* harmony default export */ var user_profilevue_type_script_lang_js_ = ({
   name: 'PagesUserProfile',
   components: {
     ScPhoto: Photo["a" /* default */],
     ScAvatar: Avatar["a" /* default */],
-    ScUploader: Uploader
+    ScUploader: Uploader,
+    ScInput: Input["a" /* default */]
   },
   data: () => ({
     sideMenu: {
@@ -2219,196 +2268,70 @@ const {
         }
 
       }
-    }
+    },
+    firstPass: '',
+    secondPass: ''
   }),
+  methods: {
+    async changePassword() {
+      const self = this;
+
+      if (self.firstPass != self.secondPass) {
+        self.showNotification('Farklı parolalar girdiniz.', false, 'error');
+        return;
+      }
+
+      try {
+        const api = Object(useApi["a" /* useApi */])();
+        const postResult = (await api.post('User/ChangePass', {
+          id: self.user.id,
+          password: self.firstPass
+        })).data;
+
+        if (postResult.result) {
+          self.showNotification('Şifreniz başarıyla değiştirildi.', false, 'success');
+        }
+      } catch (error) {}
+    },
+
+    showNotification(text, pos, status, persistent) {
+      var config = {};
+      config.timeout = persistent ? !persistent : 3000;
+
+      if (status) {
+        config.status = status;
+      }
+
+      if (pos) {
+        config.pos = pos;
+      }
+
+      UIkit.notification(text, config);
+    }
+
+  },
   computed: {
     user() {
-      return {
-        id: uniqueID(),
-        name: first() + ' ' + last(),
-        phone: phone(),
-        email: email(),
-        company: company(),
-        note: sentence({
-          words: 100
-        }),
-        www: 'https://tzdthemes.com'
-      };
+      if (false) {} else {
+        return {
+          id: 0,
+          name: '',
+          plantCode: ''
+        };
+      }
     },
 
     stats() {
       return [{
         id: 1,
-        number: '34 845',
-        cat: 'Followers',
+        number: '0',
+        cat: 'Talepler',
         color: 'green'
       }, {
         id: 2,
-        number: '2 410',
-        cat: 'Following',
+        number: '0',
+        cat: 'Servisler',
         color: 'green'
-      }, {
-        id: 3,
-        number: '148',
-        cat: 'Stories',
-        color: 'green'
-      }, {
-        id: 4,
-        number: '31',
-        cat: 'Posts',
-        color: 'red'
-      }];
-    },
-
-    friends() {
-      return [{
-        id: 1,
-        avatar: 2,
-        status: 'online'
-      }, {
-        id: 2,
-        avatar: 3,
-        status: 'offline'
-      }, {
-        id: 3,
-        avatar: 4,
-        status: 'away'
-      }, {
-        id: 4,
-        avatar: 5,
-        status: 'busy'
-      }];
-    },
-
-    timeline() {
-      return [{
-        id: 1,
-        date: this.$moment().format('DD MMM'),
-        dateAlt1: this.$moment().format('ddd'),
-        dateAlt2: this.$moment().format('MMM YYYY'),
-        icon: 'mdi-image',
-        iconAvatar: 5,
-        iconColor: '',
-        color: 'md-bg-red-500 sc-light',
-        colorAlt1: 'md-bg-purple-500 sc-light',
-        title: 'New Album',
-        titleLink: '',
-        user: '',
-        meta: '',
-        category: '',
-        content: '',
-        images: [1, 6, 7, 5, 4],
-        tasks: [],
-        extraClass: 'sc-timeline-body-border'
-      }, {
-        id: 2,
-        date: this.$moment().subtract(1, 'day').format('DD MMM'),
-        dateAlt1: this.$moment().subtract(1, 'day').format('ddd'),
-        dateAlt2: this.$moment().subtract(1, 'month').format('MMM YYYY'),
-        icon: 'mdi-file-document',
-        iconAvatar: '',
-        iconColor: 'md-color-green-800 sc-icon-32',
-        color: 'md-bg-green-500 sc-light',
-        colorAlt1: 'md-bg-amber-500 sc-light',
-        title: 'New posts',
-        titleLink: 'javascript:void(0)',
-        user: '',
-        meta: '23 comments; 14 pingbacks',
-        category: 'travel',
-        content: 'Velit aut sit ab blanditiis sint ut tenetur repellendus deleniti quisquam reiciendis maiores sit sed adipisci consequatur et autem eos repellendus.',
-        images: [],
-        tasks: [],
-        extraClass: 'sc-timeline-body-border'
-      }, {
-        id: 3,
-        date: this.$moment().subtract(2, 'day').format('DD MMM'),
-        dateAlt1: this.$moment().subtract(2, 'day').format('ddd'),
-        dateAlt2: this.$moment().subtract(2, 'month').format('MMM YYYY'),
-        icon: 'mdi-comment',
-        iconAvatar: '',
-        iconColor: 'md-color-red-800 sc-icon-32',
-        color: 'md-bg-light-blue-500 sc-light',
-        colorAlt1: 'md-bg-light-green-500 sc-light',
-        title: '14 new commments',
-        titleLink: '',
-        user: '',
-        meta: '',
-        category: '',
-        content: '',
-        images: [],
-        tasks: [],
-        extraClass: 'uk-box-shadow-small'
-      }, {
-        id: 4,
-        date: this.$moment().subtract(4, 'day').format('DD MMM'),
-        dateAlt1: this.$moment().subtract(4, 'day').format('ddd'),
-        dateAlt2: this.$moment().subtract(4, 'months').format('MMM YYYY'),
-        icon: 'mdi-calendar-check',
-        iconAvatar: 3,
-        iconColor: '',
-        color: 'md-bg-amber-500 sc-light',
-        colorAlt1: 'md-bg-cyan-500 sc-light',
-        title: 'User',
-        titleLink: 'javascript:void(0)',
-        user: 'Kiana Hettinger',
-        meta: '',
-        category: '',
-        content: '',
-        images: [],
-        tasks: [{
-          title: 'Neque magnam modi.',
-          loggedTime: '2h 21m'
-        }, {
-          title: 'Id assumenda soluta quos.',
-          loggedTime: ''
-        }, {
-          title: 'Id laudantium consequuntur provident magnam.',
-          loggedTime: ''
-        }, {
-          title: 'Quae qui ipsam et repudiandae.',
-          loggedTime: ''
-        }],
-        extraClass: 'md-bg-grey-100'
-      }];
-    },
-
-    comments() {
-      return [{
-        id: uniqueID(),
-        date: this.$moment().subtract(2, 'day').subtract(Math.floor(Math.random() * 12) + 1, 'hours').format('DD/MM/YYYY HH:mm'),
-        title: sentence({
-          words: 10
-        }),
-        content: sentence({
-          words: 20
-        })
-      }, {
-        id: uniqueID(),
-        date: this.$moment().subtract(3, 'day').subtract(Math.floor(Math.random() * 12) + 1, 'hours').format('DD/MM/YYYY HH:mm'),
-        title: sentence({
-          words: 10
-        }),
-        content: sentence({
-          words: 60
-        })
-      }, {
-        id: uniqueID(),
-        date: this.$moment().subtract(6, 'day').subtract(Math.floor(Math.random() * 12) + 1, 'hours').format('DD/MM/YYYY HH:mm'),
-        title: sentence({
-          words: 10
-        }),
-        content: sentence({
-          words: 80
-        })
-      }, {
-        id: uniqueID(),
-        date: this.$moment().subtract(8, 'day').subtract(Math.floor(Math.random() * 12) + 1, 'hours').format('DD/MM/YYYY HH:mm'),
-        title: sentence({
-          words: 10
-        }),
-        content: sentence({
-          words: 40
-        })
       }];
     }
 

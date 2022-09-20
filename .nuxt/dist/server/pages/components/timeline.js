@@ -1,7 +1,7 @@
 exports.ids = [36];
 exports.modules = {
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -396,22 +396,15 @@ module.exports = __webpack_require__.p + "img/wynand-van-poortvliet-761831-unspl
 /***/ 181:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
-
-/***/ }),
-
-/***/ 182:
-/***/ (function(module, exports, __webpack_require__) {
-
 module.exports = __webpack_require__.p + "img/briana-tozour-756151-unsplash.f4508bb.jpg";
 
 /***/ }),
 
-/***/ 186:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./avatar_01.png": 181,
+	"./avatar_01.png": 186,
 	"./avatar_010.png": 187,
 	"./avatar_010@2x.png": 188,
 	"./avatar_010_lg.png": 189,
@@ -511,7 +504,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 186;
+webpackContext.id = 185;
+
+/***/ }),
+
+/***/ 186:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
 
 /***/ }),
 
@@ -972,7 +972,7 @@ var staticRenderFns = [];
   },
   computed: {
     'avatarSrc'() {
-      return __webpack_require__(186)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
+      return __webpack_require__(185)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
     },
 
     'wrapperClass'() {
@@ -1231,7 +1231,7 @@ var map = {
 	"./avantgarde-concept-763896-unsplash@2x.jpg": 253,
 	"./avantgarde-concept-763896-unsplash_md.jpg": 136,
 	"./avantgarde-concept-763896-unsplash_md@2x.jpg": 152,
-	"./briana-tozour-756151-unsplash.jpg": 182,
+	"./briana-tozour-756151-unsplash.jpg": 181,
 	"./briana-tozour-756151-unsplash@2x.jpg": 254,
 	"./briana-tozour-756151-unsplash_md.jpg": 153,
 	"./briana-tozour-756151-unsplash_md@2x.jpg": 154,
@@ -1391,7 +1391,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 745:
+/***/ 767:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1893,7 +1893,7 @@ var Photo = __webpack_require__(286);
 var Avatar = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./plugins/moment.js
-var moment = __webpack_require__(125);
+var moment = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/components/timeline.vue?vue&type=script&lang=js&
 

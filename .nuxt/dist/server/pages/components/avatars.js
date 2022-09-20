@@ -120,14 +120,7 @@ module.exports = __webpack_require__.p + "img/avatar_09_sm@2x.e046f9a.png";
 
 /***/ }),
 
-/***/ 181:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
-
-/***/ }),
-
-/***/ 183:
+/***/ 182:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -139,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var hljs = __webpack_require__(101);
 
-__webpack_require__(184);
+__webpack_require__(183);
 
 hljs.registerLanguage('xml', __webpack_require__(102));
 hljs.registerLanguage('sql', __webpack_require__(103));
@@ -183,13 +176,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive('highlightjs', {
 
 /***/ }),
 
-/***/ 184:
+/***/ 183:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(185);
+var content = __webpack_require__(184);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -197,7 +190,7 @@ __webpack_require__(7).default("0efaf680", content, true)
 
 /***/ }),
 
-/***/ 185:
+/***/ 184:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -211,11 +204,11 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 186:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./avatar_01.png": 181,
+	"./avatar_01.png": 186,
 	"./avatar_010.png": 187,
 	"./avatar_010@2x.png": 188,
 	"./avatar_010_lg.png": 189,
@@ -315,7 +308,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 186;
+webpackContext.id = 185;
+
+/***/ }),
+
+/***/ 186:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/avatar_01.1eb7c9a.png";
 
 /***/ }),
 
@@ -776,7 +776,7 @@ var staticRenderFns = [];
   },
   computed: {
     'avatarSrc'() {
-      return __webpack_require__(186)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
+      return __webpack_require__(185)("./avatar_0" + this.avatarId + (this.size === '_default' ? '' : '_' + this.size) + ".png");
     },
 
     'wrapperClass'() {
@@ -894,7 +894,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 
 /***/ }),
 
-/***/ 718:
+/***/ 740:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1049,7 +1049,7 @@ var AvatarInitials = __webpack_require__(445);
 
 
 
-__webpack_require__(183);
+__webpack_require__(182);
 
 /* harmony default export */ var avatarsvue_type_script_lang_js_ = ({
   name: 'ComponentsAvatars',
