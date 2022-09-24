@@ -173,6 +173,7 @@ export default {
 			dtDHeaders: [],
 			dtDOptions: {
 				select: true,
+				paging: false,
 				"stateSave": false,
 				rowCallback: function(row, data, index) {
 					if (data.demandStatus == 4) {

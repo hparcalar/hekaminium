@@ -1,14 +1,15 @@
 /*!
-	autosize 4.0.4
-	license: MIT
-	http://www.jacklmoore.com/autosize
-*/
-
-/*!
  * pretty-checkbox-vue v1.1.9
  * (c) 2017-2018 Hamed Ehtesham
  * Released under the MIT License.
  */
+
+
+/*!
+	autosize 4.0.4
+	license: MIT
+	http://www.jacklmoore.com/autosize
+*/
 
 
 /*!
@@ -79,22 +80,6 @@
  */
 
 
-/*! *****************************************************************************
-    Copyright (c) Microsoft Corporation.
-
-    Permission to use, copy, modify, and/or distribute this software for any
-    purpose with or without fee is hereby granted.
-
-    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-    PERFORMANCE OF THIS SOFTWARE.
-    ***************************************************************************** */
-
-
 /*!
  * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
@@ -103,20 +88,6 @@
 /*!
  * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
- */
-
-
-/*!
-	autosize 4.0.4
-	license: MIT
-	http://www.jacklmoore.com/autosize
-*/
-
-
-/*!
- * pretty-checkbox-vue v1.1.9
- * (c) 2017-2018 Hamed Ehtesham
- * Released under the MIT License.
  */
 
 
@@ -136,6 +107,13 @@
 
 
 /*!
+ * pretty-checkbox-vue v1.1.9
+ * (c) 2017-2018 Hamed Ehtesham
+ * Released under the MIT License.
+ */
+
+
+/*!
  * Copyright (c) 2017 ~ present NAVER Corp.
  * billboard.js project is licensed under the MIT license
  * 
@@ -144,6 +122,21 @@
  * 
  * @version 1.11.1
  */
+
+/*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
 
 
 /*!
@@ -198,8 +191,6 @@
  * (c) 2021 Evan You
  * @license MIT
  */
-
-//! moment.js
 
 //! moment.js locale configuration
 
@@ -361,6 +352,16 @@
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
 
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+
+
 /*!
  * clipboard.js v2.0.11
  * https://clipboardjs.com/
@@ -394,6 +395,12 @@ object-assign
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
  */
+
+/*!
+	autosize 4.0.4
+	license: MIT
+	http://www.jacklmoore.com/autosize
+*/
 
 
 /*!

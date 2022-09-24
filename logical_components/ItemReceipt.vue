@@ -362,7 +362,12 @@ export default {
                     getData.inWarehouseId = getData.inWarehouseId ? getData.inWarehouseId.toString() : null;
                     this.formData = getData;
                     this.selectedReceiptType = getData.receiptType;
-                    this.details = this.formData.details;
+                    this.details = this.formData.details.map((d) => {
+                        return {
+                            ...d,
+                            newRecord: false,
+                        };
+                    });
                 }
                 else{
                     this.formData = {
@@ -410,7 +415,7 @@ export default {
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
                     if (existingDetail){
-                        detailRow.newDetail = false;
+                        // detailRow.newDetail = false;
 
                         existingDetail.lineNumber = detailRow.lineNumber;
                         existingDetail.itemId = detailRow.itemId;
@@ -430,7 +435,7 @@ export default {
                         existingDetail.partNo = detailRow.partNo;
                         existingDetail.partDimensions = detailRow.partDimensions;
                         existingDetail.itemExplanation = detailRow.itemExplanation;
-                        existingDetail.newDetail = detailRow.newDetail;
+                        // existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
 

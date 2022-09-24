@@ -221,7 +221,12 @@ export default {
                 if (getData && getData.id > 0){
                     getData.projectId = getData.projectId ? getData.projectId.toString() : null;
                     this.formData = getData;
-                    this.details = this.formData.details;
+                    this.details = this.formData.details.map((d) => {
+                        return {
+                            ...d,
+                            newRecord: false,
+                        };
+                    });
                 }
                 else{
                     this.formData.receiptNo = getData.receiptNo;
@@ -236,7 +241,7 @@ export default {
             const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true,
+                    detailRow.newDetail = true;
                     detailRow.id = detailRow.lineNumber;
                     detailRow.partNo = detailRow.partNo ?? '';
                     detailRow.partDimensions = detailRow.partDimensions ?? '';
@@ -246,7 +251,7 @@ export default {
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
                     if (existingDetail){
-                        detailRow.newDetail = false;
+                        // detailRow.newDetail = false;
 
                         existingDetail.lineNumber = detailRow.lineNumber;
                         existingDetail.itemId = detailRow.itemId;
@@ -255,7 +260,7 @@ export default {
                         existingDetail.demandDate = detailRow.demandDate;
                         existingDetail.partNo = detailRow.partNo ?? '';
                         existingDetail.partDimensions = detailRow.partDimensions ?? '';
-                        existingDetail.newDetail = detailRow.newDetail;
+                        // existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
             }
@@ -265,6 +270,7 @@ export default {
                 this.formData.details = this.details.map((d) => {
                     return {
                         ...d,
+                        id: d.newRecord == true ? 0 : d.id,
                         demandDate: null,
                     }
                 });

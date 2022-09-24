@@ -423,8 +423,8 @@ export default {
         calculateTotal(){
             try {
                 const subTotal = this.formData.quantity * this.formData.unitPrice;
-                const taxTotal = subTotal * this.formData.taxRate;
-                this.formData.overallTotal = this.formData.taxIncluded ? subTotal : (subTotal + taxTotal);
+                const taxTotal = subTotal * this.formData.taxRate / 100.0;
+                this.formData.overallTotal = subTotal; //this.formData.taxIncluded == true ? subTotal : (subTotal + taxTotal);
 
                 let forexRate = 1;
                 if(this.formData.forexId && this.formData.forexId > 0)

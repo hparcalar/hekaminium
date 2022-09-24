@@ -91,7 +91,7 @@
 													<label>Proje Adedi</label>
 												</ScInput>
 											</div>
-											<div v-if="hasViewAuth('ProjectManagement')">
+											<div v-show="hasViewAuth('ProjectManagement')">
 												<client-only>
 													<Select2
 														v-model="formData.projectStatus"
@@ -172,6 +172,16 @@
 																</client-only>
 															</div>
 															<div class="uk-grid">
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="fTotalForexCost" :read-only="true">
+																		<label>Toplam Maliyet (Döviz)</label>
+																	</ScInput>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="fTotalCost" :read-only="true">
+																		<label>Toplam Maliyet (TL)</label>
+																	</ScInput>
+																</div>
 																<div class="uk-width-2-2" v-show="hasViewAuth('ProjectBudgetView')">
 																	<ScInput v-model="formData.profitRate" @change="calculateTotal" type="number">
 																		<label>Kar Marjı(%)</label>
@@ -389,6 +399,8 @@ export default {
 			offerPrice: null,
 			forexRate: null,
 			offerForexPrice: null,
+			totalCost: 0,
+			totalForexCost: 0,
 			costItems: [],
 		},
 		selectedDemandRow: { id:0, itemDemandId: 0 },
@@ -550,6 +562,16 @@ export default {
 					this.formData.offerForexPrice = parseFloat(procStr);
 				}
 			}
+		},
+		fTotalCost:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.totalCost);
+			}
+		},
+		fTotalForexCost:{
+			get: function(){
+				return new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost);
+			}
 		}
 	},
 	beforeDestroy(){
@@ -615,6 +637,13 @@ export default {
 					getData.projectCategoryId = getData.projectCategoryId == null ? '' : getData.projectCategoryId.toString();
 					getData.forexId = getData.forexId == null ? '' : getData.forexId.toString();
 
+					getData.costItems = getData.costItems.map((d) => {
+						return {
+							...d,
+							newRecord: false,
+						};
+					});
+
                     this.formData = getData;
                 }
 				else{
@@ -640,6 +669,8 @@ export default {
 						offerPrice: null,
 						forexRate: null,
 						offerForexPrice: null,
+						totalCost: 0,
+						totalForexCost: 0,
 						costItems: [],
 					};
 
@@ -648,6 +679,7 @@ export default {
 				}
 
 				await this.bindDemands();
+				this.calculateProjectCost();
 				// this.calculateTotal();
             } catch (error) {
                 
@@ -676,6 +708,7 @@ export default {
 				postData.firmId = postData.firmId.length == 0 ? null : parseInt(postData.firmId);
 				postData.projectStatus = postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
 				postData.projectCategoryId = postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
+				postData.forexId = postData.forexId.length == 0 ? null : parseInt(postData.forexId);
 
                 const api = useApi();
                 const postResult = (await api.post('Project', postData)).data;
@@ -746,14 +779,14 @@ export default {
 			const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true,
+                    detailRow.newDetail = true;
                     detailRow.id = detailRow.lineNumber;
                     this.formData.costItems.push(detailRow);
                 }
                 else {
                     const existingDetail = this.formData.costItems.find(d => d.id == detailRow.id);
                     if (existingDetail){
-                        detailRow.newDetail = false;
+                        // detailRow.newDetail = false;
 
                         existingDetail.lineNumber = detailRow.lineNumber;
                         existingDetail.itemId = detailRow.itemId;
@@ -765,7 +798,7 @@ export default {
 						existingDetail.overallTotal = detailRow.overallTotal;
 						existingDetail.forexOverallTotal = detailRow.forexOverallTotal;
 						existingDetail.explanation = detailRow.explanation;
-                        existingDetail.newDetail = detailRow.newDetail;
+                        // existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
 
@@ -886,6 +919,24 @@ export default {
 			}
 			else
 				this.selectedCostItemRow = { id:0 };
+		},
+		calculateProjectCost(){
+			try {
+				if (this.formData && this.formData.costItems && this.formData.costItems.length > 0){
+					const totalCost = this.formData.costItems.map((d) => d.overallTotal).reduce((a,b) => a + b);
+					this.formData.totalCost = totalCost;
+					
+					if (this.formData.forexId && this.formData.forexId > 0 && this.formData.forexRate > 0){
+						this.formData.totalForexCost = this.formData.totalCost / this.formData.forexRate;
+					}
+					else
+						this.formData.totalForexCost = null;
+				}
+				else
+					this.formData.budget = 0;
+			} catch (error) {
+				
+			}
 		},
 		calculateTotal(){
 			let totalVal = 0;

@@ -7,7 +7,7 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Projeler
-                                <button type="button" @click="newRecord" v-if="this.hasViewAuth('ProjectManagement')" class="sc-button sc-button-small uk-margin-small-left">
+                                <button type="button" @click="newRecord" v-show="this.hasViewAuth('ProjectManagement')" class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
 								</button>
@@ -77,10 +77,11 @@ export default {
                 { data: "projectCategoryName", title: "Kategorisi", visible: true, },
                 { data: "firmName", title: "Müşteri", visible: true, },
 				{ data: "quantity", title: "Proje Adedi", visible: true, },
+				{ data: "totalForexCost", title: "Maliyet", visible: false, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? row.totalForexCost : row.totalCost); } },
 				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
 				{ data: "forexName", title: "Döviz Cinsi", visible: false, },
-				{ data: "offerForexPrice", title: "Bedeli", visible: false, render: function(data, ev, row){ return row.forexId > 0 ? row.offerForexPrice : row.offerPrice } },
-				{ data: "projectStatusText", title: "Durum", visible: true, }
+				{ data: "offerForexPrice", title: "Bedeli", visible: false, render: function(data, ev, row){ return row.forexId > 0 ? row.offerForexPrice : row.offerPrice; } },
+				{ data: "projectStatusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
@@ -139,6 +140,11 @@ export default {
 		const profitCol = this.dtColumns.find(d => d.data == 'profitRate');
 		if (profitCol){
 			profitCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+
+		const totalCostCol = this.dtColumns.find(d => d.data == 'totalForexCost');
+		if (totalCostCol){
+			totalCostCol.visible = this.hasViewAuth('ProjectBudgetView');
 		}
 	},
     async mounted (){

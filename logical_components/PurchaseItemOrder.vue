@@ -103,13 +103,23 @@
 
                         <div class="uk-child-width-1-2@m uk-grid">
                             <div v-show="hasViewAuth('ProjectBudgetView')">
+                                <ScInput v-model="fSubForexTotal" :read-only="true">
+                                    <label>Ara Toplam (Döviz)</label>
+                                </ScInput>
+                            </div>
+                            <div v-show="hasViewAuth('ProjectBudgetView')">
+                                <ScInput v-model="fSubTotal" :read-only="true">
+                                    <label>Ara Toplam (TL)</label>
+                                </ScInput>
+                            </div>
+                            <div v-show="hasViewAuth('ProjectBudgetView')">
                                 <ScInput v-model="fTotalForexPrice" :read-only="true">
-                                    <label>Döviz Tutarı</label>
+                                    <label>Toplam Tutar (Döviz)</label>
                                 </ScInput>
                             </div>
                             <div v-show="hasViewAuth('ProjectBudgetView')">
                                 <ScInput v-model="fTotalPrice" :read-only="true">
-                                    <label>TL Tutarı</label>
+                                    <label>Toplam Tutar (TL)</label>
                                 </ScInput>
                             </div>
                         </div>
@@ -246,7 +256,8 @@ export default {
             { data: "forexCode", title: "Döviz", visible: true, },
             { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
             { data: "taxRate", title: "Kdv %", visible: true, },
-            { data: "overallTotal", title: "Tutar", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
+            { data: "overallTotal", title: "Tutar (Döviz)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? data : 0); } },
+            { data: "overallTotal", title: "Tutar (TL)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? data * row.forexRate : data); } },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
         selectedOrderDetail: {
@@ -254,12 +265,38 @@ export default {
         }
 	}),
 	computed: {
+        fSubTotal: {
+            get: function(){
+                if (this.details && this.details.length > 0){
+                    const subTotal = this.details.map(d => 
+                        (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * d.quantity)
+                        .reduce((a,b) => a + b);
+
+                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                }
+                
+                return "0";
+            }
+        },
+        fSubForexTotal: {
+            get: function(){
+                if (this.details && this.details.length > 0){
+                    const subTotal = this.details.map(d => 
+                        (d.forexId && d.forexId > 0 ? (d.unitPrice) : 0) * d.quantity)
+                        .reduce((a,b) => a + b);
+
+                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                }
+                
+                return "0";
+            }
+        },
 		fTotalPrice:{
             get: function(){
                 if (this.details && this.details.length > 0){
                     const subTotal = this.details.map(d => 
-                    (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice)
-                    + (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * (d.taxRate / 100.0)))
+                    ((d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice)
+                    + (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * (d.taxRate / 100.0))) * d.quantity)
                     .reduce((a,b) => a + b);
 
                     return new Intl.NumberFormat("tr-TR").format(subTotal);
@@ -272,8 +309,8 @@ export default {
             get: function(){
                 if (this.details && this.details.length > 0){
                     const subTotal = this.details.map(d => 
-                        (d.forexId && d.forexId > 0 ? d.unitPrice : 0)
-                        + (d.taxIncluded == true ? d.unitPrice : (d.unitPrice * (d.taxRate / 100.0)))
+                        ((d.forexId && d.forexId > 0 ? d.unitPrice : 0)
+                        + (d.taxIncluded == true ? d.unitPrice : (d.unitPrice * (d.taxRate / 100.0)))) * d.quantity
                     ).reduce((a,b) => a + b);
 
                     return new Intl.NumberFormat("tr-TR").format(subTotal);
@@ -323,7 +360,18 @@ export default {
                 if (getData && getData.id > 0){
                     getData.firmId = getData.firmId ? getData.firmId.toString() : null;
                     this.formData = getData;
-                    this.details = this.formData.details;
+                    this.details = this.formData.details.map((d) => {
+                        return {
+                            ...d,
+                            newRecord: false,
+                            demandConsumes: d.demandConsumes.map((m) => {
+                                return {
+                                    ...m,
+                                    newRecord: false,
+                                };
+                            })
+                        };
+                    });
                 }
                 else{
                     this.formData.receiptNo = getData.receiptNo;
@@ -392,7 +440,7 @@ export default {
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
                     if (existingDetail){
-                        detailRow.newDetail = false;
+                        // detailRow.newDetail = false;
 
                         existingDetail.lineNumber = detailRow.lineNumber;
                         existingDetail.itemId = detailRow.itemId;
@@ -413,7 +461,7 @@ export default {
                         existingDetail.partDimensions = detailRow.partDimensions;
                         existingDetail.itemExplanation = detailRow.itemExplanation;
                         existingDetail.demandConsumes = detailRow.demandConsumes;
-                        existingDetail.newDetail = detailRow.newDetail;
+                        // existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
 
@@ -453,7 +501,18 @@ export default {
                     return;
                 }
 
-                this.formData.details = this.details;
+                this.formData.details = this.details.map((d) => {
+                    return {
+                        ...d,
+                        id: d.newRecord == true ? 0 : d.id,
+                        demandConsumes: d.demandConsumes.map((m) => {
+                            return {
+                                ...m,
+                                id: m.newRecord == true ? 0 : m.id,
+                            };
+                        })
+                    };
+                });
 
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;

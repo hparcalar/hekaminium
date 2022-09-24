@@ -539,7 +539,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(7).default
 module.exports.__inject__ = function (context) {
-  add("1bfd3ce2", content, true, context)
+  add("6436584b", content, true, context)
 };
 
 /***/ }),
@@ -549,9 +549,9 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_169d15d7_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(455);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_169d15d7_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_169d15d7_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_169d15d7_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_169d15d7_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1546a608_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(455);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1546a608_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1546a608_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1546a608_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_id_1546a608_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -577,7 +577,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/project/index.vue?vue&type=template&id=169d15d7&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/project/index.vue?vue&type=template&id=1546a608&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -691,7 +691,9 @@ var render = function render() {
       },
       expression: "formData.quantity"
     }
-  }, [_c('label', [_vm._v("Proje Adedi")])])], 1), _vm._ssrNode(" "), _vm.hasViewAuth('ProjectManagement') ? _vm._ssrNode("<div>", "</div>", [_c('client-only', [_c('Select2', {
+  }, [_c('label', [_vm._v("Proje Adedi")])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
+    display: _vm.hasViewAuth('ProjectManagement') ? '' : 'none'
+  }) + ">", "</div>", [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.statusList,
       "settings": {
@@ -707,7 +709,7 @@ var render = function render() {
       },
       expression: "formData.projectStatus"
     }
-  }, [_c('label', [_vm._v("Proje Durumu")])])], 1)], 1) : _vm._e()], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\"><ul data-uk-tab=\"connect: .sc-switcher-left\" class=\"uk-tab-left\"><li class=\"uk-active\"><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tİhtiyaç Listesi\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTalepler\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSiparişler\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSatın Alınanlar\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTüketim Durumu\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li></ul></div> "), _vm._ssrNode("<div class=\"uk-width-3-4@l\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-switcher-left\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<div class=\"sc-padding-medium sc-padding-remove-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-left uk-grid\"><button type=\"button\" class=\"sc-button sc-button-success sc-button-small uk-margin-small-right\"><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Kalem\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
+  }, [_c('label', [_vm._v("Proje Durumu")])])], 1)], 1)], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\"><ul data-uk-tab=\"connect: .sc-switcher-left\" class=\"uk-tab-left\"><li class=\"uk-active\"><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tİhtiyaç Listesi\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTalepler\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSiparişler\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSatın Alınanlar\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTüketim Durumu\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li></ul></div> "), _vm._ssrNode("<div class=\"uk-width-3-4@l\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-switcher-left\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<div class=\"sc-padding-medium sc-padding-remove-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-left uk-grid\"><button type=\"button\" class=\"sc-button sc-button-success sc-button-small uk-margin-small-right\"><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Kalem\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.selectedCostItemRow && _vm.selectedCostItemRow.id > 0 ? '' : 'none'
@@ -731,7 +733,33 @@ var render = function render() {
         function: _vm.deselectCostItemRow
       }]
     }
-  })], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-2\"" + _vm._ssrStyle(null, null, {
+  })], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-2\"" + _vm._ssrStyle(null, null, {
+    display: _vm.hasViewAuth('ProjectBudgetView') ? '' : 'none'
+  }) + ">", "</div>", [_c('ScInput', {
+    attrs: {
+      "read-only": true
+    },
+    model: {
+      value: _vm.fTotalForexCost,
+      callback: function ($$v) {
+        _vm.fTotalForexCost = $$v;
+      },
+      expression: "fTotalForexCost"
+    }
+  }, [_c('label', [_vm._v("Toplam Maliyet (Döviz)")])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-2\"" + _vm._ssrStyle(null, null, {
+    display: _vm.hasViewAuth('ProjectBudgetView') ? '' : 'none'
+  }) + ">", "</div>", [_c('ScInput', {
+    attrs: {
+      "read-only": true
+    },
+    model: {
+      value: _vm.fTotalCost,
+      callback: function ($$v) {
+        _vm.fTotalCost = $$v;
+      },
+      expression: "fTotalCost"
+    }
+  }, [_c('label', [_vm._v("Toplam Maliyet (TL)")])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-2-2\"" + _vm._ssrStyle(null, null, {
     display: _vm.hasViewAuth('ProjectBudgetView') ? '' : 'none'
   }) + ">", "</div>", [_c('ScInput', {
     attrs: {
@@ -895,7 +923,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/project/index.vue?vue&type=template&id=169d15d7&
+// CONCATENATED MODULE: ./pages/project/index.vue?vue&type=template&id=1546a608&
 
 // EXTERNAL MODULE: ./plugins/jquery.js
 var jquery = __webpack_require__(124);
@@ -985,6 +1013,8 @@ if (false) {}
       offerPrice: null,
       forexRate: null,
       offerForexPrice: null,
+      totalCost: 0,
+      totalForexCost: 0,
       costItems: []
     },
     selectedDemandRow: {
@@ -1191,6 +1221,16 @@ if (false) {}
           this.formData.offerForexPrice = parseFloat(procStr);
         }
       }
+    },
+    fTotalCost: {
+      get: function () {
+        return new Intl.NumberFormat("tr-TR").format(this.formData.totalCost);
+      }
+    },
+    fTotalForexCost: {
+      get: function () {
+        return new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost);
+      }
     }
   },
 
@@ -1254,6 +1294,11 @@ if (false) {}
           getData.projectStatus = getData.projectStatus == null ? '0' : getData.projectStatus.toString();
           getData.projectCategoryId = getData.projectCategoryId == null ? '' : getData.projectCategoryId.toString();
           getData.forexId = getData.forexId == null ? '' : getData.forexId.toString();
+          getData.costItems = getData.costItems.map(d => {
+            return { ...d,
+              newRecord: false
+            };
+          });
           this.formData = getData;
         } else {
           this.formData = {
@@ -1278,12 +1323,15 @@ if (false) {}
             offerPrice: null,
             forexRate: null,
             offerForexPrice: null,
+            totalCost: 0,
+            totalForexCost: 0,
             costItems: []
           };
           if (getData.projectCode) this.formData.projectCode = getData.projectCode;
         }
 
-        await this.bindDemands(); // this.calculateTotal();
+        await this.bindDemands();
+        this.calculateProjectCost(); // this.calculateTotal();
       } catch (error) {}
     },
 
@@ -1311,6 +1359,7 @@ if (false) {}
         postData.firmId = postData.firmId.length == 0 ? null : parseInt(postData.firmId);
         postData.projectStatus = postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
         postData.projectCategoryId = postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
+        postData.forexId = postData.forexId.length == 0 ? null : parseInt(postData.forexId);
         const api = Object(useApi["a" /* useApi */])();
         const postResult = (await api.post('Project', postData)).data;
 
@@ -1397,13 +1446,14 @@ if (false) {}
 
       if (detailParam.action == 'save') {
         if (detailRow.id == 0) {
-          detailRow.newDetail = true, detailRow.id = detailRow.lineNumber;
+          detailRow.newDetail = true;
+          detailRow.id = detailRow.lineNumber;
           this.formData.costItems.push(detailRow);
         } else {
           const existingDetail = this.formData.costItems.find(d => d.id == detailRow.id);
 
           if (existingDetail) {
-            detailRow.newDetail = false;
+            // detailRow.newDetail = false;
             existingDetail.lineNumber = detailRow.lineNumber;
             existingDetail.itemId = detailRow.itemId;
             existingDetail.costName = detailRow.costName;
@@ -1413,8 +1463,7 @@ if (false) {}
             existingDetail.unitPrice = detailRow.unitPrice;
             existingDetail.overallTotal = detailRow.overallTotal;
             existingDetail.forexOverallTotal = detailRow.forexOverallTotal;
-            existingDetail.explanation = detailRow.explanation;
-            existingDetail.newDetail = detailRow.newDetail;
+            existingDetail.explanation = detailRow.explanation; // existingDetail.newDetail = detailRow.newDetail;
           }
         }
 
@@ -1535,6 +1584,19 @@ if (false) {}
       } else this.selectedCostItemRow = {
         id: 0
       };
+    },
+
+    calculateProjectCost() {
+      try {
+        if (this.formData && this.formData.costItems && this.formData.costItems.length > 0) {
+          const totalCost = this.formData.costItems.map(d => d.overallTotal).reduce((a, b) => a + b);
+          this.formData.totalCost = totalCost;
+
+          if (this.formData.forexId && this.formData.forexId > 0 && this.formData.forexRate > 0) {
+            this.formData.totalForexCost = this.formData.totalCost / this.formData.forexRate;
+          } else this.formData.totalForexCost = null;
+        } else this.formData.budget = 0;
+      } catch (error) {}
     },
 
     calculateTotal() {
