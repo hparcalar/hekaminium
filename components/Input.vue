@@ -154,11 +154,11 @@ export default {
 			}
 			this.$emit('change');
 		},
-		inputKeyUp () {
+		inputKeyUp (event) {
 			if(this.keyUp) {
 				this.keyUp();
 			}
-			this.$emit('keyUp');
+			this.$emit('keyUp', event);
 		}
 	},
 	watch: {

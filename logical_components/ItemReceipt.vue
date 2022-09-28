@@ -138,6 +138,10 @@
                 </fieldset>
 
                 <div class="uk-margin-large-top">
+                    <button type="button" @click="showOpenOrders" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
+                        Açık Siparişler
+                    </button>
                     <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
                         <span data-uk-icon="icon: check" class="uk-icon"></span>
                     </button>
@@ -165,6 +169,20 @@
 				</div>
 			</div>
 		</div>
+
+        <div id="dlgOpenOrders" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+                    <OpenPurchaseOrderList
+                        v-show="refreshOrderList == true"
+                        :is-dialog="true"
+                        :firm-id="fFirmId"
+                        @onOrdersSelected="onOrdersSelected"
+                        @onCancel="onOrdersClosed"
+                    />
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 
@@ -175,6 +193,7 @@ import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import ItemReceiptDetail from '~/logical_components/ItemReceiptDetail.vue';
+import OpenPurchaseOrderList from '~/logical_components/OpenPurchaseOrderList.vue';
 import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
 import { useApi } from '~/composable/useApi';
 import { useUserSession } from '~/composable/userSession';
@@ -212,6 +231,7 @@ export default {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		Select2: process.client ? () => import('~/components/Select2') : null,
         ItemReceiptDetail,
+        OpenPurchaseOrderList,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -234,6 +254,7 @@ export default {
         selectedReceiptType: '0',
         isMounting: false,
         refreshDetailForm: false,
+        refreshOrderList: false,
         details: [],
         firms: [],
         receiptTypeList: [],
@@ -261,7 +282,6 @@ export default {
             { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
             { data: "taxRate", title: "Kdv %", visible: true, },
             { data: "overallTotal", title: "Tutar", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
-			{ data: "statusText", title: "Durum", visible: true, },
 		],
         selectedOrderDetail: {
             id: 0,
@@ -303,6 +323,9 @@ export default {
             }
 
             return 1;
+        },
+        fFirmId() {
+            return parseInt(this.formData.firmId ?? '0');
         }
 	},
     beforeDestroy(){
@@ -407,7 +430,7 @@ export default {
             const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true;
+                    detailRow.newRecord = true;
                     detailRow.id = detailRow.lineNumber;
                     this.details.push(detailRow);
                     this.showNewOrderDetail();
@@ -449,6 +472,11 @@ export default {
                     return;
                 }
 
+                if (parseInt(this.formData.inWarehouseId ?? '0') <= 0){
+                    this.showNotification('Depo seçmelisiniz.', false, 'error');
+                    return;
+                }
+
                 // is same forex type check
                 let forexOk = true;
                 const forexData = this.details.map(d => d.forexId);
@@ -469,7 +497,12 @@ export default {
                     return;
                 }
 
-                this.formData.details = this.details;
+                this.formData.details = this.details.map((d) => {
+                    return {
+                        ...d,
+                        id: d.newRecord == true ? 0 : d.id
+                    };
+                });
 
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;
@@ -609,6 +642,73 @@ export default {
 			}
 			return false;
 		},
+        showOpenOrders(){
+            if (this.fFirmId <= 0){
+                this.showNotification('Açık siparişleri görüntülemek için önce firma seçmelisiniz.', false, 'error');
+                return;
+            }
+
+            this.refreshOrderList = false;
+			setTimeout(() => { this.refreshOrderList = true; }, 100);
+
+			const modalElement = document.getElementById('dlgOpenOrders');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+        },
+        onOrdersSelected(selectedOrders){
+            const self = this;
+
+            if (selectedOrders && selectedOrders.length > 0){
+                for (let i = 0; i < selectedOrders.length; i++) {
+                    const orderDetail = selectedOrders[i];
+                    
+                    if (!self.details.some(d => d.itemOrderDetailId == orderDetail.id)){
+                        var newRow = {};
+                        newRow.newRecord = true;
+                        newRow.orderConsumes = [
+                            {
+                                itemOrderDetailId: orderDetail.id,
+                                consumeNetQuantity: orderDetail.quantity,
+                            }
+                        ]
+                        // newRow.itemDemandDetailId = demandDetail.id; -- old algorithm
+
+                        // assign new line number
+                        const totalCount = self.details.length;
+
+                        newRow.lineNumber = totalCount + 1;
+                        newRow.id = newRow.lineNumber;
+
+                        newRow.itemId = orderDetail.itemId;
+                        newRow.itemName = orderDetail.itemName;
+                        newRow.quantity = orderDetail.quantity;
+                        newRow.projectId = orderDetail.projectId;
+                        newRow.forexId = orderDetail.forexId;
+                        newRow.forexRate = orderDetail.forexRate;
+                        newRow.taxIncluded = orderDetail.taxIncluded;
+                        newRow.taxRate = orderDetail.taxRate;
+                        newRow.explanation = orderDetail.explanation;
+                        newRow.unitPrice = orderDetail.unitPrice;
+                        newRow.receiptStatus = 0;
+                        newRow.overallTotal = orderDetail.overallTotal;
+                        newRow.forexCode = orderDetail.forexCode;
+                        newRow.partNo = orderDetail.partNo;
+                        newRow.partDimensions = orderDetail.partDimensions;
+                        newRow.projectName = orderDetail.projectName;
+                        newRow.itemExplanation = orderDetail.itemExplanation;
+
+                        self.details.push(newRow);
+                    }
+                }
+            }
+
+            this.onOrdersClosed();
+        },
+        onOrdersClosed(){
+            const modalElement = document.getElementById('dlgOpenOrders');
+			UIkit.modal(modalElement).hide();
+        },
 	},
     watch: {
         recordId: async function(newVal, oldVal) {

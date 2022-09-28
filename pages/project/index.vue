@@ -91,15 +91,6 @@
 													<label>Proje Adedi</label>
 												</ScInput>
 											</div>
-											<div v-show="hasViewAuth('ProjectManagement')">
-												<client-only>
-													<Select2
-														v-model="formData.projectStatus"
-														:options="statusList"
-														:settings="{ 'width': '100%', 'placeholder': 'Proje Durumu', 'allowClear': true }"
-													><label>Proje Durumu</label></Select2>
-												</client-only>
-											</div>
 										</div>
 									</fieldset>
 								</li>
@@ -295,17 +286,29 @@
 							</ul>
 						</div>
 					<form>	
-						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: check" class="uk-icon"></span>
-							</button>
-							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
-							</button>
-                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
-								<span data-uk-icon="icon: trash" class="uk-icon"></span>
-							</button>
+						<div class="uk-grid" data-uk-grid>
+							<div class="uk-width-1-6@m" v-show="hasViewAuth('ProjectManagement')" style="margin-top:3px;">
+								<client-only>
+									<Select2
+										v-model="formData.projectStatus"
+										:options="statusList"
+										:settings="{ 'width': '100%', 'placeholder': 'Proje Durumu', 'allowClear': true }"
+									><label>Proje Durumu</label></Select2>
+								</client-only>
+							</div>
+							<div class="uk-margin-medium-top uk-width-expand@m">
+								<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+									<span data-uk-icon="icon: check" class="uk-icon"></span>
+								</button>
+								<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+									<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
+								</button>
+								<button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+									<span data-uk-icon="icon: trash" class="uk-icon"></span>
+								</button>
+							</div>
 						</div>
+						
 					</form>
 				</div>
 			</div>
@@ -387,7 +390,7 @@ export default {
 			criticalExplanation: '',
 			startDate: null,
 			deadlineDate: null,
-			budget: 0,
+			budget: null,
             plantId: null,
 			isActive: true,
             projectCategoryId: '',
@@ -399,8 +402,8 @@ export default {
 			offerPrice: null,
 			forexRate: null,
 			offerForexPrice: null,
-			totalCost: 0,
-			totalForexCost: 0,
+			totalCost: null,
+			totalForexCost: null,
 			costItems: [],
 		},
 		selectedDemandRow: { id:0, itemDemandId: 0 },
@@ -470,6 +473,9 @@ export default {
 			{ data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
+			{ data: "forexCode", title: "Döviz Cinsi", visible: true, },
+			{ data: "unitPrice", title: "B. Fiyat", visible: true, },
+			{ data: "forexRate", title: "Kur", visible: true, },
 			{ data: "overallTotal", title: "Tutar", visible: false, render: function(data){ return(new Intl.NumberFormat('tr-TR').format(data)); }},
 			// { data: "costStatusText", title: "Durum", visible: true, },
 		]
@@ -537,7 +543,7 @@ export default {
 		},
 		fOfferPrice:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.offerPrice);
+				return this.formData.offerPrice > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.offerPrice) : null;
 			},
 			set: function(val){
 				if (!val || val.length == 0)
@@ -551,7 +557,7 @@ export default {
 		},
 		fOfferForexPrice: {
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.offerForexPrice);
+				return this.formData.offerForexPrice > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.offerForexPrice) : null;
 			},
 			set: function(val){
 				if (!val || val.length == 0)
@@ -565,12 +571,12 @@ export default {
 		},
 		fTotalCost:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.totalCost);
+				return this.formData.totalCost > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.totalCost) : null;
 			}
 		},
 		fTotalForexCost:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost);
+				return this.formData.totalForexCost > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost) : null;
 			}
 		}
 	},
@@ -657,7 +663,7 @@ export default {
 						criticalExplanation: '',
 						startDate: null,
 						deadlineDate: null,
-						budget: 0,
+						budget: null,
 						plantId: null,
 						isActive: true,
 						projectCategoryId: '',
@@ -669,14 +675,17 @@ export default {
 						offerPrice: null,
 						forexRate: null,
 						offerForexPrice: null,
-						totalCost: 0,
-						totalForexCost: 0,
+						totalCost: null,
+						totalForexCost: null,
 						costItems: [],
 					};
 
 					if (getData.projectCode)
 						this.formData.projectCode = getData.projectCode;
 				}
+
+				if (this.formData.id == 0)
+					await this.selectDefaultForex();
 
 				await this.bindDemands();
 				this.calculateProjectCost();
@@ -704,11 +713,18 @@ export default {
 		},
 		async onSubmit(){
             try {
-				const postData = { ...this.formData };
-				postData.firmId = postData.firmId.length == 0 ? null : parseInt(postData.firmId);
-				postData.projectStatus = postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
-				postData.projectCategoryId = postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
-				postData.forexId = postData.forexId.length == 0 ? null : parseInt(postData.forexId);
+				const postData = { ...this.formData,
+					costItems: this.formData.costItems.map(d => {
+						return {
+							...d,
+							id: d.newRecord == true ? 0 : d.id,
+						};
+					})
+				};
+				postData.firmId = !postData.firmId || postData.firmId.length == 0 ? null : parseInt(postData.firmId);
+				postData.projectStatus = !postData.projectStatus || postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
+				postData.projectCategoryId = !postData.projectCategoryId || postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
+				postData.forexId = !postData.forexId || postData.forexId.length == 0 ? null : parseInt(postData.forexId);
 
                 const api = useApi();
                 const postResult = (await api.post('Project', postData)).data;
@@ -728,7 +744,22 @@ export default {
             this.$router.push('/project/list');
         },
         async onDelete(){
-
+			const self = this;
+            UIkit.modal.confirm('Bu projeyi silmek istediğinizden emin misiniz?').then(
+				async function () {
+					try {
+                        const api = useApi();
+                        const delResult = (await api.delete('Project/' + self.formData.id)).data;
+                        if (delResult.result){
+                            self.showNotification('Silme işlemi başarılı', false, 'success');
+                            self.$router.push('/project/list');
+                        }
+                        else
+                            self.showNotification(delResult.errorMessage, false, 'error');
+                    } catch (error) {
+                        
+                    }
+			});
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};
@@ -779,7 +810,7 @@ export default {
 			const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true;
+                    detailRow.newRecord = true;
                     detailRow.id = detailRow.lineNumber;
                     this.formData.costItems.push(detailRow);
                 }
@@ -805,6 +836,7 @@ export default {
 				const modalElement = document.getElementById('dlgCostItem');
 				UIkit.modal(modalElement).hide();
 
+				this.calculateProjectCost();
 				this.calculateTotal();
             }
 		},
@@ -892,6 +924,16 @@ export default {
 
 			this.formData.offerPrice = totalVal + (totalVal * this.formData.profitRate / 100.0);
 		},
+		async selectDefaultForex(){
+            try {
+                const defForex = this.forexList.find(d => d.text == 'EUR');
+                if (defForex){
+                    await this.updateLiveForexRate(defForex.id);
+                }
+            } catch (error) {
+                
+            }
+        },
 		clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];
 			this.selectedDemandIndexes.push(selIndex);

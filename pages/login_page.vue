@@ -19,14 +19,14 @@
 								</ScInput>
 							</div> -->
 							<div class="uk-margin-medium">
-								<ScInput v-model="loginData.login">
+								<ScInput v-model="loginData.login" @keyUp="checkLoginKey">
 									<label>
 										Kullanıcı Adı
 									</label>
 								</ScInput>
 							</div>
 							<div class="uk-margin-medium">
-								<ScInput v-model="loginData.password" type="password">
+								<ScInput v-model="loginData.password" @keyUp="checkLoginKey" type="password">
 									<label>
 										Parola
 									</label>
@@ -145,6 +145,11 @@ export default {
 					self.showNotification('Hatalı giriş', false, 'error');
 			} catch (error) {
 				self.showNotification('Hatalı giriş', false, 'error');
+			}
+		},
+		checkLoginKey(event){
+			if (event.keyCode == 13){
+				this.tryLogin();
 			}
 		},
 		showNotification (text, pos, status, persistent) {

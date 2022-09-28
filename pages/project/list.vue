@@ -77,10 +77,12 @@ export default {
                 { data: "projectCategoryName", title: "Kategorisi", visible: true, },
                 { data: "firmName", title: "Müşteri", visible: true, },
 				{ data: "quantity", title: "Proje Adedi", visible: true, },
-				{ data: "totalForexCost", title: "Maliyet", visible: false, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? row.totalForexCost : row.totalCost); } },
-				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
 				{ data: "forexName", title: "Döviz Cinsi", visible: false, },
-				{ data: "offerForexPrice", title: "Bedeli", visible: false, render: function(data, ev, row){ return row.forexId > 0 ? row.offerForexPrice : row.offerPrice; } },
+				{ data: "totalCost", title: "Maliyet (TL)", visible: false, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.totalCost); } },
+				{ data: "totalForexCost", title: "Maliyet (Döviz)", visible: false, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.totalForexCost); } },
+				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
+				{ data: "offerPrice", title: "Bedeli (TL)", visible: false, render: function(data, ev, row){ return row.offerPrice; } },
+				{ data: "offerForexPrice", title: "Bedeli (Döviz)", visible: false, render: function(data, ev, row){ return row.offerForexPrice; } },
 				{ data: "projectStatusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
@@ -137,6 +139,11 @@ export default {
 			budgetCol.visible = this.hasViewAuth('ProjectBudgetView');
 		}
 
+		const budgetColLocal = this.dtColumns.find(d => d.data == 'offerPrice');
+		if (budgetColLocal){
+			budgetColLocal.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+
 		const profitCol = this.dtColumns.find(d => d.data == 'profitRate');
 		if (profitCol){
 			profitCol.visible = this.hasViewAuth('ProjectBudgetView');
@@ -145,6 +152,11 @@ export default {
 		const totalCostCol = this.dtColumns.find(d => d.data == 'totalForexCost');
 		if (totalCostCol){
 			totalCostCol.visible = this.hasViewAuth('ProjectBudgetView');
+		}
+
+		const totalCostColLocal = this.dtColumns.find(d => d.data == 'totalCost');
+		if (totalCostColLocal){
+			totalCostColLocal.visible = this.hasViewAuth('ProjectBudgetView');
 		}
 	},
     async mounted (){

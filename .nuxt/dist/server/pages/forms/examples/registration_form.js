@@ -6,7 +6,7 @@ exports.modules = {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=template&id=967aacc8&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=template&id=513c36f8&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -28,7 +28,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Input.vue?vue&type=template&id=967aacc8&
+// CONCATENATED MODULE: ./components/Input.vue?vue&type=template&id=513c36f8&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=script&lang=js&
 /* harmony default export */ var Inputvue_type_script_lang_js_ = ({
@@ -166,12 +166,12 @@ var staticRenderFns = [];
       this.$emit('change');
     },
 
-    inputKeyUp() {
+    inputKeyUp(event) {
       if (this.keyUp) {
         this.keyUp();
       }
 
-      this.$emit('keyUp');
+      this.$emit('keyUp', event);
     }
 
   },

@@ -110,6 +110,10 @@ export default {
 			dtColumns: [
                 { data: "receiptDate", title: "Tarih", visible: true, type:'date' },
                 { data: "receiptNo", title: "Sipariş No", visible: true, },
+				{ data: "firmName", title: "Firma", visible: true, },
+				{ data: "forexCode", title: "Döviz", visible: true, },
+				{ data: "unitPrice", title: "Birim Fiyat", visible: true, },
+				{ data: "overallTotal", title: "Tutar", visible: true, },
                 { data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
                 { data: "quantity", title: "Miktar", visible: true, },
 			],

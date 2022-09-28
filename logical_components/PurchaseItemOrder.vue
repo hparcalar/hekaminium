@@ -432,7 +432,7 @@ export default {
             const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true;
+                    detailRow.newRecord = true;
                     detailRow.id = detailRow.lineNumber;
                     this.details.push(detailRow);
                     this.showNewOrderDetail();
@@ -647,7 +647,7 @@ export default {
                     
                     if (!self.details.some(d => d.itemDemandDetailId == demandDetail.id)){
                         var newRow = {};
-                        newRow.newDetail = true;
+                        newRow.newRecord = true;
                         newRow.demandConsumes = [
                             {
                                 itemDemandDetailId: demandDetail.id,

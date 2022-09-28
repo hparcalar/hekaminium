@@ -6,7 +6,7 @@ exports.modules = {
 
 "use strict";
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=template&id=967aacc8&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=template&id=513c36f8&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -28,7 +28,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Input.vue?vue&type=template&id=967aacc8&
+// CONCATENATED MODULE: ./components/Input.vue?vue&type=template&id=513c36f8&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Input.vue?vue&type=script&lang=js&
 /* harmony default export */ var Inputvue_type_script_lang_js_ = ({
@@ -166,12 +166,12 @@ var staticRenderFns = [];
       this.$emit('change');
     },
 
-    inputKeyUp() {
+    inputKeyUp(event) {
       if (this.keyUp) {
         this.keyUp();
       }
 
-      this.$emit('keyUp');
+      this.$emit('keyUp', event);
     }
 
   },
@@ -219,7 +219,7 @@ module.exports = __webpack_require__.p + "img/login-logo.addd90a.png";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/login_page.vue?vue&type=template&id=31da9b5a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/login_page.vue?vue&type=template&id=61dd1011&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -262,6 +262,9 @@ var render = function render() {
   }, [_c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
+    on: {
+      "keyUp": _vm.checkLoginKey
+    },
     model: {
       value: _vm.loginData.login,
       callback: function ($$v) {
@@ -274,6 +277,9 @@ var render = function render() {
   }, [_c('ScInput', {
     attrs: {
       "type": "password"
+    },
+    on: {
+      "keyUp": _vm.checkLoginKey
     },
     model: {
       value: _vm.loginData.password,
@@ -301,7 +307,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/login_page.vue?vue&type=template&id=31da9b5a&
+// CONCATENATED MODULE: ./pages/login_page.vue?vue&type=template&id=61dd1011&
 
 // EXTERNAL MODULE: ./components/Input.vue + 4 modules
 var Input = __webpack_require__(122);
@@ -379,6 +385,12 @@ var composable_userSession = __webpack_require__(8);
         } else self.showNotification('Hatalı giriş', false, 'error');
       } catch (error) {
         self.showNotification('Hatalı giriş', false, 'error');
+      }
+    },
+
+    checkLoginKey(event) {
+      if (event.keyCode == 13) {
+        this.tryLogin();
       }
     },
 

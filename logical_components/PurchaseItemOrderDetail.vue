@@ -96,19 +96,19 @@
                             </ScInput>
                         </div>
                         <div>
-                            <ScInput :type="'number'" v-model="fUnitPrice" @change="calculateTotal">
+                            <ScInput v-model="fUnitPrice" @change="calculateTotal">
                                 <label>Birim Fiyat</label>
                             </ScInput>
                         </div>
                         <div>
                             <div class="uk-child-width-1-2@m uk-grid">
                                 <div>
-                                    <ScInput :type="'number'" v-model="fOverallTotal" :read-only="true">
+                                    <ScInput v-model="fOverallTotal" :read-only="true">
                                         <label>Satır Tutarı</label>
                                     </ScInput>
                                 </div>
                                 <div>
-                                    <ScInput :type="'number'" v-model="fOverallLocal" :read-only="true">
+                                    <ScInput v-model="fOverallLocal" :read-only="true">
                                         <label>TL Tutarı</label>
                                     </ScInput>
                                 </div>
@@ -151,6 +151,7 @@ import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
+import { parseLocaleNumber } from '~/composable/useHelpers';
 import moment from '~/plugins/moment'
 import axios, { AxiosInstance } from 'axios'
 
@@ -199,18 +200,18 @@ export default {
 			itemId: null,
             projectId: null,
             forexId: null,
-            forexRate: 0,
+            forexRate: null,
             taxIncluded: false,
             taxRate: 18,
             itemName: '',
             explanation: '',
             unitId: null,
-            unitPrice: 0,
-            quantity: 0,
+            unitPrice: null,
+            quantity: null,
             netQuantity: 0,
 			receiptStatus: 0,
-            overallTotal: 0,
-            overallLocal: 0,
+            overallTotal: null,
+            overallLocal: null,
             partNo: '',
             partDimensions: '',
             itemExplanation: '',
@@ -229,49 +230,65 @@ export default {
             { id:4, text: 'İptal edildi' },
         ],
         currentReceiptStatus: 0,
+        tUnitPrice: '',
+        tOverallTotal: '',
+        tForexOverallTotal: '',
 	}),
     computed: {
         fUnitPrice:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.unitPrice);
+				return this.tUnitPrice.length > 0 ? this.tUnitPrice : this.formData.unitPrice > 0 ? new Intl.NumberFormat("tr-TR", 
+                { minimumFractionDigits: 0 }).format(this.formData.unitPrice) : '';
 			},
 			set: function(val){
 				if (!val || val.length == 0)
 					this.formData.unitPrice = null;
 				else{
-					let procStr = val.replace('.', '').replace('.', '').replace('.','')
-						.replace(',','.');
-					this.formData.unitPrice = parseFloat(procStr);
+                    // if (val.length > 0 && val[val.length - 1] == ',' || val[val.length - 1] == '.')
+                    //     val += '0';
+
+					// let procStr = val.replace('.', '').replace('.', '').replace('.','')
+					// 	.replace(',','.');
+                    // this.tUnitPrice = val;
+					this.formData.unitPrice = parseLocaleNumber(val, 'tr-TR');
+
+                    if (this.formData.unitPrice)
+                        this.tUnitPrice = '';
 				}
 			}
 		},
         fOverallTotal:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.overallTotal);
+				return this.tForexOverallTotal.length > 0 ? this.tForexOverallTotal : new Intl.NumberFormat("tr-TR", 
+                { minimumFractionDigits: 0 }).format(this.formData.overallTotal);
 			},
 			set: function(val){
 				if (!val || val.length == 0)
 					this.formData.overallTotal = null;
 				else{
-					let procStr = val.replace('.', '').replace('.', '').replace('.','')
-						.replace(',','.');
-					this.formData.overallTotal = parseFloat(procStr);
+					// let procStr = val.replace('.', '').replace('.', '').replace('.','')
+					// 	.replace(',','.');
+					// this.formData.overallTotal = parseFloat(procStr);
+
+                    this.formData.overallTotal = parseLocaleNumber(val, 'tr-TR');
+                    if (this.formData.overallTotal)
+                        this.tForexOverallTotal = '';
 				}
 			}
 		},
         fOverallLocal:{
 			get: function(){
-				return new Intl.NumberFormat("tr-TR").format(this.formData.overallLocal);
+                try {
+                    let forexRate = 1;
+                    if(this.formData.forexId && this.formData.forexId > 0)
+                        forexRate = this.formData.forexRate;
+
+                    return new Intl.NumberFormat("tr-TR", 
+                        { minimumFractionDigits: 0 }).format(this.formData.overallTotal * forexRate);
+                } catch (error) {
+                    return '';
+                }
 			},
-			set: function(val){
-				if (!val || val.length == 0)
-					this.formData.overallLocal = null;
-				else{
-					let procStr = val.replace('.', '').replace('.', '').replace('.','')
-						.replace(',','.');
-					this.formData.overallLocal = parseFloat(procStr);
-				}
-			}
 		},
     },
 	async mounted () {
@@ -289,17 +306,17 @@ export default {
                     itemId: null,
                     projectId: null,
                     forexId: null,
-                    forexRate: 0,
+                    forexRate: null,
                     taxIncluded: false,
                     taxRate: 18,
                     itemName: '',
                     explanation: '',
                     unitId: null,
-                    unitPrice: 0,
-                    quantity: 0,
+                    unitPrice: null,
+                    quantity: null,
                     netQuantity: 0,
                     receiptStatus: 0,
-                    overallTotal: 0,
+                    overallTotal: null,
                     partNo: '',
                     partDimensions: '',
                     demandConsumes: [],

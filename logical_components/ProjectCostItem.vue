@@ -175,14 +175,14 @@ export default {
             costName: '',
 			itemId: '',
             forexId: '',
-            forexRate: 0,
+            forexRate: null,
             itemName: '',
             explanation: '',
-            unitPrice: 0,
-            quantity: 0,
+            unitPrice: null,
+            quantity: null,
             netQuantity: 0,
-            overallTotal: 0,
-            forexOverallTotal: 0,
+            overallTotal: null,
+            forexOverallTotal: null,
             newDetail: true,
             partNo: '',
             partDimensions: '',
@@ -204,16 +204,16 @@ export default {
                     id: 0,
                     lineNumber: 0,
                     costName: '',
-                    itemId: null,
-                    forexId: null,
-                    forexRate: 0,
+                    itemId: '',
+                    forexId: '',
+                    forexRate: null,
                     itemName: '',
                     explanation: '',
-                    unitPrice: 0,
-                    quantity: 0,
+                    unitPrice: null,
+                    quantity: null,
                     netQuantity: 0,
-                    overallTotal: 0,
-                    forexOverallTotal: 0,
+                    overallTotal: null,
+                    forexOverallTotal: null,
                     newDetail: true,
                     partNo: '',
                     partDimensions: '',
@@ -257,6 +257,9 @@ export default {
             }
 
             this.calculateTotal();
+
+            if (this.formData.id == 0)
+                await this.selectDefaultForex();
         },
         async bindItems(){
             // fetch items for selection
@@ -268,6 +271,16 @@ export default {
                         text: d.itemName,
                     };
                 });
+            } catch (error) {
+                
+            }
+        },
+        async selectDefaultForex(){
+            try {
+                const defForex = this.forexList.find(d => d.text == 'EUR');
+                if (defForex){
+                    await this.updateLiveForexRate(defForex.id);
+                }
             } catch (error) {
                 
             }

@@ -129,7 +129,7 @@ export default {
             itemExplanation: '',
             explanation: '',
             unitId: null,
-            quantity: 0,
+            quantity: null,
             netQuantity: 0,
 			demandStatus: 0,
             demandDate: null,

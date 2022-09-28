@@ -241,7 +241,7 @@ export default {
             const detailRow = detailParam.data;
             if (detailParam.action == 'save'){
                 if (detailRow.id == 0){
-                    detailRow.newDetail = true;
+                    detailRow.newRecord = true;
                     detailRow.id = detailRow.lineNumber;
                     detailRow.partNo = detailRow.partNo ?? '';
                     detailRow.partDimensions = detailRow.partDimensions ?? '';

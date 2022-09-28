@@ -8,6 +8,7 @@ exports.modules = {
 /* WEBPACK VAR INJECTION */(function(URLSearchParams) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getQS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return dateToStr; });
 /* unused harmony export strToDate */
+/* unused harmony export parseLocaleNumber */
 function getQS(key) {
   const queryString = window.location.search;
   const parameters = new URLSearchParams(queryString);
@@ -34,6 +35,11 @@ function strToDate(dateString) {
   } catch (error) {}
 
   return null;
+}
+function parseLocaleNumber(stringNumber, locale) {
+  var thousandSeparator = Intl.NumberFormat(locale).format(11111).replace(/\p{Number}/gu, '');
+  var decimalSeparator = Intl.NumberFormat(locale).format(1.1).replace(/\p{Number}/gu, '');
+  return parseFloat(stringNumber.replace(new RegExp('\\' + thousandSeparator, 'g'), '').replace(new RegExp('\\' + decimalSeparator), '.'));
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(42)["URLSearchParams"]))
 

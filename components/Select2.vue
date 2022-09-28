@@ -5,7 +5,7 @@
 			'select2-wrapper-success': successState
 		}"
 	>
-		<select :id="id" class="form-control" :placeholder="placeholder" :disabled="disabled">
+		<select :id="id" class="form-control" ref="selfSelector" :placeholder="placeholder" :disabled="disabled">
 			<slot></slot>
 		</select>
 	</div>
@@ -164,7 +164,15 @@ export default {
 				this.select2.val([val]);
 			}
 			this.select2.trigger('change');
-		}
+		},
+		// setFocusToInput(){
+			
+		// 	console.error($(this.$refs.selfSelector));
+		// 	setTimeout(function(){
+				
+		// 		$($(this.$refs.selfSelector).children('input')[0]).focus();
+		// 	}, 500);
+		// },
 	}
 };
 </script>
