@@ -1,7 +1,7 @@
 exports.ids = [108];
 exports.modules = {
 
-/***/ 124:
+/***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
 if (false) {}
@@ -15,7 +15,7 @@ if (false) {}
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(124);
+/* harmony import */ var _jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(125);
 /* harmony import */ var _jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_jquery__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _assets_js_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 
@@ -71,13 +71,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive("scSticky", {
 
 /***/ }),
 
-/***/ 479:
+/***/ 483:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(599);
+var content = __webpack_require__(621);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -89,26 +89,26 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 597:
+/***/ 619:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"id\":1,\"title\":\"Shop list\",\"body\":\"Consectetur adipisicing elit. Aliquam molestias quidem repellendus saepe vero! Assumenda fugiat perferendis reiciendis repellat.\",\"user\":\"Joey\",\"labels\":[\"tag1\",\"tag2\",\"tag3\",\"tag4\"],\"folder\":\"work\",\"dueDate\":\"23/08/2019\",\"checklist\":[{\"label\":\"Beef Mince (500g)\",\"value\":\"item_1\",\"checked\":true,\"id\":\"checkbox_1\",\"name\":\"checkbox_1\"},{\"label\":\"Fresh Orange Juice (1L)\",\"value\":\"item_2\",\"checked\":false,\"id\":\"checkbox_2\",\"name\":\"checkbox_2\"},{\"label\":\"Cheese (250g)\",\"value\":\"item_3\",\"checked\":false,\"id\":\"checkbox_3\",\"name\":\"checkbox_3\"},{\"label\":\"Tomatoes (1kg)\",\"value\":\"item_4\",\"checked\":false,\"id\":\"checkbox_4\",\"name\":\"checkbox_4\"},{\"label\":\"Apples (pack of 5)\",\"value\":\"item_5\",\"checked\":false,\"id\":\"checkbox_5\",\"name\":\"checkbox_5\"}],\"cardColor\":\"amber\",\"visible\":true},{\"id\":2,\"title\":\"Book Flight to New York\",\"body\":\"Check flights on <a href='https://www.skyscanner.net/transport/flights/pari/nyca'>Skyscanner</a> and also on <a href='https://www.google.com/flights'>Google Flights</a>\",\"user\":\"Eve\",\"labels\":[\"tag1\",\"tag4\"],\"folder\":\"important\",\"cardColor\":\"red\",\"visible\":true},{\"id\":3,\"title\":\"Todo List\",\"body\":\"Consectetur adipisicing elit. Aliquam molestias quidem repellendus saepe vero! Assumenda fugiat perferendis reiciendis repellat.\",\"user\":\"Mark\",\"labels\":[\"tag2\",\"tag4\"],\"checklist\":[{\"label\":\"To Do 1\",\"checked\":true,\"id\":\"todo_1\",\"name\":\"todo_1\"},{\"label\":\"To Do 2\",\"checked\":true,\"id\":\"todo_2\",\"name\":\"todo_2\"},{\"label\":\"To Do 3\",\"checked\":true,\"id\":\"todo_3\",\"name\":\"todo_3\"}],\"folder\":\"work\",\"cardColor\":\"green\",\"visible\":true},{\"id\":4,\"title\":\"Call John\",\"body\":\"Alias blanditiis dolor dolore eius odio possimus, suscipit ullam vel! Alias blanditiis dolor dolore.\",\"user\":\"Alan\",\"labels\":[\"tag3\"],\"folder\":\"todo\",\"cardColor\":\"blue\",\"visible\":true},{\"id\":5,\"title\":\"UIkit and reactive JavaScript frameworks\",\"body\":\"UIkit is listening for DOM manipulations and will automatically initialize, connect and disconnect components as they are inserted or removed from the DOM. That way it can easily be used with JavaScript frameworks like Vue.js and React.\",\"user\":\"Tom\",\"labels\":[\"tag3\"],\"folder\":\"todo\",\"cardColor\":\"brown\",\"visible\":true},{\"id\":6,\"title\":\"Note 5\",\"body\":\"Ab aperiam debitis eius error eveniet itaque placeat praesentium quod. Alias blanditiis dolor dolore eius odio possimus, suscipit ullam vel!\",\"user\":\"Mark\",\"labels\":[\"tag2\",\"tag4\"],\"folder\":\"personal\",\"cardColor\":\"\",\"visible\":true},{\"id\":7,\"title\":\"Important informations\",\"body\":\"A commodi consequatur dicta dolorum ea earum facilis fuga, id maiores obcaecati officia quas quia quis quos ratione reprehenderit rerum, sed sint vero voluptas? Autem consequatur consequuntur cumque doloribus enim laudantium, magnam quibusdam rem repellat sunt?\",\"user\":\"Kate\",\"labels\":[\"tag1\",\"tag2\"],\"folder\":\"important\",\"cardColor\":\"red\",\"visible\":true},{\"id\":8,\"title\":\"Personal informations\",\"body\":\"Alias blanditiis dolor dolore eius odio possimus, suscipit ullam vel! Alias blanditiis dolor dolore.\",\"user\":\"Kate\",\"labels\":[\"tag2\",\"tag4\"],\"folder\":\"personal\",\"cardColor\":\"amber\",\"visible\":true}]");
 
 /***/ }),
 
-/***/ 598:
+/***/ 620:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(479);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(483);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_notes_vue_vue_type_style_index_0_id_1c7bd90a_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 599:
+/***/ 621:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -122,7 +122,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 807:
+/***/ 850:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -376,7 +376,7 @@ var stickyKit = __webpack_require__(288);
 var utils = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/pages/notes.vue?vue&type=script&lang=js&
-const notes = __webpack_require__(597);
+const notes = __webpack_require__(619);
 
 
 
@@ -488,7 +488,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(598)
+  var style0 = __webpack_require__(620)
 if (style0.__inject__) style0.__inject__(context)
 
 }

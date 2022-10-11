@@ -23,6 +23,10 @@ export default {
 	computed: {
 		
 	},
+	beforeDestroy(){
+		if (UIkit.modal('.uk-modal'))
+			UIkit.modal('.uk-modal').$destroy(true);
+	},
 	mounted () {
         const qsId = getQS('id');
         if (qsId) this.demandId = parseInt(qsId);

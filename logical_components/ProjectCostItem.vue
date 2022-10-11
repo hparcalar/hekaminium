@@ -183,7 +183,7 @@ export default {
             netQuantity: 0,
             overallTotal: null,
             forexOverallTotal: null,
-            newDetail: true,
+            newRecord: true,
             partNo: '',
             partDimensions: '',
 		},
@@ -214,7 +214,7 @@ export default {
                     netQuantity: 0,
                     overallTotal: null,
                     forexOverallTotal: null,
-                    newDetail: true,
+                    newRecord: true,
                     partNo: '',
                     partDimensions: '',
                 };

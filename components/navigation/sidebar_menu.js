@@ -30,6 +30,12 @@ export const menuEntries = [
 			},
 			{
 				id: uniqueID(),
+				icon: "mdi mdi-offer",
+				title: "Teklif",
+				page: "/purchasing/item-offer/list"
+			},
+			{
+				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
 				title: "Sipariş",
 				page: "/purchasing/item-order/list"
@@ -79,6 +85,12 @@ export const menuEntries = [
 				visible: function(){
 					return checkAuth('ItemOrderApproval');
 				},
+			},
+			{
+				id: uniqueID(),
+				title: "Saha Servisleri",
+				icon: "mdi mdi-wrench",
+				page: "/project/fieldservice/list"
 			},
 		]
 	},
@@ -181,6 +193,12 @@ export const menuEntries = [
 				page: "/warehouse/live"
 			},
 		]
+	},
+	{
+		id: uniqueID(),
+		title: "İzinler",
+		icon: "mdi mdi-calendar-text",
+		page: "/staffpermit/list",
 	},
 	{
 		section_title: "TANIMLAR",

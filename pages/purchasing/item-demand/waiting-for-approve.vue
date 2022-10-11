@@ -44,6 +44,10 @@
 										<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 										Grup Oluştur
 									</button>
+									<button v-show="demandsAreReadyForApprove && selectedGroup != null" @click="addToSelectedGroup" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+										<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+										Seçilen Gruba Ekle
+									</button>
 									<button v-show="demandsAreReadyForDeny" @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 										<span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
 										Reddet
@@ -69,12 +73,22 @@
 						</div>
 						<div class="uk-width-2-5@m">
 							<h3>
-								Sipariş Kalemleri
-								<button type="button" @click="redirectOrderForm" style="float:right;"
+								Teklif Kalemleri
+								<button type="button" @click="redirectOfferForm" style="float:right;"
 								class="sc-button sc-button-primary sc-button-small uk-margin-small-right">
-									<span data-uk-icon="icon: check" class="uk-icon"></span>Siparişi Oluştur
+									<span data-uk-icon="icon: check" class="uk-icon"></span>Teklif Oluştur
 								</button>
 							</h3>
+							<div>
+								<client-only>
+									<Select2
+										v-model="selectedFirms"
+										:options="firmList"
+										multiple
+										:settings="{ 'width': '100%', 'placeholder': 'Firmalar', 'allowClear': true }"
+									><label>Firmalar</label></Select2>
+								</client-only>
+							</div>
 							<table class="uk-table uk-table-striped uk-table-responsive uk-table-small" style="width:100%">
 								<tr>
 									<th class="uk-text-nowrap">
@@ -93,10 +107,11 @@
 										#
 									</th>
 								</tr>
-								<!-- ORDER DETAILS -->
-								<tr v-for="(item,index) in orderDetails" :key="index">
+
+								<!-- OFFER DETAILS -->
+								<tr v-for="(item,index) in offerDetails" :key="index" @click="clickGroupRow(item)" :class="{'group-selected': item == selectedGroup}">
 									<td>
-										<button type="button" @click="expandOrderDetail(item)" class="sc-button sc-button-default sc-button-small uk-margin-small-right">
+										<button type="button" @click="expandOfferDetail(item)" class="sc-button sc-button-default sc-button-small uk-margin-small-right">
 											<span :data-uk-icon="'icon:'+ (item.expanded ? 'minus' : 'plus')" class="uk-icon"></span>
 										</button>
 									</td>
@@ -114,15 +129,16 @@
 										</button>
 									</td>
 								</tr>
+
 								<!-- GROUPED DEMAND DETAILS DEPEND ON SELECTED ORDER DETAIL -->
-								<tr v-for="(item,index) in orderDetails" :key="index" v-if="item.expanded">
+								<tr v-for="(item,index) in offerDetails" :key="index" v-if="item.expanded">
 									<td colspan="5">
 										<div v-if="item.expanded" class="uk-overflow-auto" style="max-height:250px;">
 											<div v-for="(demand, demandIndex) in item.demandDetails" 
 											:key="demandIndex" style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;"
 											class="uk-grid">
 												<div class="uk-width-4-5@m">
-													<p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}</p>
+													<p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}, <b>Proje: </b> {{ demand.projectName }}</p>
 													<p class="uk-padding-remove uk-margin-remove"><b>Açıklama:</b> {{ demand.itemExplanation }}</p>
 													<p class="uk-padding-remove uk-margin-remove"><b>Parça No:</b> {{ demand.partNo }}, <b>Boyut:</b> {{ demand.partDimensions }}, <b>Miktar:</b> {{ demand.quantity }}</p>
 												</div>
@@ -150,11 +166,13 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { dateToStr } from '~/composable/useHelpers';
 import ScInput from '~/components/Input'
+import moment from '~/plugins/moment'
 
 export default {
     name: 'DemandsWaitingForApproveList',
     components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
+		Select2: process.client ? () => import('~/components/Select2') : null,
 		PrettyCheck,
 		ScInput,
     },
@@ -165,13 +183,15 @@ export default {
                 { data: "demandDate", title: "Tarih", visible: true, type:'date' },
                 { data: "itemDemandNo", title: "Talep No", visible: true, },
                 { data: "projectName", title: "Proje Adı", visible: true, },
-                { data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+                { data: "itemName", title: "Stok Adı", width: "40%", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
 				{ data: "partNo", title: "Parça Kodu", visible: true, },
 				{ data: "partDimensions", title: "Boyutlar", visible: true, },
                 { data: "quantity", title: "Miktar", visible: true, },
+				{ data: "userName", title: "Oluşturan", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
+				autoWidth: false,
 				select: true,
 				paging: false,
 				"stateSave": false,
@@ -210,9 +230,13 @@ export default {
 					}
 				]
 			},
+			lastSelectionTime: null,
             selectedDemandRow: { id:0, itemDemandId: 0 },
             selectedDemandIndexes: [],
-			orderDetails: [],
+			selectedGroup: null,
+			offerDetails: [],
+			firmList: [],
+			selectedFirms: [],
 		}
 	},
     computed: {
@@ -291,6 +315,13 @@ export default {
 					demandDate: dateToStr(d.demandDate),
 				}
 			});
+
+			this.firmList = (await api.get('Firm')).data.map(d => {
+				return {
+					id: d.id,
+					text: d.firmName,
+				}
+			});
         },
         dtButtonsInitialized () {
 			// append buttons to custom container
@@ -304,15 +335,29 @@ export default {
 			const selIndex = indexes[0];
 			this.selectedDemandIndexes.push(selIndex);
             this.selectedDemandRow = this.visualData[selIndex];
+
+			this.lastSelectionTime = this.$moment();
         },
 		deselectDemandRow: function(e, dt, type, indexes){
-			const selIndex = indexes[0];
-			this.selectedDemandIndexes = this.selectedDemandIndexes.filter(d => d != selIndex);
-			if (this.selectedDemandIndexes.length > 0){
-				this.selectedDemandRow = this.visualData[this.selectedDemandIndexes[0]];
+			const timeNow = this.$moment();
+			if (timeNow.diff(this.lastSelectionTime) < 1000 && indexes.length == 1 && this.selectedDemandIndexes.length == 1 && indexes[0] == this.selectedDemandIndexes[0]){
+				this.selectedDemandRow = this.visualData[indexes[0]];
+				this.createOrderDetailWithOne();
 			}
+			else{
+				this.selectedDemandIndexes = this.selectedDemandIndexes.filter(d => !indexes.includes(d));
+				if (this.selectedDemandIndexes.length > 0){
+					this.selectedDemandRow = this.visualData[this.selectedDemandIndexes[0]];
+				}
+				else
+					this.selectedDemandRow = { id:0, itemDemandId: 0 };
+			}
+		},
+		clickGroupRow: function(item){
+			if (this.selectedGroup == item)
+				this.selectedGroup = null;
 			else
-				this.selectedDemandRow = { id:0, itemDemandId: 0 };
+				this.selectedGroup = item;
 		},
         async approveDetails(){
 			const self = this;
@@ -382,12 +427,50 @@ export default {
 			this.selectedDemandRow = {id:0};
 			this.visualData = this.visualData.filter(d => !demandList.some(m => m.id == d.id));
 
-			this.orderDetails.push({
+			this.offerDetails.push({
 				expanded: false,
 				itemExplanation: 'Yeni Grup',
 				quantity: 1,
 				demandDetails: demandList,
 			});
+		},
+		createOrderDetailWithOne(){
+			const demandList = [];
+			for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+				const dmnIndex = this.selectedDemandIndexes[i];
+				const dmnObj = this.visualData[dmnIndex];
+				demandList.push(dmnObj);
+			}
+
+			this.selectedDemandIndexes = [];
+			this.selectedDemandRow = {id:0};
+			this.visualData = this.visualData.filter(d => !demandList.some(m => m.id == d.id));
+
+			this.offerDetails.push({
+				expanded: false,
+				itemExplanation: demandList[0].itemName && demandList[0].itemName.length > 0 ? demandList[0].itemName : demandList[0].itemExplanation,
+				quantity: demandList[0].quantity,
+				demandDetails: demandList,
+			});
+		},
+		addToSelectedGroup(){
+			if (this.selectedGroup != null){
+				const demandList = [];
+				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
+					const dmnIndex = this.selectedDemandIndexes[i];
+					const dmnObj = this.visualData[dmnIndex];
+					demandList.push(dmnObj);
+				}
+
+				this.selectedDemandIndexes = [];
+				this.selectedDemandRow = {id:0};
+				this.visualData = this.visualData.filter(d => !demandList.some(m => m.id == d.id));
+
+				for (let i = 0; i < demandList.length; i++) {
+					const element = demandList[i];
+					this.selectedGroup.demandDetails.push(element);
+				}
+			}
 		},
 		removeDemandDetailFromOrder(orderDetail, demandDetail){
 			try {
@@ -402,26 +485,36 @@ export default {
 		},
 		removeOrderDetail(orderDetail){
 			try {
-				const ordIndex = this.orderDetails.indexOf(orderDetail);
+				const ordIndex = this.offerDetails.indexOf(orderDetail);
 				if (ordIndex > -1){
 					for (let i = 0; i < orderDetail.demandDetails.length; i++) {
 						const dmnDetail = orderDetail.demandDetails[i];
 						this.visualData.push(dmnDetail);
 					}
 
-					this.orderDetails.splice(ordIndex, 1);
+					this.offerDetails.splice(ordIndex, 1);
+
+					this.selectedGroup = null;
+					this.selectedDemandIndexes = [];
+					this.selectedDemandRow = null;
 				}
 			} catch (error) {
 				console.error(error);
 			}
 		},
-		redirectOrderForm(){
+		redirectOfferForm(){
 			if (process.client){
-				localStorage.setItem('grouped-demand-details', JSON.stringify(this.orderDetails));
-				this.$router.push('/purchasing/item-order');
+				const self = this;
+
+				UIkit.modal.confirm('Teklif oluşturmak istediğinizden emin misiniz?').then(
+					async function () {
+						localStorage.setItem('grouped-demand-details', JSON.stringify(self.offerDetails));
+						localStorage.setItem('grouped-demand-firms', JSON.stringify(self.selectedFirms));
+						self.$router.push('/purchasing/item-offer');
+				});
 			}
 		},
-		expandOrderDetail(item){
+		expandOfferDetail(item){
 			if(!item.expanded)
 				item.expanded = true;
 			else
@@ -450,5 +543,8 @@ export default {
 <style type="text/css">
 	.demand-denied{
 		background-color: rgba(230, 50, 50, 0.3);
+	}
+	.group-selected, .group-selected td{
+		background-color: #39f;
 	}
 </style>

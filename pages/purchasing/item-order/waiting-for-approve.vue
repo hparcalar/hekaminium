@@ -40,11 +40,11 @@
 						<div class="uk-width-3-5@m">
 							<div class="uk-flex-left uk-grid">
 								<div class="uk-button-group sc-padding-remove-left uk-width-expand uk-margin-medium" style="height:34px;">
-									<button @click="approveDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-3" style="height:34px;">
+									<button @click="approveDetails" type="button" class="sc-button sc-button-success sc-button-small uk-width-1-3" style="height:34px;">
 										<span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
 										Onayla
 									</button>
-									<button @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-3" style="height:34px;">
+									<button @click="denyDetails" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-3" style="height:34px;">
 										<span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
 										Reddet
 									</button>
@@ -74,7 +74,7 @@
                                 :key="demandIndex" style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;"
                                 class="uk-grid">
                                     <div class="uk-width-4-5@m">
-                                        <p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}</p>
+                                        <p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }}, <b>Proje: </b>{{ demand.projectName }}</p>
                                         <p class="uk-padding-remove uk-margin-remove"><b>Açıklama:</b> {{ demand.itemExplanation }}</p>
                                         <p class="uk-padding-remove uk-margin-remove"><b>Parça No:</b> {{ demand.partNo }}, <b>Boyut:</b> {{ demand.partDimensions }}, <b>Miktar:</b> {{ demand.demandQuantity }}</p>
                                     </div>
@@ -110,16 +110,24 @@ export default {
 			dtColumns: [
                 { data: "receiptDate", title: "Tarih", visible: true, type:'date' },
                 { data: "receiptNo", title: "Sipariş No", visible: true, },
-				{ data: "firmName", title: "Firma", visible: true, },
-				{ data: "forexCode", title: "Döviz", visible: true, },
-				{ data: "unitPrice", title: "Birim Fiyat", visible: true, },
-				{ data: "overallTotal", title: "Tutar", visible: true, },
-                { data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+				{ data: "firmName", title: "Firma", width:"30%", visible: true, },
+				{ data: "itemName", title: "Stok", width:"40%",visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
                 { data: "quantity", title: "Miktar", visible: true, },
+				{ data: "forexCode", title: "Döviz", visible: true, },
+				{ data: "forexRate", title: "Kur", visible: true, },
+				{ data: "unitPrice", title: "Birim Fiyat", visible: true, },
+				{ data: "overallTotal", title: "Tutar (Döviz)", visible: true, },
+				{ data: "overallTotal", title: "Tutar (TL)", visible: true, render: function(data,ev,row) { return row.forexId ? row.overallTotal * row.forexRate : row.overallTotal } },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
+				autoWidth:false,
 				select: true,
+				rowCallback: function(row, data, index) {
+					if (data.receiptStatus == 4) {
+						$('td',row).addClass("bg-danger");
+					}
+				},
 				"stateSave": false,
 				buttons: [
 					{
@@ -262,4 +270,9 @@ export default {
 	@import "~scss/common/variables_mixins";
 	@import "~scss/plugins/datatables";
 	@import '~scss/vue/_pretty_checkboxes';
+</style>
+<style type="text/css">
+.bg-danger{
+	background-color: rgba(230,10,10,0.5);
+}
 </style>

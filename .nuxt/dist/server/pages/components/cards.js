@@ -477,21 +477,21 @@ module.exports = __webpack_require__.p + "img/wynand-van-poortvliet-761831-unspl
 
 /***/ }),
 
-/***/ 543:
+/***/ 565:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/avatar_default_md@2x.5eda6a7.png";
 
 /***/ }),
 
-/***/ 544:
+/***/ 566:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/avatar_default_md.8b4f4a9.png";
 
 /***/ }),
 
-/***/ 545:
+/***/ 567:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -583,11 +583,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 545;
+webpackContext.id = 567;
 
 /***/ }),
 
-/***/ 745:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -646,7 +646,7 @@ var render = function render() {
     directives: [{
       name: "rjs",
       rawName: "v-rjs",
-      value: __webpack_require__(543),
+      value: __webpack_require__(565),
       expression: "require('~/assets/img/avatars/avatar_default_md@2x.png')"
     }],
     staticClass: "uk-border-circle",
@@ -1140,7 +1140,7 @@ const {
   }),
   computed: {
     avatarImg() {
-      return __webpack_require__(544);
+      return __webpack_require__(566);
     },
 
     cardImgSrc() {
@@ -1150,7 +1150,7 @@ const {
   },
   methods: {
     getBackgroundImage(image) {
-      return __webpack_require__(545)("./" + image);
+      return __webpack_require__(567)("./" + image);
     },
 
     loadContent() {

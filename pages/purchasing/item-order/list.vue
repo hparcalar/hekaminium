@@ -87,6 +87,12 @@ export default {
 					if (data.isContracted == true) {
 						$('td',row).addClass("bg-warning");
 					}
+					else if (data.receiptStatus == 1){
+						$('td',row).addClass("bg-success");
+					}
+					else if (data.receiptStatus == 4){
+						$('td',row).addClass("bg-danger");
+					}
 				},
 				buttons: [
 					{
@@ -164,5 +170,11 @@ export default {
 <style type="text/css">
 .bg-warning{
 	background-color: #ebd810;
+}
+.bg-danger{
+	background-color: rgba(230,10,10,0.5);
+}
+.bg-success{
+	background-color: rgba(10,230,10,0.5);
 }
 </style>

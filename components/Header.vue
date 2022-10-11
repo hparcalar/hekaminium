@@ -175,6 +175,11 @@
 										<b>{{user.name}}</b> <i><small>{{user.plantCode}}</small></i>
 									</nuxt-link>
 								</li>
+								<li>
+									<nuxt-link to="/purchasing/item-demand/my-demands">
+										Taleplerim
+									</nuxt-link>
+								</li>
 								<!-- <li>
 									<nuxt-link to="/pages/settings">
 										Ayarlar

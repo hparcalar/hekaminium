@@ -1,13 +1,13 @@
 exports.ids = [130];
 exports.modules = {
 
-/***/ 495:
+/***/ 499:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(653);
+var content = __webpack_require__(675);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -19,47 +19,47 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 648:
+/***/ 670:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"title\":\"Books\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"Art of War\",\"type\":\"book\",\"author\":\"Sun Tzu\",\"year\":-500,\"qty\":21,\"price\":5.95},{\"title\":\"The Hobbit\",\"type\":\"book\",\"author\":\"J.R.R. Tolkien\",\"year\":1937,\"qty\":32,\"price\":8.97},{\"title\":\"The Little Prince\",\"type\":\"book\",\"author\":\"Antoine de Saint-Exupery\",\"year\":1943,\"qty\":2946,\"price\":6.82},{\"title\":\"Don Quixote\",\"type\":\"book\",\"author\":\"Miguel de Cervantes\",\"year\":1615,\"qty\":932,\"price\":15.99}]},{\"title\":\"Music\",\"folder\":true,\"children\":[{\"title\":\"Nevermind\",\"type\":\"music\",\"author\":\"Nirvana\",\"year\":1991,\"qty\":916,\"price\":15.95},{\"title\":\"Autobahn\",\"type\":\"music\",\"author\":\"Kraftwerk\",\"year\":1974,\"qty\":2261,\"price\":23.98},{\"title\":\"Kind of Blue\",\"type\":\"music\",\"author\":\"Miles Davis\",\"year\":1959,\"qty\":9735,\"price\":21.9},{\"title\":\"Back in Black\",\"type\":\"music\",\"author\":\"AC/DC\",\"year\":1980,\"qty\":3895,\"price\":17.99},{\"title\":\"The Dark Side of the Moon\",\"type\":\"music\",\"author\":\"Pink Floyd\",\"year\":1973,\"qty\":263,\"price\":17.99},{\"title\":\"Sgt. Pepper's Lonely Hearts Club Band\",\"type\":\"music\",\"author\":\"The Beatles\",\"year\":1967,\"qty\":521,\"price\":13.98}]},{\"title\":\"Electronics & Computers\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"Cell Phones\",\"folder\":true,\"children\":[{\"title\":\"Moto G\",\"type\":\"phone\",\"author\":\"Motorola\",\"year\":2014,\"qty\":332,\"price\":224.99},{\"title\":\"Galaxy S8\",\"type\":\"phone\",\"author\":\"Samsung\",\"year\":2016,\"qty\":952,\"price\":509.99},{\"title\":\"iPhone SE\",\"type\":\"phone\",\"author\":\"Apple\",\"year\":2016,\"qty\":444,\"price\":282.75},{\"title\":\"G6\",\"type\":\"phone\",\"author\":\"LG\",\"year\":2017,\"qty\":951,\"price\":309.99},{\"title\":\"Lumia\",\"type\":\"phone\",\"author\":\"Microsoft\",\"year\":2014,\"qty\":32,\"price\":205.95},{\"title\":\"Xperia\",\"type\":\"phone\",\"author\":\"Sony\",\"year\":2014,\"qty\":77,\"price\":195.95},{\"title\":\"3210\",\"type\":\"phone\",\"author\":\"Nokia\",\"year\":1999,\"qty\":3,\"price\":85.99}]},{\"title\":\"Computers\",\"folder\":true,\"children\":[{\"title\":\"ThinkPad\",\"type\":\"computer\",\"author\":\"IBM\",\"year\":1992,\"qty\":16,\"price\":749.9},{\"title\":\"C64\",\"type\":\"computer\",\"author\":\"Commodore\",\"year\":1982,\"qty\":83,\"price\":595},{\"title\":\"MacBook Pro\",\"type\":\"computer\",\"author\":\"Apple\",\"year\":2006,\"qty\":482,\"price\":1949.95},{\"title\":\"Sinclair ZX Spectrum\",\"type\":\"computer\",\"author\":\"Sinclair Research\",\"year\":1982,\"qty\":1,\"price\":529},{\"title\":\"Apple II\",\"type\":\"computer\",\"author\":\"Apple\",\"year\":1977,\"qty\":17,\"price\":1298},{\"title\":\"PC AT\",\"type\":\"computer\",\"author\":\"IBM\",\"year\":1984,\"qty\":3,\"price\":1235}]}]},{\"title\":\"More...\",\"folder\":true,\"lazy\":true}]");
 
 /***/ }),
 
-/***/ 649:
+/***/ 671:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"title\":\"Sub item\",\"lazy\":true},{\"title\":\"Sub folder\",\"folder\":true,\"lazy\":true}]");
 
 /***/ }),
 
-/***/ 650:
+/***/ 672:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"title\":\"/\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"dev\",\"folder\":true},{\"title\":\"etc\",\"folder\":true,\"children\":[{\"title\":\"cups\"},{\"title\":\"httpd\"},{\"title\":\"init.d\"}]},{\"title\":\"sbin\",\"folder\":true},{\"title\":\"tmp\",\"folder\":true},{\"title\":\"Users\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"jdoe\",\"folder\":true},{\"title\":\"jmiller\",\"folder\":true},{\"title\":\"mysql\",\"folder\":true}]},{\"title\":\"usr\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"bin\",\"folder\":true},{\"title\":\"lib\",\"folder\":true},{\"title\":\"local\",\"folder\":true}]},{\"title\":\"var\",\"expanded\":true,\"folder\":true,\"children\":[{\"title\":\"log\",\"folder\":true},{\"title\":\"spool\",\"folder\":true},{\"title\":\"yp\",\"folder\":true}]}]}]");
 
 /***/ }),
 
-/***/ 651:
+/***/ 673:
 /***/ (function(module) {
 
 module.exports = JSON.parse("[{\"title\":\"Books\",\"expanded\":true,\"folder\":true,\"icon\":\"mdi mdi-book-open-page-variant\",\"children\":[{\"title\":\"Art of War\",\"type\":\"book\",\"author\":\"Sun Tzu\",\"year\":-500,\"qty\":21,\"price\":5.95,\"icon\":\"mdi mdi-book\"},{\"title\":\"The Hobbit\",\"type\":\"book\",\"author\":\"J.R.R. Tolkien\",\"year\":1937,\"qty\":32,\"price\":8.97,\"icon\":\"mdi mdi-book\"},{\"title\":\"The Little Prince\",\"type\":\"book\",\"author\":\"Antoine de Saint-Exupery\",\"year\":1943,\"qty\":2946,\"price\":6.82,\"icon\":\"mdi mdi-book\"},{\"title\":\"Don Quixote\",\"type\":\"book\",\"author\":\"Miguel de Cervantes\",\"year\":1615,\"qty\":932,\"price\":15.99,\"icon\":\"mdi mdi-book\"}]},{\"title\":\"Music\",\"folder\":true,\"icon\":\"mdi mdi-music-circle-outline\",\"children\":[{\"title\":\"Nevermind\",\"type\":\"music\",\"author\":\"Nirvana\",\"year\":1991,\"qty\":916,\"price\":15.95,\"icon\":\"mdi mdi-file-music\"},{\"title\":\"Autobahn\",\"type\":\"music\",\"author\":\"Kraftwerk\",\"year\":1974,\"qty\":2261,\"price\":23.98,\"icon\":\"mdi mdi-file-music\"},{\"title\":\"Kind of Blue\",\"type\":\"music\",\"author\":\"Miles Davis\",\"year\":1959,\"qty\":9735,\"price\":21.9,\"icon\":\"mdi mdi-file-music\"},{\"title\":\"Back in Black\",\"type\":\"music\",\"author\":\"AC/DC\",\"year\":1980,\"qty\":3895,\"price\":17.99,\"icon\":\"mdi mdi-file-music\"},{\"title\":\"The Dark Side of the Moon\",\"type\":\"music\",\"author\":\"Pink Floyd\",\"year\":1973,\"qty\":263,\"price\":17.99,\"icon\":\"mdi mdi-file-music\"},{\"title\":\"Sgt. Pepper's Lonely Hearts Club Band\",\"type\":\"music\",\"author\":\"The Beatles\",\"year\":1967,\"qty\":521,\"price\":13.98,\"icon\":\"mdi mdi-file-music\"}]},{\"title\":\"Electronics & Computers\",\"expanded\":true,\"folder\":true,\"icon\":\"mdi mdi-cellphone-link\",\"children\":[{\"title\":\"Cell Phones\",\"folder\":true,\"icon\":\"mdi mdi-cellphone\",\"children\":[{\"title\":\"Moto G\",\"type\":\"phone\",\"author\":\"Motorola\",\"year\":2014,\"qty\":332,\"price\":224.99,\"icon\":\"mdi mdi-cellphone-android\"},{\"title\":\"Galaxy S8\",\"type\":\"phone\",\"author\":\"Samsung\",\"year\":2016,\"qty\":952,\"price\":509.99,\"icon\":\"mdi mdi-cellphone-android\"},{\"title\":\"iPhone SE\",\"type\":\"phone\",\"author\":\"Apple\",\"year\":2016,\"qty\":444,\"price\":282.75,\"icon\":\"mdi mdi-cellphone-iphone\"},{\"title\":\"G6\",\"type\":\"phone\",\"author\":\"LG\",\"year\":2017,\"qty\":951,\"price\":309.99,\"icon\":\"mdi mdi-cellphone-android\"},{\"title\":\"Lumia\",\"type\":\"phone\",\"author\":\"Microsoft\",\"year\":2014,\"qty\":32,\"price\":205.95,\"icon\":\"mdi mdi-cellphone\"},{\"title\":\"Xperia\",\"type\":\"phone\",\"author\":\"Sony\",\"year\":2014,\"qty\":77,\"price\":195.95,\"icon\":\"mdi mdi-cellphone-android\"},{\"title\":\"3210\",\"type\":\"phone\",\"author\":\"Nokia\",\"year\":1999,\"qty\":3,\"price\":85.99,\"icon\":\"mdi mdi-cellphone-basic\"}]},{\"title\":\"Computers\",\"folder\":true,\"icon\":\"mdi mdi-laptop\",\"children\":[{\"title\":\"ThinkPad\",\"type\":\"computer\",\"author\":\"IBM\",\"year\":1992,\"qty\":16,\"price\":749.9,\"icon\":\"mdi mdi-laptop-windows\"},{\"title\":\"C64\",\"type\":\"computer\",\"author\":\"Commodore\",\"year\":1982,\"qty\":83,\"price\":595,\"icon\":\"mdi mdi-desktop-classic\"},{\"title\":\"MacBook Pro\",\"type\":\"computer\",\"author\":\"Apple\",\"year\":2006,\"qty\":482,\"price\":1949.95,\"icon\":\"mdi mdi-laptop-mac\"},{\"title\":\"Sinclair ZX Spectrum\",\"type\":\"computer\",\"author\":\"Sinclair Research\",\"year\":1982,\"qty\":1,\"price\":529,\"icon\":\"mdi mdi-desktop-classic\"},{\"title\":\"Apple II\",\"type\":\"computer\",\"author\":\"Apple\",\"year\":1977,\"qty\":17,\"price\":1298,\"icon\":\"mdi mdi-desktop-classic\"},{\"title\":\"PC AT\",\"type\":\"computer\",\"author\":\"IBM\",\"year\":1984,\"qty\":3,\"price\":1235,\"icon\":\"mdi mdi-desktop-classic\"}]}]}]");
 
 /***/ }),
 
-/***/ 652:
+/***/ 674:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(495);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(499);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_tree_vue_vue_type_style_index_0_id_4067fd55_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 653:
+/***/ 675:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -73,7 +73,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 824:
+/***/ 867:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -164,13 +164,13 @@ var check_default = /*#__PURE__*/__webpack_require__.n(check_);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/plugins/tree.vue?vue&type=script&lang=js&
 
 
-const treeMSelSource = __webpack_require__(648);
+const treeMSelSource = __webpack_require__(670);
 
-const treeMSelLazy = __webpack_require__(649);
+const treeMSelLazy = __webpack_require__(671);
 
-const treeDnDSource = __webpack_require__(650);
+const treeDnDSource = __webpack_require__(672);
 
-const treeTableSource = __webpack_require__(651);
+const treeTableSource = __webpack_require__(673);
 
 /* harmony default export */ var treevue_type_script_lang_js_ = ({
   name: 'PluginsTree',
@@ -337,7 +337,7 @@ var componentNormalizer = __webpack_require__(1);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(652)
+  var style0 = __webpack_require__(674)
 if (style0.__inject__) style0.__inject__(context)
 
 }

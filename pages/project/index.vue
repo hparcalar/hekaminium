@@ -30,6 +30,11 @@
 								</li>
 								<li>
 									<a href="javascript:void(0)">
+										Servis
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
 										Proje Takvimi
 									</a>
 								</li>
@@ -282,6 +287,37 @@
 										</div>
 									</fieldset>
 								</li>
+								<li>
+									<!-- SERVICE LIST CONTENT -->
+									<div class="sc-padding-medium sc-padding-remove-top">
+										<div class="uk-flex-left uk-grid">
+											<div v-show="selectedServiceRow && selectedServiceRow.id > 0" class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
+												<button type="button" @click="showService" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
+													<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
+													Görüntüle
+												</button>
+												<button v-show="selectedServiceIndexes.length > 0" @click="deleteService" type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4" style="height:34px;">
+													<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
+													Sil
+												</button>
+											</div>
+										</div>
+										<div class="uk-margin-medium uk-margin-remove-left">
+											<client-only>
+												<Datatable
+													id="sc-dt-services-table"
+													ref="serviceTable"
+													:data="serviceList"
+													:options="dtOptions"
+													:customColumns="dtServiceCols"
+													:buttons="true"
+													:customEvents="[{ name: 'select', function: clickServiceRow }, { name: 'deselect', function: deselectServiceRow }]"
+												></Datatable>
+											</client-only>
+										</div>
+										
+									</div>
+								</li>
 								<li>Proje Takvimi</li>
 							</ul>
 						</div>
@@ -343,6 +379,20 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="dlgService" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<ProjectFieldService v-if="refreshServiceForm == true"
+						:record-id="selectedServiceRow.id"
+						:total-detail-count="serviceList.length"
+						:is-dialog="true"
+						:dialog-container="'dlgService'"
+						@onCancel="closeServiceDialog"
+					/>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -358,6 +408,7 @@ import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
 import moment from '~/plugins/moment'
 import axios, { AxiosInstance } from 'axios'
 import { useUserSession } from '~/composable/userSession';
+import ProjectFieldService from '../../logical_components/ProjectFieldService.vue';
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -370,15 +421,16 @@ if(process.client) {
 export default {
 	name: 'ProjectForm',
 	components: {
-		Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		Select2: process.client ? () => import('~/components/Select2') : null,
-		ItemDemand: process.client ? () => import('~/logical_components/ItemDemand') : null,
-		ProjectCostItem: process.client ? () => import('~/logical_components/ProjectCostItem') : null,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
-        PrettyCheck
-	},
+    Datatable: process.client ? () => import("~/components/datatables/Datatables") : null,
+    Select2: process.client ? () => import("~/components/Select2") : null,
+    ItemDemand: process.client ? () => import("~/logical_components/ItemDemand") : null,
+    ProjectCostItem: process.client ? () => import("~/logical_components/ProjectCostItem") : null,
+    ScInput,
+    ScTextarea,
+    PrettyRadio,
+    PrettyCheck,
+    ProjectFieldService
+},
 	data: () => ({
 		formData: {
             id: 0,
@@ -407,12 +459,16 @@ export default {
 			costItems: [],
 		},
 		selectedDemandRow: { id:0, itemDemandId: 0 },
+		selectedServiceRow: { id:0 },
 		selectedCostItemRow: { id:0 },
 		refreshDemandForm: false,
 		refreshCostItemForm: false,
+		refreshServiceForm: false,
         categories: [],
 		demandList: [],
 		forexList: [],
+		serviceList: [],
+		selectedServiceIndexes: [],
 		selectedDemandIndexes: [],
 		selectedCostItemIndexes: [],
         firms: [],
@@ -425,6 +481,7 @@ export default {
 			{ id:'5', text: 'İptal edildi' },
 		],
 		dtOptions: {
+			autoWidth: false,
 			select: true,
 			searching: true,
 			paging: true,
@@ -461,15 +518,16 @@ export default {
 		dtDemandCols: [
 			{ data: "demandDate", title: "Tarih", visible: true, type:'date' },
 			{ data: "itemDemandNo", title: "Talep No", visible: true, },
-			{ data: "itemName", title: "Stok Adı", visible: true, },
+			{ data: "itemName", title: "Stok Adı", width:"40%", visible: true, },
 			{ data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
+			{ data: "userName", title: "Oluşturan", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
 		dtCostItemCols: [
 			{ data: "lineNumber", title: "Sıra No", visible: true, },
-			{ data: "itemName", title: "Stok", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.costName; } },
+			{ data: "itemName", title: "Stok", width: "40%", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.costName; } },
 			{ data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
@@ -478,7 +536,12 @@ export default {
 			{ data: "forexRate", title: "Kur", visible: true, },
 			{ data: "overallTotal", title: "Tutar", visible: false, render: function(data){ return(new Intl.NumberFormat('tr-TR').format(data)); }},
 			// { data: "costStatusText", title: "Durum", visible: true, },
-		]
+		],
+		dtServiceCols: [
+			{ data: "serviceDate", title: "Tarih", visible: true, type:'date' },
+			{ data: "userName", title: "Personel", visible: true, },
+			{ data: "documentNo", title: "Belge No", visible: true, },
+		],
 	}),
 	computed: {
 		demandsAreReadyForApprove(){
@@ -688,6 +751,7 @@ export default {
 					await this.selectDefaultForex();
 
 				await this.bindDemands();
+				await this.bindServices();
 				this.calculateProjectCost();
 				// this.calculateTotal();
             } catch (error) {
@@ -707,6 +771,14 @@ export default {
 				}
 				else
 					this.demandList = [];
+			} catch (error) {
+				
+			}
+		},
+		async bindServices(){
+			const api = useApi();
+			try {
+				this.serviceList = (await api.get('ProjectFieldService/ByProject/' + this.formData.id)).data;
 			} catch (error) {
 				
 			}
@@ -845,12 +917,28 @@ export default {
 
 			UIkit.modal.confirm('Seçilen kalemleri silmek istediğinizden emin misiniz?').then(
 				async function () {
+					const itemsToDelete = [];
 					for (let i = 0; i < self.selectedCostItemIndexes.length; i++) {
-						const costIndex = self.selectedCostItemIndexes[i];
+						const item = self.formData.costItems[self.selectedCostItemIndexes[i]];
+						itemsToDelete.push(item);	
+					}
+
+					for (let i = 0; i < itemsToDelete.length; i++) {
+						const element = itemsToDelete[i];
+						const costIndex = self.formData.costItems.indexOf(element);
 						if(costIndex > -1){
 							self.formData.costItems.splice(costIndex,1);
-						}	
+						}
 					}
+
+					// renumarate items
+					for (let i = 0; i < self.formData.costItems.length; i++) {
+						const element = self.formData.costItems[i];
+						element.lineNumber = i + 1;
+					}
+
+					self.selectedCostItemIndexes = [];
+					self.selectedCostItemRow = null;
 
 					self.calculateTotal();
 			});
@@ -934,6 +1022,32 @@ export default {
                 
             }
         },
+		showService(){
+			this.refreshServiceForm = false;
+			setTimeout(() => { this.refreshServiceForm = true; }, 100);
+
+			const modalElement = document.getElementById('dlgService');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+		},
+		closeServiceDialog(){
+			const modalElement = document.getElementById('dlgService');
+			UIkit.modal(modalElement).hide();
+		},
+		deleteService(){
+			const self = this;
+
+			UIkit.modal.confirm('Seçilen servis kayıtlarını silmek istediğinizden emin misiniz?').then(
+				async function () {
+					for (let i = 0; i < self.selectedServiceIndexes.length; i++) {
+						const costIndex = self.selectedServiceIndexes[i];
+						if(costIndex > -1){
+							self.serviceList.splice(costIndex,1);
+						}
+					}
+			});
+		},
 		clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];
 			this.selectedDemandIndexes.push(selIndex);
@@ -961,6 +1075,20 @@ export default {
 			}
 			else
 				this.selectedCostItemRow = { id:0 };
+		},
+		clickServiceRow: function (e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedServiceIndexes.push(selIndex);
+            this.selectedServiceRow = this.serviceList[selIndex];
+        },
+		deselectServiceRow: function(e, dt, type, indexes){
+			const selIndex = indexes[0];
+			this.selectedServiceIndexes = this.selectedServiceIndexes.filter(d => d != selIndex);
+			if (this.selectedServiceIndexes.length > 0){
+				this.selectedServiceRow = this.serviceList[this.selectedServiceIndexes[0]];
+			}
+			else
+				this.selectedServiceRow = { id:0 };
 		},
 		calculateProjectCost(){
 			try {

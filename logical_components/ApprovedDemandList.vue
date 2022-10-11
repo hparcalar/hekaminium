@@ -76,6 +76,7 @@ export default {
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
 			{ data: "statusText", title: "Durum", visible: true, },
+            { data: "userName", title: "Oluşturan", visible: true, },
 		],
 	}),
 	computed: {

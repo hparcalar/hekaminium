@@ -1,7 +1,7 @@
 exports.ids = [30];
 exports.modules = {
 
-/***/ 552:
+/***/ 574:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue2_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(112);
 /* harmony import */ var vue2_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue2_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue2_perfect_scrollbar_dist_vue2_perfect_scrollbar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(553);
+/* harmony import */ var vue2_perfect_scrollbar_dist_vue2_perfect_scrollbar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(575);
 /* harmony import */ var vue2_perfect_scrollbar_dist_vue2_perfect_scrollbar_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue2_perfect_scrollbar_dist_vue2_perfect_scrollbar_css__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -19,13 +19,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue2_perfect_scrollbar__WEBPACK_I
 
 /***/ }),
 
-/***/ 553:
+/***/ 575:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(554);
+var content = __webpack_require__(576);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -33,7 +33,7 @@ __webpack_require__(7).default("0baf3902", content, true)
 
 /***/ }),
 
-/***/ 554:
+/***/ 576:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -47,7 +47,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 761:
+/***/ 804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,7 +157,7 @@ var staticRenderFns = [];
 // CONCATENATED MODULE: ./pages/components/scrollable.vue?vue&type=template&id=0e9842a6&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/components/scrollable.vue?vue&type=script&lang=js&
-__webpack_require__(552);
+__webpack_require__(574);
 
 /* harmony default export */ var scrollablevue_type_script_lang_js_ = ({
   name: 'ComponentsScrollable',

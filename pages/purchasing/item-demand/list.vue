@@ -76,6 +76,7 @@ export default {
 				{ data: "receiptNo", title: "Talep No", visible: true, },
                 { data: "projectName", title: "Proje", visible: true, },
                 { data: "explanation", title: "Açıklama", visible: true, },
+				{ data: "userName", title: "Oluşturan", visible: true, },
 				{ data: "isContracted", title: "Türü", visible: true, render: function(data, ev, row){ return row && row.isContracted ? 'Fason' : '-'; } },
                 { data: "statusText", title: "Durum", visible: true, },
 			],
@@ -133,14 +134,14 @@ export default {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
 
-            const ls = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
-			this.$refs.buttonsTable.headers.forEach( (value, i) => {
-				this.dtDHeaders.push({
-					'name': value,
-					checked: ls.columns[i].visible,
-					disabled: i === 0
-				})
-			});
+            // const ls = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
+			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
+			// 	this.dtDHeaders.push({
+			// 		'name': value,
+			// 		checked: ls.columns[i].visible,
+			// 		disabled: i === 0
+			// 	})
+			// });
 		},
 		toggleCol (e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);

@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"lang-es-ES.js","2":"lang-fr-FR.js","3":"pages/account_auth","4":"pages/components/accordion","5":"pages/components/alert","6":"pages/components/animations","7":"pages/components/avatars","8":"pages/components/badge_label","9":"pages/components/base","10":"pages/components/breadcrumb","11":"pages/components/buttons","12":"pages/components/cards","13":"pages/components/color_palette","14":"pages/components/drop_dropdowns","15":"pages/components/fab_buttons","16":"pages/components/fancy_footer","17":"pages/components/fancy_toolbar","18":"pages/components/filters","19":"pages/components/footer","20":"pages/components/grid","21":"pages/components/height","22":"pages/components/icons","23":"pages/components/lists","24":"pages/components/masonry","25":"pages/components/modals_dialogs","26":"pages/components/notifications","27":"pages/components/overlay","28":"pages/components/pagination","29":"pages/components/progress_spinners","30":"pages/components/scrollable","31":"pages/components/slider","32":"pages/components/sortable","33":"pages/components/swipe_list","34":"pages/components/tables","35":"pages/components/tabs","36":"pages/components/timeline","37":"pages/components/toolbar","38":"pages/components/tooltips","39":"pages/components/transitions","40":"pages/components/width","41":"pages/dashboard/v1","42":"pages/dashboard/v2","43":"pages/firm-category/index","44":"pages/firm-category/list","45":"pages/firm/index","46":"pages/firm/list","47":"pages/forms/advanced_elements/checkbox_radio","48":"pages/forms/advanced_elements/color_picker","49":"pages/forms/advanced_elements/date_picker","50":"pages/forms/advanced_elements/date_range_picker","51":"pages/forms/advanced_elements/inputmask","52":"pages/forms/advanced_elements/multiselect","53":"pages/forms/advanced_elements/range_slider","54":"pages/forms/advanced_elements/rating","55":"pages/forms/advanced_elements/select2","56":"pages/forms/advanced_elements/switches","57":"pages/forms/advanced_elements/time_picker","58":"pages/forms/dynamic_fields","59":"pages/forms/examples/advertising_evaluation_form","60":"pages/forms/examples/booking_form","61":"pages/forms/examples/car_rental_form","62":"pages/forms/examples/checkout_form","63":"pages/forms/examples/contact_forms","64":"pages/forms/examples/job_application_form","65":"pages/forms/examples/medical_history_form","66":"pages/forms/examples/registration_form","67":"pages/forms/examples/rental_application_form","68":"pages/forms/examples/transaction_feedback_form","69":"pages/forms/regular_elements","70":"pages/forms/validation","71":"pages/forms/wizard","72":"pages/forms/wizard/step1","73":"pages/forms/wizard/step2","74":"pages/forms/wizard/step3","75":"pages/forms/wysiwyg/ckeditor","76":"pages/forms/wysiwyg/quill","77":"pages/index","78":"pages/item-category/index","79":"pages/item-category/list","80":"pages/item/index","81":"pages/item/list","82":"pages/layout/boxed","83":"pages/layout/mini_sidebar","84":"pages/layout/offcanvas_sidebar","85":"pages/layout/top_menu","86":"pages/login_page","87":"pages/login_page_auth","88":"pages/pages/blank","89":"pages/pages/blank_header_expanded","90":"pages/pages/chat","91":"pages/pages/contact_list","92":"pages/pages/contact_list_single","93":"pages/pages/data_visualization","94":"pages/pages/gallery","95":"pages/pages/help_faq","96":"pages/pages/invoices","97":"pages/pages/invoices/_id","98":"pages/pages/invoices/index","99":"pages/pages/invoices/new","100":"pages/pages/issues","101":"pages/pages/issues/details","102":"pages/pages/issues/details/_id","103":"pages/pages/issues/list","104":"pages/pages/mailbox","105":"pages/pages/mailbox/compose","106":"pages/pages/mailbox/index","107":"pages/pages/mailbox/message/_id","108":"pages/pages/notes","109":"pages/pages/poi_listing","110":"pages/pages/pricing_tables","111":"pages/pages/settings","112":"pages/pages/task_board","113":"pages/pages/user_profile","114":"pages/plant/index","115":"pages/plant/list","116":"pages/plugins/ajax","117":"pages/plugins/calendar","118":"pages/plugins/calendar_events","119":"pages/plugins/charts","120":"pages/plugins/code_editor","121":"pages/plugins/data_grid","122":"pages/plugins/datatables","123":"pages/plugins/diff_tool","124":"pages/plugins/gantt_chart","125":"pages/plugins/google_maps","126":"pages/plugins/idle_timeout","127":"pages/plugins/image_cropper","128":"pages/plugins/push_notifications","129":"pages/plugins/tour","130":"pages/plugins/tree","131":"pages/plugins/vector_maps","132":"pages/plugins/vue_good_table","133":"pages/project-category/index","134":"pages/project-category/list","135":"pages/project/index","136":"pages/project/list","137":"pages/purchasing/item-demand/index","138":"pages/purchasing/item-demand/list","139":"pages/purchasing/item-demand/waiting-for-approve","140":"pages/purchasing/item-order/index","141":"pages/purchasing/item-order/list","142":"pages/purchasing/item-order/waiting-for-approve","143":"pages/purchasing/item-receipt/index","144":"pages/purchasing/item-receipt/list","145":"pages/user/member/index","146":"pages/user/member/list","147":"pages/user/role/index","148":"pages/user/role/list","149":"pages/warehouse/index","150":"pages/warehouse/list"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"lang-es-ES.js","2":"lang-fr-FR.js","3":"pages/account_auth","4":"pages/components/accordion","5":"pages/components/alert","6":"pages/components/animations","7":"pages/components/avatars","8":"pages/components/badge_label","9":"pages/components/base","10":"pages/components/breadcrumb","11":"pages/components/buttons","12":"pages/components/cards","13":"pages/components/color_palette","14":"pages/components/drop_dropdowns","15":"pages/components/fab_buttons","16":"pages/components/fancy_footer","17":"pages/components/fancy_toolbar","18":"pages/components/filters","19":"pages/components/footer","20":"pages/components/grid","21":"pages/components/height","22":"pages/components/icons","23":"pages/components/lists","24":"pages/components/masonry","25":"pages/components/modals_dialogs","26":"pages/components/notifications","27":"pages/components/overlay","28":"pages/components/pagination","29":"pages/components/progress_spinners","30":"pages/components/scrollable","31":"pages/components/slider","32":"pages/components/sortable","33":"pages/components/swipe_list","34":"pages/components/tables","35":"pages/components/tabs","36":"pages/components/timeline","37":"pages/components/toolbar","38":"pages/components/tooltips","39":"pages/components/transitions","40":"pages/components/width","41":"pages/dashboard/v1","42":"pages/dashboard/v2","43":"pages/firm-category/index","44":"pages/firm-category/list","45":"pages/firm/index","46":"pages/firm/list","47":"pages/forms/advanced_elements/checkbox_radio","48":"pages/forms/advanced_elements/color_picker","49":"pages/forms/advanced_elements/date_picker","50":"pages/forms/advanced_elements/date_range_picker","51":"pages/forms/advanced_elements/inputmask","52":"pages/forms/advanced_elements/multiselect","53":"pages/forms/advanced_elements/range_slider","54":"pages/forms/advanced_elements/rating","55":"pages/forms/advanced_elements/select2","56":"pages/forms/advanced_elements/switches","57":"pages/forms/advanced_elements/time_picker","58":"pages/forms/dynamic_fields","59":"pages/forms/examples/advertising_evaluation_form","60":"pages/forms/examples/booking_form","61":"pages/forms/examples/car_rental_form","62":"pages/forms/examples/checkout_form","63":"pages/forms/examples/contact_forms","64":"pages/forms/examples/job_application_form","65":"pages/forms/examples/medical_history_form","66":"pages/forms/examples/registration_form","67":"pages/forms/examples/rental_application_form","68":"pages/forms/examples/transaction_feedback_form","69":"pages/forms/regular_elements","70":"pages/forms/validation","71":"pages/forms/wizard","72":"pages/forms/wizard/step1","73":"pages/forms/wizard/step2","74":"pages/forms/wizard/step3","75":"pages/forms/wysiwyg/ckeditor","76":"pages/forms/wysiwyg/quill","77":"pages/index","78":"pages/item-category/index","79":"pages/item-category/list","80":"pages/item/index","81":"pages/item/list","82":"pages/layout/boxed","83":"pages/layout/mini_sidebar","84":"pages/layout/offcanvas_sidebar","85":"pages/layout/top_menu","86":"pages/login_page","87":"pages/login_page_auth","88":"pages/pages/blank","89":"pages/pages/blank_header_expanded","90":"pages/pages/chat","91":"pages/pages/contact_list","92":"pages/pages/contact_list_single","93":"pages/pages/data_visualization","94":"pages/pages/gallery","95":"pages/pages/help_faq","96":"pages/pages/invoices","97":"pages/pages/invoices/_id","98":"pages/pages/invoices/index","99":"pages/pages/invoices/new","100":"pages/pages/issues","101":"pages/pages/issues/details","102":"pages/pages/issues/details/_id","103":"pages/pages/issues/list","104":"pages/pages/mailbox","105":"pages/pages/mailbox/compose","106":"pages/pages/mailbox/index","107":"pages/pages/mailbox/message/_id","108":"pages/pages/notes","109":"pages/pages/poi_listing","110":"pages/pages/pricing_tables","111":"pages/pages/settings","112":"pages/pages/task_board","113":"pages/pages/user_profile","114":"pages/plant/index","115":"pages/plant/list","116":"pages/plugins/ajax","117":"pages/plugins/calendar","118":"pages/plugins/calendar_events","119":"pages/plugins/charts","120":"pages/plugins/code_editor","121":"pages/plugins/data_grid","122":"pages/plugins/datatables","123":"pages/plugins/diff_tool","124":"pages/plugins/gantt_chart","125":"pages/plugins/google_maps","126":"pages/plugins/idle_timeout","127":"pages/plugins/image_cropper","128":"pages/plugins/push_notifications","129":"pages/plugins/tour","130":"pages/plugins/tree","131":"pages/plugins/vector_maps","132":"pages/plugins/vue_good_table","133":"pages/project-category/index","134":"pages/project-category/list","135":"pages/project/fieldservice/index","136":"pages/project/fieldservice/list","137":"pages/project/index","138":"pages/project/list","139":"pages/purchasing/item-demand/index","140":"pages/purchasing/item-demand/list","141":"pages/purchasing/item-demand/my-demands","142":"pages/purchasing/item-demand/waiting-for-approve","143":"pages/purchasing/item-offer/index","144":"pages/purchasing/item-offer/list","145":"pages/purchasing/item-order/index","146":"pages/purchasing/item-order/list","147":"pages/purchasing/item-order/waiting-for-approve","148":"pages/purchasing/item-receipt/index","149":"pages/purchasing/item-receipt/list","150":"pages/staffpermit/index","151":"pages/staffpermit/list","152":"pages/user/member/index","153":"pages/user/member/list","154":"pages/user/role/index","155":"pages/user/role/list","156":"pages/warehouse/index","157":"pages/warehouse/list","158":"pages/warehouse/live"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -4615,301 +4615,317 @@ function shouldScrollToTop(route) {
 
 
 
-const _1bb89a48 = () => interopDefault(__webpack_require__.e(/* import() | pages/account_auth */ 3).then(__webpack_require__.bind(null, 726)));
+const _1bb89a48 = () => interopDefault(__webpack_require__.e(/* import() | pages/account_auth */ 3).then(__webpack_require__.bind(null, 769)));
 
-const _e06c81ba = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/index */ 45).then(__webpack_require__.bind(null, 727)));
+const _e06c81ba = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/index */ 45).then(__webpack_require__.bind(null, 770)));
 
-const _2a2ade7e = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/index */ 43).then(__webpack_require__.bind(null, 728)));
+const _2a2ade7e = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/index */ 43).then(__webpack_require__.bind(null, 771)));
 
-const _10fefdb8 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/index */ 80).then(__webpack_require__.bind(null, 729)));
+const _10fefdb8 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/index */ 80).then(__webpack_require__.bind(null, 772)));
 
-const _2cba3789 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/index */ 78).then(__webpack_require__.bind(null, 730)));
+const _2cba3789 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/index */ 78).then(__webpack_require__.bind(null, 773)));
 
-const _50add507 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page */ 86).then(__webpack_require__.bind(null, 731)));
+const _50add507 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page */ 86).then(__webpack_require__.bind(null, 774)));
 
-const _daaa8ee0 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page_auth */ 87).then(__webpack_require__.bind(null, 732)));
+const _daaa8ee0 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page_auth */ 87).then(__webpack_require__.bind(null, 775)));
 
-const _63adc9bc = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/index */ 114).then(__webpack_require__.bind(null, 733)));
+const _63adc9bc = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/index */ 114).then(__webpack_require__.bind(null, 776)));
 
-const _fccbd92c = () => interopDefault(__webpack_require__.e(/* import() | pages/project/index */ 135).then(__webpack_require__.bind(null, 734)));
+const _fccbd92c = () => interopDefault(__webpack_require__.e(/* import() | pages/project/index */ 137).then(__webpack_require__.bind(null, 761)));
 
-const _1bd76a17 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/index */ 133).then(__webpack_require__.bind(null, 735)));
+const _1bd76a17 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/index */ 133).then(__webpack_require__.bind(null, 777)));
 
-const _d8c09dd8 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/index */ 149).then(__webpack_require__.bind(null, 736)));
+const _483549cc = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/index */ 150).then(__webpack_require__.bind(null, 778)));
 
-const _a5b0011e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/accordion */ 4).then(__webpack_require__.bind(null, 737)));
+const _d8c09dd8 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/index */ 156).then(__webpack_require__.bind(null, 779)));
 
-const _0abd0a05 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/alert */ 5).then(__webpack_require__.bind(null, 738)));
+const _a5b0011e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/accordion */ 4).then(__webpack_require__.bind(null, 780)));
 
-const _4aebbf16 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/animations */ 6).then(__webpack_require__.bind(null, 739)));
+const _0abd0a05 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/alert */ 5).then(__webpack_require__.bind(null, 781)));
 
-const _404ae8ba = () => interopDefault(__webpack_require__.e(/* import() | pages/components/avatars */ 7).then(__webpack_require__.bind(null, 740)));
+const _4aebbf16 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/animations */ 6).then(__webpack_require__.bind(null, 782)));
 
-const _33e1ed7e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/badge_label */ 8).then(__webpack_require__.bind(null, 741)));
+const _404ae8ba = () => interopDefault(__webpack_require__.e(/* import() | pages/components/avatars */ 7).then(__webpack_require__.bind(null, 783)));
 
-const _f8947290 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/base */ 9).then(__webpack_require__.bind(null, 742)));
+const _33e1ed7e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/badge_label */ 8).then(__webpack_require__.bind(null, 784)));
 
-const _9959a0ac = () => interopDefault(__webpack_require__.e(/* import() | pages/components/breadcrumb */ 10).then(__webpack_require__.bind(null, 743)));
+const _f8947290 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/base */ 9).then(__webpack_require__.bind(null, 785)));
 
-const _5f4de56a = () => interopDefault(__webpack_require__.e(/* import() | pages/components/buttons */ 11).then(__webpack_require__.bind(null, 744)));
+const _9959a0ac = () => interopDefault(__webpack_require__.e(/* import() | pages/components/breadcrumb */ 10).then(__webpack_require__.bind(null, 786)));
 
-const _54580c8c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/cards */ 12).then(__webpack_require__.bind(null, 745)));
+const _5f4de56a = () => interopDefault(__webpack_require__.e(/* import() | pages/components/buttons */ 11).then(__webpack_require__.bind(null, 787)));
 
-const _7b5b5fc8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/color_palette */ 13).then(__webpack_require__.bind(null, 746)));
+const _54580c8c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/cards */ 12).then(__webpack_require__.bind(null, 788)));
 
-const _b5368c4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/drop_dropdowns */ 14).then(__webpack_require__.bind(null, 747)));
+const _7b5b5fc8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/color_palette */ 13).then(__webpack_require__.bind(null, 789)));
 
-const _ec57a89c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fab_buttons */ 15).then(__webpack_require__.bind(null, 721)));
+const _b5368c4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/drop_dropdowns */ 14).then(__webpack_require__.bind(null, 790)));
 
-const _6393de90 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_footer */ 16).then(__webpack_require__.bind(null, 748)));
+const _ec57a89c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fab_buttons */ 15).then(__webpack_require__.bind(null, 764)));
 
-const _25ecdb2e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_toolbar */ 17).then(__webpack_require__.bind(null, 749)));
+const _6393de90 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_footer */ 16).then(__webpack_require__.bind(null, 791)));
 
-const _d9be0638 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/filters */ 18).then(__webpack_require__.bind(null, 750)));
+const _25ecdb2e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_toolbar */ 17).then(__webpack_require__.bind(null, 792)));
 
-const _31bdc8c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/footer */ 19).then(__webpack_require__.bind(null, 751)));
+const _d9be0638 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/filters */ 18).then(__webpack_require__.bind(null, 793)));
 
-const _0571eea6 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/grid */ 20).then(__webpack_require__.bind(null, 752)));
+const _31bdc8c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/footer */ 19).then(__webpack_require__.bind(null, 794)));
 
-const _35e6fe4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/height */ 21).then(__webpack_require__.bind(null, 753)));
+const _0571eea6 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/grid */ 20).then(__webpack_require__.bind(null, 795)));
 
-const _1012c4c3 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/icons */ 22).then(__webpack_require__.bind(null, 754)));
+const _35e6fe4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/height */ 21).then(__webpack_require__.bind(null, 796)));
 
-const _19fd1fbe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/lists */ 23).then(__webpack_require__.bind(null, 755)));
+const _1012c4c3 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/icons */ 22).then(__webpack_require__.bind(null, 797)));
 
-const _3407bba4 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/masonry */ 24).then(__webpack_require__.bind(null, 756)));
+const _19fd1fbe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/lists */ 23).then(__webpack_require__.bind(null, 798)));
 
-const _68816e0e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/modals_dialogs */ 25).then(__webpack_require__.bind(null, 757)));
+const _3407bba4 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/masonry */ 24).then(__webpack_require__.bind(null, 799)));
 
-const _3530ce91 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/notifications */ 26).then(__webpack_require__.bind(null, 758)));
+const _68816e0e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/modals_dialogs */ 25).then(__webpack_require__.bind(null, 800)));
 
-const _a23b2a8e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/overlay */ 27).then(__webpack_require__.bind(null, 722)));
+const _3530ce91 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/notifications */ 26).then(__webpack_require__.bind(null, 801)));
 
-const _aeacd87e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/pagination */ 28).then(__webpack_require__.bind(null, 759)));
+const _a23b2a8e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/overlay */ 27).then(__webpack_require__.bind(null, 765)));
 
-const _d27ccb16 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/progress_spinners */ 29).then(__webpack_require__.bind(null, 760)));
+const _aeacd87e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/pagination */ 28).then(__webpack_require__.bind(null, 802)));
 
-const _4605db4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/scrollable */ 30).then(__webpack_require__.bind(null, 761)));
+const _d27ccb16 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/progress_spinners */ 29).then(__webpack_require__.bind(null, 803)));
 
-const _1f007908 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/slider */ 31).then(__webpack_require__.bind(null, 762)));
+const _4605db4e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/scrollable */ 30).then(__webpack_require__.bind(null, 804)));
 
-const _7524e0df = () => interopDefault(__webpack_require__.e(/* import() | pages/components/sortable */ 32).then(__webpack_require__.bind(null, 763)));
+const _1f007908 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/slider */ 31).then(__webpack_require__.bind(null, 805)));
 
-const _0fab43ac = () => interopDefault(__webpack_require__.e(/* import() | pages/components/swipe_list */ 33).then(__webpack_require__.bind(null, 764)));
+const _7524e0df = () => interopDefault(__webpack_require__.e(/* import() | pages/components/sortable */ 32).then(__webpack_require__.bind(null, 806)));
 
-const _f71e46e8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tables */ 34).then(__webpack_require__.bind(null, 765)));
+const _0fab43ac = () => interopDefault(__webpack_require__.e(/* import() | pages/components/swipe_list */ 33).then(__webpack_require__.bind(null, 807)));
 
-const _95645636 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tabs */ 35).then(__webpack_require__.bind(null, 766)));
+const _f71e46e8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tables */ 34).then(__webpack_require__.bind(null, 808)));
 
-const _766adca8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/timeline */ 36).then(__webpack_require__.bind(null, 767)));
+const _95645636 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tabs */ 35).then(__webpack_require__.bind(null, 809)));
 
-const _335c2464 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/toolbar */ 37).then(__webpack_require__.bind(null, 768)));
+const _766adca8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/timeline */ 36).then(__webpack_require__.bind(null, 810)));
 
-const _2d7159b7 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tooltips */ 38).then(__webpack_require__.bind(null, 769)));
+const _335c2464 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/toolbar */ 37).then(__webpack_require__.bind(null, 811)));
 
-const _1cf4a6b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/transitions */ 39).then(__webpack_require__.bind(null, 770)));
+const _2d7159b7 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tooltips */ 38).then(__webpack_require__.bind(null, 812)));
 
-const _5ed5696f = () => interopDefault(__webpack_require__.e(/* import() | pages/components/width */ 40).then(__webpack_require__.bind(null, 771)));
+const _1cf4a6b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/transitions */ 39).then(__webpack_require__.bind(null, 813)));
 
-const _1ed22038 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v1 */ 41).then(__webpack_require__.bind(null, 772)));
+const _5ed5696f = () => interopDefault(__webpack_require__.e(/* import() | pages/components/width */ 40).then(__webpack_require__.bind(null, 814)));
 
-const _1ee037b9 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v2 */ 42).then(__webpack_require__.bind(null, 773)));
+const _1ed22038 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v1 */ 41).then(__webpack_require__.bind(null, 815)));
 
-const _6bd455a2 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/list */ 44).then(__webpack_require__.bind(null, 774)));
+const _1ee037b9 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v2 */ 42).then(__webpack_require__.bind(null, 816)));
 
-const _5b976746 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/list */ 46).then(__webpack_require__.bind(null, 775)));
+const _6bd455a2 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/list */ 44).then(__webpack_require__.bind(null, 817)));
 
-const _30ce197b = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/dynamic_fields */ 58).then(__webpack_require__.bind(null, 776)));
+const _5b976746 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/list */ 46).then(__webpack_require__.bind(null, 818)));
 
-const _69dd69fc = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/regular_elements */ 69).then(__webpack_require__.bind(null, 777)));
+const _30ce197b = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/dynamic_fields */ 58).then(__webpack_require__.bind(null, 819)));
 
-const _f67d7f8a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/validation */ 70).then(__webpack_require__.bind(null, 778)));
+const _69dd69fc = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/regular_elements */ 69).then(__webpack_require__.bind(null, 820)));
 
-const _3b0a4da6 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard */ 71).then(__webpack_require__.bind(null, 718)));
+const _f67d7f8a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/validation */ 70).then(__webpack_require__.bind(null, 821)));
 
-const _b5a11afa = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step1 */ 72).then(__webpack_require__.bind(null, 779)));
+const _3b0a4da6 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard */ 71).then(__webpack_require__.bind(null, 760)));
 
-const _b584ebf8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step2 */ 73).then(__webpack_require__.bind(null, 780)));
+const _b5a11afa = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step1 */ 72).then(__webpack_require__.bind(null, 822)));
 
-const _b568bcf6 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step3 */ 74).then(__webpack_require__.bind(null, 781)));
+const _b584ebf8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step2 */ 73).then(__webpack_require__.bind(null, 823)));
 
-const _727fa192 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/list */ 79).then(__webpack_require__.bind(null, 782)));
+const _b568bcf6 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step3 */ 74).then(__webpack_require__.bind(null, 824)));
 
-const _62c26728 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/list */ 81).then(__webpack_require__.bind(null, 783)));
+const _727fa192 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/list */ 79).then(__webpack_require__.bind(null, 825)));
 
-const _235e5d32 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/boxed */ 82).then(__webpack_require__.bind(null, 784)));
+const _62c26728 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/list */ 81).then(__webpack_require__.bind(null, 826)));
 
-const _1d592447 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/mini_sidebar */ 83).then(__webpack_require__.bind(null, 785)));
+const _235e5d32 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/boxed */ 82).then(__webpack_require__.bind(null, 827)));
 
-const _0006803e = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/offcanvas_sidebar */ 84).then(__webpack_require__.bind(null, 786)));
+const _1d592447 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/mini_sidebar */ 83).then(__webpack_require__.bind(null, 828)));
 
-const _741b31dc = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/top_menu */ 85).then(__webpack_require__.bind(null, 787)));
+const _0006803e = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/offcanvas_sidebar */ 84).then(__webpack_require__.bind(null, 829)));
 
-const _0335c952 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank */ 88).then(__webpack_require__.bind(null, 788)));
+const _741b31dc = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/top_menu */ 85).then(__webpack_require__.bind(null, 830)));
 
-const _0752717a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank_header_expanded */ 89).then(__webpack_require__.bind(null, 789)));
+const _0335c952 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank */ 88).then(__webpack_require__.bind(null, 831)));
 
-const _d71641b6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/chat */ 90).then(__webpack_require__.bind(null, 790)));
+const _0752717a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank_header_expanded */ 89).then(__webpack_require__.bind(null, 832)));
 
-const _35f795aa = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list */ 91).then(__webpack_require__.bind(null, 791)));
+const _d71641b6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/chat */ 90).then(__webpack_require__.bind(null, 833)));
 
-const _43fde5a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list_single */ 92).then(__webpack_require__.bind(null, 792)));
+const _35f795aa = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list */ 91).then(__webpack_require__.bind(null, 834)));
 
-const _138f4648 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/data_visualization */ 93).then(__webpack_require__.bind(null, 793)));
+const _43fde5a6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list_single */ 92).then(__webpack_require__.bind(null, 835)));
 
-const _28b82395 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/gallery */ 94).then(__webpack_require__.bind(null, 794)));
+const _138f4648 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/data_visualization */ 93).then(__webpack_require__.bind(null, 836)));
 
-const _e9a86b36 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/help_faq */ 95).then(__webpack_require__.bind(null, 795)));
+const _28b82395 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/gallery */ 94).then(__webpack_require__.bind(null, 837)));
 
-const _3c8a5533 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices */ 96).then(__webpack_require__.bind(null, 796)));
+const _e9a86b36 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/help_faq */ 95).then(__webpack_require__.bind(null, 838)));
 
-const _3c60e976 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/index */ 98).then(__webpack_require__.bind(null, 797)));
+const _3c8a5533 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices */ 96).then(__webpack_require__.bind(null, 839)));
 
-const _3e9ca644 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/new */ 99).then(__webpack_require__.bind(null, 798)));
+const _3c60e976 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/index */ 98).then(__webpack_require__.bind(null, 840)));
 
-const _2ae6d15e = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/_id */ 97).then(__webpack_require__.bind(null, 725)));
+const _3e9ca644 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/new */ 99).then(__webpack_require__.bind(null, 841)));
 
-const _43aec447 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues */ 100).then(__webpack_require__.bind(null, 799)));
+const _2ae6d15e = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/_id */ 97).then(__webpack_require__.bind(null, 768)));
 
-const _022502fa = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details */ 101).then(__webpack_require__.bind(null, 800)));
+const _43aec447 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues */ 100).then(__webpack_require__.bind(null, 842)));
 
-const _245743a5 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details/_id */ 102).then(__webpack_require__.bind(null, 801)));
+const _022502fa = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details */ 101).then(__webpack_require__.bind(null, 843)));
 
-const _1dc22dd4 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/list */ 103).then(__webpack_require__.bind(null, 802)));
+const _245743a5 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details/_id */ 102).then(__webpack_require__.bind(null, 844)));
 
-const _4567b3f7 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox */ 104).then(__webpack_require__.bind(null, 803)));
+const _1dc22dd4 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/list */ 103).then(__webpack_require__.bind(null, 845)));
 
-const _7585253a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/index */ 106).then(__webpack_require__.bind(null, 804)));
+const _4567b3f7 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox */ 104).then(__webpack_require__.bind(null, 846)));
 
-const _352ccc0c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/compose */ 105).then(__webpack_require__.bind(null, 805)));
+const _7585253a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/index */ 106).then(__webpack_require__.bind(null, 847)));
 
-const _48d6b7cc = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/message/_id */ 107).then(__webpack_require__.bind(null, 806)));
+const _352ccc0c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/compose */ 105).then(__webpack_require__.bind(null, 848)));
 
-const _07695a44 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/notes */ 108).then(__webpack_require__.bind(null, 807)));
+const _48d6b7cc = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/message/_id */ 107).then(__webpack_require__.bind(null, 849)));
 
-const _039f21d2 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/poi_listing */ 109).then(__webpack_require__.bind(null, 808)));
+const _07695a44 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/notes */ 108).then(__webpack_require__.bind(null, 850)));
 
-const _40ff88ea = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/pricing_tables */ 110).then(__webpack_require__.bind(null, 809)));
+const _039f21d2 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/poi_listing */ 109).then(__webpack_require__.bind(null, 851)));
 
-const _d8fbf020 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/settings */ 111).then(__webpack_require__.bind(null, 723)));
+const _40ff88ea = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/pricing_tables */ 110).then(__webpack_require__.bind(null, 852)));
 
-const _1ae715b9 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/task_board */ 112).then(__webpack_require__.bind(null, 810)));
+const _d8fbf020 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/settings */ 111).then(__webpack_require__.bind(null, 766)));
 
-const _0bb63182 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/user_profile */ 113).then(__webpack_require__.bind(null, 724)));
+const _1ae715b9 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/task_board */ 112).then(__webpack_require__.bind(null, 853)));
 
-const _5e6feab8 = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/list */ 115).then(__webpack_require__.bind(null, 811)));
+const _0bb63182 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/user_profile */ 113).then(__webpack_require__.bind(null, 767)));
 
-const _3d053f11 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/ajax */ 116).then(__webpack_require__.bind(null, 812)));
+const _5e6feab8 = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/list */ 115).then(__webpack_require__.bind(null, 854)));
 
-const _1b71f4af = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar */ 117).then(__webpack_require__.bind(null, 813)));
+const _3d053f11 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/ajax */ 116).then(__webpack_require__.bind(null, 855)));
 
-const _57963ad9 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar_events */ 118).then(__webpack_require__.bind(null, 814)));
+const _1b71f4af = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar */ 117).then(__webpack_require__.bind(null, 856)));
 
-const _0a7f5c86 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/charts */ 119).then(__webpack_require__.bind(null, 719)));
+const _57963ad9 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar_events */ 118).then(__webpack_require__.bind(null, 857)));
 
-const _73b8669e = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/code_editor */ 120).then(__webpack_require__.bind(null, 815)));
+const _0a7f5c86 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/charts */ 119).then(__webpack_require__.bind(null, 762)));
 
-const _15b7111a = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/data_grid */ 121).then(__webpack_require__.bind(null, 720)));
+const _73b8669e = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/code_editor */ 120).then(__webpack_require__.bind(null, 858)));
 
-const _57971d40 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/datatables */ 122).then(__webpack_require__.bind(null, 816)));
+const _15b7111a = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/data_grid */ 121).then(__webpack_require__.bind(null, 763)));
 
-const _b2c7df1e = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/diff_tool */ 123).then(__webpack_require__.bind(null, 817)));
+const _57971d40 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/datatables */ 122).then(__webpack_require__.bind(null, 859)));
 
-const _42d6965c = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/gantt_chart */ 124).then(__webpack_require__.bind(null, 818)));
+const _b2c7df1e = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/diff_tool */ 123).then(__webpack_require__.bind(null, 860)));
 
-const _eeba6f08 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/google_maps */ 125).then(__webpack_require__.bind(null, 819)));
+const _42d6965c = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/gantt_chart */ 124).then(__webpack_require__.bind(null, 861)));
 
-const _41ce68e7 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/idle_timeout */ 126).then(__webpack_require__.bind(null, 820)));
+const _eeba6f08 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/google_maps */ 125).then(__webpack_require__.bind(null, 862)));
 
-const _1f135188 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/image_cropper */ 127).then(__webpack_require__.bind(null, 821)));
+const _41ce68e7 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/idle_timeout */ 126).then(__webpack_require__.bind(null, 863)));
 
-const _28649798 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/push_notifications */ 128).then(__webpack_require__.bind(null, 822)));
+const _1f135188 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/image_cropper */ 127).then(__webpack_require__.bind(null, 864)));
 
-const _1d071b49 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tour */ 129).then(__webpack_require__.bind(null, 823)));
+const _28649798 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/push_notifications */ 128).then(__webpack_require__.bind(null, 865)));
 
-const _c095dce2 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tree */ 130).then(__webpack_require__.bind(null, 824)));
+const _1d071b49 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tour */ 129).then(__webpack_require__.bind(null, 866)));
 
-const _561e10b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vector_maps */ 131).then(__webpack_require__.bind(null, 825)));
+const _c095dce2 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tree */ 130).then(__webpack_require__.bind(null, 867)));
 
-const _2f780156 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vue_good_table */ 132).then(__webpack_require__.bind(null, 826)));
+const _561e10b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vector_maps */ 131).then(__webpack_require__.bind(null, 868)));
 
-const _210b72e9 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/list */ 134).then(__webpack_require__.bind(null, 827)));
+const _2f780156 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vue_good_table */ 132).then(__webpack_require__.bind(null, 869)));
 
-const _af165994 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/list */ 136).then(__webpack_require__.bind(null, 828)));
+const _210b72e9 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/list */ 134).then(__webpack_require__.bind(null, 870)));
 
-const _15dc5bce = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/index */ 137).then(__webpack_require__.bind(null, 829)));
+const _b0031e54 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/index */ 135).then(__webpack_require__.bind(null, 871)));
 
-const _17166816 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/index */ 140).then(__webpack_require__.bind(null, 830)));
+const _af165994 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/list */ 138).then(__webpack_require__.bind(null, 872)));
 
-const _70321f40 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/index */ 143).then(__webpack_require__.bind(null, 831)));
+const _15dc5bce = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/index */ 139).then(__webpack_require__.bind(null, 873)));
 
-const _06e9ff22 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/index */ 145).then(__webpack_require__.bind(null, 832)));
+const _5db701a4 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/index */ 143).then(__webpack_require__.bind(null, 874)));
 
-const _05b44c6a = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/index */ 147).then(__webpack_require__.bind(null, 833)));
+const _17166816 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/index */ 145).then(__webpack_require__.bind(null, 875)));
 
-const _7c604f68 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/list */ 150).then(__webpack_require__.bind(null, 834)));
+const _70321f40 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/index */ 148).then(__webpack_require__.bind(null, 876)));
 
-const _2a1c833c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/checkbox_radio */ 47).then(__webpack_require__.bind(null, 835)));
+const _5c484894 = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/list */ 151).then(__webpack_require__.bind(null, 877)));
 
-const _3629d767 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/color_picker */ 48).then(__webpack_require__.bind(null, 836)));
+const _06e9ff22 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/index */ 152).then(__webpack_require__.bind(null, 878)));
 
-const _1e60b05c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_picker */ 49).then(__webpack_require__.bind(null, 837)));
+const _05b44c6a = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/index */ 154).then(__webpack_require__.bind(null, 879)));
 
-const _669a1b14 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_range_picker */ 50).then(__webpack_require__.bind(null, 838)));
+const _7c604f68 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/list */ 157).then(__webpack_require__.bind(null, 880)));
 
-const _1ac3aaee = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/inputmask */ 51).then(__webpack_require__.bind(null, 839)));
+const _73c9fccc = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/live */ 158).then(__webpack_require__.bind(null, 881)));
 
-const _fdc83bf0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/multiselect */ 52).then(__webpack_require__.bind(null, 840)));
+const _2a1c833c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/checkbox_radio */ 47).then(__webpack_require__.bind(null, 882)));
 
-const _05f91020 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/range_slider */ 53).then(__webpack_require__.bind(null, 841)));
+const _3629d767 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/color_picker */ 48).then(__webpack_require__.bind(null, 883)));
 
-const _3cf4765a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/rating */ 54).then(__webpack_require__.bind(null, 842)));
+const _1e60b05c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_picker */ 49).then(__webpack_require__.bind(null, 884)));
 
-const _565ebe49 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/select2 */ 55).then(__webpack_require__.bind(null, 843)));
+const _669a1b14 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_range_picker */ 50).then(__webpack_require__.bind(null, 885)));
 
-const _bec86842 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/switches */ 56).then(__webpack_require__.bind(null, 844)));
+const _1ac3aaee = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/inputmask */ 51).then(__webpack_require__.bind(null, 886)));
 
-const _17df6b53 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/time_picker */ 57).then(__webpack_require__.bind(null, 845)));
+const _fdc83bf0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/multiselect */ 52).then(__webpack_require__.bind(null, 887)));
 
-const _b2dd9e70 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/advertising_evaluation_form */ 59).then(__webpack_require__.bind(null, 846)));
+const _05f91020 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/range_slider */ 53).then(__webpack_require__.bind(null, 888)));
 
-const _37f838c4 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/booking_form */ 60).then(__webpack_require__.bind(null, 847)));
+const _3cf4765a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/rating */ 54).then(__webpack_require__.bind(null, 889)));
 
-const _13efcde0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/car_rental_form */ 61).then(__webpack_require__.bind(null, 848)));
+const _565ebe49 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/select2 */ 55).then(__webpack_require__.bind(null, 890)));
 
-const _0770aace = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/checkout_form */ 62).then(__webpack_require__.bind(null, 849)));
+const _bec86842 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/switches */ 56).then(__webpack_require__.bind(null, 891)));
 
-const _4ea1804c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/contact_forms */ 63).then(__webpack_require__.bind(null, 850)));
+const _17df6b53 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/time_picker */ 57).then(__webpack_require__.bind(null, 892)));
 
-const _5b5e506e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/job_application_form */ 64).then(__webpack_require__.bind(null, 851)));
+const _b2dd9e70 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/advertising_evaluation_form */ 59).then(__webpack_require__.bind(null, 893)));
 
-const _ec154c9e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/medical_history_form */ 65).then(__webpack_require__.bind(null, 852)));
+const _37f838c4 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/booking_form */ 60).then(__webpack_require__.bind(null, 894)));
 
-const _3b0f6e86 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/registration_form */ 66).then(__webpack_require__.bind(null, 853)));
+const _13efcde0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/car_rental_form */ 61).then(__webpack_require__.bind(null, 895)));
 
-const _0677ad0a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/rental_application_form */ 67).then(__webpack_require__.bind(null, 854)));
+const _0770aace = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/checkout_form */ 62).then(__webpack_require__.bind(null, 896)));
 
-const _47ed2e19 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/transaction_feedback_form */ 68).then(__webpack_require__.bind(null, 855)));
+const _4ea1804c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/contact_forms */ 63).then(__webpack_require__.bind(null, 897)));
 
-const _1a97ead9 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/ckeditor */ 75).then(__webpack_require__.bind(null, 856)));
+const _5b5e506e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/job_application_form */ 64).then(__webpack_require__.bind(null, 898)));
 
-const _6362abb1 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/quill */ 76).then(__webpack_require__.bind(null, 857)));
+const _ec154c9e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/medical_history_form */ 65).then(__webpack_require__.bind(null, 899)));
 
-const _0279fab2 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/list */ 138).then(__webpack_require__.bind(null, 858)));
+const _3b0f6e86 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/registration_form */ 66).then(__webpack_require__.bind(null, 900)));
 
-const _023c6e50 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/waiting-for-approve */ 139).then(__webpack_require__.bind(null, 859)));
+const _0677ad0a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/rental_application_form */ 67).then(__webpack_require__.bind(null, 901)));
 
-const _b5f58dec = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/list */ 141).then(__webpack_require__.bind(null, 860)));
+const _47ed2e19 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/transaction_feedback_form */ 68).then(__webpack_require__.bind(null, 902)));
 
-const _601f74e6 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/waiting-for-approve */ 142).then(__webpack_require__.bind(null, 861)));
+const _1a97ead9 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/ckeditor */ 75).then(__webpack_require__.bind(null, 903)));
 
-const _d13e16c0 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/list */ 144).then(__webpack_require__.bind(null, 862)));
+const _6362abb1 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/quill */ 76).then(__webpack_require__.bind(null, 904)));
 
-const _7adfb191 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/list */ 146).then(__webpack_require__.bind(null, 863)));
+const _4699184a = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/list */ 136).then(__webpack_require__.bind(null, 905)));
 
-const _41163cb5 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/list */ 148).then(__webpack_require__.bind(null, 864)));
+const _0279fab2 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/list */ 140).then(__webpack_require__.bind(null, 906)));
 
-const _311db640 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 77).then(__webpack_require__.bind(null, 866)));
+const _0549d130 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/my-demands */ 141).then(__webpack_require__.bind(null, 907)));
+
+const _023c6e50 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/waiting-for-approve */ 142).then(__webpack_require__.bind(null, 908)));
+
+const _f3779488 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/list */ 144).then(__webpack_require__.bind(null, 909)));
+
+const _b5f58dec = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/list */ 146).then(__webpack_require__.bind(null, 910)));
+
+const _601f74e6 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/waiting-for-approve */ 147).then(__webpack_require__.bind(null, 911)));
+
+const _d13e16c0 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/list */ 149).then(__webpack_require__.bind(null, 912)));
+
+const _7adfb191 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/list */ 153).then(__webpack_require__.bind(null, 913)));
+
+const _41163cb5 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/list */ 155).then(__webpack_require__.bind(null, 914)));
+
+const _311db640 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 77).then(__webpack_require__.bind(null, 916)));
 
 const emptyFn = () => {};
 
@@ -4960,6 +4976,10 @@ const routerOptions = {
     path: "/project-category",
     component: _1bd76a17,
     name: "project-category"
+  }, {
+    path: "/staffpermit",
+    component: _483549cc,
+    name: "staffpermit"
   }, {
     path: "/warehouse",
     component: _d8c09dd8,
@@ -5364,6 +5384,10 @@ const routerOptions = {
     component: _210b72e9,
     name: "project-category-list"
   }, {
+    path: "/project/fieldservice",
+    component: _b0031e54,
+    name: "project-fieldservice"
+  }, {
     path: "/project/list",
     component: _af165994,
     name: "project-list"
@@ -5372,6 +5396,10 @@ const routerOptions = {
     component: _15dc5bce,
     name: "purchasing-item-demand"
   }, {
+    path: "/purchasing/item-offer",
+    component: _5db701a4,
+    name: "purchasing-item-offer"
+  }, {
     path: "/purchasing/item-order",
     component: _17166816,
     name: "purchasing-item-order"
@@ -5379,6 +5407,10 @@ const routerOptions = {
     path: "/purchasing/item-receipt",
     component: _70321f40,
     name: "purchasing-item-receipt"
+  }, {
+    path: "/staffpermit/list",
+    component: _5c484894,
+    name: "staffpermit-list"
   }, {
     path: "/user/member",
     component: _06e9ff22,
@@ -5391,6 +5423,10 @@ const routerOptions = {
     path: "/warehouse/list",
     component: _7c604f68,
     name: "warehouse-list"
+  }, {
+    path: "/warehouse/live",
+    component: _73c9fccc,
+    name: "warehouse-live"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
     component: _2a1c833c,
@@ -5484,13 +5520,25 @@ const routerOptions = {
     component: _6362abb1,
     name: "forms-wysiwyg-quill"
   }, {
+    path: "/project/fieldservice/list",
+    component: _4699184a,
+    name: "project-fieldservice-list"
+  }, {
     path: "/purchasing/item-demand/list",
     component: _0279fab2,
     name: "purchasing-item-demand-list"
   }, {
+    path: "/purchasing/item-demand/my-demands",
+    component: _0549d130,
+    name: "purchasing-item-demand-my-demands"
+  }, {
     path: "/purchasing/item-demand/waiting-for-approve",
     component: _023c6e50,
     name: "purchasing-item-demand-waiting-for-approve"
+  }, {
+    path: "/purchasing/item-offer/list",
+    component: _f3779488,
+    name: "purchasing-item-offer-list"
   }, {
     path: "/purchasing/item-order/list",
     component: _b5f58dec,
@@ -6064,8 +6112,8 @@ var defaultvue_type_template_id_13793fd6_staticRenderFns = [];
 // EXTERNAL MODULE: ./assets/js/utils.js + 5 modules
 var utils = __webpack_require__(2);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Header.vue?vue&type=template&id=30aacc1f&
-var Headervue_type_template_id_30aacc1f_render = function render() {
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/Header.vue?vue&type=template&id=4455babb&
+var Headervue_type_template_id_4455babb_render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
@@ -6184,7 +6232,11 @@ var Headervue_type_template_id_30aacc1f_render = function render() {
     attrs: {
       "to": "/pages/user_profile"
     }
-  }, [_c('b', [_vm._v(_vm._s(_vm.user.name))]), _vm._v(" "), _c('i', [_c('small', [_vm._v(_vm._s(_vm.user.plantCode))])])])], 1), _vm._ssrNode(" <li><a>\n\t\t\t\t\t\t\t\t\t\tÇıkış Yap\n\t\t\t\t\t\t\t\t\t</a></li>")], 2)])], 2)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" class=\"md-color-white uk-margin-left uk-hidden@l\"" + _vm._ssrStyle(null, null, {
+  }, [_c('b', [_vm._v(_vm._s(_vm.user.name))]), _vm._v(" "), _c('i', [_c('small', [_vm._v(_vm._s(_vm.user.plantCode))])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('nuxt-link', {
+    attrs: {
+      "to": "/purchasing/item-demand/my-demands"
+    }
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTaleplerim\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" <li><a>\n\t\t\t\t\t\t\t\t\t\tÇıkış Yap\n\t\t\t\t\t\t\t\t\t</a></li>")], 2)])], 2)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" class=\"md-color-white uk-margin-left uk-hidden@l\"" + _vm._ssrStyle(null, null, {
     display: _vm.vxOffcanvasPresent ? '' : 'none'
   }) + "><i class=\"mdi mdi-menu\"" + _vm._ssrStyle(null, null, {
     display: !_vm.vxOffcanvasExpanded ? '' : 'none'
@@ -6193,9 +6245,9 @@ var Headervue_type_template_id_30aacc1f_render = function render() {
   }) + "></i></a>")], 2)], 2)]);
 };
 
-var Headervue_type_template_id_30aacc1f_staticRenderFns = [];
+var Headervue_type_template_id_4455babb_staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Header.vue?vue&type=template&id=30aacc1f&
+// CONCATENATED MODULE: ./components/Header.vue?vue&type=template&id=4455babb&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./components/FullScreen.vue?vue&type=template&id=4279c23b&
 var FullScreenvue_type_template_id_4279c23b_render = function render() {
@@ -6743,8 +6795,8 @@ const {
 
 var Header_component = Object(componentNormalizer["a" /* default */])(
   components_Headervue_type_script_lang_js_,
-  Headervue_type_template_id_30aacc1f_render,
-  Headervue_type_template_id_30aacc1f_staticRenderFns,
+  Headervue_type_template_id_4455babb_render,
+  Headervue_type_template_id_4455babb_staticRenderFns,
   false,
   null,
   null,
@@ -7042,6 +7094,11 @@ const menuEntries = [{
     page: "/purchasing/item-demand/list"
   }, {
     id: sidebar_menu_uniqueID(),
+    icon: "mdi mdi-offer",
+    title: "Teklif",
+    page: "/purchasing/item-offer/list"
+  }, {
+    id: sidebar_menu_uniqueID(),
     icon: "mdi mdi-bookmark-outline",
     title: "Sipariş",
     page: "/purchasing/item-order/list"
@@ -7084,6 +7141,11 @@ const menuEntries = [{
     visible: function () {
       return checkAuth('ItemOrderApproval');
     }
+  }, {
+    id: sidebar_menu_uniqueID(),
+    title: "Saha Servisleri",
+    icon: "mdi mdi-wrench",
+    page: "/project/fieldservice/list"
   }]
 }, // {
 // 	id: uniqueID(),
@@ -7181,6 +7243,11 @@ const menuEntries = [{
     title: "Depo Durumları",
     page: "/warehouse/live"
   }]
+}, {
+  id: sidebar_menu_uniqueID(),
+  title: "İzinler",
+  icon: "mdi mdi-calendar-text",
+  page: "/staffpermit/list"
 }, {
   section_title: "TANIMLAR",
   visible: function () {
@@ -7936,7 +8003,7 @@ __webpack_require__(75);
   components: {
     Header: Header,
     Sidebar: Sidebar,
-    StyleSwitcher: () => __webpack_require__.e(/* import() */ 151).then(__webpack_require__.bind(null, 865)),
+    StyleSwitcher: () => __webpack_require__.e(/* import() */ 159).then(__webpack_require__.bind(null, 915)),
     ScProgressOverlayRoot: progress["f" /* ScProgressOverlayRoot */],
     Footer: Footer,
     FancyFooter: FancyFooter,
@@ -8769,8 +8836,8 @@ const options_options = {
 };
 const localeMessages = {
   'en-US.js': () => Promise.resolve(en_US),
-  'es-ES.js': () => __webpack_require__.e(/* import() | lang-es-ES.js */ 1).then(__webpack_require__.bind(null, 716)),
-  'fr-FR.js': () => __webpack_require__.e(/* import() | lang-fr-FR.js */ 2).then(__webpack_require__.bind(null, 717))
+  'es-ES.js': () => __webpack_require__.e(/* import() | lang-es-ES.js */ 1).then(__webpack_require__.bind(null, 758)),
+  'fr-FR.js': () => __webpack_require__.e(/* import() | lang-fr-FR.js */ 2).then(__webpack_require__.bind(null, 759))
 };
 // EXTERNAL MODULE: external "cookie"
 var external_cookie_ = __webpack_require__(21);

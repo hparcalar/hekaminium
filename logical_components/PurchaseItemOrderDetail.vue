@@ -320,7 +320,7 @@ export default {
                     partNo: '',
                     partDimensions: '',
                     demandConsumes: [],
-                    newDetail: true,
+                    newRecord: true,
                 };
             }
             try {

@@ -51,10 +51,15 @@
                                 </PrettyCheck>
                             </div>
                             <div>
-                                <button type="button" @click="showApprovedDemands" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
-                                    <span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
-                                    Talep Seç
+                                <button v-if="formData.receiptStatus == 1" 
+                                    type="button" @click="makeOrderForwarded" class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+                                    <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
+                                    Onaylı Siparişi İlet
                                 </button>
+                                <div class="uk-alert md-bg-light-blue-800 md-color-white" v-else>
+                                    <span data-uk-icon="icon: info" class="uk-margin-small-right uk-icon"></span>
+                                    {{ formData.statusText }}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -81,6 +86,11 @@
                                         uk-tooltip="Talep Bağlantısı"
                                         type="button" @click="openDemandForm" class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
                                         <span data-uk-icon="icon: link" class="uk-icon"></span>
+                                    </button>
+                                    <button v-show="selectedOrderDetail && selectedOrderDetail.id > 0 && selectedOrderDetail.itemOfferId > 0" 
+                                        type="button" @click="showOfferForm(selectedOrderDetail.itemOfferId)"
+                                         class="sc-button sc-button-primary sc-button-small" style="height:34px;">
+                                        <span data-uk-icon="icon: link" class="uk-icon"></span>Teklif: {{ selectedOrderDetail.itemOfferNo }}
                                     </button>
                                 </div>
                             </div>
@@ -321,7 +331,8 @@ export default {
         }
 	},
     beforeDestroy(){
-		UIkit.modal('.uk-modal').$destroy(true);
+        if (UIkit.modal('.uk-modal'))
+		    UIkit.modal('.uk-modal').$destroy(true);
 	},
 	async mounted () {
         this.isMounting = true;
@@ -380,49 +391,52 @@ export default {
                 }
 
                 // check if there is any demand groups in localStorage from waiting demands page
-                if (process.client){
-                    try {
-                        const localData = localStorage.getItem('grouped-demand-details');
-                        if (localData){
-                            const groupedDemands = JSON.parse(localData);
-                            if (groupedDemands && groupedDemands.length > 0){
-                                for (let i = 0; i < groupedDemands.length; i++) {
-                                    const demandGroup = groupedDemands[i];
-                                    const orderRow = { 
-                                        ...demandGroup,
-                                        lineNumber: i + 1,
-                                        id: i + 1,
-                                        partNo: null,
-                                        itemName: null,
-                                        partDimensions: null,
-                                        projectName: null,
-                                        forexCode: null,
-                                        receiptStatus: 0,
-                                        statusText: null,
-                                        taxRate: 0,
-                                        unitPrice: 0,
-                                        overallTotal: 0,
-                                        newRecord: true,
-                                        demandConsumes: demandGroup.demandDetails.map((d) => {
-                                            return {
-                                                ...d,
-                                                itemDemandDetailId: d.id,
-                                                id: 0,
-                                            };
-                                        }),
-                                    };
+                // if (process.client){
+                //     try {
+                //         const localData = localStorage.getItem('grouped-offer-details');
+                //         if (localData){
+                //             const groupedDemands = JSON.parse(localData);
+                //             if (groupedDemands && groupedDemands.length > 0){
+                //                 for (let i = 0; i < groupedDemands.length; i++) {
+                //                     const demandGroup = groupedDemands[i];
+                //                     const orderRow = { 
+                //                         ...demandGroup,
+                //                         lineNumber: i + 1,
+                //                         id: i + 1,
+                //                         partNo: null,
+                //                         itemName: null,
+                //                         partDimensions: null,
+                //                         projectName: null,
+                //                         itemOfferDetailId: demandGroup.itemOfferDetailId,
+                //                         forexId: demandGroup.forexId,
+                //                         forexCode: demandGroup.forexCode,
+                //                         quantity: demandGroup.quantity,
+                //                         receiptStatus: 0,
+                //                         statusText: null,
+                //                         taxRate: 0,
+                //                         unitPrice: demandGroup.unitPrice,
+                //                         overallTotal: demandGroup.overallForexTotal,
+                //                         newRecord: true,
+                //                         demandConsumes: demandGroup.demandConsumes.map((d) => {
+                //                             return {
+                //                                 ...d,
+                //                                 itemDemandDetailId: d.itemDemandDetailId,
+                //                                 id: 0,
+                //                             };
+                //                         }),
+                //                     };
 
-                                    this.details.push(orderRow);
-                                }
-                            }
+                //                     this.details.push(orderRow);
+                //                 }
+                //             }
 
-                            localStorage.removeItem('grouped-demand-details');
-                        }
+                //             localStorage.removeItem('grouped-offer-details');
+                //         }
 
-                    } catch (error) {
-                        
-                    }
-                }
+                //     } catch (error) {
+                //         console.error(error);
+                //     }
+                // }
 
             } catch (error) {
                 
@@ -711,6 +725,24 @@ export default {
 			}
 			return false;
 		},
+        showOfferForm(itemOfferId){
+            this.$router.push('/purchasing/item-offer?id=' + itemOfferId);
+        },
+        async makeOrderForwarded(){
+            try {
+                const api = useApi();
+                const postResult = (await api.post('ItemOrder/MakeForward',{id: this.formData.id})).data
+                if (postResult.result){
+                    this.showNotification('Sipariş durumu başarıyla iletildiye çevrildi.', false, 'success');
+                    await this.bindModel();
+                }
+                else{
+                    this.showNotification('Hata: ' + postResult.errorMessage, false, 'error');
+                }
+            } catch (error) {
+                
+            }
+        }
 	},
     watch: {
         recordId: async function(newVal, oldVal) {

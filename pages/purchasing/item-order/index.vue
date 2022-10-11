@@ -24,7 +24,8 @@ export default {
 		
 	},
 	beforeDestroy(){
-		UIkit.modal('.uk-modal').$destroy(true);
+		if (UIkit.modal('.uk-modal'))
+			UIkit.modal('.uk-modal').$destroy(true);
 	},
 	mounted () {
         const qsId = getQS('id');

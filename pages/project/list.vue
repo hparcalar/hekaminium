@@ -73,9 +73,9 @@ export default {
 			visualData: [],
 			dtColumns: [
 				{ data: "projectCode", title: "Proje Kodu", visible: true, },
-				{ data: "projectName", title: "Proje Adı", visible: true, },
-                { data: "projectCategoryName", title: "Kategorisi", visible: true, },
-                { data: "firmName", title: "Müşteri", visible: true, },
+				{ data: "projectName", title: "Proje Adı", width:"40%", visible: true, },
+                { data: "projectCategoryName", title: "Kategorisi", width:"18%", visible: true, },
+                { data: "firmName", title: "Müşteri", width:"22%", visible: true, },
 				{ data: "quantity", title: "Proje Adedi", visible: true, },
 				{ data: "forexName", title: "Döviz Cinsi", visible: false, },
 				{ data: "totalCost", title: "Maliyet (TL)", visible: false, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.totalCost); } },
@@ -87,6 +87,7 @@ export default {
 			],
 			dtDHeaders: [],
 			dtDOptions: {
+				autoWidth: false,
 				select: true,
 				"stateSave": false,
 				// stateSaveCallback (settings, data) {

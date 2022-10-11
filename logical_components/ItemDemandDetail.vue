@@ -133,7 +133,7 @@ export default {
             netQuantity: 0,
 			demandStatus: 0,
             demandDate: null,
-            newDetail: true,
+            newRecord: true,
             partNo: '',
             partDimensions: '',
 		},

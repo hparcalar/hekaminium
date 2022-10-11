@@ -14,6 +14,7 @@ const _daaa8ee0 = () => interopDefault(import('../pages/login_page_auth.vue' /* 
 const _63adc9bc = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
 const _fccbd92c = () => interopDefault(import('../pages/project/index.vue' /* webpackChunkName: "pages/project/index" */))
 const _1bd76a17 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
+const _483549cc = () => interopDefault(import('../pages/staffpermit/index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
 const _d8c09dd8 = () => interopDefault(import('../pages/warehouse/index.vue' /* webpackChunkName: "pages/warehouse/index" */))
 const _a5b0011e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _0abd0a05 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
@@ -114,13 +115,17 @@ const _c095dce2 = () => interopDefault(import('../pages/plugins/tree.vue' /* web
 const _561e10b2 = () => interopDefault(import('../pages/plugins/vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
 const _2f780156 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
 const _210b72e9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
+const _b0031e54 = () => interopDefault(import('../pages/project/fieldservice/index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
 const _af165994 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
 const _15dc5bce = () => interopDefault(import('../pages/purchasing/item-demand/index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
+const _5db701a4 = () => interopDefault(import('../pages/purchasing/item-offer/index.vue' /* webpackChunkName: "pages/purchasing/item-offer/index" */))
 const _17166816 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
 const _70321f40 = () => interopDefault(import('../pages/purchasing/item-receipt/index.vue' /* webpackChunkName: "pages/purchasing/item-receipt/index" */))
+const _5c484894 = () => interopDefault(import('../pages/staffpermit/list.vue' /* webpackChunkName: "pages/staffpermit/list" */))
 const _06e9ff22 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
 const _05b44c6a = () => interopDefault(import('../pages/user/role/index.vue' /* webpackChunkName: "pages/user/role/index" */))
 const _7c604f68 = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
+const _73c9fccc = () => interopDefault(import('../pages/warehouse/live.vue' /* webpackChunkName: "pages/warehouse/live" */))
 const _2a1c833c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
 const _3629d767 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
 const _1e60b05c = () => interopDefault(import('../pages/forms/advanced_elements/date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
@@ -144,8 +149,11 @@ const _0677ad0a = () => interopDefault(import('../pages/forms/examples/rental_ap
 const _47ed2e19 = () => interopDefault(import('../pages/forms/examples/transaction_feedback_form.vue' /* webpackChunkName: "pages/forms/examples/transaction_feedback_form" */))
 const _1a97ead9 = () => interopDefault(import('../pages/forms/wysiwyg/ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
 const _6362abb1 = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
+const _4699184a = () => interopDefault(import('../pages/project/fieldservice/list.vue' /* webpackChunkName: "pages/project/fieldservice/list" */))
 const _0279fab2 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
+const _0549d130 = () => interopDefault(import('../pages/purchasing/item-demand/my-demands.vue' /* webpackChunkName: "pages/purchasing/item-demand/my-demands" */))
 const _023c6e50 = () => interopDefault(import('../pages/purchasing/item-demand/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
+const _f3779488 = () => interopDefault(import('../pages/purchasing/item-offer/list.vue' /* webpackChunkName: "pages/purchasing/item-offer/list" */))
 const _b5f58dec = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
 const _601f74e6 = () => interopDefault(import('../pages/purchasing/item-order/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-order/waiting-for-approve" */))
 const _d13e16c0 = () => interopDefault(import('../pages/purchasing/item-receipt/list.vue' /* webpackChunkName: "pages/purchasing/item-receipt/list" */))
@@ -204,6 +212,10 @@ export const routerOptions = {
     path: "/project-category",
     component: _1bd76a17,
     name: "project-category"
+  }, {
+    path: "/staffpermit",
+    component: _483549cc,
+    name: "staffpermit"
   }, {
     path: "/warehouse",
     component: _d8c09dd8,
@@ -608,6 +620,10 @@ export const routerOptions = {
     component: _210b72e9,
     name: "project-category-list"
   }, {
+    path: "/project/fieldservice",
+    component: _b0031e54,
+    name: "project-fieldservice"
+  }, {
     path: "/project/list",
     component: _af165994,
     name: "project-list"
@@ -616,6 +632,10 @@ export const routerOptions = {
     component: _15dc5bce,
     name: "purchasing-item-demand"
   }, {
+    path: "/purchasing/item-offer",
+    component: _5db701a4,
+    name: "purchasing-item-offer"
+  }, {
     path: "/purchasing/item-order",
     component: _17166816,
     name: "purchasing-item-order"
@@ -623,6 +643,10 @@ export const routerOptions = {
     path: "/purchasing/item-receipt",
     component: _70321f40,
     name: "purchasing-item-receipt"
+  }, {
+    path: "/staffpermit/list",
+    component: _5c484894,
+    name: "staffpermit-list"
   }, {
     path: "/user/member",
     component: _06e9ff22,
@@ -635,6 +659,10 @@ export const routerOptions = {
     path: "/warehouse/list",
     component: _7c604f68,
     name: "warehouse-list"
+  }, {
+    path: "/warehouse/live",
+    component: _73c9fccc,
+    name: "warehouse-live"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
     component: _2a1c833c,
@@ -728,13 +756,25 @@ export const routerOptions = {
     component: _6362abb1,
     name: "forms-wysiwyg-quill"
   }, {
+    path: "/project/fieldservice/list",
+    component: _4699184a,
+    name: "project-fieldservice-list"
+  }, {
     path: "/purchasing/item-demand/list",
     component: _0279fab2,
     name: "purchasing-item-demand-list"
   }, {
+    path: "/purchasing/item-demand/my-demands",
+    component: _0549d130,
+    name: "purchasing-item-demand-my-demands"
+  }, {
     path: "/purchasing/item-demand/waiting-for-approve",
     component: _023c6e50,
     name: "purchasing-item-demand-waiting-for-approve"
+  }, {
+    path: "/purchasing/item-offer/list",
+    component: _f3779488,
+    name: "purchasing-item-offer-list"
   }, {
     path: "/purchasing/item-order/list",
     component: _b5f58dec,

@@ -537,7 +537,7 @@ export default {
 				async function () {
 					try {
                         const api = useApi();
-                        const delResult = (await api.delete('ItemOrder/' + self.formData.id)).data;
+                        const delResult = (await api.delete('ItemReceipt/' + self.formData.id)).data;
                         if (delResult.result){
                             self.showNotification('Silme işlemi başarılı', false, 'success');
                             this.$emit('onReceiptSaved');
@@ -689,6 +689,7 @@ export default {
                         newRow.taxIncluded = orderDetail.taxIncluded;
                         newRow.taxRate = orderDetail.taxRate;
                         newRow.explanation = orderDetail.explanation;
+                        newRow.unitId = orderDetail.unitId;
                         newRow.unitPrice = orderDetail.unitPrice;
                         newRow.receiptStatus = 0;
                         newRow.overallTotal = orderDetail.overallTotal;

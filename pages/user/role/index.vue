@@ -100,6 +100,7 @@ export default {
             { sectionKey: 'ItemDemandApproval', title: 'Malzeme Talebi Onaylama', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ItemOrderApproval', title: 'Sipariş Onaylama', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ProjectManagement', title: 'Proje Yönetimi', canRead: false, canWrite: false, canDelete: false, },
+            { sectionKey: 'StaffPermit', title: 'Personel İzin Yönetimi', canRead: false, canWrite: false, canDelete: false, },
         ]
 	}),
 	computed: {

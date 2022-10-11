@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/warehouse/live", {data:[{}],fetch:{},mutations:[]});
