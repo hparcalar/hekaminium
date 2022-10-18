@@ -88,6 +88,8 @@ export default {
 			dtDHeaders: [],
 			dtDOptions: {
 				autoWidth: false,
+				"order": [[ 0, 'desc' ]],
+				pageLength: 25,
 				select: true,
 				"stateSave": false,
 				// stateSaveCallback (settings, data) {

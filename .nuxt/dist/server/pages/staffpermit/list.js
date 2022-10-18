@@ -21,7 +21,8 @@ function dateToStr(dateString) {
   if (dateString && dateString.length > 0) {
     try {
       const dtObj = moment(dateString);
-      return dtObj ? dtObj.format('DD.MM.YYYY') : dateString;
+      const result = dtObj ? dtObj.format('DD.MM.YYYY') : dateString;
+      return result;
     } catch (error) {}
   }
 

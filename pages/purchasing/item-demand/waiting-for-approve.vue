@@ -48,6 +48,10 @@
 										<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 										Seçilen Gruba Ekle
 									</button>
+									<button v-show="selectedDemandRow && selectedDemandRow.id > 0 && selectedDemandIndexes.length == 1" @click="showItemDemandDialog" type="button" class="sc-button sc-button-warning sc-button-small uk-width-1-4" style="height:34px;">
+										<span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
+										Talep Detayı
+									</button>
 									<button v-show="demandsAreReadyForDeny" @click="denyDetails" type="button" class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
 										<span data-uk-icon="icon: ban" class="uk-margin-small-right uk-icon"></span>
 										Reddet
@@ -115,25 +119,9 @@
 											<span :data-uk-icon="'icon:'+ (item.expanded ? 'minus' : 'plus')" class="uk-icon"></span>
 										</button>
 									</td>
-									<td><span style="display:block;margin-top:10px;">{{ (index + 1).toString() }}</span></td>
-									<td>
-										<ScInput v-model="item.itemExplanation" />
-									</td>
-									<td>
-										<ScInput v-model="item.quantity" :type="'number'" />
-									</td>
-									<td>
-										<button type="button" @click="removeOrderDetail(item)" 
-										class="sc-button sc-button-danger sc-button-small uk-margin-small-right">
-											<span data-uk-icon="icon: trash" class="uk-icon"></span>
-										</button>
-									</td>
-								</tr>
-
-								<!-- GROUPED DEMAND DETAILS DEPEND ON SELECTED ORDER DETAIL -->
-								<tr v-for="(item,index) in offerDetails" :key="index" v-if="item.expanded">
-									<td colspan="5">
-										<div v-if="item.expanded" class="uk-overflow-auto" style="max-height:250px;">
+									<td colspan="4" v-if="item.expanded">
+										<span>{{ item.itemExplanation }}</span>
+										<div class="uk-overflow-auto" style="max-height:250px;">
 											<div v-for="(demand, demandIndex) in item.demandDetails" 
 											:key="demandIndex" style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;"
 											class="uk-grid">
@@ -151,6 +139,19 @@
 											</div>
 										</div>
 									</td>
+									<td v-if="!item.expanded"><span style="display:block;margin-top:10px;">{{ (index + 1).toString() }}</span></td>
+									<td v-if="!item.expanded">
+										<ScInput v-model="item.itemExplanation" />
+									</td>
+									<td v-if="!item.expanded">
+										<ScInput v-model="item.quantity" :type="'number'" />
+									</td>
+									<td v-if="!item.expanded">
+										<button type="button" @click="removeOrderDetail(item)" 
+										class="sc-button sc-button-danger sc-button-small uk-margin-small-right">
+											<span data-uk-icon="icon: trash" class="uk-icon"></span>
+										</button>
+									</td>
 								</tr>
 							</table>
 						</div>
@@ -159,6 +160,20 @@
 				</ScCardBody>
 			</ScCard>
         </div>
+
+		<div id="dlgItemDemandDetail" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<ItemDemandDetail v-if="refreshDemandDialog && selectedDemandRow && selectedDemandRow.id > 0"
+						:detail-object="{...selectedDemandRow}"
+						:is-dialog="true"
+						:dialog-container="'dlgItemDemandDetail'"
+						@onDetailSubmit="onDemandDetailSaved"
+						@onCancel="closeDemandDialog"
+					/>
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 <script>
@@ -173,6 +188,7 @@ export default {
     components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		Select2: process.client ? () => import('~/components/Select2') : null,
+		ItemDemandDetail: process.client ? () => import('~/logical_components/ItemDemandDetail') : null,
 		PrettyCheck,
 		ScInput,
     },
@@ -183,7 +199,8 @@ export default {
                 { data: "demandDate", title: "Tarih", visible: true, type:'date' },
                 { data: "itemDemandNo", title: "Talep No", visible: true, },
                 { data: "projectName", title: "Proje Adı", visible: true, },
-                { data: "itemName", title: "Stok Adı", width: "40%", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : row.itemExplanation; } },
+                { data: "itemName", title: "Stok Adı", width: "40%", visible: true, render: function(data, ev, row) { return data && data.length > 0 ? data : ''; } },
+				{ data: "itemExplanation", title: "Açıklama", visible: true, },
 				{ data: "partNo", title: "Parça Kodu", visible: true, },
 				{ data: "partDimensions", title: "Boyutlar", visible: true, },
                 { data: "quantity", title: "Miktar", visible: true, },
@@ -198,6 +215,9 @@ export default {
 				rowCallback: function(row, data, index) {
 					if (data.demandStatus == 4) {
 						$('td',row).addClass("demand-denied");
+					}
+					else if (!data.itemId){
+						$('td', row).addClass("item-selection-required");
 					}
 				},
 				buttons: [
@@ -230,6 +250,7 @@ export default {
 					}
 				]
 			},
+			refreshDemandDialog: false,
 			lastSelectionTime: null,
             selectedDemandRow: { id:0, itemDemandId: 0 },
             selectedDemandIndexes: [],
@@ -250,7 +271,7 @@ export default {
 				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
 					const dmnIndex = this.selectedDemandIndexes[i];
 					const dmnObj = this.visualData[dmnIndex];
-					if (dmnObj.demandStatus != 0 && dmnObj.demandStatus != 4)
+					if (!dmnObj || dmnObj.demandStatus != 0 && dmnObj.demandStatus != 4)
 					{
 						result = false;
 						break;
@@ -270,7 +291,7 @@ export default {
 				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
 					const dmnIndex = this.selectedDemandIndexes[i];
 					const dmnObj = this.visualData[dmnIndex];
-					if (dmnObj.demandStatus >= 2)
+					if (!dmnObj || dmnObj.demandStatus >= 2)
 					{
 						result = false;
 						break;
@@ -290,7 +311,7 @@ export default {
 				for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
 					const dmnIndex = this.selectedDemandIndexes[i];
 					const dmnObj = this.visualData[dmnIndex];
-					if (dmnObj.demandStatus >= 2 && dmnObj.demandStatus != 4)
+					if (!dmnObj || dmnObj.demandStatus >= 2 && dmnObj.demandStatus != 4)
 					{
 						result = false;
 						break;
@@ -333,25 +354,44 @@ export default {
 		},
         clickDemandRow: function (e, dt, type, indexes){
 			const selIndex = indexes[0];
+			const selRow = this.visualData[selIndex];
+			if (this.selectedDemandIndexes.length > 0 && !selRow.itemId){
+				this.showNotification('Bu kalemi gruba dahil edebilmeniz için ilgili stok seçilmelidir.', false, 'warning');
+				dt.row().deselect();
+				return;
+			}
+
 			this.selectedDemandIndexes.push(selIndex);
-            this.selectedDemandRow = this.visualData[selIndex];
+			// this.selectedDemandIndexes = indexes;
+            this.selectedDemandRow = selRow;
 
 			this.lastSelectionTime = this.$moment();
         },
 		deselectDemandRow: function(e, dt, type, indexes){
-			const timeNow = this.$moment();
-			if (timeNow.diff(this.lastSelectionTime) < 1000 && indexes.length == 1 && this.selectedDemandIndexes.length == 1 && indexes[0] == this.selectedDemandIndexes[0]){
-				this.selectedDemandRow = this.visualData[indexes[0]];
-				this.createOrderDetailWithOne();
-			}
-			else{
-				this.selectedDemandIndexes = this.selectedDemandIndexes.filter(d => !indexes.includes(d));
-				if (this.selectedDemandIndexes.length > 0){
-					this.selectedDemandRow = this.visualData[this.selectedDemandIndexes[0]];
+			try {
+				const timeNow = this.$moment();
+				if (indexes.length > 0 && timeNow.diff(this.lastSelectionTime) < 300 && indexes.length == 1 
+					&& this.selectedDemandIndexes.length == 1 && this.visualData[indexes[0]].id == this.visualData[this.selectedDemandIndexes[0]].id){
+					const selRow = this.visualData[indexes[0]];
+					if (!selRow.itemId){
+						this.showNotification('Bu kalemi tekliflendirebilmek için ilgili stok seçilmelidir.', false, 'warning');
+						return;
+					}
+					this.selectedDemandRow = this.visualData[indexes[0]];
+					this.createOrderDetailWithOne();
 				}
-				else
-					this.selectedDemandRow = { id:0, itemDemandId: 0 };
+				else{
+					this.selectedDemandIndexes = this.selectedDemandIndexes.filter(d => !indexes.includes(d));
+					if (this.selectedDemandIndexes.length > 0){
+						this.selectedDemandRow = this.visualData[this.selectedDemandIndexes[0]];
+					}
+					else
+						this.selectedDemandRow = { id:0, itemDemandId: 0 };
+				}
+			} catch (error) {
+				
 			}
+			
 		},
 		clickGroupRow: function(item){
 			if (this.selectedGroup == item)
@@ -420,6 +460,10 @@ export default {
 			for (let i = 0; i < this.selectedDemandIndexes.length; i++) {
 				const dmnIndex = this.selectedDemandIndexes[i];
 				const dmnObj = this.visualData[dmnIndex];
+				if(!dmnObj.itemId){
+					this.showNotification('Seçimlerinizin içerisinde stok tanımı seçilmeyen talepler var.', false, 'warning');
+					return;
+				}
 				demandList.push(dmnObj);
 			}
 
@@ -531,6 +575,42 @@ export default {
 			}
 			UIkit.notification(text, config);
 		},
+		async onDemandDetailSaved(resultObj){
+			if(resultObj && resultObj.action == 'save' && resultObj.data){
+				const api = useApi();
+				let success= false;
+
+				try {
+					resultObj.data.demandDate = null;
+					const postResult = (await api.post('ItemDemand/SaveDetail', resultObj.data)).data;
+					if (postResult.result){
+						this.showNotification('Kayıt başarılı', false, 'success');
+						success=true;
+					}
+					else
+						this.showNotification('Hata: ' + postResult.errorMessage, false, 'error');
+				} catch (error) {
+					this.showNotification('Bir hata oluştu.', false, 'error');
+				}
+
+				this.closeDemandDialog();
+				if (success)
+					await this.bindList();
+			}
+		},
+		closeDemandDialog(){
+			const modalElement = document.getElementById('dlgItemDemandDetail');
+			UIkit.modal(modalElement).hide();
+		},
+		showItemDemandDialog(){
+			this.refreshItemDialog = false;
+			setTimeout(() => { this.refreshDemandDialog = true; }, 200);
+
+			const modalElement = document.getElementById('dlgItemDemandDetail');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+		}
     }
 }
 </script>
@@ -545,6 +625,9 @@ export default {
 		background-color: rgba(230, 50, 50, 0.3);
 	}
 	.group-selected, .group-selected td{
-		background-color: #39f;
+		background-color: rgba(81, 150, 214, 0.3);
+	}
+	.item-selection-required{
+		background-color: rgba(226, 214, 51, 0.3);
 	}
 </style>

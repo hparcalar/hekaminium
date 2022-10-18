@@ -74,6 +74,7 @@ export default {
 			dtColumns: [
 				{ data: "receiptDate", title: "Tarih", type:'date', visible: true, },
 				{ data: "receiptNo", title: "Teklif No", visible: true, },
+				{ data: "firmName", title: "Firma", visible: true, },
                 { data: "explanation", title: "Açıklama", visible: true, },
                 { data: "statusText", title: "Durum", visible: true, },
 			],
@@ -118,12 +119,6 @@ export default {
 				receiptDate: dateToStr(d.receiptDate),
 			};
 		});
-
-		if (this.$refs.buttonsTable){
-			// this.$refs.buttonsTable.$dt.state().clear()
-			// console.log(this.$refs.buttonsTable);
-			// console.log(this.$refs.buttonsTable.$dt.state().clear());
-		}
 		
     },
     methods: {

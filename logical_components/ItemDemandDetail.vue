@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-margin-medium uk-margin-remove-top uk-width-1-5@m" style="height:34px;">
-                            <span :data-uk-icon="'icon: ' + detailObject.id > 0 ? 'check' : 'plus'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
+                            <span :data-uk-icon="'icon: ' + detailObject.id > 0 ? 'check' : 'check'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
                         </button>
                     </div>
                 </fieldset>

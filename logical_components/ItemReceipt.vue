@@ -663,44 +663,44 @@ export default {
                 for (let i = 0; i < selectedOrders.length; i++) {
                     const orderDetail = selectedOrders[i];
                     
-                    if (!self.details.some(d => d.itemOrderDetailId == orderDetail.id)){
-                        var newRow = {};
-                        newRow.newRecord = true;
-                        newRow.orderConsumes = [
-                            {
-                                itemOrderDetailId: orderDetail.id,
-                                consumeNetQuantity: orderDetail.quantity,
-                            }
-                        ]
-                        // newRow.itemDemandDetailId = demandDetail.id; -- old algorithm
+                    var newRow = {};
+                    newRow.newRecord = true;
+                    newRow.itemOrderDetailId = orderDetail.itemOrderDetailId;
+                    newRow.itemDemandDetailId = orderDetail.itemDemandDetailId;
+                    // newRow.orderConsumes = [
+                    //     {
+                    //         itemOrderDetailId: orderDetail.id,
+                    //         consumeNetQuantity: orderDetail.quantity,
+                    //     }
+                    // ]
+                    // newRow.itemDemandDetailId = demandDetail.id; -- old algorithm
 
-                        // assign new line number
-                        const totalCount = self.details.length;
+                    // assign new line number
+                    const totalCount = self.details.length;
 
-                        newRow.lineNumber = totalCount + 1;
-                        newRow.id = newRow.lineNumber;
+                    newRow.lineNumber = totalCount + 1;
+                    newRow.id = newRow.lineNumber;
 
-                        newRow.itemId = orderDetail.itemId;
-                        newRow.itemName = orderDetail.itemName;
-                        newRow.quantity = orderDetail.quantity;
-                        newRow.projectId = orderDetail.projectId;
-                        newRow.forexId = orderDetail.forexId;
-                        newRow.forexRate = orderDetail.forexRate;
-                        newRow.taxIncluded = orderDetail.taxIncluded;
-                        newRow.taxRate = orderDetail.taxRate;
-                        newRow.explanation = orderDetail.explanation;
-                        newRow.unitId = orderDetail.unitId;
-                        newRow.unitPrice = orderDetail.unitPrice;
-                        newRow.receiptStatus = 0;
-                        newRow.overallTotal = orderDetail.overallTotal;
-                        newRow.forexCode = orderDetail.forexCode;
-                        newRow.partNo = orderDetail.partNo;
-                        newRow.partDimensions = orderDetail.partDimensions;
-                        newRow.projectName = orderDetail.projectName;
-                        newRow.itemExplanation = orderDetail.itemExplanation;
+                    newRow.itemId = orderDetail.itemId;
+                    newRow.itemName = orderDetail.itemName;
+                    newRow.quantity = orderDetail.quantity;
+                    newRow.projectId = orderDetail.projectId;
+                    newRow.forexId = orderDetail.forexId;
+                    newRow.forexRate = orderDetail.forexRate;
+                    newRow.taxIncluded = orderDetail.taxIncluded;
+                    newRow.taxRate = orderDetail.taxRate;
+                    newRow.explanation = orderDetail.explanation;
+                    newRow.unitId = orderDetail.unitId;
+                    newRow.unitPrice = orderDetail.unitPrice;
+                    newRow.receiptStatus = 0;
+                    newRow.overallTotal = orderDetail.overallTotal;
+                    newRow.forexCode = orderDetail.forexCode;
+                    newRow.partNo = orderDetail.partNo;
+                    newRow.partDimensions = orderDetail.partDimensions;
+                    newRow.projectName = orderDetail.projectName;
+                    newRow.itemExplanation = orderDetail.itemExplanation;
 
-                        self.details.push(newRow);
-                    }
+                    self.details.push(newRow);
                 }
             }
 
