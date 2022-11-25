@@ -73,6 +73,7 @@ export default {
 		return {
 			visualData: [],
 			dtColumns: [
+				{ data: "id", title: "#", visible: true, },
 				{ data: "startDate", title: "Baş. Tarih", visible: true, render: function(data,ev,row){ return dateToStr(data) } },
 				{ data: "endDate", title: "Bit. Tarih", visible: true,render: function(data,ev,row){ return dateToStr(data) } },
                 { data: "userName", title: "Personel", visible: true, },
@@ -83,6 +84,7 @@ export default {
 			dtDOptions: {
 				select: true,
 				"stateSave": false,
+				order: [[0, 'dsc']],
 				// stateSaveCallback (settings, data) {
 				// 	localStorage.setItem( 'firmListTableView', JSON.stringify(data) )
 				// },

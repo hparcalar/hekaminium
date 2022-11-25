@@ -175,6 +175,7 @@ export default {
                     return {
                         id: d.id,
                         text: d.itemName,
+                        itemCategoryId: d.itemCategoryId
                     };
                 });
             } catch (error) {

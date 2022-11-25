@@ -74,10 +74,11 @@ export default {
 			dtColumns: [
 				{ data: "receiptDate", title: "Tarih", type:'date', visible: true, },
 				{ data: "receiptNo", title: "Sipariş No", visible: true, },
-                { data: "firmName", title: "Firma", visible: true, },
-                { data: "explanation", title: "Açıklama", visible: true, },
+				{ data: "firmName", title: "Firma", visible: true, },
+				{ data: "explanation", title: "Açıklama", visible: true, },
 				{ data: "isContracted", title: "Türü", visible: true, render: function(data){ return data ? 'Fason' : '-'; } },
-                { data: "statusText", title: "Durum", visible: true, },
+				{ data: "statusText", title: "Durum", visible: true, },
+				{ data: "denialExplanation", title: "Red Nedeni", visible: true, },
 			],
 			dtDHeaders: [],
 			dtDOptions: {
@@ -94,6 +95,8 @@ export default {
 						$('td',row).addClass("bg-danger");
 					}
 				},
+				pageLength: 50,
+				order: [[1, 'dsc']],
 				buttons: [
 					{
 						extend: "excelHtml5",

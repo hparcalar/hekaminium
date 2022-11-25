@@ -1,62 +1,62 @@
 <template>
-        <div class="uk-flex-center uk-grid" data-uk-grid>
-            <div :class="{'uk-width-2-3@l': !isDialog, 'uk-width-3-3@l': isDialog}">
-                <div v-show="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
+    <div class="uk-flex-center uk-grid" data-uk-grid>
+        <div :class="{ 'uk-width-2-3@l': !isDialog, 'uk-width-3-3@l': isDialog }">
+            <div v-show="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                         sc-round sc-border md-bg-grey-100
                 ">
-                    <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-                    <h4 class="md-color-gray-600 uk-margin-remove">
-                        Stok Tanımı
-                    </h4>
-                </div>
-                <form>
-                    <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
-                        <!-- <legend class="uk-legend">
+                <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
+                <h4 class="md-color-gray-600 uk-margin-remove">
+                    Stok Tanımı
+                </h4>
+            </div>
+            <form>
+                <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
+                    <!-- <legend class="uk-legend">
                             Genel Bilgiler
                         </legend> -->
-                        <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
-                            <div>
-                                <ScInput v-model="formData.itemCode">
-                                    <label>Stok Kodu</label>
-                                </ScInput>
-                            </div>
-                            <div>
-                                <ScInput v-model="formData.itemName">
-                                    <label>Stok Adı</label>
-                                </ScInput>
-                            </div>
-                            <div>
-                                <client-only>
-                                    <Select2
-                                        v-model="formData.itemCategoryId"
-                                        :options="categories"
-                                        :settings="{ 'width': '100%', 'placeholder': 'Kategori', 'allowClear': true }"
-                                    ></Select2>
-                                </client-only>
-                            </div>
-                            <div>
-                                <PrettyCheck name="isActive" v-model="formData.isActive" :value="true" class="p-icon">
-                                    <i slot="extra" class="icon mdi mdi-check"></i>
-                                    Aktif
-                                </PrettyCheck>
-                            </div>
+                    <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
+                        <div>
+                            <ScInput v-model="formData.itemCode" :read-only="true">
+                                <label>Stok Kodu</label>
+                            </ScInput>
                         </div>
-                    </fieldset>
-
-                    <div class="uk-margin-large-top">
-                        <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-                            <span data-uk-icon="icon: check" class="uk-icon"></span>
-                        </button>
-                        <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                            <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
-                        </button>
-                        <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
-                            <span data-uk-icon="icon: trash" class="uk-icon"></span>
-                        </button>
+                        <div>
+                            <ScInput v-model="formData.itemName">
+                                <label>Stok Adı</label>
+                            </ScInput>
+                        </div>
+                        <div>
+                            <client-only>
+                                <Select2 v-model="formData.itemCategoryId" :options="categories"
+                                    :settings="{ 'width': '100%', 'placeholder': 'Kategori', 'allowClear': true }">
+                                </Select2>
+                            </client-only>
+                        </div>
+                        <div>
+                            <PrettyCheck name="isActive" v-model="formData.isActive" :value="true" class="p-icon">
+                                <i slot="extra" class="icon mdi mdi-check"></i>
+                                Aktif
+                            </PrettyCheck>
+                        </div>
                     </div>
-                </form>
-            </div>
+                </fieldset>
+
+                <div class="uk-margin-large-top">
+                    <button type="button" @click="onSubmit"
+                        class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: check" class="uk-icon"></span>
+                    </button>
+                    <button type="button" @click="onCancel"
+                        class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                        <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
+                    </button>
+                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                        <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                    </button>
+                </div>
+            </form>
         </div>
+    </div>
 </template>
 
 <script>
@@ -68,19 +68,19 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { getQS } from '~/composable/useHelpers';
 
-if(process.client) {
-	require('~/plugins/inputmask');	
+if (process.client) {
+    require('~/plugins/inputmask');
 }
 
 export default {
-	name: 'ItemDefinition',
-	components: {
-		Select2: process.client ? () => import('~/components/Select2') : null,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
+    name: 'ItemDefinition',
+    components: {
+        Select2: process.client ? () => import('~/components/Select2') : null,
+        ScInput,
+        ScTextarea,
+        PrettyRadio,
         PrettyCheck
-	},
+    },
     emits: ['onItemSaved', 'onCancel'],
     props: {
         recordId: {
@@ -97,33 +97,33 @@ export default {
             default: '',
         },
     },
-	data: () => ({
-		formData: {
+    data: () => ({
+        formData: {
             id: 0,
-			itemCode: '',
-			itemName: '',
+            itemCode: '',
+            itemName: '',
             plantId: null,
-			isActive: true,
+            isActive: true,
             itemCategoryId: null,
-		},
+        },
         isMounting: false,
         categories: [],
-	}),
-	computed: {
-		
-	},
-	async mounted () {
+    }),
+    computed: {
+
+    },
+    async mounted() {
         this.isMounting = true;
         this.formData.id = this.recordId;
 
         if (this.projectId && this.projectId > 0)
             this.formData.projectId = this.projectId;
 
-		await this.bindModel();
+        await this.bindModel();
         this.isMounting = false;
-	},
-	methods: {
-        async bindModel(){
+    },
+    methods: {
+        async bindModel() {
 
             const api = useApi();
             try {
@@ -136,19 +136,22 @@ export default {
                         };
                     })
 
-                const getData = (await api.get('Item/' + this.formData.id)).data;   
-                if (getData && getData.id > 0){
+                const getData = (await api.get('Item/' + this.formData.id)).data;
+                if (getData && getData.id > 0) {
                     this.formData = getData;
                 }
+                else{
+                    this.formData.itemCode = getData.itemCode
+                }
             } catch (error) {
-                
+
             }
         },
-		async onSubmit(){
+        async onSubmit() {
             try {
                 const api = useApi();
                 const postResult = (await api.post('Item', this.formData)).data;
-                if (postResult.result){
+                if (postResult.result) {
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
                     this.$emit('onItemSaved');
@@ -164,29 +167,49 @@ export default {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
         },
-        onCancel(){
+        onCancel() {
             if (this.isDialog)
                 this.$emit('onCancel');
             else
                 this.$router.push('/item/list');
         },
-        async onDelete(){
+        async onDelete() {
+            const self = this;
+            UIkit.modal.confirm('Bu stoğu silmek istediğinizden emin misiniz?').then(
+                async function () {
+                    try {
+                        const api = useApi();
+                        const delResult = (await api.delete('Item/' + self.formData.id)).data;
+                        if (delResult.result) {
+                            self.showNotification('Silme işlemi başarılı', false, 'success');
+                            self.$emit('onDemandSaved');
 
+                            if (self.isDialog)
+                                UIkit.modal(document.getElementById(self.dialogContainer)).hide();
+                            else
+                                self.$router.go(-1);
+                        }
+                        else
+                            self.showNotification(delResult.errorMessage, false, 'error');
+                    } catch (error) {
+
+                    }
+                });
         },
-        showNotification (text, pos, status, persistent) {
-			var config = {};
-			config.timeout = persistent ? !persistent : 3000;
-			if(status) {
-				config.status = status;
-			}
-			if(pos) {
-				config.pos = pos;
-			}
-			UIkit.notification(text, config);
-		}
-	},
+        showNotification(text, pos, status, persistent) {
+            var config = {};
+            config.timeout = persistent ? !persistent : 3000;
+            if (status) {
+                config.status = status;
+            }
+            if (pos) {
+                config.pos = pos;
+            }
+            UIkit.notification(text, config);
+        }
+    },
     watch: {
-        recordId: async function(newVal, oldVal) {
+        recordId: async function (newVal, oldVal) {
             this.formData.id = this.recordId;
             await this.bindModel();
         },
@@ -195,5 +218,5 @@ export default {
 </script>
 
 <style lang="scss">
-	@import '~scss/vue/_pretty_checkboxes';
+@import '~scss/vue/_pretty_checkboxes';
 </style>

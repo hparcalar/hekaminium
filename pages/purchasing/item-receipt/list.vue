@@ -88,6 +88,8 @@ export default {
 					// 	$('td',row).addClass("bg-warning");
 					// }
 				},
+				pageLength: 50,
+				order: [[1, 'dsc']],
 				buttons: [
 					{
 						extend: "excelHtml5",

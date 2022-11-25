@@ -1,101 +1,103 @@
 <template>
 	<div id="sc-page-wrapper">
+		<div class="loading" :style="isLoading">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 		<div id="sc-page-content">
-			<ScTransition
-				group
-				stagger
-				:speed="20"
-				origin="50% 50%"
+			<div
 				class="uk-child-width-1-5@xl uk-child-width-1-3@l uk-child-width-1-2@s uk-grid uk-grid-match uk-sortable"
+				style="display: flex; justify-content: center;"
 				data-uk-grid
-				data-uk-sortable
 			>
-				<div v-show="showWidgets" key="widgetA">
+				<div v-show="showWidgets" @click="$router.push('/purchasing/item-demand/waiting-for-approve')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-cyan-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-memory md-color-white sc-icon-24"></i>
+							<i class="mdi mdi-clock md-color-white sc-icon-24"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									RAM usage
+									Bekleyen Talepler
 								</ScCardTitle>
-								<ScProgressLinear extra-class="uk-margin-small-top">
-									<ScProgressBar :value="ramUsage" color="md-bg-red-400"></ScProgressBar>
-								</ScProgressLinear>
+								<ScCardMeta>
+									{{this.pendingDemandCount}}
+								</ScCardMeta>
 							</ScCardBody>
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets" key="widgetB">
+				<div v-show="showWidgets" @click="hasViewAuth('ItemOrderApproval') ? $router.push('/purchasing/item-order/waiting-for-approve') :  $router.push('/')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-red-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-account-card-details md-color-white sc-icon-24"></i>
+							<i class="mdi mdi-clock md-color-white sc-icon-24"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									New Customers
+									Bekleyen Siparişler
 								</ScCardTitle>
 								<ScCardMeta>
-									1 453
+									{{this.pendingOrderCount}}
 								</ScCardMeta>
 							</ScCardBody>
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets" key="widgetC">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-light-green-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-car md-color-white sc-icon-24"></i>
+							<i class="mdi mdi-currency-try md-color-white sc-icon-24"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									Free spaces
+									Teklif Verilen Projeler
 								</ScCardTitle>
-								<ScProgressLinear extra-class="uk-margin-small-top" size="sm">
-									<ScProgressBar :value="58" color="md-bg-light-green-400"></ScProgressBar>
-								</ScProgressLinear>
+								<ScCardMeta>
+									<b> {{this.offeredProjectTotal}} </b>
+								</ScCardMeta>
 							</ScCardBody>
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets" key="widgetD">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-amber-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-currency-eur md-color-white sc-widget-addon"></i>
+							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									1.135873
+									Onaylanan Projeler
 								</ScCardTitle>
 								<ScCardMeta>
-									EUR to USD
+									<b> {{this.approvedProjectTotal}} </b>
 								</ScCardMeta>
 							</ScCardBody>
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets" key="widgetE">
+				<div v-show="showWidgets">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-purple-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-server md-color-white sc-widget-addon"></i>
+							<i class="mdi mdi-currency-usd md-color-white sc-widget-addon"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									99.95%
+									--- ₺/Dolar
 								</ScCardTitle>
-								<ScCardMeta>
-									Server Uptime
-								</ScCardMeta>
+								<ScCardTitle>
+									--- ₺/Euro
+								</ScCardTitle>
 							</ScCardBody>
 						</div>
 					</ScCard>
 				</div>
-			</ScTransition>
+			</div>
 			<div class="uk-child-width-1-4@xl uk-child-width-1-2@s uk-grid" data-uk-grid>
 				<div>
 					<ScCard class="sc-widget">
@@ -191,12 +193,12 @@
 					<div class="uk-child-width-1-1@l uk-child-width-1-2@m uk-grid" data-uk-grid>
 						<div>
 							<Transition name="scale-up">
-								<ScCard v-show="!trafficCardClosed" ref="trafficCard">
+								<ScCard v-show="!trafficCardClosed" ref="trafficCard" v-if="this.chartLoaded">
 									<ScCardHeader>
 										<div class="uk-flex uk-flex-middle">
 											<div class="uk-flex-1">
 												<ScCardTitle>
-													Traffic sources
+													Projeler
 												</ScCardTitle>
 											</div>
 											<ScCardActions>
@@ -210,7 +212,7 @@
 								</ScCard>
 							</Transition>
 						</div>
-						<div>
+						<div v-if="false">
 							<Transition name="scale-up">
 								<ScCard v-show="!bestSellersCardClosed" ref="trafficCard">
 									<ScCardHeader>
@@ -233,7 +235,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-width-2-3@l">
+				<div class="uk-width-2-3@l" v-if="false">
 					<ScCard ref="uniqueVisitsCard"
 						class="uk-margin"
 						:full-screen="uniqueVisitsCardFullScreen"
@@ -346,7 +348,7 @@
 					</ScCard>
 				</div>
 			</div>
-			<div class="uk-child-width-1-3@l uk-child-width-1-2@m uk-grid" data-uk-grid data-uk-height-match="target: > div > div > .uk-card-header > div">
+			<div v-if="false" class="uk-child-width-1-3@l uk-child-width-1-2@m uk-grid" data-uk-grid data-uk-height-match="target: > div > div > .uk-card-header > div">
 				<div>
 					<ScCard :collapsed="todoCardCollapsed">
 						<ScCardHeader>
@@ -669,6 +671,8 @@
 import { scColors, scMq } from '~/assets/js/utils';
 const PrettyCheck = () => import('pretty-checkbox-vue/check');
 import { ScProgressLinear, ScProgressBar, ScProgressLabel } from '~/components/progress'
+import { useApi } from "~/composable/useApi";
+import { useUserSession } from '~/composable/userSession';
 
 import Chart from '~/components/chartjs/defaults'
 import ChartJsDoughnut from '~/components/chartjs/Doughnut'
@@ -680,6 +684,7 @@ import { VectorMap } from '~/components/vector-map';
 
 if(process.client) {
 	require('~/assets/icons/flags/flags.css');
+	require('~/assets/loading/loading.css');
 }
 
 export default {
@@ -695,6 +700,12 @@ export default {
 		VectorMap
 	},
 	data: () => ({
+		pendingDemandCount: "",
+		pendingOrderCount: "",
+		approvedProjectTotal: "",
+		offeredProjectTotal: "",
+		chartData: [],
+		chartLoaded: false,
 		ramUsage: 82,
 		updateInterval: null,
 		todoName: 'George Weaver',
@@ -842,6 +853,18 @@ export default {
 		}
 	}),
 	computed: {
+		isLoading(){
+      if(!this.chartLoaded){
+        return{
+          display: "block"
+        }
+      }
+      else{
+        return{
+          display: "none"
+        }
+      }
+    },
 		visitsData () {
 			let data = {
 				brazil: [],
@@ -929,17 +952,21 @@ export default {
 		traficChartData () {
 			return {
 				datasets: [{
-					data: [30, 45, 25],
+					data: this.chartData,
 					backgroundColor: [
-						scColors.blue[0],
+						scColors.blue[4],
+						scColors.blue[3],
+						scColors.blue[2],
 						scColors.blue[1],
-						scColors.blue[2]
+						scColors.blue[0]
 					]
 				}],
 				labels: [
-					'Organic',
-					'Referral',
-					'Social'
+					'Oluşturulan Projeler',
+					'Teklif Verilecek Projeler',
+					'Teklif Verilen Projeler',
+					'Onaylanan Projeler',
+					'Tamamlanan Projeler'
 				]
 			}
 		},
@@ -962,15 +989,46 @@ export default {
 		},
 	},
 	mounted () {
+		
 		this.$nextTick(() => {
 			this.showWidgets = true;
-			this.updateRamUsage();
+			
+			this.bindApp()
 		})
 	},
 	beforeDestroy () {
 		clearInterval(this.updateInterval);
 	},
 	methods: {
+		async bindApp() {
+      const api = useApi();	
+			const projectData = (await api.get('Project')).data;
+			const pendingDemandsData = (await api.get("ItemDemand/WaitingForApprove")).data;
+			const pendingOrdersData = (await api.get('ItemOrder/Purchase/WaitingForApprove')).data;
+
+			this.chartData.push(projectData.filter(d => d.projectStatus == 0).length)		
+			this.chartData.push(projectData.filter(d => d.projectStatus == 1).length)
+			this.chartData.push(projectData.filter(d => d.projectStatus == 2).length)
+			this.chartData.push(projectData.filter(d => d.projectStatus == 3).length)
+			this.chartData.push(projectData.filter(d => d.projectStatus == 4).length)
+
+			const offeredProjectSum = projectData.filter(d => d.projectStatus == 2).reduce((partialSum, a) => partialSum + a.totalCost, 0);
+			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + a.totalCost, 0);
+			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(offeredProjectSum));
+			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(approvedProjectSum));
+			this.pendingDemandCount = pendingDemandsData.length;
+      this.pendingOrderCount = pendingOrdersData.length;
+
+			this.chartLoaded = true
+    },
+		hasViewAuth(sectionKey){
+			if (process.client){
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey);
+			}
+			return false;
+		},
 		escapeXml (string) {
 			return string.replace(/[<>]/g, function (c) {
 				switch (c) {
@@ -984,11 +1042,11 @@ export default {
 		},
 		updateRamUsage () {
 			// update ram usage
-			this.updateInterval = setInterval(() => {
-				if(this.showWidgets) {
-					this.ramUsage = (Math.floor(Math.random() * 100) + 15)
-				}
-			}, 3000);
+			// this.updateInterval = setInterval(() => {
+			// 	if(this.showWidgets) {
+			// 		this.ramUsage = (Math.floor(Math.random() * 100) + 15)
+			// 	}
+			// }, 3000);
 		},
 		loadContent () {
 			if(!this.btnDisabled) {

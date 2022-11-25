@@ -5,9 +5,15 @@
                     sc-round sc-border md-bg-grey-100
             ">
                 <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-                <h4 class="md-color-gray-600 uk-margin-remove">
+                <h4 class="md-color-gray-600 uk-margin-remove uk-width-5-6">
                     Satın Alma Talebi
                 </h4>
+                <div class="uk-width-1-6">
+                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-margin-medium uk-margin-remove-top uk-width-1-1@m">
+                        <span data-uk-icon="icon: check" class="uk-icon"></span>
+                        <span>Kaydet</span>
+                    </button>
+                </div>
             </div>
             <form>
                 <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
@@ -40,6 +46,11 @@
                                 </PrettyCheck>
                             </div>
                         </div>
+                        <div class="uk-width-2-3@m">
+                            <ScInput v-model="formData.explanation">
+                                <label>Talep Açıklaması</label>
+                            </ScInput>
+                        </div>
                     </div>
                 </fieldset>
 
@@ -57,7 +68,7 @@
                                     <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0" type="button" @click="removeDemandDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand" style="height:34px;">
                                         <span data-uk-icon="icon: trash" class="uk-icon"></span>
                                     </button>
-                                </div>
+                                </div>     
                             </div>
                             <div class="uk-width-4-5@l">
                                 <ItemDemandDetail
@@ -152,6 +163,7 @@ export default {
             plantId: null,
 			demandStatus: 0,
             isContracted: false,
+            explanation: '',
 		},
         isMounting: false,
         details: [],
@@ -174,6 +186,7 @@ export default {
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
 			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
+            { data: "itemExplanation", title: "Stok Açıklaması", visible: true, },
             { data: "partNo", title: "Parça Kodu", visible: true, },
             { data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
@@ -181,7 +194,8 @@ export default {
 		],
         selectedDemandDetail: {
             id: 0,
-        }
+        },
+        bindComplete: false
 	}),
 	computed: {
 		currentProjectName() {
@@ -264,8 +278,11 @@ export default {
                     }
                 }
             }
+            this.bindComplete = true
         },
 		async onSubmit(){
+            this.bindComplete = false
+            this.$emit("onSaved")
             try {
                 this.formData.details = this.details.map((d) => {
                     return {
@@ -277,7 +294,6 @@ export default {
 
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;
-
                 const api = useApi();
                 const postResult = (await api.post('ItemDemand', this.formData)).data;
                 if (postResult.result){
@@ -381,6 +397,14 @@ export default {
         projectId: function(newVal, oldVal) {
             if (this.formData)
                 this.formData.projectId = newVal;
+        },
+        details: {
+            handler: function(newVal, oldVal){
+                if(this.bindComplete){
+                    this.$emit('onChange');
+                }
+            },
+            deep: true
         },
     }
 }

@@ -1,4 +1,4 @@
-import locale6010b66b from '../../lang/en-US.js'
+import locale6010b66b from '../..\\lang\\en-US.js'
 
 export const Constants = {
   COMPONENT_OPTIONS_KEY: "nuxtI18n",
@@ -19,7 +19,7 @@ export const options = {
   sortRoutes: true,
   strategy: "no_prefix",
   lazy: true,
-  langDir: "/home/hakan/Projects/HekaMinium/lang",
+  langDir: "C:\\Users\\USER\\Desktop\\ButanMakina\\HekaminiumWeb\\hekaminium\\lang",
   rootRedirect: null,
   detectBrowserLanguage: {"alwaysRedirect":false,"cookieCrossOrigin":false,"cookieDomain":null,"cookieKey":"i18n_redirected","cookieSecure":false,"fallbackLocale":"","onlyOnNoPrefix":false,"onlyOnRoot":false,"useCookie":true},
   differentDomains: false,
@@ -38,6 +38,6 @@ export const options = {
 
 export const localeMessages = {
   'en-US.js': () => Promise.resolve(locale6010b66b),
-  'es-ES.js': () => import('../../lang/es-ES.js' /* webpackChunkName: "lang-es-ES.js" */),
-  'fr-FR.js': () => import('../../lang/fr-FR.js' /* webpackChunkName: "lang-fr-FR.js" */),
+  'es-ES.js': () => import('../..\\lang\\es-ES.js' /* webpackChunkName: "lang-es-ES.js" */),
+  'fr-FR.js': () => import('../..\\lang\\fr-FR.js' /* webpackChunkName: "lang-fr-FR.js" */),
 }

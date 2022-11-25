@@ -30,6 +30,12 @@ export const menuEntries = [
 			},
 			{
 				id: uniqueID(),
+				title: "İç Üretim",
+				icon: "mdi mdi-human-handsup",
+				page: "/purchasing/internal-demand/list"
+			},
+			{
+				id: uniqueID(),
 				icon: "mdi mdi-offer",
 				title: "Teklif",
 				page: "/purchasing/item-offer/list"

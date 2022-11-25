@@ -18,6 +18,10 @@ require('~/plugins/jquery');
 require('select2');
 require('select2/dist/css/select2.min.css');
 
+$(document).on('select2:open', () => {
+    document.querySelector('.select2-search__field').focus();
+});
+
 export default {
 	name: 'Select2',
 	model: {

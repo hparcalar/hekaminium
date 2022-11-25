@@ -1,54 +1,53 @@
 <template>
-	<div id="sc-page-wrapper">
-		<div id="sc-page-content">
-			<div class="uk-flex-center uk-grid" data-uk-grid>
-				<div class="uk-width-2-3@l">
-					<div class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
+    <div id="sc-page-wrapper">
+        <div id="sc-page-content">
+            <div class="uk-flex-center uk-grid" data-uk-grid>
+                <div class="uk-width-2-3@l">
+                    <div class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                          sc-round sc-border md-bg-grey-100
                     ">
-						<span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-						<h4 class="md-color-gray-600 uk-margin-remove">
-							Firma Tanımı
-						</h4>
-					</div>
-					<form>
-						<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
-							<legend class="uk-legend">
-								Genel Bilgiler
-							</legend>
-							<div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
-								<div>
-									<ScInput v-model="formData.firmCode">
-										<label>Firma Kodu</label>
-									</ScInput>
-								</div>
-								<div>
-									<ScInput v-model="formData.firmName">
-										<label>Firma Adı</label>
-									</ScInput>
-								</div>
+                        <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
+                        <h4 class="md-color-gray-600 uk-margin-remove">
+                            Firma Tanımı
+                        </h4>
+                    </div>
+                    <form>
+                        <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
+                            <legend class="uk-legend">
+                                Genel Bilgiler
+                            </legend>
+                            <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
+                                <div>
+                                    <ScInput v-model="formData.firmCode" :read-only="true">
+                                        <label>Firma Kodu</label>
+                                    </ScInput>
+                                </div>
+                                <div>
+                                    <ScInput v-model="formData.firmName">
+                                        <label>Firma Adı</label>
+                                    </ScInput>
+                                </div>
                                 <div>
                                     <client-only>
-                                        <Select2
-                                            v-model="formData.firmCategoryId"
-                                            :options="categories"
-                                            :settings="{ 'width': '100%', 'placeholder': 'Kategori', 'allowClear': true }"
-                                        ></Select2>
+                                        <Select2 v-model="formData.firmCategoryId" :options="categories"
+                                            :settings="{ 'width': '100%', 'placeholder': 'Kategori', 'allowClear': true }">
+                                        </Select2>
                                     </client-only>
-								</div>
+                                </div>
                                 <div>
-                                    <PrettyCheck name="isActive" v-model="formData.isActive" :value="true" class="p-icon">
+                                    <PrettyCheck name="isActive" v-model="formData.isActive" :value="true"
+                                        class="p-icon">
                                         <i slot="extra" class="icon mdi mdi-check"></i>
                                         Aktif
                                     </PrettyCheck>
                                 </div>
-							</div>
-						</fieldset>
+                            </div>
+                        </fieldset>
 
                         <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
                             <legend class="uk-legend">
-								Ticari Bilgiler
-							</legend>
+                                Ticari Bilgiler
+                            </legend>
                             <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
                                 <div>
                                     <ScInput v-model="formData.commercialTitle">
@@ -88,22 +87,24 @@
                             </div>
                         </fieldset>
 
-						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: check" class="uk-icon"></span>
-							</button>
-							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
-							</button>
+                        <div class="uk-margin-large-top">
+                            <button type="button" @click="onSubmit"
+                                class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                                <span data-uk-icon="icon: check" class="uk-icon"></span>
+                            </button>
+                            <button type="button" @click="onCancel"
+                                class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                                <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
+                            </button>
                             <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
-								<span data-uk-icon="icon: trash" class="uk-icon"></span>
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+                                <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -115,27 +116,27 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { getQS } from '~/composable/useHelpers';
 
-if(process.client) {
-	require('~/plugins/inputmask');	
+if (process.client) {
+    require('~/plugins/inputmask');
 }
 
 export default {
-	name: 'FirmForm',
-	components: {
-		Select2: process.client ? () => import('~/components/Select2') : null,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
+    name: 'FirmForm',
+    components: {
+        Select2: process.client ? () => import('~/components/Select2') : null,
+        ScInput,
+        ScTextarea,
+        PrettyRadio,
         PrettyCheck
-	},
-	data: () => ({
-		formData: {
+    },
+    data: () => ({
+        formData: {
             id: 0,
-			firmCode: '',
-			firmName: '',
+            firmCode: '',
+            firmName: '',
             commercialTitle: '',
             plantId: null,
-			isActive: true,
+            isActive: true,
             taxOffice: '',
             taxNo: '',
             firmCategoryId: null,
@@ -145,21 +146,21 @@ export default {
             phoneText: '',
             authorText: '',
             emailText: '',
-		},
+        },
         categories: [],
-	}),
-	computed: {
-		
-	},
-	async mounted () {
+    }),
+    computed: {
+
+    },
+    async mounted() {
         const qsId = getQS('id');
         if (qsId) this.formData.id = parseInt(qsId);
         else this.formData.id = 0;
 
-		await this.bindModel();
-	},
-	methods: {
-        async bindModel(){
+        await this.bindModel();
+    },
+    methods: {
+        async bindModel() {
 
             const api = useApi();
             try {
@@ -172,19 +173,22 @@ export default {
                         };
                     })
 
-                const getData = (await api.get('Firm/' + this.formData.id)).data;   
-                if (getData && getData.id > 0){
+                const getData = (await api.get('Firm/' + this.formData.id)).data;
+                if (getData && getData.id > 0) {
                     this.formData = getData;
                 }
+                else {
+                    this.formData.firmCode = getData.firmCode
+                }
             } catch (error) {
-                
+
             }
         },
-		async onSubmit(){
+        async onSubmit() {
             try {
                 const api = useApi();
                 const postResult = (await api.post('Firm', this.formData)).data;
-                if (postResult.result){
+                if (postResult.result) {
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
 
@@ -196,27 +200,47 @@ export default {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
         },
-        onCancel(){
+        onCancel() {
             this.$router.push('/firm/list');
         },
-        async onDelete(){
+        async onDelete() {
+            /* const self = this;
+            UIkit.modal.confirm('Bu firma kaydını silmek istediğinizden emin misiniz?').then(
+                async function () {
+                    try {
+                        const api = useApi();
+                        const delResult = (await api.delete('Firm/' + self.formData.id)).data;
+                        if (delResult.result) {
+                            self.showNotification('Silme işlemi başarılı', false, 'success');
+                            self.$emit('onDemandSaved');
 
+                            if (self.isDialog)
+                                UIkit.modal(document.getElementById(self.dialogContainer)).hide();
+                            else
+                                self.$router.go(-1);
+                        }
+                        else
+                            self.showNotification(delResult.errorMessage, false, 'error');
+                    } catch (error) {
+
+                    }
+                }); */
         },
-        showNotification (text, pos, status, persistent) {
-			var config = {};
-			config.timeout = persistent ? !persistent : 3000;
-			if(status) {
-				config.status = status;
-			}
-			if(pos) {
-				config.pos = pos;
-			}
-			UIkit.notification(text, config);
-		}
-	}
+        showNotification(text, pos, status, persistent) {
+            var config = {};
+            config.timeout = persistent ? !persistent : 3000;
+            if (status) {
+                config.status = status;
+            }
+            if (pos) {
+                config.pos = pos;
+            }
+            UIkit.notification(text, config);
+        }
+    }
 }
 </script>
 
 <style lang="scss">
-	@import '~scss/vue/_pretty_checkboxes';
+@import '~scss/vue/_pretty_checkboxes';
 </style>
