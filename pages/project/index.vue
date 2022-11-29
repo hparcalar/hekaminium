@@ -255,7 +255,8 @@
 												</li>
 												<li>Sipariş içerik</li>
 												<li>
-													<div class="sc-padding-medium sc-padding-remove-top">												
+													Satın alınanlar içerik
+													<!-- <div class="sc-padding-medium sc-padding-remove-top">												
 														<div class="uk-margin-medium uk-margin-remove-left">
 															<client-only>
 																<Datatable id="sc-dt-order-table" ref="buttonsTable" :data="demandList"
@@ -264,7 +265,7 @@
 																</Datatable>
 															</client-only>
 														</div>
-													</div>
+													</div> -->
 												</li>
 												<li>Tüketim içerik</li>
 											</ul>

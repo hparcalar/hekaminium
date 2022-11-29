@@ -160,8 +160,10 @@ export default {
 		const rawData = (await api.get(targetUri)).data.map((d) => {
 			return {
 				...d,
-				offerForexPrice: new Intl.NumberFormat("tr-TR").format(d.offerForexPrice),
-				offerPrice: new Intl.NumberFormat("tr-TR").format(d.offerPrice),
+				totalCost: d.totalCost * d.quantity,
+				totalForexCost: d.totalForexCost * d.quantity,
+				offerForexPrice: new Intl.NumberFormat("tr-TR").format(d.offerForexPrice * d.quantity),
+				offerPrice: new Intl.NumberFormat("tr-TR").format(d.offerPrice * d.quantity),
 			}
 		});
 

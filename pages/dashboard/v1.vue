@@ -12,7 +12,7 @@
 				style="display: flex; justify-content: center;"
 				data-uk-grid
 			>
-				<div v-show="showWidgets" @click="$router.push('/purchasing/item-demand/waiting-for-approve')">
+				<div v-show="showWidgets" @click="hasViewAuth('ItemDemandApproval') ? $router.push('/purchasing/item-demand/waiting-for-approve') :  $router.push('/')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-cyan-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-clock md-color-white sc-icon-24"></i>
@@ -1011,9 +1011,8 @@ export default {
 			this.chartData.push(projectData.filter(d => d.projectStatus == 2).length)
 			this.chartData.push(projectData.filter(d => d.projectStatus == 3).length)
 			this.chartData.push(projectData.filter(d => d.projectStatus == 4).length)
-
-			const offeredProjectSum = projectData.filter(d => d.projectStatus == 2).reduce((partialSum, a) => partialSum + a.totalCost, 0);
-			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + a.totalCost, 0);
+			const offeredProjectSum = projectData.filter(d => d.projectStatus == 2).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
+			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);			
 			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(offeredProjectSum));
 			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(approvedProjectSum));
 			this.pendingDemandCount = pendingDemandsData.length;
