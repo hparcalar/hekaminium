@@ -80,19 +80,19 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-purple-600 uk-flex-middle uk-flex uk-flex-center">
-							<i class="mdi mdi-currency-usd md-color-white sc-widget-addon"></i>
+							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>
 						</div>
 						<div class="uk-flex-1">
 							<ScCardBody>
 								<ScCardTitle>
-									--- ₺/Dolar
+									Tamamlanan Projeler
 								</ScCardTitle>
-								<ScCardTitle>
-									--- ₺/Euro
-								</ScCardTitle>
+								<ScCardMeta>
+									<b> {{this.completedProjectTotal}} </b>
+								</ScCardMeta>
 							</ScCardBody>
 						</div>
 					</ScCard>
@@ -704,6 +704,7 @@ export default {
 		pendingOrderCount: "",
 		approvedProjectTotal: "",
 		offeredProjectTotal: "",
+		completedProjectTotal: "",
 		chartData: [],
 		chartLoaded: false,
 		ramUsage: 82,
@@ -1012,9 +1013,11 @@ export default {
 			this.chartData.push(projectData.filter(d => d.projectStatus == 3).length)
 			this.chartData.push(projectData.filter(d => d.projectStatus == 4).length)
 			const offeredProjectSum = projectData.filter(d => d.projectStatus == 2).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
-			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);			
+			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
+			const completedProjectSum = projectData.filter(d => d.projectStatus == 4).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
 			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(offeredProjectSum));
 			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(approvedProjectSum));
+			this.completedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(completedProjectSum));
 			this.pendingDemandCount = pendingDemandsData.length;
       this.pendingOrderCount = pendingOrdersData.length;
 

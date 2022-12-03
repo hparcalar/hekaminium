@@ -127,6 +127,7 @@ export default {
             return {
                 ...d,
                 receiptDate: dateToStr(d.receiptDate),
+								denialExplanation: d.denialExplanation != null ? d.denialExplanation : '-'
             };
         });
 

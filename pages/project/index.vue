@@ -156,9 +156,13 @@
 
 														</div>
 														<div class="uk-margin-medium uk-margin-remove-left">
+															<div class="uk-width-auto@s" style="position: relative; float:right;">
+																<div id="sc-dt-buttons"></div>
+															</div>
 															<client-only>
 																<Datatable id="sc-dt-cost-items-table" ref="costItemsTable" :data="formData.costItems"
 																	:options="dtOptions" :customColumns="dtCostItemCols" :buttons="true"
+																	@initComplete="dtButtonsInitialized"
 																	:customEvents="[{ name: 'select', function: clickCostItemRow }, { name: 'deselect', function: deselectCostItemRow }]">
 																</Datatable>
 															</client-only>
@@ -244,9 +248,13 @@
 
 														</div>
 														<div class="uk-margin-medium uk-margin-remove-left">
+															<div class="uk-width-auto@s" style="position: relative; float:right;">
+																<div id="sc-dt-buttonsDemand"></div>
+															</div>
 															<client-only>
-																<Datatable id="sc-dt-buttons-table" ref="buttonsTable" :data="demandList"
+																<Datatable id="sc-dt-buttons-table" ref="demandListTable" :data="demandList"
 																	:options="dtOptions" :customColumns="dtDemandCols" :buttons="true"
+																	@initComplete="dtButtonsInitialize"
 																	:customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]">
 																</Datatable>
 															</client-only>
@@ -477,7 +485,7 @@ export default {
 			searching: true,
 			paging: true,
 			buttons: [
-				{
+				/* {
 					extend: "copyHtml5",
 					className: "sc-button",
 					text: 'Kopyala'
@@ -486,7 +494,7 @@ export default {
 					extend: "csvHtml5",
 					className: "sc-button",
 					text: 'CSV '
-				},
+				}, */
 				{
 					extend: "excelHtml5",
 					className: "sc-button",
@@ -832,6 +840,38 @@ export default {
 					}
 				});
 		},
+		dtButtonsInitialized() {
+      // append buttons to custom container
+      this.$refs.costItemsTable.$dt
+        .buttons()
+        .container()
+        .appendTo(document.getElementById("sc-dt-buttons"));
+
+      // const ls = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
+      // this.$refs.buttonsTable.headers.forEach( (value, i) => {
+      // 	this.dtDHeaders.push({
+      // 		'name': value,
+      // 		checked: ls.columns[i].visible,
+      // 		disabled: i === 0
+      // 	})
+      // });
+    },
+		dtButtonsInitialize() {
+      // append buttons to custom container
+      this.$refs.demandListTable.$dt
+        .buttons()
+        .container()
+        .appendTo(document.getElementById("sc-dt-buttonsDemand"));
+
+      // const ls = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
+      // this.$refs.buttonsTable.headers.forEach( (value, i) => {
+      // 	this.dtDHeaders.push({
+      // 		'name': value,
+      // 		checked: ls.columns[i].visible,
+      // 		disabled: i === 0
+      // 	})
+      // });
+    },
 		showNotification(text, pos, status, persistent) {
 			var config = {};
 			config.timeout = persistent ? !persistent : 3000;
@@ -940,6 +980,7 @@ export default {
 					self.selectedCostItemRow = null;
 
 					self.calculateTotal();
+					self.calculateProjectCost();
 				});
 		},
 		async approveDetails() {
