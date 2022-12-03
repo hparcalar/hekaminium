@@ -39,7 +39,9 @@
 					<client-only>
 						<Datatable id="sc-dt-buttons-table" ref="buttonsTable" :data="visualData" :options="dtDOptions"
 							:customColumns="dtColumns" :buttons="true" :customEvents="[{ name: 'select', function: clickDetail }]"
-							@initComplete="dtButtonsInitialized"></Datatable>
+							@initComplete="dtButtonsInitialized"
+							:show-summary="true" :summary-items="['totalCost', 'offerPrice', 'offerForexPrice', 'totalForexCost']"
+							></Datatable>
 					</client-only>
 				</ScCardBody>
 			</ScCard>
@@ -67,11 +69,11 @@ export default {
 				{ data: "firmName", title: "Müşteri", width: "22%", visible: true, },
 				{ data: "quantity", title: "Proje Adedi", visible: true, },
 				{ data: "forexName", title: "Döviz Cinsi", visible: false, },
-				{ data: "totalCost", title: "Maliyet (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(row.totalCost); } },
-				{ data: "totalForexCost", title: "Maliyet (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(row.totalForexCost); } },
+				{ data: "totalCost", title: "Maliyet (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.totalCost); } },
+				{ data: "totalForexCost", title: "Maliyet (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.totalForexCost); } },
 				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
-				{ data: "offerPrice", title: "Bedeli (TL)", visible: false, render: function (data, ev, row) { return row.offerPrice; } },
-				{ data: "offerForexPrice", title: "Bedeli (Döviz)", visible: false, render: function (data, ev, row) { return row.offerForexPrice; } },
+				{ data: "offerPrice", title: "Bedeli (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerPrice * row.quantity); } },
+				{ data: "offerForexPrice", title: "Bedeli (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerForexPrice * row.quantity); } },
 				{ data: "projectStatusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
@@ -162,8 +164,8 @@ export default {
 				...d,
 				totalCost: d.totalCost * d.quantity,
 				totalForexCost: d.totalForexCost * d.quantity,
-				offerForexPrice: new Intl.NumberFormat("tr-TR").format(d.offerForexPrice * d.quantity),
-				offerPrice: new Intl.NumberFormat("tr-TR").format(d.offerPrice * d.quantity),
+				offerForexPrice: d.offerForexPrice * d.quantity,
+				offerPrice: d.offerPrice * d.quantity,
 			}
 		});
 

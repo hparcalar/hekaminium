@@ -289,7 +289,7 @@
 <script>
 import PrettyCheck from "pretty-checkbox-vue/check";
 import { useApi } from "~/composable/useApi";
-import { dateToStr } from "~/composable/useHelpers";
+import { dateToStr, strToDate } from "~/composable/useHelpers";
 import ScInput from "~/components/Input";
 import moment from "~/plugins/moment";
 
@@ -310,7 +310,8 @@ export default {
     return {
       visualData: [],
       dtColumns: [
-        { data: "demandDate", title: "Tarih", visible: true, type: "date" },
+        { data: "demandDate", title: "Talep Tarihi", visible: true, type: "date" },
+        { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date" },
         { data: "itemDemandNo", title: "Talep No", visible: true },
         {
           data: "projectName",
@@ -353,7 +354,7 @@ export default {
             $("td", row).addClass("item-selection-required");
           }
         },
-        order: [[1, "dsc"]],
+        order: [[1, "desc"]],
         buttons: [
           // {
           // 	extend: "copyHtml5",
@@ -467,9 +468,12 @@ export default {
       this.visualData = rawData.map((d) => {
         return {
           ...d,
-          demandDate: dateToStr(d.demandDate),
+          demandDate: dateToStr(d.demandDate, 'YYYY.MM.DD'),
+          createdDate: dateToStr(d.createdDate, 'YYYY.MM.DD'),
         };
       });
+
+      console.error(this.visualData);
 
       this.firmList = (await api.get("Firm")).data.map((d) => {
         return {

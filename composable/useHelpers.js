@@ -5,13 +5,13 @@ export function getQS(key){
     return value;
 }
 
-export function dateToStr(dateString) {
+export function dateToStr(dateString, format) {
     const moment = require('moment');
 
     if (dateString && dateString.length > 0) {
       try {
         const dtObj = moment(dateString);
-        const result = dtObj ? dtObj.format('DD.MM.YYYY') : dateString;
+        const result = dtObj ? dtObj.format(format ?? 'DD.MM.YYYY') : dateString;
         return result;
       } catch (error) {}
     }

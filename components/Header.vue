@@ -69,13 +69,49 @@
 				<a class="uk-navbar-toggle uk-hidden@l uk-padding-remove-left" data-uk-toggle="target: .nav-overlay-small; animation: uk-animation-slide-top" href="javascript:void(0)">
 					<i class="mdi mdi-close sc-icon-24"></i>
 				</a>
-				<div class="uk-navbar-item uk-width-expand uk-padding-remove-right">
+				<div class="uk-navbar-item uk-width-expand uk-padding-remove-right" style="position:relative;">
 					<form class="uk-search uk-search-navbar uk-width-1-1 uk-flex">
-						<input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+						<input class="uk-search-input" type="search" v-model="searchData" @keyup="tryForSearch" placeholder="Arama..." autofocus>
 						<button class="sc-button sc-button-small sc-button-icon sc-button-flat uk-margin-small-left" type="button">
 							<i class="mdi mdi-magnify sc-icon-24 md-color-white"></i>
 						</button>
 					</form>
+					<div class="found-results" v-show="foundData && foundData.length > 0">
+						<div class="found-row" v-for="item in foundData" :key="item">
+							<div class="uk-grid">
+								<div class="uk-width-1-3">
+									<p>Talep: <a @click="goToDemand(item.itemDemandId)">{{ item.itemDemandNo }}</a></p>
+									<p>Malzeme: {{ item.itemName }}</p>
+									<p>Açıklama: {{ item.itemExplanation }}</p>
+								</div>
+								<div class="uk-width-1-3">
+									<p>Parça Kodu: {{ item.partNo }}</p>
+									<p>Boyutlar: {{ item.partDimensions }}</p>
+									<p>Miktar: <b>{{ item.quantity }}</b></p>
+								</div>
+								<div class="uk-width-1-3">
+									<p>Tarih: {{ item.createdDate }}</p>
+									<p>Proje: <b>{{ item.projectName }}</b></p>
+									<p>Durumu: <b>{{ item.statusText }}</b></p>
+								</div>
+							</div>
+							<div class="related-offer-container" v-if="(item.relatedOfferId > 0)">
+								<p>Teklif No: <a @click="goToOffer(item.relatedOfferId)">{{ item.relatedOfferNo }}</a></p>
+								<p>Teklif Tarihi: <b>{{ item.relatedOfferDate }}</b></p>
+							</div>
+							<div class="related-order-container" v-if="(item.relatedOrderId > 0)">
+								<div class="uk-grid">
+									<div class="uk-width-1-3">
+										<p>Sipariş No: <a @click="goToOrder(item.relatedOrderId)">{{ item.relatedOrderNo }}</a></p>
+										<p>Sipariş Tarihi: <b>{{ item.relatedOrderDate }}</b></p>
+									</div>
+									<div class="uk-width-1-3">
+										<p>Firma: <b>{{ item.relatedOrderFirmName }}</b></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="nav-overlay nav-overlay-small uk-navbar-right">
@@ -209,6 +245,9 @@ import ScFullscreen from '~/components/FullScreen.vue';
 import ScTopMenu from '~/components/topmenu/TopMenu.vue';
 import { scHelpers } from "~/assets/js/utils";
 import { useUserSession, logoutUser } from '~/composable/userSession';
+import { useApi } from '~/composable/useApi';
+import { dateToStr } from "~/composable/useHelpers";
+import moment from "~/plugins/moment";
 
 const { uniqueID } = scHelpers;
 
@@ -309,6 +348,9 @@ export default {
 		sidebarMainExpanded: true,
 		offcanvasExpanded: false,
 		offcanvasPresent: false,
+		lastKeyUpForSearch: null,
+		searchData: '',
+		foundData: [],
 		logo: require('~/assets/img/logo.png'),
 		alertsEmpty: true,
 		topMenuData: [
@@ -535,7 +577,82 @@ export default {
 		logoutUser (){
 			logoutUser();
 			window.location.href = '/login_page';
+		},
+		goToDemand(demandId){
+            this.$router.push('/purchasing/item-demand?id=' + demandId);
+        },
+		goToOffer(offerId){
+			this.$router.push('/purchasing/item-offer?id=' + offerId);
+		},
+		goToOrder(orderId){
+			this.$router.push('/purchasing/item-order?id=' + orderId);
+		},
+		tryForSearch(){
+			const moment = require('moment');
+			this.lastKeyUpForSearch = moment();
+			
+			setTimeout(this.checkForSearch, 800);
+		},
+		checkForSearch(){
+			const moment = require('moment');
+			const dtNow = moment();
+			const ms = dtNow.diff(this.lastKeyUpForSearch);
+			const duration = moment.duration(ms);
+			if (duration >= 550)
+				this.searchForDemands();
+		},
+		async searchForDemands(){
+			const api = useApi();
+
+			try {
+				this.foundData = (await api.get('ItemDemand/Search/' + this.searchData)).data
+					.map((d) => {
+						return {
+							...d,
+							createdDate: dateToStr(d.createdDate),
+							relatedOfferDate: dateToStr(d.relatedOfferDate),
+							relatedOrderDate: dateToStr(d.relatedOrderDate),
+						}
+					});
+			} catch (error) {
+				this.foundData = [];
+			}
 		}
 	}
 }
 </script>
+<style type="text/css">
+.found-results{
+	position:absolute; background-color:#fff; height:500px; width:80%; top:50px; left:10px;
+	padding:10px;
+	border: 1px solid #cfcfcf;
+	border-radius:5px;
+	box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.36);
+	-webkit-box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.36);
+	overflow: auto;
+}
+.found-row{
+	border-bottom: 1px solid #afafaf;
+	background-color: transparent;
+	padding:5px;
+}
+.found-row:hover{
+	background-color: #efefef;
+}
+.found-row p{
+	margin:0px;
+}
+.related-offer-container{
+	margin-left:50px;
+	padding:5px;
+	border-top: 1px solid #afafaf;
+	background-color: #cfe3fd;
+}
+.related-order-container{
+	margin-left:75px;
+	padding:5px;
+	border-top: 1px solid #afafaf;
+	background-color: #c5ffcf;
+}
+</style>

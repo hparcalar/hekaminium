@@ -48,6 +48,16 @@
                                     <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0" type="button" @click="removeDemandDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand" style="height:34px;">
                                         <span data-uk-icon="icon: trash" class="uk-icon"></span>
                                     </button>
+                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOfferId > 0" 
+                                        type="button" @click="showOfferForm(selectedDemandDetail.relatedOfferId)"
+                                         class="sc-button sc-button-primary sc-button-small" style="height:34px;">
+                                        T: {{ selectedDemandDetail.relatedOfferNo }}
+                                    </button>
+                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOrderId > 0" 
+                                        type="button" @click="showOrderForm(selectedDemandDetail.relatedOrderId)"
+                                         class="sc-button sc-button-warning sc-button-small" style="height:34px;">
+                                        S: {{ selectedDemandDetail.relatedOrderNo }}
+                                    </button>
                                 </div>     
                             </div>
                             <div class="uk-width-4-5@l">
@@ -228,6 +238,12 @@ export default {
             } catch (error) {
 
             }
+        },
+        showOfferForm(itemOfferId){
+            this.$router.push('/purchasing/item-offer?id=' + itemOfferId);
+        },
+        showOrderForm(itemOrderId){
+            this.$router.push('/purchasing/item-order?id=' + itemOrderId);
         },
         onDetailSaved(detailParam){
             const detailRow = detailParam.data;

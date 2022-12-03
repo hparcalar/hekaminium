@@ -9,6 +9,15 @@
 				</tr>
 			</thead>
 			<slot name="footer"></slot>
+			<tfoot v-if="showSummary">
+				<tr>
+					<td v-for="column in customColumns" :key="column">
+						<span v-if="isSummaryItem(column.data)">
+							{{ summaryItemResult(column.data) }}
+						</span>
+					</td>
+				</tr>
+			</tfoot>
 		</table>
 	</div>
 </template>
@@ -58,10 +67,21 @@ export default {
 		customEvents: {
 			type: Array,
 			default: () => []
+		},
+		showSummary: {
+			type: Boolean,
+			required: false,
+			default: false,
+		},
+		summaryItems: {
+			type: Array,
+			required: false,
+			default: () => [],
 		}
 	},
 	data: () => ({
-		$dt: null
+		$dt: null,
+		summaryResultList: [],
 	}),
 	computed: {
 		dtData () {
@@ -100,8 +120,10 @@ export default {
 	},
 	watch: {
 		dtData (newVal, oldVal) {
-			if (this.$dt)
+			if (this.$dt){
 				this.$dt.clear().rows.add(newVal).draw();
+				this.updateSummaries();
+			}
 
 			// const newLength = newVal.length;
 			// const oldLength = oldVal.length;
@@ -199,6 +221,9 @@ export default {
 		// }
 
 		try {
+			// const self = this;
+			this.$dt.on('search', this.updateSummaries);
+
 			if(this.customEvents.length) {
 				this.customEvents.forEach(event => {
 					this.$dt.on(event.name, event.function)
@@ -207,6 +232,48 @@ export default {
 		} catch (error) {
 			
 		}
+
+		this.updateSummaries();
+	},
+	methods: {
+		updateSummaries(){
+			if (this.showSummary && this.$dt){
+				try {
+					for (let i = 0; i < this.summaryItems.length; i++) {
+						const element = this.summaryItems[i];
+						
+						let sumItem = null;
+
+						if (!this.summaryResultList.some(d => d.data == element)){
+							sumItem = {
+								data: element,
+								result: 0,
+							};
+							this.summaryResultList.push(sumItem);
+						}
+						else{
+							sumItem = this.summaryResultList.find(d => d.data == element);
+						}
+						
+						const filteredData = this.$dt.rows({search:'applied'}).data().toArray();
+						sumItem.result = filteredData.map(d => d[sumItem.data]).reduce((a,b) => a + b);
+					}
+				} catch (error) {
+					
+				}
+			}
+		},
+		summaryItemResult(itemName){
+			try {
+				const sumItem = this.summaryResultList.find(d => d.data == itemName);
+				return sumItem ? (new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 }).format(sumItem.result))  : null;
+			} catch (error) {
+				
+			}
+		},
+		isSummaryItem(itemName){
+			return this.summaryItems.some(d => d == itemName);
+		},
 	}
 }
 </script>
