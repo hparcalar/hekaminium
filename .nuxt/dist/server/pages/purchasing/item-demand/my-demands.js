@@ -74,7 +74,7 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tTaleplerim\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tTaleplerim\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto@s"
   }, [_c('div', {
     attrs: {
@@ -137,7 +137,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "473bf64e"
+  "6a06c93e"
   
 )
 

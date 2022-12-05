@@ -728,7 +728,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -827,12 +827,12 @@ var render = function render() {
       class: {
         'md-color-white': index === 2 || index === 6
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
       staticClass: "uk-margin-remove sc-color-secondary uk-text-medium",
       class: {
         'md-color-white': index === 2 || index === 6
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-2-3@l"
     }, [_c('div', {
       staticClass: "sc-padding-medium"
@@ -848,9 +848,9 @@ var render = function render() {
       staticClass: "sc-list-body"
     }, [_c('p', {
       staticClass: "uk-margin-remove sc-text-semibold"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.phone) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.phone) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "sc-list-secondary-text"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
       staticClass: "sc-list-group"
     }, [_c('div', {
       staticClass: "sc-list-addon"
@@ -860,7 +860,7 @@ var render = function render() {
       staticClass: "sc-list-body"
     }, [_c('p', {
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.email) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.email) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
       staticClass: "sc-list-group"
     }, [_c('div', {
       staticClass: "sc-list-addon"
@@ -870,7 +870,7 @@ var render = function render() {
       staticClass: "sc-list-body"
     }, [_c('p', {
       staticClass: "uk-margin-remove uk-text-wrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.address) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.address) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
       staticClass: "sc-list-group"
     }, [_c('div', {
       staticClass: "sc-list-addon"
@@ -880,7 +880,7 @@ var render = function render() {
       staticClass: "sc-list-body"
     }, [_c('p', {
       staticClass: "uk-margin-remove uk-text-wrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.info) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1)], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.info) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1)], 1);
   }), 0)])]);
 };
 
@@ -997,7 +997,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "030f984c"
+  "564071a3"
   
 )
 

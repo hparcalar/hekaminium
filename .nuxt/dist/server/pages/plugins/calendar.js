@@ -94,7 +94,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b3ee670c"
+  "ca1bb76c"
   
 )
 
@@ -271,7 +271,7 @@ var render = function render() {
     attrs: {
       "id": "sc-js-cal-view-name"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("toUppercase")(_vm.calendar.viewName)) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("toUppercase")(_vm.calendar.viewName)) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "boundary: #sc-page-content; mode: click"
     }
@@ -290,7 +290,7 @@ var render = function render() {
         return _vm.changeCalView('day');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tDay\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tDay\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     class: {
       'sc-text-semibold': _vm.calendar.viewName === 'Week'
     },
@@ -303,7 +303,7 @@ var render = function render() {
         return _vm.changeCalView('week');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tWeek\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tWeek\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     class: {
       'sc-text-semibold': _vm.calendar.viewName === 'Month'
     },
@@ -316,7 +316,7 @@ var render = function render() {
         return _vm.changeCalView('month');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tMonth\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tMonth\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     class: {
       'sc-text-semibold': _vm.calendar.viewName === '2 Weeks'
     },
@@ -329,7 +329,7 @@ var render = function render() {
         return _vm.changeCalView('2weeks');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t2 Weeks\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t2 Weeks\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('div', {
     staticClass: "sc-padding sc-padding-small-ends"
@@ -355,7 +355,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tShow weekends\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tShow weekends\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": function ($event) {
@@ -375,7 +375,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNarrower weekends\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNarrower weekends\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto uk-visible@m"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-flat",
@@ -388,7 +388,7 @@ var render = function render() {
         return _vm.moveToday.apply(null, arguments);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tToday\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tToday\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto uk-flex uk-flex-middle"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-flat sc-button-icon",
@@ -420,7 +420,7 @@ var render = function render() {
     staticClass: "uk-width-expand@s"
   }, [_c('h1', {
     staticClass: "tui-full-calendar-range-name"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.calendar.rangeText) + "\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Calendar', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.calendar.rangeText) + "\r\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Calendar', {
     ref: "tuiCalendar",
     staticStyle: {
       "height": "800px"
@@ -454,7 +454,7 @@ var render = function render() {
     staticClass: "uk-flex-1 sc-js-el-hide"
   }, [_c('p', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tMy calendars\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('ColumnToggle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMy calendars\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('ColumnToggle', {
     attrs: {
       "show-icon": "mdi-format-list-checks",
       "collapsed": _vm.columnCollapsed
@@ -533,10 +533,10 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(cal.name) + "\n\t\t\t\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(cal.name) + "\r\n\t\t\t\t\t\t\t\t\t")])], 1);
   }), 0)])], 1)])])], 1), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', [_c('h5', {
     staticClass: "sc-padding-small"
-  }, [_vm._v("\n\t\t\t\t\tMy calendars\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\tMy calendars\r\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-list uk-margin-remove-ends"
   }, [_c('li', [_c('PrettyCheck', {
     staticClass: "p-icon",
@@ -605,7 +605,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t" + _vm._s(cal.name) + "\n\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(cal.name) + "\r\n\t\t\t\t\t\t")])], 1);
   }), 0)])], 1)], 2);
 };
 
@@ -1279,7 +1279,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "3e8e37d1"
+  "890c1bb0"
   
 )
 

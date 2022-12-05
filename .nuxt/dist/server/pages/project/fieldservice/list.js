@@ -118,7 +118,7 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tSaha Servisleri\n                                ")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tSaha Servisleri\r\n                                ")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto@s"
   }, [_c('div', {
     attrs: {
@@ -155,7 +155,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1);
   }), 0)])])])]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "buttonsTable",
     attrs: {
@@ -321,7 +321,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "e54d8930"
+  "4c0893c4"
   
 )
 

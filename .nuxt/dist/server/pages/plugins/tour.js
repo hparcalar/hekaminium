@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -392,11 +392,11 @@ var render = function render() {
     on: {
       "click": _vm.startTour
     }
-  }, [_vm._v("\n\t\t\t\t\t\tRestart tour\n\t\t\t\t\t")])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tRestart tour\r\n\t\t\t\t\t")])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('h5', {
     staticClass: "uk-margin-medium"
-  }, [_vm._v("\n\t\t\t\t\t\tHighlighting a Single Element – Without Popover\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tHighlighting a Single Element – Without Popover\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@s uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -410,12 +410,12 @@ var render = function render() {
     on: {
       "click": _vm.highlightEl
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tShow\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tShow\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("this.highlightDriver = new Driver({\n\topacity: 0.6,\n\tcloseBtnText: ''\n});\n\n@click=\"highlightEl\"\n\nhighlightEl () {\n\tthis.highlightDriver.highlight('#sc-tour-singleEl-noPopover');\n}")])])])]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_c('code', [_vm._v("this.highlightDriver = new Driver({\r\n\topacity: 0.6,\r\n\tcloseBtnText: ''\r\n});\r\n\r\n@click=\"highlightEl\"\r\n\r\nhighlightEl () {\r\n\tthis.highlightDriver.highlight('#sc-tour-singleEl-noPopover');\r\n}")])])])]), _vm._v(" "), _c('div', [_c('div', {
     ref: "input-a",
     staticClass: "uk-margin-small sc-tour-singleEl-noPopover"
   }, [_c('ScInput', {
@@ -488,19 +488,19 @@ var render = function render() {
     }
   }, [_c('div', [_c('h5', {
     staticClass: "uk-margin-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHighlighting a Single Element – With Popover\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHighlighting a Single Element – With Popover\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-primary",
     on: {
       "click": _vm.popoverEl
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tShow\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tShow\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("this.popoverDriver = new Driver({\n\topacity: 0.6,\n\tcloseBtnText: ''\n});\n\n @click=\"popoverEl\"\n\n popoverEl (e) {\n\tthis.popoverDriver.highlight({\n\t\telement: e.target.closest(\"div\"),\n\t\tpopover: {\n\t\t\ttitle: 'Title for the Popover',\n\t\t\tdescription: 'Description for highlighted element',\n\t\t\tposition: 'top'\n\t\t}\n\t})\n}")])])])]), _vm._v(" "), _c('div', [_c('h5', {
+  }, [_c('code', [_vm._v("this.popoverDriver = new Driver({\r\n\topacity: 0.6,\r\n\tcloseBtnText: ''\r\n});\r\n\r\n @click=\"popoverEl\"\r\n\r\n popoverEl (e) {\r\n\tthis.popoverDriver.highlight({\r\n\t\telement: e.target.closest(\"div\"),\r\n\t\tpopover: {\r\n\t\t\ttitle: 'Title for the Popover',\r\n\t\t\tdescription: 'Description for highlighted element',\r\n\t\t\tposition: 'top'\r\n\t\t}\r\n\t})\r\n}")])])])]), _vm._v(" "), _c('div', [_c('h5', {
     staticClass: "uk-margin-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPopover Positioning\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPopover Positioning\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -509,7 +509,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'left');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLeft\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLeft\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -518,7 +518,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'left-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLeft Center\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLeft Center\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -527,7 +527,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'left-bottom');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLeft Bottom\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLeft Bottom\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
   }, [_c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
@@ -538,7 +538,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'top');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTop\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTop\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -547,7 +547,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'top-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTop Center\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTop Center\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -556,7 +556,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'top-right');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTop Right\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTop Right\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
   }, [_c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
@@ -567,7 +567,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'right');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tRight\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tRight\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -576,7 +576,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'right-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tRight Center\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tRight Center\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -585,7 +585,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'right-bottom');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tRight Bottom\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tRight Bottom\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
   }, [_c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
@@ -596,7 +596,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'bottom');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBottom\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBottom\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -605,7 +605,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'bottom-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBottom Center\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBottom Center\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding-small uk-display-inline-block"
   }, [_c('button', {
     staticClass: "sc-button",
@@ -614,7 +614,7 @@ var render = function render() {
         return _vm.popoverElPos($event, 'bottom-right');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBottom Right\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBottom Right\r\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -824,7 +824,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "db13812a"
+  "5012bd42"
   
 )
 

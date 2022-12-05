@@ -61,7 +61,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<h3 class=\"uk-margin-bottom\">\n\t\t\t\tData Visualization\n\t\t\t\t<span class=\"sc-sub-heading\">Datatables/Billboard.js integration based on <a href=\"https://webdesign.tutsplus.com/tutorials/data-visualization-with-datatablesjs-and-highchartsjs--cms-29691\">envatotuts+ tutorial</a></span></h3> "), _c('ScCard', [_c('ScCardBody', [_c('client-only', [_c('Datatable', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<h3 class=\"uk-margin-bottom\">\r\n\t\t\t\tData Visualization\r\n\t\t\t\t<span class=\"sc-sub-heading\">Datatables/Billboard.js integration based on <a href=\"https://webdesign.tutsplus.com/tutorials/data-visualization-with-datatablesjs-and-highchartsjs--cms-29691\">envatotuts+ tutorial</a></span></h3> "), _c('ScCard', [_c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "dataTable",
     attrs: {
       "id": "sc-datatable",
@@ -387,7 +387,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "510f4404"
+  "29209a15"
   
 )
 

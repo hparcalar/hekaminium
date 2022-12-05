@@ -17,7 +17,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">\n\t\t\tBlank template\n\t\t</div>")]);
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">\r\n\t\t\tBlank template\r\n\t\t</div>")]);
 };
 
 var staticRenderFns = [];
@@ -48,7 +48,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "f3602a16"
+  "71b65504"
   
 )
 

@@ -24,7 +24,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tBasic\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tBasic\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
     attrs: {
       "options": _vm.msBasicOptions
     },
@@ -35,7 +35,7 @@ var render = function render() {
       },
       expression: "basic.model"
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tOptgroups\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tOptgroups\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
     attrs: {
       "settings": _vm.optgroups.settings
     },
@@ -54,20 +54,20 @@ var render = function render() {
     attrs: {
       "value": "1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tYoda\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tYoda\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "2"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLuke Skywalker\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLuke Skywalker\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "3"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHan Solo\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHan Solo\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "4",
       "selected": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tObi Wan Kenobi\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('optgroup', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tObi Wan Kenobi\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('optgroup', {
     attrs: {
       "label": "Enemies"
     }
@@ -75,20 +75,20 @@ var render = function render() {
     attrs: {
       "value": "5"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tEmperor Palpatine\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tEmperor Palpatine\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "6"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tDarth Maul\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tDarth Maul\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "7",
       "disabled": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tDarth Vader\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tDarth Vader\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "8"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCount Dooku\n\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tCustom header/footer\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCount Dooku\r\n\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tCustom header/footer\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
     attrs: {
       "settings": _vm.headerFooter.settings,
       "options": _vm.msHeaderFooterOptions
@@ -100,7 +100,7 @@ var render = function render() {
       },
       expression: "headerFooter.model"
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSearchable\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSearchable\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('MultiSelect', {
     attrs: {
       "settings": _vm.searchableSettings,
       "options": _vm.msSearchableOptions
@@ -112,7 +112,7 @@ var render = function render() {
       },
       expression: "searchable.model"
     }
-  })], 1)], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-1 uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tPublic methods\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  })], 1)], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-1 uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tPublic methods\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-2@l uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -144,7 +144,7 @@ var render = function render() {
         return _vm.msSelectAll();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tselect all\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tselect all\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-default sc-button-small sc-button-outline",
     attrs: {
       "href": "javascript:void(0)"
@@ -155,7 +155,7 @@ var render = function render() {
         return _vm.msDeselectAll();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tdeselect all\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tdeselect all\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-default sc-button-small sc-button-outline",
     attrs: {
       "href": "javascript:void(0)"
@@ -166,7 +166,7 @@ var render = function render() {
         return _vm.msSelectElements();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tselect 10 elems\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tselect 10 elems\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-default sc-button-small sc-button-outline",
     attrs: {
       "href": "javascript:void(0)"
@@ -177,7 +177,7 @@ var render = function render() {
         return _vm.msDeselectElements();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tdeselect 4 elems\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.publicMethods.model) + "\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)])], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tdeselect 4 elems\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.publicMethods.model) + "\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)])], 2)]);
 };
 
 var staticRenderFns = [];
@@ -363,7 +363,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "0f1937a6"
+  "c265513c"
   
 )
 

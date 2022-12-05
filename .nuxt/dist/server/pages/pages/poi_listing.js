@@ -32,14 +32,14 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\"><div class=\"sc-top-bar-content uk-flex uk-flex-1\"><h1 class=\"sc-top-bar-title uk-text-uppercase uk-flex-1\">\n\t\t\t\t\tTourist Attractions in Rome\n\t\t\t\t</h1> <div class=\"uk-margin-left uk-visible@m\"><a href=\"javascript:void(0)\" class=\"sc-button sc-button-icon sc-button-secondary sc-button-small\"><i class=\"mdi mdi-plus sc-icon-18\"></i> Add POI\n\t\t\t\t\t</a></div></div></div> "), _vm._ssrNode("<div id=\"sc-page-wrapper-inner\" class=\"uk-flex\">", "</div>", [_vm._ssrNode("<div id=\"sc-page-aside\" class=\"md-bg-white uk-visible@m\"><div class=\"sc-page-aside-body sc-padding-medium\"><ul class=\"uk-list uk-list-divider sc-list-clickable sc-js-poi-list\">" + _vm._ssrList(_vm.poiList, function (poi, index) {
+  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\"><div class=\"sc-top-bar-content uk-flex uk-flex-1\"><h1 class=\"sc-top-bar-title uk-text-uppercase uk-flex-1\">\r\n\t\t\t\t\tTourist Attractions in Rome\r\n\t\t\t\t</h1> <div class=\"uk-margin-left uk-visible@m\"><a href=\"javascript:void(0)\" class=\"sc-button sc-button-icon sc-button-secondary sc-button-small\"><i class=\"mdi mdi-plus sc-icon-18\"></i> Add POI\r\n\t\t\t\t\t</a></div></div></div> "), _vm._ssrNode("<div id=\"sc-page-wrapper-inner\" class=\"uk-flex\">", "</div>", [_vm._ssrNode("<div id=\"sc-page-aside\" class=\"md-bg-white uk-visible@m\"><div class=\"sc-page-aside-body sc-padding-medium\"><ul class=\"uk-list uk-list-divider sc-list-clickable sc-js-poi-list\">" + _vm._ssrList(_vm.poiList, function (poi, index) {
     return "<li" + _vm._ssrClass("uk-flex-column sc-flex-items-left", {
       'uk-active': _vm.currentMarker.id === poi.id
     }) + "><span class=\"sc-text-semibold md-color-red-600\"" + _vm._ssrStyle(null, null, {
       display: poi.main ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\n\t\t\t\t\t\t\t") + "</span> <p" + _vm._ssrAttr("title", poi.title) + " class=\"sc-text-semibold uk-margin-remove uk-text-truncate\"" + _vm._ssrStyle(null, null, {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\r\n\t\t\t\t\t\t\t") + "</span> <p" + _vm._ssrAttr("title", poi.title) + " class=\"sc-text-semibold uk-margin-remove uk-text-truncate\"" + _vm._ssrStyle(null, null, {
       display: !poi.main ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\n\t\t\t\t\t\t\t") + "</p> <p" + _vm._ssrAttr("title", poi.address) + " class=\"sc-color-secondary uk-text-truncate uk-margin-remove\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t" + _vm._s(poi.address) + "\n\t\t\t\t\t\t\t") + "</p></li>";
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\r\n\t\t\t\t\t\t\t") + "</p> <p" + _vm._ssrAttr("title", poi.address) + " class=\"sc-color-secondary uk-text-truncate uk-margin-remove\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t" + _vm._s(poi.address) + "\r\n\t\t\t\t\t\t\t") + "</p></li>";
   }) + "</ul></div></div> "), _vm._ssrNode("<div id=\"sc-page-content\" class=\"sc-padding-remove\">", "</div>", [_c('client-only', [_c('GmapMap', {
     ref: "gMap",
     staticClass: "uk-height-1-1",
@@ -102,7 +102,7 @@ var render = function render() {
         expression: "poi.main"
       }],
       staticClass: "sc-text-semibold md-color-red-600"
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -113,12 +113,12 @@ var render = function render() {
       attrs: {
         "title": poi.title
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(poi.title) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
       staticClass: "sc-color-secondary uk-text-truncate uk-margin-remove",
       attrs: {
         "title": poi.address
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(poi.address) + "\n\t\t\t\t\t\t")])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(poi.address) + "\r\n\t\t\t\t\t\t")])]);
   }), 0)])], 1)], 2);
 };
 
@@ -508,7 +508,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "440b42f0"
+  "573e62b9"
   
 )
 

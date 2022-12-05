@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -221,7 +221,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tInputmasks\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('form', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tInputmasks\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('form', [_c('div', {
     staticClass: "uk-margin-small"
   }, [_c('div', {
     staticClass: "uk-width-1-3@m"
@@ -419,7 +419,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "34904fa7"
+  "1d012e63"
   
 )
 

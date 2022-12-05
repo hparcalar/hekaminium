@@ -68,7 +68,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tZero configuration\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tZero configuration\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "basicTable",
     attrs: {
       "id": "sc-basic-table",
@@ -84,9 +84,9 @@ var render = function render() {
     slot: "footer"
   }, [_c('tr', [_c('th', [_vm._v("Id")]), _vm._v(" "), _c('th', [_vm._v("Name")]), _vm._v(" "), _c('th', [_vm._v("Position")]), _vm._v(" "), _c('th', [_vm._v("Salary")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tStart date\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Office")]), _vm._v(" "), _c('th', [_vm._v("Extn.")])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tStart date\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Office")]), _vm._v(" "), _c('th', [_vm._v("Extn.")])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tVertical Scroll\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tVertical Scroll\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "vScrollTable",
     attrs: {
       "id": "sc-dt-scroll-v",
@@ -106,14 +106,14 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tShow / hide columns dynamically\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\tlocalStorage\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tShow / hide columns dynamically\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\tlocalStorage\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto@s"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary sc-button-flex",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tToggle Columns "), _c('i', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tToggle Columns "), _c('i', {
     staticClass: "mdi mdi-chevron-down uk-margin-small-left"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-dropdown uk-width-small",
@@ -144,7 +144,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1);
   }), 0)])])])]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "colToggleTable",
     attrs: {
@@ -168,7 +168,7 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tButtons\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tButtons\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto@s"
   }, [_c('div', {
     attrs: {
@@ -340,7 +340,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "24af1fe2"
+  "1595a079"
   
 )
 

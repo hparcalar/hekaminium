@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -534,7 +534,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\n                            Firma Tanımı\n                        </h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n                                Genel Bilgiler\n                            </legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\r\n                            Firma Tanımı\r\n                        </h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n                                Genel Bilgiler\r\n                            </legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
     attrs: {
       "read-only": true
     },
@@ -588,7 +588,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n                                        Aktif\n                                    ")])], 1)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n                                Ticari Bilgiler\n                            </legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
+  }), _vm._v("\r\n                                        Aktif\r\n                                    ")])], 1)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n                                Ticari Bilgiler\r\n                            </legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
     model: {
       value: _vm.formData.commercialTitle,
       callback: function ($$v) {
@@ -772,7 +772,7 @@ if (false) {}
                   if (delResult.result) {
                       self.showNotification('Silme işlemi başarılı', false, 'success');
                       self.$emit('onDemandSaved');
-                       if (self.isDialog)
+                        if (self.isDialog)
                           UIkit.modal(document.getElementById(self.dialogContainer)).hide();
                       else
                           self.$router.go(-1);
@@ -780,7 +780,7 @@ if (false) {}
                   else
                       self.showNotification(delResult.errorMessage, false, 'error');
               } catch (error) {
-               }
+                }
           }); */
     },
 
@@ -826,7 +826,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "419783c5"
+  "03880362"
   
 )
 

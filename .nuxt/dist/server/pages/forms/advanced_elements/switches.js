@@ -61,7 +61,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tSwitches\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tSwitches\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-4@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -75,7 +75,7 @@ var render = function render() {
       },
       expression: "switchA"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tChecked\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tChecked\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-switch",
     attrs: {
       "disabled": _vm.switchBDisabled
@@ -87,7 +87,7 @@ var render = function render() {
       },
       expression: "switchB"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-switch",
     attrs: {
       "disabled": ""
@@ -99,7 +99,7 @@ var render = function render() {
       },
       expression: "switchC"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tChecked & Disabled\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tChecked & Disabled\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin uk-margin-large-top uk-heading-line"
   }, [_c('span', [_vm._v("Colors")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-4@m uk-grid",
@@ -118,7 +118,7 @@ var render = function render() {
       },
       expression: "switchD"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-switch",
     attrs: {
       "color": "success"
@@ -130,7 +130,7 @@ var render = function render() {
       },
       expression: "switchE"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-switch",
     attrs: {
       "color": "danger"
@@ -142,7 +142,7 @@ var render = function render() {
       },
       expression: "switchF"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-switch",
     attrs: {
       "color": "warning"
@@ -154,7 +154,7 @@ var render = function render() {
       },
       expression: "switchG"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin uk-margin-large-top uk-heading-line"
   }, [_c('span', [_vm._v("Group")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-4@m uk-grid",
@@ -174,7 +174,7 @@ var render = function render() {
       },
       expression: "switchGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRadio 1\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRadio 1\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyRadio', {
     staticClass: "p-switch",
     attrs: {
       "value": _vm.switchGroupItems.b,
@@ -187,7 +187,7 @@ var render = function render() {
       },
       expression: "switchGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRadio 2\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRadio 2\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyRadio', {
     staticClass: "p-switch",
     attrs: {
       "value": _vm.switchGroupItems.c,
@@ -200,7 +200,7 @@ var render = function render() {
       },
       expression: "switchGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRadio 3\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRadio 3\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin uk-margin-large-top uk-heading-line"
   }, [_c('span', [_vm._v("Manual Toggle")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-4@m uk-grid",
@@ -216,19 +216,19 @@ var render = function render() {
       },
       expression: "switchH"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLabel on\n\t\t\t\t\t\t\t\t"), _c('label', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLabel on\r\n\t\t\t\t\t\t\t\t"), _c('label', {
     attrs: {
       "slot": "off-label"
     },
     slot: "off-label"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLabel off\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLabel off\r\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-small",
     on: {
       "click": function ($event) {
         _vm.switchH = !_vm.switchH;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tToggle\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tToggle\r\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -295,7 +295,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "37618b01"
+  "ab883676"
   
 )
 

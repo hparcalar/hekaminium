@@ -86,7 +86,7 @@ var render = function render() {
     staticClass: "uk-flex-1 uk-text-truncate"
   }, [_c('ScCardTitle', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\tInvoice " + _vm._s(_vm.invoice.number) + "\n\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\tInvoice " + _vm._s(_vm.invoice.number) + "\r\n\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "sc-actions sc-flex-no-shrink uk-margin-left"
   }, [_c('a', {
     directives: [{
@@ -153,11 +153,11 @@ var render = function render() {
     staticClass: "uk-text-medium uk-text-muted"
   }, [_vm._v("Invoice from:")]), _vm._v(" "), _c('address', {
     staticClass: "uk-text-medium uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t341 Maegan Shore Apt. 572"), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\tLake Oleberg"), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\ttel.: 997-531-4098"), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\temail: 997-531-4098\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t341 Maegan Shore Apt. 572"), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\tLake Oleberg"), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\ttel.: 997-531-4098"), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\temail: 997-531-4098\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "uk-text-medium uk-text-muted"
   }, [_vm._v("Invoice to:")]), _vm._v(" "), _c('address', {
     staticClass: "uk-text-medium uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_company)), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_address_1)), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_address_2) + "\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_company)), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_address_1)), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.to_address_2) + "\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-2-5@s sc-print-column-2-5"
   }, [_c('div', {
     staticClass: "uk-child-width-1-2@xl uk-grid",
@@ -174,7 +174,7 @@ var render = function render() {
     staticClass: "uk-text-medium uk-text-muted"
   }, [_vm._v("Due date:")]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin-bottom-remove uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.date) + "\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.invoice.date) + "\r\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -183,7 +183,7 @@ var render = function render() {
     staticClass: "uk-text-medium uk-text-muted"
   }, [_vm._v("Amount Due:")]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin-remove uk-text-xlarge sc-text-semibold md-color-red-800"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(_vm.invoiceTotal, _vm.invoice.currency)) + "\n\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(_vm.invoiceTotal, _vm.invoice.currency)) + "\r\n\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-overflow-auto uk-margin-xlarge-top"
   }, [_c('table', {
     staticClass: "uk-table uk-table-small uk-table-divider uk-table-middle"
@@ -191,37 +191,37 @@ var render = function render() {
     staticClass: "md-bg-grey-100"
   }, [_c('th', [_vm._v("Item")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink uk-text-nowrap uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tUnit Price\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tUnit Price\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tQuantity\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tQuantity\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tVAT\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tVAT\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', _vm._l(_vm.invoice.items, function (item, index) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTotal\r\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', _vm._l(_vm.invoice.items, function (item, index) {
     return _c('tr', {
       key: `item-${index}`
     }, [_c('td', {
       staticClass: "uk-text-nowrap sc-print-text-wrap"
     }, [_c('p', {
       staticClass: "uk-margin-remove sc-text-semibold"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.name) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.name) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "sc-color-secondary"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.description) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.description) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-right"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(item.price, _vm.invoice.currency)) + "\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(item.price, _vm.invoice.currency)) + "\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-center"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(item.quantity) + "\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(item.quantity) + "\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-center"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(item.VAT) + "%\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(item.VAT) + "%\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-right uk-text-nowrap"
     }, [_c('span', {
       staticClass: "sc-text-semibold"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(item.total, _vm.invoice.currency)) + "\n\t\t\t\t\t\t\t\t\t")])])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("formatCurrency")(item.total, _vm.invoice.currency)) + "\r\n\t\t\t\t\t\t\t\t\t")])])]);
   }), 0)])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-xlarge-top"
   }, [_c('p', {
     staticClass: "md-color-grey-600 uk-text-medium uk-text-uppercase uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\tPayment Methods\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tPayment Methods\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@m",
     attrs: {
       "data-uk-grid": ""
@@ -236,7 +236,7 @@ var render = function render() {
     staticClass: "mdi mdi-paypal"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tqfriesen@labadie.net\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tqfriesen@labadie.net\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -244,7 +244,7 @@ var render = function render() {
     staticClass: "mdi mdi-bank"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tmeagan.herman"), _c('br'), _vm._v("\n\t\t\t\t\t\t\t\t\t\t5705112251220\n\t\t\t\t\t\t\t\t\t")])])])])])])])], 1)], 2);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tmeagan.herman"), _c('br'), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t5705112251220\r\n\t\t\t\t\t\t\t\t\t")])])])])])])])], 1)], 2);
 };
 
 var staticRenderFns = [];
@@ -667,7 +667,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "10025800"
+  "e476deec"
   
 )
 

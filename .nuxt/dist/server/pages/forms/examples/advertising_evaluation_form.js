@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -327,7 +327,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('ScCardTitle', {
     staticClass: "uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tAdvertising Evaluation Form\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tAdvertising Evaluation Form\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
     staticClass: "uk-margin-left md-color-red-600",
     attrs: {
       "data-uk-icon": "icon: commenting; ratio: 1.5"
@@ -360,8 +360,8 @@ var render = function render() {
         },
         expression: "userData.seenTimes"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.value) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
-  }), 0)])]), _vm._v(" "), _c('div', [_c('h5', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tWhich of the following ads have you seen?\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.value) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
+  }), 0)])]), _vm._v(" "), _c('div', [_c('h5', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tWhich of the following ads have you seen?\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ul', {
     staticClass: "uk-list"
@@ -386,7 +386,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.value) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('input', {
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.value) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('input', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -421,17 +421,17 @@ var render = function render() {
     staticClass: "uk-table uk-table-striped uk-table-small uk-table-middle"
   }, [_c('thead', [_c('tr', [_c('th'), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center uk-table-shrink uk-text-nowrap uk-table-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tStrongly Agree\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tStrongly Agree\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center uk-table-shrink uk-text-nowrap uk-table-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeutral Agree\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeutral Agree\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center uk-table-shrink uk-text-nowrap uk-table-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tAgree\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tAgree\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center uk-table-shrink uk-text-nowrap uk-table-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeutral Disagree\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tNeutral Disagree\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center uk-table-shrink uk-text-nowrap uk-table-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tStrongly Disagree\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tStrongly Disagree\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe claims made in the ads were believable\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe claims made in the ads were believable\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
     return _c('td', {
       key: option.id
     }, [_c('PrettyRadio', {
@@ -450,7 +450,7 @@ var render = function render() {
     })], 1);
   })], 2), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tI understood the product being advertised\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tI understood the product being advertised\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
     return _c('td', {
       key: option.id
     }, [_c('PrettyRadio', {
@@ -469,7 +469,7 @@ var render = function render() {
     })], 1);
   })], 2), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe ads were creative\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe ads were creative\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
     return _c('td', {
       key: option.id
     }, [_c('PrettyRadio', {
@@ -488,7 +488,7 @@ var render = function render() {
     })], 1);
   })], 2), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe ads were original\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tThe ads were original\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
     return _c('td', {
       key: option.id
     }, [_c('PrettyRadio', {
@@ -507,7 +507,7 @@ var render = function render() {
     })], 1);
   })], 2), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tI will remember the ads for a long time\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tI will remember the ads for a long time\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.evalOptions, function (option) {
     return _c('td', {
       key: option.id
     }, [_c('PrettyRadio', {
@@ -548,7 +548,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSubmit\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" <div class=\"uk-margin-top\"><pre>" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre></div>")], 2)])])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSubmit\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" <div class=\"uk-margin-top\"><pre>" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre></div>")], 2)])])]);
 };
 
 var staticRenderFns = [];
@@ -668,7 +668,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "9a58252c"
+  "442f2bf4"
   
 )
 

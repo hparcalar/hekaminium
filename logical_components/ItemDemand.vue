@@ -129,6 +129,7 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import ItemDemandDetail from './ItemDemandDetail.vue';
 import { useApi } from '~/composable/useApi';
 import { useUserSession } from '~/composable/userSession';
+import { dateToStr, strToDate } from "~/composable/useHelpers";
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -195,6 +196,7 @@ export default {
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
+			{ data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date"},
 			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "itemExplanation", title: "Stok Açıklaması", visible: true, },
             { data: "partNo", title: "Parça Kodu", visible: true, },
@@ -249,6 +251,7 @@ export default {
                         return {
                             ...d,
                             newRecord: false,
+                            createdDate: dateToStr(d.createdDate, 'YYYY.MM.DD'),
                         };
                     });
                 }

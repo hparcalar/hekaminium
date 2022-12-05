@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -560,7 +560,7 @@ var render = function render() {
     staticClass: "uk-margin-medium"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\trequired / minLength: 3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScInput', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\trequired / minLength: 3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScInput', {
     attrs: {
       "name": "firstName",
       "error-state": _vm.$v.firstName.$error,
@@ -582,18 +582,18 @@ var render = function render() {
       value: !_vm.$v.firstName.required,
       expression: "!$v.firstName.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tField is required\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tField is required\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: !_vm.$v.firstName.minLength,
       expression: "!$v.firstName.minLength"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tFirst Name must have at least " + _vm._s(_vm.$v.firstName.$params.minLength.min) + " letters.\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tFirst Name must have at least " + _vm._s(_vm.$v.firstName.$params.minLength.min) + " letters.\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\trequired / email\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScInput', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\trequired / email\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScInput', {
     attrs: {
       "name": "email",
       "error-state": _vm.$v.email.$error,
@@ -615,18 +615,18 @@ var render = function render() {
       value: !_vm.$v.email.required,
       expression: "!$v.email.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tField is required\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tField is required\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: !_vm.$v.email.email,
       expression: "!$v.email.email"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tThis value should be a valid email\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tThis value should be a valid email\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\trequired / minLength: 6 / sameAs\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\trequired / minLength: 6 / sameAs\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "name": "password",
       "type": "password",
@@ -649,14 +649,14 @@ var render = function render() {
       value: !_vm.$v.password.required,
       expression: "!$v.password.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPassword is required.\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPassword is required.\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: !_vm.$v.password.minLength,
       expression: "!$v.password.minLength"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPassword must have at least " + _vm._s(_vm.$v.password.$params.minLength.min) + " characters.\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPassword must have at least " + _vm._s(_vm.$v.password.$params.minLength.min) + " characters.\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "name": "repeatPassword",
       "type": "password",
@@ -679,11 +679,11 @@ var render = function render() {
       value: !_vm.$v.repeatPassword.sameAsPassword,
       expression: "!$v.repeatPassword.sameAsPassword"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPasswords must be identical.\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPasswords must be identical.\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\trequired\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScTextarea', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScTextarea', {
     attrs: {
       "name": "info",
       "error-state": _vm.$v.info.$error,
@@ -705,11 +705,11 @@ var render = function render() {
       value: !_vm.$v.info.required,
       expression: "!$v.info.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tField is required\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-2@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tField is required\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-2@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
     staticClass: "uk-margin"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\trequired\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.users,
       "settings": {
@@ -734,7 +734,7 @@ var render = function render() {
       value: !_vm.$v.select2Users.required,
       expression: "!$v.select2Users.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tField is required\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tField is required\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('div', {
     class: {
@@ -742,7 +742,7 @@ var render = function render() {
     }
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-margin-remove-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\trequired / min: 2, max: 3\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\trequired / min: 2, max: 3\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-5@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -766,7 +766,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 1\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 1\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "value": _vm.checkbox2,
@@ -785,7 +785,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 2\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 2\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "value": _vm.checkbox3,
@@ -804,7 +804,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 3\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 3\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "value": _vm.checkbox4,
@@ -823,7 +823,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 4\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('ul', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tDefault 4\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('ul', {
     staticClass: "sc-vue-errors sc-padding-remove-left"
   }, [_c('li', {
     directives: [{
@@ -832,16 +832,16 @@ var render = function render() {
       value: !_vm.$v.checkboxes.required,
       expression: "!$v.checkboxes.required"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tThis value is required.\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tThis value is required.\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: !_vm.$v.checkboxes.minMaxCheck,
       expression: "!$v.checkboxes.minMaxCheck"
     }]
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tYou must select min " + _vm._s(_vm.$v.checkboxes.$params.minMaxCheck.min) + " and max " + _vm._s(_vm.$v.checkboxes.$params.minMaxCheck.max) + " choices.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tYou must select min " + _vm._s(_vm.$v.checkboxes.$params.minMaxCheck.min) + " and max " + _vm._s(_vm.$v.checkboxes.$params.minMaxCheck.max) + " choices.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
-  })])], 1)], 1)], 2), _vm._ssrNode(" <button" + _vm._ssrAttr("disabled", _vm.submitStatus === 'PENDING') + " class=\"sc-button sc-button-primary\">\n\t\t\t\t\tValidate\n\t\t\t\t</button>")], 2)])]);
+  })])], 1)], 1)], 2), _vm._ssrNode(" <button" + _vm._ssrAttr("disabled", _vm.submitStatus === 'PENDING') + " class=\"sc-button sc-button-primary\">\r\n\t\t\t\t\tValidate\r\n\t\t\t\t</button>")], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -988,7 +988,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "b044f946"
+  "0352c674"
   
 )
 

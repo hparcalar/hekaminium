@@ -140,7 +140,7 @@ var render = function render() {
     staticClass: "sc-color-secondary uk-text-small"
   }, [_vm._v("Data: " + _vm._s(_vm.rangeSlider.f))])], 1)])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tUpdate values and settings\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tUpdate values and settings\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid uk-margin-bottom",
     attrs: {
       "data-uk-grid": ""
@@ -173,7 +173,7 @@ var render = function render() {
         return _vm.setSliderValue(2);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tSet to 2\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tSet to 2\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "disabled": _vm.rangeSlider.custom === 4
@@ -183,7 +183,7 @@ var render = function render() {
         return _vm.setSliderValue(4);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tSet to 4\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tSet to 4\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button uk-margin-right",
     attrs: {
       "disabled": _vm.rangeSlider.custom === 8
@@ -193,7 +193,7 @@ var render = function render() {
         return _vm.setSliderValue(8);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tSet to 8\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tSet to 8\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
@@ -214,7 +214,7 @@ var render = function render() {
       value: !_vm.rangeSlider.defaultCustomSettings,
       expression: "!rangeSlider.defaultCustomSettings"
     }]
-  }, [_vm._v("Restore")]), _vm._v("\n\t\t\t\t\t\t\tsettings\n\t\t\t\t\t\t")])])])], 1)], 2)]);
+  }, [_vm._v("Restore")]), _vm._v("\r\n\t\t\t\t\t\t\tsettings\r\n\t\t\t\t\t\t")])])])], 1)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -288,7 +288,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "37a66e42"
+  "c31373f4"
   
 )
 

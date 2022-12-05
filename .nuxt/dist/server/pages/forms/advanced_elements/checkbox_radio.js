@@ -61,7 +61,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tCheckboxes\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tCheckboxes\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-3@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -76,7 +76,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "checked": ""
@@ -87,7 +87,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tChecked\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tChecked\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "disabled": ""
@@ -98,7 +98,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyCheck', {
     staticClass: "p-icon",
     attrs: {
       "checked": "",
@@ -110,7 +110,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled & checked\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tRadio Buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled & checked\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tRadio Buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -122,26 +122,26 @@ var render = function render() {
     attrs: {
       "name": "p-radio-a"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "name": "p-radio-b",
       "checked": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tChecked\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tChecked\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "name": "p-radio-c",
       "disabled": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "name": "p-radio-d",
       "checked": "",
       "disabled": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled & Checked\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDisabled & Checked\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "uk-list"
   }, [_c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
@@ -156,7 +156,7 @@ var render = function render() {
       },
       expression: "prettyRadioGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 1\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 1\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": _vm.prettyRadioGroupItems.b,
@@ -169,7 +169,7 @@ var render = function render() {
       },
       expression: "prettyRadioGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 2\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 2\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('li', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": _vm.prettyRadioGroupItems.c,
@@ -182,7 +182,7 @@ var render = function render() {
       },
       expression: "prettyRadioGroup"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 3\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1)], 2)])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRadio 3\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1)], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -247,7 +247,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "b42a3e44"
+  "cfb850bc"
   
 )
 

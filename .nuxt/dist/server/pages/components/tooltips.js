@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -221,7 +221,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tTooltips\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tTooltips\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -231,52 +231,52 @@ var render = function render() {
     attrs: {
       "data-uk-tooltip": "Hello World"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; delay: 500"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDelay\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDelay\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, doloribus!"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLong\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLong\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: top-left"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tTop left\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tTop left\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: top-right"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tTop right\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tTop right\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: bottom"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: bottom-left"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom left\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom left\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: bottom-right"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom right\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom right\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: left"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLeft\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLeft\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     attrs: {
       "data-uk-tooltip": "title: Hello World; pos: right"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRight\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRight\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m",
     attrs: {
       "data-uk-grid": ""
@@ -295,17 +295,17 @@ var render = function render() {
       },
       expression: "inputTooltip"
     }
-  }, [_c('label', [_vm._v("Full Name")])])], 1), _vm._v(" "), _c('div', [_vm._v("\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet "), _c('a', {
+  }, [_c('label', [_vm._v("Full Name")])])], 1), _vm._v(" "), _c('div', [_vm._v("\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet "), _c('a', {
     attrs: {
       "href": "javascript:void(0)",
       "data-uk-tooltip": "title: Hello World"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tconsectetur adipisicing elit\n\t\t\t\t\t\t\t")]), _vm._v(". Neque excepturi quaerat et ab itaque nam fuga, harum enim, reiciendis facilis accusantium molestiae "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tconsectetur adipisicing elit\r\n\t\t\t\t\t\t\t")]), _vm._v(". Neque excepturi quaerat et ab itaque nam fuga, harum enim, reiciendis facilis accusantium molestiae "), _c('a', {
     attrs: {
       "href": "javascript:void(0)",
       "data-uk-tooltip": "title: Hello World"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tnecessitatibus inventore\n\t\t\t\t\t\t\t")]), _vm._v(", omnis ad modi vel corrupti blanditiis.\n\t\t\t\t\t\t")])])])], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tnecessitatibus inventore\r\n\t\t\t\t\t\t\t")]), _vm._v(", omnis ad modi vel corrupti blanditiis.\r\n\t\t\t\t\t\t")])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -346,7 +346,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "0359ab55"
+  "75a76218"
   
 )
 

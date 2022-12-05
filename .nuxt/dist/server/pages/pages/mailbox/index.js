@@ -120,16 +120,16 @@ var render = function render() {
       attrs: {
         "title": message.title
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(message.title) + "\n\t\t\t\t\t\t")]), _vm._v(" "), message.tag ? _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(message.title) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), message.tag ? _c('span', {
       staticClass: "uk-label uk-margin-small-right",
       class: [_vm.$parent.messageTagColor(message.tag)]
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(message.tag) + "\n\t\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(message.tag) + "\r\n\t\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('span', {
       staticClass: "uk-text-small uk-text-muted"
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(message.sender) + "\n\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(message.sender) + "\r\n\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
       staticClass: "uk-visible@m"
     }, [_c('div', {
       staticClass: "sc-message-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm._f("moment")(message.date, "ddd, MMM Do HH:mm")) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(_vm._f("moment")(message.date, "ddd, MMM Do HH:mm")) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "sc-message-actions"
     }, [_c('a', {
       staticClass: "mdi mdi-delete sc-js-message-remove",
@@ -279,7 +279,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "4b6d76d8"
+  "4f40aad4"
   
 )
 

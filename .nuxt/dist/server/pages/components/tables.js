@@ -721,7 +721,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -802,7 +802,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2049d950"
+  "4fcdb728"
   
 )
 
@@ -870,135 +870,135 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tDefault\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tDefault\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table"
   }, [_c('caption', [_vm._v("Table Caption")]), _vm._v(" "), _c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tfoot', [_c('tr', [_c('td', [_vm._v("Table Footer")]), _vm._v(" "), _c('td', [_vm._v("Table Footer")]), _vm._v(" "), _c('td', [_vm._v("Table Footer")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tfoot', [_c('tr', [_c('td', [_vm._v("Table Footer")]), _vm._v(" "), _c('td', [_vm._v("Table Footer")]), _vm._v(" "), _c('td', [_vm._v("Table Footer")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tTable divider\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tTable divider\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tTable striped\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tTable striped\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-striped"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tTable hover\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tTable hover\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-hover uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tSize modifiers\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tSize modifiers\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-small uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-large uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tJustify modifier\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tJustify modifier\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-justify uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-width-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHeading\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHeading\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tAlignment modifier\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tAlignment modifier\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-middle uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-width-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTable Heading\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTable Heading\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
     staticClass: "sc-button sc-button-secondary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")]), _vm._v(" "), _c('td', [_c('button', {
     staticClass: "sc-button sc-button-secondary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tResponsive\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tResponsive\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-small uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tStack on small viewports\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('table', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tStack on small viewports\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('table', {
     staticClass: "uk-table uk-table-responsive uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")]), _vm._v(" "), _c('th', [_vm._v("Table Heading")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tColumn width modifier\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('table', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tColumn width modifier\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('table', {
     staticClass: "uk-table uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tShrink\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tShrink\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tExpand\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tExpand\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-width-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tWidth Small\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tWidth Small\r\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])]), _vm._v(" "), _c('tr', [_c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")]), _vm._v(" "), _c('td', [_vm._v("Table Data")])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tUtilities\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tUtilities\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-hover uk-table-middle uk-table-divider"
@@ -1043,13 +1043,13 @@ var render = function render() {
     slot: "indeterminate-label"
   })])], 1), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPreserve\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPreserve\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tExpand + Link\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tExpand + Link\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-width-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTruncate\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTruncate\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tShrink + Nowrap\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tShrink + Nowrap\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": function ($event) {
@@ -1082,11 +1082,11 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": function ($event) {
@@ -1119,11 +1119,11 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": function ($event) {
@@ -1156,11 +1156,11 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('tr', [_c('td', [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": function ($event) {
@@ -1193,11 +1193,11 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
     staticClass: "uk-text-nowrap"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor\r\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -1289,7 +1289,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "764604ac"
+  "5d9f892d"
   
 )
 

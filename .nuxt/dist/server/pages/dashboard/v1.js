@@ -592,7 +592,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b79a63e8"
+  "0d6bc6cf"
   
 )
 
@@ -661,7 +661,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4c29359a"
+  "670a4a17"
   
 )
 
@@ -726,7 +726,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1b528a24"
+  "5d8bdb87"
   
 )
 
@@ -791,7 +791,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7c8806e8"
+  "72a650ee"
   
 )
 
@@ -812,7 +812,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("7145f924", content, true, context)
+  add("4cf4403b", content, true, context)
 };
 
 /***/ }),
@@ -822,9 +822,9 @@ module.exports.__inject__ = function (context) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_5faf808e_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(469);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_5faf808e_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_5faf808e_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_5faf808e_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_5faf808e_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_2fa7be01_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(469);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_2fa7be01_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_2fa7be01_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_2fa7be01_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_7_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_7_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_7_oneOf_1_3_node_modules_vue_loader_lib_index_js_vue_loader_options_v1_vue_vue_type_style_index_0_id_2fa7be01_prod_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
@@ -850,7 +850,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard/v1.vue?vue&type=template&id=5faf808e&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./pages/dashboard/v1.vue?vue&type=template&id=2fa7be01&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -869,7 +869,7 @@ var render = function render() {
     staticClass: "mdi mdi-clock md-color-white sc-icon-24"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tBekleyen Talepler\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(this.pendingDemandCount) + "\n\t\t\t\t\t\t\t\t")])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
+  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tBekleyen Talepler\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(this.pendingDemandCount) + "\r\n\t\t\t\t\t\t\t\t")])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.showWidgets ? '' : 'none'
   }) + ">", "</div>", [_c('ScCard', {
     staticClass: "sc-widget uk-flex"
@@ -879,7 +879,7 @@ var render = function render() {
     staticClass: "mdi mdi-clock md-color-white sc-icon-24"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tBekleyen Siparişler\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(this.pendingOrderCount) + "\n\t\t\t\t\t\t\t\t")])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
+  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tBekleyen Siparişler\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(this.pendingOrderCount) + "\r\n\t\t\t\t\t\t\t\t")])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.showWidgets && this.hasViewAuth('ProjectBudgetView') ? '' : 'none'
   }) + ">", "</div>", [_c('ScCard', {
     staticClass: "sc-widget uk-flex"
@@ -889,7 +889,7 @@ var render = function render() {
     staticClass: "mdi mdi-currency-try md-color-white sc-icon-24"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTeklif Verilen Projeler\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.offeredProjectTotal) + " ")])])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
+  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTeklif Verilen Projeler\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.offeredProjectTotal) + " ")])])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.showWidgets && this.hasViewAuth('ProjectBudgetView') ? '' : 'none'
   }) + ">", "</div>", [_c('ScCard', {
     staticClass: "sc-widget uk-flex"
@@ -899,7 +899,7 @@ var render = function render() {
     staticClass: "mdi mdi-currency-try md-color-white sc-widget-addon"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tOnaylanan Projeler\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.approvedProjectTotal) + " ")])])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
+  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tOnaylanan Projeler\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.approvedProjectTotal) + " ")])])], 1)], 1)])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.showWidgets && this.hasViewAuth('ProjectBudgetView') ? '' : 'none'
   }) + ">", "</div>", [_c('ScCard', {
     staticClass: "sc-widget uk-flex"
@@ -909,7 +909,7 @@ var render = function render() {
     staticClass: "mdi mdi-currency-try md-color-white sc-widget-addon"
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTamamlanan Projeler\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.completedProjectTotal) + " ")])])], 1)], 1)])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-4@xl uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardBody', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTamamlanan Projeler\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('b', [_vm._v(" " + _vm._s(this.completedProjectTotal) + " ")])])], 1)], 1)])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-4@xl uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "sc-widget"
   }, [_c('div', {
     staticClass: "sc-widget-content"
@@ -917,9 +917,9 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tNew Customers\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tJan - Jun 2018\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tNew Customers\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tJan - Jun 2018\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "sc-widget-addon md-color-green-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t+20%\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ChartJsLine', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t+20%\r\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ChartJsLine', {
     staticClass: "sc-chart sc-chart-widget",
     attrs: {
       "chart-id": "widgetsChartsA",
@@ -934,7 +934,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tComments\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLast 7 days\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tComments\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLast 7 days\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "sc-widget-addon md-color-blue-grey-600"
   }, [_c('i', {
     staticClass: "mdi mdi-comment-text-multiple-outline"
@@ -953,9 +953,9 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSale\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t02.2018 - 07.2018\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSale\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t02.2018 - 07.2018\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "sc-widget-addon md-color-red-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t+ $2230.00\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ChartJsLine', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t+ $2230.00\r\n\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('ChartJsLine', {
     staticClass: "sc-chart sc-chart-widget",
     attrs: {
       "chart-id": "widgetsChartsC",
@@ -970,7 +970,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tOrders\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t02.2018 - 07.2018\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tOrders\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t02.2018 - 07.2018\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "sc-widget-addon md-color-blue-grey-600"
   }, [_c('i', {
     staticClass: "mdi mdi-cart"
@@ -997,7 +997,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tProjeler\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tProjeler\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-close",
     attrs: {
       "href": "javascript:void(0)"
@@ -1019,7 +1019,7 @@ var render = function render() {
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./pages/dashboard/v1.vue?vue&type=template&id=5faf808e&
+// CONCATENATED MODULE: ./pages/dashboard/v1.vue?vue&type=template&id=2fa7be01&
 
 // EXTERNAL MODULE: ./assets/js/utils.js + 5 modules
 var utils = __webpack_require__(2);
@@ -1384,15 +1384,18 @@ if (false) {}
       const completedProjectSum = projectData.filter(d => d.projectStatus == 4).reduce((partialSum, a) => partialSum + a.offerPrice * a.quantity, 0);
       this.offeredProjectTotal = new Intl.NumberFormat('tr-TR', {
         style: 'currency',
-        currency: 'try'
+        currency: 'try',
+        maximumFractionDigits: 2
       }).format(offeredProjectSum);
       this.approvedProjectTotal = new Intl.NumberFormat('tr-TR', {
         style: 'currency',
-        currency: 'try'
+        currency: 'try',
+        maximumFractionDigits: 2
       }).format(approvedProjectSum);
       this.completedProjectTotal = new Intl.NumberFormat('tr-TR', {
         style: 'currency',
-        currency: 'try'
+        currency: 'try',
+        maximumFractionDigits: 2
       }).format(completedProjectSum);
       this.pendingDemandCount = pendingDemandsData.length;
       this.pendingOrderCount = pendingOrdersData.length;
@@ -1491,7 +1494,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "d77d774c"
+  "e362ad1e"
   
 )
 

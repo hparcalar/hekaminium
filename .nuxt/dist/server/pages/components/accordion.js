@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -845,7 +845,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2f99d632"
+  "25f8a862"
   
 )
 
@@ -877,19 +877,19 @@ var render = function render() {
     staticClass: "uk-open"
   }, [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 1\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 1\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 2\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 2\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceA) + "\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tOutline\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tOutline\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
     staticClass: "uk-accordion-outline",
     attrs: {
       "data-uk-accordion": ""
@@ -898,7 +898,7 @@ var render = function render() {
     staticClass: "uk-open"
   }, [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 1\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 1\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', {
     staticClass: "uk-grid-medium",
@@ -915,21 +915,21 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand@m"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title md-bg-light-blue-50"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 2\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 2\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 4\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 4\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tAlternative\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tAlternative\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
     staticClass: "uk-accordion-alt",
     attrs: {
       "data-uk-accordion": ""
@@ -938,7 +938,7 @@ var render = function render() {
     staticClass: "uk-open"
   }, [_c('h3', {
     staticClass: "uk-accordion-title md-bg-light-green-600 md-color-white"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 1\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 1\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', {
     staticClass: "uk-grid-medium",
@@ -955,19 +955,19 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand@m"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 2\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 2\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 4\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 4\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tMultiple Open Items\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tMultiple Open Items\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ul', {
     attrs: {
       "data-uk-accordion": "multiple: true"
     }
@@ -975,19 +975,19 @@ var render = function render() {
     staticClass: "uk-open"
   }, [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 1\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 1\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 2\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 2\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tItem 3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tItem 3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentenceB) + "\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tForm Fields\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tForm Fields\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid-small",
     attrs: {
       "data-uk-grid": ""
@@ -1029,7 +1029,7 @@ var render = function render() {
     }
   }, [_c('li', [_c('h4', {
     staticClass: "uk-accordion-title md-color-light-blue-800 uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tOptional details\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tOptional details\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid-small",
@@ -1068,7 +1068,7 @@ var render = function render() {
     }
   }, [_vm._v("Maiden Name")])])], 1)])])])]), _vm._v(" "), _c('button', {
     staticClass: "uk-margin sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tSubmit\n\t\t\t\t\t\t\t")])])], 1), _vm._ssrNode(" <h5 class=\"uk-margin uk-margin-small-bottom\">\n\t\t\t\t\t\tAccordion Menu\n\t\t\t\t\t</h5> "), _vm._ssrNode("<div class=\"uk-width-1-2@s uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('form', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tSubmit\r\n\t\t\t\t\t\t\t")])])], 1), _vm._ssrNode(" <h5 class=\"uk-margin uk-margin-small-bottom\">\r\n\t\t\t\t\t\tAccordion Menu\r\n\t\t\t\t\t</h5> "), _vm._ssrNode("<div class=\"uk-width-1-2@s uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('form', [_c('ul', {
     attrs: {
       "data-uk-accordion": ""
     }
@@ -1078,7 +1078,7 @@ var render = function render() {
     staticClass: "uk-accordion-title"
   }, [_c('i', {
     staticClass: "mdi mdi-ruler"
-  }), _vm._v("Size\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Size\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content sc-padding-medium md-bg-grey-100 sc-round"
   }, [_c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
@@ -1094,7 +1094,7 @@ var render = function render() {
     attrs: {
       "for": "ac-size-sm"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSmall\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSmall\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-radio",
@@ -1108,7 +1108,7 @@ var render = function render() {
     attrs: {
       "for": "ac-size-md"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMedium\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMedium\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-radio",
@@ -1122,7 +1122,7 @@ var render = function render() {
     attrs: {
       "for": "ac-size-lg"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLarge\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLarge\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-radio",
@@ -1136,11 +1136,11 @@ var render = function render() {
     attrs: {
       "for": "ac-size-xl"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tX-Large\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tX-Large\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
   }, [_c('i', {
     staticClass: "mdi mdi-palette"
-  }), _vm._v("Colors\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Colors\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content sc-padding-medium md-bg-grey-100 sc-round"
   }, [_c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
@@ -1157,7 +1157,7 @@ var render = function render() {
     attrs: {
       "for": "ac-red"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tRed\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tRed\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-checkbox",
@@ -1172,7 +1172,7 @@ var render = function render() {
     attrs: {
       "for": "ac-blue"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tBlue\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tBlue\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-checkbox",
@@ -1187,11 +1187,11 @@ var render = function render() {
     attrs: {
       "for": "ac-green"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tGreen\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tGreen\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
   }, [_c('i', {
     staticClass: "mdi mdi-cash-usd"
-  }), _vm._v("Price\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Price\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content sc-padding-medium md-bg-grey-100 sc-round"
   }, [_c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
@@ -1207,7 +1207,7 @@ var render = function render() {
     attrs: {
       "for": "ac-price-100"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$100.00\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$100.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-checkbox",
@@ -1221,7 +1221,7 @@ var render = function render() {
     attrs: {
       "for": "ac-price-500"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$500.00\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$500.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-checkbox",
@@ -1235,7 +1235,7 @@ var render = function render() {
     attrs: {
       "for": "ac-price-1000"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$1000.00\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$1000.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small uk-flex uk-flex-middle"
   }, [_c('input', {
     staticClass: "uk-checkbox",
@@ -1249,7 +1249,7 @@ var render = function render() {
     attrs: {
       "for": "ac-price-5000"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$5000.00\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1)], 1)], 2)], 2)])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t$5000.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1)], 1)], 2)], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -1300,7 +1300,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d76c3cda"
+  "6bb30330"
   
 )
 

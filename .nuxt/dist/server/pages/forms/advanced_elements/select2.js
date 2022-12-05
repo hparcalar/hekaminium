@@ -31,7 +31,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Select2', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.usStates,
       "settings": {
@@ -47,7 +47,7 @@ var render = function render() {
       },
       expression: "select2.state"
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tTagging\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Select2', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tTagging\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.usCities,
       "settings": {
@@ -126,7 +126,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "3a3392e7"
+  "9cf61eba"
   
 )
 

@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -299,14 +299,14 @@ var render = function render() {
     attrs: {
       "title": _vm.message.title
     }
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.message.title) + "\n\t\t\t\t\t")]), _vm._v(" "), _vm.message.tag ? _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.message.title) + "\r\n\t\t\t\t\t")]), _vm._v(" "), _vm.message.tag ? _c('span', {
     staticClass: "uk-label uk-margin-small-right",
     class: [_vm.$parent.messageTagColor(_vm.message.tag)]
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.message.tag) + "\n\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.message.tag) + "\r\n\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('span', {
     staticClass: "uk-text-small uk-text-muted"
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.message.sender) + "\n\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.message.sender) + "\r\n\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-message-date"
-  }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm._f("moment")(_vm.message.date, "ddd, MMM Do HH:mm")) + "\n\t\t\t\t")])])]), _vm._ssrNode(" "), _c('transition', {
+  }, [_vm._v("\r\n\t\t\t\t\t" + _vm._s(_vm._f("moment")(_vm.message.date, "ddd, MMM Do HH:mm")) + "\r\n\t\t\t\t")])])]), _vm._ssrNode(" "), _c('transition', {
     attrs: {
       "name": "fadeUp",
       "appear": ""
@@ -330,7 +330,7 @@ var render = function render() {
     }
   }, [_c('div', [_c('span', {
     staticClass: "uk-display-block uk-margin-small-bottom uk-text-muted uk-text-medium uk-margin-small-left"
-  }, [_vm._v("\n\t\t\t\t\t\tAttachments:\n\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tAttachments:\r\n\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "sc-message-attachments"
   }, [_c('li', {
     staticClass: "sc-flex-no-shrink"
@@ -407,7 +407,7 @@ var render = function render() {
     staticClass: "uk-margin-small-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\tSend\n\t\t\t\t\t\t")])])], 1)])], 2)], 2) : _vm._e();
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tSend\r\n\t\t\t\t\t\t")])])], 1)])], 2)], 2) : _vm._e();
 };
 
 var staticRenderFns = [];
@@ -522,7 +522,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2254c738"
+  "22261d32"
   
 )
 

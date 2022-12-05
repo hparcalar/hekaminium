@@ -708,7 +708,7 @@ var render = function render() {
       staticClass: "uk-flex-1"
     }, [_c('p', {
       staticClass: "uk-margin-remove sc-text-semibold"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(photo.desc) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(photo.desc) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
       staticClass: "sc-flex-no-shrink uk-margin-left sc-el-clickable",
       on: {
         "click": function ($event) {
@@ -834,7 +834,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "612d83b3"
+  "7f1c2008"
   
 )
 

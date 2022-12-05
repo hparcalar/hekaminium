@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -681,7 +681,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUser active\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUser active\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -693,13 +693,13 @@ var render = function render() {
     staticClass: "sc-round sc-border uk-margin sc-padding"
   }, [_c('div', {
     staticClass: "uk-margin-small"
-  }, [_c('strong', [_vm._v("First Name")]), _vm._v(": " + _vm._s(_vm.user.firstName) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_c('strong', [_vm._v("First Name")]), _vm._v(": " + _vm._s(_vm.user.firstName) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small"
-  }, [_c('strong', [_vm._v("Last Name")]), _vm._v(": " + _vm._s(_vm.user.lastName) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_c('strong', [_vm._v("Last Name")]), _vm._v(": " + _vm._s(_vm.user.lastName) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small"
-  }, [_c('strong', [_vm._v("Email")]), _vm._v(": " + _vm._s(_vm.user.email) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_c('strong', [_vm._v("Email")]), _vm._v(": " + _vm._s(_vm.user.email) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small"
-  }, [_c('strong', [_vm._v("Company")]), _vm._v(": " + _vm._s(_vm.user.company) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_c('strong', [_vm._v("Company")]), _vm._v(": " + _vm._s(_vm.user.company) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -708,7 +708,7 @@ var render = function render() {
     }]
   }, [_c('span', {
     staticClass: "uk-label uk-label-success"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tActive\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tActive\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -717,7 +717,7 @@ var render = function render() {
     }]
   }, [_c('span', {
     staticClass: "uk-label md-bg-grey-500"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tInactive\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tInactive\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top uk-flex uk-flex-middle"
   }, [_c('transition', {
     attrs: {
@@ -738,7 +738,7 @@ var render = function render() {
         return _vm.editUser();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tEdit User\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEdit User\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -753,7 +753,7 @@ var render = function render() {
         return _vm.saveUserData();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-flat-danger sc-button-flat uk-margin-small-left",
     on: {
       "click": function ($event) {
@@ -761,7 +761,7 @@ var render = function render() {
         return _vm.cancelEdit();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "sc-text-semibold uk-text-uppercase uk-heading-line"
@@ -823,7 +823,7 @@ var render = function render() {
         return _vm.loadRandomImage();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLoad Random Image\n\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLoad Random Image\r\n\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('div', {
     staticClass: "uk-flex uk-flex-middle uk-margin-bottom"
@@ -845,7 +845,7 @@ var render = function render() {
       }
     }, [_c('div', {
       staticClass: "sc-padding-small md-bg-blue-50 md-color-blue-800 sc-round"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.title) + " " + _vm._s(item.position) + "\n\t\t\t\t\t\t\t\t\t")])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.title) + " " + _vm._s(item.position) + "\r\n\t\t\t\t\t\t\t\t\t")])]);
   }), 0)])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('p', {
     staticClass: "sc-text-semibold uk-text-uppercase uk-heading-line"
   }, [_c('span', [_vm._v("Deleting A Table Row")])]), _vm._v(" "), _c('div', {
@@ -897,11 +897,11 @@ var render = function render() {
       }
     }, [_c('td', [_vm._v(_vm._s(index + 1) + ".")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.fName) + " " + _vm._s(t2User.lName) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.fName) + " " + _vm._s(t2User.lName) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.company) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v(_vm._s(t2User.email))]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.company) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v(_vm._s(t2User.email))]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.phone) + "\n\t\t\t\t\t\t\t\t\t\t\t")])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(t2User.phone) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])]);
   }), 0)], 1)]), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
@@ -918,7 +918,7 @@ var render = function render() {
         return _vm.loadMoreUsers();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLoad More Users …\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLoad More Users …\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -1197,7 +1197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "9b17399a"
+  "7010e10a"
   
 )
 

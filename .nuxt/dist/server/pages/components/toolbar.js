@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -326,9 +326,9 @@ var render = function render() {
     staticClass: "sc-top-bar-content uk-flex uk-flex-1"
   }, [_c('h1', {
     staticClass: "sc-top-bar-title uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\tToolbar title\n\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tToolbar title\r\n\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("\n\t\t\t\t\t\tSome text\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tSome text\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "sc-actions uk-margin-left"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-filter-variant sc-js-el-hide",
@@ -348,7 +348,7 @@ var render = function render() {
     staticClass: "uk-margin-remove uk-flex-middle uk-flex"
   }, [_c('span', {
     staticClass: "uk-text-medium uk-text-uppercase sc-text-semibold md-color-indigo-700 uk-margin-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\tFilter by:\n\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t'" + _vm._s(_vm.filter.name) + "', '" + _vm._s(_vm.filter.date) + "', " + _vm._s(_vm.filter.tags) + "\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tFilter by:\r\n\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t'" + _vm._s(_vm.filter.name) + "', '" + _vm._s(_vm.filter.date) + "', " + _vm._s(_vm.filter.tags) + "\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-4@m uk-flex-bottom",
     attrs: {
       "data-uk-grid": "",
@@ -407,7 +407,7 @@ var render = function render() {
     staticClass: "uk-text-right"
   }, [_c('button', {
     staticClass: "sc-button sc-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tFilter\n\t\t\t\t\t\t\t")])])])])])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, molestias nihil. Aliquam dolore dolores dolorum et excepturi facere harum id in incidunt laboriosam, libero magnam numquam possimus quaerat quibusdam recusandae reprehenderit repudiandae tenetur voluptas voluptatem! Ab, aliquam, quaerat? Ad aliquid dolorem eos esse et facilis illo maiores minima, nisi quas reiciendis sunt? Accusantium cum delectus esse eum facilis molestias nemo quae sed tenetur velit. Animi architecto at atque commodi cumque debitis dignissimos id, incidunt iste laboriosam, necessitatibus nostrum odit officia pariatur placeat provident quibusdam quidem quis quod repellat tempore ut veritatis. Accusantium adipisci architecto consectetur magni quia sit ullam vitae voluptatibus. A, aperiam distinctio, enim esse explicabo, facere id illo molestias necessitatibus nesciunt odit possimus sint vero. Alias ducimus, est eveniet, excepturi facere impedit ipsum maiores odio pariatur quam sequi tempora vel, voluptatum. Amet consequuntur cupiditate deserunt eius eum excepturi incidunt maxime obcaecati possimus, quam, quia quibusdam reiciendis repudiandae sequi unde veritatis voluptate! Ab animi, at dolor dolores esse est in iste iusto maiores maxime, odio, odit quod rerum soluta totam veritatis vero voluptas. Eos esse excepturi fuga iste, obcaecati quo quos. Accusamus alias at autem, blanditiis commodi consectetur consequatur consequuntur cum dicta distinctio dolorem eius eligendi est facere facilis harum hic illum ipsam iusto laboriosam minus odit omnis optio provident quaerat quam quas quia quo reiciendis repudiandae sapiente tempore vitae voluptates? Adipisci asperiores cum officiis possimus provident sed soluta, vitae voluptatibus. Corporis esse id in ipsa mollitia qui recusandae totam voluptates. Aspernatur at dicta dignissimos, dolore dolores dolorum earum enim esse eum eveniet excepturi exercitationem inventore magni maiores maxime natus numquam obcaecati placeat quasi quidem quis quisquam reprehenderit saepe. Alias, autem enim esse fugiat molestiae odit officia quae qui quibusdam ratione similique ullam vel vero. Culpa eius fugiat necessitatibus possimus quaerat quisquam, repellat repudiandae sequi unde. Architecto, dolore, esse.\n\t\t\t\t")])], 1)], 1)], 2);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tFilter\r\n\t\t\t\t\t\t\t")])])])])])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, molestias nihil. Aliquam dolore dolores dolorum et excepturi facere harum id in incidunt laboriosam, libero magnam numquam possimus quaerat quibusdam recusandae reprehenderit repudiandae tenetur voluptas voluptatem! Ab, aliquam, quaerat? Ad aliquid dolorem eos esse et facilis illo maiores minima, nisi quas reiciendis sunt? Accusantium cum delectus esse eum facilis molestias nemo quae sed tenetur velit. Animi architecto at atque commodi cumque debitis dignissimos id, incidunt iste laboriosam, necessitatibus nostrum odit officia pariatur placeat provident quibusdam quidem quis quod repellat tempore ut veritatis. Accusantium adipisci architecto consectetur magni quia sit ullam vitae voluptatibus. A, aperiam distinctio, enim esse explicabo, facere id illo molestias necessitatibus nesciunt odit possimus sint vero. Alias ducimus, est eveniet, excepturi facere impedit ipsum maiores odio pariatur quam sequi tempora vel, voluptatum. Amet consequuntur cupiditate deserunt eius eum excepturi incidunt maxime obcaecati possimus, quam, quia quibusdam reiciendis repudiandae sequi unde veritatis voluptate! Ab animi, at dolor dolores esse est in iste iusto maiores maxime, odio, odit quod rerum soluta totam veritatis vero voluptas. Eos esse excepturi fuga iste, obcaecati quo quos. Accusamus alias at autem, blanditiis commodi consectetur consequatur consequuntur cum dicta distinctio dolorem eius eligendi est facere facilis harum hic illum ipsam iusto laboriosam minus odit omnis optio provident quaerat quam quas quia quo reiciendis repudiandae sapiente tempore vitae voluptates? Adipisci asperiores cum officiis possimus provident sed soluta, vitae voluptatibus. Corporis esse id in ipsa mollitia qui recusandae totam voluptates. Aspernatur at dicta dignissimos, dolore dolores dolorum earum enim esse eum eveniet excepturi exercitationem inventore magni maiores maxime natus numquam obcaecati placeat quasi quidem quis quisquam reprehenderit saepe. Alias, autem enim esse fugiat molestiae odit officia quae qui quibusdam ratione similique ullam vel vero. Culpa eius fugiat necessitatibus possimus quaerat quisquam, repellat repudiandae sequi unde. Architecto, dolore, esse.\r\n\t\t\t\t")])], 1)], 1)], 2);
 };
 
 var staticRenderFns = [];
@@ -470,7 +470,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "00742706"
+  "fff9e83a"
   
 )
 

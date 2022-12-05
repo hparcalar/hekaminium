@@ -60,7 +60,7 @@
                                     <span v-for="(firmSum, sumIndex) in sumOfFirmDetails(firm, false)"
                                         :key="firmSum.forexId" class="firm-summary">
                                         <b>{{ firmSum.forexCode }}</b>: {{ new
-                                                Intl.NumberFormat('tr-TR').format(firmSum.overallTotal)
+                                                Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 }).format(firmSum.overallTotal)
                                         }}
                                     </span>
                                 </h6>
@@ -179,7 +179,9 @@
                                     <span v-for="firmSum in sumOfFirmDetails(firm.id, true)" :key="firmSum.forexId"
                                         class="firm-summary">
                                         <b>{{ firmSum.forexCode }}</b>: {{ new
-                                                Intl.NumberFormat('tr-TR').format(firmSum.overallTotal)
+                                                Intl.NumberFormat('tr-TR', {
+                                                    maximumFractionDigits: 2
+                                                }).format(firmSum.overallTotal)
                                         }}
                                     </span>
                                     <button v-show="firmIsOrdered(firm.id)" type="button"
@@ -205,7 +207,10 @@
                                         <td>{{ item.itemExplanation }}</td>
                                         <td>{{ getForexCode(getFirmPriceOfDetail(item, firm.id).forexId) }}</td>
                                         <td>{{ getFirmPriceOfDetail(item, firm.id).overallForexTotal }}</td>
-                                        <td>{{ getFirmPriceOfDetail(item, firm.id).overallTotal }}</td>
+                                        <!-- <td>{{ getFirmPriceOfDetail(item, firm.id).overallTotal }}</td> -->
+                                        <td>{{ new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 })
+                                                .format(getFirmPriceOfDetail(item, firm.id).overallTotal)
+                                        }}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -213,7 +218,7 @@
                             <p v-for="(orderSum, sumIndex) in sumOfOrder()" :key="orderSum.forexId"
                                 style="margin-top:2px;margin-bottom:2px;" class="firm-summary">
                                 <b>{{ orderSum.forexCode }}</b>: {{ new
-                                        Intl.NumberFormat('tr-TR').format(orderSum.overallTotal)
+                                        Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 }).format(orderSum.overallTotal)
                                 }}
                             </p>
                         </div>
@@ -244,12 +249,14 @@
                             style="border:1px solid #888; border-radius:5px;margin:5px;padding:5px;" class="uk-grid">
                             <div class="uk-width-4-5@m">
                                 <p class="uk-padding-remove uk-margin-remove"><b>Stok:</b> {{ demand.itemName }},
-                                    <b>Proje: </b> {{ demand.projectName }}</p>
+                                    <b>Proje: </b> {{ demand.projectName }}
+                                </p>
                                 <p class="uk-padding-remove uk-margin-remove"><b>Açıklama:</b> {{ demand.itemExplanation
                                 }}</p>
                                 <p class="uk-padding-remove uk-margin-remove"><b>Parça No:</b> {{ demand.partNo }},
                                     <b>Boyut:</b> {{ demand.partDimensions }}, <b>Miktar:</b> {{ demand.demandQuantity
-                                    }}</p>
+                                    }}
+                                </p>
                             </div>
                             <div class="uk-width-1-5@m">
                                 <!-- <button type="button" @click="removeDemandDetailFromOrder(item, demand)" 

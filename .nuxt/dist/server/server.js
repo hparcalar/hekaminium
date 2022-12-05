@@ -1420,7 +1420,7 @@ module.exports = require("vue-meta");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _composable_userSession__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 
- // const baseUrl = 'http://localhost:5063/';
+ //const baseUrl = 'http://localhost:5063/';
 
 const baseUrl = 'http://37.148.209.136:5000';
 let api;
@@ -1631,7 +1631,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "712b1f19"
+  "4a0314c9"
   
 )
 
@@ -1701,7 +1701,7 @@ var ProgressBar_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1d1c62cf"
+  "9a6069c2"
   
 )
 
@@ -1741,7 +1741,7 @@ var ProgressLabel_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "21053430"
+  "177fc880"
   
 )
 
@@ -1827,7 +1827,7 @@ var ProgressCircular_component = Object(componentNormalizer["a" /* default */])(
   false,
   ProgressCircular_injectStyles,
   null,
-  "6d1ec293"
+  "6fd00c43"
   
 )
 
@@ -1924,7 +1924,7 @@ var ProgressOverlay_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "178b528c"
+  "59b212dc"
   
 )
 
@@ -2016,7 +2016,7 @@ var ProgressOverlayRoot_component = Object(componentNormalizer["a" /* default */
   false,
   null,
   null,
-  "0552dc8e"
+  "5a80f4de"
   
 )
 
@@ -2514,7 +2514,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "8d6e2f80"
+  "a39b7fe0"
   
 )
 
@@ -2536,7 +2536,7 @@ module.exports = require("vue2-touch-events");
 /* 43 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"a\":\"1.0.5\"}");
+module.exports = JSON.parse("{\"a\":\"1.0.6\"}");
 
 /***/ }),
 /* 44 */
@@ -4725,321 +4725,321 @@ function shouldScrollToTop(route) {
 
 
 
-const _51d079c8 = () => interopDefault(__webpack_require__.e(/* import() | pages/account_auth */ 3).then(__webpack_require__.bind(null, 781)));
+const _df818fc2 = () => interopDefault(__webpack_require__.e(/* import() | pages/account_auth */ 3).then(__webpack_require__.bind(null, 781)));
 
-const _5704df63 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/index */ 45).then(__webpack_require__.bind(null, 782)));
+const _4ced1382 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/index */ 45).then(__webpack_require__.bind(null, 782)));
 
-const _d45ff384 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/index */ 43).then(__webpack_require__.bind(null, 783)));
+const _666e8e2a = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/index */ 43).then(__webpack_require__.bind(null, 783)));
 
-const _4f8bc410 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/index */ 80).then(__webpack_require__.bind(null, 784)));
+const _7efc0a4a = () => interopDefault(__webpack_require__.e(/* import() | pages/item/index */ 80).then(__webpack_require__.bind(null, 784)));
 
-const _cf41416e = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/index */ 78).then(__webpack_require__.bind(null, 785)));
+const _946b5302 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/index */ 78).then(__webpack_require__.bind(null, 785)));
 
-const _17e8f547 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page */ 86).then(__webpack_require__.bind(null, 786)));
+const _594061ec = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page */ 86).then(__webpack_require__.bind(null, 786)));
 
-const _2099c050 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page_auth */ 87).then(__webpack_require__.bind(null, 787)));
+const _9178ef26 = () => interopDefault(__webpack_require__.e(/* import() | pages/login_page_auth */ 87).then(__webpack_require__.bind(null, 787)));
 
-const _f8529d08 = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/index */ 114).then(__webpack_require__.bind(null, 788)));
+const _4cb4fdac = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/index */ 114).then(__webpack_require__.bind(null, 788)));
 
-const _3b280b2a = () => interopDefault(__webpack_require__.e(/* import() | pages/project/index */ 137).then(__webpack_require__.bind(null, 773)));
+const _58f4b604 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/index */ 137).then(__webpack_require__.bind(null, 773)));
 
-const _37b7ab52 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/index */ 133).then(__webpack_require__.bind(null, 789)));
+const _5d11864b = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/index */ 133).then(__webpack_require__.bind(null, 789)));
 
-const _1681618c = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/index */ 152).then(__webpack_require__.bind(null, 790)));
+const _2de7415c = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/index */ 152).then(__webpack_require__.bind(null, 790)));
 
-const _218eb8d4 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/index */ 158).then(__webpack_require__.bind(null, 791)));
+const _2934b058 = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/index */ 158).then(__webpack_require__.bind(null, 791)));
 
-const _93b0609e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/accordion */ 4).then(__webpack_require__.bind(null, 792)));
+const _ae6d19c6 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/accordion */ 4).then(__webpack_require__.bind(null, 792)));
 
-const _3aaefa45 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/alert */ 5).then(__webpack_require__.bind(null, 793)));
+const _43b9989e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/alert */ 5).then(__webpack_require__.bind(null, 793)));
 
-const _61e5f6d6 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/animations */ 6).then(__webpack_require__.bind(null, 794)));
+const _790e7e2c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/animations */ 6).then(__webpack_require__.bind(null, 794)));
 
-const _49dd283a = () => interopDefault(__webpack_require__.e(/* import() | pages/components/avatars */ 7).then(__webpack_require__.bind(null, 795)));
+const _725cfa4f = () => interopDefault(__webpack_require__.e(/* import() | pages/components/avatars */ 7).then(__webpack_require__.bind(null, 795)));
 
-const _a3486cfe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/badge_label */ 8).then(__webpack_require__.bind(null, 796)));
+const _7f2241ed = () => interopDefault(__webpack_require__.e(/* import() | pages/components/badge_label */ 8).then(__webpack_require__.bind(null, 796)));
 
-const _11a4ce78 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/base */ 9).then(__webpack_require__.bind(null, 797)));
+const _b96490e8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/base */ 9).then(__webpack_require__.bind(null, 797)));
 
-const _6b65312c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/breadcrumb */ 10).then(__webpack_require__.bind(null, 798)));
+const _2be0317e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/breadcrumb */ 10).then(__webpack_require__.bind(null, 798)));
 
-const _5a84c5aa = () => interopDefault(__webpack_require__.e(/* import() | pages/components/buttons */ 11).then(__webpack_require__.bind(null, 799)));
+const _1c5f57d4 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/buttons */ 11).then(__webpack_require__.bind(null, 799)));
 
-const _f76c0668 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/cards */ 12).then(__webpack_require__.bind(null, 800)));
+const _27be3638 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/cards */ 12).then(__webpack_require__.bind(null, 800)));
 
-const _63791008 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/color_palette */ 13).then(__webpack_require__.bind(null, 801)));
+const _1c831d74 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/color_palette */ 13).then(__webpack_require__.bind(null, 801)));
 
-const _7e05dcce = () => interopDefault(__webpack_require__.e(/* import() | pages/components/drop_dropdowns */ 14).then(__webpack_require__.bind(null, 802)));
+const _2934b1ad = () => interopDefault(__webpack_require__.e(/* import() | pages/components/drop_dropdowns */ 14).then(__webpack_require__.bind(null, 802)));
 
-const _5220ebf2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fab_buttons */ 15).then(__webpack_require__.bind(null, 776)));
+const _22e7645e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fab_buttons */ 15).then(__webpack_require__.bind(null, 776)));
 
-const _0f815878 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_footer */ 16).then(__webpack_require__.bind(null, 803)));
+const _5789ed8c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_footer */ 16).then(__webpack_require__.bind(null, 803)));
 
-const _0e0a8b6e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_toolbar */ 17).then(__webpack_require__.bind(null, 804)));
+const _71d6ce4c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/fancy_toolbar */ 17).then(__webpack_require__.bind(null, 804)));
 
-const _e35045b8 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/filters */ 18).then(__webpack_require__.bind(null, 805)));
+const _25a36b90 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/filters */ 18).then(__webpack_require__.bind(null, 805)));
 
-const _0009e082 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/footer */ 19).then(__webpack_require__.bind(null, 806)));
+const _69c656d4 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/footer */ 19).then(__webpack_require__.bind(null, 806)));
 
-const _e993df26 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/grid */ 20).then(__webpack_require__.bind(null, 807)));
+const _1cdef981 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/grid */ 20).then(__webpack_require__.bind(null, 807)));
 
-const _0433160e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/height */ 21).then(__webpack_require__.bind(null, 808)));
+const _6173ebbc = () => interopDefault(__webpack_require__.e(/* import() | pages/components/height */ 21).then(__webpack_require__.bind(null, 808)));
 
-const _4004b503 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/icons */ 22).then(__webpack_require__.bind(null, 809)));
+const _390e2322 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/icons */ 22).then(__webpack_require__.bind(null, 809)));
 
-const _49ef0ffe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/lists */ 23).then(__webpack_require__.bind(null, 810)));
+const _25396d2c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/lists */ 23).then(__webpack_require__.bind(null, 810)));
 
-const _3d99fb24 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/masonry */ 24).then(__webpack_require__.bind(null, 811)));
+const _787e90da = () => interopDefault(__webpack_require__.e(/* import() | pages/components/masonry */ 24).then(__webpack_require__.bind(null, 811)));
 
-const _3150be8e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/modals_dialogs */ 25).then(__webpack_require__.bind(null, 812)));
+const _4f8f40cd = () => interopDefault(__webpack_require__.e(/* import() | pages/components/modals_dialogs */ 25).then(__webpack_require__.bind(null, 812)));
 
-const _1d4e7ed1 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/notifications */ 26).then(__webpack_require__.bind(null, 813)));
+const _534ee786 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/notifications */ 26).then(__webpack_require__.bind(null, 813)));
 
-const _abcd6a0e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/overlay */ 27).then(__webpack_require__.bind(null, 777)));
+const _4164d965 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/overlay */ 27).then(__webpack_require__.bind(null, 777)));
 
-const _80b868fe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/pagination */ 28).then(__webpack_require__.bind(null, 814)));
+const _21369595 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/pagination */ 28).then(__webpack_require__.bind(null, 814)));
 
-const _47e5aa96 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/progress_spinners */ 29).then(__webpack_require__.bind(null, 815)));
+const _858abbbe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/progress_spinners */ 29).then(__webpack_require__.bind(null, 815)));
 
-const _5d00130e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/scrollable */ 30).then(__webpack_require__.bind(null, 816)));
+const _82da45bc = () => interopDefault(__webpack_require__.e(/* import() | pages/components/scrollable */ 30).then(__webpack_require__.bind(null, 816)));
 
-const _2566de70 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/slider */ 31).then(__webpack_require__.bind(null, 817)));
+const _8f40f648 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/slider */ 31).then(__webpack_require__.bind(null, 817)));
 
-const _3e6beec2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/sortable */ 32).then(__webpack_require__.bind(null, 818)));
+const _32f047b3 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/sortable */ 32).then(__webpack_require__.bind(null, 818)));
 
-const _0f2495ea = () => interopDefault(__webpack_require__.e(/* import() | pages/components/swipe_list */ 33).then(__webpack_require__.bind(null, 819)));
+const _70b75ffe = () => interopDefault(__webpack_require__.e(/* import() | pages/components/swipe_list */ 33).then(__webpack_require__.bind(null, 819)));
 
-const _52bcf44c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tables */ 34).then(__webpack_require__.bind(null, 820)));
+const _1dcfe860 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tables */ 34).then(__webpack_require__.bind(null, 820)));
 
-const _433cdca5 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tabs */ 35).then(__webpack_require__.bind(null, 821)));
+const _5634748e = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tabs */ 35).then(__webpack_require__.bind(null, 821)));
 
-const _3bdff730 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/timeline */ 36).then(__webpack_require__.bind(null, 822)));
+const _3436437c = () => interopDefault(__webpack_require__.e(/* import() | pages/components/timeline */ 36).then(__webpack_require__.bind(null, 822)));
 
-const _2e9304a4 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/toolbar */ 37).then(__webpack_require__.bind(null, 823)));
+const _7442d9e0 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/toolbar */ 37).then(__webpack_require__.bind(null, 823)));
 
-const _cdd2fd12 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tooltips */ 38).then(__webpack_require__.bind(null, 824)));
+const _29867eea = () => interopDefault(__webpack_require__.e(/* import() | pages/components/tooltips */ 38).then(__webpack_require__.bind(null, 824)));
 
-const _8c5b2632 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/transitions */ 39).then(__webpack_require__.bind(null, 825)));
+const _eace355a = () => interopDefault(__webpack_require__.e(/* import() | pages/components/transitions */ 39).then(__webpack_require__.bind(null, 825)));
 
-const _e2714ca2 = () => interopDefault(__webpack_require__.e(/* import() | pages/components/width */ 40).then(__webpack_require__.bind(null, 826)));
+const _323b931b = () => interopDefault(__webpack_require__.e(/* import() | pages/components/width */ 40).then(__webpack_require__.bind(null, 826)));
 
-const _03c63078 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v1 */ 41).then(__webpack_require__.bind(null, 827)));
+const _39c1dd3a = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v1 */ 41).then(__webpack_require__.bind(null, 827)));
 
-const _03d447f9 = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v2 */ 42).then(__webpack_require__.bind(null, 828)));
+const _39cff4bb = () => interopDefault(__webpack_require__.e(/* import() | pages/dashboard/v2 */ 42).then(__webpack_require__.bind(null, 828)));
 
-const _670b35e2 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/list */ 44).then(__webpack_require__.bind(null, 829)));
+const _6dc60076 = () => interopDefault(__webpack_require__.e(/* import() | pages/firm-category/list */ 44).then(__webpack_require__.bind(null, 829)));
 
-const _22f4241d = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/list */ 46).then(__webpack_require__.bind(null, 830)));
+const _67597c7e = () => interopDefault(__webpack_require__.e(/* import() | pages/firm/list */ 46).then(__webpack_require__.bind(null, 830)));
 
-const _39cde9bb = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/dynamic_fields */ 58).then(__webpack_require__.bind(null, 831)));
+const _492cab93 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/dynamic_fields */ 58).then(__webpack_require__.bind(null, 831)));
 
-const _322a2a3c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/regular_elements */ 69).then(__webpack_require__.bind(null, 832)));
+const _364053d8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/regular_elements */ 69).then(__webpack_require__.bind(null, 832)));
 
-const _96999f0a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/validation */ 70).then(__webpack_require__.bind(null, 833)));
+const _5cac9e53 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/validation */ 70).then(__webpack_require__.bind(null, 833)));
 
-const _71222d26 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard */ 71).then(__webpack_require__.bind(null, 772)));
+const _78390345 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard */ 71).then(__webpack_require__.bind(null, 772)));
 
-const _bf335a7a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step1 */ 72).then(__webpack_require__.bind(null, 834)));
+const _ae311ba0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step1 */ 72).then(__webpack_require__.bind(null, 834)));
 
-const _bf172b78 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step2 */ 73).then(__webpack_require__.bind(null, 835)));
+const _ae14ec9e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step2 */ 73).then(__webpack_require__.bind(null, 835)));
 
-const _befafc76 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step3 */ 74).then(__webpack_require__.bind(null, 836)));
+const _adf8bd9c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wizard/step3 */ 74).then(__webpack_require__.bind(null, 836)));
 
-const _7c11e112 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/list */ 79).then(__webpack_require__.bind(null, 837)));
+const _70555981 = () => interopDefault(__webpack_require__.e(/* import() | pages/item-category/list */ 79).then(__webpack_require__.bind(null, 837)));
 
-const _98fb8230 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/list */ 81).then(__webpack_require__.bind(null, 838)));
+const _4d888056 = () => interopDefault(__webpack_require__.e(/* import() | pages/item/list */ 81).then(__webpack_require__.bind(null, 838)));
 
-const _59763cb2 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/boxed */ 82).then(__webpack_require__.bind(null, 839)));
+const _36d88beb = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/boxed */ 82).then(__webpack_require__.bind(null, 839)));
 
-const _ee0367f2 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/mini_sidebar */ 83).then(__webpack_require__.bind(null, 840)));
+const _acb1657a = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/mini_sidebar */ 83).then(__webpack_require__.bind(null, 840)));
 
-const _2fcb1fbe = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/offcanvas_sidebar */ 84).then(__webpack_require__.bind(null, 841)));
+const _37665736 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/offcanvas_sidebar */ 84).then(__webpack_require__.bind(null, 841)));
 
-const _020a399c = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/top_menu */ 85).then(__webpack_require__.bind(null, 842)));
+const _42058e50 = () => interopDefault(__webpack_require__.e(/* import() | pages/layout/top_menu */ 85).then(__webpack_require__.bind(null, 842)));
 
-const _1e8e0317 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank */ 88).then(__webpack_require__.bind(null, 843)));
+const _3904c396 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank */ 88).then(__webpack_require__.bind(null, 843)));
 
-const _d98fa1fa = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank_header_expanded */ 89).then(__webpack_require__.bind(null, 844)));
+const _310c63be = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/blank_header_expanded */ 89).then(__webpack_require__.bind(null, 844)));
 
-const _5bafff65 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/chat */ 90).then(__webpack_require__.bind(null, 845)));
+const _021ceef2 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/chat */ 90).then(__webpack_require__.bind(null, 845)));
 
-const _312e75ea = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list */ 91).then(__webpack_require__.bind(null, 846)));
+const _53edbd0c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list */ 91).then(__webpack_require__.bind(null, 846)));
 
-const _0ccd3626 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list_single */ 92).then(__webpack_require__.bind(null, 847)));
+const _5154338b = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/contact_list_single */ 92).then(__webpack_require__.bind(null, 847)));
 
-const _4353e5c8 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/data_visualization */ 93).then(__webpack_require__.bind(null, 848)));
+const _d2501a84 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/data_visualization */ 93).then(__webpack_require__.bind(null, 848)));
 
-const _3b73c956 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/gallery */ 94).then(__webpack_require__.bind(null, 849)));
+const _29bb66f3 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/gallery */ 94).then(__webpack_require__.bind(null, 849)));
 
-const _035ccaa5 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/help_faq */ 95).then(__webpack_require__.bind(null, 850)));
+const _aade1a72 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/help_faq */ 95).then(__webpack_require__.bind(null, 850)));
 
-const _9689551a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices */ 96).then(__webpack_require__.bind(null, 851)));
+const _5bef7d95 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices */ 96).then(__webpack_require__.bind(null, 851)));
 
-const _4560b9b6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/index */ 98).then(__webpack_require__.bind(null, 852)));
+const _d7095566 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/index */ 98).then(__webpack_require__.bind(null, 852)));
 
-const _39d38684 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/new */ 99).then(__webpack_require__.bind(null, 853)));
+const _8d83c84a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/new */ 99).then(__webpack_require__.bind(null, 853)));
 
-const _261db19e = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/_id */ 97).then(__webpack_require__.bind(null, 780)));
+const _b4ef7216 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/invoices/_id */ 97).then(__webpack_require__.bind(null, 780)));
 
-const _28a2d487 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues */ 100).then(__webpack_require__.bind(null, 854)));
+const _01a69d29 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues */ 100).then(__webpack_require__.bind(null, 854)));
 
-const _0b24d33a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details */ 101).then(__webpack_require__.bind(null, 855)));
+const _5ff23e2e = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details */ 101).then(__webpack_require__.bind(null, 855)));
 
-const _0c74f3e5 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details/_id */ 102).then(__webpack_require__.bind(null, 856)));
+const _b2244fbe = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/details/_id */ 102).then(__webpack_require__.bind(null, 856)));
 
-const _8129fe54 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/list */ 103).then(__webpack_require__.bind(null, 857)));
+const _26006987 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/issues/list */ 103).then(__webpack_require__.bind(null, 857)));
 
-const _0214a892 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox */ 104).then(__webpack_require__.bind(null, 858)));
+const _466af755 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox */ 104).then(__webpack_require__.bind(null, 858)));
 
-const _3dab660c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/index */ 106).then(__webpack_require__.bind(null, 859)));
+const _50b7638d = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/index */ 106).then(__webpack_require__.bind(null, 859)));
 
-const _07385c8c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/compose */ 105).then(__webpack_require__.bind(null, 860)));
+const _85f4e0e6 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/compose */ 105).then(__webpack_require__.bind(null, 860)));
 
-const _11a6084c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/message/_id */ 107).then(__webpack_require__.bind(null, 861)));
+const _29339528 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/mailbox/message/_id */ 107).then(__webpack_require__.bind(null, 861)));
 
-const _27924204 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/notes */ 108).then(__webpack_require__.bind(null, 862)));
+const _26fc45bc = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/notes */ 108).then(__webpack_require__.bind(null, 862)));
 
-const _5c298cdc = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/poi_listing */ 109).then(__webpack_require__.bind(null, 863)));
+const _ff14f3a0 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/poi_listing */ 109).then(__webpack_require__.bind(null, 863)));
 
-const _2effe86a = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/pricing_tables */ 110).then(__webpack_require__.bind(null, 864)));
+const _588a126d = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/pricing_tables */ 110).then(__webpack_require__.bind(null, 864)));
 
-const _0bb30830 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/settings */ 111).then(__webpack_require__.bind(null, 778)));
+const _9a319f5c = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/settings */ 111).then(__webpack_require__.bind(null, 778)));
 
-const _4ad905f9 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/task_board */ 112).then(__webpack_require__.bind(null, 865)));
+const _14b8a4ca = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/task_board */ 112).then(__webpack_require__.bind(null, 865)));
 
-const _06ed11c2 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/user_profile */ 113).then(__webpack_require__.bind(null, 779)));
+const _29ac58e4 = () => interopDefault(__webpack_require__.e(/* import() | pages/pages/user_profile */ 113).then(__webpack_require__.bind(null, 779)));
 
-const _cff9aa38 = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/list */ 115).then(__webpack_require__.bind(null, 866)));
+const _1ddace98 = () => interopDefault(__webpack_require__.e(/* import() | pages/plant/list */ 115).then(__webpack_require__.bind(null, 866)));
 
-const _21f94f51 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/ajax */ 116).then(__webpack_require__.bind(null, 867)));
+const _b32ac12a = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/ajax */ 116).then(__webpack_require__.bind(null, 867)));
 
-const _4b63e4ef = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar */ 117).then(__webpack_require__.bind(null, 868)));
+const _cfc8cfee = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar */ 117).then(__webpack_require__.bind(null, 868)));
 
-const _ce3cface = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar_events */ 118).then(__webpack_require__.bind(null, 869)));
+const _40ee0382 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/calendar_events */ 118).then(__webpack_require__.bind(null, 869)));
 
-const _fa9f4674 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/charts */ 119).then(__webpack_require__.bind(null, 774)));
+const _9fe3e340 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/charts */ 119).then(__webpack_require__.bind(null, 774)));
 
-const _4144e344 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/code_editor */ 120).then(__webpack_require__.bind(null, 870)));
+const _d69e65f8 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/code_editor */ 120).then(__webpack_require__.bind(null, 870)));
 
-const _37f9ae4c = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/data_grid */ 121).then(__webpack_require__.bind(null, 775)));
+const _2e41d900 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/data_grid */ 121).then(__webpack_require__.bind(null, 775)));
 
-const _52cdfd80 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/datatables */ 122).then(__webpack_require__.bind(null, 871)));
+const _5065521a = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/datatables */ 122).then(__webpack_require__.bind(null, 871)));
 
-const _74e82831 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/diff_tool */ 123).then(__webpack_require__.bind(null, 872)));
+const _81b24f52 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/diff_tool */ 123).then(__webpack_require__.bind(null, 872)));
 
-const _4a39dc92 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/gantt_chart */ 124).then(__webpack_require__.bind(null, 873)));
+const _00e5c990 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/gantt_chart */ 124).then(__webpack_require__.bind(null, 873)));
 
-const _17701f88 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/google_maps */ 125).then(__webpack_require__.bind(null, 874)));
+const _acc9a23c = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/google_maps */ 125).then(__webpack_require__.bind(null, 874)));
 
-const _4ace3927 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/idle_timeout */ 126).then(__webpack_require__.bind(null, 875)));
+const _3fe2cf41 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/idle_timeout */ 126).then(__webpack_require__.bind(null, 875)));
 
-const _360d8948 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/image_cropper */ 127).then(__webpack_require__.bind(null, 876)));
+const _38e89324 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/image_cropper */ 127).then(__webpack_require__.bind(null, 876)));
 
-const _43405474 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/push_notifications */ 128).then(__webpack_require__.bind(null, 877)));
+const _5f6e6f0e = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/push_notifications */ 128).then(__webpack_require__.bind(null, 877)));
 
-const _01fb2b89 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tour */ 129).then(__webpack_require__.bind(null, 878)));
+const _f32708ba = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tour */ 129).then(__webpack_require__.bind(null, 878)));
 
-const _f6adbc62 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tree */ 130).then(__webpack_require__.bind(null, 879)));
+const _091a71e9 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/tree */ 130).then(__webpack_require__.bind(null, 879)));
 
-const _7c798f1c = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vector_maps */ 131).then(__webpack_require__.bind(null, 880)));
+const _77167718 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vector_maps */ 131).then(__webpack_require__.bind(null, 880)));
 
-const _10767cd4 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vue_good_table */ 132).then(__webpack_require__.bind(null, 881)));
+const _0be78da0 = () => interopDefault(__webpack_require__.e(/* import() | pages/plugins/vue_good_table */ 132).then(__webpack_require__.bind(null, 881)));
 
-const _3805aaa9 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/list */ 134).then(__webpack_require__.bind(null, 882)));
+const _d279ff96 = () => interopDefault(__webpack_require__.e(/* import() | pages/project-category/list */ 134).then(__webpack_require__.bind(null, 882)));
 
-const _011dddd4 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/index */ 135).then(__webpack_require__.bind(null, 883)));
+const _4910f323 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/index */ 135).then(__webpack_require__.bind(null, 883)));
 
-const _e52e3914 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/list */ 138).then(__webpack_require__.bind(null, 884)));
+const _60c6bf22 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/list */ 138).then(__webpack_require__.bind(null, 884)));
 
-const _367a5b6f = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/internal-demand/index */ 139).then(__webpack_require__.bind(null, 885)));
+const _262e42fa = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/internal-demand/index */ 139).then(__webpack_require__.bind(null, 885)));
 
-const _3a5d6259 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/index */ 141).then(__webpack_require__.bind(null, 886)));
+const _fc5aa960 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/index */ 141).then(__webpack_require__.bind(null, 886)));
 
-const _16cf2d38 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/index */ 145).then(__webpack_require__.bind(null, 887)));
+const _2176ed46 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/index */ 145).then(__webpack_require__.bind(null, 887)));
 
-const _a4106054 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/index */ 147).then(__webpack_require__.bind(null, 888)));
+const _61d1f12b = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/index */ 147).then(__webpack_require__.bind(null, 888)));
 
-const _574ed200 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/index */ 150).then(__webpack_require__.bind(null, 889)));
+const _03eccf7e = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/index */ 150).then(__webpack_require__.bind(null, 889)));
 
-const _e78b8e58 = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/list */ 153).then(__webpack_require__.bind(null, 890)));
+const _63b11f04 = () => interopDefault(__webpack_require__.e(/* import() | pages/staffpermit/list */ 153).then(__webpack_require__.bind(null, 890)));
 
-const _6a51cfa2 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/index */ 154).then(__webpack_require__.bind(null, 891)));
+const _4a926438 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/index */ 154).then(__webpack_require__.bind(null, 891)));
 
-const _e9d63cea = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/index */ 156).then(__webpack_require__.bind(null, 892)));
+const _5b9b56dc = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/index */ 156).then(__webpack_require__.bind(null, 892)));
 
-const _3a00d88c = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/list */ 159).then(__webpack_require__.bind(null, 893)));
+const _7210098c = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/list */ 159).then(__webpack_require__.bind(null, 893)));
 
-const _3e4c01da = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/live */ 160).then(__webpack_require__.bind(null, 894)));
+const _765b32da = () => interopDefault(__webpack_require__.e(/* import() | pages/warehouse/live */ 160).then(__webpack_require__.bind(null, 894)));
 
-const _6b60c37c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/checkbox_radio */ 47).then(__webpack_require__.bind(null, 895)));
+const _6c61a789 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/checkbox_radio */ 47).then(__webpack_require__.bind(null, 895)));
 
-const _dffdb0b2 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/color_picker */ 48).then(__webpack_require__.bind(null, 896)));
+const _4415aaf4 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/color_picker */ 48).then(__webpack_require__.bind(null, 896)));
 
-const _5aa560dc = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_picker */ 49).then(__webpack_require__.bind(null, 897)));
+const _0cf6a2b6 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_picker */ 49).then(__webpack_require__.bind(null, 897)));
 
-const _e7ea1a58 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_range_picker */ 50).then(__webpack_require__.bind(null, 898)));
+const _52b577a7 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/date_range_picker */ 50).then(__webpack_require__.bind(null, 898)));
 
-const _6b42c249 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/inputmask */ 51).then(__webpack_require__.bind(null, 899)));
+const _0f066bc8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/inputmask */ 51).then(__webpack_require__.bind(null, 899)));
 
-const _62f989c8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/multiselect */ 52).then(__webpack_require__.bind(null, 900)));
+const _ec5e2e4a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/multiselect */ 52).then(__webpack_require__.bind(null, 900)));
 
-const _5fd06060 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/range_slider */ 53).then(__webpack_require__.bind(null, 901)));
+const _13e4e3ad = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/range_slider */ 53).then(__webpack_require__.bind(null, 901)));
 
-const _5d9cf69a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/rating */ 54).then(__webpack_require__.bind(null, 902)));
+const _4ef537a7 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/rating */ 54).then(__webpack_require__.bind(null, 902)));
 
-const _4ac64609 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/select2 */ 55).then(__webpack_require__.bind(null, 903)));
+const _f713b2c8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/select2 */ 55).then(__webpack_require__.bind(null, 903)));
 
-const _39253c1f = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/switches */ 56).then(__webpack_require__.bind(null, 904)));
+const _35716dec = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/switches */ 56).then(__webpack_require__.bind(null, 904)));
 
-const _0c85d9da = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/time_picker */ 57).then(__webpack_require__.bind(null, 905)));
+const _20947226 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/advanced_elements/time_picker */ 57).then(__webpack_require__.bind(null, 905)));
 
-const _2f3b5108 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/advertising_evaluation_form */ 59).then(__webpack_require__.bind(null, 906)));
+const _406739b9 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/advertising_evaluation_form */ 59).then(__webpack_require__.bind(null, 906)));
 
-const _7ae54b5e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/booking_form */ 60).then(__webpack_require__.bind(null, 907)));
+const _44c536cd = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/booking_form */ 60).then(__webpack_require__.bind(null, 907)));
 
-const _16b09950 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/car_rental_form */ 61).then(__webpack_require__.bind(null, 908)));
+const _77774381 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/car_rental_form */ 61).then(__webpack_require__.bind(null, 908)));
 
-const _41933ad9 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/checkout_form */ 62).then(__webpack_require__.bind(null, 909)));
+const _989e856c = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/checkout_form */ 62).then(__webpack_require__.bind(null, 909)));
 
-const _d825dee8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/contact_forms */ 63).then(__webpack_require__.bind(null, 910)));
+const _060a92fd = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/contact_forms */ 63).then(__webpack_require__.bind(null, 910)));
 
-const _97a300ee = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/job_application_form */ 64).then(__webpack_require__.bind(null, 911)));
+const _4a9f8bf8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/job_application_form */ 64).then(__webpack_require__.bind(null, 911)));
 
-const _6bd30171 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/medical_history_form */ 65).then(__webpack_require__.bind(null, 912)));
+const _02440de0 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/medical_history_form */ 65).then(__webpack_require__.bind(null, 912)));
 
-const _58ce4274 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/registration_form */ 66).then(__webpack_require__.bind(null, 913)));
+const _1d5dc0b7 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/registration_form */ 66).then(__webpack_require__.bind(null, 913)));
 
-const _47bbed4a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/rental_application_form */ 67).then(__webpack_require__.bind(null, 914)));
+const _5551d67b = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/rental_application_form */ 67).then(__webpack_require__.bind(null, 914)));
 
-const _49225e59 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/transaction_feedback_form */ 68).then(__webpack_require__.bind(null, 915)));
+const _48e2bf4a = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/examples/transaction_feedback_form */ 68).then(__webpack_require__.bind(null, 915)));
 
-const _3a36a9ce = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/ckeditor */ 75).then(__webpack_require__.bind(null, 916)));
+const _2b2b50b8 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/ckeditor */ 75).then(__webpack_require__.bind(null, 916)));
 
-const _61f0591e = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/quill */ 76).then(__webpack_require__.bind(null, 917)));
+const _35912a32 = () => interopDefault(__webpack_require__.e(/* import() | pages/forms/wysiwyg/quill */ 76).then(__webpack_require__.bind(null, 917)));
 
-const _6231700a = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/list */ 136).then(__webpack_require__.bind(null, 918)));
+const _0d92cf46 = () => interopDefault(__webpack_require__.e(/* import() | pages/project/fieldservice/list */ 136).then(__webpack_require__.bind(null, 918)));
 
-const _2fce12de = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/internal-demand/list */ 140).then(__webpack_require__.bind(null, 919)));
+const _20571cb4 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/internal-demand/list */ 140).then(__webpack_require__.bind(null, 919)));
 
-const _d4b72b32 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/list */ 142).then(__webpack_require__.bind(null, 920)));
+const _af12b2e0 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/list */ 142).then(__webpack_require__.bind(null, 920)));
 
-const _7dee68f0 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/my-demands */ 143).then(__webpack_require__.bind(null, 921)));
+const _1a032259 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/my-demands */ 143).then(__webpack_require__.bind(null, 921)));
 
-const _ea32e2e0 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/waiting-for-approve */ 144).then(__webpack_require__.bind(null, 922)));
+const _eb9d4972 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-demand/waiting-for-approve */ 144).then(__webpack_require__.bind(null, 922)));
 
-const _44925408 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/list */ 146).then(__webpack_require__.bind(null, 923)));
+const _c90b5a3a = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-offer/list */ 146).then(__webpack_require__.bind(null, 923)));
 
-const _07104d6c = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/list */ 148).then(__webpack_require__.bind(null, 924)));
+const _54d9b955 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/list */ 148).then(__webpack_require__.bind(null, 924)));
 
-const _153dc566 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/waiting-for-approve */ 149).then(__webpack_require__.bind(null, 925)));
+const _0247c5e2 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-order/waiting-for-approve */ 149).then(__webpack_require__.bind(null, 925)));
 
-const _46a6f640 = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/list */ 151).then(__webpack_require__.bind(null, 926)));
+const _6225d77f = () => interopDefault(__webpack_require__.e(/* import() | pages/purchasing/item-receipt/list */ 151).then(__webpack_require__.bind(null, 926)));
 
-const _aa5cbc5e = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/list */ 155).then(__webpack_require__.bind(null, 927)));
+const _e42f9eb0 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/member/list */ 155).then(__webpack_require__.bind(null, 927)));
 
-const _8d718616 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/list */ 157).then(__webpack_require__.bind(null, 928)));
+const _4c645984 = () => interopDefault(__webpack_require__.e(/* import() | pages/user/role/list */ 157).then(__webpack_require__.bind(null, 928)));
 
-const _195a46c0 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 77).then(__webpack_require__.bind(null, 930)));
+const _2695b4fd = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 77).then(__webpack_require__.bind(null, 930)));
 
 const emptyFn = () => {};
 
@@ -5052,638 +5052,638 @@ const routerOptions = {
   scrollBehavior: router_scrollBehavior,
   routes: [{
     path: "/account_auth",
-    component: _51d079c8,
+    component: _df818fc2,
     name: "account_auth"
   }, {
     path: "/firm",
-    component: _5704df63,
+    component: _4ced1382,
     name: "firm"
   }, {
     path: "/firm-category",
-    component: _d45ff384,
+    component: _666e8e2a,
     name: "firm-category"
   }, {
     path: "/item",
-    component: _4f8bc410,
+    component: _7efc0a4a,
     name: "item"
   }, {
     path: "/item-category",
-    component: _cf41416e,
+    component: _946b5302,
     name: "item-category"
   }, {
     path: "/login_page",
-    component: _17e8f547,
+    component: _594061ec,
     name: "login_page"
   }, {
     path: "/login_page_auth",
-    component: _2099c050,
+    component: _9178ef26,
     name: "login_page_auth"
   }, {
     path: "/plant",
-    component: _f8529d08,
+    component: _4cb4fdac,
     name: "plant"
   }, {
     path: "/project",
-    component: _3b280b2a,
+    component: _58f4b604,
     name: "project"
   }, {
     path: "/project-category",
-    component: _37b7ab52,
+    component: _5d11864b,
     name: "project-category"
   }, {
     path: "/staffpermit",
-    component: _1681618c,
+    component: _2de7415c,
     name: "staffpermit"
   }, {
     path: "/warehouse",
-    component: _218eb8d4,
+    component: _2934b058,
     name: "warehouse"
   }, {
     path: "/components/accordion",
-    component: _93b0609e,
+    component: _ae6d19c6,
     name: "components-accordion"
   }, {
     path: "/components/alert",
-    component: _3aaefa45,
+    component: _43b9989e,
     name: "components-alert"
   }, {
     path: "/components/animations",
-    component: _61e5f6d6,
+    component: _790e7e2c,
     name: "components-animations"
   }, {
     path: "/components/avatars",
-    component: _49dd283a,
+    component: _725cfa4f,
     name: "components-avatars"
   }, {
     path: "/components/badge_label",
-    component: _a3486cfe,
+    component: _7f2241ed,
     name: "components-badge_label"
   }, {
     path: "/components/base",
-    component: _11a4ce78,
+    component: _b96490e8,
     name: "components-base"
   }, {
     path: "/components/breadcrumb",
-    component: _6b65312c,
+    component: _2be0317e,
     name: "components-breadcrumb"
   }, {
     path: "/components/buttons",
-    component: _5a84c5aa,
+    component: _1c5f57d4,
     name: "components-buttons"
   }, {
     path: "/components/cards",
-    component: _f76c0668,
+    component: _27be3638,
     name: "components-cards"
   }, {
     path: "/components/color_palette",
-    component: _63791008,
+    component: _1c831d74,
     name: "components-color_palette"
   }, {
     path: "/components/drop_dropdowns",
-    component: _7e05dcce,
+    component: _2934b1ad,
     name: "components-drop_dropdowns"
   }, {
     path: "/components/fab_buttons",
-    component: _5220ebf2,
+    component: _22e7645e,
     name: "components-fab_buttons"
   }, {
     path: "/components/fancy_footer",
-    component: _0f815878,
+    component: _5789ed8c,
     name: "components-fancy_footer"
   }, {
     path: "/components/fancy_toolbar",
-    component: _0e0a8b6e,
+    component: _71d6ce4c,
     name: "components-fancy_toolbar"
   }, {
     path: "/components/filters",
-    component: _e35045b8,
+    component: _25a36b90,
     name: "components-filters"
   }, {
     path: "/components/footer",
-    component: _0009e082,
+    component: _69c656d4,
     name: "components-footer"
   }, {
     path: "/components/grid",
-    component: _e993df26,
+    component: _1cdef981,
     name: "components-grid"
   }, {
     path: "/components/height",
-    component: _0433160e,
+    component: _6173ebbc,
     name: "components-height"
   }, {
     path: "/components/icons",
-    component: _4004b503,
+    component: _390e2322,
     name: "components-icons"
   }, {
     path: "/components/lists",
-    component: _49ef0ffe,
+    component: _25396d2c,
     name: "components-lists"
   }, {
     path: "/components/masonry",
-    component: _3d99fb24,
+    component: _787e90da,
     name: "components-masonry"
   }, {
     path: "/components/modals_dialogs",
-    component: _3150be8e,
+    component: _4f8f40cd,
     name: "components-modals_dialogs"
   }, {
     path: "/components/notifications",
-    component: _1d4e7ed1,
+    component: _534ee786,
     name: "components-notifications"
   }, {
     path: "/components/overlay",
-    component: _abcd6a0e,
+    component: _4164d965,
     name: "components-overlay"
   }, {
     path: "/components/pagination",
-    component: _80b868fe,
+    component: _21369595,
     name: "components-pagination"
   }, {
     path: "/components/progress_spinners",
-    component: _47e5aa96,
+    component: _858abbbe,
     name: "components-progress_spinners"
   }, {
     path: "/components/scrollable",
-    component: _5d00130e,
+    component: _82da45bc,
     name: "components-scrollable"
   }, {
     path: "/components/slider",
-    component: _2566de70,
+    component: _8f40f648,
     name: "components-slider"
   }, {
     path: "/components/sortable",
-    component: _3e6beec2,
+    component: _32f047b3,
     name: "components-sortable"
   }, {
     path: "/components/swipe_list",
-    component: _0f2495ea,
+    component: _70b75ffe,
     name: "components-swipe_list"
   }, {
     path: "/components/tables",
-    component: _52bcf44c,
+    component: _1dcfe860,
     name: "components-tables"
   }, {
     path: "/components/tabs",
-    component: _433cdca5,
+    component: _5634748e,
     name: "components-tabs"
   }, {
     path: "/components/timeline",
-    component: _3bdff730,
+    component: _3436437c,
     name: "components-timeline"
   }, {
     path: "/components/toolbar",
-    component: _2e9304a4,
+    component: _7442d9e0,
     name: "components-toolbar"
   }, {
     path: "/components/tooltips",
-    component: _cdd2fd12,
+    component: _29867eea,
     name: "components-tooltips"
   }, {
     path: "/components/transitions",
-    component: _8c5b2632,
+    component: _eace355a,
     name: "components-transitions"
   }, {
     path: "/components/width",
-    component: _e2714ca2,
+    component: _323b931b,
     name: "components-width"
   }, {
     path: "/dashboard/v1",
-    component: _03c63078,
+    component: _39c1dd3a,
     name: "dashboard-v1"
   }, {
     path: "/dashboard/v2",
-    component: _03d447f9,
+    component: _39cff4bb,
     name: "dashboard-v2"
   }, {
     path: "/firm-category/list",
-    component: _670b35e2,
+    component: _6dc60076,
     name: "firm-category-list"
   }, {
     path: "/firm/list",
-    component: _22f4241d,
+    component: _67597c7e,
     name: "firm-list"
   }, {
     path: "/forms/dynamic_fields",
-    component: _39cde9bb,
+    component: _492cab93,
     name: "forms-dynamic_fields"
   }, {
     path: "/forms/regular_elements",
-    component: _322a2a3c,
+    component: _364053d8,
     name: "forms-regular_elements"
   }, {
     path: "/forms/validation",
-    component: _96999f0a,
+    component: _5cac9e53,
     name: "forms-validation"
   }, {
     path: "/forms/wizard",
-    component: _71222d26,
+    component: _78390345,
     name: "forms-wizard",
     children: [{
       path: "step1",
-      component: _bf335a7a,
+      component: _ae311ba0,
       name: "forms-wizard-step1"
     }, {
       path: "step2",
-      component: _bf172b78,
+      component: _ae14ec9e,
       name: "forms-wizard-step2"
     }, {
       path: "step3",
-      component: _befafc76,
+      component: _adf8bd9c,
       name: "forms-wizard-step3"
     }]
   }, {
     path: "/item-category/list",
-    component: _7c11e112,
+    component: _70555981,
     name: "item-category-list"
   }, {
     path: "/item/list",
-    component: _98fb8230,
+    component: _4d888056,
     name: "item-list"
   }, {
     path: "/layout/boxed",
-    component: _59763cb2,
+    component: _36d88beb,
     name: "layout-boxed"
   }, {
     path: "/layout/mini_sidebar",
-    component: _ee0367f2,
+    component: _acb1657a,
     name: "layout-mini_sidebar"
   }, {
     path: "/layout/offcanvas_sidebar",
-    component: _2fcb1fbe,
+    component: _37665736,
     name: "layout-offcanvas_sidebar"
   }, {
     path: "/layout/top_menu",
-    component: _020a399c,
+    component: _42058e50,
     name: "layout-top_menu"
   }, {
     path: "/pages/blank",
-    component: _1e8e0317,
+    component: _3904c396,
     name: "pages-blank"
   }, {
     path: "/pages/blank_header_expanded",
-    component: _d98fa1fa,
+    component: _310c63be,
     name: "pages-blank_header_expanded"
   }, {
     path: "/pages/chat",
-    component: _5bafff65,
+    component: _021ceef2,
     name: "pages-chat"
   }, {
     path: "/pages/contact_list",
-    component: _312e75ea,
+    component: _53edbd0c,
     name: "pages-contact_list"
   }, {
     path: "/pages/contact_list_single",
-    component: _0ccd3626,
+    component: _5154338b,
     name: "pages-contact_list_single"
   }, {
     path: "/pages/data_visualization",
-    component: _4353e5c8,
+    component: _d2501a84,
     name: "pages-data_visualization"
   }, {
     path: "/pages/gallery",
-    component: _3b73c956,
+    component: _29bb66f3,
     name: "pages-gallery"
   }, {
     path: "/pages/help_faq",
-    component: _035ccaa5,
+    component: _aade1a72,
     name: "pages-help_faq"
   }, {
     path: "/pages/invoices",
-    component: _9689551a,
+    component: _5bef7d95,
     children: [{
       path: "",
-      component: _4560b9b6,
+      component: _d7095566,
       name: "pages-invoices"
     }, {
       path: "new",
-      component: _39d38684,
+      component: _8d83c84a,
       name: "pages-invoices-new"
     }, {
       path: ":id",
-      component: _261db19e,
+      component: _b4ef7216,
       name: "pages-invoices-id"
     }]
   }, {
     path: "/pages/issues",
-    component: _28a2d487,
+    component: _01a69d29,
     name: "pages-issues",
     children: [{
       path: "details",
-      component: _0b24d33a,
+      component: _5ff23e2e,
       name: "pages-issues-details",
       children: [{
         path: ":id?",
-        component: _0c74f3e5,
+        component: _b2244fbe,
         name: "pages-issues-details-id"
       }]
     }, {
       path: "list",
-      component: _8129fe54,
+      component: _26006987,
       name: "pages-issues-list"
     }]
   }, {
     path: "/pages/mailbox",
-    component: _0214a892,
+    component: _466af755,
     children: [{
       path: "",
-      component: _3dab660c,
+      component: _50b7638d,
       name: "pages-mailbox"
     }, {
       path: "compose",
-      component: _07385c8c,
+      component: _85f4e0e6,
       name: "pages-mailbox-compose"
     }, {
       path: "message/:id?",
-      component: _11a6084c,
+      component: _29339528,
       name: "pages-mailbox-message-id"
     }]
   }, {
     path: "/pages/notes",
-    component: _27924204,
+    component: _26fc45bc,
     name: "pages-notes"
   }, {
     path: "/pages/poi_listing",
-    component: _5c298cdc,
+    component: _ff14f3a0,
     name: "pages-poi_listing"
   }, {
     path: "/pages/pricing_tables",
-    component: _2effe86a,
+    component: _588a126d,
     name: "pages-pricing_tables"
   }, {
     path: "/pages/settings",
-    component: _0bb30830,
+    component: _9a319f5c,
     name: "pages-settings"
   }, {
     path: "/pages/task_board",
-    component: _4ad905f9,
+    component: _14b8a4ca,
     name: "pages-task_board"
   }, {
     path: "/pages/user_profile",
-    component: _06ed11c2,
+    component: _29ac58e4,
     name: "pages-user_profile"
   }, {
     path: "/plant/list",
-    component: _cff9aa38,
+    component: _1ddace98,
     name: "plant-list"
   }, {
     path: "/plugins/ajax",
-    component: _21f94f51,
+    component: _b32ac12a,
     name: "plugins-ajax"
   }, {
     path: "/plugins/calendar",
-    component: _4b63e4ef,
+    component: _cfc8cfee,
     name: "plugins-calendar"
   }, {
     path: "/plugins/calendar_events",
-    component: _ce3cface,
+    component: _40ee0382,
     name: "plugins-calendar_events"
   }, {
     path: "/plugins/charts",
-    component: _fa9f4674,
+    component: _9fe3e340,
     name: "plugins-charts"
   }, {
     path: "/plugins/code_editor",
-    component: _4144e344,
+    component: _d69e65f8,
     name: "plugins-code_editor"
   }, {
     path: "/plugins/data_grid",
-    component: _37f9ae4c,
+    component: _2e41d900,
     name: "plugins-data_grid"
   }, {
     path: "/plugins/datatables",
-    component: _52cdfd80,
+    component: _5065521a,
     name: "plugins-datatables"
   }, {
     path: "/plugins/diff_tool",
-    component: _74e82831,
+    component: _81b24f52,
     name: "plugins-diff_tool"
   }, {
     path: "/plugins/gantt_chart",
-    component: _4a39dc92,
+    component: _00e5c990,
     name: "plugins-gantt_chart"
   }, {
     path: "/plugins/google_maps",
-    component: _17701f88,
+    component: _acc9a23c,
     name: "plugins-google_maps"
   }, {
     path: "/plugins/idle_timeout",
-    component: _4ace3927,
+    component: _3fe2cf41,
     name: "plugins-idle_timeout"
   }, {
     path: "/plugins/image_cropper",
-    component: _360d8948,
+    component: _38e89324,
     name: "plugins-image_cropper"
   }, {
     path: "/plugins/push_notifications",
-    component: _43405474,
+    component: _5f6e6f0e,
     name: "plugins-push_notifications"
   }, {
     path: "/plugins/tour",
-    component: _01fb2b89,
+    component: _f32708ba,
     name: "plugins-tour"
   }, {
     path: "/plugins/tree",
-    component: _f6adbc62,
+    component: _091a71e9,
     name: "plugins-tree"
   }, {
     path: "/plugins/vector_maps",
-    component: _7c798f1c,
+    component: _77167718,
     name: "plugins-vector_maps"
   }, {
     path: "/plugins/vue_good_table",
-    component: _10767cd4,
+    component: _0be78da0,
     name: "plugins-vue_good_table"
   }, {
     path: "/project-category/list",
-    component: _3805aaa9,
+    component: _d279ff96,
     name: "project-category-list"
   }, {
     path: "/project/fieldservice",
-    component: _011dddd4,
+    component: _4910f323,
     name: "project-fieldservice"
   }, {
     path: "/project/list",
-    component: _e52e3914,
+    component: _60c6bf22,
     name: "project-list"
   }, {
     path: "/purchasing/internal-demand",
-    component: _367a5b6f,
+    component: _262e42fa,
     name: "purchasing-internal-demand"
   }, {
     path: "/purchasing/item-demand",
-    component: _3a5d6259,
+    component: _fc5aa960,
     name: "purchasing-item-demand"
   }, {
     path: "/purchasing/item-offer",
-    component: _16cf2d38,
+    component: _2176ed46,
     name: "purchasing-item-offer"
   }, {
     path: "/purchasing/item-order",
-    component: _a4106054,
+    component: _61d1f12b,
     name: "purchasing-item-order"
   }, {
     path: "/purchasing/item-receipt",
-    component: _574ed200,
+    component: _03eccf7e,
     name: "purchasing-item-receipt"
   }, {
     path: "/staffpermit/list",
-    component: _e78b8e58,
+    component: _63b11f04,
     name: "staffpermit-list"
   }, {
     path: "/user/member",
-    component: _6a51cfa2,
+    component: _4a926438,
     name: "user-member"
   }, {
     path: "/user/role",
-    component: _e9d63cea,
+    component: _5b9b56dc,
     name: "user-role"
   }, {
     path: "/warehouse/list",
-    component: _3a00d88c,
+    component: _7210098c,
     name: "warehouse-list"
   }, {
     path: "/warehouse/live",
-    component: _3e4c01da,
+    component: _765b32da,
     name: "warehouse-live"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
-    component: _6b60c37c,
+    component: _6c61a789,
     name: "forms-advanced_elements-checkbox_radio"
   }, {
     path: "/forms/advanced_elements/color_picker",
-    component: _dffdb0b2,
+    component: _4415aaf4,
     name: "forms-advanced_elements-color_picker"
   }, {
     path: "/forms/advanced_elements/date_picker",
-    component: _5aa560dc,
+    component: _0cf6a2b6,
     name: "forms-advanced_elements-date_picker"
   }, {
     path: "/forms/advanced_elements/date_range_picker",
-    component: _e7ea1a58,
+    component: _52b577a7,
     name: "forms-advanced_elements-date_range_picker"
   }, {
     path: "/forms/advanced_elements/inputmask",
-    component: _6b42c249,
+    component: _0f066bc8,
     name: "forms-advanced_elements-inputmask"
   }, {
     path: "/forms/advanced_elements/multiselect",
-    component: _62f989c8,
+    component: _ec5e2e4a,
     name: "forms-advanced_elements-multiselect"
   }, {
     path: "/forms/advanced_elements/range_slider",
-    component: _5fd06060,
+    component: _13e4e3ad,
     name: "forms-advanced_elements-range_slider"
   }, {
     path: "/forms/advanced_elements/rating",
-    component: _5d9cf69a,
+    component: _4ef537a7,
     name: "forms-advanced_elements-rating"
   }, {
     path: "/forms/advanced_elements/select2",
-    component: _4ac64609,
+    component: _f713b2c8,
     name: "forms-advanced_elements-select2"
   }, {
     path: "/forms/advanced_elements/switches",
-    component: _39253c1f,
+    component: _35716dec,
     name: "forms-advanced_elements-switches"
   }, {
     path: "/forms/advanced_elements/time_picker",
-    component: _0c85d9da,
+    component: _20947226,
     name: "forms-advanced_elements-time_picker"
   }, {
     path: "/forms/examples/advertising_evaluation_form",
-    component: _2f3b5108,
+    component: _406739b9,
     name: "forms-examples-advertising_evaluation_form"
   }, {
     path: "/forms/examples/booking_form",
-    component: _7ae54b5e,
+    component: _44c536cd,
     name: "forms-examples-booking_form"
   }, {
     path: "/forms/examples/car_rental_form",
-    component: _16b09950,
+    component: _77774381,
     name: "forms-examples-car_rental_form"
   }, {
     path: "/forms/examples/checkout_form",
-    component: _41933ad9,
+    component: _989e856c,
     name: "forms-examples-checkout_form"
   }, {
     path: "/forms/examples/contact_forms",
-    component: _d825dee8,
+    component: _060a92fd,
     name: "forms-examples-contact_forms"
   }, {
     path: "/forms/examples/job_application_form",
-    component: _97a300ee,
+    component: _4a9f8bf8,
     name: "forms-examples-job_application_form"
   }, {
     path: "/forms/examples/medical_history_form",
-    component: _6bd30171,
+    component: _02440de0,
     name: "forms-examples-medical_history_form"
   }, {
     path: "/forms/examples/registration_form",
-    component: _58ce4274,
+    component: _1d5dc0b7,
     name: "forms-examples-registration_form"
   }, {
     path: "/forms/examples/rental_application_form",
-    component: _47bbed4a,
+    component: _5551d67b,
     name: "forms-examples-rental_application_form"
   }, {
     path: "/forms/examples/transaction_feedback_form",
-    component: _49225e59,
+    component: _48e2bf4a,
     name: "forms-examples-transaction_feedback_form"
   }, {
     path: "/forms/wysiwyg/ckeditor",
-    component: _3a36a9ce,
+    component: _2b2b50b8,
     name: "forms-wysiwyg-ckeditor"
   }, {
     path: "/forms/wysiwyg/quill",
-    component: _61f0591e,
+    component: _35912a32,
     name: "forms-wysiwyg-quill"
   }, {
     path: "/project/fieldservice/list",
-    component: _6231700a,
+    component: _0d92cf46,
     name: "project-fieldservice-list"
   }, {
     path: "/purchasing/internal-demand/list",
-    component: _2fce12de,
+    component: _20571cb4,
     name: "purchasing-internal-demand-list"
   }, {
     path: "/purchasing/item-demand/list",
-    component: _d4b72b32,
+    component: _af12b2e0,
     name: "purchasing-item-demand-list"
   }, {
     path: "/purchasing/item-demand/my-demands",
-    component: _7dee68f0,
+    component: _1a032259,
     name: "purchasing-item-demand-my-demands"
   }, {
     path: "/purchasing/item-demand/waiting-for-approve",
-    component: _ea32e2e0,
+    component: _eb9d4972,
     name: "purchasing-item-demand-waiting-for-approve"
   }, {
     path: "/purchasing/item-offer/list",
-    component: _44925408,
+    component: _c90b5a3a,
     name: "purchasing-item-offer-list"
   }, {
     path: "/purchasing/item-order/list",
-    component: _07104d6c,
+    component: _54d9b955,
     name: "purchasing-item-order-list"
   }, {
     path: "/purchasing/item-order/waiting-for-approve",
-    component: _153dc566,
+    component: _0247c5e2,
     name: "purchasing-item-order-waiting-for-approve"
   }, {
     path: "/purchasing/item-receipt/list",
-    component: _46a6f640,
+    component: _6225d77f,
     name: "purchasing-item-receipt-list"
   }, {
     path: "/user/member/list",
-    component: _aa5cbc5e,
+    component: _e42f9eb0,
     name: "user-member-list"
   }, {
     path: "/user/role/list",
-    component: _8d718616,
+    component: _4c645984,
     name: "user-role-list"
   }, {
     path: "/",
-    component: _195a46c0,
+    component: _2695b4fd,
     name: "index"
   }],
   fallback: false
@@ -5875,7 +5875,7 @@ var error_component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "1941440e"
+  "523db1cf"
   
 )
 
@@ -6179,7 +6179,7 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
   false,
   nuxt_loading_injectStyles,
   null,
-  "de316338"
+  "2425eba7"
   
 )
 
@@ -6342,7 +6342,7 @@ var Headervue_type_template_id_359d5ce5_render = function render() {
   }) + "></span></span></a> <div class=\"uk-navbar-dropdown md-bg-grey-100\"><div class=\"sc-padding sc-padding-small-ends\"><ul id=\"sc-header-alerts\" class=\"uk-list uk-margin-remove\">" + _vm._ssrList(_vm.user.alerts, function (alert, index) {
     return "<li class=\"uk-margin-small-top sc-border sc-round md-bg-white\"" + _vm._ssrStyle(null, {
       '--index': index
-    }, null) + "><div class=\"uk-flex uk-flex-middle\"><div class=\"uk-margin-right uk-margin-small-left\"><i" + _vm._ssrClass("mdi", [alert.icon, alert.color]) + "></i></div> <div class=\"uk-flex-1 uk-text-small\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(alert.text) + "\n\t\t\t\t\t\t\t\t\t\t\t") + "</div></div></li>";
+    }, null) + "><div class=\"uk-flex uk-flex-middle\"><div class=\"uk-margin-right uk-margin-small-left\"><i" + _vm._ssrClass("mdi", [alert.icon, alert.color]) + "></i></div> <div class=\"uk-flex-1 uk-text-small\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(alert.text) + "\r\n\t\t\t\t\t\t\t\t\t\t\t") + "</div></div></li>";
   }) + "</ul></div></div></li> "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<a href=\"javascript:void(0)\">", "</a>", [_c('img', {
     directives: [{
       name: "rjs",
@@ -6362,7 +6362,7 @@ var Headervue_type_template_id_359d5ce5_render = function render() {
     attrs: {
       "to": "/purchasing/item-demand/my-demands"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTaleplerim\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" <li><a>\n\t\t\t\t\t\t\t\t\t\tÇıkış Yap\n\t\t\t\t\t\t\t\t\t</a></li>")], 2)])], 2)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" class=\"md-color-white uk-margin-left uk-hidden@l\"" + _vm._ssrStyle(null, null, {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTaleplerim\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" <li><a>\r\n\t\t\t\t\t\t\t\t\t\tÇıkış Yap\r\n\t\t\t\t\t\t\t\t\t</a></li>")], 2)])], 2)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" class=\"md-color-white uk-margin-left uk-hidden@l\"" + _vm._ssrStyle(null, null, {
     display: _vm.vxOffcanvasPresent ? '' : 'none'
   }) + "><i class=\"mdi mdi-menu\"" + _vm._ssrStyle(null, null, {
     display: !_vm.vxOffcanvasExpanded ? '' : 'none'
@@ -6469,7 +6469,7 @@ var FullScreen_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6edfb0ea"
+  "6ee5994a"
   
 )
 
@@ -6491,9 +6491,9 @@ var TopMenuvue_type_template_id_444bf0b6_render = function render() {
       attrs: {
         "to": topMenuNode.url
       }
-    }, [_vm._v("\n\t\t\t\t" + _vm._s(_vm.$t(topMenuNode.title)) + "\n\t\t\t")]) : _vm._e(), _vm._ssrNode(" <a href=\"javascript:void(0)\"" + _vm._ssrStyle(null, null, {
+    }, [_vm._v("\r\n\t\t\t\t" + _vm._s(_vm.$t(topMenuNode.title)) + "\r\n\t\t\t")]) : _vm._e(), _vm._ssrNode(" <a href=\"javascript:void(0)\"" + _vm._ssrStyle(null, null, {
       display: !topMenuNode.url ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.$t(topMenuNode.title)) + "\n\t\t\t") + "</a> "), _c('transition', {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.$t(topMenuNode.title)) + "\r\n\t\t\t") + "</a> "), _c('transition', {
       attrs: {
         "name": "menuFadeUp"
       }
@@ -6523,7 +6523,7 @@ var TopMenuvue_type_template_id_444bf0b6_render = function render() {
         attrs: {
           "to": subNode.url
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm.$t(subNode.title)) + "\n\t\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('a', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(_vm.$t(subNode.title)) + "\r\n\t\t\t\t\t\t")]) : _vm._e(), _vm._v(" "), _c('a', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -6533,7 +6533,7 @@ var TopMenuvue_type_template_id_444bf0b6_render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm.$t(subNode.title)) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('transition', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(_vm.$t(subNode.title)) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('transition', {
         attrs: {
           "name": "menuFadeUp"
         }
@@ -6606,7 +6606,7 @@ var TopMenu_component = Object(componentNormalizer["a" /* default */])(
   false,
   TopMenu_injectStyles,
   null,
-  "ab7fc00e"
+  "ba47f048"
   
 )
 
@@ -6990,7 +6990,7 @@ var Header_component = Object(componentNormalizer["a" /* default */])(
   false,
   Header_injectStyles,
   null,
-  "5a61053d"
+  "2fdc790d"
   
 )
 
@@ -7025,7 +7025,7 @@ var Sidebarvue_type_template_id_38d0d75e_render = function render() {
       "menu-data": _vm.menuEntries,
       "is-parent": true
     }
-  })], 1), _vm._ssrNode(" <div class=\"sc-sidebar-info\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.$t('version')) + ": " + _vm._s(_vm.vxAppVersion) + "\n\t\t\t") + "</div>")], 2)]);
+  })], 1), _vm._ssrNode(" <div class=\"sc-sidebar-info\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.$t('version')) + ": " + _vm._s(_vm.vxAppVersion) + "\r\n\t\t\t") + "</div>")], 2)]);
 };
 
 var Sidebarvue_type_template_id_38d0d75e_staticRenderFns = [];
@@ -7051,19 +7051,19 @@ var MenuListvue_type_template_id_68780e50_render = function render() {
       'sc-sidebar-menu-separator': item.separator
     }) + _vm._ssrStyle(null, null, {
       display: !item.visible || item.visible() ? '' : 'none'
-    }) + ">", "</li>", [_vm._ssrNode((item.section_title ? "<span>" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.$t(item.section_title)) + "\n\t\t\t") + "</span>" : "<!---->") + " "), item.page && !item.submenu ? _c('nuxt-link', {
+    }) + ">", "</li>", [_vm._ssrNode((item.section_title ? "<span>" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.$t(item.section_title)) + "\r\n\t\t\t") + "</span>" : "<!---->") + " "), item.page && !item.submenu ? _c('nuxt-link', {
       attrs: {
         "to": item.page
       }
     }, [item.tag ? _c('span', {
       staticClass: "uk-label"
-    }, [_vm._v("\n\t\t\t\t\t" + _vm._s(item.tag) + "\n\t\t\t\t")]) : _vm._e(), _vm._v(" "), item.icon ? _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t" + _vm._s(item.tag) + "\r\n\t\t\t\t")]) : _vm._e(), _vm._v(" "), item.icon ? _c('span', {
       staticClass: "uk-nav-icon"
     }, [_c('i', {
       class: item.icon
     })]) : _vm._e(), _vm._v(" "), _c('span', {
       staticClass: "uk-nav-title"
-    }, [_vm._v("\n\t\t\t\t\t" + _vm._s(_vm.$t(item.title)) + "\n\t\t\t\t")])]) : _vm._e(), _vm._ssrNode(" " + (item.submenu ? "<a href=\"javascript:void(0)\">" + (item.icon ? "<span class=\"uk-nav-icon\"><i" + _vm._ssrClass(null, item.icon) + "></i></span>" : "<!---->") + " <span class=\"uk-nav-title\">" + _vm._ssrEscape("\n\t\t\t\t\t" + _vm._s(_vm.$t(item.title)) + "\n\t\t\t\t") + "</span></a>" : "<!---->") + " " + (item.page === '' && !item.submenu ? "<a href=\"javascript:void(0)\">" + (item.icon ? "<span class=\"uk-nav-icon\"><i" + _vm._ssrClass(null, item.icon) + "></i></span>" : "<!---->") + " <span class=\"uk-nav-title\">" + _vm._ssrEscape("\n\t\t\t\t\t" + _vm._s(item.title) + "\n\t\t\t\t") + "</span></a>" : "<!---->") + " "), _c('transition', {
+    }, [_vm._v("\r\n\t\t\t\t\t" + _vm._s(_vm.$t(item.title)) + "\r\n\t\t\t\t")])]) : _vm._e(), _vm._ssrNode(" " + (item.submenu ? "<a href=\"javascript:void(0)\">" + (item.icon ? "<span class=\"uk-nav-icon\"><i" + _vm._ssrClass(null, item.icon) + "></i></span>" : "<!---->") + " <span class=\"uk-nav-title\">" + _vm._ssrEscape("\r\n\t\t\t\t\t" + _vm._s(_vm.$t(item.title)) + "\r\n\t\t\t\t") + "</span></a>" : "<!---->") + " " + (item.page === '' && !item.submenu ? "<a href=\"javascript:void(0)\">" + (item.icon ? "<span class=\"uk-nav-icon\"><i" + _vm._ssrClass(null, item.icon) + "></i></span>" : "<!---->") + " <span class=\"uk-nav-title\">" + _vm._ssrEscape("\r\n\t\t\t\t\t" + _vm._s(item.title) + "\r\n\t\t\t\t") + "</span></a>" : "<!---->") + " "), _c('transition', {
       attrs: {
         "css": false
       },
@@ -7249,7 +7249,7 @@ var MenuList_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6235a910"
+  "0c188e55"
   
 )
 
@@ -7704,7 +7704,7 @@ var Sidebar_component = Object(componentNormalizer["a" /* default */])(
   false,
   Sidebar_injectStyles,
   null,
-  "d55ff748"
+  "6f430a8c"
   
 )
 
@@ -7720,19 +7720,19 @@ var Footervue_type_template_id_2e37c7d9_render = function render() {
     attrs: {
       "to": "/pages/chat"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Chat')) + "\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Chat')) + "\r\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
     attrs: {
       "to": "/pages/Mailbox"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Mailbox')) + "\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Mailbox')) + "\r\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
     attrs: {
       "to": "/plugins/gantt_chart"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Gantt Chart')) + "\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Gantt Chart')) + "\r\n\t\t\t\t\t")]), _vm._ssrNode(" "), _c('nuxt-link', {
     attrs: {
       "to": "/pages/invoices"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Invoices')) + "\n\t\t\t\t\t")])], 2)]), _vm._ssrNode(" <div>\n\t\t\t\tScutum Admin Template\n\t\t\t</div>")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid uk-child-width-expand uk-flex-center uk-margin-remove-top uk-grid-collapse uk-height-1-1 uk-hidden@m\">", "</div>", [_c('nuxt-link', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t" + _vm._s(_vm.$t('Invoices')) + "\r\n\t\t\t\t\t")])], 2)]), _vm._ssrNode(" <div>\r\n\t\t\t\tScutum Admin Template\r\n\t\t\t</div>")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid uk-child-width-expand uk-flex-center uk-margin-remove-top uk-grid-collapse uk-height-1-1 uk-hidden@m\">", "</div>", [_c('nuxt-link', {
     attrs: {
       "to": "/pages/chat"
     }
@@ -7841,7 +7841,7 @@ var Footer_component = Object(componentNormalizer["a" /* default */])(
   false,
   Footer_injectStyles,
   null,
-  "392ea14b"
+  "0eaa151b"
   
 )
 
@@ -8009,7 +8009,7 @@ var FancyFooter_component = Object(componentNormalizer["a" /* default */])(
   false,
   FancyFooter_injectStyles,
   null,
-  "0946d6c4"
+  "08eb44f4"
   
 )
 
@@ -8173,7 +8173,7 @@ var FancyToolbar_component = Object(componentNormalizer["a" /* default */])(
   false,
   FancyToolbar_injectStyles,
   null,
-  "4cf4d6a2"
+  "41de2e72"
   
 )
 
@@ -8366,7 +8366,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
   false,
   default_injectStyles,
   null,
-  "031dab72"
+  "23b661c8"
   
 )
 
@@ -8413,7 +8413,7 @@ var login_page_component = Object(componentNormalizer["a" /* default */])(
   false,
   login_page_injectStyles,
   null,
-  "42e21004"
+  "e3a69c24"
   
 )
 
@@ -8986,7 +8986,7 @@ const options_options = {
   sortRoutes: true,
   strategy: "no_prefix",
   lazy: true,
-  langDir: "/home/hakan/Projects/hekaminium/lang",
+  langDir: "C:\\Users\\USER\\Desktop\\ButanMakina\\HekaminiumWeb\\hekaminium\\lang",
   rootRedirect: null,
   detectBrowserLanguage: {
     "alwaysRedirect": false,
@@ -11067,7 +11067,7 @@ var Card_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "53bb1f9a"
+  "5f1c4d6c"
   
 )
 
@@ -11126,7 +11126,7 @@ var CardHeader_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "664a8647"
+  "7cc98812"
   
 )
 
@@ -11159,7 +11159,7 @@ var CardTitle_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4e956d0e"
+  "307f415e"
   
 )
 
@@ -11192,7 +11192,7 @@ var CardMeta_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6a9c8382"
+  "35141fef"
   
 )
 
@@ -11225,7 +11225,7 @@ var CardActions_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7e8329b3"
+  "e56dabfa"
   
 )
 
@@ -11258,7 +11258,7 @@ var CardBody_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4b07cb5c"
+  "952ba5e8"
   
 )
 
@@ -11291,7 +11291,7 @@ var CardContent_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "07dff72f"
+  "16a5f77f"
   
 )
 
@@ -11336,7 +11336,7 @@ var CardFooter_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "45182255"
+  "bf2e4ff6"
   
 )
 
@@ -11718,7 +11718,7 @@ var Transitions_component = Object(componentNormalizer["a" /* default */])(
   false,
   Transitions_injectStyles,
   null,
-  "deb87c84"
+  "df6fa024"
   
 )
 
@@ -11856,29 +11856,29 @@ external_vue_default.a.filter('hashCCnumber', function (value) {
 
 /* Plugins */
 
- // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
+ // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
 
- // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
+ // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
 
- // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+ // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
 
- // Source: ./google-analytics.js (mode: 'client')
+ // Source: .\\google-analytics.js (mode: 'client')
 
- // Source: ./axios.js (mode: 'all')
+ // Source: .\\axios.js (mode: 'all')
 
- // Source: ../plugins/components.global.js (mode: 'all')
+ // Source: ..\\plugins\\components.global.js (mode: 'all')
 
- // Source: ../plugins/directives.client.js (mode: 'client')
+ // Source: ..\\plugins\\directives.client.js (mode: 'client')
 
- // Source: ../plugins/filters.js (mode: 'all')
+ // Source: ..\\plugins\\filters.js (mode: 'all')
 
- // Source: ../plugins/mixins.client.js (mode: 'client')
+ // Source: ..\\plugins\\mixins.client.js (mode: 'client')
 
- // Source: ../plugins/waves.client.js (mode: 'client')
+ // Source: ..\\plugins\\waves.client.js (mode: 'client')
 
- // Source: ../plugins/retina.client.js (mode: 'client')
+ // Source: ..\\plugins\\retina.client.js (mode: 'client')
 
- // Source: ../plugins/vueVisible.client.js (mode: 'client')
+ // Source: ..\\plugins\\vueVisible.client.js (mode: 'client')
 // Component: <ClientOnly>
 
 external_vue_default.a.component(external_vue_client_only_default.a.name, external_vue_client_only_default.a); // TODO: Remove in Nuxt 3: <NoSsr>

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -638,7 +638,7 @@ var render = function render() {
     }
   }, [_c('ScCardTitle', {
     staticClass: "uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\t\tCar Rental Form\n\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tCar Rental Form\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
     staticClass: "mdi mdi-car-side sc-icon-32 uk-margin-left"
   })], 1), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-remove"
@@ -724,7 +724,7 @@ var render = function render() {
     }
   }, [_c('div', [_c('label', {
     staticClass: "uk-form-label"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPick-up Location\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPick-up Location\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -763,7 +763,7 @@ var render = function render() {
     }
   }, [_c('div', [_c('label', {
     staticClass: "uk-form-label"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDrop-off Location\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDrop-off Location\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -807,7 +807,7 @@ var render = function render() {
     attrs: {
       "for": "f-car-type"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tType\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tType\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
     attrs: {
       "id": "f-car-type",
       "settings": {
@@ -833,40 +833,40 @@ var render = function render() {
     attrs: {
       "value": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t---\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t---\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "economy"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tEconomy\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tEconomy\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "compact"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tCompact\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tCompact\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "midSize"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tMid-size\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tMid-size\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "fullSize"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tFull-size\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tFull-size\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "premium"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPremium\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPremium\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "luxury"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tLuxury\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tLuxury\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "minivan"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tMinivan\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._v(" "), _c('div', [_c('label', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tMinivan\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._v(" "), _c('div', [_c('label', {
     staticClass: "uk-form-label",
     attrs: {
       "for": "f-car-subtype"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSubtype\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSubtype\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('Select2', {
     attrs: {
       "id": "f-car-subtype",
       "settings": {
@@ -887,11 +887,11 @@ var render = function render() {
     attrs: {
       "value": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t---\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.carSubtypeOptionsFiltered(), function (option) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t---\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.carSubtypeOptionsFiltered(), function (option) {
     return _c('option', {
       key: option.val,
       class: option.class
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.name) + "\n\t\t\t\t\t\t\t\t\t\t\t")]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(option.name) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]);
   })], 2)], 1)], 1)]), _vm._v(" "), _c('h4', {
     staticClass: "uk-heading-line uk-margin-medium-bottom uk-margin-large-top md-color-indigo-500"
   }, [_c('span', [_vm._v("Extras")])]), _vm._v(" "), _c('div', {
@@ -920,7 +920,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(extra.name) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(extra.name) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1);
   }), 0)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('ScTextarea', {
     attrs: {
       "cols": 30,
@@ -939,7 +939,7 @@ var render = function render() {
     staticClass: "uk-margin-large-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-large md-bg-light-blue-600 sc-button-custom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tBook now\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tBook now\r\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "sc-padding sc-padding-small-ends"
   }, [_c('pre', {
     staticClass: "uk-margin-top"
@@ -1199,7 +1199,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "57d18e9c"
+  "94771388"
   
 )
 

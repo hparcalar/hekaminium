@@ -101,66 +101,66 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tBadges\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('span', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tBadges\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('span', {
     staticClass: "uk-badge"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t28\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t28\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-red-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t152\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t152\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-green-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t336\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t336\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-orange-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t335\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t335\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-teal-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t390\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t390\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-blue-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t49\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t49\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-gray-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t390\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t390\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-purple-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t316\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t316\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-indigo-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t398\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t398\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<span class=\"uk-badge\">28</span>\n<span class=\"uk-badge md-bg-red-600\">152</span>\n<span class=\"uk-badge md-bg-green-600\">336</span>\n<span class=\"uk-badge md-bg-orange-600\">335</span>\n<span class=\"uk-badge md-bg-teal-600\">390</span>\n<span class=\"uk-badge md-bg-blue-600\">49</span>\n<span class=\"uk-badge md-bg-gray-600\">390</span>\n<span class=\"uk-badge md-bg-purple-600\">316</span>\n<span class=\"uk-badge md-bg-indigo-600\">398</span>")])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tLabels\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('span', {
+  }, [_c('code', [_vm._v("<span class=\"uk-badge\">28</span>\r\n<span class=\"uk-badge md-bg-red-600\">152</span>\r\n<span class=\"uk-badge md-bg-green-600\">336</span>\r\n<span class=\"uk-badge md-bg-orange-600\">335</span>\r\n<span class=\"uk-badge md-bg-teal-600\">390</span>\r\n<span class=\"uk-badge md-bg-blue-600\">49</span>\r\n<span class=\"uk-badge md-bg-gray-600\">390</span>\r\n<span class=\"uk-badge md-bg-purple-600\">316</span>\r\n<span class=\"uk-badge md-bg-indigo-600\">398</span>")])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tLabels\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('span', {
     staticClass: "uk-label"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label uk-label-success"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label uk-label-warning"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label uk-label-danger"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label uk-label-outline"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tOutline\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tOutline\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<span class=\"uk-label\">Default</span>\n<span class=\"uk-label uk-label-success\">Success</span>\n<span class=\"uk-label uk-label-warning\">Warning</span>\n<span class=\"uk-label uk-label-danger\">Danger</span>\n<span class=\"uk-label uk-label-outline\">Outline</span>")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', [_c('span', {
+  }, [_c('code', [_vm._v("<span class=\"uk-label\">Default</span>\r\n<span class=\"uk-label uk-label-success\">Success</span>\r\n<span class=\"uk-label uk-label-warning\">Warning</span>\r\n<span class=\"uk-label uk-label-danger\">Danger</span>\r\n<span class=\"uk-label uk-label-outline\">Outline</span>")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "uk-label md-bg-orange-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-orange-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-orange-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-indigo-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-indigo-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-indigo-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-green-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-green-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-green-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-cyan-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-cyan-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-cyan-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-pink-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-pink-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-pink-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-grey-600"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-grey-600\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-grey-600\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-light-blue-100 sc-color-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-light-blue-100\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-light-blue-100\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-label md-bg-green-100 sc-color-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.md-bg-green-100\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.md-bg-green-100\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<span class=\"uk-label md-bg-orange-600\">.md-bg-orange-600</span>\n<span class=\"uk-label md-bg-indigo-600\">.md-bg-indigo-600</span>\n<span class=\"uk-label md-bg-green-600\">.md-bg-green-600</span>\n<span class=\"uk-label md-bg-cyan-600\">.md-bg-cyan-600</span>\n<span class=\"uk-label md-bg-pink-600\">.md-bg-pink-600</span>\n<span class=\"uk-label md-bg-grey-600\">.md-bg-grey-600</span>\n<span class=\"uk-label md-bg-light-blue-100 sc-color-primary\">.md-bg-light-blue-100</span>\n<span class=\"uk-label md-bg-green-100 sc-color-primary\">.md-bg-green-100</span>")])])])], 1)], 1)], 2)])]);
+  }, [_c('code', [_vm._v("<span class=\"uk-label md-bg-orange-600\">.md-bg-orange-600</span>\r\n<span class=\"uk-label md-bg-indigo-600\">.md-bg-indigo-600</span>\r\n<span class=\"uk-label md-bg-green-600\">.md-bg-green-600</span>\r\n<span class=\"uk-label md-bg-cyan-600\">.md-bg-cyan-600</span>\r\n<span class=\"uk-label md-bg-pink-600\">.md-bg-pink-600</span>\r\n<span class=\"uk-label md-bg-grey-600\">.md-bg-grey-600</span>\r\n<span class=\"uk-label md-bg-light-blue-100 sc-color-primary\">.md-bg-light-blue-100</span>\r\n<span class=\"uk-label md-bg-green-100 sc-color-primary\">.md-bg-green-100</span>")])])])], 1)], 1)], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -193,7 +193,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "e77e2a3a"
+  "2de81940"
   
 )
 

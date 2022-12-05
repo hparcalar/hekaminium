@@ -17,9 +17,9 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', [_vm._v("\n\t\t\t\t\t\tName: " + _vm._s(_vm.user.name) + "\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', [_vm._v("\r\n\t\t\t\t\t\tName: " + _vm._s(_vm.user.name) + "\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top uk-margin-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\tEmail: " + _vm._s(_vm.user.email) + "\n\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tEmail: " + _vm._s(_vm.user.email) + "\r\n\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "href": "javascript:void(0)"
@@ -29,7 +29,7 @@ var render = function render() {
         return _vm.$auth.logout();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\tLogout\n\t\t\t\t\t")])])], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\tLogout\r\n\t\t\t\t\t")])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -72,7 +72,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6792d6fe"
+  "1527d1a8"
   
 )
 

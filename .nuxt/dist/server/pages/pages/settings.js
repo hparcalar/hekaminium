@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -702,16 +702,16 @@ var render = function render() {
       value: _vm.sideMenu,
       expression: "sideMenu"
     }]
-  }, [_vm._ssrNode("<ul data-uk-switcher=\"connect: .sc-settings-container; animation: uk-animation-slide-bottom-small; swiping: false\" class=\"uk-subnav uk-subnav-pill uk-flex-column\"><li class=\"uk-active\"><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-cogs uk-margin-medium-right\"></i>Basic Settings\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-account-group uk-margin-medium-right\"></i>Users\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-brush uk-margin-medium-right\"></i>Appearance\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-puzzle-outline uk-margin-medium-right\"></i>Plugins\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li></ul>")])]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-3-4@m\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-settings-container\">", "</ul>", [_vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._ssrNode("<ul data-uk-switcher=\"connect: .sc-settings-container; animation: uk-animation-slide-bottom-small; swiping: false\" class=\"uk-subnav uk-subnav-pill uk-flex-column\"><li class=\"uk-active\"><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-cogs uk-margin-medium-right\"></i>Basic Settings\r\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-account-group uk-margin-medium-right\"></i>Users\r\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-brush uk-margin-medium-right\"></i>Appearance\r\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li> <li><a href=\"javascript:void(0)\"><span class=\"uk-flex uk-flex-middle uk-text-medium sc-text-semibold\"><i class=\"mdi mdi-puzzle-outline uk-margin-medium-right\"></i>Plugins\r\n\t\t\t\t\t\t\t\t\t\t\t</span></a></li></ul>")])]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-3-4@m\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-settings-container\">", "</ul>", [_vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
     staticClass: "uk-flex uk-flex-middle sc-theme-bg-dark sc-light",
     attrs: {
       "separator": ""
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
     staticClass: "uk-flex-middle uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -723,7 +723,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-online"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Online\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Online\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand uk-flex uk-flex-middle"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -751,7 +751,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-title"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Title\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Title\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('ScInput', {
     attrs: {
@@ -778,7 +778,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-slogan"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Slogan\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPage Slogan\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('ScInput', {
     attrs: {
@@ -805,7 +805,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-description"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDescription\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDescription\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('ScTextarea', {
     attrs: {
@@ -834,7 +834,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-keywords"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKeywords\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tKeywords\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -869,7 +869,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-www"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWebsite's address\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWebsite's address\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('ScInput', {
     attrs: {
@@ -897,7 +897,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-lang"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAllow access from\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAllow access from\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -932,7 +932,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-www"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUse SSL\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUse SSL\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
   }, [_c('span', {
     staticClass: "uk-margin-right"
@@ -949,7 +949,7 @@ var render = function render() {
       },
       expression: "settings.basic.SSL"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "no",
@@ -962,14 +962,14 @@ var render = function render() {
       },
       expression: "settings.basic.SSL"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
     staticClass: "uk-flex uk-flex-middle sc-theme-bg-dark sc-light",
     attrs: {
       "separator": ""
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tUsers\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tUsers\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-trash-can-outline sc-icon-square sc-light",
     attrs: {
       "href": "javascript:void(0)"
@@ -1047,9 +1047,9 @@ var render = function render() {
       slot: "extra"
     })])], 1)]), _vm._v(" "), _c('td', {
       staticClass: "sc-text-semibold uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + " " + _vm._s(user.lName) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v(_vm._s(user.email))]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + " " + _vm._s(user.lName) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v(_vm._s(user.email))]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.phone) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.phone) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-table-shrink"
     }, [_c('span', {
       directives: [{
@@ -1059,7 +1059,7 @@ var render = function render() {
         expression: "user.status === 'active'"
       }],
       staticClass: "uk-label uk-label-success"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.status) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.status) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1067,7 +1067,7 @@ var render = function render() {
         expression: "user.status === 'disabled'"
       }],
       staticClass: "uk-label uk-label-danger"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.status) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.status) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap uk-table-shrink"
     }, [_c('a', {
       staticClass: "mdi mdi-pencil sc-icon-square",
@@ -1087,9 +1087,9 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tAppearance\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tAppearance\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
     staticClass: "uk-flex-middle uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -1101,7 +1101,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-appearance-scheme"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tColor Scheme\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tColor Scheme\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-4@l uk-width-1-2@m"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -1135,7 +1135,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-appearance-layout"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLayout\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLayout\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-4@l uk-width-1-2@m"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -1166,7 +1166,7 @@ var render = function render() {
     staticClass: "uk-width-1-4@m"
   }, [_c('label', {
     staticClass: "sc-color-secondary uk-display-inline-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSticky Header\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSticky Header\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand@m"
   }, [_c('span', {
     staticClass: "uk-margin-right"
@@ -1183,7 +1183,7 @@ var render = function render() {
       },
       expression: "settings.apperance.stickyHeader"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYes\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "no",
@@ -1196,7 +1196,7 @@ var render = function render() {
       },
       expression: "settings.apperance.stickyHeader"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNo\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('div', {
     staticClass: "uk-grid",
@@ -1210,7 +1210,7 @@ var render = function render() {
     attrs: {
       "for": "settings-page-appearance-fonts"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGlobal Font\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tGlobal Font\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -1241,7 +1241,7 @@ var render = function render() {
     staticClass: "uk-width-1-4@m"
   }, [_c('label', {
     staticClass: "sc-color-secondary uk-display-inline-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('ScColorpicker', {
     attrs: {
@@ -1256,7 +1256,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, ullam.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, ullam.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top"
   }, [_c('div', {
     staticClass: "uk-grid",
@@ -1267,7 +1267,7 @@ var render = function render() {
     staticClass: "uk-width-1-4@m"
   }, [_c('label', {
     staticClass: "sc-color-secondary uk-display-inline-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSecondary\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSecondary\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('ScColorpicker', {
     attrs: {
@@ -1282,7 +1282,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, ullam.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, ullam.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top"
   }, [_c('div', {
     staticClass: "uk-grid",
@@ -1293,7 +1293,7 @@ var render = function render() {
     staticClass: "uk-width-1-4@m"
   }, [_c('label', {
     staticClass: "sc-color-secondary uk-display-inline-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLinks\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLinks\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('ScColorpicker', {
     attrs: {
@@ -1309,14 +1309,14 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left uk-margin-mini-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardHeader', {
     staticClass: "uk-flex uk-flex-middle sc-theme-bg-dark sc-light",
     attrs: {
       "separator": ""
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tPlugins\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tPlugins\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, nulla.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-trash-can-outline sc-icon-square sc-light",
     attrs: {
       "href": "javascript:void(0)"
@@ -1394,11 +1394,11 @@ var render = function render() {
       slot: "extra"
     })])], 1)]), _vm._v(" "), _c('td', {
       staticClass: "sc-text-semibold uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.name) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.name) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap uk-table-shrink"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.version) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.version) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.description) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.description) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-table-shrink"
     }, [_c('span', {
       directives: [{
@@ -1408,7 +1408,7 @@ var render = function render() {
         expression: "plugin.status === 'active'"
       }],
       staticClass: "uk-label uk-label-success"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.status) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.status) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1416,7 +1416,7 @@ var render = function render() {
         expression: "plugin.status === 'disabled'"
       }],
       staticClass: "uk-label md-bg-grey-500"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.status) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(plugin.status) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap uk-table-shrink"
     }, [_c('a', {
       staticClass: "mdi sc-icon-square",
@@ -1624,7 +1624,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   "3bdf272a",
-  "baa3979e"
+  "bb5abb3e"
   
 )
 
@@ -1904,7 +1904,7 @@ var settings_component = Object(componentNormalizer["a" /* default */])(
   false,
   settings_injectStyles,
   null,
-  "69b8ab92"
+  "19fc6f2e"
   
 )
 

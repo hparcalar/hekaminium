@@ -149,7 +149,7 @@ var render = function render() {
     staticClass: "sc-top-bar-content uk-flex uk-flex-1"
   }, [_c('h1', {
     staticClass: "sc-top-bar-title uk-text-uppercase uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\tNotes\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tNotes\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "sc-actions uk-margin-left"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-settings-outline",
@@ -175,7 +175,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-folder-outline"
-  }), _vm._v("Folders\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Folders\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('ul', {
     staticClass: "uk-list"
@@ -188,7 +188,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tAll folders\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _vm._l(_vm.folders, function (folder) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tAll folders\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _vm._l(_vm.folders, function (folder) {
     return _c('li', {
       key: folder,
       attrs: {
@@ -198,7 +198,7 @@ var render = function render() {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(folder) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(folder) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]);
   })], 2)])]), _vm._v(" "), _c('li', {
     staticClass: "uk-open"
   }, [_c('a', {
@@ -208,7 +208,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-label-outline"
-  }), _vm._v("Tags\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Tags\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('ul', {
     staticClass: "uk-list"
@@ -223,7 +223,7 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-color-label md-bg-white sc-color-label-clear"
-  }), _vm._v(" All tags\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _vm._l(_vm.labels, function (label) {
+  }), _vm._v(" All tags\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _vm._l(_vm.labels, function (label) {
     return _c('li', {
       key: label.name,
       attrs: {
@@ -236,7 +236,7 @@ var render = function render() {
     }, [_c('span', {
       staticClass: "sc-color-label",
       class: ['md-bg-' + label.color]
-    }), _vm._v(" " + _vm._s(label.name) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+    }), _vm._v(" " + _vm._s(label.name) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]);
   })], 2)])])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-flex-1\">", "</div>", [_vm._ssrNode("<ul id=\"sc-notes\" data-uk-grid=\"masonry: true\" class=\"sc-notes uk-child-width-1-3@l uk-child-width-1-4@xl uk-grid uk-flex-top uk-flex-wrap-top\">", "</ul>", _vm._l(_vm.notes, function (note) {
     return _vm._ssrNode("<li" + _vm._ssrAttr("data-folder", note.folder) + _vm._ssrClass("sc-filter-label", [_vm.filterClass(note.labels)]) + ">", "</li>", [_c('transition', {
       attrs: {
@@ -262,7 +262,7 @@ var render = function render() {
       staticClass: "uk-flex uk-flex-top"
     }, [_c('div', {
       staticClass: "uk-flex-1"
-    }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(note.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(note.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -270,7 +270,7 @@ var render = function render() {
         expression: "note.dueDate"
       }],
       staticClass: "uk-text-muted uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(note.dueDate) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(note.dueDate) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
       staticClass: "sc-actions uk-margin-left"
     }, [_c('a', {
       staticClass: "sc-actions-icon mdi mdi-pencil sc-icon-22",
@@ -290,7 +290,7 @@ var render = function render() {
       }
     })])])]), _vm._v(" "), _c('ScCardBody', [_c('p', {
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("truncate")(_vm._f("stripHTML")(note.body), 100)) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("truncate")(_vm._f("stripHTML")(note.body), 100)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -317,7 +317,7 @@ var render = function render() {
           "slot": "extra"
         },
         slot: "extra"
-      }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.label) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
+      }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.label) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
     }), 0), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
@@ -333,9 +333,9 @@ var render = function render() {
         class: ['md-color-' + _vm.labelColor(label)]
       });
     }), 0)])], 1)], 1)], 1);
-  }), 0)])], 2)])]), _vm._ssrNode(" <div class=\"sc-fab-page-wrapper\"><a href=\"javascript:void(0)\" class=\"sc-fab sc-fab-large sc-fab-secondary\"><i class=\"mdi mdi-plus\"></i></a></div> "), _vm._ssrNode("<div id=\"sc-note-modal\" data-uk-modal class=\"uk-flex-top uk-modal\">", "</div>", [_vm._ssrNode("<div" + _vm._ssrClass("uk-modal-dialog uk-modal-body uk-margin-auto-vertical", [_vm.noteBgColor(_vm.singleNote.cardColor)]) + ">", "</div>", [_vm._ssrNode("<button type=\"button\" data-uk-close class=\"uk-modal-close-default\"></button> <h2 class=\"uk-modal-title uk-margin-remove\">" + _vm._ssrEscape("\n\t\t\t\t\t" + _vm._s(_vm.singleNote.title) + "\n\t\t\t\t") + "</h2> <span class=\"uk-text-muted uk-text-small\"" + _vm._ssrStyle(null, null, {
+  }), 0)])], 2)])]), _vm._ssrNode(" <div class=\"sc-fab-page-wrapper\"><a href=\"javascript:void(0)\" class=\"sc-fab sc-fab-large sc-fab-secondary\"><i class=\"mdi mdi-plus\"></i></a></div> "), _vm._ssrNode("<div id=\"sc-note-modal\" data-uk-modal class=\"uk-flex-top uk-modal\">", "</div>", [_vm._ssrNode("<div" + _vm._ssrClass("uk-modal-dialog uk-modal-body uk-margin-auto-vertical", [_vm.noteBgColor(_vm.singleNote.cardColor)]) + ">", "</div>", [_vm._ssrNode("<button type=\"button\" data-uk-close class=\"uk-modal-close-default\"></button> <h2 class=\"uk-modal-title uk-margin-remove\">" + _vm._ssrEscape("\r\n\t\t\t\t\t" + _vm._s(_vm.singleNote.title) + "\r\n\t\t\t\t") + "</h2> <span class=\"uk-text-muted uk-text-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.singleNote.dueDate ? '' : 'none'
-  }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t" + _vm._s(_vm.singleNote.dueDate) + "\n\t\t\t\t") + "</span> <div class=\"uk-flex uk-flex-middle\"" + _vm._ssrStyle(null, null, {
+  }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t" + _vm._s(_vm.singleNote.dueDate) + "\r\n\t\t\t\t") + "</span> <div class=\"uk-flex uk-flex-middle\"" + _vm._ssrStyle(null, null, {
     display: _vm.singleNote.labels ? '' : 'none'
   }) + ">" + _vm._ssrList(_vm.singleNote.labels, function (label) {
     return "<span" + _vm._ssrClass("mdi mdi-label sc-icon-24", ['md-color-' + _vm.labelColor(label)]) + "></span>";
@@ -357,7 +357,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t" + _vm._s(item.label) + "\n\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(item.label) + "\r\n\t\t\t\t\t\t")])], 1);
   }), 0)], 2)])], 2);
 };
 
@@ -502,7 +502,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "e157ac3c"
+  "5fadd72a"
   
 )
 

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -269,7 +269,7 @@ var render = function render() {
     staticClass: "uk-fieldset md-bg-grey-100 sc-padding"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-text-large uk-margin-remove-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPersonal info\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPersonal info\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -279,7 +279,7 @@ var render = function render() {
     attrs: {
       "for": "f-f-name"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -298,7 +298,7 @@ var render = function render() {
     attrs: {
       "for": "f-l-name"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tLast Name\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tLast Name\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -322,7 +322,7 @@ var render = function render() {
     attrs: {
       "for": "f-birthdate"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tDate of Birth\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tDate of Birth\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -341,7 +341,7 @@ var render = function render() {
     attrs: {
       "for": "f-l-name"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tGender\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tGender\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top uk-margin-small-left"
   }, [_c('span', {
     staticClass: "uk-margin-right"
@@ -358,7 +358,7 @@ var render = function render() {
       },
       expression: "userData.gender"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMale\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMale\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('span', [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "female",
@@ -371,11 +371,11 @@ var render = function render() {
       },
       expression: "userData.gender"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFemale\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])]), _vm._v(" "), _c('fieldset', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFemale\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])])])]), _vm._v(" "), _c('fieldset', {
     staticClass: "uk-fieldset md-bg-grey-100 sc-padding uk-margin-top"
   }, [_c('p', {
     staticClass: "sc-text-semibold uk-text-large uk-margin-remove-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLogin info\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLogin info\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -385,7 +385,7 @@ var render = function render() {
     attrs: {
       "for": "f-email"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tEmail\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     directives: [{
@@ -412,7 +412,7 @@ var render = function render() {
     attrs: {
       "for": "f-re-email"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRe-enter Email\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRe-enter Email\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     directives: [{
@@ -444,7 +444,7 @@ var render = function render() {
     attrs: {
       "for": "f-password"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPassword\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPassword\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -464,7 +464,7 @@ var render = function render() {
     attrs: {
       "for": "f-re-password"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRe-enter Password\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRe-enter Password\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -499,12 +499,12 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tI agree to\n\t\t\t\t\t\t\t\t\t\t"), _c('a', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tI agree to\r\n\t\t\t\t\t\t\t\t\t\t"), _c('a', {
     attrs: {
       "href": "javascript:void(0)",
       "data-uk-toggle": "target: #sc-terms-modal"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tTerms of Use\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tTerms of Use\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-top uk-modal",
     attrs: {
       "id": "sc-terms-modal",
@@ -516,7 +516,7 @@ var render = function render() {
     staticClass: "uk-modal-body"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tTerms and Conditions\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tTerms and Conditions\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "uk-modal-close-default",
     attrs: {
       "type": "button",
@@ -526,13 +526,13 @@ var render = function render() {
     staticClass: "uk-margin-medium-bottom"
   }), _vm._v(" "), _c('div', [_c('h4', {
     staticClass: "uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, repudiandae.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, repudiandae.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloribus esse, explicabo impedit non odit pariatur perspiciatis provident quis saepe vel vitae. A ad aliquam, aspernatur dignissimos doloremque eum fugiat magni mollitia nemo nesciunt quasi qui quis repellendus velit voluptate!\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('h4', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad doloribus esse, explicabo impedit non odit pariatur perspiciatis provident quis saepe vel vitae. A ad aliquam, aspernatur dignissimos doloremque eum fugiat magni mollitia nemo nesciunt quasi qui quis repellendus velit voluptate!\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-small uk-margin-large-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, molestias.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, molestias.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque blanditiis dolorum expedita explicabo facere labore optio quaerat sequi sint! Alias, assumenda blanditiis dignissimos dolore eum ex fuga minima molestiae molestias nobis numquam placeat quos rem veritatis voluptatum? Porro, quidem.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque blanditiis dolorum expedita explicabo facere labore optio quaerat sequi sint! Alias, assumenda blanditiis dignissimos dolore eum ex fuga minima molestiae molestias nobis numquam placeat quos rem veritatis voluptatum? Porro, quidem.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-footer uk-margin-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline uk-modal-close",
@@ -541,14 +541,14 @@ var render = function render() {
         _vm.userData.terms = true;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tI agree\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tI agree\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tRegister\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tRegister\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
     staticClass: "uk-margin-top"
   }, [_vm._v(_vm._s(_vm._f("json")(_vm.userData)))])])], 1)], 1)])])]);
 };
@@ -621,7 +621,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "5c55a4b0"
+  "05ad9e9c"
   
 )
 

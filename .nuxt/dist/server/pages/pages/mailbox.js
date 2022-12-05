@@ -182,10 +182,10 @@ var render = function render() {
     }
   }, [_vm._ssrNode("<i class=\"mdi mdi-delete-outline\"></i>")])], 2)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-wrapper-inner\" class=\"uk-flex\">", "</div>", [_vm._ssrNode("<div id=\"sc-page-aside\" class=\"uk-visible@m\"><div class=\"sc-page-aside-body\"><button class=\"sc-button sc-button-block sc-button-danger\"" + _vm._ssrStyle(null, null, {
     display: _vm.$route.name !== 'pages-mailbox-compose' ? '' : 'none'
-  }) + ">\n\t\t\t\t\t\tCompose\n\t\t\t\t\t</button> <ul data-uk-accordion=\"multiple: true\" class=\"uk-margin-top uk-accordion\"" + _vm._ssrStyle(null, null, {
+  }) + ">\r\n\t\t\t\t\t\tCompose\r\n\t\t\t\t\t</button> <ul data-uk-accordion=\"multiple: true\" class=\"uk-margin-top uk-accordion\"" + _vm._ssrStyle(null, null, {
     display: _vm.$route.name === 'pages-mailbox' ? '' : 'none'
-  }) + "><li class=\"uk-open\"><a href=\"javascript:void(0)\" class=\"uk-accordion-title\">\n\t\t\t\t\t\t\t\tFolders\n\t\t\t\t\t\t\t</a> <div class=\"uk-accordion-content\"><ul class=\"uk-list\"><li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-inbox uk-margin-small-right\"></i>Inbox (24)\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-inbox-arrow-up uk-margin-small-right\"></i>Sent\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-block-helper uk-margin-small-right sc-icon-22\"></i>Spam\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-delete uk-margin-small-right\"></i>Trash\n\t\t\t\t\t\t\t\t\t\t</a></li></ul></div></li> <li class=\"uk-open\"><a href=\"javascript:void(0)\" class=\"uk-accordion-title\">\n\t\t\t\t\t\t\t\tTags\n\t\t\t\t\t\t\t</a> <div class=\"uk-accordion-content\"><ul class=\"uk-list\"><li data-uk-filter-control class=\"sc-js-filter-clear\"><a href=\"javascript:void(0)\"><span class=\"sc-color-label md-bg-white sc-color-label-clear\"></span>All Folders\n\t\t\t\t\t\t\t\t\t\t</a></li> " + _vm._ssrList(_vm.tags, function (tag) {
-    return "<li" + _vm._ssrAttr("data-uk-filter-control", 'filter: .' + _vm.tagName(tag.name)) + "><a href=\"javascript:void(0)\"><span" + _vm._ssrClass("sc-color-label", [tag.color]) + "></span>" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag.name) + "\n\t\t\t\t\t\t\t\t\t\t") + "</a></li>";
+  }) + "><li class=\"uk-open\"><a href=\"javascript:void(0)\" class=\"uk-accordion-title\">\r\n\t\t\t\t\t\t\t\tFolders\r\n\t\t\t\t\t\t\t</a> <div class=\"uk-accordion-content\"><ul class=\"uk-list\"><li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-inbox uk-margin-small-right\"></i>Inbox (24)\r\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-inbox-arrow-up uk-margin-small-right\"></i>Sent\r\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-block-helper uk-margin-small-right sc-icon-22\"></i>Spam\r\n\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\"><i class=\"mdi mdi-delete uk-margin-small-right\"></i>Trash\r\n\t\t\t\t\t\t\t\t\t\t</a></li></ul></div></li> <li class=\"uk-open\"><a href=\"javascript:void(0)\" class=\"uk-accordion-title\">\r\n\t\t\t\t\t\t\t\tTags\r\n\t\t\t\t\t\t\t</a> <div class=\"uk-accordion-content\"><ul class=\"uk-list\"><li data-uk-filter-control class=\"sc-js-filter-clear\"><a href=\"javascript:void(0)\"><span class=\"sc-color-label md-bg-white sc-color-label-clear\"></span>All Folders\r\n\t\t\t\t\t\t\t\t\t\t</a></li> " + _vm._ssrList(_vm.tags, function (tag) {
+    return "<li" + _vm._ssrAttr("data-uk-filter-control", 'filter: .' + _vm.tagName(tag.name)) + "><a href=\"javascript:void(0)\"><span" + _vm._ssrClass("sc-color-label", [tag.color]) + "></span>" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag.name) + "\r\n\t\t\t\t\t\t\t\t\t\t") + "</a></li>";
   }) + "</ul></div></li></ul></div></div> "), _vm._ssrNode("<div id=\"sc-page-content\" class=\"sc-padding-remove uk-height-1-1\">", "</div>", [_c('nuxt-child', {
     key: _vm.$route.path
   }), _vm._ssrNode(" <ul hidden=\"hidden\" class=\"sc-js-message-filter\"></ul>")], 2)], 2), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', {
@@ -198,7 +198,7 @@ var render = function render() {
     key: _vm.mailboxOffcanvas
   }, [_c('p', {
     staticClass: "uk-text-large uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\tFolders\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\tFolders\r\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-list uk-margin-remove sc-list-align"
   }, [_c('li', [_c('a', {
     attrs: {
@@ -386,7 +386,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "7ddd1415"
+  "45bcff44"
   
 )
 

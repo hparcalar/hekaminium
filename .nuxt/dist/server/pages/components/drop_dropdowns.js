@@ -17,41 +17,41 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDrop\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDrop\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": ""
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('div', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": "mode: click"
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tGrid in drop\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tGrid in drop\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-large",
     attrs: {
       "data-uk-drop": ""
@@ -61,24 +61,24 @@ var render = function render() {
     attrs: {
       "data-uk-grid": ""
     }
-  }, [_c('div', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_c('div', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])], 1)], 1)]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tCustom drop\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tCustom drop\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": ""
     }
   }, [_c('div', {
     staticClass: "md-bg-red-500 sc-padding sc-light sc-round uk-box-shadow-medium"
-  }, [_c('h3', [_vm._v("Heading")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio doloremque facilis itaque nesciunt quos sapiente sed sit unde, voluptates.\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_c('h3', [_vm._v("Heading")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi distinctio doloremque facilis itaque nesciunt quos sapiente sed sit unde, voluptates.\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPosition\n\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.positions, function (position, index) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPosition\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.positions, function (position, index) {
     return _c('div', {
       key: index,
       staticClass: "uk-child-width-auto@s uk-grid-small",
@@ -93,27 +93,27 @@ var render = function render() {
         attrs: {
           "type": "button"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(variant) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(variant) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
         attrs: {
           "data-uk-drop": "",
           "pos": variant
         }
-      }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]);
+      }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]);
     }), 0);
   }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBoundry\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBoundry\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": "boundary: .uk-card-body"
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('pre', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('pre', {
     staticClass: "sc-js-highlight"
   }, [_c('code', [_vm._v("<div data-uk-drop=\"boundary: .uk-card-body\"></div>")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-height-small uk-placeholder drop-boundry sc-padding"
@@ -126,63 +126,63 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": "pos: top-justify; boundary: .drop-boundry; boundary-align: true"
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": "pos: top-center; boundary: .drop-boundry; boundary-align: true"
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)])])]), _vm._v(" "), _c('pre', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)])])]), _vm._v(" "), _c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<div data-uk-drop=\"pos: top-justify; boundary: .drop-boundry; boundary-align: true\">\n<div data-uk-drop=\"pos: top-center; boundary: .drop-boundry; boundary-align: true\">\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_c('code', [_vm._v("<div data-uk-drop=\"pos: top-justify; boundary: .drop-boundry; boundary-align: true\">\r\n<div data-uk-drop=\"pos: top-center; boundary: .drop-boundry; boundary-align: true\">\r\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOffset\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOffset\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-drop": "pos: top-left; offset: 36"
     }
-  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)])], 2)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDropdown\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)])], 2)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDropdown\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": ""
     }
   }, [_c('div', {
     staticClass: "sc-padding"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, vel?\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, vel?\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "mode: click"
     }
   }, [_c('div', {
     staticClass: "sc-padding"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ex illo ratione.\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ex illo ratione.\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tNav\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tNav\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-margin": ""
     }
@@ -193,7 +193,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tsmall\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tsmall\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-dropdown-small",
     attrs: {
       "data-uk-dropdown": ""
@@ -204,34 +204,34 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tdefault\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tdefault\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": ""
     }
@@ -241,34 +241,34 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tmedium\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tmedium\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": ""
     }
@@ -278,34 +278,34 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tlarge\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tlarge\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": ""
     }
@@ -315,34 +315,34 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tGrid in dropdown\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tGrid in dropdown\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-large",
     attrs: {
       "data-uk-dropdown": ""
@@ -358,55 +358,55 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPosition\n\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.positions, function (position, index) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPosition\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.positions, function (position, index) {
     return _c('div', {
       key: index,
       staticClass: "uk-child-width-auto@s uk-grid-small",
@@ -421,7 +421,7 @@ var render = function render() {
         attrs: {
           "type": "button"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(variant) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(variant) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
         attrs: {
           "data-uk-dropdown": "",
           "pos": variant
@@ -432,19 +432,19 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]);
     }), 0);
   }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBoundry\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBoundry\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-height-small uk-placeholder dropdown-boundry-a sc-padding"
   }, [_c('div', {
     staticClass: "uk-inline"
@@ -453,7 +453,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "boundary: .dropdown-boundry-a"
     }
@@ -461,19 +461,19 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('pre', {
     staticClass: "sc-js-highlight"
   }, [_c('code', [_vm._v("<div data-uk-dropdown=\"boundary: .uk-card-body\"></div>")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-height-small uk-placeholder dropdown-boundry-b sc-padding"
@@ -486,7 +486,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-justify; boundary: .dropdown-boundry-b; boundary-align: true"
     }
@@ -494,24 +494,24 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-center; boundary: .dropdown-boundry-b; boundary-align: true"
     }
@@ -519,28 +519,28 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOffset\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOffset\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-left; offset: 36"
     }
@@ -548,28 +548,28 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tAnimation\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tAnimation\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tfade\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tfade\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-left; animation: uk-animation-fade"
     }
@@ -577,26 +577,26 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tshake\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tshake\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-left; animation: uk-animation-shake"
     }
@@ -604,26 +604,26 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tscale down\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tscale down\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-dropdown": "pos: top-left; animation: uk-animation-scale-down"
     }
@@ -631,21 +631,21 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-text-semibold uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHide on menu item click\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHide on menu item click\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-margin": ""
     }
@@ -656,7 +656,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     ref: "dropdown1",
     attrs: {
       "data-uk-dropdown": "pos: top-left;delay-hide: 100"
@@ -665,7 +665,7 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     },
@@ -689,7 +689,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     ref: "dropdown2",
     attrs: {
       "data-uk-dropdown": "pos: top-left;delay-hide: 100;mode: click"
@@ -698,7 +698,7 @@ var render = function render() {
     staticClass: "uk-nav uk-dropdown-nav"
   }, [_c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
@@ -760,7 +760,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "27b64612"
+  "ab9d950c"
   
 )
 

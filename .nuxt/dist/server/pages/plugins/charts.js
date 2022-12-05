@@ -72,7 +72,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4c29359a"
+  "670a4a17"
   
 )
 
@@ -137,7 +137,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1b528a24"
+  "5d8bdb87"
   
 )
 
@@ -202,7 +202,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7c8806e8"
+  "72a650ee"
   
 )
 
@@ -226,27 +226,27 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<h3 class=\"uk-heading-line\"><span>Billboard.js</span></h3> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tArea Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<h3 class=\"uk-heading-line\"><span>Billboard.js</span></h3> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tArea Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.areaChart
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tBar Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tBar Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.barChart
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDonut Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDonut Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.donutChart
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tLine Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tLine Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.lineChart
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tRadar Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tRadar Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.radarChart
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tScatter Chart\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tScatter Chart\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('BillboardChart', {
     attrs: {
       "options": _vm.bb.scatterChart
     }
@@ -403,7 +403,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "29cbb92b"
+  "6c050a8e"
   
 )
 
@@ -463,7 +463,7 @@ var PolarArea_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "43d8e603"
+  "f5cb3db4"
   
 )
 
@@ -1160,7 +1160,7 @@ var charts_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "3e93ffb0"
+  "adab3782"
   
 )
 

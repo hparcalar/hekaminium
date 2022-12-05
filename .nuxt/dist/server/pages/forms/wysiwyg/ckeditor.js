@@ -17,7 +17,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div class=\"sc-theme-dark-info uk-margin-bottom\">\n\t\t\t\tDark mode for the CKEditor rich text editor - <a href=\"https://ckeditor.com/cke4/addon/moono-dark\">https://ckeditor.com/cke4/addon/moono-dark</a></div> "), _c('client-only', [_c('ckeditor', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div class=\"sc-theme-dark-info uk-margin-bottom\">\r\n\t\t\t\tDark mode for the CKEditor rich text editor - <a href=\"https://ckeditor.com/cke4/addon/moono-dark\">https://ckeditor.com/cke4/addon/moono-dark</a></div> "), _c('client-only', [_c('ckeditor', {
     attrs: {
       "editor": _vm.editor,
       "config": _vm.editorConfig
@@ -78,7 +78,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7e6c670a"
+  "408f7202"
   
 )
 

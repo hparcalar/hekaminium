@@ -89,7 +89,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tBasic Grid\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tBasic Grid\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
     attrs: {
       "row-data": _vm.basic.rows,
       "column-data": _vm.basic.columns,
@@ -98,7 +98,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tUsing summary\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tUsing summary\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
     attrs: {
       "row-data": _vm.summary.rows,
       "column-data": _vm.summary.columns,
@@ -107,7 +107,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tInput Types\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tInput Types\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
     attrs: {
       "row-data": _vm.inputTypes.rows,
       "column-data": _vm.inputTypes.columns,
@@ -116,7 +116,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tComplex columns\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tComplex columns\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('Grid', {
     ref: "complexColumns",
     attrs: {
       "row-data": _vm.complexColumns.rows,
@@ -320,7 +320,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "5c4edf2a"
+  "14980487"
   
 )
 
@@ -1031,7 +1031,7 @@ var data_grid_component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "56233238"
+  "76aec2c1"
   
 )
 

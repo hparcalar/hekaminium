@@ -1015,9 +1015,9 @@ export default {
 			const offeredProjectSum = projectData.filter(d => d.projectStatus == 2).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
 			const approvedProjectSum = projectData.filter(d => d.projectStatus == 3).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
 			const completedProjectSum = projectData.filter(d => d.projectStatus == 4).reduce((partialSum, a) => partialSum + (a.offerPrice * a.quantity), 0);
-			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(offeredProjectSum));
-			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(approvedProjectSum));
-			this.completedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try' }).format(completedProjectSum));
+			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(offeredProjectSum));
+			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(approvedProjectSum));
+			this.completedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(completedProjectSum));
 			this.pendingDemandCount = pendingDemandsData.length;
       this.pendingOrderCount = pendingOrdersData.length;
 

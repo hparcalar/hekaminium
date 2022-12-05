@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -534,7 +534,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\n\t\t\t\t\t\t\tRol Tanımı\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tGenel Bilgiler\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\r\n\t\t\t\t\t\t\tRol Tanımı\r\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tGenel Bilgiler\r\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
     model: {
       value: _vm.formData.roleCode,
       callback: function ($$v) {
@@ -550,7 +550,7 @@ var render = function render() {
       },
       expression: "formData.roleName"
     }
-  }, [_c('label', [_vm._v("Rol Adı")])])], 1)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tYetki Tanımları\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", _vm._l(_vm.sectionList, function (item, index) {
+  }, [_c('label', [_vm._v("Rol Adı")])])], 1)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tYetki Tanımları\r\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", _vm._l(_vm.sectionList, function (item, index) {
     return _vm._ssrNode("<div>", "</div>", [_c('PrettyCheck', {
       staticClass: "p-icon",
       attrs: {
@@ -569,7 +569,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v(" " + _vm._s(item.title) + "\n                                    ")])], 1);
+    }), _vm._v(" " + _vm._s(item.title) + "\r\n                                    ")])], 1);
   }), 0)], 2), _vm._ssrNode(" <div class=\"uk-margin-large-top\"><button type=\"button\" class=\"sc-button sc-button-primary sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: check\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: arrow-left\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-medium\"><span data-uk-icon=\"icon: trash\" class=\"uk-icon\"></span></button></div>")], 2)], 2)])])]);
 };
 
@@ -786,7 +786,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "2478ab2e"
+  "d3c77142"
   
 )
 

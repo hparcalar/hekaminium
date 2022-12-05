@@ -360,7 +360,7 @@ var render = function render() {
         return _vm.getCroppedCanvas('full');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tGet Cropped Canvas\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tGet Cropped Canvas\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-success",
     attrs: {
       "type": "button",
@@ -371,7 +371,7 @@ var render = function render() {
         return _vm.getCroppedCanvas('medium');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t320x180\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t320x180\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-success",
     attrs: {
       "type": "button",
@@ -382,9 +382,9 @@ var render = function render() {
         return _vm.getCroppedCanvas('small');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t240x100\n\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t240x100\r\n\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('p', {
     staticClass: "uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPreview:\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPreview:\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "sc-cropper-preview sc-cropper-preview-lg"
   }, [_c('img', {
     staticStyle: {
@@ -396,7 +396,7 @@ var render = function render() {
     }
   })])]), _vm._v(" "), _c('p', {
     staticClass: "uk-margin-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tAspect Ratio:\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tAspect Ratio:\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "uk-button-group sc-buttons-stacked@m"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary sc-button-radio",
@@ -412,7 +412,7 @@ var render = function render() {
         return _vm.setAspectRatio(1.7777777777777777, '16/9');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t16:9\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t16:9\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary sc-button-radio",
     class: {
       'uk-active': _vm.aspectRatio === '4/3'
@@ -426,7 +426,7 @@ var render = function render() {
         return _vm.setAspectRatio(1.3333333333333333, '4/3');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t4:3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t4:3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary sc-button-radio",
     class: {
       'uk-active': _vm.aspectRatio === '1/1'
@@ -440,7 +440,7 @@ var render = function render() {
         return _vm.setAspectRatio(1, '1/1');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t1:1\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t1:1\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary sc-button-radio",
     class: {
       'uk-active': _vm.aspectRatio === '2/3'
@@ -454,7 +454,7 @@ var render = function render() {
         return _vm.setAspectRatio(0.6666666666666666, '2/3');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t2:3\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t2:3\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary sc-button-radio",
     class: {
       'uk-active': _vm.aspectRatio === 'NaN'
@@ -468,7 +468,7 @@ var render = function render() {
         return _vm.setAspectRatio(NaN, 'NaN');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tFree\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)], 2), _vm._ssrNode(" <div id=\"getCroppedCanvasModal\" data-uk-modal aria-hidden=\"true\" aria-labelledby=\"sc-getCroppedCanvasTitle\" role=\"dialog\"><div class=\"uk-modal-dialog\"><button type=\"button\" data-uk-close class=\"uk-modal-close-default\"></button> <div class=\"uk-modal-header\"><h2 id=\"sc-getCroppedCanvasTitle\" class=\"uk-modal-title\">\n\t\t\t\t\t\t\tCropped Canvas\n\t\t\t\t\t\t</h2></div> <div id=\"croppedCanvasWrapper\" class=\"uk-modal-body uk-text-center\"></div> <div class=\"uk-modal-footer uk-text-right\"><button type=\"button\" class=\"sc-button sc-button-flat sc-button-flat-danger uk-modal-close\">\n\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t</button> <a id=\"croppedCanvasDownload\" href=\"javascript:void(0);\" download=\"cropped.jpg\"" + _vm._ssrAttr("disabled", !_vm.canDownload) + " class=\"sc-button\">\n\t\t\t\t\t\t\tDownload\n\t\t\t\t\t\t</a></div></div></div> <div data-uk-form-custom class=\"sc-fab-page-wrapper uk-form-custom\"><input type=\"file\" name=\"file\" accept=\".jpg,.jpeg,.png,.gif,.bmp,.tiff\"> <button type=\"button\" tabindex=\"-1\" class=\"sc-fab sc-fab-large sc-fab-danger\"><i class=\"mdi mdi-file-upload\"></i></button></div>")], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tFree\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)], 2), _vm._ssrNode(" <div id=\"getCroppedCanvasModal\" data-uk-modal aria-hidden=\"true\" aria-labelledby=\"sc-getCroppedCanvasTitle\" role=\"dialog\"><div class=\"uk-modal-dialog\"><button type=\"button\" data-uk-close class=\"uk-modal-close-default\"></button> <div class=\"uk-modal-header\"><h2 id=\"sc-getCroppedCanvasTitle\" class=\"uk-modal-title\">\r\n\t\t\t\t\t\t\tCropped Canvas\r\n\t\t\t\t\t\t</h2></div> <div id=\"croppedCanvasWrapper\" class=\"uk-modal-body uk-text-center\"></div> <div class=\"uk-modal-footer uk-text-right\"><button type=\"button\" class=\"sc-button sc-button-flat sc-button-flat-danger uk-modal-close\">\r\n\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t</button> <a id=\"croppedCanvasDownload\" href=\"javascript:void(0);\" download=\"cropped.jpg\"" + _vm._ssrAttr("disabled", !_vm.canDownload) + " class=\"sc-button\">\r\n\t\t\t\t\t\t\tDownload\r\n\t\t\t\t\t\t</a></div></div></div> <div data-uk-form-custom class=\"sc-fab-page-wrapper uk-form-custom\"><input type=\"file\" name=\"file\" accept=\".jpg,.jpeg,.png,.gif,.bmp,.tiff\"> <button type=\"button\" tabindex=\"-1\" class=\"sc-fab sc-fab-large sc-fab-danger\"><i class=\"mdi mdi-file-upload\"></i></button></div>")], 2)]);
 };
 
 var staticRenderFns = [];
@@ -641,7 +641,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "1c2db3a6"
+  "180850a2"
   
 )
 

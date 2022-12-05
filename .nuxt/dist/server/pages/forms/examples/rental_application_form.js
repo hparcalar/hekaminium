@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -608,7 +608,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon:home;ratio:1.4"
     }
-  })]), _vm._v(" "), _c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tRental Application Form\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
+  })]), _vm._v(" "), _c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tRental Application Form\r\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
     attrs: {
       "action": ""
     }
@@ -621,7 +621,7 @@ var render = function render() {
     staticClass: "uk-open"
   }, [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t1. Personal Information\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t1. Personal Information\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid",
@@ -639,7 +639,7 @@ var render = function render() {
       },
       expression: "userData.fName"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "mode": "outline"
     },
@@ -650,7 +650,7 @@ var render = function render() {
       },
       expression: "userData.lName"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLast Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLast Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -674,7 +674,7 @@ var render = function render() {
       },
       expression: "userData.email"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEmail\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "mode": "outline"
     },
@@ -685,7 +685,7 @@ var render = function render() {
       },
       expression: "userData.phone"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhone Number\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhone Number\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -701,7 +701,7 @@ var render = function render() {
       },
       expression: "userData.birthDate"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBirth Date\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBirth Date\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     directives: [{
       name: "input-mask",
       rawName: "v-input-mask",
@@ -720,7 +720,7 @@ var render = function render() {
       },
       expression: "userData.ssn"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSocial Security Number\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSocial Security Number\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     directives: [{
       name: "input-mask",
       rawName: "v-input-mask",
@@ -739,9 +739,9 @@ var render = function render() {
       },
       expression: "userData.driversLicense"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDrivers License Number\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDrivers License Number\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t2. Employment History\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t2. Employment History\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', {
     staticClass: "uk-margin"
@@ -756,7 +756,7 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.employer"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tCurrent or Most Recent Employer\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tCurrent or Most Recent Employer\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@m uk-margin-top uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -772,7 +772,7 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.position"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPosition\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPosition\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "mode": "outline"
     },
@@ -783,7 +783,7 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.employmentLength"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLength of Employment\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLength of Employment\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     directives: [{
       name: "input-mask",
       rawName: "v-input-mask",
@@ -808,7 +808,7 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.monthlySalary"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMonthly Salary\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMonthly Salary\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@m uk-margin-top uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -824,7 +824,7 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.supervisorName"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSupervisor Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSupervisor Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
     attrs: {
       "mode": "outline"
     },
@@ -835,9 +835,9 @@ var render = function render() {
       },
       expression: "userData.employmentHistory.supervisorPhone"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSupervisor Phone\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('li', [_c('h3', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSupervisor Phone\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t3. Rental History\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t3. Rental History\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, _vm._l(_vm.userData.rentalHistory, function (item, index) {
     return _c('div', {
@@ -870,7 +870,7 @@ var render = function render() {
         },
         expression: "item.address"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAddress\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAddress\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
       staticClass: "uk-width-1-3@m"
     }, [_c('ScInput', {
       attrs: {
@@ -883,14 +883,14 @@ var render = function render() {
         },
         expression: "item.zipCode"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPostal/Zip-Code\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPostal/Zip-Code\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
       staticClass: "uk-child-width-1-3@m uk-grid",
       attrs: {
         "data-uk-grid": ""
       }
     }, [_c('div', [_c('label', {
       staticClass: "uk-form-label"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCity\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCity\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "uk-form-controls"
     }, [_c('client-only', [_c('Select2', {
       attrs: {
@@ -909,7 +909,7 @@ var render = function render() {
       }
     })], 1)], 1)]), _vm._v(" "), _c('div', [_c('label', {
       staticClass: "uk-form-label"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tState/Province\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tState/Province\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "uk-form-controls"
     }, [_c('client-only', [_c('Select2', {
       attrs: {
@@ -928,7 +928,7 @@ var render = function render() {
       }
     })], 1)], 1)]), _vm._v(" "), _c('div', [_c('label', {
       staticClass: "uk-form-label"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCountry\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCountry\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "uk-form-controls"
     }, [_c('client-only', [_c('Select2', {
       attrs: {
@@ -976,7 +976,7 @@ var render = function render() {
         "slot": "icon"
       },
       slot: "icon"
-    }), _vm._v(" "), _c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove in Date\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', [_c('div', {
+    }), _vm._v(" "), _c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove in Date\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', [_c('div', {
       staticClass: "uk-position-relative"
     }, [_c('ScInput', {
       directives: [{
@@ -1000,7 +1000,7 @@ var render = function render() {
         "slot": "icon"
       },
       slot: "icon"
-    }), _vm._v(" "), _c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove out Date\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('hr', {
+    }), _vm._v(" "), _c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove out Date\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('hr', {
       staticClass: "uk-margin-medium"
     }), _vm._v(" "), _c('div', {
       staticClass: "uk-child-width-1-2@m uk-grid",
@@ -1018,7 +1018,7 @@ var render = function render() {
         },
         expression: "item.landlordName"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLandlord Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLandlord Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
       attrs: {
         "mode": "outline"
       },
@@ -1029,7 +1029,7 @@ var render = function render() {
         },
         expression: "item.landlordPhone"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLandlord Phone\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLandlord Phone\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-auto@m uk-flex-middle"
     }, [_c('a', {
       directives: [{
@@ -1070,7 +1070,7 @@ var render = function render() {
     })])])])]);
   }), 0)]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t4. Personal References\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t4. Personal References\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, _vm._l(_vm.userData.personalReference, function (item, index) {
     return _c('div', {
@@ -1080,7 +1080,7 @@ var render = function render() {
       staticClass: "uk-margin-bottom uk-heading-line"
     }, [_c('span', {
       staticClass: "sc-theme-color"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.fName) + " " + _vm._s(item.lName) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.fName) + " " + _vm._s(item.lName) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
       staticClass: "uk-grid-match uk-grid",
       attrs: {
         "data-uk-grid": ""
@@ -1103,7 +1103,7 @@ var render = function render() {
         },
         expression: "item.fName"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tFirst Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', [_c('ScInput', {
       attrs: {
         "mode": "outline"
       },
@@ -1114,7 +1114,7 @@ var render = function render() {
         },
         expression: "item.lName"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLast Name\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLast Name\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('div', {
       staticClass: "uk-grid",
       attrs: {
         "data-uk-grid": ""
@@ -1132,7 +1132,7 @@ var render = function render() {
         },
         expression: "item.relationship"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRelationship to Applicant\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRelationship to Applicant\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
       staticClass: "uk-width-1-3@l uk-width-1-2@m"
     }, [_c('ScInput', {
       attrs: {
@@ -1145,7 +1145,7 @@ var render = function render() {
         },
         expression: "item.phone"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhone\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tPhone\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
       staticClass: "uk-width-1-3@l uk-width-1-2@m"
     }, [_c('ScInput', {
       directives: [{
@@ -1166,7 +1166,7 @@ var render = function render() {
         },
         expression: "item.email"
       }
-    }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('div', {
+    }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tEmail\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-auto@m uk-flex-middle"
     }, [_c('a', {
       directives: [{
@@ -1207,7 +1207,7 @@ var render = function render() {
     })])])])]);
   }), 0)]), _vm._v(" "), _c('li', [_c('h3', {
     staticClass: "uk-accordion-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t5. Other Information\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t5. Other Information\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-accordion-content"
   }, [_c('div', [_c('ScTextarea', {
     attrs: {
@@ -1223,7 +1223,7 @@ var render = function render() {
       },
       expression: "userData.pets"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPets (please describe)\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPets (please describe)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium-top"
   }, [_c('ScTextarea', {
     attrs: {
@@ -1239,11 +1239,11 @@ var render = function render() {
       },
       expression: "userData.info"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tVehicles to be parked on premises\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tVehicles to be parked on premises\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1)])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary sc-button-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSubmit Application\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSubmit Application\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
     staticClass: "uk-margin-top"
   }, [_vm._v(_vm._s(_vm._f("json")(_vm.userData)))])])], 1)], 1)])])]);
 };
@@ -1404,7 +1404,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "fb73eaa8"
+  "bb6bc394"
   
 )
 

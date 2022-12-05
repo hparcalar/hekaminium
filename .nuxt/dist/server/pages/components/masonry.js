@@ -22,122 +22,122 @@ var render = function render() {
     staticStyle: {
       "height": "100px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "130px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "150px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "160px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "120px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "200px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "180px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "200px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "180px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1)], 2), _vm._ssrNode(" <h5 class=\"uk-heading-line uk-margin-large-top\"><span>With Parallax</span></h5> "), _vm._ssrNode("<div data-uk-grid=\"masonry: true; parallax: 120\" class=\"uk-child-width-1-2@s uk-child-width-1-4@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1)], 2), _vm._ssrNode(" <h5 class=\"uk-heading-line uk-margin-large-top\"><span>With Parallax</span></h5> "), _vm._ssrNode("<div data-uk-grid=\"masonry: true; parallax: 120\" class=\"uk-child-width-1-2@s uk-child-width-1-4@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "100px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "130px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "150px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "160px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "120px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "200px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "180px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "200px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "180px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-flex-center uk-flex-middle",
     staticStyle: {
       "height": "140px"
     }
-  }, [_vm._v("\n\t\t\t\t\t\tItem\n\t\t\t\t\t")])], 1)], 2)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\tItem\r\n\t\t\t\t\t")])], 1)], 2)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -168,7 +168,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "99d7b660"
+  "32a309ad"
   
 )
 

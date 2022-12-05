@@ -721,7 +721,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -815,9 +815,9 @@ var render = function render() {
     staticClass: "uk-flex-1 uk-text-truncate"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[0]) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[0]) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon"
   }, [_c('i', {
     staticClass: "icon mdi mdi-check",
@@ -837,9 +837,9 @@ var render = function render() {
     staticClass: "sc-list-body uk-overflow-hidden"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[1]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[1]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -851,9 +851,9 @@ var render = function render() {
     staticClass: "sc-list-body uk-overflow-hidden"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[2]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[2]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -869,9 +869,9 @@ var render = function render() {
     staticClass: "uk-flex-1 uk-text-truncate"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[3]) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[3]) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('PrettyCheck', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('PrettyCheck', {
     staticClass: "p-icon"
   }, [_c('i', {
     staticClass: "icon mdi mdi-check",
@@ -891,9 +891,9 @@ var render = function render() {
     staticClass: "sc-list-body uk-overflow-hidden"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[4]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[4]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "uk-list uk-list-divider"
   }, [_c('li', {
     staticClass: "sc-list-group"
@@ -911,11 +911,11 @@ var render = function render() {
     staticClass: "uk-flex-1 uk-text-truncate"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[0]) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[0]) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "uk-label uk-label-danger"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLabel\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLabel\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -927,9 +927,9 @@ var render = function render() {
     staticClass: "sc-list-body"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[1]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[1]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -945,11 +945,11 @@ var render = function render() {
     staticClass: "uk-flex-1 uk-text-truncate"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[2]) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[2]) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "uk-label"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tLabel\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tLabel\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -961,9 +961,9 @@ var render = function render() {
     staticClass: "sc-list-body"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[3]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[3]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -975,9 +975,9 @@ var render = function render() {
     staticClass: "sc-list-body"
   }, [_c('p', {
     staticClass: "uk-margin-remove sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[4]) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.fakeUser[4]) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "uk-list"
   }, [_c('li', {
     staticClass: "sc-list-group"
@@ -998,7 +998,7 @@ var render = function render() {
         _vm.settings.wifi = !_vm.settings.wifi;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tWI-FI\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tWI-FI\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-flex-no-shrink uk-flex"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1028,7 +1028,7 @@ var render = function render() {
         _vm.settings.bt = !_vm.settings.bt;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tBluetooth\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tBluetooth\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-flex-no-shrink uk-flex"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1058,7 +1058,7 @@ var render = function render() {
         _vm.settings.nfc = !_vm.settings.nfc;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tNFC\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tNFC\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-flex-no-shrink uk-flex"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1088,7 +1088,7 @@ var render = function render() {
         _vm.settings.airplane = !_vm.settings.airplane;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tAirplane Mode\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tAirplane Mode\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-flex-no-shrink uk-flex"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1134,7 +1134,7 @@ var render = function render() {
         _vm.checkboxes.cb1 = !_vm.checkboxes.cb1;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1162,7 +1162,7 @@ var render = function render() {
         _vm.checkboxes.cb2 = !_vm.checkboxes.cb2;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1190,7 +1190,7 @@ var render = function render() {
         _vm.checkboxes.cb3 = !_vm.checkboxes.cb3;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, optio?\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, optio?\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1218,7 +1218,7 @@ var render = function render() {
         _vm.checkboxes.cb4 = !_vm.checkboxes.cb4;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing.\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing.\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('ul', {
     staticClass: "uk-list uk-list-divider"
   }, [_c('li', {
     staticClass: "sc-list-group"
@@ -1231,7 +1231,7 @@ var render = function render() {
         _vm.checkboxes.cb5 = !_vm.checkboxes.cb5;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-addon"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1256,7 +1256,7 @@ var render = function render() {
         _vm.checkboxes.cb6 = !_vm.checkboxes.cb6;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-addon"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1281,7 +1281,7 @@ var render = function render() {
         _vm.checkboxes.cb7 = !_vm.checkboxes.cb7;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-addon"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1306,7 +1306,7 @@ var render = function render() {
         _vm.checkboxes.cb8 = !_vm.checkboxes.cb8;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, repellendus?\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, repellendus?\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-addon"
   }, [_c('PrettyCheck', {
     staticClass: "p-switch",
@@ -1330,7 +1330,7 @@ var render = function render() {
     staticClass: "mdi mdi-alert md-color-red-500"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, provident!\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, provident!\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1338,7 +1338,7 @@ var render = function render() {
     staticClass: "mdi mdi-forklift"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing.\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing.\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1346,7 +1346,7 @@ var render = function render() {
     staticClass: "mdi mdi-doctor md-color-light-blue-500"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, veniam!\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, veniam!\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1354,7 +1354,7 @@ var render = function render() {
     staticClass: "mdi mdi-git md-color-light-green-500"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1362,7 +1362,7 @@ var render = function render() {
     staticClass: "mdi mdi-air-conditioner"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magnam quibusdam repellendus!\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magnam quibusdam repellendus!\r\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('h4', {
     staticClass: "uk-heading-line"
@@ -1470,7 +1470,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "3d1962e0"
+  "84344a06"
   
 )
 

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -628,7 +628,7 @@ var render = function render() {
     staticClass: "md-bg-blue-800 sc-padding sc-round uk-light uk-flex uk-flex-middle"
   }, [_c('i', {
     staticClass: "mdi mdi-medical-bag sc-icon-24 uk-margin-medium-right md-color-white"
-  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tMedical History\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
+  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tMedical History\r\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
     staticClass: "uk-form-stacked"
   }, [_c('div', {
     staticClass: "uk-child-width-1-2@l uk-grid",
@@ -648,7 +648,7 @@ var render = function render() {
       },
       expression: "userData.name"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPatient Name\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPatient Name\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-3@m"
   }, [_c('ScInput', {
     directives: [{
@@ -667,11 +667,11 @@ var render = function render() {
       },
       expression: "userData.birthDate"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tBirth Date\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('hr', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tBirth Date\r\n\t\t\t\t\t\t\t\t\t\t\t")])])], 1)]), _vm._v(" "), _c('hr', {
     staticClass: "uk-margin-large"
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-large-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tPlease answer the following\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.userData.questions, function (question, index) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tPlease answer the following\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _vm._l(_vm.userData.questions, function (question, index) {
     return _c('div', {
       key: question.id,
       staticClass: "uk-margin-small"
@@ -687,7 +687,7 @@ var render = function render() {
         },
         expression: "userData.questions[index].value"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(question.text) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(question.text) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -710,7 +710,7 @@ var render = function render() {
     })], 1)], 1);
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-large-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tDo you have or have you had any of the following?\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tDo you have or have you had any of the following?\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-expand@l uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -742,7 +742,7 @@ var render = function render() {
           "slot": "extra"
         },
         slot: "extra"
-      }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(condition) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
+      }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(condition) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1);
     }), 0)]);
   }), 0), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large"
@@ -767,7 +767,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSave history\n\t\t\t\t\t\t\t\t\t")])])], 2), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSave history\r\n\t\t\t\t\t\t\t\t\t")])])], 2), _vm._v(" "), _c('pre', {
     staticClass: "uk-margin-top"
   }, [_vm._v(_vm._s(_vm._f("json")(_vm.userData)))])])], 1)], 1)])])]);
 };
@@ -898,7 +898,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "17f2af4f"
+  "3d805805"
   
 )
 

@@ -89,7 +89,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tBasic Example\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tBasic Example\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.rows,
@@ -97,7 +97,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tLine Numbers\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tLine Numbers\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.rows,
@@ -106,7 +106,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tSearch Options\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tSearch Options\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.rows,
@@ -117,7 +117,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tCheckbox Table\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tCheckbox Table\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.rows,
@@ -131,7 +131,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tPagination\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("records mode (default)")]), _vm._v(" "), _c('VueGoodTable', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tPagination\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("records mode (default)")]), _vm._v(" "), _c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.rows,
@@ -272,7 +272,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "54ac3a10"
+  "10bf7fe2"
   
 )
 

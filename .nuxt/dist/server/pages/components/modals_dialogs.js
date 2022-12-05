@@ -38,13 +38,13 @@ var render = function render() {
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "type": "button",
       "data-uk-toggle": "target: #modal-default"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "id": "modal-default",
       "data-uk-modal": ""
@@ -53,33 +53,33 @@ var render = function render() {
     staticClass: "uk-modal-dialog uk-modal-body"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHeadline\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHeadline\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-right"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-flat uk-modal-close",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClose button\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClose button\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button uk-margin-small-right",
     attrs: {
       "type": "button",
       "data-uk-toggle": "target: #modal-close-default"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "type": "button",
       "data-uk-toggle": "target: #modal-close-outside"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOutside\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOutside\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-close-default",
@@ -95,14 +95,14 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHeadline\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHeadline\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-right"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-close-outside",
@@ -118,22 +118,22 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHeadline\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHeadline\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-right"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCenter modal\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCenter modal\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "type": "button",
       "data-uk-toggle": "target: #modal-center"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-top uk-modal",
     attrs: {
       "id": "modal-center",
@@ -141,20 +141,20 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-modal-dialog uk-modal-body uk-margin-auto-vertical"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ab illo maiores, incidunt delectus qui in, vitae laboriosam minus nihil, quibusdam quidem magnam minima veniam aut nulla aperiam voluptas deleniti quo rem ipsa fugiat! Hic excepturi, cupiditate doloremque sed perferendis dolor, atque reprehenderit possimus officia vitae cum laborum quo! Alias cum, at minima illo corrupti rem quae quos! In, molestiae.\n\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit, amet consectetur adipisicing elit. Libero ab illo maiores, incidunt delectus qui in, vitae laboriosam minus nihil, quibusdam quidem magnam minima veniam aut nulla aperiam voluptas deleniti quo rem ipsa fugiat! Hic excepturi, cupiditate doloremque sed perferendis dolor, atque reprehenderit possimus officia vitae cum laborum quo! Alias cum, at minima illo corrupti rem quae quos! In, molestiae.\r\n\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@l uk-child-width-1-2@s uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHeader and footer\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHeader and footer\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-header-footer",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-header-footer",
@@ -172,7 +172,7 @@ var render = function render() {
     staticClass: "uk-modal-header"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tModal Title\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tModal Title\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-body"
   }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-footer uk-text-right"
@@ -181,20 +181,20 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tContainer modifier\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tContainer modifier\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-container",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-container uk-modal",
     attrs: {
       "id": "modal-container",
@@ -210,15 +210,15 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tHeadline\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tHeadline\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tFull modifier\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tFull modifier\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-full",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-full uk-modal",
     attrs: {
       "id": "modal-full",
@@ -254,13 +254,13 @@ var render = function render() {
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOverflow\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOverflow\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-overflow",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-overflow",
@@ -278,7 +278,7 @@ var render = function render() {
     staticClass: "uk-modal-header"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHeadline\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHeadline\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-body",
     attrs: {
       "data-uk-overflow-auto": ""
@@ -292,9 +292,9 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSave\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSave\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tMedia\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tMedia\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-margin": ""
     }
@@ -304,19 +304,19 @@ var render = function render() {
       "href": "#modal-media-image",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tImage\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tImage\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-media-youtube",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tYouTube\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tYouTube\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-media-vimeo",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tVimeo\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tVimeo\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-top uk-modal",
     attrs: {
       "id": "modal-media-image",
@@ -389,7 +389,7 @@ var render = function render() {
     }
   })])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tGroups\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tGroups\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-uk-margin": ""
     }
@@ -399,13 +399,13 @@ var render = function render() {
       "href": "#modal-group-1",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tModal 1\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tModal 1\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "#modal-group-2",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tModal 2\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tModal 2\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-group-1",
@@ -417,7 +417,7 @@ var render = function render() {
     staticClass: "uk-modal-header"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tModal 1\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tModal 1\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-body"
   }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-footer uk-text-right"
@@ -426,13 +426,13 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-secondary",
     attrs: {
       "href": "#modal-group-2",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tModal 2\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tModal 2\r\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal",
     attrs: {
       "id": "modal-group-2",
@@ -444,7 +444,7 @@ var render = function render() {
     staticClass: "uk-modal-header"
   }, [_c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tModal 2\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tModal 2\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-body"
   }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-modal-footer uk-text-right"
@@ -453,20 +453,20 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-secondary",
     attrs: {
       "href": "#modal-group-1",
       "data-uk-toggle": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tModal 1\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" <h4 class=\"uk-heading-line uk-margin-large-top\"><span>Modal dialogs</span></h4> "), _c('ScCard', [_c('ScCardBody', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tModal 1\r\n\t\t\t\t\t\t\t\t\t\t")])])])])])])])], 1), _vm._ssrNode(" <h4 class=\"uk-heading-line uk-margin-large-top\"><span>Modal dialogs</span></h4> "), _c('ScCard', [_c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-1-4@l uk-child-width-1-2@m uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDialog\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDialog\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "javascript:void(0)"
@@ -476,9 +476,9 @@ var render = function render() {
         return _vm.openDialog('dialog');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tAlert\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tAlert\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "javascript:void(0)"
@@ -488,9 +488,9 @@ var render = function render() {
         return _vm.openDialog('alert');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tConfirm\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tConfirm\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "javascript:void(0)"
@@ -500,9 +500,9 @@ var render = function render() {
         return _vm.openDialog('confirm');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large uk-margin-medium-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPrompt\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPrompt\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "javascript:void(0)"
@@ -512,11 +512,11 @@ var render = function render() {
         return _vm.openDialog('prompt');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOpen\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOpen\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
   }, [_c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("Your Name:")]), _vm._v(" " + _vm._s(_vm.promptName) + "\n\t\t\t\t\t\t\t")])])])])], 1)], 2)]);
+  }, [_vm._v("Your Name:")]), _vm._v(" " + _vm._s(_vm.promptName) + "\r\n\t\t\t\t\t\t\t")])])])])], 1)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -591,7 +591,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "127f6c17"
+  "5ee876cc"
   
 )
 

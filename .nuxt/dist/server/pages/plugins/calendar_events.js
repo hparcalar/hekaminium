@@ -93,7 +93,7 @@ var render = function render() {
       key: event.customData.id
     }, [_c('h4', {
       staticClass: "vc-calendar-events-description"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(event.customData.description) + "\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.formatDate(event.customData.dates)))])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(event.customData.description) + "\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.formatDate(event.customData.dates)))])]);
   }), 0)], 1)], 1)])]);
 };
 
@@ -202,7 +202,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "77a08d77"
+  "d7145980"
   
 )
 

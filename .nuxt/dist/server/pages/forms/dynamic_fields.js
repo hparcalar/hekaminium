@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -344,7 +344,7 @@ var render = function render() {
         },
         expression: "item.registerUser"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tRegister User\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tRegister User\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 1)])]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-auto@m uk-flex-middle"
     }, [_c('a', {
       directives: [{
@@ -387,7 +387,7 @@ var render = function render() {
     staticClass: "sc-padding"
   }, [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSubmit\n\t\t\t\t\t\t\t\t")])])], 2)])], 1)])])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSubmit\r\n\t\t\t\t\t\t\t\t")])])], 2)])], 1)])])]);
 };
 
 var staticRenderFns = [];
@@ -478,7 +478,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "17effb9d"
+  "624fdb34"
   
 )
 

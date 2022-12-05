@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -5132,7 +5132,7 @@ var render = function render() {
     }
   }, [_c('ScCardTitle', {
     staticClass: "md-color-grey-500"
-  }, [_vm._v("\n\t\t\t\t\tMaterial Design Icons\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\tMaterial Design Icons\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -5157,7 +5157,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<i class=\"mdi mdi-monitor-dashboard\"></i>\n<i class=\"mdi mdi-account\"></i>\n<i class=\"mdi mdi-book-open-variant\"></i>\n<i class=\"mdi mdi-comment-processing-outline\"></i>\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("Colors")]), _vm._v(" "), _c('div', {
+  }, [_c('code', [_vm._v("<i class=\"mdi mdi-monitor-dashboard\"></i>\r\n<i class=\"mdi mdi-account\"></i>\r\n<i class=\"mdi mdi-book-open-variant\"></i>\r\n<i class=\"mdi mdi-comment-processing-outline\"></i>\r\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("Colors")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -5175,7 +5175,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<i class=\"mdi mdi-monitor-dashboard md-color-red-600\"></i>\n<i class=\"mdi mdi-account md-color-light-green-600\"></i>\n<i class=\"mdi mdi-book-open-variant md-color-indigo-600\"></i>\n<i class=\"mdi mdi-comment-processing-outline md-color-cyan-600\"></i>")])])]), _vm._v(" "), _c('div', {
+  }, [_c('code', [_vm._v("<i class=\"mdi mdi-monitor-dashboard md-color-red-600\"></i>\r\n<i class=\"mdi mdi-account md-color-light-green-600\"></i>\r\n<i class=\"mdi mdi-book-open-variant md-color-indigo-600\"></i>\r\n<i class=\"mdi mdi-comment-processing-outline md-color-cyan-600\"></i>")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-2-3@l"
   }, [_c('h5', [_vm._v("Sizes")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@s uk-grid uk-flex-middle",
@@ -5203,7 +5203,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<i class=\"mdi mdi-heart-outline sc-icon-18\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-20\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-22\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-24\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-28\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-32\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-36\"></i>\n<i class=\"mdi mdi-heart-outline sc-icon-48\"></i>")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("Modifiers")]), _vm._v(" "), _c('div', {
+  }, [_c('code', [_vm._v("<i class=\"mdi mdi-heart-outline sc-icon-18\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-20\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-22\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-24\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-28\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-32\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-36\"></i>\r\n<i class=\"mdi mdi-heart-outline sc-icon-48\"></i>")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("Modifiers")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@s uk-grid-small uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -5233,9 +5233,9 @@ var render = function render() {
     staticClass: "uk-flex-1"
   }, [_c('h5', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tIcons"), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tIcons"), _c('span', {
     staticClass: "sc-sub-heading"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tClick on icon to get HTML code\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tClick on icon to get HTML code\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-3@s"
   }, [_c('client-only', [_c('div', {
     staticClass: "sc-el-sticky sc-round",
@@ -5306,7 +5306,7 @@ var render = function render() {
     attrs: {
       "id": "nav-uikitIcons"
     }
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tUIKit icons\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('h5', [_vm._v("Usage")]), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tUIKit icons\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('h5', [_vm._v("Usage")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-2@l uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -5340,7 +5340,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<span uk-icon=\"icon: image\"></span>\n<span uk-icon=\"icon: image; ratio: 1.5\"></span>\n<span uk-icon=\"icon: image; ratio: 2\"></span>\n<span uk-icon=\"icon: image; ratio: 3\"></span>\n<span uk-icon=\"icon: image; ratio: 4\"></span>")])])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_c('code', [_vm._v("<span uk-icon=\"icon: image\"></span>\r\n<span uk-icon=\"icon: image; ratio: 1.5\"></span>\r\n<span uk-icon=\"icon: image; ratio: 2\"></span>\r\n<span uk-icon=\"icon: image; ratio: 3\"></span>\r\n<span uk-icon=\"icon: image; ratio: 4\"></span>")])])]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "uk-icon-link",
     attrs: {
       "href": "javascript:void(0)",
@@ -5363,9 +5363,9 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<a href=\"#\" class=\"uk-icon-link-right\" uk-icon=\"icon: copy; ratio: 1.5\"></a>\n<a href=\"#\" class=\"uk-icon-link-right\" uk-icon=\"icon: file-edit; ratio: 1.5\"></a>\n<a href=\"#\" class=\"uk-icon-link\" uk-icon=\"icon: trash; ratio: 1.5\"></a>")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("\n\t\t\t\t\t\tIcons"), _c('span', {
+  }, [_c('code', [_vm._v("<a href=\"#\" class=\"uk-icon-link-right\" uk-icon=\"icon: copy; ratio: 1.5\"></a>\r\n<a href=\"#\" class=\"uk-icon-link-right\" uk-icon=\"icon: file-edit; ratio: 1.5\"></a>\r\n<a href=\"#\" class=\"uk-icon-link\" uk-icon=\"icon: trash; ratio: 1.5\"></a>")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('h5', [_vm._v("\r\n\t\t\t\t\t\tIcons"), _c('span', {
     staticClass: "sc-sub-heading"
-  }, [_vm._v("\n\t\t\t\t\t\t\tClick on icon to get HTML code\n\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tClick on icon to get HTML code\r\n\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto uk-flex-wrap uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -5508,7 +5508,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "332f07e5"
+  "9808fffc"
   
 )
 

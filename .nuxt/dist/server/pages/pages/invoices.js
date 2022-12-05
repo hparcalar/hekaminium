@@ -94,7 +94,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b3ee670c"
+  "ca1bb76c"
   
 )
 
@@ -214,7 +214,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6412f5f2"
+  "117e8192"
   
 )
 
@@ -325,7 +325,7 @@ var render = function render() {
       staticClass: "uk-display-block uk-flex-1 uk-text-truncate"
     }, [_c('span', {
       staticClass: "sc-text-semibold sc-js-list-number"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(invoice.number) + " "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(invoice.number) + " "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -333,15 +333,15 @@ var render = function render() {
         expression: "invoice.currency === 'EUR'"
       }],
       staticClass: "md-color-light-blue-500"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(EUR)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(EUR)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
       staticClass: "uk-display-block sc-list-secondary-text"
     }, [_c('span', {
       staticClass: "uk-text-muted uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTo:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.to_company) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tTo:\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.to_company) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "uk-display-block sc-list-secondary-text"
     }, [_c('span', {
       staticClass: "uk-text-muted uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate:\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.date) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate:\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.date) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -349,7 +349,7 @@ var render = function render() {
         expression: "!invoice.paid"
       }],
       staticClass: "uk-label md-bg-red-500 sc-flex-no-shrink uk-margin-small-left"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tUnpaid\n\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tUnpaid\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])], 1);
   }), 0)])], 1)])])])], 1)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-fab-page-wrapper\">", "</div>", [_c('nuxt-link', {
     staticClass: "sc-fab sc-fab-large sc-fab-primary",
     attrs: {
@@ -374,7 +374,7 @@ var render = function render() {
       staticClass: "uk-display-block uk-flex-1 uk-text-truncate"
     }, [_c('span', {
       staticClass: "sc-text-semibold sc-js-list-number"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(invoice.number) + " "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(invoice.number) + " "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -382,15 +382,15 @@ var render = function render() {
         expression: "invoice.currency === 'EUR'"
       }],
       staticClass: "md-color-light-blue-500"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t(EUR)\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t(EUR)\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
       staticClass: "uk-display-block sc-list-secondary-text"
     }, [_c('span', {
       staticClass: "uk-text-muted uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTo:\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.to_company) + "\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTo:\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.to_company) + "\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "uk-display-block sc-list-secondary-text"
     }, [_c('span', {
       staticClass: "uk-text-muted uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDate:\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.date) + "\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDate:\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" " + _vm._s(invoice.date) + "\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -398,7 +398,7 @@ var render = function render() {
         expression: "!invoice.paid"
       }],
       staticClass: "uk-label md-bg-red-500 sc-flex-no-shrink uk-margin-small-left"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\tUnpaid\n\t\t\t\t\t\t\t")])])], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\tUnpaid\r\n\t\t\t\t\t\t\t")])])], 1);
   }), 0)])], 1)], 2);
 };
 
@@ -483,7 +483,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "12c0f8d5"
+  "c7ebd4a8"
   
 )
 

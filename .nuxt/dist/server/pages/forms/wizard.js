@@ -171,7 +171,7 @@ var FormWizardvue_type_template_id_449fa029_render = function render() {
         attrs: {
           "disabled": _vm.loading || _vm.displayPrevButton
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.backButtonText) + "\n\t\t\t\t\t\t\t\t")])];
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.backButtonText) + "\r\n\t\t\t\t\t\t\t\t")])];
     }, null, _vm.slotProps)], 2), _vm._v(" "), _vm._t("custom-buttons-left", null, null, _vm.slotProps)], 2), _vm._v(" "), _c('li', {
       directives: [{
         name: "show",
@@ -193,7 +193,7 @@ var FormWizardvue_type_template_id_449fa029_render = function render() {
         }
       }
     }, [_vm._t("finish", function () {
-      return [_c('WizardButton', [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.nextButtonText) + "\n\t\t\t\t\t\t\t\t")])];
+      return [_c('WizardButton', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.nextButtonText) + "\r\n\t\t\t\t\t\t\t\t")])];
     }, null, _vm.slotProps)], 2)], 2), _vm._v(" "), _c('li', {
       directives: [{
         name: "show",
@@ -215,7 +215,7 @@ var FormWizardvue_type_template_id_449fa029_render = function render() {
         }
       }
     }, [_vm._t("next", function () {
-      return [_c('WizardButton', [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.finishButtonText) + "\n\t\t\t\t\t\t\t\t")])];
+      return [_c('WizardButton', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.finishButtonText) + "\r\n\t\t\t\t\t\t\t\t")])];
     }, null, _vm.slotProps)], 2)], 2)];
   }, null, _vm.slotProps)], 2)])], 2);
 };
@@ -259,7 +259,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "74213662"
+  "35e6e7dc"
   
 )
 
@@ -334,7 +334,7 @@ var WizardStep_component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "8aa78208"
+  "20d140ac"
   
 )
 
@@ -813,7 +813,7 @@ var FormWizard_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2c83cb74"
+  "daae65b8"
   
 )
 
@@ -953,7 +953,7 @@ var TabContent_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "8518ee6e"
+  "23988a79"
   
 )
 
@@ -1036,7 +1036,7 @@ var wizard_component = Object(componentNormalizer["a" /* default */])(
   false,
   wizard_injectStyles,
   null,
-  "57e9fd4f"
+  "31b263e6"
   
 )
 

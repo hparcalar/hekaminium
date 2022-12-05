@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -410,7 +410,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b3ee670c"
+  "ca1bb76c"
   
 )
 
@@ -530,7 +530,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6412f5f2"
+  "117e8192"
   
 )
 
@@ -696,7 +696,7 @@ var render = function render() {
       staticClass: "uk-flex uk-flex-middle"
     }, [_c('div', {
       staticClass: "uk-flex-1"
-    }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(room.title) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(room.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       staticClass: "sc-chat-user-list-inline"
     }, _vm._l(room.users, function (user) {
       return _c('li', {
@@ -715,14 +715,14 @@ var render = function render() {
           value: user === 0,
           expression: "user === 0"
         }]
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
         directives: [{
           name: "show",
           rawName: "v-show",
           value: user != 0,
           expression: "user != 0"
         }]
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
     }), 0)], 1), _vm._v(" "), _c('div', {
       staticClass: "sc-actions uk-margin-remove"
     }, [_c('div', {
@@ -743,22 +743,22 @@ var render = function render() {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tInfo\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tInfo\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClear chat\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClear chat\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
       staticClass: "uk-nav-divider"
     }), _vm._v(" "), _c('li', [_c('a', {
       staticClass: "md-color-red-500",
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClose\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])]), _vm._v(" "), _c('ScCardBody', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClose\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])]), _vm._v(" "), _c('ScCardBody', {
       staticClass: "sc-padding-remove",
       attrs: {
         "id": "sc-chat-wrapper"
@@ -811,14 +811,14 @@ var render = function render() {
             expression: "message.content"
           }],
           staticClass: "sc-chat-message-content"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.content) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('time', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('time', {
           directives: [{
             name: "show",
             rawName: "v-show",
             value: message.time !== '',
             expression: "message.time !== ''"
           }]
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.time) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.time) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
       }), 0)], _vm._v(" "), _c('div', {
         directives: [{
           name: "show",
@@ -838,7 +838,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(group.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('TransitionGroup', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.userName(group.user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('TransitionGroup', {
         staticClass: "sc-chat-messages",
         attrs: {
           "name": "fadeUp",
@@ -855,14 +855,14 @@ var render = function render() {
             expression: "message.content"
           }],
           staticClass: "sc-chat-message-content"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.content) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('time', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('time', {
           directives: [{
             name: "show",
             rawName: "v-show",
             value: message.time !== '',
             expression: "message.time !== ''"
           }]
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.time) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(message.time) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
       }), 0)], 1)], 2);
     }), 0)], 1), _vm._v(" "), _c('div', {
       staticClass: "sc-chat-user-input uk-flex uk-flex-middle"
@@ -912,7 +912,7 @@ var render = function render() {
     staticClass: "uk-flex-1 sc-js-el-hide"
   }, [_c('ScCardTitle', {
     staticClass: "sc-actions-match"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tUsers / Rooms\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('client-only', [_c('ColumnToggle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tUsers / Rooms\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('client-only', [_c('ColumnToggle', {
     attrs: {
       "show-icon": "mdi-account-multiple",
       "hide-title": "Hide users",
@@ -944,27 +944,27 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSettings\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNew chat group\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tNew chat group\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdd User\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdd User\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSearch User\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])], 1), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSearch User\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])], 1), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-js-el-hide uk-flex uk-flex-1 uk-flex-column uk-height-1-1"
   }, [_c('div', {
     staticClass: "uk-margin-top"
   }, [_c('h5', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tUsers (" + _vm._s(_vm.users.length) + ")\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tUsers (" + _vm._s(_vm.users.length) + ")\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-list uk-list-divider uk-margin-small-top sc-list-clickable sc-list-align"
   }, _vm._l(_vm.users, function (user) {
     return _c('li', {
@@ -1014,9 +1014,9 @@ var render = function render() {
       staticClass: "uk-flex uk-flex-middle"
     }, [_c('div', {
       staticClass: "uk-width-expand"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.firstName) + " " + _vm._s(user.lastName) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.firstName) + " " + _vm._s(user.lastName) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('div', {
       staticClass: "sc-list-secondary-text"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.moodMessage) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.moodMessage) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
       staticClass: "uk-width-auto"
     }, [_c('ul', {
       staticClass: "uk-hidden-hover uk-flex uk-flex-middle sc-padding-remove-left uk-margin-small-left"
@@ -1041,14 +1041,14 @@ var render = function render() {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])])]);
   }), 0)]), _vm._v(" "), _c('div', [_c('h5', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tRooms (" + _vm._s(_vm.rooms.length) + ")\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tRooms (" + _vm._s(_vm.rooms.length) + ")\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-subnav uk-subnav-pill uk-flex uk-flex-column uk-margin-small-top"
   }, _vm._l(_vm.rooms, function (room) {
     return _c('li', {
@@ -1069,12 +1069,12 @@ var render = function render() {
       }
     }, [_c('span', {
       staticClass: "uk-flex-1"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(room.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(room.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "uk-margin-small-left uk-text-small"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(" + _vm._s(room.users.length) + " users)\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(" + _vm._s(room.users.length) + " users)\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]);
   }), 0)])])], 1)])], 2)])], 1)]), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', [_c('h5', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\tUsers (" + _vm._s(_vm.users.length) + ")\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\tUsers (" + _vm._s(_vm.users.length) + ")\r\n\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-list uk-list-divider uk-margin-small-top sc-list-clickable sc-list-align"
   }, _vm._l(_vm.users, function (user) {
     return _c('li', {
@@ -1117,9 +1117,9 @@ var render = function render() {
       }
     })])]), _vm._v(" "), _c('div', {
       staticClass: "sc-list-body"
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(user.firstName) + " " + _vm._s(user.lastName) + "\n\t\t\t\t\t\t\t"), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(user.firstName) + " " + _vm._s(user.lastName) + "\r\n\t\t\t\t\t\t\t"), _c('div', {
       staticClass: "sc-list-secondary-text"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(user.moodMessage) + "\n\t\t\t\t\t\t\t")])])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(user.moodMessage) + "\r\n\t\t\t\t\t\t\t")])])]);
   }), 0)])], 1)], 2);
 };
 
@@ -1433,7 +1433,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "4642a3c7"
+  "2751c41e"
   
 )
 

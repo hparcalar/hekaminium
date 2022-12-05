@@ -61,7 +61,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tCircular Progress\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tCircular Progress\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto uk-grid-margin uk-flex-middle uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -90,7 +90,7 @@ var render = function render() {
     }
   })], 1)])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tUIkit Spinners\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tUIkit Spinners\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto uk-grid-margin uk-flex-middle uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -119,7 +119,7 @@ var render = function render() {
     }
   })])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top uk-position-relative"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tOverlay Spinners/Progress\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tOverlay Spinners/Progress\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-height-medium uk-flex-bottom uk-flex"
   }, [_c('div', {
     staticClass: "uk-child-width-auto@m uk-grid-margin uk-grid-medium uk-grid",
@@ -133,27 +133,27 @@ var render = function render() {
         return _vm.toggleRootOverlay();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tToggle Root Overlay\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tToggle Root Overlay\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         _vm.cardProgress = !_vm.cardProgress;
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tToggle Card Overlay\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('ScProgressOverlay', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tToggle Card Overlay\r\n\t\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('ScProgressOverlay', {
     attrs: {
       "active": _vm.cardProgress
     }
-  })], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tLinear Progress\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', {
+  })], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tLinear Progress\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', [_c('ScProgressBar', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', [_c('ScProgressBar', {
     attrs: {
       "color": "sc-theme-complementary-bg",
       "value": 62
     }
   })], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tMedium\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tMedium\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
     attrs: {
       "size": "md"
     }
@@ -164,7 +164,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLarge\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLarge\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
     attrs: {
       "size": "lg"
     }
@@ -175,7 +175,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tGroup\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tGroup\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('ScProgressLinear', {
     attrs: {
@@ -186,23 +186,23 @@ var render = function render() {
       "value": _vm.progressGroup.bar1,
       "color": "md-bg-red-400"
     }
-  }, [_c('ScProgressLabel', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar1) + "%\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScProgressBar', {
+  }, [_c('ScProgressLabel', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar1) + "%\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScProgressBar', {
     attrs: {
       "value": _vm.progressGroup.bar2,
       "color": "md-bg-amber-400"
     }
-  }, [_c('ScProgressLabel', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar2) + "%\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScProgressBar', {
+  }, [_c('ScProgressLabel', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar2) + "%\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScProgressBar', {
     attrs: {
       "value": _vm.progressGroup.bar3,
       "color": "md-bg-light-green-400"
     }
-  }, [_c('ScProgressLabel', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar3) + "%\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_c('ScProgressLabel', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.progressGroup.bar3) + "%\r\n\t\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('ScProgressLinear', {
     scopedSlots: _vm._u([{
       key: "label",
       fn: function () {
-        return [_c('ScProgressLabel', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tProgress Label\n\t\t\t\t\t\t\t\t\t\t")])];
+        return [_c('ScProgressLabel', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tProgress Label\r\n\t\t\t\t\t\t\t\t\t\t")])];
       },
       proxy: true
     }])
@@ -213,7 +213,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tIndeterminate\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tIndeterminate\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
     attrs: {
       "indeterminate": ""
     }
@@ -223,7 +223,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDynamic progress\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDynamic progress\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScProgressLinear', {
     attrs: {
       "size": "md"
     }
@@ -232,7 +232,7 @@ var render = function render() {
       "value": _vm.dynamicVal,
       "color": _vm.dynamicColor
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tUIkit Progress\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('progress', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tUIkit Progress\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('progress', {
     staticClass: "uk-progress",
     attrs: {
       "value": "10",
@@ -343,7 +343,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "300f8ad2"
+  "06a86f34"
   
 )
 

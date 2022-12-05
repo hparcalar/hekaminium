@@ -26,9 +26,9 @@ var render = function render() {
     staticClass: "mdi mdi-bullhorn sc-color-primary sc-icon-28 uk-display-inline-block"
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tAnnouncements\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tAnnouncements\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-purple-600 uk-position-absolute uk-position-top-right uk-margin-small-top uk-margin-small-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t24\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t24\r\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "md-bg-indigo-700"
   }, [_c('a', {
     staticClass: "uk-display-block uk-text-center sc-padding-medium uk-position-relative",
@@ -39,9 +39,9 @@ var render = function render() {
     staticClass: "mdi mdi-forum-outline sc-light sc-icon-28 uk-display-inline-block"
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-remove sc-light"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tGeneral\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tGeneral\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-white sc-color-primary uk-position-absolute uk-position-top-right uk-margin-small-top uk-margin-small-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t12\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t12\r\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('a', {
     staticClass: "uk-display-block uk-text-center sc-padding-medium uk-position-relative",
     attrs: {
       "href": "javascript:void(0)"
@@ -50,9 +50,9 @@ var render = function render() {
     staticClass: "mdi mdi-bug sc-color-primary sc-icon-28 uk-display-inline-block"
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBugs\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBugs\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-red-600 uk-position-absolute uk-position-top-right uk-margin-small-top uk-margin-small-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t46\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t46\r\n\t\t\t\t\t\t\t")])])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('a', {
     staticClass: "uk-display-block uk-text-center sc-padding-medium uk-position-relative",
     attrs: {
       "href": "javascript:void(0)"
@@ -61,13 +61,13 @@ var render = function render() {
     staticClass: "mdi mdi-thought-bubble-outline sc-color-primary sc-icon-28 uk-display-inline-block"
   }), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tOff Topic\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tOff Topic\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "uk-badge md-bg-light-green-600 uk-position-absolute uk-position-top-right uk-margin-small-top uk-margin-small-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t118\n\t\t\t\t\t\t\t")])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-4-5@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('h3', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t118\r\n\t\t\t\t\t\t\t")])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-4-5@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('h3', {
     staticClass: "uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tFrequently Asked Questions\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tFrequently Asked Questions\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tenetur!\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, tenetur!\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-accordion-alt uk-margin-large-top",
     attrs: {
       "data-uk-accordion": ""
@@ -79,7 +79,7 @@ var render = function render() {
       staticClass: "uk-accordion-title"
     }, [_c('span', {
       staticClass: "uk-text-muted uk-margin-small-right"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(index + 1) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(post.title) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(index + 1) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(post.title) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "uk-accordion-content"
     }, [_c('div', {
       staticClass: "uk-grid-medium",
@@ -88,8 +88,8 @@ var render = function render() {
       }
     }, [_c('div', {
       staticClass: "uk-width-expand@m"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(post.content) + "\n\t\t\t\t\t\t\t\t\t\t\t")])])])]);
-  }), 0)])], 1)], 1), _vm._ssrNode(" <div class=\"uk-width-1-5@l\"><h4 class=\"uk-heading-line\"><span>Categories</span></h4> <ul class=\"uk-list uk-list-divider uk-margin-remove\"><li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-headphones\"></i></div> <div class=\"sc-list-body\"><a class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\n\t\t\t\t\t\t\t\t\t\tCategory 1\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-tag-heart\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\n\t\t\t\t\t\t\t\t\t\tCategory 2\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-mushroom\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\n\t\t\t\t\t\t\t\t\t\tCategory 3\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-access-point\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\n\t\t\t\t\t\t\t\t\t\tCategory 4\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-cake\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\n\t\t\t\t\t\t\t\t\t\tCategory 5\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\n\t\t\t\t\t\t\t\t\t</span></a></div></li></ul></div>")], 2)], 2)]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(post.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])]);
+  }), 0)])], 1)], 1), _vm._ssrNode(" <div class=\"uk-width-1-5@l\"><h4 class=\"uk-heading-line\"><span>Categories</span></h4> <ul class=\"uk-list uk-list-divider uk-margin-remove\"><li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-headphones\"></i></div> <div class=\"sc-list-body\"><a class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\t\t\t\tCategory 1\r\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-tag-heart\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\t\t\t\tCategory 2\r\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-mushroom\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\t\t\t\tCategory 3\r\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-access-point\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\t\t\t\tCategory 4\r\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t</span></a></div></li> <li class=\"sc-list-group\"><div class=\"sc-list-addon\"><i class=\"mdi mdi-cake\"></i></div> <div class=\"sc-list-body\"><a href=\"javascript:void(0)\" class=\"uk-flex-column sc-flex-items-left\"><span class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\t\t\t\tCategory 5\r\n\t\t\t\t\t\t\t\t\t</span> <span class=\"sc-list-secondary-text\">\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit.\r\n\t\t\t\t\t\t\t\t\t</span></a></div></li></ul></div>")], 2)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -153,7 +153,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "61626e07"
+  "2aa8ea44"
   
 )
 

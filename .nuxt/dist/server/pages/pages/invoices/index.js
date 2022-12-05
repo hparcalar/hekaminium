@@ -15,7 +15,7 @@ var render = function render() {
 
   return _c('h5', {
     staticClass: "uk-flex uk-flex-middle md-color-grey-500 uk-height-1-1 uk-flex-center"
-  }, [_vm._ssrNode("\n\t\tOpen invoice from the list.\n\t")]);
+  }, [_vm._ssrNode("\r\n\t\tOpen invoice from the list.\r\n\t")]);
 };
 
 var staticRenderFns = [];
@@ -66,7 +66,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2382cb98"
+  "5ecb8da2"
   
 )
 

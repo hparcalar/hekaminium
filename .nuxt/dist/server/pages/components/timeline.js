@@ -987,7 +987,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -1369,7 +1369,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2f99d632"
+  "25f8a862"
   
 )
 
@@ -1401,7 +1401,7 @@ var render = function render() {
       staticClass: "sc-timeline-item"
     }, [_c('div', {
       staticClass: "sc-timeline-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.date) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.date) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1416,14 +1416,14 @@ var render = function render() {
       class: ['sc-timeline-body', item.extraClass]
     }, [_c('h4', {
       staticClass: "sc-timeline-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.category,
         expression: "item.category"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tin\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tin\r\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1433,14 +1433,14 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1457,21 +1457,21 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.tasks.length,
         expression: "item.tasks.length"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1479,7 +1479,7 @@ var render = function render() {
         expression: "item.meta"
       }],
       staticClass: "sc-timeline-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1502,7 +1502,7 @@ var render = function render() {
         expression: "item.content !== '' "
       }],
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1534,7 +1534,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1542,7 +1542,7 @@ var render = function render() {
           expression: "task.loggedTime !== '' "
         }],
         staticClass: "sc-list-secondary-text uk-text-small"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
     }), 0)])])]);
   }), 0)])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
@@ -1554,7 +1554,7 @@ var render = function render() {
       staticClass: "sc-timeline-item"
     }, [_c('div', {
       staticClass: "sc-timeline-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt1) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt1) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1569,14 +1569,14 @@ var render = function render() {
       class: ['sc-timeline-body', item.extraClass]
     }, [_c('h4', {
       staticClass: "sc-timeline-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.category,
         expression: "item.category"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tin\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tin\r\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1586,14 +1586,14 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1610,21 +1610,21 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.tasks.length,
         expression: "item.tasks.length"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1632,7 +1632,7 @@ var render = function render() {
         expression: "item.meta"
       }],
       staticClass: "sc-timeline-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1655,7 +1655,7 @@ var render = function render() {
         expression: "item.content !== '' "
       }],
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1687,7 +1687,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1695,7 +1695,7 @@ var render = function render() {
           expression: "task.loggedTime !== '' "
         }],
         staticClass: "sc-list-secondary-text uk-text-small"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
     }), 0)])])]);
   }), 0)])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
@@ -1707,7 +1707,7 @@ var render = function render() {
       staticClass: "sc-timeline-item"
     }, [_c('div', {
       staticClass: "sc-timeline-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt2) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt2) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1737,14 +1737,14 @@ var render = function render() {
       class: ['sc-timeline-body', item.extraClass]
     }, [_c('h4', {
       staticClass: "sc-timeline-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.category,
         expression: "item.category"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tin\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tin\r\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1754,14 +1754,14 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tcategory\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1778,21 +1778,21 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.tasks.length,
         expression: "item.tasks.length"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1800,7 +1800,7 @@ var render = function render() {
         expression: "item.meta"
       }],
       staticClass: "sc-timeline-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1823,7 +1823,7 @@ var render = function render() {
         expression: "item.content !== '' "
       }],
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1855,7 +1855,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1863,7 +1863,7 @@ var render = function render() {
           expression: "task.loggedTime !== '' "
         }],
         staticClass: "sc-list-secondary-text uk-text-small"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
     }), 0)])])]);
   }), 0)])], 1)], 2)])])]);
 };
@@ -2006,7 +2006,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4c532e46"
+  "82be35ee"
   
 )
 

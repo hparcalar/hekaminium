@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -1198,7 +1198,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -1580,7 +1580,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2f99d632"
+  "25f8a862"
   
 )
 
@@ -1702,7 +1702,7 @@ var render = function render() {
     }
   }, [_c('ScCardTitle', {
     key: _vm.selectedUser.id
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.fName) + " " + _vm._s(_vm.selectedUser.lName) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('transition', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.fName) + " " + _vm._s(_vm.selectedUser.lName) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('transition', {
     attrs: {
       "name": "slide-bottom-medium",
       "mode": "out-in"
@@ -1710,7 +1710,7 @@ var render = function render() {
   }, [_c('div', {
     key: _vm.selectedUser.id,
     staticClass: "sc-color-secondary uk-flex uk-flex-middle"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.company) + "\n\t\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._v(" "), _c('ScCardActions', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.company) + "\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._v(" "), _c('ScCardActions', {
     staticClass: "uk-visible@m"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-pencil",
@@ -1729,7 +1729,7 @@ var render = function render() {
     }
   })])], 1)], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tAddress\n\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('GmapMap', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tAddress\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('GmapMap', {
     staticClass: "sc-gmap",
     attrs: {
       "center": _vm.gmaps.center,
@@ -1762,7 +1762,7 @@ var render = function render() {
     staticClass: "sc-list-body"
   }, [_c('div', {
     staticClass: "sc-list-body-inner"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.email) + "\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.email) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1770,7 +1770,7 @@ var render = function render() {
     staticClass: "mdi mdi-phone"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.phone) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.phone) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1778,7 +1778,7 @@ var render = function render() {
     staticClass: "mdi mdi-office-building"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.company) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.company) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
   }, [_c('div', {
     staticClass: "sc-list-addon"
@@ -1788,7 +1788,7 @@ var render = function render() {
     staticClass: "sc-list-body"
   }, [_c('span', [_vm._v(_vm._s(_vm.selectedUser.address))]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.city) + "\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('h5', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.selectedUser.city) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('h5', {
     staticClass: "uk-heading-line"
   }, [_c('span', [_vm._v("Timeline")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-timeline"
@@ -1798,7 +1798,7 @@ var render = function render() {
       staticClass: "sc-timeline-item"
     }, [_c('div', {
       staticClass: "sc-timeline-date"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt1) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.dateAlt1) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1813,14 +1813,14 @@ var render = function render() {
       class: ['sc-timeline-body', item.extraClass]
     }, [_c('h4', {
       staticClass: "sc-timeline-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.title)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.category,
         expression: "item.category"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tin\n\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tin\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('a', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1830,14 +1830,14 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tcategory\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tcategory\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1854,21 +1854,21 @@ var render = function render() {
       attrs: {
         "href": item.titleLink
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.user)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.titleLink === '',
         expression: "item.titleLink === ''"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm._f("capitalize")(item.category)) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
         value: item.tasks.length,
         expression: "item.tasks.length"
       }]
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\thave completed 4 tasks\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1876,7 +1876,7 @@ var render = function render() {
         expression: "item.meta"
       }],
       staticClass: "sc-timeline-meta"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t23 comments; 14 pingbacks\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1899,7 +1899,7 @@ var render = function render() {
         expression: "item.content !== '' "
       }],
       staticClass: "uk-margin-remove"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(item.content) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1931,7 +1931,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1939,7 +1939,7 @@ var render = function render() {
           expression: "task.loggedTime !== '' "
         }],
         staticClass: "sc-list-secondary-text uk-text-small"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tLoged time: " + _vm._s(task.loggedTime) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]);
     }), 0)])])]);
   }), 0)])], 1)], 1)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-aside\" class=\"sc-page-aside-large md-bg-white sc-padding-remove uk-visible@m\">", "</div>", [_vm._ssrNode("<div class=\"sc-page-aside-header md-bg-grey-100 sc-border-bottom sc-padding\">", "</div>", [_c('ScInput', {
     attrs: {
@@ -1961,7 +1961,7 @@ var render = function render() {
       attrs: {
         "avatar-id": user.avatar
       }
-    })], 1)]), _vm._ssrNode(" <div class=\"sc-list-body\"><div><span class=\"sc-js-list-fName\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\n\t\t\t\t\t\t\t\t\t") + "</span> <span class=\"sc-js-list-lName\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\n\t\t\t\t\t\t\t\t\t") + "</span></div> <div class=\"sc-list-secondary-text sc-js-list-company\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\n\t\t\t\t\t\t\t\t") + "</div></div>")], 2);
+    })], 1)]), _vm._ssrNode(" <div class=\"sc-list-body\"><div><span class=\"sc-js-list-fName\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\r\n\t\t\t\t\t\t\t\t\t") + "</span> <span class=\"sc-js-list-lName\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\r\n\t\t\t\t\t\t\t\t\t") + "</span></div> <div class=\"sc-list-secondary-text sc-js-list-company\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\r\n\t\t\t\t\t\t\t\t") + "</div></div>")], 2);
   }), 0)])], 2)], 2), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', [_c('div', {
     staticClass: "sc-page-aside-body",
     attrs: {
@@ -1986,11 +1986,11 @@ var render = function render() {
       staticClass: "sc-list-body"
     }, [_c('div', [_c('span', {
       staticClass: "sc-js-list-fName"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.fName) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       staticClass: "sc-js-list-lName"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(user.lName) + "\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
       staticClass: "sc-list-secondary-text sc-js-list-company"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\n\t\t\t\t\t\t\t\t")])])]);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(user.company) + "\r\n\t\t\t\t\t\t\t\t")])])]);
   }), 0)])])], 1)], 2);
 };
 
@@ -2431,7 +2431,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "24c1304b"
+  "08207714"
   
 )
 

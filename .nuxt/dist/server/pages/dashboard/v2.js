@@ -24,9 +24,9 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tData Grid\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tData Grid\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-remove uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tDisplay and Edit Data\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tDisplay and Edit Data\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "md-bg-amber-600 uk-flex uk-flex-middle sc-padding-medium sc-padding-small-ends sc-round"
   }, [_c('i', {
     staticClass: "mdi mdi-grid md-color-white"
@@ -37,9 +37,9 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tMailbox\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tMailbox\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-remove uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tCheck Your Mail\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tCheck Your Mail\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "md-bg-green-600 uk-flex uk-flex-middle sc-padding-medium sc-padding-small-ends sc-round"
   }, [_c('i', {
     staticClass: "mdi mdi-email-outline md-color-white"
@@ -50,9 +50,9 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTask Board\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTask Board\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-remove uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tGet Things Done\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tGet Things Done\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "md-bg-red-600 uk-flex uk-flex-middle sc-padding-medium sc-padding-small-ends sc-round"
   }, [_c('i', {
     staticClass: "mdi mdi-bug md-color-white"
@@ -63,13 +63,13 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tChat\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tChat\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "sc-color-secondary uk-margin-remove uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tGet in Touch with Friends\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tGet in Touch with Friends\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "md-bg-deep-purple-600 uk-flex uk-flex-middle sc-padding-medium sc-padding-small-ends sc-round"
   }, [_c('i', {
     staticClass: "mdi mdi-message-outline md-color-white"
-  })])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tRevenue\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
+  })])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tRevenue\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -97,7 +97,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle uk-height-1-1 uk-flex-center"
   }, [_c('div', {
     staticClass: "sc-spinner"
-  })])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tEmail Subscribers\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
+  })])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tEmail Subscribers\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -125,7 +125,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle uk-height-1-1 uk-flex-center"
   }, [_c('div', {
     staticClass: "sc-spinner"
-  })])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tReturns\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
+  })])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tReturns\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -153,7 +153,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle uk-height-1-1 uk-flex-center"
   }, [_c('div', {
     staticClass: "sc-spinner"
-  })])])], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSales report\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  })])])], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSales report\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "sc-padding sc-padding-medium-ends md-bg-grey-100"
   }, [_c('div', {
     staticClass: "uk-flex-middle uk-grid-small uk-grid",
@@ -174,7 +174,7 @@ var render = function render() {
         return _vm.setChartPeriod('hours');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHours\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHours\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline sc-button-small",
     class: {
       'uk-active': _vm.activePeriod === 'week'
@@ -184,7 +184,7 @@ var render = function render() {
         return _vm.setChartPeriod('week');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tWeek\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tWeek\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline sc-button-small",
     class: {
       'uk-active': _vm.activePeriod === 'months'
@@ -194,7 +194,7 @@ var render = function render() {
         return _vm.setChartPeriod('months');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tMonths\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tMonths\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline sc-button-small",
     class: {
       'uk-active': _vm.activePeriod === 'year'
@@ -204,7 +204,7 @@ var render = function render() {
         return _vm.setChartPeriod('year');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tYears\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tYears\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-flex uk-width-auto@s"
   }, [_c('a', {
     attrs: {
@@ -251,7 +251,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle uk-height-1-1 uk-flex-center"
   }, [_c('div', {
     staticClass: "sc-spinner"
-  })])])], 1)])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tTop Referals\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
+  })])])], 1)])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tTop Referals\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('BillboardChart', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -287,21 +287,21 @@ var render = function render() {
     staticClass: "uk-table uk-table-small uk-table-divider"
   }, [_c('thead', [_c('tr', [_c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tRank\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Referral")]), _vm._v(" "), _c('th', [_vm._v("Visits")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tRank\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', [_vm._v("Referral")]), _vm._v(" "), _c('th', [_vm._v("Visits")])])]), _vm._v(" "), _c('tbody', [_c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t1\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Google")]), _vm._v(" "), _c('td', [_vm._v("125234")])]), _vm._v(" "), _c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t1\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Google")]), _vm._v(" "), _c('td', [_vm._v("125234")])]), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t2\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Bookmarks")]), _vm._v(" "), _c('td', [_vm._v("104234")])]), _vm._v(" "), _c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t2\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Bookmarks")]), _vm._v(" "), _c('td', [_vm._v("104234")])]), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t3\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Facebook")]), _vm._v(" "), _c('td', [_vm._v("78342")])]), _vm._v(" "), _c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t3\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Facebook")]), _vm._v(" "), _c('td', [_vm._v("78342")])]), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t4\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Envato")]), _vm._v(" "), _c('td', [_vm._v("41895")])]), _vm._v(" "), _c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t4\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Envato")]), _vm._v(" "), _c('td', [_vm._v("41895")])]), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t5\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Twitter")]), _vm._v(" "), _c('td', [_vm._v("23619")])]), _vm._v(" "), _c('tr', [_c('td', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t5\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Twitter")]), _vm._v(" "), _c('td', [_vm._v("23619")])]), _vm._v(" "), _c('tr', [_c('td', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t6\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Bing")]), _vm._v(" "), _c('td', [_vm._v("4268")])])])])], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t6\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("Bing")]), _vm._v(" "), _c('td', [_vm._v("4268")])])])])], 1)], 1)], 1)], 2), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tLatest Orders\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tLatest Orders\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('table', {
     staticClass: "uk-table uk-table-striped uk-table-hover uk-table-middle"
@@ -309,29 +309,29 @@ var render = function render() {
     staticClass: "uk-table-shrink"
   }), _vm._v(" "), _c('th', [_vm._v("Product")]), _vm._v(" "), _c('th', [_vm._v("Customer")]), _vm._v(" "), _c('th', [_vm._v("Order ID")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-center"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tQuantity\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tQuantity\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-text-right"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPrice\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPrice\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th', {
     staticClass: "uk-table-shrink"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tStatus\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th')])]), _vm._v(" "), _c('tbody', _vm._l(_vm.orders, function (order, index) {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tStatus\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('th')])]), _vm._v(" "), _c('tbody', _vm._l(_vm.orders, function (order, index) {
     return _c('tr', {
       key: order.name
     }, [_c('td', {
       staticClass: "uk-text-right"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(index + 1) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(index + 1) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
     }, [_c('a', {
       staticClass: "sc-text-semibold",
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.name) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.name) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-nowrap"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.user) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("# " + _vm._s(order.id))]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.user) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_vm._v("# " + _vm._s(order.id))]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-center"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.quantity) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.quantity) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', {
       staticClass: "uk-text-right"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t$" + _vm._s(order.price) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t$" + _vm._s(order.price) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('td', [_c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -339,7 +339,7 @@ var render = function render() {
         expression: "order.status === 'pending'"
       }],
       staticClass: "uk-label uk-label-warning"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -347,7 +347,7 @@ var render = function render() {
         expression: "order.status === 'canceled'"
       }],
       staticClass: "uk-label uk-label-danger"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -355,7 +355,7 @@ var render = function render() {
         expression: "order.status === 'on hold'"
       }],
       staticClass: "uk-label uk-label-default"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -363,7 +363,7 @@ var render = function render() {
         expression: "order.status === 'sent'"
       }],
       staticClass: "uk-label uk-label-success"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(order.status) + "\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('td', [_c('a', {
       staticClass: "mdi mdi-file-outline sc-icon-square",
       attrs: {
         "href": "javascript:void(0)"
@@ -1010,7 +1010,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d761484a"
+  "e3467e1c"
   
 )
 

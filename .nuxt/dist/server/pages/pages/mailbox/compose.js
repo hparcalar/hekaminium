@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -571,7 +571,7 @@ var render = function render() {
     }
   })])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSend\n\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSend\r\n\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "uk-margin-left mdi mdi-close sc-icon-square",
     attrs: {
       "href": "javascript:void(0)"
@@ -651,7 +651,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "3af807d0"
+  "3e5a2114"
   
 )
 

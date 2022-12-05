@@ -101,12 +101,12 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tFooter example\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tFooter example\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("mounted () {\n\tthis.$store.commit('setFooterActive', true);\n},\nbeforeDestroy () {\n\tthis.$store.commit('setFooterActive', false);\n}")])])])], 1)], 1)]);
+  }, [_c('code', [_vm._v("mounted () {\r\n\tthis.$store.commit('setFooterActive', true);\r\n},\r\nbeforeDestroy () {\r\n\tthis.$store.commit('setFooterActive', false);\r\n}")])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -148,7 +148,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7229e9e0"
+  "0aec7563"
   
 )
 

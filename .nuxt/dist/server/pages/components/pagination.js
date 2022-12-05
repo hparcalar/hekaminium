@@ -85,7 +85,7 @@ var render = function render() {
     }
   }, [_c('div', [_c('p', {
     staticClass: "sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCenter\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCenter\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-pagination uk-flex-center",
     attrs: {
       "data-uk-margin": ""
@@ -128,7 +128,7 @@ var render = function render() {
     }
   })])])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "sc-text-semibold"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRight\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRight\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ul', {
     staticClass: "uk-pagination uk-flex-right",
     attrs: {
       "data-uk-margin": ""
@@ -224,7 +224,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b4781442"
+  "8901f03c"
   
 )
 

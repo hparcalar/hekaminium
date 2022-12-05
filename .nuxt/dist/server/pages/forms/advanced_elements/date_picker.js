@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -221,7 +221,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tBasic\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tBasic\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr"
@@ -237,7 +237,7 @@ var render = function render() {
       },
       expression: "dpBasic"
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tHuman-readable date\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tHuman-readable date\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -258,7 +258,7 @@ var render = function render() {
       },
       expression: "dpHRDate"
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDatetime Picker\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDatetime Picker\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -276,7 +276,7 @@ var render = function render() {
       },
       expression: "dpDT"
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tLocale (FR)\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tLocale (FR)\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -295,7 +295,7 @@ var render = function render() {
       },
       expression: "dpLocale"
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSelecting a Range of Dates\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSelecting a Range of Dates\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -313,7 +313,7 @@ var render = function render() {
       },
       expression: "dpRangeVal"
     }
-  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tMultiple dates\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  })], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tMultiple dates\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -356,7 +356,7 @@ var render = function render() {
         _vm.dpMultiple = $event.target.value;
       }
     }
-  })])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tIcons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  })])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tIcons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -409,7 +409,7 @@ var render = function render() {
         _vm.dpIcons = $event.target.value;
       }
     }
-  })])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-child-width-1-3@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tInline\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
+  })])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-child-width-1-3@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tInline\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr",
@@ -528,7 +528,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7eccfd70"
+  "0e811d2c"
   
 )
 

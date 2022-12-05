@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -1534,7 +1534,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-blue-grey-600 sc-round sc-padding sc-padding-medium-ends\"><span data-uk-icon=\"icon: cart; ratio: 1.5\" class=\"uk-margin-right md-color-white uk-icon\"></span> <h4 class=\"md-color-white uk-margin-remove\">\n\t\t\t\t\t\t\tCheckout Form\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tBilling Details\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-blue-grey-600 sc-round sc-padding sc-padding-medium-ends\"><span data-uk-icon=\"icon: cart; ratio: 1.5\" class=\"uk-margin-right md-color-white uk-icon\"></span> <h4 class=\"md-color-white uk-margin-remove\">\r\n\t\t\t\t\t\t\tCheckout Form\r\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tBilling Details\r\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
     model: {
       value: _vm.userData.fName,
       callback: function ($$v) {
@@ -1606,7 +1606,7 @@ var render = function render() {
       },
       expression: "userData.zipCode"
     }
-  }, [_c('label', [_vm._v("Postal/Zip-Code")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<label class=\"uk-form-label\">\n\t\t\t\t\t\t\t\t\t\tCity\n\t\t\t\t\t\t\t\t\t</label> "), _vm._ssrNode("<div class=\"uk-form-controls\">", "</div>", [_c('client-only', [_c('Select2', {
+  }, [_c('label', [_vm._v("Postal/Zip-Code")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<label class=\"uk-form-label\">\r\n\t\t\t\t\t\t\t\t\t\tCity\r\n\t\t\t\t\t\t\t\t\t</label> "), _vm._ssrNode("<div class=\"uk-form-controls\">", "</div>", [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.usCities,
       "settings": {
@@ -1622,7 +1622,7 @@ var render = function render() {
       },
       expression: "userData.select2.city"
     }
-  })], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<label class=\"uk-form-label\">\n\t\t\t\t\t\t\t\t\t\tCountry\n\t\t\t\t\t\t\t\t\t</label> "), _vm._ssrNode("<div class=\"uk-form-controls\">", "</div>", [_c('client-only', [_c('Select2', {
+  })], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<label class=\"uk-form-label\">\r\n\t\t\t\t\t\t\t\t\t\tCountry\r\n\t\t\t\t\t\t\t\t\t</label> "), _vm._ssrNode("<div class=\"uk-form-controls\">", "</div>", [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.countries,
       "settings": {
@@ -1638,7 +1638,7 @@ var render = function render() {
       },
       expression: "userData.select2.country"
     }
-  })], 1)], 1)], 2)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tPayment Details\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid-small uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@s uk-width-1-4@m\">", "</div>", [_vm._ssrNode("<ul class=\"uk-list uk-list-condensed\">", "</ul>", _vm._l(_vm.paymentMethods, function (method) {
+  })], 1)], 1)], 2)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tPayment Details\r\n\t\t\t\t\t\t\t</legend> "), _vm._ssrNode("<div data-uk-grid class=\"uk-grid-small uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@s uk-width-1-4@m\">", "</div>", [_vm._ssrNode("<ul class=\"uk-list uk-list-condensed\">", "</ul>", _vm._l(_vm.paymentMethods, function (method) {
     return _vm._ssrNode("<li>", "</li>", [_c('PrettyRadio', {
       staticClass: "p-radio",
       attrs: {
@@ -1668,7 +1668,7 @@ var render = function render() {
     }), 0)], 1);
   }), 0)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-2-3@s uk-width-3-4@m more-info-section\">", "</div>", [_vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.userData.paymentMethod.name === 'CC' ? '' : 'none'
-  }) + ">", "</div>", [_vm._ssrNode("<div class=\"uk-margin\"><div class=\"cc-validate-wrapper\"><span class=\"cc-icon\"><img" + _vm._ssrAttr("src", _vm.ccIcon) + " alt width=\"52\" height=\"32\"></span> <label for=\"f-pay-cc-number\" class=\"uk-form-label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tCredit card number\n\t\t\t\t\t\t\t\t\t\t\t\t</label> <input id=\"f-pay-cc-number\" type=\"text\"" + _vm._ssrAttr("value", _vm.userData.paymentMethod.ccNumber) + " class=\"uk-input\"> <div class=\"uk-form-help-block\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tExamples: <a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t4000 0000 0000 0002\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t4026 0000 0000 0002\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t5018 0000 0009\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t5100 0000 0000 0008\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t6011 0000 0000 0004\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></div></div></div> "), _vm._ssrNode("<div class=\"uk-margin-large-top\">", "</div>", [_c('ScInput', {
+  }) + ">", "</div>", [_vm._ssrNode("<div class=\"uk-margin\"><div class=\"cc-validate-wrapper\"><span class=\"cc-icon\"><img" + _vm._ssrAttr("src", _vm.ccIcon) + " alt width=\"52\" height=\"32\"></span> <label for=\"f-pay-cc-number\" class=\"uk-form-label\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tCredit card number\r\n\t\t\t\t\t\t\t\t\t\t\t\t</label> <input id=\"f-pay-cc-number\" type=\"text\"" + _vm._ssrAttr("value", _vm.userData.paymentMethod.ccNumber) + " class=\"uk-input\"> <div class=\"uk-form-help-block\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tExamples: <a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t4000 0000 0000 0002\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t4026 0000 0000 0002\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t5018 0000 0009\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t5100 0000 0000 0008\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> | <a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t6011 0000 0000 0004\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></div></div></div> "), _vm._ssrNode("<div class=\"uk-margin-large-top\">", "</div>", [_c('ScInput', {
     attrs: {
       "state": "fixed",
       "mode": "outline"
@@ -1762,7 +1762,7 @@ var render = function render() {
       },
       expression: "userData.paymentMethod.skrillAccount"
     }
-  }, [_c('label', [_vm._v("Skrill Account")])])], 1)], 2)], 2)], 2), _vm._ssrNode(" <fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\"><legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tOrder info\n\t\t\t\t\t\t\t</legend> <div class=\"uk-width-1-1\"><div class=\"uk-overflow-auto\"><table class=\"uk-table uk-table-striped uk-table-small uk-table-middle\"><thead><tr><th class=\"uk-table-shrink\"></th> <th>Product Name</th> <th class=\"uk-table-shrink\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tQuantity\n\t\t\t\t\t\t\t\t\t\t\t\t</th> <th class=\"uk-table-shrink uk-text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tPrice\n\t\t\t\t\t\t\t\t\t\t\t\t</th> <th class=\"uk-table-shrink uk-text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t\t\t\t\t\t</th></tr></thead> <tbody><tr><td>1.</td> <td class=\"uk-text-nowrap\"><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct A\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, qui?\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t4\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$72.99\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$291.96\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr> <tr><td>2.</td> <td><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct B\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam culpa quas.\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t2\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$43.27\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$86.54\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr> <tr><td>3.</td> <td><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct C\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t7\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$120.00\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t$840.00\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr></tbody></table></div></div></fieldset> "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\n\t\t\t\t\t\t\t\tMessage to the seller\n\t\t\t\t\t\t\t</legend> "), _c('ScTextarea', {
+  }, [_c('label', [_vm._v("Skrill Account")])])], 1)], 2)], 2)], 2), _vm._ssrNode(" <fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\"><legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tOrder info\r\n\t\t\t\t\t\t\t</legend> <div class=\"uk-width-1-1\"><div class=\"uk-overflow-auto\"><table class=\"uk-table uk-table-striped uk-table-small uk-table-middle\"><thead><tr><th class=\"uk-table-shrink\"></th> <th>Product Name</th> <th class=\"uk-table-shrink\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tQuantity\r\n\t\t\t\t\t\t\t\t\t\t\t\t</th> <th class=\"uk-table-shrink uk-text-center\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tPrice\r\n\t\t\t\t\t\t\t\t\t\t\t\t</th> <th class=\"uk-table-shrink uk-text-center\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tTotal\r\n\t\t\t\t\t\t\t\t\t\t\t\t</th></tr></thead> <tbody><tr><td>1.</td> <td class=\"uk-text-nowrap\"><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct A\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, qui?\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t4\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$72.99\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$291.96\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr> <tr><td>2.</td> <td><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct B\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam culpa quas.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t2\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$43.27\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$86.54\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr> <tr><td>3.</td> <td><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tProduct C\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a> <p class=\"sc-color-secondary uk-margin-remove\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit.\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</p></td> <td class=\"uk-text-center\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t7\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$120.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td> <td class=\"uk-text-right\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t$840.00\r\n\t\t\t\t\t\t\t\t\t\t\t\t</td></tr></tbody></table></div></div></fieldset> "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white\">", "</fieldset>", [_vm._ssrNode("<legend class=\"uk-legend\">\r\n\t\t\t\t\t\t\t\tMessage to the seller\r\n\t\t\t\t\t\t\t</legend> "), _c('ScTextarea', {
     attrs: {
       "mode": "outline",
       "placeholder": "Write here additional requests..."
@@ -1774,7 +1774,7 @@ var render = function render() {
       },
       expression: "userData.info"
     }
-  })], 2), _vm._ssrNode(" <div class=\"uk-margin-large-top\"><button type=\"button\" class=\"sc-button sc-button-primary sc-button-large\">\n\t\t\t\t\t\t\t\tConfirm\n\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-large sc-button-flat\">\n\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t</button></div> <hr> <pre>" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre>")], 2)], 2)])])]);
+  })], 2), _vm._ssrNode(" <div class=\"uk-margin-large-top\"><button type=\"button\" class=\"sc-button sc-button-primary sc-button-large\">\r\n\t\t\t\t\t\t\t\tConfirm\r\n\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-large sc-button-flat\">\r\n\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t</button></div> <hr> <pre>" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre>")], 2)], 2)])])]);
 };
 
 var staticRenderFns = [];
@@ -1956,7 +1956,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "4d7e4abb"
+  "679162c5"
   
 )
 

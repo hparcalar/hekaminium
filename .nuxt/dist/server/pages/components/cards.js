@@ -603,19 +603,19 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     attrs: {
       "hover": ""
     }
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tHover\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tHover\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Header &amp; footer</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Header &amp; footer</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
     attrs: {
       "separator": ""
     }
@@ -623,7 +623,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBest Sellers\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBest Sellers\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "sc-actions"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-trash-can-outline",
@@ -635,7 +635,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  })])])]), _vm._v(" "), _c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem corporis est laborum molestiae nostrum officia optio pariatur perspiciatis provident quaerat ratione reprehenderit sequi similique soluta, veritatis voluptate voluptatem voluptates!\n\t\t\t\t\t\t")])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', [_c('div', {
+  })])])]), _vm._v(" "), _c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid autem corporis est laborum molestiae nostrum officia optio pariatur perspiciatis provident quaerat ratione reprehenderit sequi similique soluta, veritatis voluptate voluptatem voluptates!\r\n\t\t\t\t\t\t")])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', [_c('div', {
     staticClass: "uk-grid-small uk-flex-middle uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -658,21 +658,21 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-expand"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2016-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])]), _vm._v(" "), _c('ScCardFooter', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])]), _vm._v(" "), _c('ScCardFooter', [_c('a', {
     staticClass: "sc-button",
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRead more\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRead more\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
     staticClass: "md-bg-light-green-700 sc-light",
     attrs: {
       "separator": ""
     }
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\tSubtitle\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])]), _vm._v(" "), _c('ScCardFooter', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\tSubtitle\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])]), _vm._v(" "), _c('ScCardFooter', {
     staticClass: "md-bg-grey-50",
     attrs: {
       "separator": ""
@@ -682,17 +682,17 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tMore info\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tMore info\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-position-relative"
   }, [_c('ScCardHeader', [_c('div', {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBreakfast\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBreakfast\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "sc-actions"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-dots-vertical",
@@ -737,12 +737,12 @@ var render = function render() {
       "alt": "wynand-van-poortvliet-761831-unsplash",
       "data-uk-cover": ""
     }
-  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\n\t\t\t\t\t\t\t\tSubtitle\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('canvas', {
+  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_vm._v("\r\n\t\t\t\t\t\t\t\tSubtitle\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('canvas', {
     attrs: {
       "width": "100%",
       "height": "140px"
     }
-  })], 1), _vm._v(" "), _c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus expedita necessitatibus omnis quasi quibusdam. Consequuntur eaque esse et eum ipsa itaque laudantium libero magnam, minima modi nulla, odio odit, omnis quibusdam quidem quod reiciendis reprehenderit sunt ullam voluptate. Aperiam nemo nobis quo quos recusandae sint sunt tempora unde vero voluptate. Ad, aliquam animi atque autem beatae cum dignissimos dolor eius ex impedit iusto laboriosam neque pariatur, provident quis repudiandae vero? Aut hic laborum nobis sint totam! A accusantium assumenda at culpa debitis dignissimos esse eveniet fugit iusto minima molestiae necessitatibus non nulla officiis perspiciatis.\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardFooter', {
+  })], 1), _vm._v(" "), _c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus expedita necessitatibus omnis quasi quibusdam. Consequuntur eaque esse et eum ipsa itaque laudantium libero magnam, minima modi nulla, odio odit, omnis quibusdam quidem quod reiciendis reprehenderit sunt ullam voluptate. Aperiam nemo nobis quo quos recusandae sint sunt tempora unde vero voluptate. Ad, aliquam animi atque autem beatae cum dignissimos dolor eius ex impedit iusto laboriosam neque pariatur, provident quis repudiandae vero? Aut hic laborum nobis sint totam! A accusantium assumenda at culpa debitis dignissimos esse eveniet fugit iusto minima molestiae necessitatibus non nulla officiis perspiciatis.\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardFooter', {
     attrs: {
       "separator": ""
     }
@@ -751,7 +751,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRead more\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRead more\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
     staticClass: "sc-light uk-margin-medium-bottom uk-flex uk-cover-container uk-cover-bottom uk-flex-column"
   }, [_c('img', {
     directives: [{
@@ -786,12 +786,12 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tMore info\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tMore info\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-button sc-button-flat md-color-light-blue-500",
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tShare\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Actions</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('Transition', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tShare\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Actions</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('Transition', {
     attrs: {
       "name": "scale-up"
     },
@@ -812,7 +812,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
     staticClass: "sc-actions-icon mdi",
     class: {
       'mdi-window-minimize': !_vm.cardACollapsed,
@@ -849,7 +849,7 @@ var render = function render() {
       value: !_vm.cardACollapsed,
       expression: "!cardACollapsed"
     }]
-  }, [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\n\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\r\n\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     attrs: {
       "loading": _vm.cardCLoading
     }
@@ -861,9 +861,9 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1 uk-overflow-hidden"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', {
     staticClass: "uk-text-truncate"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, voluptatum.\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, voluptatum.\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', {
     staticClass: "uk-margin-left"
   }, [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-refresh",
@@ -883,7 +883,7 @@ var render = function render() {
     attrs: {
       "loading": _vm.cardCLoading
     }
-  }, [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.cardCContent) + "\n\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('Transition', {
+  }, [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.cardCContent) + "\r\n\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('Transition', {
     attrs: {
       "name": "scale-up"
     },
@@ -904,7 +904,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
     staticClass: "sc-actions-icon mdi",
     class: {
       'mdi-window-minimize': !_vm.cardDCollapsed,
@@ -941,7 +941,7 @@ var render = function render() {
       value: !_vm.cardDCollapsed,
       expression: "!cardDCollapsed"
     }]
-  }, [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\n\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\r\n\t\t\t\t\t\t\t\t\t")])], 1)], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     attrs: {
       "full-screen": _vm.cardBFullScreen
     }
@@ -953,11 +953,11 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-01-01"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tJan 01, 2021\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tJan 01, 2021\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-fullscreen",
     class: {
       'mdi-fullscreen': !_vm.cardBFullScreen,
@@ -972,13 +972,13 @@ var render = function render() {
         _vm.cardBFullScreen = !_vm.cardBFullScreen;
       }
     }
-  })])], 1)]), _vm._v(" "), _c('ScCardContent', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\n\t\t\t\t\t\t\t\t"), _c('div', {
+  })])], 1)]), _vm._v(" "), _c('ScCardContent', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi atque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita fugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis non nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut voluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis reprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos eum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum, sapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum, labore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias quae.\r\n\t\t\t\t\t\t\t\t"), _c('div', {
     staticClass: "uk-margin-top sc-card-fs-hidden"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tContent invisible when card is in fullscreen mode.\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tContent invisible when card is in fullscreen mode.\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "sc-card-content-more sc-border-top uk-margin-top sc-padding-top"
   }, [_c('h4', {
     staticClass: "uk-margin-bottom-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tContent visible when card is in fullscreen mode.\n\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam at debitis inventore itaque labore nostrum? Aspernatur, consequuntur, rerum. Esse explicabo fugit illo in ipsam iusto laborum, magnam minima non odio, perspiciatis placeat possimus praesentium quidem saepe similique vel voluptatum! Aliquam aspernatur corporis deserunt doloremque est eum fugit illum ipsa maxime minus molestias numquam, obcaecati possimus quas reiciendis sint unde voluptatum? Adipisci corporis culpa delectus, dolore eaque esse hic, ipsam laboriosam, nobis quasi quod ratione repellat repellendus ullam voluptate? Ab amet, atque corporis cupiditate deleniti eaque eius est eum eveniet ex excepturi fugiat in laboriosam minima necessitatibus nemo nisi nulla odio perferendis placeat porro praesentium quae quas quibusdam repellat, rerum sint soluta vitae, voluptatem voluptatum! Consectetur culpa cupiditate, eius maxime neque nobis odit possimus qui reiciendis repellat, sed tempore tenetur veritatis! Aliquam at blanditiis distinctio doloremque eos incidunt iste perspiciatis provident quos rem, repellendus reprehenderit rerum suscipit tempora ullam vero, voluptates? Aliquid blanditiis delectus deleniti, dolor doloribus eum explicabo iste laboriosam nisi nostrum odio odit possimus quidem repellat voluptas? Ab aliquam animi architecto blanditiis delectus dicta dolor doloribus earum, eveniet excepturi expedita inventore maxime minus molestiae nesciunt nihil nisi nulla officia optio provident quasi quis quod rem repellendus soluta veniam.\n\t\t\t\t\t\t\t\t")])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tContent visible when card is in fullscreen mode.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam at debitis inventore itaque labore nostrum? Aspernatur, consequuntur, rerum. Esse explicabo fugit illo in ipsam iusto laborum, magnam minima non odio, perspiciatis placeat possimus praesentium quidem saepe similique vel voluptatum! Aliquam aspernatur corporis deserunt doloremque est eum fugit illum ipsa maxime minus molestias numquam, obcaecati possimus quas reiciendis sint unde voluptatum? Adipisci corporis culpa delectus, dolore eaque esse hic, ipsam laboriosam, nobis quasi quod ratione repellat repellendus ullam voluptate? Ab amet, atque corporis cupiditate deleniti eaque eius est eum eveniet ex excepturi fugiat in laboriosam minima necessitatibus nemo nisi nulla odio perferendis placeat porro praesentium quae quas quibusdam repellat, rerum sint soluta vitae, voluptatem voluptatum! Consectetur culpa cupiditate, eius maxime neque nobis odit possimus qui reiciendis repellat, sed tempore tenetur veritatis! Aliquam at blanditiis distinctio doloremque eos incidunt iste perspiciatis provident quos rem, repellendus reprehenderit rerum suscipit tempora ullam vero, voluptates? Aliquid blanditiis delectus deleniti, dolor doloribus eum explicabo iste laboriosam nisi nostrum odio odit possimus quidem repellat voluptas? Ab aliquam animi architecto blanditiis delectus dicta dolor doloribus earum, eveniet excepturi expedita inventore maxime minus molestiae nesciunt nihil nisi nulla officia optio provident quasi quis quod rem repellendus soluta veniam.\r\n\t\t\t\t\t\t\t\t")])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     attrs: {
       "full-screen": _vm.cardFFullScreen
     }
@@ -1001,11 +1001,11 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-01-01"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tJan 01, 2021\n\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('ScCardContent', [_c('ScCardBody', [_c('p', [_vm._v("\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi\n\t\t\t\t\t\t\t\t\tatque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita\n\t\t\t\t\t\t\t\t\tfugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis\n\t\t\t\t\t\t\t\t\tnon nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut\n\t\t\t\t\t\t\t\t\tvoluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis\n\t\t\t\t\t\t\t\t\treprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos\n\t\t\t\t\t\t\t\t\teum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum,\n\t\t\t\t\t\t\t\t\tsapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum,\n\t\t\t\t\t\t\t\t\tlabore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias\n\t\t\t\t\t\t\t\t\tquae.\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tJan 01, 2021\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1)])]), _vm._v(" "), _c('ScCardContent', [_c('ScCardBody', [_c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet animi\r\n\t\t\t\t\t\t\t\t\tatque aut consectetur dolor doloremque eaque eius error esse exercitationem expedita\r\n\t\t\t\t\t\t\t\t\tfugiat id ipsa, itaque iusto laudantium maiores modi molestiae nam nesciunt nobis\r\n\t\t\t\t\t\t\t\t\tnon nostrum numquam obcaecati perferendis provident qui suscipit tempora tempore ut\r\n\t\t\t\t\t\t\t\t\tvoluptates voluptatum! Ad aut excepturi, fugit harum ipsum quia reiciendis\r\n\t\t\t\t\t\t\t\t\treprehenderit? Aliquam animi consectetur debitis, delectus deleniti doloribus eos\r\n\t\t\t\t\t\t\t\t\teum explicabo facilis hic laudantium maxime molestias, nemo quia quisquam rerum,\r\n\t\t\t\t\t\t\t\t\tsapiente sunt. Accusantium, at autem consequatur dolor earum inventore ipsa ipsum,\r\n\t\t\t\t\t\t\t\t\tlabore nam neque numquam quam quod totam ullam veritatis. Fugit modi molestias\r\n\t\t\t\t\t\t\t\t\tquae.\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
     staticClass: "sc-card-fs-hidden",
     attrs: {
       "href": "javascript:void(0)"
@@ -1020,95 +1020,95 @@ var render = function render() {
     staticClass: "sc-card-content-more sc-border-top uk-margin-top sc-padding-top"
   }, [_c('h4', {
     staticClass: "uk-margin-bottom-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tContent visible when card is in fullscreen mode.\n\t\t\t\t\t\t\t\t\t")]), _vm._v("\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam at debitis inventore itaque labore nostrum? Aspernatur, consequuntur, rerum. Esse explicabo fugit illo in ipsam iusto laborum, magnam minima non odio, perspiciatis placeat possimus praesentium quidem saepe similique vel voluptatum! Aliquam aspernatur corporis deserunt doloremque est eum fugit illum ipsa maxime minus molestias numquam, obcaecati possimus quas reiciendis sint unde voluptatum? Adipisci corporis culpa delectus, dolore eaque esse hic, ipsam laboriosam, nobis quasi quod ratione repellat repellendus ullam voluptate? Ab amet, atque corporis cupiditate deleniti eaque eius est eum eveniet ex excepturi fugiat in laboriosam minima necessitatibus nemo nisi nulla odio perferendis placeat porro praesentium quae quas quibusdam repellat, rerum sint soluta vitae, voluptatem voluptatum! Consectetur culpa cupiditate, eius maxime neque nobis odit possimus qui reiciendis repellat, sed tempore tenetur veritatis! Aliquam at blanditiis distinctio doloremque eos incidunt iste perspiciatis provident quos rem, repellendus reprehenderit rerum suscipit tempora ullam vero, voluptates? Aliquid blanditiis delectus deleniti, dolor doloribus eum explicabo iste laboriosam nisi nostrum odio odit possimus quidem repellat voluptas? Ab aliquam animi architecto blanditiis delectus dicta dolor doloribus earum, eveniet excepturi expedita inventore maxime minus molestiae nesciunt nihil nisi nulla officia optio provident quasi quis quod rem repellendus soluta veniam.\n\t\t\t\t\t\t\t\t")])])], 1)], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Style modifiers</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tContent visible when card is in fullscreen mode.\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v("\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam at debitis inventore itaque labore nostrum? Aspernatur, consequuntur, rerum. Esse explicabo fugit illo in ipsam iusto laborum, magnam minima non odio, perspiciatis placeat possimus praesentium quidem saepe similique vel voluptatum! Aliquam aspernatur corporis deserunt doloremque est eum fugit illum ipsa maxime minus molestias numquam, obcaecati possimus quas reiciendis sint unde voluptatum? Adipisci corporis culpa delectus, dolore eaque esse hic, ipsam laboriosam, nobis quasi quod ratione repellat repellendus ullam voluptate? Ab amet, atque corporis cupiditate deleniti eaque eius est eum eveniet ex excepturi fugiat in laboriosam minima necessitatibus nemo nisi nulla odio perferendis placeat porro praesentium quae quas quibusdam repellat, rerum sint soluta vitae, voluptatem voluptatum! Consectetur culpa cupiditate, eius maxime neque nobis odit possimus qui reiciendis repellat, sed tempore tenetur veritatis! Aliquam at blanditiis distinctio doloremque eos incidunt iste perspiciatis provident quos rem, repellendus reprehenderit rerum suscipit tempora ullam vero, voluptates? Aliquid blanditiis delectus deleniti, dolor doloribus eum explicabo iste laboriosam nisi nostrum odio odit possimus quidem repellat voluptas? Ab aliquam animi architecto blanditiis delectus dicta dolor doloribus earum, eveniet excepturi expedita inventore maxime minus molestiae nesciunt nihil nisi nulla officia optio provident quasi quis quod rem repellendus soluta veniam.\r\n\t\t\t\t\t\t\t\t")])])], 1)], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Style modifiers</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-card-primary"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tprimary\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tprimary\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-card-secondary"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tsecondary\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tsecondary\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "md-bg-teal-800 uk-card-light"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tteal\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tteal\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "md-bg-light-green-800 uk-card-light"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tlight green\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tlight green\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "md-bg-purple-800 uk-card-light"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tpurple\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tpurple\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "md-bg-yellow-700 uk-card-light"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tyellow\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Size modifiers</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid-medium uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tyellow\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.")])])], 1)], 1)], 2), _vm._ssrNode(" <h4 class=\"uk-margin-bottom uk-margin-large-top uk-heading-line\"><span>Size modifiers</span></h4> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid-medium uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-card-small"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSmall\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSmall\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard class=\"uk-card-small\"></ScCard>...")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard class=\"uk-card-small\"></ScCard>...")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', {
     staticClass: "uk-card-large"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tLarge\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tLarge\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard class=\"uk-card-large\">...</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard class=\"uk-card-large\">...</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-mini"
-  }, [_vm._v("\n\t\t\t\t\t\t\tMini padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tMini padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-mini"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-mini\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-mini\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-mini\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-mini\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\tSmall padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tSmall padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-small"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-small\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-small\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-small\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-small\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\tMedium padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tMedium padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-medium"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-medium\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-medium\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-medium\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-medium\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\tLarge padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tLarge padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-large"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-large\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-large\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-large\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-large\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-ends"
-  }, [_vm._v("\n\t\t\t\t\t\t\tTop/Bottom padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tTop/Bottom padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-bottom sc-padding-remove-left sc-padding-remove-right"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-ends\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-bottom sc-padding-remove-left sc-padding-remove-right\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-ends\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-bottom sc-padding-remove-left sc-padding-remove-right\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', {
     staticClass: "sc-padding-small sc-padding-ends"
-  }, [_vm._v("\n\t\t\t\t\t\t\tMixed padding\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tMixed padding\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', {
     staticClass: "sc-padding-small sc-padding-remove-top"
   }, [_c('pre', {
     staticClass: "sc-js-highlight"
-  }, [_c('code', [_vm._v("<ScCard>\n\t<ScCardTitle class=\"sc-padding-small sc-padding-ends\">...</ScCardTitle>\n\t<ScCardBody class=\"sc-padding-small sc-padding-remove-top\">...</ScCardBody>\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
+  }, [_c('code', [_vm._v("<ScCard>\r\n\t<ScCardTitle class=\"sc-padding-small sc-padding-ends\">...</ScCardTitle>\r\n\t<ScCardBody class=\"sc-padding-small sc-padding-remove-top\">...</ScCardBody>\r\n</ScCard>")])]), _vm._v(" "), _c('p', [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum "), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tdolor\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tdolor\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -1193,7 +1193,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "77744fae"
+  "0f7e706a"
   
 )
 

@@ -578,7 +578,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b79a63e8"
+  "0d6bc6cf"
   
 )
 
@@ -670,7 +670,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-mendium sc-color-secondary uk-margin-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSelect:\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSelect:\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid uk-grid-medium",
     attrs: {
       "data-uk-grid": ""
@@ -682,23 +682,23 @@ var render = function render() {
         return _vm.selectState('co');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tColorado\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tColorado\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.selectState('id');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tIdaho\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tIdaho\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.selectState('tx');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tTexas\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tTexas\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-mendium sc-color-secondary uk-margin-top uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSelect (deselect others):\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSelect (deselect others):\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid uk-grid-medium",
     attrs: {
       "data-uk-grid": ""
@@ -710,14 +710,14 @@ var render = function render() {
         return _vm.selectState('pa', true);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tPensylwania\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tPensylwania\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.selectState('ny', true);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tNew York\n\t\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tNew York\r\n\t\t\t\t\t\t\t\t\t\t")])])])])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardHeader', {
     attrs: {
       "separator": _vm.vmMultiMap
     }
@@ -730,7 +730,7 @@ var render = function render() {
     staticClass: "uk-flex-1"
   }, [_c('h5', {
     staticClass: "uk-margin-remove"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSelect map to load\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSelect map to load\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-3@s"
   }, [_c('select', {
     staticClass: "uk-select",
@@ -744,11 +744,11 @@ var render = function render() {
     attrs: {
       "value": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSelect...\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSelect...\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "world_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tWorld\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('optgroup', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tWorld\r\n\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('optgroup', {
     attrs: {
       "label": "Countries"
     }
@@ -756,67 +756,67 @@ var render = function render() {
     attrs: {
       "value": "algeria_fr"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tAlgeria\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tAlgeria\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "argentina_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tArgentina\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tArgentina\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "brazil_br"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tBrazil\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tBrazil\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "canada_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tCanada\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tCanada\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "china_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tChina\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tChina\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "france_fr"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tFrance\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tFrance\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "germany_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tGermany\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tGermany\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "greece_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tGreece\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tGreece\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "india_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tIndia\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tIndia\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "iran_ir"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tIran\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tIran\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "iraq_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tIraq\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tIraq\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "poland_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPoland\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPoland\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "russia_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRussia\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRussia\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "tunisia_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tTunisia\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tTunisia\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "turkey_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tTurkey\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tTurkey\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "usa_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUSA\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('optgroup', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUSA\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('optgroup', {
     attrs: {
       "label": "Continents"
     }
@@ -824,27 +824,27 @@ var render = function render() {
     attrs: {
       "value": "africa_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tAfrica\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tAfrica\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "asia_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tAsia\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tAsia\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "australia_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tAustralia\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tAustralia\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "europe_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tEurope\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tEurope\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "north_america_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tNorth America\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tNorth America\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "south_america_en"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tSouth America\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tSouth America\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('ScCardBody', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -1174,7 +1174,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "2c066250"
+  "57eff499"
   
 )
 

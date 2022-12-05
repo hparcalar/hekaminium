@@ -89,7 +89,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\"><div class=\"sc-top-bar-content sc-padding-medium-top sc-padding-medium-bottom uk-flex-1\"><div class=\"uk-flex-1\"><h1 class=\"sc-top-bar-title\">\n\t\t\t\t\t\tIssue Tracker\n\t\t\t\t\t</h1> <span class=\"uk-text-muted\">\n\t\t\t\t\t\tScutum Admin\n\t\t\t\t\t</span></div> <div class=\"sc-actions uk-margin-left\"><a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-printer\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-archive\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-dots-vertical\"></a></div></div></div> "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('VueGoodTable', {
+  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\"><div class=\"sc-top-bar-content sc-padding-medium-top sc-padding-medium-bottom uk-flex-1\"><div class=\"uk-flex-1\"><h1 class=\"sc-top-bar-title\">\r\n\t\t\t\t\t\tIssue Tracker\r\n\t\t\t\t\t</h1> <span class=\"uk-text-muted\">\r\n\t\t\t\t\t\tScutum Admin\r\n\t\t\t\t\t</span></div> <div class=\"sc-actions uk-margin-left\"><a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-printer\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-archive\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-dots-vertical\"></a></div></div></div> "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('VueGoodTable', {
     attrs: {
       "columns": _vm.columns,
       "rows": _vm.issues,
@@ -107,13 +107,13 @@ var render = function render() {
         return [props.column.field === 'priority' ? _c('span', {
           staticClass: "uk-label",
           class: [_vm.priorityLabel(props.row.priority)]
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.priority) + "\n\t\t\t\t\t\t\t")]) : props.column.field === 'status' ? _c('span', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.priority) + "\r\n\t\t\t\t\t\t\t")]) : props.column.field === 'status' ? _c('span', {
           staticClass: "uk-label uk-label-outline"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.status) + "\n\t\t\t\t\t\t\t")]) : props.column.field === 'title' ? _c('nuxt-link', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.status) + "\r\n\t\t\t\t\t\t\t")]) : props.column.field === 'title' ? _c('nuxt-link', {
           attrs: {
             "to": '/pages/issues/details/' + props.row.id
           }
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.title) + "\n\t\t\t\t\t\t\t")]) : props.column.field === 'user' ? _c('span', [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.user) + "\n\t\t\t\t\t\t\t")]) : [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(props.formattedRow[props.column.field]) + "\n\t\t\t\t\t\t\t")]];
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.title) + "\r\n\t\t\t\t\t\t\t")]) : props.column.field === 'user' ? _c('span', [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(props.row.user) + "\r\n\t\t\t\t\t\t\t")]) : [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(props.formattedRow[props.column.field]) + "\r\n\t\t\t\t\t\t\t")]];
       }
     }])
   })], 1)], 1)], 1)], 2);
@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "318b0a34"
+  "54c5ad2a"
   
 )
 

@@ -24,50 +24,50 @@ var render = function render() {
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-text-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPersistent\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPersistent\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.persistent, false, false, true);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tWith icon\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tWith icon\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.withIcon);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLong text\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLong text\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.long);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tWith link\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tWith link\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.withLink);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tClick\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('h4', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tClick\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-large-top uk-heading-line"
   }, [_c('span', [_vm._v("Posititions")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@m uk-grid-divider",
@@ -81,42 +81,42 @@ var render = function render() {
         return _vm.showNotification(_vm.notification.default, 'top-left');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tTop Left\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tTop Left\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, 'top-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tTop Center\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tTop Center\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, 'top-right');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tTop Right\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tTop Right\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, 'bottom-left');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom Left\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom Left\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, 'bottom-center');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom Center\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom Center\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, 'bottom-right');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tBottom Right\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('h4', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tBottom Right\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('h4', {
     staticClass: "uk-margin-large-top uk-heading-line"
   }, [_c('span', [_vm._v("Status")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@m uk-grid-divider",
@@ -130,28 +130,28 @@ var render = function render() {
         return _vm.showNotification(_vm.notification.default, false, 'primary');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, false, 'success');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, false, 'danger');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
         return _vm.showNotification(_vm.notification.default, false, 'warning');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -208,7 +208,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1670cfb3"
+  "29f44a60"
   
 )
 

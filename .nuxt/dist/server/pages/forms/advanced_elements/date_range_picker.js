@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -369,7 +369,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1c6757c6"
+  "dfa3ab66"
   
 )
 
@@ -393,7 +393,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
     model: {
       value: _vm.drpDefault,
       callback: function ($$v) {
@@ -416,7 +416,7 @@ var render = function render() {
         return _vm.setRange();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tSet range\n\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tTime Enabled\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tSet range\r\n\t\t\t\t\t\t\t")])], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tTime Enabled\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
     attrs: {
       "config": {
         format: 'DD.MM.YYYY HH:mm',
@@ -437,7 +437,7 @@ var render = function render() {
     attrs: {
       "placeholder": "Pick a range..."
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tFuture date shortcuts\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tFuture date shortcuts\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
     attrs: {
       "config": {
         showShortcuts: true,
@@ -458,7 +458,7 @@ var render = function render() {
     attrs: {
       "placeholder": "Pick a range..."
     }
-  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tExtra content\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
+  })], 1)], 1)], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tExtra content\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('DateRangePicker', {
     attrs: {
       "config": _vm.drpExtraContent
     },
@@ -547,7 +547,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4ac77b9c"
+  "e4deb624"
   
 )
 

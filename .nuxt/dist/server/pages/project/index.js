@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -666,7 +666,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-3-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\n\t\t\t\t\t\t\tProje Tanımı\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<ul data-uk-tab><li class=\"uk-active\"><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\tGenel Bilgiler\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\tMalzeme Yönetimi\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\tNotlar\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\tServis\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\tProje Takvimi\n\t\t\t\t\t\t\t\t</a></li></ul> "), _vm._ssrNode("<ul class=\"uk-switcher\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-3-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\r\n\t\t\t\t\t\t\tProje Tanımı\r\n\t\t\t\t\t\t</h4></div> "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<ul data-uk-tab><li class=\"uk-active\"><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\tGenel Bilgiler\r\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\tMalzeme Yönetimi\r\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\tNotlar\r\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\tServis\r\n\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\tProje Takvimi\r\n\t\t\t\t\t\t\t\t</a></li></ul> "), _vm._ssrNode("<ul class=\"uk-switcher\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScInput', {
     model: {
       value: _vm.formData.projectCode,
       callback: function ($$v) {
@@ -771,15 +771,15 @@ var render = function render() {
       },
       expression: "formData.quantity"
     }
-  }, [_c('label', [_vm._v("Proje Adedi")])])], 1)], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\"><ul data-uk-tab=\"connect: .sc-switcher-left\" class=\"uk-tab-left\"><li class=\"uk-active\"><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tİhtiyaç Listesi\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tTalepler\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSiparişler\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSatın Alınanlar\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tTüketim Durumu\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li></ul></div> "), _vm._ssrNode("<div class=\"uk-width-3-4@l\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-switcher-left\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<div class=\"sc-padding-medium sc-padding-remove-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-left uk-grid\"><button type=\"button\" class=\"sc-button sc-button-success sc-button-small uk-margin-small-right\"><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Kalem\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
+  }, [_c('label', [_vm._v("Proje Adedi")])])], 1)], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@l\"><ul data-uk-tab=\"connect: .sc-switcher-left\" class=\"uk-tab-left\"><li class=\"uk-active\"><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tİhtiyaç Listesi\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tTalepler\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSiparişler\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSatın Alınanlar\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li> <li><a href=\"javascript:void(0)\">\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tTüketim Durumu\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</a></li></ul></div> "), _vm._ssrNode("<div class=\"uk-width-3-4@l\">", "</div>", [_vm._ssrNode("<ul class=\"uk-switcher sc-switcher-left\">", "</ul>", [_vm._ssrNode("<li class=\"uk-active\">", "</li>", [_vm._ssrNode("<div class=\"sc-padding-medium sc-padding-remove-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-left uk-grid\"><button type=\"button\" class=\"sc-button sc-button-success sc-button-small uk-margin-small-right\"><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Kalem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.selectedCostItemRow && _vm.selectedCostItemRow.id > 0 ? '' : 'none'
-  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDüzenle\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
+  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDüzenle\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.selectedCostItemIndexes.length > 0 ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSil\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-auto@s\" style=\"position: relative; float:right;\"><div id=\"sc-dt-buttons\"></div></div> "), _c('client-only', [_c('Datatable', {
+  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSil\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-auto@s\" style=\"position: relative; float:right;\"><div id=\"sc-dt-buttons\"></div></div> "), _c('client-only', [_c('Datatable', {
     ref: "costItemsTable",
     attrs: {
       "id": "sc-dt-cost-items-table",
@@ -905,23 +905,23 @@ var render = function render() {
     }
   }, [_c('label', [_vm._v("TL Bedeli")])])], 1)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<div class=\"sc-padding-medium sc-padding-remove-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-left uk-grid\"><button type=\"button\" class=\"sc-button sc-button-success sc-button-small uk-margin-small-right\"" + _vm._ssrStyle(null, null, {
     display: _vm.formData.projectStatus == 3 ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Talep\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
+  }) + "><span data-uk-icon=\"icon: plus\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tYeni Talep\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <hr class=\"uk-divider-vertical\" style=\"height:35px;\"> <div class=\"uk-button-group sc-padding-remove-left uk-width-expand\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.hasViewAuth('ItemDemandApproval') && _vm.selectedDemandRow && _vm.selectedDemandRow.id > 0 ? '' : 'none'
-  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDüzenle\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
+  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tDüzenle\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.demandsAreReadyForApprove ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: check\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOnayla\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
+  }) + "><span data-uk-icon=\"icon: check\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tOnayla\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.demandsAreReadyForDeny ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: ban\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tReddet\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
+  }) + "><span data-uk-icon=\"icon: ban\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tReddet\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.demandsAreReadyForDelete ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSil\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-auto@s\" style=\"position: relative; float:right;\"><div id=\"sc-dt-buttonsDemand\"></div></div> "), _c('client-only', [_c('Datatable', {
+  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSil\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-auto@s\" style=\"position: relative; float:right;\"><div id=\"sc-dt-buttonsDemand\"></div></div> "), _c('client-only', [_c('Datatable', {
     ref: "demandListTable",
     attrs: {
       "id": "sc-dt-buttons-table",
@@ -940,7 +940,7 @@ var render = function render() {
     on: {
       "initComplete": _vm.dtButtonsInitialize
     }
-  })], 1)], 2)], 2)]), _vm._ssrNode(" <li>Sipariş içerik</li> <li>\n\t\t\t\t\t\t\t\t\t\t\t\t\tSatın alınanlar içerik\n\t\t\t\t\t\t\t\t\t\t\t\t\t</li> <li>Tüketim içerik</li>")], 2)])], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScTextarea', {
+  })], 1)], 2)], 2)]), _vm._ssrNode(" <li>Sipariş içerik</li> <li>\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSatın alınanlar içerik\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t</li> <li>Tüketim içerik</li>")], 2)])], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScTextarea', {
     model: {
       value: _vm.formData.explanation,
       callback: function ($$v) {
@@ -968,11 +968,11 @@ var render = function render() {
     "height": "34px"
   }, null, {
     display: _vm.selectedServiceRow && _vm.selectedServiceRow.id > 0 ? '' : 'none'
-  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\tGörüntüle\n\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
+  }) + "><button type=\"button\" class=\"sc-button sc-button-default sc-button-small uk-width-1-4\" style=\"height:34px;\"><span data-uk-icon=\"icon: pencil\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\tGörüntüle\r\n\t\t\t\t\t\t\t\t\t\t\t</button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-small uk-width-1-4\"" + _vm._ssrStyle({
     "height": "34px"
   }, null, {
     display: _vm.selectedServiceIndexes.length > 0 ? '' : 'none'
-  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\tSil\n\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_c('client-only', [_c('Datatable', {
+  }) + "><span data-uk-icon=\"icon: trash\" class=\"uk-margin-small-right uk-icon\"></span>\r\n\t\t\t\t\t\t\t\t\t\t\t\tSil\r\n\t\t\t\t\t\t\t\t\t\t\t</button></div></div> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_c('client-only', [_c('Datatable', {
     ref: "serviceTable",
     attrs: {
       "id": "sc-dt-services-table",
@@ -1008,7 +1008,7 @@ var render = function render() {
       },
       expression: "formData.projectStatus"
     }
-  }, [_c('label', [_vm._v("Proje\n\t\t\t\t\t\t\t\t\t\t\tDurumu")])])], 1)], 1), _vm._ssrNode(" <div class=\"uk-margin-medium-top uk-width-expand@m\"><button type=\"button\" class=\"sc-button sc-button-primary sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: check\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: arrow-left\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-medium\"><span data-uk-icon=\"icon: trash\" class=\"uk-icon\"></span></button></div>")], 2)])], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"dlgDemand\" data-uk-modal stack=\"true\" class=\"uk-modal\">", "</div>", [_vm._ssrNode("<div uk-overflow-auto class=\"uk-modal-dialog uk-width-2-3\">", "</div>", [_vm._ssrNode("<div class=\"uk-modal-body\">", "</div>", [_vm.refreshDemandForm == true ? _c('ItemDemand', {
+  }, [_c('label', [_vm._v("Proje\r\n\t\t\t\t\t\t\t\t\t\t\tDurumu")])])], 1)], 1), _vm._ssrNode(" <div class=\"uk-margin-medium-top uk-width-expand@m\"><button type=\"button\" class=\"sc-button sc-button-primary sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: check\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-default sc-button-medium uk-margin-small-right\"><span data-uk-icon=\"icon: arrow-left\" class=\"uk-icon\"></span></button> <button type=\"button\" class=\"sc-button sc-button-danger sc-button-medium\"><span data-uk-icon=\"icon: trash\" class=\"uk-icon\"></span></button></div>")], 2)])], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"dlgDemand\" data-uk-modal stack=\"true\" class=\"uk-modal\">", "</div>", [_vm._ssrNode("<div uk-overflow-auto class=\"uk-modal-dialog uk-width-2-3\">", "</div>", [_vm._ssrNode("<div class=\"uk-modal-body\">", "</div>", [_vm.refreshDemandForm == true ? _c('ItemDemand', {
     attrs: {
       "record-id": _vm.selectedDemandRow.itemDemandId,
       "project-id": _vm.formData.id,
@@ -1095,7 +1095,7 @@ var ProjectFieldServicevue_type_template_id_204d497e_render = function render() 
     }
   }, [_vm._ssrNode("<div class=\"uk-width-3-3@l\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends sc-round sc-border md-bg-grey-100\"" + _vm._ssrStyle(null, null, {
     display: _vm.isDialog == false ? '' : 'none'
-  }) + "><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\n                    Servis Hizmeti\n                </h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@m\">", "</div>", [_c('ScInput', {
+  }) + "><span class=\"uk-margin-right md-color-gray-600 mdi mdi-office-building\"></span> <h4 class=\"md-color-gray-600 uk-margin-remove\">\r\n                    Servis Hizmeti\r\n                </h4></div> "), _vm._ssrNode("<form>", "</form>", [_vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium\">", "</fieldset>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@m uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@m\">", "</div>", [_c('ScInput', {
     attrs: {
       "read-only": true
     },
@@ -1128,7 +1128,7 @@ var ProjectFieldServicevue_type_template_id_204d497e_render = function render() 
       },
       expression: "fServiceDate"
     }
-  }, [_c('label', [_vm._v("Tarih")])])], 1)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium sc-padding-remove-top\">", "</fieldset>", [_vm._ssrNode("<legend>\n                        Yapılan İşler\n                    </legend> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-5-5@l\">", "</div>", [_c('ProjectFieldServiceDetail', {
+  }, [_c('label', [_vm._v("Tarih")])])], 1)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<fieldset class=\"uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium sc-padding-remove-top\">", "</fieldset>", [_vm._ssrNode("<legend>\r\n                        Yapılan İşler\r\n                    </legend> "), _vm._ssrNode("<div class=\"uk-margin-medium uk-margin-remove-left\">", "</div>", [_vm._ssrNode("<div class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-5-5@l\">", "</div>", [_c('ProjectFieldServiceDetail', {
     attrs: {
       "detail-object": _vm.selectedServiceDetail,
       "total-detail-count": _vm.details.length,
@@ -1346,7 +1346,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "09df5f0a"
+  "23af9dab"
   
 )
 
@@ -1566,7 +1566,7 @@ var ProjectFieldService_component = Object(componentNormalizer["a" /* default */
   false,
   ProjectFieldService_injectStyles,
   null,
-  "0c91ca0a"
+  "8582898c"
   
 )
 
@@ -2478,7 +2478,7 @@ var project_component = Object(componentNormalizer["a" /* default */])(
   false,
   project_injectStyles,
   null,
-  "8be118f0"
+  "9ffa9ede"
   
 )
 

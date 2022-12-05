@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -359,7 +359,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n                      " + _vm._s(checkbox.name) + "\n                    ")])], 1);
+    }), _vm._v("\r\n                      " + _vm._s(checkbox.name) + "\r\n                    ")])], 1);
   }), 0)])])])]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid"
   }, [_c('div', {
@@ -393,7 +393,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: plus"
     }
-  }), _vm._v("\n                    Grup Oluştur\n                  ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\r\n                    Grup Oluştur\r\n                  ")]), _vm._v(" "), _c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -415,12 +415,12 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: plus"
     }
-  }), _vm._v("\n                    Seçilen Gruba Ekle\n                  ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\r\n                    Seçilen Gruba Ekle\r\n                  ")]), _vm._v(" "), _c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: _vm.selectedDemandRow && _vm.selectedDemandRow.id > 0 && _vm.selectedDemandIndexes.length == 1,
-      expression: "\n                      selectedDemandRow &&\n                      selectedDemandRow.id > 0 &&\n                      selectedDemandIndexes.length == 1\n                    "
+      expression: "\r\n                      selectedDemandRow &&\r\n                      selectedDemandRow.id > 0 &&\r\n                      selectedDemandIndexes.length == 1\r\n                    "
     }],
     staticClass: "sc-button sc-button-warning sc-button-small uk-width-1-4",
     staticStyle: {
@@ -437,7 +437,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: list"
     }
-  }), _vm._v("\n                    Talep Detayı\n                  ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\r\n                    Talep Detayı\r\n                  ")]), _vm._v(" "), _c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -459,7 +459,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: ban"
     }
-  }), _vm._v("\n                    Reddet\n                  ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\r\n                    Reddet\r\n                  ")]), _vm._v(" "), _c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -478,7 +478,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: trash"
     }
-  }), _vm._v("\n                    Sil\n                  ")])])]), _vm._v(" "), _c('client-only', [_c('Datatable', {
+  }), _vm._v("\r\n                    Sil\r\n                  ")])])]), _vm._v(" "), _c('client-only', [_c('Datatable', {
     ref: "buttonsTable",
     attrs: {
       "id": "sc-dt-demands-waiting-for-approve-table",
@@ -499,7 +499,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-4@m"
-  }, [_c('h3', [_vm._v("\n                Teklif Kalemleri\n                "), _c('button', {
+  }, [_c('h3', [_vm._v("\r\n                Teklif Kalemleri\r\n                "), _c('button', {
     staticClass: "sc-button sc-button-primary sc-button-small uk-margin-small-right",
     staticStyle: {
       "float": "right"
@@ -515,7 +515,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: check"
     }
-  }), _vm._v("Teklif\n                  Oluştur\n                ")])]), _vm._v(" "), _c('div', [_c('client-only', [_c('Select2', {
+  }), _vm._v("Teklif\r\n                  Oluştur\r\n                ")])]), _vm._v(" "), _c('div', [_c('client-only', [_c('Select2', {
     attrs: {
       "options": _vm.firmList,
       "multiple": "",
@@ -596,11 +596,11 @@ var render = function render() {
         staticClass: "uk-width-4-5@m"
       }, [_c('p', {
         staticClass: "uk-padding-remove uk-margin-remove"
-      }, [_c('b', [_vm._v("Stok:")]), _vm._v(" " + _vm._s(demand.itemName) + ", "), _c('b', [_vm._v("Proje: ")]), _vm._v("\n                            " + _vm._s(demand.projectName) + "\n                          ")]), _vm._v(" "), _c('p', {
+      }, [_c('b', [_vm._v("Stok:")]), _vm._v(" " + _vm._s(demand.itemName) + ", "), _c('b', [_vm._v("Proje: ")]), _vm._v("\r\n                            " + _vm._s(demand.projectName) + "\r\n                          ")]), _vm._v(" "), _c('p', {
         staticClass: "uk-padding-remove uk-margin-remove"
-      }, [_c('b', [_vm._v("Açıklama:")]), _vm._v(" " + _vm._s(demand.itemExplanation) + "\n                          ")]), _vm._v(" "), _c('p', {
+      }, [_c('b', [_vm._v("Açıklama:")]), _vm._v(" " + _vm._s(demand.itemExplanation) + "\r\n                          ")]), _vm._v(" "), _c('p', {
         staticClass: "uk-padding-remove uk-margin-remove"
-      }, [_c('b', [_vm._v("Parça No:")]), _vm._v(" " + _vm._s(demand.partNo) + ", "), _c('b', [_vm._v("Boyut:")]), _vm._v("\n                            " + _vm._s(demand.partDimensions) + ", "), _c('b', [_vm._v("Miktar:")]), _vm._v("\n                            " + _vm._s(demand.quantity) + "\n                          ")])]), _vm._v(" "), _c('div', {
+      }, [_c('b', [_vm._v("Parça No:")]), _vm._v(" " + _vm._s(demand.partNo) + ", "), _c('b', [_vm._v("Boyut:")]), _vm._v("\r\n                            " + _vm._s(demand.partDimensions) + ", "), _c('b', [_vm._v("Miktar:")]), _vm._v("\r\n                            " + _vm._s(demand.quantity) + "\r\n                          ")])]), _vm._v(" "), _c('div', {
         staticClass: "uk-width-1-5@m"
       }, [_c('button', {
         staticClass: "sc-button sc-button-danger sc-button-small uk-margin-medium-top uk-margin-small-right",
@@ -1202,7 +1202,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "0e7f2af2"
+  "9acab3fc"
   
 )
 

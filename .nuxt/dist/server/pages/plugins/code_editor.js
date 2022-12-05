@@ -94,7 +94,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b3ee670c"
+  "ca1bb76c"
   
 )
 
@@ -214,7 +214,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6412f5f2"
+  "117e8192"
   
 )
 
@@ -300,7 +300,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCode Editor\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCode Editor\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('ScCardActions', [_c('a', {
     staticClass: "sc-actions-icon mdi mdi-content-save",
     attrs: {
       "href": "javascript:void(0)"
@@ -359,7 +359,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('div', {
     staticClass: "uk-flex-1 sc-js-el-hide"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tFiles\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('client-only', [_c('ColumnToggle', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tFiles\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('client-only', [_c('ColumnToggle', {
     attrs: {
       "show-icon": "mdi-file-outline",
       "hide-title": "Hide files",
@@ -397,9 +397,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tindex.html\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tindex.html\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 27/11/2019\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 27/11/2019\r\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'database.php'
@@ -421,9 +421,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tdatabase.php\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tdatabase.php\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 24/11/2019\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 24/11/2019\r\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'helpers.js'
@@ -445,9 +445,9 @@ var render = function render() {
         return _vm.openFile('helpers.js', 'js');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\thelpers.js\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\thelpers.js\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 22/11/2019\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 22/11/2019\r\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'data.json'
@@ -469,9 +469,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tdata.json\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tdata.json\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 22/11/2019\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 22/11/2019\r\n\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'app.vue'
@@ -493,9 +493,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tapp.vue\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tapp.vue\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 14/11/2019\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)])])], 1)]), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tModified: 14/11/2019\r\n\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)])])], 1)]), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', {
     ref: "offcanvas"
   }, [_c('ul', {
     staticClass: "uk-list uk-list-divider sc-list-hoverable sc-code-editor-files"
@@ -520,9 +520,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tindex.html\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tindex.html\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tModified: 27/11/2019\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tModified: 27/11/2019\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'database.php'
@@ -544,9 +544,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tdatabase.php\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tdatabase.php\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tModified: 24/11/2019\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tModified: 24/11/2019\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'helpers.js'
@@ -568,9 +568,9 @@ var render = function render() {
         return _vm.openFile('helpers.js', 'js');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\thelpers.js\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\thelpers.js\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tModified: 22/11/2019\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tModified: 22/11/2019\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'data.json'
@@ -592,9 +592,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tdata.json\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tdata.json\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tModified: 22/11/2019\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tModified: 22/11/2019\r\n\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group",
     class: {
       'uk-active': _vm.activeFile === 'app.vue'
@@ -616,9 +616,9 @@ var render = function render() {
     }
   }, [_c('span', {
     staticClass: "sc-text-semibold sc-width-expand"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tapp.vue\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tapp.vue\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-list-secondary-text uk-text-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tModified: 14/11/2019\n\t\t\t\t\t\t\t")])])])])])], 1)], 2);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tModified: 14/11/2019\r\n\t\t\t\t\t\t\t")])])])])])], 1)], 2);
 };
 
 var staticRenderFns = [];
@@ -817,7 +817,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "49a0b83c"
+  "758a4a85"
   
 )
 

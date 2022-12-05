@@ -107,9 +107,9 @@ var render = function render() {
       }) {
         return [_c('div', [_c('span', {
           staticClass: "sc-text-semibold"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(item.user) + " (" + _vm._s(item.email) + ")\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(item.user) + " (" + _vm._s(item.email) + ")\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
           staticClass: "uk-margin-remove"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(item.text) + "\n\t\t\t\t\t\t\t")])])];
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(item.text) + "\r\n\t\t\t\t\t\t\t")])])];
       }
     }, {
       key: "left",
@@ -154,7 +154,7 @@ var render = function render() {
     }, {
       key: "empty",
       fn: function () {
-        return [_c('div', [_vm._v("\n\t\t\t\t\t\t\tlist is empty ( filtered or just empty )\n\t\t\t\t\t\t")])];
+        return [_c('div', [_vm._v("\r\n\t\t\t\t\t\t\tlist is empty ( filtered or just empty )\r\n\t\t\t\t\t\t")])];
       },
       proxy: true
     }])
@@ -178,9 +178,9 @@ var render = function render() {
       }) {
         return [_c('div', [_c('span', {
           staticClass: "sc-text-semibold"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(item.user) + " (" + _vm._s(item.email) + ")\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(item.user) + " (" + _vm._s(item.email) + ")\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
           staticClass: "uk-margin-remove"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(item.text) + "\n\t\t\t\t\t\t\t")])])];
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(item.text) + "\r\n\t\t\t\t\t\t\t")])])];
       }
     }, {
       key: "left",
@@ -224,7 +224,7 @@ var render = function render() {
     }, {
       key: "empty",
       fn: function () {
-        return [_c('div', [_vm._v("\n\t\t\t\t\t\t\tlist is empty ( filtered or just empty )\n\t\t\t\t\t\t")])];
+        return [_c('div', [_vm._v("\r\n\t\t\t\t\t\t\tlist is empty ( filtered or just empty )\r\n\t\t\t\t\t\t")])];
       },
       proxy: true
     }])
@@ -347,7 +347,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "15767f70"
+  "0affd24b"
   
 )
 

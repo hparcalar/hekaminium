@@ -17,7 +17,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tRaised buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tRaised buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -34,7 +34,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -47,7 +47,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -60,7 +60,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSecondary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSecondary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -73,7 +73,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -86,7 +86,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -99,14 +99,14 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-button sc-button-disabled",
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tFlat buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tFlat buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -123,7 +123,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.primary",
@@ -136,7 +136,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.warning",
@@ -149,7 +149,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.success",
@@ -162,7 +162,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.danger",
@@ -175,14 +175,14 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-button sc-button-default sc-button-flat sc-button-disabled",
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tOutline buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tOutline buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -199,7 +199,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.primary",
@@ -212,7 +212,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.warning",
@@ -225,7 +225,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tWarning\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tWarning\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.success",
@@ -238,7 +238,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSuccess\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSuccess\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.danger",
@@ -251,14 +251,14 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-button sc-button-default sc-button-outline sc-button-disabled",
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDisabled\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDisabled\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tCustom Colors\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tCustom Colors\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -276,7 +276,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPurple\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPurple\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -289,7 +289,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBlue Grey\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBlue Grey\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -302,7 +302,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLime\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLime\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -315,7 +315,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBrown\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBrown\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('a', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -328,9 +328,9 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tGrey\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tGrey\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tIcons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tIcons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
     staticClass: "uk-width-auto uk-flex-middle uk-grid-medium uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -342,18 +342,18 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: sign-in"
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSign In\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSign In\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-flex sc-button-red"
   }, [_c('span', {
     staticClass: "md-color-orange-600 uk-margin-small-right",
     attrs: {
       "data-uk-icon": "icon: settings"
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSettings\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSettings\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-flex"
   }, [_c('i', {
     staticClass: "mdi mdi-chart-areaspline uk-margin-small-right"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\tCharts\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', [_c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tCharts\r\n\t\t\t\t\t\t\t\t\t\t")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "uk-width-auto uk-flex-middle uk-grid-medium uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -437,64 +437,64 @@ var render = function render() {
     staticClass: "mdi mdi-comment"
   })])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tUIkit buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tUIkit buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('button', {
     staticClass: "uk-button uk-button-default"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "uk-button uk-button-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPrimary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPrimary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "uk-button uk-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSecondary\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSecondary\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "uk-button uk-button-danger"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDanger\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDanger\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('button', {
     staticClass: "uk-button uk-button-text"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t.uk-button-text\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t.uk-button-text\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "uk-button uk-button-link"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t.uk-button-link\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSize modifiers\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t.uk-button-link\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSize modifiers\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('button', {
     staticClass: "sc-button sc-button-mini"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tMini button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMini button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-flat sc-button-flat-success sc-button-mini"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tMini button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMini button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-outline sc-button-outline-danger sc-button-mini"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tMini button\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMini button\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-margin-top uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('button', {
     staticClass: "sc-button sc-button-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSmall button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSmall button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-flat sc-button-flat-success sc-button-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSmall button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSmall button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-outline sc-button-outline-danger sc-button-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSmall button\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSmall button\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-width-auto uk-margin-top uk-grid",
     attrs: {
       "data-uk-grid": ""
     }
   }, [_c('div', [_c('button', {
     staticClass: "sc-button sc-button-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLarge button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLarge button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-flat sc-button-flat-success sc-button-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLarge button\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLarge button\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-outline sc-button-outline-danger sc-button-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLarge button\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLarge button\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tWidth modifiers\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tWidth modifiers\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-margin"
   }, [_c('button', {
     directives: [{
@@ -506,7 +506,7 @@ var render = function render() {
       }
     }],
     staticClass: "sc-button sc-button-primary uk-width-1-3"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.uk-width-1-3\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.uk-width-1-3\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('button', {
     directives: [{
@@ -518,7 +518,7 @@ var render = function render() {
       }
     }],
     staticClass: "sc-button sc-button-primary uk-width-1-2"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t.uk-width-1-2\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t.uk-width-1-2\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
     directives: [{
       name: "waves",
       rawName: "v-waves.button.light",
@@ -528,43 +528,43 @@ var render = function render() {
       }
     }],
     staticClass: "sc-button sc-button-primary uk-width-1-1"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t.uk-width-1-1\n\t\t\t\t\t\t\t")])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t.uk-width-1-1\r\n\t\t\t\t\t\t\t")])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tButton Group\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tButton Group\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-margin"
   }, [_c('div', {
     staticClass: "uk-button-group"
   }, [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button uk-active"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('div', {
     staticClass: "uk-button-group"
   }, [_c('button', {
     staticClass: "sc-button sc-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('div', {
     staticClass: "uk-button-group sc-button-group-outline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline uk-active"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tButton\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tButton\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "uk-button-group"
   }, [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDropdown\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDropdown\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-inline"
   }, [_c('button', {
     staticClass: "sc-button sc-button-icon"
@@ -582,29 +582,29 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tActive\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tActive\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-header"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tHeader\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
     staticClass: "uk-nav-divider"
   }), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tItem\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tButtons Helpers\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tButtons Helpers\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -632,7 +632,7 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tReplace text\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tReplace text\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     class: {
       'sc-button-progress': _vm.btn1Loading
@@ -662,7 +662,7 @@ var render = function render() {
     }]
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLoading effect\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLoading effect\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-primary",
     class: {
       'sc-button-progress': _vm.btn2Loading
@@ -695,7 +695,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLoading effect (light)\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLoading effect (light)\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button",
     class: {
       'sc-button-progress-overlay': _vm.btn3LoadingEnd
@@ -723,9 +723,9 @@ var render = function render() {
     staticClass: "sc-button-progress-layer"
   }, [_c('ScProgressCircular')], 1)])], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLoading effect (overlay)\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLoading effect (overlay)\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tSocial Buttons\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tSocial Buttons\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', [_c('div', {
     staticClass: "uk-width-auto uk-grid-medium uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -898,7 +898,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2c65e80c"
+  "a816662e"
   
 )
 

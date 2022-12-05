@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -652,7 +652,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1c6757c6"
+  "dfa3ab66"
   
 )
 
@@ -680,7 +680,7 @@ var render = function render() {
     staticClass: "uk-flex uk-flex-middle"
   }, [_c('i', {
     staticClass: "mdi mdi-calendar sc-icon-24 uk-margin-medium-right"
-  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tBooking Form\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
+  }), _vm._v(" "), _c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tBooking Form\r\n\t\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
     attrs: {
       "id": "sc-booking-form"
     }
@@ -801,7 +801,7 @@ var render = function render() {
     }
   }, [_c('label', [_vm._v("Street Address")])]), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLine 2\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLine 2\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin uk-child-width-1-2@m uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -902,7 +902,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tConfirm\n\t\t\t\t\t\t\t\t\t")])])], 1)])], 1), _vm._ssrNode(" <pre class=\"uk-margin-top\">" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre>")], 2)])])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tConfirm\r\n\t\t\t\t\t\t\t\t\t")])])], 1)])], 1), _vm._ssrNode(" <pre class=\"uk-margin-top\">" + _vm._ssrEscape(_vm._s(_vm._f("json")(_vm.userData))) + "</pre>")], 2)])])]);
 };
 
 var staticRenderFns = [];
@@ -1042,7 +1042,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7b47b73c"
+  "31cc75f2"
   
 )
 

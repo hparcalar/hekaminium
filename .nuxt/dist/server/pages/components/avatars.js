@@ -805,7 +805,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -886,7 +886,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2049d950"
+  "4fcdb728"
   
 )
 
@@ -910,7 +910,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tImages\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tImages\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto@s uk-flex-middle",
     attrs: {
       "data-uk-grid": ""
@@ -939,7 +939,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<ScAvatar :avatar-id=\"5\"></ScAvatar>\n<ScAvatar :avatar-id=\"5\" size=\"md\"></ScAvatar>\n<ScAvatar :avatar-id=\"5\" size=\"lg\"></ScAvatar>\n<ScAvatar :avatar-id=\"5\" size=\"_default\"></ScAvatar>\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_c('code', [_vm._v("<ScAvatar :avatar-id=\"5\"></ScAvatar>\r\n<ScAvatar :avatar-id=\"5\" size=\"md\"></ScAvatar>\r\n<ScAvatar :avatar-id=\"5\" size=\"lg\"></ScAvatar>\r\n<ScAvatar :avatar-id=\"5\" size=\"_default\"></ScAvatar>\r\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@s uk-flex-middle",
     attrs: {
       "data-uk-grid": ""
@@ -966,7 +966,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<ScAvatar :avatar-id=\"8\" status=\"online\"></ScAvatar>\n<ScAvatar :avatar-id=\"8\" size=\"md\" status=\"away\"></ScAvatar>\n<ScAvatar :avatar-id=\"8\" size=\"lg\" status=\"busy\"></ScAvatar>\n")])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tInitials\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('code', [_vm._v("<ScAvatar :avatar-id=\"8\" status=\"online\"></ScAvatar>\r\n<ScAvatar :avatar-id=\"8\" size=\"md\" status=\"away\"></ScAvatar>\r\n<ScAvatar :avatar-id=\"8\" size=\"lg\" status=\"busy\"></ScAvatar>\r\n")])])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tInitials\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-child-width-auto uk-flex-middle",
     attrs: {
       "data-uk-grid": ""
@@ -1003,7 +1003,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<ScAvatarInitials initials=\"mr\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"lo\" background=\"md-bg-yellow-200\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"kt\" background=\"md-bg-red-500\" color=\"md-color-white\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"gw\" background=\"md-bg-light-green-500\" color=\"md-color-white\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"sb\" background=\"md-bg-light-blue-500\" color=\"md-color-white\"></ScAvatarInitials>\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_c('code', [_vm._v("<ScAvatarInitials initials=\"mr\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"lo\" background=\"md-bg-yellow-200\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"kt\" background=\"md-bg-red-500\" color=\"md-color-white\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"gw\" background=\"md-bg-light-green-500\" color=\"md-color-white\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"sb\" background=\"md-bg-light-blue-500\" color=\"md-color-white\"></ScAvatarInitials>\r\n")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-auto@s uk-flex-middle",
     attrs: {
       "data-uk-grid": ""
@@ -1032,7 +1032,7 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_c('code', [_vm._v("<ScAvatarInitials initials=\"mr\" background=\"md-bg-blue-grey-100\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"lo\" background=\"md-bg-teal-600\" color=\"md-color-white\" size=\"md\"></ScAvatarInitials>\n<ScAvatarInitials initials=\"kt\" background=\"md-bg-purple-500\" color=\"md-color-white\" size=\"lg\"></AvatarInitials>\n")])])])], 1)], 1)], 2)])]);
+  }, [_c('code', [_vm._v("<ScAvatarInitials initials=\"mr\" background=\"md-bg-blue-grey-100\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"lo\" background=\"md-bg-teal-600\" color=\"md-color-white\" size=\"md\"></ScAvatarInitials>\r\n<ScAvatarInitials initials=\"kt\" background=\"md-bg-purple-500\" color=\"md-color-white\" size=\"lg\"></AvatarInitials>\r\n")])])])], 1)], 1)], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -1078,7 +1078,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "a61ae376"
+  "2c817322"
   
 )
 

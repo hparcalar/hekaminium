@@ -8,16 +8,16 @@ const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations']
 let store = {};
 
 (function updateModules () {
-  store = normalizeRoot(require('../store/index.js'), 'store/index.js')
+  store = normalizeRoot(require('..\\store\\index.js'), 'store/index.js')
 
   // If store is an exported method = classic mode (deprecated)
 
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('../store/issues.js'), 'issues.js')
-  resolveStoreModules(require('../store/mailbox.js'), 'mailbox.js')
-  resolveStoreModules(require('../store/task_board.js'), 'task_board.js')
+  resolveStoreModules(require('..\\store\\issues.js'), 'issues.js')
+  resolveStoreModules(require('..\\store\\mailbox.js'), 'mailbox.js')
+  resolveStoreModules(require('..\\store\\task_board.js'), 'task_board.js')
 
   // If the environment supports hot reloading...
 })()

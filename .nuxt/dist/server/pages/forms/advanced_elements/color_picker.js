@@ -17,7 +17,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tColorpicker\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tColorpicker\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -38,7 +38,7 @@ var render = function render() {
     }
   })], 1)], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-margin-remove-left"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tcloseOnSelect: false\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tcloseOnSelect: false\r\n\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-3@m"
   }, [_c('label', [_vm._v("Selected color")]), _vm._v(" "), _c('div', [_c('client-only', [_c('ScColorpicker', {
     attrs: {
@@ -118,7 +118,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "67d73589"
+  "62b1e566"
   
 )
 

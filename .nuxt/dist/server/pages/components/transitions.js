@@ -103,7 +103,7 @@ var render = function render() {
     }
   }, [_vm._ssrNode("<div id=\"sc-page-content\" class=\"uk-flex uk-flex-center\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-button sc-button-flat sc-button-flat-danger uk-margin-bottom", {
     'sc-button-disabled': _vm.btnDisabled
-  }) + ">\n\t\t\t\t\tToggle\n\t\t\t\t</a> "), _c('client-only', [_c('ScTransition', {
+  }) + ">\r\n\t\t\t\t\tToggle\r\n\t\t\t\t</a> "), _c('client-only', [_c('ScTransition', {
     staticClass: "uk-child-width-1-4@m uk-grid-medium uk-grid",
     attrs: {
       "group": "",
@@ -279,9 +279,9 @@ var render = function render() {
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger :speed=&quot;18&quot; preserve-height origin=&quot;50% 50%&quot; class=&quot;uk-child-width-1-4@m uk-grid-medium uk-grid&quot; data-uk-grid appear&gt;\n</code>")]), _vm._ssrNode(" <hr class=\"uk-margin\"> <a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-button sc-button-flat sc-button-flat-danger uk-margin-bottom", {
+  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger :speed=&quot;18&quot; preserve-height origin=&quot;50% 50%&quot; class=&quot;uk-child-width-1-4@m uk-grid-medium uk-grid&quot; data-uk-grid appear&gt;\r\n</code>")]), _vm._ssrNode(" <hr class=\"uk-margin\"> <a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-button sc-button-flat sc-button-flat-danger uk-margin-bottom", {
     'sc-button-disabled': _vm.btnDisabled
-  }) + ">\n\t\t\t\t\tRepeat\n\t\t\t\t</a> "), _c('client-only', [_c('ScTransition', {
+  }) + ">\r\n\t\t\t\t\tRepeat\r\n\t\t\t\t</a> "), _c('client-only', [_c('ScTransition', {
     staticClass: "uk-child-width-1-1 uk-grid-collapse uk-grid",
     attrs: {
       "group": "",
@@ -298,15 +298,15 @@ var render = function render() {
       key: el.id
     }, [_c('ScCard', {
       staticClass: "sc-padding-medium"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(el.text) + "\n\t\t\t\t\t\t\t")])], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(el.text) + "\r\n\t\t\t\t\t\t\t")])], 1);
   }), 0)], 1), _vm._ssrNode(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger name=&quot;slideBottom&quot; :speed=&quot;5&quot; class=&quot;uk-child-width-1-1 uk-grid-collapse uk-grid&quot; data-uk-grid appear&gt;\n</code>")]), _vm._ssrNode(" <hr class=\"uk-margin\"> <a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-button sc-button-flat sc-button-flat-danger uk-margin-bottom", {
+  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger name=&quot;slideBottom&quot; :speed=&quot;5&quot; class=&quot;uk-child-width-1-1 uk-grid-collapse uk-grid&quot; data-uk-grid appear&gt;\r\n</code>")]), _vm._ssrNode(" <hr class=\"uk-margin\"> <a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-button sc-button-flat sc-button-flat-danger uk-margin-bottom", {
     'sc-button-disabled': _vm.btnDisabled
-  }) + ">\n\t\t\t\t\tRepeat\n\t\t\t\t</a> "), _c('ScTransition', {
+  }) + ">\r\n\t\t\t\t\tRepeat\r\n\t\t\t\t</a> "), _c('ScTransition', {
     staticClass: "uk-child-width-1-1 uk-grid-collapse uk-grid",
     attrs: {
       "group": "",
@@ -322,13 +322,13 @@ var render = function render() {
       key: el.id
     }, [_c('ScCard', {
       staticClass: "sc-padding-medium"
-    }, [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(el.text) + "\n\t\t\t\t\t\t")])], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(el.text) + "\r\n\t\t\t\t\t\t")])], 1);
   }), 0), _vm._ssrNode(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger name=&quot;scaleDown&quot; :speed=&quot;5&quot; preserve-height class=&quot;uk-child-width-1-1 uk-grid-collapse uk-grid&quot; data-uk-grid appear&gt;\n</code>")])], 2)])]);
+  }, [_vm._ssrNode("<code>&lt;ScTransition group stagger name=&quot;scaleDown&quot; :speed=&quot;5&quot; preserve-height class=&quot;uk-child-width-1-1 uk-grid-collapse uk-grid&quot; data-uk-grid appear&gt;\r\n</code>")])], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -475,7 +475,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d090e36e"
+  "395ebca6"
   
 )
 

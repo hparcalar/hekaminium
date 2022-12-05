@@ -74,7 +74,7 @@ var render = function render() {
     }
   }, [_c('div', {
     staticClass: "uk-flex-1"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\tFirma Kategorileri\n                                "), _c('button', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\tFirma Kategorileri\r\n                                "), _c('button', {
     staticClass: "sc-button sc-button-small uk-margin-small-left",
     attrs: {
       "type": "button"
@@ -87,7 +87,7 @@ var render = function render() {
     attrs: {
       "data-uk-icon": "icon: plus"
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\tYeni\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\tYeni\r\n\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-auto@s"
   }, [_c('div', {
     attrs: {
@@ -124,7 +124,7 @@ var render = function render() {
         "slot": "extra"
       },
       slot: "extra"
-    }), _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\n\t\t\t\t\t\t\t\t\t\t")])], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(checkbox.name) + "\r\n\t\t\t\t\t\t\t\t\t\t")])], 1);
   }), 0)])])])]), _vm._v(" "), _c('ScCardBody', [_c('client-only', [_c('Datatable', {
     ref: "buttonsTable",
     attrs: {
@@ -284,7 +284,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "38ec5844"
+  "6e48ae9b"
   
 )
 

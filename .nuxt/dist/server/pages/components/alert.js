@@ -17,12 +17,12 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-alert class=\"uk-alert md-bg-light-blue-800 md-color-white\">\n\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a data-uk-close class=\"uk-alert-close\"></a></div> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-alert class=\"uk-alert md-bg-light-blue-800 md-color-white\">\r\n\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<a data-uk-close class=\"uk-alert-close\"></a></div> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
     staticClass: "uk-alert",
     attrs: {
       "data-uk-alert": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-alert",
     attrs: {
       "data-uk-alert": ""
@@ -60,7 +60,7 @@ var render = function render() {
     attrs: {
       "data-uk-close": ""
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-alert-danger",
     attrs: {
       "data-uk-alert": ""
@@ -70,7 +70,7 @@ var render = function render() {
     attrs: {
       "data-uk-close": ""
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-alert-success",
     attrs: {
       "data-uk-alert": ""
@@ -80,7 +80,7 @@ var render = function render() {
     attrs: {
       "data-uk-close": ""
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-alert-warning",
     attrs: {
       "data-uk-alert": ""
@@ -90,7 +90,7 @@ var render = function render() {
     attrs: {
       "data-uk-close": ""
     }
-  }), _vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\n\t\t\t\t\t\t\t")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(_vm.sentence()) + "\r\n\t\t\t\t\t\t\t")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('div', {
     staticClass: "uk-alert-attached-top md-bg-light-green-600 md-color-white",
     attrs: {
       "data-uk-alert": ""
@@ -100,16 +100,16 @@ var render = function render() {
     attrs: {
       "data-uk-close": ""
     }
-  }), _vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t" + _vm._s(_vm.sentence(100)) + "\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t" + _vm._s(_vm.sentence(100)) + "\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-alert-attached-bottom",
     attrs: {
       "data-uk-alert": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur\n\t\t\t\t\t\t\t"), _c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur\r\n\t\t\t\t\t\t\t"), _c('a', {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tadipisicing elit\n\t\t\t\t\t\t\t")]), _vm._v(".\n\t\t\t\t\t\t\tExpedita, ipsum.\n\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tadipisicing elit\r\n\t\t\t\t\t\t\t")]), _vm._v(".\r\n\t\t\t\t\t\t\tExpedita, ipsum.\r\n\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('div', {
     staticClass: "uk-alert-danger",
@@ -141,7 +141,7 @@ var render = function render() {
     staticClass: "uk-margin-top"
   }, [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSubmit\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2)], 2)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSubmit\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2)], 2)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -187,7 +187,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2dd94d27"
+  "a2b47578"
   
 )
 

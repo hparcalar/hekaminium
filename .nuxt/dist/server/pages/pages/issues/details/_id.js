@@ -721,7 +721,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "670ac3ee"
+  "bc13dc4e"
   
 )
 
@@ -745,11 +745,11 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\">", "</div>", [_vm._ssrNode("<div class=\"sc-top-bar-content sc-padding-medium-top sc-padding-medium-bottom uk-flex-1\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-1\">", "</div>", [_vm._ssrNode("<h1 class=\"sc-top-bar-title\">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(_vm.issue.title) + "\n\t\t\t\t\t") + "</h1> "), _vm._ssrNode("<span class=\"uk-text-muted\">", "</span>", [_c('nuxt-link', {
+  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\">", "</div>", [_vm._ssrNode("<div class=\"sc-top-bar-content sc-padding-medium-top sc-padding-medium-bottom uk-flex-1\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-1\">", "</div>", [_vm._ssrNode("<h1 class=\"sc-top-bar-title\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(_vm.issue.title) + "\r\n\t\t\t\t\t") + "</h1> "), _vm._ssrNode("<span class=\"uk-text-muted\">", "</span>", [_c('nuxt-link', {
     attrs: {
       "to": "/pages/issues/list"
     }
-  }, [_vm._v("scutum")]), _vm._ssrNode(_vm._ssrEscape(" > " + _vm._s(_vm.issue.issueId) + "\n\t\t\t\t\t"))], 2)], 2), _vm._ssrNode(" <div class=\"sc-actions uk-margin-left uk-visible@s\"><a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-pencil-outline\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-printer\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-dots-vertical\"></a></div>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
+  }, [_vm._v("scutum")]), _vm._ssrNode(_vm._ssrEscape(" > " + _vm._s(_vm.issue.issueId) + "\r\n\t\t\t\t\t"))], 2)], 2), _vm._ssrNode(" <div class=\"sc-actions uk-margin-left uk-visible@s\"><a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-pencil-outline\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-printer\"></a> <a href=\"javascript:void(0)\" class=\"sc-actions-icon mdi mdi-dots-vertical\"></a></div>")], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('div', {
     staticClass: "uk-grid uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -765,21 +765,21 @@ var render = function render() {
     staticClass: "sc-button sc-button-flex uk-margin-small-right"
   }, [_c('i', {
     staticClass: "mdi mdi-pencil-outline uk-margin-small-right"
-  }), _vm._v("\n\t\t\t\t\t\t\t\t\tEdit\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }), _vm._v("\r\n\t\t\t\t\t\t\t\t\tEdit\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-button-group uk-margin-small-right uk-visible@m"
   }, [_c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tAssign\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tAssign\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tStart Progress\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tStart Progress\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tClose Issue\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tClose Issue\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-flex"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tLog Time\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('section', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tLog Time\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('section', [_c('span', {
     staticClass: "sc-color-secondary"
   }, [_vm._v("Description:")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.description) + "\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('section', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.description) + "\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('section', [_c('span', {
     staticClass: "sc-color-secondary"
   }, [_vm._v("Comments:")]), _c('br'), _vm._v(" "), _c('ul', {
     staticClass: "uk-comment-list uk-margin-small-top"
@@ -875,7 +875,7 @@ var render = function render() {
     staticClass: "uk-comment-body"
   }, [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")])])])])]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-small sc-button-outline"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tAdd Comment\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tAdd Comment\r\n\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-4@l"
   }, [_c('span', {
     staticClass: "sc-color-secondary"
@@ -928,7 +928,7 @@ var render = function render() {
     staticClass: "mdi mdi-clock-outline"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.created) + "\n\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.created) + "\r\n\t\t\t\t\t\t\t\t\t\t"), _c('span', {
     staticClass: "sc-color-secondary"
   }, [_vm._v("Created")])])]), _vm._v(" "), _c('li', {
     staticClass: "sc-list-group"
@@ -938,7 +938,7 @@ var render = function render() {
     staticClass: "mdi mdi-progress-clock"
   })]), _vm._v(" "), _c('div', {
     staticClass: "sc-list-body"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.modified) + "\n\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.issue.modified) + "\r\n\t\t\t\t\t\t\t\t\t\t"), _c('span', {
     staticClass: "sc-color-secondary"
   }, [_vm._v("Modified")])])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('span', {
     staticClass: "sc-color-secondary"
@@ -954,10 +954,10 @@ var render = function render() {
       fn: function () {
         return [_c('ScProgressLabel', {
           staticClass: "uk-text-left"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tEstimated: 4d\n\t\t\t\t\t\t\t\t\t\t\t")])];
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tEstimated: 4d\r\n\t\t\t\t\t\t\t\t\t\t\t")])];
       },
       proxy: true
-    }], null, false, 1995691401)
+    }], null, false, 2648502025)
   }, [_vm._v(" "), _c('ScProgressBar', {
     attrs: {
       "value": 100,
@@ -973,10 +973,10 @@ var render = function render() {
       fn: function () {
         return [_c('ScProgressLabel', {
           staticClass: "uk-text-left"
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tLogged: 1d\n\t\t\t\t\t\t\t\t\t\t\t")])];
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tLogged: 1d\r\n\t\t\t\t\t\t\t\t\t\t\t")])];
       },
       proxy: true
-    }], null, false, 3532847772)
+    }], null, false, 2393059740)
   }, [_vm._v(" "), _c('ScProgressBar', {
     attrs: {
       "value": 25,
@@ -1061,7 +1061,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "059744c7"
+  "40786444"
   
 )
 

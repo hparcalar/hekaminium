@@ -23,7 +23,7 @@ var render = function render() {
       "animate": true,
       "progress": _vm.progressActive
     }
-  }, [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\tOverlay\n\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\tOverlay\r\n\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-flex uk-height-medium"
   }, [_c('button', {
     staticClass: "sc-button uk-margin-right",
@@ -33,7 +33,7 @@ var render = function render() {
         return _vm.showContentOverlay.apply(null, arguments);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tContent overlay\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tContent overlay\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button uk-margin-right",
     on: {
       "click": function ($event) {
@@ -41,7 +41,7 @@ var render = function render() {
         return _vm.showContentOverlaySpinner.apply(null, arguments);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tContent overlay + spinner\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tContent overlay + spinner\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-js-page-overlay uk-margin-right",
     on: {
       "click": function ($event) {
@@ -49,7 +49,7 @@ var render = function render() {
         return _vm.showPageOverlay.apply(null, arguments);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPage overlay\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPage overlay\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     on: {
       "click": function ($event) {
@@ -57,7 +57,7 @@ var render = function render() {
         return _vm.showPageOverlaySpinner.apply(null, arguments);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPage overlay + spinner\n\t\t\t\t\t\t\t")])])])], 1)], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPage overlay + spinner\r\n\t\t\t\t\t\t\t")])])])], 1)], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -158,7 +158,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d4e6b960"
+  "6f7fa980"
   
 )
 
@@ -230,7 +230,7 @@ var overlay_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7bfa6d5b"
+  "08ed5b90"
   
 )
 

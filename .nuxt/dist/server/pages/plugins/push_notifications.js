@@ -24,17 +24,17 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-alert class=\"uk-alert-warning uk-alert\">\n\t\t\t\tTo use this feature you need to run this example on LOCALHOST or use HTTPS protocol.\n\t\t\t</div> "), _c('ScCard', [_c('ScCardBody', [_c('button', {
+  }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<div data-uk-alert class=\"uk-alert-warning uk-alert\">\r\n\t\t\t\tTo use this feature you need to run this example on LOCALHOST or use HTTPS protocol.\r\n\t\t\t</div> "), _c('ScCard', [_c('ScCardBody', [_c('button', {
     staticClass: "sc-button sc-button-primary",
     on: {
       "click": _vm.sendNotification
     }
-  }, [_vm._v("\n\t\t\t\t\t\tSend notification\n\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tSend notification\r\n\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-primary uk-margin-left",
     on: {
       "click": _vm.sendAnotherNotification
     }
-  }, [_vm._v("\n\t\t\t\t\t\tSend another notification\n\t\t\t\t\t")])])], 1)], 2)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\tSend another notification\r\n\t\t\t\t\t")])])], 1)], 2)]);
 };
 
 var staticRenderFns = [];
@@ -90,7 +90,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7d11f4d6"
+  "58542326"
   
 )
 

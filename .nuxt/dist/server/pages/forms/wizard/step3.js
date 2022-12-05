@@ -29,37 +29,37 @@ var render = function render() {
 
   return _c('div', {
     staticClass: "sc-padding"
-  }, [_vm._ssrNode("<h4 class=\"uk-heading-line\"><span>Billing Information</span></h4> <address><strong class=\"uk-margin-small-bottom uk-display-inline-block\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.userTitle) + ". " + _vm._s(_vm.data.firstName) + " " + _vm._s(_vm.data.lastName) + "\n\t\t\t") + "</strong><br> <span class=\"uk-text-muted uk-text-small\">\n\t\t\t\temail:\n\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.email)) + "<br> <span" + _vm._ssrStyle(null, null, {
+  }, [_vm._ssrNode("<h4 class=\"uk-heading-line\"><span>Billing Information</span></h4> <address><strong class=\"uk-margin-small-bottom uk-display-inline-block\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.userTitle) + ". " + _vm._s(_vm.data.firstName) + " " + _vm._s(_vm.data.lastName) + "\r\n\t\t\t") + "</strong><br> <span class=\"uk-text-muted uk-text-small\">\r\n\t\t\t\temail:\r\n\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.email)) + "<br> <span" + _vm._ssrStyle(null, null, {
     display: _vm.data.phoneNumber !== '' ? '' : 'none'
-  }) + "><span class=\"uk-text-muted uk-text-small\">\n\t\t\t\t\tphone number:\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.phoneNumber)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
+  }) + "><span class=\"uk-text-muted uk-text-small\">\r\n\t\t\t\t\tphone number:\r\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.phoneNumber)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
     display: _vm.data.company !== '' ? '' : 'none'
-  }) + "><span class=\"uk-text-muted uk-text-small\">\n\t\t\t\t\tcompany:\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.company)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
+  }) + "><span class=\"uk-text-muted uk-text-small\">\r\n\t\t\t\t\tcompany:\r\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.company)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
     display: _vm.data.companyID !== '' ? '' : 'none'
-  }) + "><span class=\"uk-text-muted uk-text-small\">\n\t\t\t\t\tcompany ID:\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.companyID)) + "<br></span></address> <p class=\"sc-text-semibold uk-margin-small-bottom\">\n\t\t\tAddresses:\n\t\t</p> <div data-uk-grid class=\"uk-child-width-auto@m uk-grid-divider\">" + _vm._ssrList(_vm.data.addresses, function (address) {
+  }) + "><span class=\"uk-text-muted uk-text-small\">\r\n\t\t\t\t\tcompany ID:\r\n\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.data.companyID)) + "<br></span></address> <p class=\"sc-text-semibold uk-margin-small-bottom\">\r\n\t\t\tAddresses:\r\n\t\t</p> <div data-uk-grid class=\"uk-child-width-auto@m uk-grid-divider\">" + _vm._ssrList(_vm.data.addresses, function (address) {
     return "<div><address><span" + _vm._ssrStyle(null, null, {
       display: address.billingAddress ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(address.billingAddress)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(address.billingAddress)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
       display: address.zipCode ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(address.zipCode)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(address.zipCode)) + "<br></span> <span" + _vm._ssrStyle(null, null, {
       display: address.city ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(_vm.getCity(address.city))) + "<br></span> <span" + _vm._ssrStyle(null, null, {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(_vm.getCity(address.city))) + "<br></span> <span" + _vm._ssrStyle(null, null, {
       display: address.country ? '' : 'none'
-    }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(_vm.getCountry(address.country)) + "\n\t\t\t\t\t") + "</span></address></div>";
-  }) + "</div> <h4 class=\"uk-heading-line uk-margin-medium-top\"><span>Payment</span></h4> <div data-uk-grid class=\"uk-grid-small\"><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tType\n\t\t\t</div> <div class=\"uk-width-3-5@m sc-text-semibold\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.name) + "\n\t\t\t\t") + "<span" + _vm._ssrStyle(null, null, {
+    }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(_vm.getCountry(address.country)) + "\r\n\t\t\t\t\t") + "</span></address></div>";
+  }) + "</div> <h4 class=\"uk-heading-line uk-margin-medium-top\"><span>Payment</span></h4> <div data-uk-grid class=\"uk-grid-small\"><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tType\r\n\t\t\t</div> <div class=\"uk-width-3-5@m sc-text-semibold\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.name) + "\r\n\t\t\t\t") + "<span" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.ccType && _vm.data.paymentMethod.name === 'Credit Card' ? '' : 'none'
-  }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t( " + _vm._s(_vm._f("toUppercase")(_vm.data.paymentMethod.ccType)) + " )\n\t\t\t\t") + "</span></div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t( " + _vm._s(_vm._f("toUppercase")(_vm.data.paymentMethod.ccType)) + " )\r\n\t\t\t\t") + "</span></div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Credit Card' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tNumber\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm._f("hashCCnumber")(_vm.data.paymentMethod.ccNumber)) + "\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tNumber\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm._f("hashCCnumber")(_vm.data.paymentMethod.ccNumber)) + "\r\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Credit Card' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tExpires\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ccDate) + "\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tExpires\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ccDate) + "\r\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Credit Card' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tCard Holder\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ccHolder) + "\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tCard Holder\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ccHolder) + "\r\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Paypal' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tAccount Name\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ppAccount) + "\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tAccount Name\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.ppAccount) + "\r\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Amazon' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tAccount Name\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.amazonAccount) + "\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tAccount Name\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.amazonAccount) + "\r\n\t\t\t") + "</div></div> <div data-uk-grid class=\"uk-grid-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.data.paymentMethod.name === 'Skrill' ? '' : 'none'
-  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\n\t\t\t\tAccount Name\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.skrillAccount) + "\n\t\t\t") + "</div></div> <h4 class=\"uk-heading-line uk-margin-medium-top\"><span>Products</span></h4> <div class=\"uk-overflow-auto\"><table class=\"uk-table uk-table-striped uk-table-small\"><thead><tr><th>Product Name</th> <th>Quantity</th> <th>Price</th> <th>Total</th></tr></thead> <tbody><tr><td class=\"uk-text-nowrap\">\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\n\t\t\t\t\t\t</td> <td>4</td> <td>$100</td> <td>$400</td></tr> <tr><td>Lorem ipsum dolor sit amet, consectetur.</td> <td>4</td> <td>$100</td> <td>$400</td></tr> <tr><td>Lorem ipsum dolor sit amet, consectetur.</td> <td>4</td> <td>$100</td> <td>$400</td></tr></tbody></table></div>")]);
+  }) + "><div class=\"uk-width-1-5@m uk-text-muted\">\r\n\t\t\t\tAccount Name\r\n\t\t\t</div> <div class=\"uk-width-3-5@m\">" + _vm._ssrEscape("\r\n\t\t\t\t" + _vm._s(_vm.data.paymentMethod.skrillAccount) + "\r\n\t\t\t") + "</div></div> <h4 class=\"uk-heading-line uk-margin-medium-top\"><span>Products</span></h4> <div class=\"uk-overflow-auto\"><table class=\"uk-table uk-table-striped uk-table-small\"><thead><tr><th>Product Name</th> <th>Quantity</th> <th>Price</th> <th>Total</th></tr></thead> <tbody><tr><td class=\"uk-text-nowrap\">\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur.\r\n\t\t\t\t\t\t</td> <td>4</td> <td>$100</td> <td>$400</td></tr> <tr><td>Lorem ipsum dolor sit amet, consectetur.</td> <td>4</td> <td>$100</td> <td>$400</td></tr> <tr><td>Lorem ipsum dolor sit amet, consectetur.</td> <td>4</td> <td>$100</td> <td>$400</td></tr></tbody></table></div>")]);
 };
 
 var staticRenderFns = [];
@@ -116,7 +116,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7263a427"
+  "9305401e"
   
 )
 

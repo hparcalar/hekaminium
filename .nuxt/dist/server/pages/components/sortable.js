@@ -20,17 +20,17 @@ var render = function render() {
   }, [_vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_vm._ssrNode("<h4 class=\"uk-heading-line\"><span>Sortable</span></h4> "), _vm._ssrNode("<ul data-uk-sortable=\"handle: .uk-card\" data-uk-grid class=\"uk-grid uk-child-width-1-2 uk-child-width-1-4@s\">", "</ul>", _vm._l(8, function (index) {
     return _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardBody', {
       staticClass: "uk-text-center"
-    }, [_vm._v("\n\t\t\t\t\t\t\tItem " + _vm._s(index) + "\n\t\t\t\t\t\t")])], 1)], 1);
+    }, [_vm._v("\r\n\t\t\t\t\t\t\tItem " + _vm._s(index) + "\r\n\t\t\t\t\t\t")])], 1)], 1);
   }), 0), _vm._ssrNode(" <h4 class=\"uk-heading-line uk-margin-large-top\"><span>Handle</span></h4> "), _vm._ssrNode("<ul data-uk-sortable=\"handle: .uk-sortable-handle\" data-uk-grid class=\"uk-grid uk-child-width-1-2 uk-child-width-1-4@s uk-sortable-handle-enabled\">", "</ul>", _vm._l(8, function (index) {
     return _vm._ssrNode("<li>", "</li>", [_c('ScCard', [_c('ScCardBody', {
       staticClass: "uk-text-center uk-flex uk-flex-middle uk-flex-center"
     }, [_c('i', {
       staticClass: "mdi mdi-view-headline uk-sortable-handle uk-margin-right"
-    }), _vm._v("\n\t\t\t\t\t\t\tItem " + _vm._s(index) + "\n\t\t\t\t\t\t")])], 1)], 1);
+    }), _vm._v("\r\n\t\t\t\t\t\t\tItem " + _vm._s(index) + "\r\n\t\t\t\t\t\t")])], 1)], 1);
   }), 0), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@s\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<h4 class=\"uk-heading-line uk-margin-large-top\"><span>Group 1</span></h4> "), _vm._ssrNode("<div data-uk-sortable=\"group: sortable-group\" class=\"uk-height-min-small\">", "</div>", _vm._l(4, function (index) {
-    return _vm._ssrNode("<div class=\"uk-margin\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\tg-1 i-" + _vm._s(index) + "\n\t\t\t\t\t\t\t\t")])], 1)], 1);
+    return _vm._ssrNode("<div class=\"uk-margin\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tg-1 i-" + _vm._s(index) + "\r\n\t\t\t\t\t\t\t\t")])], 1)], 1);
   }), 0)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<h4 class=\"uk-heading-line uk-margin-large-top\"><span>Group 2</span></h4> "), _vm._ssrNode("<div data-uk-sortable=\"group: sortable-group\" class=\"uk-height-min-small\">", "</div>", _vm._l(4, function (index) {
-    return _vm._ssrNode("<div class=\"uk-margin\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\n\t\t\t\t\t\t\t\t\tg-2 i-" + _vm._s(index) + "\n\t\t\t\t\t\t\t\t")])], 1)], 1);
+    return _vm._ssrNode("<div class=\"uk-margin\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tg-2 i-" + _vm._s(index) + "\r\n\t\t\t\t\t\t\t\t")])], 1)], 1);
   }), 0)], 2), _vm._ssrNode(" <div><h4 class=\"uk-heading-line uk-margin-large-top\"><span>Empty Group</span></h4> <div data-uk-sortable=\"group: sortable-group\" class=\"uk-height-min-small\"></div></div>")], 2)], 2)]);
 };
 
@@ -62,7 +62,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "4b0d327d"
+  "854a2d80"
   
 )
 

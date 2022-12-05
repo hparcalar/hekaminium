@@ -64,11 +64,11 @@ var render = function render() {
     attrs: {
       "id": "sc-style-switcher"
     }
-  }, [_vm._ssrNode("<a id=\"sc-style-switcher-toggle\" href=\"javascript:void(0)\" class=\"sc-sSw-toggle\"><i class=\"mdi mdi-tune\"></i></a> <p class=\"sc-text-semibold uk-margin-top-remove uk-margin-medium-bottom\">\n\t\t\tThemes\n\t\t</p> <ul class=\"sc-sSw-theme-switcher\">" + _vm._ssrList(_vm.themes, function (theme) {
+  }, [_vm._ssrNode("<a id=\"sc-style-switcher-toggle\" href=\"javascript:void(0)\" class=\"sc-sSw-toggle\"><i class=\"mdi mdi-tune\"></i></a> <p class=\"sc-text-semibold uk-margin-top-remove uk-margin-medium-bottom\">\r\n\t\t\tThemes\r\n\t\t</p> <ul class=\"sc-sSw-theme-switcher\">" + _vm._ssrList(_vm.themes, function (theme) {
     return "<li" + _vm._ssrClass(null, {
       'active': _vm.vxAppTheme === theme
     }) + "><a href=\"javascript:void(0)\"" + _vm._ssrClass("sc-sSw-theme-switch", ['sc-sW-' + theme]) + "><span class=\"sc-sSw-theme-switch-color-1\"></span> <span class=\"sc-sSw-theme-switch-color-2\"></span></a></li>";
-  }) + "</ul> <hr> <p class=\"sc-text-semibold uk-margin-medium-bottom\">\n\t\t\tMain Menu\n\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-small-bottom\">", "</div>", [_c('PrettyCheck', {
+  }) + "</ul> <hr> <p class=\"sc-text-semibold uk-margin-medium-bottom\">\r\n\t\t\tMain Menu\r\n\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-small-bottom\">", "</div>", [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": _vm.scrollToActiveToggle
@@ -86,7 +86,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\tScroll to active\n\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle\">", "</div>", [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\tScroll to active\r\n\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle\">", "</div>", [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": _vm.accordionModeToggle
@@ -104,7 +104,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\tAccordion mode\n\t\t\t")])], 1), _vm._ssrNode(" <hr> "), _vm._ssrNode("<div class=\"uk-visible@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-medium-bottom\">\n\t\t\t\tLayout\n\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle\">", "</div>", [_c('PrettyCheck', {
+  }), _vm._v("\r\n\t\t\t\tAccordion mode\r\n\t\t\t")])], 1), _vm._ssrNode(" <hr> "), _vm._ssrNode("<div class=\"uk-visible@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-medium-bottom\">\r\n\t\t\t\tLayout\r\n\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex uk-flex-middle\">", "</div>", [_c('PrettyCheck', {
     staticClass: "p-icon",
     on: {
       "change": _vm.boxedLayoutToggle
@@ -122,7 +122,7 @@ var render = function render() {
       "slot": "extra"
     },
     slot: "extra"
-  }), _vm._v("\n\t\t\t\t\tBoxed\n\t\t\t\t")])], 1)], 2)], 2);
+  }), _vm._v("\r\n\t\t\t\t\tBoxed\r\n\t\t\t\t")])], 1)], 2)], 2);
 };
 
 var staticRenderFns = [];
@@ -230,7 +230,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "bade109c"
+  "4ad299e2"
   
 )
 

@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -285,7 +285,7 @@ var render = function render() {
     staticClass: "uk-light uk-flex uk-flex-middle"
   }, [_c('ScCardTitle', {
     staticClass: "uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tTransaction Feedback\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTransaction Feedback\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('i', {
     staticClass: "mdi mdi-message-bulleted sc-icon-24 uk-margin-left md-color-white"
   })], 1)]), _vm._v(" "), _c('ScCardBody', [_c('form', {
     attrs: {
@@ -293,21 +293,21 @@ var render = function render() {
     }
   }, [_c('h3', {
     staticClass: "uk-margin-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tGalaxy S7 edge"), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tGalaxy S7 edge"), _c('span', {
     staticClass: "sc-sub-heading"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t128GB storage, microSD card slot\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t128GB storage, microSD card slot\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-medium uk-margin-remove uk-margin-small-top"
   }, [_c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tOrder Number:\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" 113485625\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tOrder Number:\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" 113485625\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('p', {
     staticClass: "uk-text-medium uk-margin-remove"
   }, [_c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tOrder Completion Time:\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" 15 Jun 2018\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tOrder Completion Time:\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" 15 Jun 2018\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('hr', {
     staticClass: "uk-divider-icon uk-margin"
   }), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-text-medium uk-margin-small sc-color-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tRate this transaction\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('StarRating', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tRate this transaction\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('client-only', [_c('StarRating', {
     staticClass: "raty-large",
     attrs: {
       "settings": {
@@ -330,7 +330,7 @@ var render = function render() {
     staticClass: "uk-width-1-2@m"
   }, [_c('label', {
     staticClass: "uk-form-label raty-align uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHow accurate was the product description?\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHow accurate was the product description?\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('StarRating', {
     model: {
@@ -349,7 +349,7 @@ var render = function render() {
     staticClass: "uk-width-1-2@m"
   }, [_c('label', {
     staticClass: "uk-form-label raty-align uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHow satisfied were you with the seller's communications?\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHow satisfied were you with the seller's communications?\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('StarRating', {
     model: {
@@ -368,7 +368,7 @@ var render = function render() {
     staticClass: "uk-width-1-2@m"
   }, [_c('label', {
     staticClass: "uk-form-label raty-align uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tHow quickly did the seller ship the item?\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tHow quickly did the seller ship the item?\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2@m"
   }, [_c('client-only', [_c('StarRating', {
     model: {
@@ -394,14 +394,14 @@ var render = function render() {
       },
       expression: "userData.feedback"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tPlease tell us more about this transaction\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tPlease tell us more about this transaction\r\n\t\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-primary",
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLeave Feedback\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLeave Feedback\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('pre', {
     staticClass: "uk-margin-top"
   }, [_vm._v(_vm._s(_vm._f("json")(_vm.userData)))])])], 1)], 1)])])]);
 };
@@ -451,7 +451,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "099aab3b"
+  "38e80445"
   
 )
 

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -489,7 +489,7 @@ var render = function render() {
     staticClass: "uk-fieldset"
   }, [_c('legend', {
     staticClass: "uk-legend"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tLegend\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tLegend\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('ScInput', {
     attrs: {
@@ -556,7 +556,7 @@ var render = function render() {
         return _vm.updateTextarea();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tUpdate Content\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tUpdate Content\r\n\t\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('select', {
     staticClass: "uk-select"
@@ -567,7 +567,7 @@ var render = function render() {
     }
   }, [_c('div', [_c('p', {
     staticClass: "uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tRadio boxes (CSS)\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tRadio boxes (CSS)\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-child-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -600,9 +600,9 @@ var render = function render() {
       "checked": "",
       "disabled": ""
     }
-  }), _vm._v("D\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('p', {
+  }), _vm._v("D\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-margin-small-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tCheckboxes (CSS)\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tCheckboxes (CSS)\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-small uk-child-width-auto uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -633,7 +633,7 @@ var render = function render() {
     }
   }), _vm._v("D")])])]), _vm._v(" "), _c('div', [_c('p', {
     staticClass: "uk-margin-mini-bottom"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tSwitch (CSS)\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('input', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tSwitch (CSS)\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('input', {
     staticClass: "sc-switch-input",
     attrs: {
       "id": "switch-css",
@@ -644,11 +644,11 @@ var render = function render() {
     attrs: {
       "for": "switch-css"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\tSwitch\n\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\tSwitch\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t"), _c('span', {
     staticClass: "sc-switch-toggle-on"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tOn\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tOn\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('span', {
     staticClass: "sc-switch-toggle-off"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tOff\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tOff\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])])])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('h5', {
     staticClass: "uk-heading-line"
@@ -754,9 +754,9 @@ var render = function render() {
       "slot": "help-inline"
     },
     slot: "help-inline"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-inline")]), _vm._v(" class creates spacing to the left.\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-inline")]), _vm._v(" class creates spacing to the left.\r\n\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block uk-hidden@l"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-inline")]), _vm._v(" class creates spacing to the left.\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-inline")]), _vm._v(" class creates spacing to the left.\r\n\t\t\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-top"
   }, [_c('ScTextarea', {
     attrs: {
@@ -774,7 +774,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('p', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-block")]), _vm._v(" class creates an associated paragraph.\n\t\t\t\t\t\t\t\t\t")])], 1)])])], 1), _vm._ssrNode(" "), _c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tThe "), _c('code', [_vm._v(".uk-form-help-block")]), _vm._v(" class creates an associated paragraph.\r\n\t\t\t\t\t\t\t\t\t")])], 1)])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
   }, [_c('ScCardBody', [_c('h5', {
     staticClass: "uk-heading-line"
@@ -951,7 +951,7 @@ var render = function render() {
     }
   }, [_c('label', {
     staticClass: "uk-label-large"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tform-large\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tform-large\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('ScInput', {
     model: {
@@ -976,7 +976,7 @@ var render = function render() {
     }
   }, [_c('label', {
     staticClass: "uk-label-small"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tform-small\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('h5', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tform-small\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('h5', {
     staticClass: "uk-heading-line uk-margin-large-top"
   }, [_c('span', [_vm._v("Width modifiers")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
@@ -1152,7 +1152,7 @@ var render = function render() {
     attrs: {
       "for": "form-h-text"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tText\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tText\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('ScInput', {
     attrs: {
@@ -1173,7 +1173,7 @@ var render = function render() {
     attrs: {
       "for": "form-h-select"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSelect\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSelect\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-form-controls"
   }, [_c('select', {
     staticClass: "uk-select",
@@ -1198,19 +1198,19 @@ var render = function render() {
     attrs: {
       "value": "1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "2"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "3"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "4"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span')])]), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span')])]), _vm._v(" "), _c('div', [_c('div', {
     attrs: {
       "data-uk-form-custom": "target: > * > span:last-child"
     }
@@ -1218,19 +1218,19 @@ var render = function render() {
     attrs: {
       "value": "1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "2"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "3"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "4"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('span', {
     staticClass: "uk-link"
   }, [_c('span', {
     attrs: {
@@ -1244,23 +1244,23 @@ var render = function render() {
     attrs: {
       "value": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tPlease select...\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tPlease select...\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 01\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "2"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 02\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "3"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 03\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "4"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tOption 04\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline",
     attrs: {
       "type": "button"
@@ -1277,23 +1277,23 @@ var render = function render() {
     attrs: {
       "value": ""
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tSelect user...\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tSelect user...\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUser 01\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUser 01\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "2"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUser 02\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUser 02\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "3"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUser 03\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUser 03\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('option', {
     attrs: {
       "value": "4"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tUser 04\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\tUser 04\r\n\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('button', {
     staticClass: "sc-button sc-button-default sc-button-outline sc-button-flex sc-button-icon",
     attrs: {
       "type": "button"
@@ -1329,7 +1329,7 @@ var render = function render() {
       "type": "button",
       "tabindex": "-1"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSelect\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('span', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSelect\r\n\t\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', [_c('span', {
     staticClass: "uk-text-middle"
   }, [_vm._v("Here is a text")]), _vm._v(" "), _c('div', {
     attrs: {
@@ -1365,7 +1365,7 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c('button', {
     staticClass: "uk-button uk-button-default"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSubmit\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2)], 2)])]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSubmit\r\n\t\t\t\t\t\t\t\t\t")])])])])], 1)], 2)], 2)])]);
 };
 
 var staticRenderFns = [];
@@ -1461,7 +1461,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "100f4b9e"
+  "41f5a175"
   
 )
 

@@ -59,7 +59,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCreate\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCreate\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-small"
   }, [_c('h5', [_vm._v("Text small")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -68,7 +68,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCreate\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCreate\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-small"
   }, [_c('h5', [_vm._v("Text large")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -77,7 +77,7 @@ var render = function render() {
     attrs: {
       "href": "javascript:void(0)"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCreate\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCreate\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-3@l uk-child-width-1-2@s uk-grid\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-small"
   }, [_c('h5', [_vm._v("Text + icon default")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -88,7 +88,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-plus"
-  }), _vm._v("Create\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }), _vm._v("Create\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-small"
   }, [_c('h5', [_vm._v("Text small")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -99,7 +99,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-plus"
-  }), _vm._v("Create\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }), _vm._v("Create\r\n\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-small"
   }, [_c('h5', [_vm._v("Text large")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -110,7 +110,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-plus"
-  }), _vm._v("Create\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid>", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  }), _vm._v("Create\r\n\t\t\t\t\t\t\t")])])], 1)], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid>", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-medium"
   }, [_c('h5', [_vm._v("Multiple")])]), _vm._v(" "), _c('div', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right"
@@ -135,7 +135,7 @@ var render = function render() {
     }
   }, [_c('i', {
     staticClass: "mdi mdi-content-save"
-  })])])], 1)], 1)]), _vm._ssrNode(" <h3 class=\"uk-margin-large-top uk-margin-remove-bottom\">\n\t\t\t\tSpeed Dial\n\t\t\t</h3> <hr class=\"uk-margin-medium-top\"> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-margin-medium-bottom\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<div class=\"uk-card\">", "</div>", [_vm._ssrNode("<div class=\"uk-card-body uk-height-medium\"><h5>Speed dial horizontal</h5></div> "), _c('ScFabSpeedDial', {
+  })])])], 1)], 1)]), _vm._ssrNode(" <h3 class=\"uk-margin-large-top uk-margin-remove-bottom\">\r\n\t\t\t\tSpeed Dial\r\n\t\t\t</h3> <hr class=\"uk-margin-medium-top\"> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-margin-medium-bottom\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<div class=\"uk-card\">", "</div>", [_vm._ssrNode("<div class=\"uk-card-body uk-height-medium\"><h5>Speed dial horizontal</h5></div> "), _c('ScFabSpeedDial', {
     staticClass: "sc-fab-card-wrapper uk-position-bottom-right",
     attrs: {
       "fab-alignment": "horizontal",
@@ -195,7 +195,7 @@ var render = function render() {
     staticClass: "mdi mdi-email"
   }), _vm._v(" "), _c('i', {
     staticClass: "mdi mdi-close"
-  })])])], 2)])], 2), _vm._ssrNode(" <h3 class=\"uk-margin-large-top uk-margin-remove-bottom\">\n\t\t\t\tSingle Sheet\n\t\t\t</h3> <hr class=\"uk-margin-medium-top\"> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-large-bottom\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
+  })])])], 2)])], 2), _vm._ssrNode(" <h3 class=\"uk-margin-large-top uk-margin-remove-bottom\">\r\n\t\t\t\tSingle Sheet\r\n\t\t\t</h3> <hr class=\"uk-margin-medium-top\"> "), _vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-large-bottom\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('ScCard', [_c('ScCardBody', {
     staticClass: "uk-height-large md-bg-grey-200"
   }, [_c('ScFabSingleSheet', {
     ref: "fabSheetA",
@@ -225,25 +225,25 @@ var render = function render() {
           }
         }, [_c('i', {
           staticClass: "mdi mdi-folder sc-color-secondary"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tMove to folder\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMove to folder\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-pencil sc-color-secondary"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tEdit\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEdit\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-flag sc-color-secondary"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tFlag\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tFlag\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-delete sc-color-secondary"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tDelete\n\t\t\t\t\t\t\t\t\t")])];
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDelete\r\n\t\t\t\t\t\t\t\t\t")])];
       },
       proxy: true
     }])
@@ -278,28 +278,28 @@ var render = function render() {
           }
         }, [_c('i', {
           staticClass: "mdi mdi-folder md-color-white"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tMove to folder\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tMove to folder\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           staticClass: "md-color-white",
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-pencil md-color-white"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tEdit\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEdit\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           staticClass: "md-color-white",
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-flag md-color-white"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tFlag\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tFlag\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('a', {
           staticClass: "md-color-white",
           attrs: {
             "href": "javascript:void(0)"
           }
         }, [_c('i', {
           staticClass: "mdi mdi-delete md-color-white"
-        }), _vm._v("\n\t\t\t\t\t\t\t\t\t\tDelete\n\t\t\t\t\t\t\t\t\t")])];
+        }), _vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDelete\r\n\t\t\t\t\t\t\t\t\t")])];
       },
       proxy: true
     }])
@@ -407,7 +407,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "0e570cc0"
+  "58c71d70"
   
 )
 
@@ -462,7 +462,7 @@ var fab_buttons_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "30060d54"
+  "5ca5889e"
   
 )
 

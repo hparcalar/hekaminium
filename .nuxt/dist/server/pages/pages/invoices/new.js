@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -481,7 +481,7 @@ var render = function render() {
 
   return _c('div', {
     staticClass: "uk-flex uk-flex-column uk-height-1-1"
-  }, [_vm._ssrNode("<div class=\"uk-card-body uk-flex-1\">", "</div>", [_vm._ssrNode("<div class=\"uk-margin-medium-bottom sc-padding-left sc-padding-right\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-remove-bottom\">\n\t\t\t\t\tInvoice number:\n\t\t\t\t</p> "), _c('ScInput', {
+  }, [_vm._ssrNode("<div class=\"uk-card-body uk-flex-1\">", "</div>", [_vm._ssrNode("<div class=\"uk-margin-medium-bottom sc-padding-left sc-padding-right\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-remove-bottom\">\r\n\t\t\t\t\tInvoice number:\r\n\t\t\t\t</p> "), _c('ScInput', {
     attrs: {
       "placeholder": "in format: xxx/xxxxxx/year"
     },
@@ -492,7 +492,7 @@ var render = function render() {
       },
       expression: "invoice.number"
     }
-  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"md-bg-grey-100 sc-padding\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\n\t\t\t\t\t\t\tIssue date:\n\t\t\t\t\t\t</p> "), _c('ScInput', {
+  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"md-bg-grey-100 sc-padding\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-3@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\tIssue date:\r\n\t\t\t\t\t\t</p> "), _c('ScInput', {
     directives: [{
       name: "flatpickr",
       rawName: "v-flatpickr"
@@ -504,7 +504,7 @@ var render = function render() {
       },
       expression: "invoice.date"
     }
-  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\n\t\t\t\t\t\t\tDue date:\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex sc-padding-small-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-margin-right\">", "</div>", [_c('PrettyRadio', {
+  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-width-2-3@l\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\tDue date:\r\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-flex sc-padding-small-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-margin-right\">", "</div>", [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "7",
@@ -517,7 +517,7 @@ var render = function render() {
       },
       expression: "invoice.dueDate"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t7 days\n\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-margin-right\">", "</div>", [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t7 days\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-margin-right\">", "</div>", [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "14",
@@ -530,7 +530,7 @@ var render = function render() {
       },
       expression: "invoice.dueDate"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t14 days\n\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('PrettyRadio', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t14 days\r\n\t\t\t\t\t\t\t\t")])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_c('PrettyRadio', {
     staticClass: "p-radio",
     attrs: {
       "value": "21",
@@ -543,7 +543,7 @@ var render = function render() {
       },
       expression: "invoice.dueDate"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t21 days\n\t\t\t\t\t\t\t\t")])], 1)], 2)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid uk-grid-divider\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\n\t\t\t\t\t\t\tFrom:\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-margin-medium-bottom\">", "</div>", [_c('ScInput', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t21 days\r\n\t\t\t\t\t\t\t\t")])], 1)], 2)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-child-width-1-2@l uk-grid uk-grid-divider\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\tFrom:\r\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-margin-medium-bottom\">", "</div>", [_c('ScInput', {
     model: {
       value: _vm.invoice.from.company,
       callback: function ($$v) {
@@ -567,7 +567,7 @@ var render = function render() {
       },
       expression: "invoice.from.address2"
     }
-  }, [_c('label', [_vm._v("Address 2")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\n\t\t\t\t\t\t\tTo:\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-margin-medium-bottom\">", "</div>", [_c('ScInput', {
+  }, [_c('label', [_vm._v("Address 2")])])], 1)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div>", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\r\n\t\t\t\t\t\t\tTo:\r\n\t\t\t\t\t\t</p> "), _vm._ssrNode("<div class=\"uk-margin-medium-bottom\">", "</div>", [_c('ScInput', {
     model: {
       value: _vm.invoice.to.company,
       callback: function ($$v) {
@@ -591,7 +591,7 @@ var render = function render() {
       },
       expression: "invoice.to.address2"
     }
-  }, [_c('label', [_vm._v("Address 2")])])], 1)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding md-bg-grey-100\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-remove\">\n\t\t\t\t\tItems:\n\t\t\t\t</p> "), _vm._l(_vm.invoice.items, function (item, index) {
+  }, [_c('label', [_vm._v("Address 2")])])], 1)], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding md-bg-grey-100\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold uk-margin-remove\">\r\n\t\t\t\t\tItems:\r\n\t\t\t\t</p> "), _vm._l(_vm.invoice.items, function (item, index) {
     return _vm._ssrNode("<div class=\"uk-flex uk-flex-middle uk-margin-medium-top sc-padding-medium-top sc-border-top\">", "</div>", [_vm._ssrNode("<div data-uk-grid class=\"uk-flex-bottom uk-grid-small uk-grid uk-flex-1\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-5@l\">", "</div>", [_c('ScInput', {
       attrs: {
         "extra-classes": "uk-form-small"
@@ -655,7 +655,7 @@ var render = function render() {
     }) + "><i class=\"mdi mdi-plus\"></i></a> <a href=\"javascript:void(0)\" class=\"sc-button sc-button-icon sc-button-outline sc-button-outline-square sc-button-outline-danger\"" + _vm._ssrStyle(null, null, {
       display: _vm.invoice.items.length !== index + 1 ? '' : 'none'
     }) + "><i class=\"mdi mdi-trash-can-outline\"></i></a></div>")], 2);
-  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\n\t\t\t\t\tNotes:\n\t\t\t\t</p> "), _c('ScTextarea', {
+  })], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"sc-padding\">", "</div>", [_vm._ssrNode("<p class=\"sc-text-semibold\">\r\n\t\t\t\t\tNotes:\r\n\t\t\t\t</p> "), _c('ScTextarea', {
     attrs: {
       "placeholder": "Notes - any relevant information not already covered"
     },
@@ -666,7 +666,7 @@ var render = function render() {
       },
       expression: "invoice.notes"
     }
-  })], 2)], 2), _vm._ssrNode(" <div class=\"sc-padding-medium-ends sc-padding sc-border-top\"><button class=\"sc-button sc-button-primary\">\n\t\t\t\tSave Invoice\n\t\t\t</button></div>")], 2);
+  })], 2)], 2), _vm._ssrNode(" <div class=\"sc-padding-medium-ends sc-padding sc-border-top\"><button class=\"sc-button sc-button-primary\">\r\n\t\t\t\tSave Invoice\r\n\t\t\t</button></div>")], 2);
 };
 
 var staticRenderFns = [];
@@ -794,7 +794,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "0bb4a8e6"
+  "bd0b3520"
   
 )
 

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -459,7 +459,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -588,7 +588,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "b3ee670c"
+  "ca1bb76c"
   
 )
 
@@ -708,7 +708,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "6412f5f2"
+  "117e8192"
   
 )
 
@@ -777,7 +777,7 @@ var render = function render() {
     attrs: {
       "id": "sc-page-wrapper"
     }
-  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\">", "</div>", [_vm._ssrNode("<div class=\"sc-top-bar-content uk-flex uk-flex-1\"><h1 class=\"sc-top-bar-title uk-flex-1\">\n\t\t\t\t\tProduct Roadmap\n\t\t\t\t</h1> <span class=\"uk-text-muted\">\n\t\t\t\t\tPublic\n\t\t\t\t</span> <div class=\"sc-actions uk-margin-left\"><a href=\"javascript:void(0)\" data-uk-toggle=\"target: #sc-page-top-bar; cls: sc-top-bar-expanded\" class=\"sc-actions-icon mdi mdi-filter-variant sc-js-el-hide md-color-red-800 uk-animation-shake\"></a> <a href=\"javascript:void(0)\" data-uk-toggle=\"target: #sc-page-top-bar; cls: sc-top-bar-expanded\" class=\"sc-actions-icon mdi mdi-close sc-js-el-show\"></a></div></div> "), _vm._ssrNode("<div class=\"sc-top-bar-content-expanded\">", "</div>", [_vm._ssrNode("<p class=\"uk-text-medium uk-text-uppercase sc-text-semibold md-color-light-blue-700 uk-margin-remove\">\n\t\t\t\t\tFilters:\n\t\t\t\t</p> "), _vm._ssrNode("<div data-uk-grid class=\"uk-flex uk-flex-bottom uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@m\">", "</div>", [_c('ScInput', {
+  }, [_vm._ssrNode("<div id=\"sc-page-top-bar\" class=\"sc-top-bar\">", "</div>", [_vm._ssrNode("<div class=\"sc-top-bar-content uk-flex uk-flex-1\"><h1 class=\"sc-top-bar-title uk-flex-1\">\r\n\t\t\t\t\tProduct Roadmap\r\n\t\t\t\t</h1> <span class=\"uk-text-muted\">\r\n\t\t\t\t\tPublic\r\n\t\t\t\t</span> <div class=\"sc-actions uk-margin-left\"><a href=\"javascript:void(0)\" data-uk-toggle=\"target: #sc-page-top-bar; cls: sc-top-bar-expanded\" class=\"sc-actions-icon mdi mdi-filter-variant sc-js-el-hide md-color-red-800 uk-animation-shake\"></a> <a href=\"javascript:void(0)\" data-uk-toggle=\"target: #sc-page-top-bar; cls: sc-top-bar-expanded\" class=\"sc-actions-icon mdi mdi-close sc-js-el-show\"></a></div></div> "), _vm._ssrNode("<div class=\"sc-top-bar-content-expanded\">", "</div>", [_vm._ssrNode("<p class=\"uk-text-medium uk-text-uppercase sc-text-semibold md-color-light-blue-700 uk-margin-remove\">\r\n\t\t\t\t\tFilters:\r\n\t\t\t\t</p> "), _vm._ssrNode("<div data-uk-grid class=\"uk-flex uk-flex-bottom uk-grid\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-1-4@m\">", "</div>", [_c('ScInput', {
     model: {
       value: _vm.filterData.taskName,
       callback: function ($$v) {
@@ -818,7 +818,7 @@ var render = function render() {
       },
       expression: "filterData.assignee"
     }
-  })], 1)], 1), _vm._ssrNode(" <div class=\"uk-flex-none\"><button class=\"sc-button sc-button-secondary\">\n\t\t\t\t\t\t\tFilter\n\t\t\t\t\t\t</button></div>")], 2)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-wrapper-inner\" class=\"uk-flex\">", "</div>", [_vm._ssrNode("<div id=\"sc-page-aside\" class=\"uk-flex-column sc-page-aside-large sc-page-aside-overflow\">", "</div>", [_vm._ssrNode("<div class=\"sc-page-aside-body uk-flex uk-flex-column sc-padding-remove\">", "</div>", [_vm._ssrNode("<div class=\"sc-task-list-head\"><h3 class=\"sc-task-list-header\">\n\t\t\t\t\t\t\tTasks\n\t\t\t\t\t\t</h3></div> "), _c('client-only', [_c('Draggable', {
+  })], 1)], 1), _vm._ssrNode(" <div class=\"uk-flex-none\"><button class=\"sc-button sc-button-secondary\">\r\n\t\t\t\t\t\t\tFilter\r\n\t\t\t\t\t\t</button></div>")], 2)], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-wrapper-inner\" class=\"uk-flex\">", "</div>", [_vm._ssrNode("<div id=\"sc-page-aside\" class=\"uk-flex-column sc-page-aside-large sc-page-aside-overflow\">", "</div>", [_vm._ssrNode("<div class=\"sc-page-aside-body uk-flex uk-flex-column sc-padding-remove\">", "</div>", [_vm._ssrNode("<div class=\"sc-task-list-head\"><h3 class=\"sc-task-list-header\">\r\n\t\t\t\t\t\t\tTasks\r\n\t\t\t\t\t\t</h3></div> "), _c('client-only', [_c('Draggable', {
     staticClass: "sc-task-list-cards sc-task-js-list-cards",
     attrs: {
       "tag": "ul",
@@ -849,7 +849,7 @@ var render = function render() {
       }
     }, [_c('h2', {
       staticClass: "sc-task-card-title"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -861,7 +861,7 @@ var render = function render() {
         key: tag,
         staticClass: "uk-badge uk-margin-mini-right",
         class: [_vm.tagColor(tag)]
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\n\t\t\t\t\t\t\t\t\t\t")]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\r\n\t\t\t\t\t\t\t\t\t\t")]);
     }), 0), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
@@ -900,7 +900,7 @@ var render = function render() {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\n\t\t\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\r\n\t\t\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -945,7 +945,7 @@ var render = function render() {
       staticClass: "sc-task-list-head sortable-handle-el"
     }, [_c('h3', {
       staticClass: "sc-task-list-header"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(column.name) + "\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(column.name) + "\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       staticClass: "sc-actions"
     }, [_c('client-only', [_c('ColumnToggle', {
       attrs: {
@@ -985,21 +985,21 @@ var render = function render() {
           return _vm.addTaskModal(column);
         }
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdd Card\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tAdd Card\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopy List…\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tCopy List…\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove List…\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMove List…\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('li', {
       staticClass: "uk-nav-divider"
     }), _vm._v(" "), _c('li', [_c('a', {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClose This List\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)]), _vm._v(" "), _c('Draggable', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tClose This List\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t")])])])])])], 1)]), _vm._v(" "), _c('Draggable', {
       staticClass: "sc-task-list-cards sc-task-js-list-cards uk-height-1-1",
       attrs: {
         "tag": "ul",
@@ -1030,7 +1030,7 @@ var render = function render() {
         }
       }, [_c('h2', {
         staticClass: "sc-task-card-title"
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1043,7 +1043,7 @@ var render = function render() {
           key: tag,
           staticClass: "uk-badge uk-margin-mini-right",
           class: [_vm.tagColor(tag)]
-        }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\n\t\t\t\t\t\t\t\t\t\t\t\t")]);
+        }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\r\n\t\t\t\t\t\t\t\t\t\t\t\t")]);
       }), 0), _vm._v(" "), _c('div', {
         directives: [{
           name: "show",
@@ -1082,7 +1082,7 @@ var render = function render() {
         attrs: {
           "href": "javascript:void(0)"
         }
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\r\n\t\t\t\t\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
         directives: [{
           name: "show",
           rawName: "v-show",
@@ -1103,29 +1103,29 @@ var render = function render() {
     }), 0)], 1);
   }), 0)], 1)], 1)])], 2), _vm._ssrNode(" <div class=\"sc-fab-page-wrapper\"><a href=\"javascript:void(0)\" class=\"sc-fab sc-fab-large sc-fab-danger\"><i class=\"mdi mdi-plus\"></i></a></div> "), _vm._ssrNode("<div id=\"sc-task-modal\" data-uk-modal class=\"uk-flex-top uk-modal\">", "</div>", [_vm._ssrNode("<div class=\"uk-modal-dialog uk-modal-body uk-margin-auto-vertical\">", "</div>", [_vm._ssrNode("<button type=\"button\" data-uk-close class=\"uk-modal-close-default\"></button> "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.modalData ? '' : 'none'
-  }) + ">", "</div>", [_vm._ssrNode("<h2 class=\"uk-modal-title\">" + _vm._ssrEscape("\n\t\t\t\t\t\t" + _vm._s(_vm.modalData.title) + "\n\t\t\t\t\t") + "</h2> <div class=\"uk-flex uk-flex-middle\"" + _vm._ssrStyle(null, null, {
+  }) + ">", "</div>", [_vm._ssrNode("<h2 class=\"uk-modal-title\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t" + _vm._s(_vm.modalData.title) + "\r\n\t\t\t\t\t") + "</h2> <div class=\"uk-flex uk-flex-middle\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.tags.length ? '' : 'none'
   }) + ">" + _vm._ssrList(_vm.modalData.tags, function (tag) {
-    return "<span" + _vm._ssrClass("uk-badge uk-margin-mini-right", [_vm.tagColor(tag)]) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t" + _vm._s(tag) + "\n\t\t\t\t\t\t") + "</span>";
+    return "<span" + _vm._ssrClass("uk-badge uk-margin-mini-right", [_vm.tagColor(tag)]) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t" + _vm._s(tag) + "\r\n\t\t\t\t\t\t") + "</span>";
   }) + "</div> "), _vm._ssrNode("<div data-uk-grid class=\"uk-margin-medium-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-flex-1\"><div class=\"sc-task-modal-description\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.description !== '' ? '' : 'none'
   }) + "><p>" + _vm._ssrEscape(_vm._s(_vm.modalData.description)) + "</p></div></div> "), _vm._ssrNode("<div class=\"uk-width-1-4@m\">", "</div>", [_vm._ssrNode("<div class=\"uk-text-medium md-bg-grey-100 sc-padding-medium\">", "</div>", [_vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.date ? '' : 'none'
-  }) + "><span class=\"uk-text-muted uk-margin-small-right\">\n\t\t\t\t\t\t\t\t\t\tdate:\n\t\t\t\t\t\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.modalData.date) + "\n\t\t\t\t\t\t\t\t") + "</div> <hr class=\"uk-margin-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><span class=\"uk-text-muted uk-margin-small-right\">\r\n\t\t\t\t\t\t\t\t\t\tdate:\r\n\t\t\t\t\t\t\t\t\t</span>" + _vm._ssrEscape(" " + _vm._s(_vm.modalData.date) + "\r\n\t\t\t\t\t\t\t\t") + "</div> <hr class=\"uk-margin-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.list !== '' ? '' : 'none'
   }) + "> <div" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.list !== '' ? '' : 'none'
-  }) + "><span class=\"uk-text-muted uk-margin-small-right\">\n\t\t\t\t\t\t\t\t\t\tin list:\n\t\t\t\t\t\t\t\t\t</span> <a href=\"javascript:void(0)\">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.modalData.list_long) + "\n\t\t\t\t\t\t\t\t\t") + "</a></div> <hr class=\"uk-margin-small\"" + _vm._ssrStyle(null, null, {
+  }) + "><span class=\"uk-text-muted uk-margin-small-right\">\r\n\t\t\t\t\t\t\t\t\t\tin list:\r\n\t\t\t\t\t\t\t\t\t</span> <a href=\"javascript:void(0)\">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.modalData.list_long) + "\r\n\t\t\t\t\t\t\t\t\t") + "</a></div> <hr class=\"uk-margin-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.progress ? '' : 'none'
   }) + "> <div" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.progress ? '' : 'none'
-  }) + "><span class=\"uk-text-muted\">\n\t\t\t\t\t\t\t\t\t\tprogress:\n\t\t\t\t\t\t\t\t\t</span> <div" + _vm._ssrAttr("title", _vm.modalData.progress + '%') + " class=\"uk-margin-small-top sc-progress sc-progress-small\"><div" + _vm._ssrClass("sc-progress-bar", [_vm.progressColor(_vm.modalData.progress)]) + _vm._ssrStyle(null, {
+  }) + "><span class=\"uk-text-muted\">\r\n\t\t\t\t\t\t\t\t\t\tprogress:\r\n\t\t\t\t\t\t\t\t\t</span> <div" + _vm._ssrAttr("title", _vm.modalData.progress + '%') + " class=\"uk-margin-small-top sc-progress sc-progress-small\"><div" + _vm._ssrClass("sc-progress-bar", [_vm.progressColor(_vm.modalData.progress)]) + _vm._ssrStyle(null, {
     'width': _vm.modalData.progress + '%'
   }, null) + "></div></div></div> <hr class=\"uk-margin-small\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.assignee.length ? '' : 'none'
   }) + "> "), _vm._ssrNode("<div" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.assignee.length ? '' : 'none'
-  }) + ">", "</div>", [_vm._ssrNode("<span class=\"uk-text-muted\">\n\t\t\t\t\t\t\t\t\t\tassignees:\n\t\t\t\t\t\t\t\t\t</span> "), _vm._ssrNode("<div class=\"uk-margin-small-top uk-flex uk-flex-middle\">", "</div>", _vm._l(_vm.modalData.assignee.slice(0, 3), function (assignee) {
+  }) + ">", "</div>", [_vm._ssrNode("<span class=\"uk-text-muted\">\r\n\t\t\t\t\t\t\t\t\t\tassignees:\r\n\t\t\t\t\t\t\t\t\t</span> "), _vm._ssrNode("<div class=\"uk-margin-small-top uk-flex uk-flex-middle\">", "</div>", _vm._l(_vm.modalData.assignee.slice(0, 3), function (assignee) {
     return _vm._ssrNode("<a href=\"javascript:void(0)\"" + _vm._ssrAttr("title", _vm.assigneeName(assignee)) + " class=\"uk-margin-small-right\">", "</a>", [_c('img', {
       directives: [{
         name: "rjs",
@@ -1141,7 +1141,7 @@ var render = function render() {
     }, [])]);
   }), 0), _vm._ssrNode(" <a href=\"javascript:void(0)\" class=\"uk-text-small uk-margin-small-top uk-display-inline-block\"" + _vm._ssrStyle(null, null, {
     display: _vm.modalData.assignee.length > 3 ? '' : 'none'
-  }) + ">" + _vm._ssrEscape("\n\t\t\t\t\t\t\t\t\t\t+" + _vm._s(_vm.modalData.assignee.length - 3) + " more\n\t\t\t\t\t\t\t\t\t") + "</a>")], 2)], 2)])], 2)], 2)], 2)]), _vm._ssrNode(" "), _c('client-only', [_c('div', {
+  }) + ">" + _vm._ssrEscape("\r\n\t\t\t\t\t\t\t\t\t\t+" + _vm._s(_vm.modalData.assignee.length - 3) + " more\r\n\t\t\t\t\t\t\t\t\t") + "</a>")], 2)], 2)])], 2)], 2)], 2)]), _vm._ssrNode(" "), _c('client-only', [_c('div', {
     staticClass: "uk-flex-top uk-modal",
     attrs: {
       "id": "sc-task-board-card-add-modal"
@@ -1158,7 +1158,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c('h2', {
     staticClass: "uk-modal-title"
-  }, [_vm._v("\n\t\t\t\t\t\t\tAdd Card\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tAdd Card\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin"
   }, [_c('ScInput', {
     attrs: {
@@ -1261,7 +1261,7 @@ var render = function render() {
     attrs: {
       "type": "button"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('button', {
     staticClass: "sc-button",
     attrs: {
       "id": "sc-js-card-add",
@@ -1273,11 +1273,11 @@ var render = function render() {
         return _vm.addTask();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tAdd Task\n\t\t\t\t\t\t")])])])])]), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tAdd Task\r\n\t\t\t\t\t\t")])])])])]), _vm._ssrNode(" "), _c('client-only', [_c('ScOffcanvas', [_c('div', {
     staticClass: "sc-task-list-head"
   }, [_c('h3', {
     staticClass: "sc-task-list-header"
-  }, [_vm._v("\n\t\t\t\t\t\tTasks\n\t\t\t\t\t")])]), _vm._v(" "), _c('Draggable', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tTasks\r\n\t\t\t\t\t")])]), _vm._v(" "), _c('Draggable', {
     staticClass: "sc-task-list-cards sc-task-js-list-cards",
     attrs: {
       "tag": "ul",
@@ -1308,7 +1308,7 @@ var render = function render() {
       }
     }, [_c('h2', {
       staticClass: "sc-task-card-title"
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t" + _vm._s(task.title) + "\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1320,7 +1320,7 @@ var render = function render() {
         key: tag,
         staticClass: "uk-badge uk-margin-mini-right",
         class: [_vm.tagColor(tag)]
-      }, [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\n\t\t\t\t\t\t\t\t")]);
+      }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(tag) + "\r\n\t\t\t\t\t\t\t\t")]);
     }), 0), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
@@ -1359,7 +1359,7 @@ var render = function render() {
       attrs: {
         "href": "javascript:void(0)"
       }
-    }, [_vm._v("\n\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\n\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
+    }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t+" + _vm._s(task.assignee.length - 3) + " more\r\n\t\t\t\t\t\t\t\t")])], 2), _vm._v(" "), _c('div', {
       directives: [{
         name: "show",
         rawName: "v-show",
@@ -1682,7 +1682,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "3e0358db"
+  "cd0ec81c"
   
 )
 

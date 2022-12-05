@@ -255,7 +255,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "d313152c"
+  "0a37958c"
   
 )
 
@@ -344,7 +344,7 @@ var render = function render() {
         return _vm.changeMode('diffChars');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tChars\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tChars\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium-left"
   }, [_c('PrettyRadio', {
     staticClass: "p-radio",
@@ -357,7 +357,7 @@ var render = function render() {
         return _vm.changeMode($event, 'diffWords');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tWords\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tWords\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium-left"
   }, [_c('PrettyRadio', {
     staticClass: "p-radio",
@@ -371,7 +371,7 @@ var render = function render() {
         return _vm.changeMode('diffLines');
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLines\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLines\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('div', [_c('button', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -384,7 +384,7 @@ var render = function render() {
         return _vm.compare();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tCompare\n\t\t\t\t\t\t")])])])])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tCompare\r\n\t\t\t\t\t\t")])])])])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('div', {
     staticClass: "uk-overflow-auto"
   }, [_c('div', {
     staticClass: "uk-child-width-1-3@s uk-grid-collapse uk-grid-divider uk-grid",
@@ -527,7 +527,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "31ef9ce2"
+  "0793c218"
   
 )
 

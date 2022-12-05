@@ -27,7 +27,7 @@ var render = function render() {
     attrs: {
       "to": "/components/"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\tComponents\n\t\t\t\t\t\t")])], 1), _vm._ssrNode(" <li><span>Breadcrumb</span></li>")], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\tComponents\r\n\t\t\t\t\t\t")])], 1), _vm._ssrNode(" <li><span>Breadcrumb</span></li>")], 2)])]), _vm._ssrNode(" "), _vm._ssrNode("<div id=\"sc-page-content\">", "</div>", [_c('ScCard', [_c('ScCardBody', [_c('ul', {
     staticClass: "uk-breadcrumb"
   }, [_c('li', [_c('a', {
     attrs: {
@@ -84,7 +84,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "9f24dc70"
+  "73aeb86a"
   
 )
 

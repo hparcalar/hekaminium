@@ -32,7 +32,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tDefault\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tDefault\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
     staticClass: "raty-small",
     attrs: {
       "settings": {
@@ -48,7 +48,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tsmall\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tsmall\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
     staticClass: "raty-large",
     attrs: {
       "settings": {
@@ -64,7 +64,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tLarge\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tLarge\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@m uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -84,7 +84,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tHalf Star\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tHalf Star\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
     attrs: {
       "settings": {
         cancel: true
@@ -99,7 +99,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tCancel Button\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tCancel Button\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('client-only', [_c('StarRating', {
     model: {
       value: _vm.ratyFScore,
       callback: function ($$v) {
@@ -109,7 +109,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tSaved Score\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tSaved Score\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -131,7 +131,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tRead Only\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tRead Only\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-width-2-3@m"
   }, [_c('client-only', [_c('StarRating', {
     attrs: {
@@ -148,7 +148,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t10 Stars\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t10 Stars\r\n\t\t\t\t\t\t\t")])], 1)]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3@m uk-grid-divider uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -167,7 +167,7 @@ var render = function render() {
     }
   })], 1), _vm._v(" "), _c('span', {
     staticClass: "uk-form-help-block"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tApi Methods\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tApi Methods\r\n\t\t\t\t\t\t\t")])], 1), _vm._v(" "), _c('div', [_c('div', {
     staticClass: "uk-child-width-auto@l uk-grid-small uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -179,27 +179,27 @@ var render = function render() {
         return _vm.ratySetScore(4);
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tChange to 4\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tChange to 4\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-small",
     on: {
       "click": function ($event) {
         return _vm.ratyCancel();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tCancel\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tCancel\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "sc-button sc-button-small",
     on: {
       "click": function ($event) {
         return _vm.ratyReadOnlyToggle();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tToggle readOnly\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tToggle readOnly\r\n\t\t\t\t\t\t\t\t\t")])])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top"
   }, [_c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("Rating:")]), _vm._v(" " + _vm._s(_vm.ratyApi.model) + ";\n\t\t\t\t\t\t\t\t"), _c('span', {
+  }, [_vm._v("Rating:")]), _vm._v(" " + _vm._s(_vm.ratyApi.model) + ";\r\n\t\t\t\t\t\t\t\t"), _c('span', {
     staticClass: "uk-text-muted"
-  }, [_vm._v("ReadOnly:")]), _vm._v(" " + _vm._s(_vm.ratyApi.readOnly) + "\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
+  }, [_vm._v("ReadOnly:")]), _vm._v(" " + _vm._s(_vm.ratyApi.readOnly) + "\r\n\t\t\t\t\t\t\t")])])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -264,7 +264,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "1b0395fc"
+  "717190c0"
   
 )
 

@@ -197,7 +197,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "7039386c"
+  "837b940c"
   
 )
 
@@ -279,7 +279,7 @@ var render = function render() {
       },
       expression: "loginData.email"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tEmail/Login\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEmail/Login\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
     attrs: {
@@ -293,7 +293,7 @@ var render = function render() {
       },
       expression: "loginData.password"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPassword\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPassword\r\n\t\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-small-top uk-text-small uk-text-right@s"
   }, [_c('a', {
     staticClass: "sc-link",
@@ -301,7 +301,7 @@ var render = function render() {
       "href": "javascript:void(0)",
       "data-uk-toggle": "target: .sc-toggle-login-password; animation: uk-animation-scale-up"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tForgot Password?\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ul', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tForgot Password?\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ul', {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -309,7 +309,7 @@ var render = function render() {
       expression: "authError"
     }],
     staticClass: "sc-vue-errors uk-display-block"
-  }, [_c('li', [_vm._v("\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.authError) + "\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
+  }, [_c('li', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t" + _vm._s(_vm.authError) + "\r\n\t\t\t\t\t\t\t\t")])]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('a', {
     staticClass: "sc-button sc-button-large sc-button-block sc-button-danger",
@@ -322,7 +322,7 @@ var render = function render() {
         return _vm.login();
       }
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSign In\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSign In\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-child-width-1-3 uk-grid-medium uk-margin-medium-top uk-grid",
     attrs: {
       "data-uk-grid": ""
@@ -352,13 +352,13 @@ var render = function render() {
     staticClass: "uk-margin-large-top uk-text-center"
   }, [_c('span', {
     staticClass: "sc-color-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tDon't have an account?\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('a', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tDon't have an account?\r\n\t\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', [_c('a', {
     staticClass: "sc-text-semibold",
     attrs: {
       "href": "javascript:void(0)",
       "data-uk-toggle": "target: .sc-toggle-login-register; animation: uk-animation-scale-up"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\t\tSign Up\n\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\t\tSign Up\r\n\t\t\t\t\t\t\t\t\t\t")])])])])])]), _vm._v(" "), _c('div', {
     staticClass: "sc-toggle-login-register",
     attrs: {
       "id": "sc-register-form",
@@ -376,7 +376,7 @@ var render = function render() {
       },
       expression: "registerData.name"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tName\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tName\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
     model: {
@@ -386,7 +386,7 @@ var render = function render() {
       },
       expression: "registerData.email"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEmail\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
     model: {
@@ -396,11 +396,11 @@ var render = function render() {
       },
       expression: "registerData.password"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tPassword\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tPassword\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-large sc-button-block sc-button-secondary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tSign Up\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tSign Up\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top uk-flex uk-flex-middle uk-flex-center"
   }, [_c('a', {
     staticClass: "sc-text-semibold",
@@ -408,7 +408,7 @@ var render = function render() {
       "href": "javascript:void(0)",
       "data-uk-toggle": "target: .sc-toggle-login-register; animation: uk-animation-scale-up"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBack to login form\n\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBack to login form\r\n\t\t\t\t\t\t\t\t\t")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "sc-toggle-login-password",
     attrs: {
       "id": "sc-password-form",
@@ -418,7 +418,7 @@ var render = function render() {
     staticClass: "sc-login-page-inner"
   }, [_c('div', {
     staticClass: "uk-margin-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\tPlease enter your email address. You will receive a link to reset your password.\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\tPlease enter your email address. You will receive a link to reset your password.\r\n\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-medium"
   }, [_c('ScInput', {
     model: {
@@ -428,11 +428,11 @@ var render = function render() {
       },
       expression: "recoverPassEmail"
     }
-  }, [_c('label', [_vm._v("\n\t\t\t\t\t\t\t\t\t\tEmail\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
+  }, [_c('label', [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tEmail\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top"
   }, [_c('button', {
     staticClass: "sc-button sc-button-large sc-button-block sc-button-primary"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\tReset Password\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\tReset Password\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-margin-large-top uk-flex uk-flex-middle uk-flex-center"
   }, [_c('a', {
     staticClass: "sc-text-semibold",
@@ -440,7 +440,7 @@ var render = function render() {
       "href": "javascript:void(0)",
       "data-uk-toggle": "target: .sc-toggle-login-password; animation: uk-animation-scale-up"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tBack to login form\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 1)]);
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tBack to login form\r\n\t\t\t\t\t\t\t\t\t")])])])])])])], 1)], 1)]);
 };
 
 var staticRenderFns = [];
@@ -558,7 +558,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "f96eeda4"
+  "6f269644"
   
 )
 

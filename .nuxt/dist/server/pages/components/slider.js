@@ -641,7 +641,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "2f99d632"
+  "25f8a862"
   
 )
 
@@ -718,7 +718,7 @@ var render = function render() {
     }
   })])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tSmall Gutter\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tSmall Gutter\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-position-relative uk-visible-toggle uk-light",
     attrs: {
       "data-uk-slider": ""
@@ -771,7 +771,7 @@ var render = function render() {
     }
   })])])], 1), _vm._ssrNode(" "), _c('ScCard', {
     staticClass: "uk-margin-top"
-  }, [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\tMedium Gutter\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }, [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\tMedium Gutter\r\n\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-position-relative uk-visible-toggle uk-light",
     attrs: {
       "data-uk-slider": ""
@@ -824,75 +824,75 @@ var render = function render() {
     }
   })])])], 1), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-slider=\"autoplay: true;autoplay-interval: 3000\" class=\"uk-margin-top uk-position-relative uk-visible-toggle sc-padding-small\">", "</div>", [_vm._ssrNode("<ul data-uk-grid class=\"uk-slider-items uk-child-width-1-2@m uk-child-width-1-4@l uk-grid\">", "</ul>", [_vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 9
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 1
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 4
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 8
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 16
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 10
     }
   }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<li>", "</li>", [_c('ScCard', {
     staticClass: "uk-position-relative"
-  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\t\t\tTitle\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
+  }, [_c('ScCardHeader', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\t\t\tTitle\r\n\t\t\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardMeta', [_c('time', {
     attrs: {
       "datetime": "2019-04-01T19:00"
     }
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tApril 01, 2019\r\n\t\t\t\t\t\t\t\t\t")])])], 1), _vm._v(" "), _c('ScPhoto', {
     attrs: {
       "image-id": 14
     }
-  }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" data-uk-slidenav-previous data-uk-slider-item=\"previous\" class=\"uk-position-center-left uk-position-small uk-hidden-hover\"></a> <a href=\"javascript:void(0)\" data-uk-slidenav-next data-uk-slider-item=\"next\" class=\"uk-position-center-right uk-position-small uk-hidden-hover\"></a>")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-margin-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@m\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\n\t\t\t\t\t\t\tCenter mode\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
+  }), _vm._v(" "), _c('ScCardBody', [_c('p', [_vm._v("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.")])])], 1)], 1)], 2), _vm._ssrNode(" <a href=\"javascript:void(0)\" data-uk-slidenav-previous data-uk-slider-item=\"previous\" class=\"uk-position-center-left uk-position-small uk-hidden-hover\"></a> <a href=\"javascript:void(0)\" data-uk-slidenav-next data-uk-slider-item=\"next\" class=\"uk-position-center-right uk-position-small uk-hidden-hover\"></a>")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div data-uk-grid class=\"uk-flex-center uk-margin-top\">", "</div>", [_vm._ssrNode("<div class=\"uk-width-2-3@m\">", "</div>", [_c('ScCard', [_c('ScCardTitle', [_vm._v("\r\n\t\t\t\t\t\t\tCenter mode\r\n\t\t\t\t\t\t")]), _vm._v(" "), _c('ScCardBody', [_c('div', {
     staticClass: "uk-position-relative uk-visible-toggle uk-light",
     attrs: {
       "data-uk-slider": "center: true"
@@ -1043,7 +1043,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "5f6c9a26"
+  "0fa1b4ae"
   
 )
 

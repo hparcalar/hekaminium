@@ -111,7 +111,7 @@ var render = function render() {
     staticClass: "sc-top-bar-content uk-flex uk-flex-1"
   }, [_c('h1', {
     staticClass: "sc-top-bar-title uk-text-uppercase uk-flex-1"
-  }, [_vm._v("\n\t\t\t\t\t\tAnimations\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\r\n\t\t\t\t\t\tAnimations\r\n\t\t\t\t\t")]), _vm._v(" "), _c('div', {
     staticClass: "uk-width-1-2 uk-width-1-3@s uk-width-1-5@m"
   }, [_c('client-only', [_c('Select2', {
     attrs: {
@@ -142,72 +142,72 @@ var render = function render() {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-fade"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tFade\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tFade\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-scale-up"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tScale Up\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tScale Up\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-scale-down"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tScale Down\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tScale Down\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-shake"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tShake\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tShake\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left-small"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top-small"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom-small"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right-small"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left-medium"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top-medium"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom-medium"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right-medium"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1)], 2)]), _vm._ssrNode(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1)], 2)]), _vm._ssrNode(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_vm._ssrNode("<code>&lt;div class=&quot;uk-animation-fade&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-scale-up&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-scale-down&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-shake&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left-small&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top-small&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom-small&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right-small&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left-medium&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top-medium&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom-medium&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right-medium&quot;&gt;&lt;/div&gt;\n</code>")]), _vm._ssrNode(" <h5 class=\"uk-margin-medium-top\">\n\t\t\t\t\tReverse modifier\n\t\t\t\t</h5> "), _vm._ssrNode("<div" + _vm._ssrClass(null, {
+  }, [_vm._ssrNode("<code>&lt;div class=&quot;uk-animation-fade&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-scale-up&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-scale-down&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-shake&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left-small&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top-small&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom-small&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right-small&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left-medium&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top-medium&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom-medium&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right-medium&quot;&gt;&lt;/div&gt;\r\n</code>")]), _vm._ssrNode(" <h5 class=\"uk-margin-medium-top\">\r\n\t\t\t\t\tReverse modifier\r\n\t\t\t\t</h5> "), _vm._ssrNode("<div" + _vm._ssrClass(null, {
     'sc-animation-slow': _vm.animationSlow,
     'sc-animation-fast': _vm.animationFast,
     'sc-animation-very-slow': _vm.animationVerySlow
@@ -215,72 +215,72 @@ var render = function render() {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-fade uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tFade\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tFade\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-scale-up uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tScale Up\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tScale Up\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-scale-down uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tScale Down\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tScale Down\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-shake uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tShake\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tShake\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left-small uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top-small uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom-small uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right-small uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right Small\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right Small\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-left-medium uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Left Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Left Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-top-medium uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Top Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Top Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-bottom-medium uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Bottom Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"uk-animation-toggle\">", "</div>", [_c('ScCard', {
     staticClass: "uk-flex uk-height-small uk-flex-middle uk-flex-center uk-animation-slide-right-medium uk-animation-reverse"
   }, [_c('ScCardBody', [_c('p', {
     staticClass: "uk-text-center uk-text-medium"
-  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t\tSlide Right Medium\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1)], 2)]), _vm._ssrNode(" "), _c('pre', {
+  }, [_vm._v("\r\n\t\t\t\t\t\t\t\t\t\tSlide Right Medium\r\n\t\t\t\t\t\t\t\t\t")])])], 1)], 1)], 2)]), _vm._ssrNode(" "), _c('pre', {
     directives: [{
       name: "highlightjs",
       rawName: "v-highlightjs"
     }]
-  }, [_vm._ssrNode("<code>&lt;div class=&quot;uk-animation-fade uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-scale-up uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-scale-down uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-shake uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-left-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-top-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-bottom-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;uk-animation-slide-right-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\n</code>")])], 2)])], 2);
+  }, [_vm._ssrNode("<code>&lt;div class=&quot;uk-animation-fade uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-scale-up uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-scale-down uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-shake uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right-small uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-left-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-top-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-bottom-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n&lt;div class=&quot;uk-animation-slide-right-medium uk-animation-reverse&quot;&gt;&lt;/div&gt;\r\n</code>")])], 2)])], 2);
 };
 
 var staticRenderFns = [];
@@ -355,7 +355,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "48062134"
+  "5dc13337"
   
 )
 
