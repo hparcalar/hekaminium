@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pages/poi_listing", {data:[{}],fetch:{},mutations:[]});

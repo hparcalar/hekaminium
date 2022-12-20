@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/swipe_list", {data:[{}],fetch:{},mutations:[]});

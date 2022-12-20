@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pages/notes", {data:[{}],fetch:{},mutations:[]});

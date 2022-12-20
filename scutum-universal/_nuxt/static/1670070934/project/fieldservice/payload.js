@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/project/fieldservice", {data:[{}],fetch:{},mutations:[]});

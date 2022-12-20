@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/calendar", {data:[{}],fetch:{},mutations:[]});

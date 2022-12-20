@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/tree", {data:[{}],fetch:{},mutations:[]});

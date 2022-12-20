@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/modals_dialogs", {data:[{}],fetch:{},mutations:[]});

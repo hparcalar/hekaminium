@@ -16,7 +16,10 @@ if(mode === 'universal') {
 }
 
 module.exports = {
-	ssr: mode === 'universal',
+	// presets: [
+	// 	'@vue/cli-plugin-babel/preset'
+	//   ],
+	ssr: mode === 'spa',
 	target: 'static',
 	/*
 	** Headers of the page
@@ -84,6 +87,7 @@ module.exports = {
 		{ src: '~/plugins/waves.client.js' },
 		{ src: '~/plugins/retina.client.js' },
 		{ src: '~/plugins/vueVisible.client.js' },
+		{ src: '~/plugins/vue-googleapis.js' }
 	],
 	router: {
 		middleware: ['redirect'],

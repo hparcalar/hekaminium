@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/badge_label", {data:[{}],fetch:{},mutations:[]});

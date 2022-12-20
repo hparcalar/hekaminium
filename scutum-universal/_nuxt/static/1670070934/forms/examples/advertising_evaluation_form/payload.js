@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/examples/advertising_evaluation_form", {data:[{}],fetch:{},mutations:[]});

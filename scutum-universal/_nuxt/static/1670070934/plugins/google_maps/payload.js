@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/google_maps", {data:[{}],fetch:{},mutations:[]});

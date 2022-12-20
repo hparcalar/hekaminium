@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pages/data_visualization", {data:[{}],fetch:{},mutations:[]});

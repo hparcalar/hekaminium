@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/wysiwyg/ckeditor", {data:[{}],fetch:{},mutations:[]});

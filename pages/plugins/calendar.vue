@@ -94,7 +94,7 @@
 							</client-only>
 						</ScCardBody>
 					</div>
-					<div class="uk-width-1-6@m sc-column-transition uk-visible@l" :class="{'sc-column-collapsed': columnCollapsed, 'sc-js-el-transform': columnTransform}">
+					<!-- <div class="uk-width-1-6@m sc-column-transition uk-visible@l" :class="{'sc-column-collapsed': columnCollapsed, 'sc-js-el-transform': columnTransform}">
 						<ScCardHeader class="sc-padding md-bg-grey-200 sc-padding-medium-ends sc-border-bottom uk-margin-bottom">
 							<div class="uk-flex uk-flex-middle">
 								<div class="uk-flex-1 sc-js-el-hide">
@@ -133,14 +133,14 @@
 								</li>
 							</ul>
 						</ScCardBody>
-					</div>
+					</div> -->
 				</div>
 			</ScCard>
 		</div>
 		<client-only>
 			<ScOffcanvas>
 				<h5 class="sc-padding-small">
-					My calendars
+					Takvimler
 				</h5>
 				<ul class="uk-list uk-margin-remove-ends">
 					<li>
@@ -183,6 +183,8 @@ const { uniqueID } = scHelpers;
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import ColumnToggle from '~/components/ColumnToggle'
 import moment from '~/plugins/moment'
+import { useApi } from '~/composable/useApi';
+
 require('tui-calendar/dist/tui-calendar.css');
 require('tui-date-picker/dist/tui-date-picker.css');
 require('tui-time-picker/dist/tui-time-picker.css');
@@ -317,6 +319,7 @@ export default {
 		},
 		calendarList: [],
 		scheduleList: [],
+		calendarElementList: [],
 		calViewName: '',
 		calNarrowWeekends: scMq.largeMin(),
 		calWorkWeek: true,
@@ -347,6 +350,9 @@ export default {
 				},
 				time (schedule) {
 					return self.getTimeTemplate(schedule, false);
+				},
+				popupDetailBody: function(model) {
+					return model.body;
 				}
 			}
 		},
@@ -354,76 +360,76 @@ export default {
 			return [
 				{
 					id: '1',
-					name: 'My Calendar',
+					name: 'Progenar',
 					color: '#ffffff',
 					bgColor: '#0288D1',
 					dragBgColor: '#0288D1',
 					borderColor: '#0277BD',
 					checked: true
 				},
-				{
-					id: '2',
-					name: 'Company',
-					color: '#ffffff',
-					bgColor: '#E53935',
-					dragBgColor: '#E53935',
-					borderColor: '#C62828',
-					checked: true
-				},
-				{
-					id: '3',
-					name: 'Family',
-					color: '#ffffff',
-					bgColor: '#0097A7',
-					dragBgColor: '#0097A7',
-					borderColor: '#00838F',
-					checked: true
-				},
-				{
-					id: '4',
-					name: 'Friends',
-					color: '#ffffff',
-					bgColor: '#5E35B1',
-					dragBgColor: '#5E35B1',
-					borderColor: '#4527A0',
-					checked: true
-				},
-				{
-					id: '5',
-					name: 'Travel',
-					color: '#ffffff',
-					bgColor: '#43A047',
-					dragBgColor: '#43A047',
-					borderColor: '#2E7D32',
-					checked: true
-				},
-				{
-					id: '6',
-					name: 'etc',
-					color: '#ffffff',
-					bgColor: '#757575',
-					dragBgColor: '#757575',
-					borderColor: '#424242',
-					checked: true
-				},
-				{
-					id: '7',
-					name: 'Birthdays',
-					color: '#222222',
-					bgColor: '#FDD835',
-					dragBgColor: '#FDD835',
-					borderColor: '#F9A825',
-					checked: true
-				},
-				{
-					id: '8',
-					name: 'National Holidays',
-					color: '#ffffff',
-					bgColor: '#00897B',
-					dragBgColor: '#00897B',
-					borderColor: '#00695C',
-					checked: true
-				}
+				// {
+				// 	id: '2',
+				// 	name: 'Company',
+				// 	color: '#ffffff',
+				// 	bgColor: '#E53935',
+				// 	dragBgColor: '#E53935',
+				// 	borderColor: '#C62828',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '3',
+				// 	name: 'Family',
+				// 	color: '#ffffff',
+				// 	bgColor: '#0097A7',
+				// 	dragBgColor: '#0097A7',
+				// 	borderColor: '#00838F',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '4',
+				// 	name: 'Friends',
+				// 	color: '#ffffff',
+				// 	bgColor: '#5E35B1',
+				// 	dragBgColor: '#5E35B1',
+				// 	borderColor: '#4527A0',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '5',
+				// 	name: 'Travel',
+				// 	color: '#ffffff',
+				// 	bgColor: '#43A047',
+				// 	dragBgColor: '#43A047',
+				// 	borderColor: '#2E7D32',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '6',
+				// 	name: 'etc',
+				// 	color: '#ffffff',
+				// 	bgColor: '#757575',
+				// 	dragBgColor: '#757575',
+				// 	borderColor: '#424242',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '7',
+				// 	name: 'Birthdays',
+				// 	color: '#222222',
+				// 	bgColor: '#FDD835',
+				// 	dragBgColor: '#FDD835',
+				// 	borderColor: '#F9A825',
+				// 	checked: true
+				// },
+				// {
+				// 	id: '8',
+				// 	name: 'National Holidays',
+				// 	color: '#ffffff',
+				// 	bgColor: '#00897B',
+				// 	dragBgColor: '#00897B',
+				// 	borderColor: '#00695C',
+				// 	checked: true
+				// }
 			]
 		},
 		tempScheduleList () {
@@ -438,117 +444,117 @@ export default {
 					start: self.$moment().startOf('month').format('YYYY-MM-DD HH:mm'),
 					end: self.$moment().startOf('month').format('YYYY-MM-DD HH:mm')
 				},
-				{
-					id: uniqueID(),
-					calendarId: '2',
-					title: 'Staff meeting',
-					category: 'time',
-					dragBgColor: self.tempCalendarList[1].dragBgColor,
-					recurrenceRule: true,
-					raw: {
-						attendees: ['Mark', 'John', 'Lisa']
-					},
-					start: self.$moment().startOf('month').add(4, 'day').startOf('day').add(10, 'hours').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(4, 'day').startOf('day').add(11, 'hours').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '3',
-					title: 'Get Dentist appointment for John',
-					category: 'time',
-					dragBgColor: self.tempCalendarList[2].dragBgColor,
-					raw: {
-						isImportant: true
-					},
-					start: self.$moment().startOf('month').add(12, 'day').startOf('day').add(13, 'hours').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(12, 'day').startOf('day').add(13, 'hours').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '4',
-					title: 'Weekend getaway with friends',
-					category: 'time',
-					dragBgColor: self.tempCalendarList[3].dragBgColor,
-					location: 'Cinque Terre, Italy',
-					start: self.$moment().startOf('month').add(15, 'day').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(17, 'day').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '5',
-					title: 'Trip to France',
-					category: 'time',
-					dragBgColor: self.tempCalendarList[4].dragBgColor,
-					isReadOnly: true,
-					start: self.$moment().startOf('month').add(26, 'day').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(30, 'day').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '6',
-					title: 'Review insurance services',
-					category: 'time',
-					dragBgColor: self.tempCalendarList[5].dragBgColor,
-					isAllDay: true,
-					isPrivate: true,
-					start: self.$moment().startOf('month').add(6, 'day').format('YYYY-MM-DD'),
-					end: self.$moment().startOf('month').add(7, 'day').format('YYYY-MM-DD')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '7',
-					title: 'Get a present for Dad',
-					category: 'allday',
-					dragBgColor: self.tempCalendarList[6].dragBgColor,
-					raw: {
-						icon: 'mdi mdi-gift'
-					},
-					start: self.$moment().startOf('month').add(22, 'day').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(22, 'day').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '8',
-					title: 'National Hugging Day',
-					category: 'allday',
-					dragBgColor: self.tempCalendarList[7].dragBgColor,
-					raw: {
-						icon: 'mdi mdi-emoticon-happy'
-					},
-					start: self.$moment().startOf('month').add(19, 'day').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(19, 'day').format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '6',
-					title: 'Check project status',
-					category: 'task',
-					dragBgColor: self.tempCalendarList[5].dragBgColor,
-					dueDate: 'morning',
-					start: self.$moment().format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '2',
-					title: 'My project v2.0',
-					category: 'milestone',
-					dragBgColor: self.tempCalendarList[1].dragBgColor,
-					start: self.$moment().format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().format('YYYY-MM-DD HH:mm')
-				},
-				{
-					id: uniqueID(),
-					calendarId: '2',
-					title: 'Company picnic',
-					category: 'allday',
-					dragBgColor: self.tempCalendarList[1].dragBgColor,
-					raw: {
-						icon: 'mdi mdi-food-fork-drink'
-					},
-					start: self.$moment().startOf('month').add(9, 'day').startOf('day').add(8, 'hours').format('YYYY-MM-DD HH:mm'),
-					end: self.$moment().startOf('month').add(10, 'day').startOf('day').add(20, 'hours').format('YYYY-MM-DD HH:mm')
-				}
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '2',
+				// 	title: 'Staff meeting',
+				// 	category: 'time',
+				// 	dragBgColor: self.tempCalendarList[1].dragBgColor,
+				// 	recurrenceRule: true,
+				// 	raw: {
+				// 		attendees: ['Mark', 'John', 'Lisa']
+				// 	},
+				// 	start: self.$moment().startOf('month').add(4, 'day').startOf('day').add(10, 'hours').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(4, 'day').startOf('day').add(11, 'hours').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '3',
+				// 	title: 'Get Dentist appointment for John',
+				// 	category: 'time',
+				// 	dragBgColor: self.tempCalendarList[2].dragBgColor,
+				// 	raw: {
+				// 		isImportant: true
+				// 	},
+				// 	start: self.$moment().startOf('month').add(12, 'day').startOf('day').add(13, 'hours').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(12, 'day').startOf('day').add(13, 'hours').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '4',
+				// 	title: 'Weekend getaway with friends',
+				// 	category: 'time',
+				// 	dragBgColor: self.tempCalendarList[3].dragBgColor,
+				// 	location: 'Cinque Terre, Italy',
+				// 	start: self.$moment().startOf('month').add(15, 'day').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(17, 'day').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '5',
+				// 	title: 'Trip to France',
+				// 	category: 'time',
+				// 	dragBgColor: self.tempCalendarList[4].dragBgColor,
+				// 	isReadOnly: true,
+				// 	start: self.$moment().startOf('month').add(26, 'day').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(30, 'day').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '6',
+				// 	title: 'Review insurance services',
+				// 	category: 'time',
+				// 	dragBgColor: self.tempCalendarList[5].dragBgColor,
+				// 	isAllDay: true,
+				// 	isPrivate: true,
+				// 	start: self.$moment().startOf('month').add(6, 'day').format('YYYY-MM-DD'),
+				// 	end: self.$moment().startOf('month').add(7, 'day').format('YYYY-MM-DD')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '7',
+				// 	title: 'Get a present for Dad',
+				// 	category: 'allday',
+				// 	dragBgColor: self.tempCalendarList[6].dragBgColor,
+				// 	raw: {
+				// 		icon: 'mdi mdi-gift'
+				// 	},
+				// 	start: self.$moment().startOf('month').add(22, 'day').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(22, 'day').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '8',
+				// 	title: 'National Hugging Day',
+				// 	category: 'allday',
+				// 	dragBgColor: self.tempCalendarList[7].dragBgColor,
+				// 	raw: {
+				// 		icon: 'mdi mdi-emoticon-happy'
+				// 	},
+				// 	start: self.$moment().startOf('month').add(19, 'day').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(19, 'day').format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '6',
+				// 	title: 'Check project status',
+				// 	category: 'task',
+				// 	dragBgColor: self.tempCalendarList[5].dragBgColor,
+				// 	dueDate: 'morning',
+				// 	start: self.$moment().format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '2',
+				// 	title: 'My project v2.0',
+				// 	category: 'milestone',
+				// 	dragBgColor: self.tempCalendarList[1].dragBgColor,
+				// 	start: self.$moment().format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().format('YYYY-MM-DD HH:mm')
+				// },
+				// {
+				// 	id: uniqueID(),
+				// 	calendarId: '2',
+				// 	title: 'Company picnic',
+				// 	category: 'allday',
+				// 	dragBgColor: self.tempCalendarList[1].dragBgColor,
+				// 	raw: {
+				// 		icon: 'mdi mdi-food-fork-drink'
+				// 	},
+				// 	start: self.$moment().startOf('month').add(9, 'day').startOf('day').add(8, 'hours').format('YYYY-MM-DD HH:mm'),
+				// 	end: self.$moment().startOf('month').add(10, 'day').startOf('day').add(20, 'hours').format('YYYY-MM-DD HH:mm')
+				// }
 			];
 		}
 	},
@@ -559,12 +565,34 @@ export default {
 				this.calendarList.push(obj)
 			});
 			// move computed scheduleList to data
-			this.tempScheduleList.forEach(obj => {
-				this.scheduleList.push(obj)
-			});
+			// this.tempScheduleList.forEach(obj => {
+			// 	this.scheduleList.push(obj)
+			// });
 		})
 	},
+	async mounted() {
+		this.changeCalView('2weeks');
+		await this.bindModel();
+	},
 	methods: {
+		async bindModel(){
+			const self = this;
+			const api = useApi();
+
+			try {
+				const data = (await (api.get('Calendar'))).data;
+				this.calendarElementList = data.map(d => {
+					return {
+						...d,
+						start: d.start ? self.$moment(d.start).format('YYYY-MM-DD HH:mm') : '',
+						end: d.end ? self.$moment(d.end).format('YYYY-MM-DD HH:mm') : '',
+					}
+				});
+				this.scheduleList = this.calendarElementList;
+			} catch (error) {
+				
+			}
+		},
 		calendarInitialized () {
 			this.calInstance = this.$refs.tuiCalendar.getCalInstance();
 			// set default range text
@@ -634,13 +662,23 @@ export default {
 				this.calInstance.toggleSchedules(k.id, !state);
 			});
 		},
-		onBeforeDeleteSchedule (event) {
+		async onBeforeDeleteSchedule (event) {
 			var index = this.scheduleList.map(item => {
 				return item.id
 			}).indexOf(event.schedule.id);
-			this.scheduleList.splice(index, 1);
+
+			const rowData = this.scheduleList[index];
+
+			try {
+				const api = useApi();
+				const delResult = (await api.delete('Calendar/' + rowData.id)).data;
+				if (delResult.result)
+					this.scheduleList.splice(index, 1);
+			} catch (error) {
+				
+			}
 		},
-		onBeforeUpdateSchedule (event) {
+		async onBeforeUpdateSchedule (event) {
 			const schedule = event.schedule;
 			const startTime = event.start._date;
 			const endTime = event.end._date;
@@ -650,20 +688,29 @@ export default {
 			let _schedule = this.scheduleList[index];
 			if('calendar' in event) {
 				if(this.lastClickedSchedule.id === schedule.id) {
-					this.scheduleList.splice(index, 1, {
-						id: _schedule.id,
-						calendarId: event.calendar.id,
-						title: event.schedule.title,
-						location: event.schedule.location,
-						isAllDay: event.schedule.isAllDay,
-						state: event.schedule.state,
-						start: this.$moment(startTime).format('YYYY-MM-DD HH:mm'),
-						end: this.$moment(endTime).format('YYYY-MM-DD HH:mm'),
-						category: event.schedule.isAllDay ? 'time' : _schedule.category,
-						isPrivate: _schedule.isPrivate,
-						raw: _schedule.raw,
-						dragBgColor: event.calendar.dragBgColor
-					})
+					for (const [key, value] of Object.entries(event.changes)) {
+						schedule[key] = value;
+					}
+
+					let scTemp = {start:null, end:null};
+					if (startTime)
+						scTemp.start = this.$moment(startTime).format('YYYY-MM-DD') + 'T' + this.$moment(startTime).format('HH:mm:ss');
+					if (endTime)
+						scTemp.end = this.$moment(endTime).format('YYYY-MM-DD') + 'T' + this.$moment(endTime).format('HH:mm:ss');
+
+					scTemp = {
+						...schedule,
+						start: scTemp.start,
+						end: scTemp.end,
+					}
+
+					const api = useApi();
+					const postResult = (await (api.post('Calendar', scTemp))).data;
+					if (postResult.result){
+						this.scheduleList.splice(index, 1, {
+							...schedule
+						});
+					}
 				}
 			} else {
 				let updatedObj = null;
@@ -702,10 +749,16 @@ export default {
 			});
 			return found;
 		},
-		saveNewSchedule (scheduleData) {
+		async saveNewSchedule (scheduleData) {
+			let schedule = {start:null, end:null};
+			if (scheduleData.start)
+				schedule.start = this.$moment(scheduleData.start._date).format('YYYY-MM-DD') + 'T' + this.$moment(scheduleData.start._date).format('HH:mm:ss');
+			if (scheduleData.end)
+				schedule.end = this.$moment(scheduleData.end._date).format('YYYY-MM-DD') + 'T' + this.$moment(scheduleData.end._date).format('HH:mm:ss');
+
 			let calendar = scheduleData.calendar || this.findCalendar(scheduleData.calendarId);
-			let schedule = {
-				id: uniqueID(),
+			schedule = {
+				id: 0,
 				title: scheduleData.title,
 				isAllDay: scheduleData.isAllDay,
 				start: scheduleData.start,
@@ -717,9 +770,12 @@ export default {
 				dragBgColor: calendar.dragBgColor,
 				borderColor: calendar.borderColor,
 				location: scheduleData.location,
-				raw: {
-					class: scheduleData.raw['class']
-				},
+				start: schedule.start,
+				end: schedule.end,
+				body: schedule.body,
+				// raw: {
+				// 	class: scheduleData.raw['class']
+				// },
 				state: scheduleData.state
 			};
 			if (calendar) {
@@ -728,7 +784,12 @@ export default {
 				schedule.bgColor = calendar.bgColor;
 				schedule.borderColor = calendar.borderColor;
 			}
-			this.scheduleList.push(schedule);
+
+			const api = useApi();
+			const postResult = (await (api.post('Calendar', schedule))).data;
+			if (postResult.result){
+				this.scheduleList.push(schedule);
+			}
 		},
 		setRenderRangeText () {
 			let options = this.calInstance.getOptions();

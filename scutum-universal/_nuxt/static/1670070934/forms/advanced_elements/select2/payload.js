@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/advanced_elements/select2", {data:[{}],fetch:{},mutations:[]});

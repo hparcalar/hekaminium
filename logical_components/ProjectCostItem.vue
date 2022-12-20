@@ -206,6 +206,7 @@ export default {
                     costName: '',
                     itemId: '',
                     forexId: '',
+                    forexCode: '',
                     forexRate: null,
                     itemName: '',
                     explanation: '',
@@ -300,7 +301,6 @@ export default {
             }
 
             // #region VALIDATE ROW DATA
-            console.log(this.formData.itemId);
             const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
             if (selectedItem)
                 this.formData.itemName = selectedItem.text;
@@ -310,6 +310,8 @@ export default {
             const selectedForex = this.forexList.find(d => d.id == this.formData.forexId);
             if (selectedForex)
                 this.formData.forexCode = selectedForex.text;
+            else
+                this.formData.forexCode = '';
             // #endregion
             
             this.$emit('onCostItemSubmit', {

@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/fancy_footer", {data:[{}],fetch:{},mutations:[]});

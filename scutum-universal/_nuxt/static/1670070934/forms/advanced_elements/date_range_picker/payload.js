@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/advanced_elements/date_range_picker", {data:[{}],fetch:{},mutations:[]});

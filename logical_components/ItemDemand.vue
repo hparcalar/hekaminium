@@ -297,6 +297,11 @@ export default {
             this.bindComplete = true
         },
 		async onSubmit(){
+            if (!this.formData.explanation || this.formData.explanation.length <= 0){
+                this.showNotification('Açıklama girmelisiniz.', false, 'error');
+                return;
+            }
+
             this.bindComplete = false
             this.$emit("onSaved")
             try {

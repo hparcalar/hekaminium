@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/layout/mini_sidebar", {data:[{}],fetch:{},mutations:[]});

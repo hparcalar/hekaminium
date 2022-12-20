@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pages/issues/details/DdBZ_1zY", {data:[{},{},{}],fetch:{},mutations:[]});

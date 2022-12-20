@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/user/role", {data:[{}],fetch:{},mutations:[]});

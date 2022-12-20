@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/pages/blank_header_expanded", {data:[{}],fetch:{},mutations:[]});

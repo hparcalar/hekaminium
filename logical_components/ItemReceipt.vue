@@ -507,6 +507,8 @@ export default {
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;
 
+                console.log(this.formData);
+
                 const api = useApi();
                 const postResult = (await api.post('ItemReceipt', this.formData)).data;
                 if (postResult.result){

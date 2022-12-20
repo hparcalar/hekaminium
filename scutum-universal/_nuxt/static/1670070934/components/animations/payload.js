@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/components/animations", {data:[{}],fetch:{},mutations:[]});

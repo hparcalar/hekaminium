@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/ajax", {data:[{}],fetch:{},mutations:[]});

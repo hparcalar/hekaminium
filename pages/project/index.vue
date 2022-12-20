@@ -35,7 +35,12 @@
 							</li>
 							<li>
 								<a href="javascript:void(0)">
-									Proje Takvimi
+									Dosyalar
+								</a>
+							</li>
+							<li v-if="hasViewAuth('ProjectManagement')">
+								<a href="javascript:void(0)">
+									Teklif Dökümanı
 								</a>
 							</li>
 							<!-- <li class="uk-disabled">
@@ -92,6 +97,14 @@
 												<label>Proje Adedi</label>
 											</ScInput>
 										</div>
+										<div v-show="hasViewAuth('ProjectManagement')">
+											<client-only v-if="!formData.cloudDocId || formData.cloudDocId.length <= 0">
+												<Select2 v-model="formData.offerType" :options="offerTypeList"
+													:settings="{ 'width': '100%', 'placeholder': 'Teklif Türü', 'allowClear': true }">
+												</Select2>
+											</client-only>
+											<span v-else>Teklif Türü: {{ formData.offerType == '1' ? 'Heka' : 'Butan' }}</span>
+										</div>
 									</div>
 								</fieldset>
 							</li>
@@ -117,7 +130,7 @@
 												</li>
 												<li>
 													<a href="javascript:void(0)">
-														Satın Alınanlar
+														Teslim Alınanlar
 													</a>
 												</li>
 												<li>
@@ -261,19 +274,52 @@
 														</div>
 													</div>
 												</li>
-												<li>Sipariş içerik</li>
 												<li>
-													Satın alınanlar içerik
-													<!-- <div class="sc-padding-medium sc-padding-remove-top">												
+													<div class="sc-padding-medium sc-padding-remove-top">
 														<div class="uk-margin-medium uk-margin-remove-left">
+															<div class="uk-width-auto@s" style="position: relative; float:right;">
+																<div id="sc-dt-buttonsDemand"></div>
+															</div>
 															<client-only>
-																<Datatable id="sc-dt-order-table" ref="buttonsTable" :data="demandList"
+																<Datatable id="sc-dt-orders-table" ref="orderListTable" :data="orderList"
 																	:options="dtOptions" :customColumns="dtOrderCols" :buttons="true"
-																	:customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]">
+																	@initComplete="dtButtonsInitialize"
+																	:show-summary="true" :summary-items="['overallTotal', 'forexOverallTotal']"
+																	:customEvents="[{ name: 'select', function: clickOrderRow }]">
 																</Datatable>
 															</client-only>
 														</div>
-													</div> -->
+													</div>
+												</li>
+												<!-- RECEIPT LIST CONTENT -->
+												<li>
+													<div class="sc-padding-medium sc-padding-remove-top">
+														<div class="uk-margin-medium uk-margin-remove-left">
+															<div class="uk-width-auto@s" style="position: relative; float:right;">
+																<div id="sc-dt-buttonsDemand"></div>
+															</div>
+															<!-- :show-summary="true" :summary-items="['overallTotal', 'forexOverallTotal']" -->
+															<client-only>
+																<Datatable id="sc-dt-receipts-table" ref="receiptsListTable" :data="receiptList"
+																	:options="dtOptions" :customColumns="dtReceiptCols" :buttons="true"
+																	@initComplete="dtButtonsInitialize"
+																	:customEvents="[{ name: 'select', function: clickReceiptRow }]">
+																</Datatable>
+															</client-only>
+															<div class="uk-grid">
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="totalReceiptsLocal" :read-only="true">
+																		<label>Toplam Tutar (TL)</label>
+																	</ScInput>
+																</div>
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																	<ScInput v-model="totalReceiptsForex" :read-only="true">
+																		<label>Toplam Tutar (Döviz)</label>
+																	</ScInput>
+																</div>
+															</div>
+														</div>
+													</div>
 												</li>
 												<li>Tüketim içerik</li>
 											</ul>
@@ -331,7 +377,53 @@
 
 								</div>
 							</li>
-							<li>Proje Takvimi</li>
+							<li>
+								<!-- ATTACHMENTS LIST -->
+								<div class="sc-padding-medium sc-padding-remove-top">
+									<div class="uk-flex-left uk-grid">
+										<button type="button" @click="showNewAttachment"
+											class="sc-button sc-button-success sc-button-small uk-margin-small-right uk-margin-medium-left">
+											<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+											Dosya Ekle
+										</button>
+									</div>
+									<div class="uk-margin-medium uk-margin-remove-left">
+										<client-only>
+											<Datatable id="sc-dt-attachments-table" ref="attachmentsTable" :data="attachmentList" :options="dtAttachmentOptions"
+												:customColumns="dtAttachmentCols" :buttons="true"
+												:customEvents="[{ name: 'select', function: clickAttachmentRow }]">
+											</Datatable>
+										</client-only>
+									</div>
+
+								</div>
+							</li>
+							<li v-show="hasViewAuth('ProjectManagement')">
+								<!-- OFFERS DOCS -->
+								<div class="sc-padding-medium sc-padding-remove-top">
+									<div class="uk-flex-left uk-grid">
+										<button type="button" @click="showNewOfferDoc"
+											class="sc-button sc-button-success sc-button-small uk-margin-small-right uk-margin-medium-left">
+											<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+											Teklif Dosyası Ekle
+										</button>
+									</div>
+									<div class="uk-margin-medium uk-margin-remove-left">
+										<client-only>
+											<Datatable id="sc-dt-offerdocs-table" ref="offerDocsTable" :data="offerDocList" :options="dtAttachmentOptions"
+												:customColumns="dtAttachmentCols" :buttons="true"
+												:customEvents="[{ name: 'select', function: clickOfferDocRow }]">
+											</Datatable>
+										</client-only>
+									</div>
+
+								</div>
+
+								<!-- CLOUD OFFER FRAME -->
+								<iframe v-if="formData.cloudDocId && formData.cloudDocId.length > 0"
+									style="border: 3px solid #afafaf;border-radius:5px;"
+									 width="100%" height="600" :src="'https://docs.google.com/spreadsheets/d/'+ formData.cloudDocId +'/edit?usp=sharing#gid='+ formData.cloudSheetId +'?widget=true&amp;headers=false;gid=' + formData.cloudSheetId"></iframe>
+							</li>
 						</ul>
 					</div>
 					<form>
@@ -392,6 +484,16 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="dlgAttachment" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<AttachmentForm v-if="refreshAttachmentForm == true" :record-object="selectedAttachmentRow"
+						:is-dialog="true" :dialog-container="'dlgAttachment'"
+						@onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -404,10 +506,10 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { getQS, dateToStr } from '~/composable/useHelpers';
 import confirmDatePlugin from 'flatpickr/dist/plugins/confirmDate/confirmDate';
-import moment from '~/plugins/moment'
+import moment from '~/plugins/moment';
 import axios, { AxiosInstance } from 'axios'
 import { useUserSession } from '~/composable/userSession';
-import ProjectFieldService from '../../logical_components/ProjectFieldService.vue';
+import ProjectFieldService from '~/logical_components/ProjectFieldService.vue';
 
 if (process.client) {
 	require('~/plugins/inputmask');
@@ -424,6 +526,7 @@ export default {
 		Select2: process.client ? () => import("~/components/Select2") : null,
 		ItemDemand: process.client ? () => import("~/logical_components/ItemDemand") : null,
 		ProjectCostItem: process.client ? () => import("~/logical_components/ProjectCostItem") : null,
+		AttachmentForm: process.client ? () => import("~/logical_components/AttachmentForm") : null,
 		ScInput,
 		ScTextarea,
 		PrettyRadio,
@@ -456,21 +559,34 @@ export default {
 			totalCost: null,
 			totalForexCost: null,
 			costItems: [],
+			attachments: [],
+			cloudDocId: '',
+			offerType: '1',
 		},
 		selectedDemandRow: { id: 0, itemDemandId: 0 },
 		selectedServiceRow: { id: 0 },
 		selectedCostItemRow: { id: 0 },
+		selectedAttachmentRow: { id:0, recordType: 1, recordId: 0 },
 		refreshDemandForm: false,
 		refreshCostItemForm: false,
 		refreshServiceForm: false,
+		refreshAttachmentForm: false,
+		attachmentList: [],
+		offerDocList: [],
 		categories: [],
 		demandList: [],
+		orderList: [],
+		receiptList: [],
 		forexList: [],
 		serviceList: [],
 		selectedServiceIndexes: [],
 		selectedDemandIndexes: [],
 		selectedCostItemIndexes: [],
 		firms: [],
+		offerTypeList: [
+			{ id:1, text: 'Heka' },
+			{ id:2, text: 'Butan' }
+		],
 		statusList: [
 			{ id: '0', text: 'Oluşturuldu' },
 			{ id: '1', text: 'Teklif verilecek' },
@@ -514,6 +630,17 @@ export default {
 				}
 			],
 		},
+		dtAttachmentOptions: {
+			autoWidth: false,
+			select: true,
+			searching: false,
+			paging: false,
+		},
+		dtAttachmentCols: [
+			{ data: "title", title: "Başlık", visible: true },
+			{ data: "fileName", title: "Dosya Adı", visible: true, },
+			{ data: "explanation", title: "Açıklama", visible: true, },
+		],
 		dtDemandCols: [
 			{ data: "demandDate", title: "Tarih", visible: true, type: 'date' },
 			{ data: "itemDemandNo", title: "Talep No", visible: true, },
@@ -525,14 +652,30 @@ export default {
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
 		dtOrderCols: [
-			{ data: "demandDate", title: "Tarih", visible: true, type: 'date' },
-			{ data: "itemDemandNo", title: "İrsaliye No", visible: true, },
+			{ data: "receiptDate", title: "Tarih", visible: true, type: 'date' },
+			{ data: "receiptNo", title: "Sipariş No", visible: true, },
+			{ data: "firmName", title: "Firma", visible: true, },
 			{ data: "itemName", title: "Stok Adı", width: "30%", visible: true, },
 			{ data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
-			{ data: "quantity", title: "Birim Fiyat", visible: true, },
+			{ data: "forexUnitPrice", title: "B.Fiyat", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.unitPrice); } },
+			{ data: "forexCode", title: "Para Birimi", visible: true },
 			{ data: "quantity", title: "Miktar", visible: true, },
-			{ data: "quantity", title: "Toplam Fiyat", visible: true, },
+			{ data: "overallTotal", title: "Toplam (TL)", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.overallTotal); } },
+			{ data: "forexOverallTotal", title: "Toplam (Döviz)", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.forexOverallTotal); }},
+		],
+		dtReceiptCols: [
+			{ data: "receiptDate", title: "Tarih", visible: true, type: 'date' },
+			{ data: "receiptNo", title: "İrsaliye No", visible: true, },
+			{ data: "firmName", title: "Firma", visible: true, },
+			{ data: "itemName", title: "Stok Adı", width: "30%", visible: true, },
+			{ data: "partNo", title: "Parça Kodu", visible: true, },
+			{ data: "partDimensions", title: "Boyutlar", visible: true, },
+			{ data: "forexUnitPrice", title: "B.Fiyat", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.unitPrice); } },
+			{ data: "forexCode", title: "Para Birimi", visible: true },
+			{ data: "quantity", title: "Miktar", visible: true, },
+			{ data: "overallTotal", title: "Toplam (TL)", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.overallTotal); } },
+			{ data: "forexOverallTotal", title: "Toplam (Döviz)", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.forexOverallTotal); }},
 		],
 		dtCostItemCols: [
 			{ data: "lineNumber", title: "Sıra No", visible: true, },
@@ -647,10 +790,33 @@ export default {
 			get: function () {
 				return this.formData.totalForexCost > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost) : null;
 			}
+		},
+		totalReceiptsLocal: {
+			get: function(){
+				try {
+					const total = this.receiptList.filter(d => d.forexCode.length == 0).map(d => d.overallTotal).reduce((a,b) => a + b);
+					return new Intl.NumberFormat("tr-TR").format(total);
+				} catch (error) {
+				}
+
+				return new Intl.NumberFormat("tr-TR").format(0);
+			}
+		},
+		totalReceiptsForex: {
+			get: function(){
+				try {
+					const total = this.receiptList.filter(d => d.forexCode.length > 0).map(d => d.forexOverallTotal).reduce((a,b) => a + b);
+					return new Intl.NumberFormat("tr-TR").format(total);
+				} catch (error) {
+				}
+
+				return new Intl.NumberFormat("tr-TR").format(0);
+			}
 		}
 	},
 	beforeDestroy() {
-		UIkit.modal('.uk-modal').$destroy(true);
+		if (UIkit.modal('.uk-modal'))
+			UIkit.modal('.uk-modal').$destroy(true);
 	},
 	async mounted() {
 		const qsId = getQS('id');
@@ -686,6 +852,7 @@ export default {
 						return {
 							id: d.id.toString(),
 							text: d.firmName,
+							code: d.firmCode,
 						};
 					});
 
@@ -758,10 +925,200 @@ export default {
 
 				await this.bindDemands();
 				await this.bindServices();
+				await this.bindOrders();
+				await this.bindReceipts();
+				await this.bindAttachments();
 				this.calculateProjectCost();
+
+				if (this.hasViewAuth('ProjectManagement'))
+					this.initCloud();
+				
 				// this.calculateTotal();
 			} catch (error) {
+				console.log(error);
+			}
+		},
+		initCloud(){
+			try {
+				const self = this;
+				this.$google.api.load('client:auth2', {
+					callback: function(dg) {
+						self.$google.api.client.init({
+							apiKey: 'AIzaSyD7Qg97gRwKeoqCpjACKTsLzV0vTdSAPOw',
+							clientId: '756662015988-6s0gq2tj2v0mbu3lmiigsdnnul89ec71.apps.googleusercontent.com',
+							discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+							scope: 'https://www.googleapis.com/auth/spreadsheets',
+							plugin_name: 'chat',
+						}).then(function(){
+							const authIns = self.$google.api.auth2.getAuthInstance();
+							if (!authIns.isSignedIn.get() || authIns.currentUser.Oa.uv.gw != 'heka@progenar.com'){
+								authIns.signIn();
+							}
+						});
+					},
+					onerror: function() {
+						// Handle loading error.
+						// alert('gapi.client failed to load!');
+					},
+					timeout: 5000, // 5 seconds.
+					ontimeout: function() {
+						// Handle timeout.
+						// alert('gapi.client could not load in a timely manner!');
+					}
+				});
+			} catch (error) {
+				
+			}
+		},
+		async createCloudDoc(){
+			try {
+				const self = this;
 
+				if (!self.formData.offerType || self.formData.offerType.length <= 0){
+					self.showNotification('Teklif türünü seçmelisiniz.', false, 'error');
+					return;
+				}
+				
+				const authIns = self.$google.api.auth2.getAuthInstance();
+				if (authIns.isSignedIn.get() && authIns.currentUser.Oa.uv.gw == 'heka@progenar.com'){
+					if (!self.formData.cloudDocId || self.formData.cloudDocId.length <= 0){
+						self.$google.api.client.sheets.spreadsheets.create({
+							properties: {
+								title: self.formData.projectName,
+							},
+						}).then((response) => {
+							console.log(response);
+							self.formData.cloudDocId = response.result.spreadsheetId;
+
+							self.$google.api.client.sheets.spreadsheets.sheets.copyTo({
+								spreadsheetId: self.formData.offerType == '1' ? '16jEYIO7LezkV5nucz6_1bSF-BGHqmb1wZnuFMCnRPas' : '1VaMSZTZHpiaHVN8O7db0pTuMQ2-4E585SZ-S9PqsKmI',
+								sheetId: 0,
+								resource: {
+									destinationSpreadsheetId: self.formData.cloudDocId,
+								},
+							}).then(async(respCopy) => {
+								console.log(respCopy);
+								self.formData.cloudSheetId = respCopy.result.sheetId.toString();
+								await self.onSubmit();
+								await self.updateCloudDocValues();
+								self.$router.push('/project?id=' + self.formData.id);
+								setTimeout(() => {
+									window.location.reload();
+								}, 500);
+							});
+						});
+					}
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		async updateCloudDocValues(){
+			try {
+				const self = this;
+
+				const firmObj = self.firms.find(d => d.id == self.formData.firmId);
+
+				const authIns = self.$google.api.auth2.getAuthInstance();
+				if (authIns.isSignedIn.get() && authIns.currentUser.Oa.uv.gw == 'heka@progenar.com'){
+					if (self.formData.cloudDocId && self.formData.cloudDocId.length > 0){
+
+						if (self.formData.offerType == '1'){
+							self.$google.api.client.sheets.spreadsheets.values.batchUpdate({
+								spreadsheetId: self.formData.cloudDocId, 
+								resource: {
+									valueInputOption: 'USER_ENTERED',
+									data: [
+										{
+											range: "'Sayfa1 sayfasının kopyası'!B3",
+											values: [ [self.formData.projectCode] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!D3:E3",
+											values: [ [self.formData.startDate] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!A4:B4",
+											values: [ [firmObj ? firmObj.text : ''] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!B9:E9",
+											values: [ [self.formData.responsiblePerson] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!B10:E10",
+											values: [ [self.formData.projectName] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!E27",
+											values: [ [self.fOfferForexPrice] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!E28",
+											values: [ [self.fOfferForexPrice] ]
+										}
+									], 
+								},
+							}).then((respUpdate) => {
+								console.log(respUpdate);
+								self.showNotification('Teklif dökümanı başarıyla güncellendi.', false, 'success');
+							});	
+						}
+						else if (self.formData.offerType == '2'){
+							self.$google.api.client.sheets.spreadsheets.values.batchUpdate({
+								spreadsheetId: self.formData.cloudDocId, 
+								resource: {
+									valueInputOption: 'USER_ENTERED',
+									data: [
+										{
+											range: "'Sayfa1 sayfasının kopyası'!M7",
+											values: [ [self.formData.projectCode] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!M6",
+											values: [ [self.formData.startDate] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!D8:E8",
+											values: [ [firmObj ? firmObj.text : ''] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!D7:E7",
+											values: [ [self.formData.responsiblePerson] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!A12:M12",
+											values: [ [self.formData.projectName] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!L35:M35",
+											values: [ [ self.formData.forexId > 0 ? 
+												new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2, style: 'currency', currency:'EUR' }).format(self.formData.offerForexPrice) : 
+												new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2, style: 'currency', currency:'TRY' }).format(self.formData.offerPrice)
+											] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!L38:M38",
+											values: [ [ self.formData.forexId > 0 ? 
+												new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2, style: 'currency', currency:'EUR' }).format(self.formData.offerForexPrice) : 
+												new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2, style: 'currency', currency:'TRY' }).format(self.formData.offerPrice)
+											] ]
+										},
+										{
+											range: "'Sayfa1 sayfasının kopyası'!M8",
+											values: [ [firmObj ? firmObj.code : ''] ]
+										}
+									], 
+								},
+							}).then((respUpdate) => {
+								console.log(respUpdate);
+								self.showNotification('Teklif dökümanı başarıyla güncellendi.', false, 'success');
+							});	
+						}
+					}
+				}
+			} catch (error) {
+				console.log(error);
 			}
 		},
 		async bindDemands() {
@@ -781,10 +1138,58 @@ export default {
 
 			}
 		},
+		async bindOrders() {
+			const api = useApi();
+			try {
+				const rawData = (await api.get('ItemOrder/Purchase/OfProject/' + this.formData.id)).data;
+				if (rawData) {
+					for (let i = 0; i < rawData.length; i++) {
+						const row = rawData[i];
+						row.receiptDate = dateToStr(row.receiptDate);
+						row.forexOverallTotal = row.forexCode.length > 0 ? row.overallTotal : 0;
+						row.overallTotal = row.overallTotal * (row.forexRate <= 0 ? 1 : row.forexRate);
+					}
+					this.orderList = rawData;
+				}
+				else
+					this.orderList = [];
+			} catch (error) {
+
+			}
+		},
+		async bindReceipts() {
+			const api = useApi();
+			try {
+				const rawData = (await api.get('ItemReceipt/Purchase/OfProject/' + this.formData.id)).data;
+				if (rawData) {
+					for (let i = 0; i < rawData.length; i++) {
+						const row = rawData[i];
+						row.receiptDate = dateToStr(row.receiptDate);
+						row.forexOverallTotal = row.forexCode.length > 0 ? row.overallTotal : 0;
+						row.overallTotal = row.overallTotal * (row.forexRate <= 0 ? 1 : row.forexRate);
+					}
+					this.receiptList = rawData;
+				}
+				else
+					this.receiptList = [];
+			} catch (error) {
+
+			}
+		},
 		async bindServices() {
 			const api = useApi();
 			try {
 				this.serviceList = (await api.get('ProjectFieldService/ByProject/' + this.formData.id)).data;
+			} catch (error) {
+
+			}
+		},
+		async bindAttachments(){
+			const api = useApi();
+			try {
+				this.formData.attachments = (await api.get('Attachment/OfRecord/1/' + this.formData.id)).data;
+				this.attachmentList = this.formData.attachments.filter(d => (d.isOfferDoc ?? false) == false);
+				this.offerDocList = this.formData.attachments.filter(d => (d.isOfferDoc ?? false) == true);
 			} catch (error) {
 
 			}
@@ -811,7 +1216,11 @@ export default {
 					this.showNotification('Kayıt başarılı', false, 'success');
 					this.formData.id = postResult.recordId;
 
-					this.$router.go(-1);
+					this.showNotification('Teklif dökümanı buluta kayıt ediliyor.', false, 'warning');
+					if (!this.formData.cloudDocId || this.formData.cloudDocId.length <= 0)
+						this.createCloudDoc();
+					else
+						this.updateCloudDocValues();
 				}
 				else
 					this.showNotification(postResult.errorMessage, false, 'error');
@@ -896,6 +1305,33 @@ export default {
 			modalElement.height = window.innerHeight * 0.8;
 			UIkit.modal(modalElement).show();
 		},
+		showNewAttachment(){
+			const self = this;
+			this.selectedAttachmentRow = { id:0, recordType:1, recordId: self.formData.id };
+			this.showAttachment();
+		},
+		showNewOfferDoc(){
+			const self = this;
+			this.selectedAttachmentRow = { id:0, recordType:1, isOfferDoc: true, recordId: self.formData.id };
+			this.showAttachment();
+		},
+		showAttachment(){
+			this.refreshAttachmentForm = false;
+			setTimeout(() => { this.refreshAttachmentForm = true; }, 100);
+
+			const modalElement = document.getElementById('dlgAttachment');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+		},
+		closeAttachmentDialog() {
+			const modalElement = document.getElementById('dlgAttachment');
+			UIkit.modal(modalElement).hide();
+		},
+		async onSubmitAttachment(){
+			this.closeAttachmentDialog();
+			await this.bindAttachments();
+		},
 		showNewCostItem() {
 			this.selectedCostItemRow = { id: 0 };
 			this.showCostItem();
@@ -923,6 +1359,7 @@ export default {
 				if (detailRow.id == 0) {
 					detailRow.newRecord = true;
 					detailRow.id = detailRow.lineNumber;
+					detailRow.forexCode = '';
 					this.formData.costItems.push(detailRow);
 				}
 				else {
@@ -935,6 +1372,7 @@ export default {
 						existingDetail.costName = detailRow.costName;
 						existingDetail.quantity = detailRow.quantity;
 						existingDetail.forexId = detailRow.forexId;
+						existingDetail.forexCode = detailRow.forexCode;
 						existingDetail.forexRate = detailRow.forexRate;
 						existingDetail.unitPrice = detailRow.unitPrice;
 						existingDetail.overallTotal = detailRow.overallTotal;
@@ -1088,6 +1526,16 @@ export default {
 					}
 				});
 		},
+		clickAttachmentRow: function (e, dt, type, indexes) {
+			const selIndex = indexes[0];
+			this.selectedAttachmentRow = this.attachmentList[selIndex];
+			this.showAttachment();
+		},
+		clickOfferDocRow: function (e, dt, type, indexes) {
+			const selIndex = indexes[0];
+			this.selectedAttachmentRow = this.offerDocList[selIndex];
+			this.showAttachment();
+		},
 		clickDemandRow: function (e, dt, type, indexes) {
 			const selIndex = indexes[0];
 			this.selectedDemandIndexes.push(selIndex);
@@ -1101,6 +1549,16 @@ export default {
 			}
 			else
 				this.selectedDemandRow = { id: 0, itemDemandId: 0 };
+		},
+		clickOrderRow: function (e, dt, type, indexes) {
+			const selIndex = indexes[0];
+			const orderRow = this.orderList[selIndex];
+			window.open('/purchasing/item-order?id=' + orderRow.itemOrderId, 'blank');
+		},
+		clickReceiptRow: function (e, dt, type, indexes) {
+			const selIndex = indexes[0];
+			const orderRow = this.receiptList[selIndex];
+			window.open('/purchasing/item-receipt?id=' + orderRow.itemReceiptId, 'blank');
 		},
 		clickCostItemRow: function (e, dt, type, indexes) {
 			const selIndex = indexes[0];

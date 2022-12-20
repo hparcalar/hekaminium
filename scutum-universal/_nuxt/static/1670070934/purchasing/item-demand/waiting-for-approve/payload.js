@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/purchasing/item-demand/waiting-for-approve", {data:[{}],fetch:{},mutations:[]});

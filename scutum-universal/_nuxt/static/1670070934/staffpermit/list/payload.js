@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/staffpermit/list", {data:[{}],fetch:{},mutations:[]});

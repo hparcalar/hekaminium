@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/forms/wizard/step1", {data:[{},{}],fetch:{},mutations:[]});

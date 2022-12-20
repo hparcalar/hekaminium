@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/vue_good_table", {data:[{}],fetch:{},mutations:[]});

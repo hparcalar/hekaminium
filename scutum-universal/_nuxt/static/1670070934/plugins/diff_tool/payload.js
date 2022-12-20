@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plugins/diff_tool", {data:[{}],fetch:{},mutations:[]});

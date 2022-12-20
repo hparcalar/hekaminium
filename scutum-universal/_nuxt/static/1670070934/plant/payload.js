@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/plant", {data:[{}],fetch:{},mutations:[]});
