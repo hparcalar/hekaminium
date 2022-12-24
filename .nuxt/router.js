@@ -65,6 +65,7 @@ const _ae311ba0 = () => interopDefault(import('..\\pages\\forms\\wizard\\step1.v
 const _ae14ec9e = () => interopDefault(import('..\\pages\\forms\\wizard\\step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
 const _adf8bd9c = () => interopDefault(import('..\\pages\\forms\\wizard\\step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
 const _70555981 = () => interopDefault(import('..\\pages\\item-category\\list.vue' /* webpackChunkName: "pages/item-category/list" */))
+const _3378e093 = () => interopDefault(import('..\\pages\\item\\consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
 const _4d888056 = () => interopDefault(import('..\\pages\\item\\list.vue' /* webpackChunkName: "pages/item/list" */))
 const _36d88beb = () => interopDefault(import('..\\pages\\layout\\boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
 const _acb1657a = () => interopDefault(import('..\\pages\\layout\\mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
@@ -117,6 +118,7 @@ const _0be78da0 = () => interopDefault(import('..\\pages\\plugins\\vue_good_tabl
 const _d279ff96 = () => interopDefault(import('..\\pages\\project-category\\list.vue' /* webpackChunkName: "pages/project-category/list" */))
 const _4910f323 = () => interopDefault(import('..\\pages\\project\\fieldservice\\index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
 const _60c6bf22 = () => interopDefault(import('..\\pages\\project\\list.vue' /* webpackChunkName: "pages/project/list" */))
+const _8fae6300 = () => interopDefault(import('..\\pages\\project\\list2.vue' /* webpackChunkName: "pages/project/list2" */))
 const _262e42fa = () => interopDefault(import('..\\pages\\purchasing\\internal-demand\\index.vue' /* webpackChunkName: "pages/purchasing/internal-demand/index" */))
 const _fc5aa960 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
 const _2176ed46 = () => interopDefault(import('..\\pages\\purchasing\\item-offer\\index.vue' /* webpackChunkName: "pages/purchasing/item-offer/index" */))
@@ -152,6 +154,7 @@ const _2b2b50b8 = () => interopDefault(import('..\\pages\\forms\\wysiwyg\\ckedit
 const _35912a32 = () => interopDefault(import('..\\pages\\forms\\wysiwyg\\quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
 const _0d92cf46 = () => interopDefault(import('..\\pages\\project\\fieldservice\\list.vue' /* webpackChunkName: "pages/project/fieldservice/list" */))
 const _20571cb4 = () => interopDefault(import('..\\pages\\purchasing\\internal-demand\\list.vue' /* webpackChunkName: "pages/purchasing/internal-demand/list" */))
+const _5e903082 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\indexPrime.vue' /* webpackChunkName: "pages/purchasing/item-demand/indexPrime" */))
 const _af12b2e0 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
 const _1a032259 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\my-demands.vue' /* webpackChunkName: "pages/purchasing/item-demand/my-demands" */))
 const _eb9d4972 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
@@ -420,6 +423,10 @@ export const routerOptions = {
     component: _70555981,
     name: "item-category-list"
   }, {
+    path: "/item/consumption",
+    component: _3378e093,
+    name: "item-consumption"
+  }, {
     path: "/item/list",
     component: _4d888056,
     name: "item-list"
@@ -630,6 +637,10 @@ export const routerOptions = {
     component: _60c6bf22,
     name: "project-list"
   }, {
+    path: "/project/list2",
+    component: _8fae6300,
+    name: "project-list2"
+  }, {
     path: "/purchasing/internal-demand",
     component: _262e42fa,
     name: "purchasing-internal-demand"
@@ -769,6 +780,10 @@ export const routerOptions = {
     path: "/purchasing/internal-demand/list",
     component: _20571cb4,
     name: "purchasing-internal-demand-list"
+  }, {
+    path: "/purchasing/item-demand/indexPrime",
+    component: _5e903082,
+    name: "purchasing-item-demand-indexPrime"
   }, {
     path: "/purchasing/item-demand/list",
     component: _af12b2e0,

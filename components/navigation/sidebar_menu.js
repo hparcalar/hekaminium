@@ -30,6 +30,12 @@ export const menuEntries = [
 			},
 			{
 				id: uniqueID(),
+				title: "TalepPrime",
+				icon: "mdi mdi-human-handsup",
+				page: "/purchasing/item-demand/indexPrime"
+			},
+			{
+				id: uniqueID(),
 				title: "İç Üretim",
 				icon: "mdi mdi-human-handsup",
 				page: "/purchasing/internal-demand/list"
@@ -76,6 +82,12 @@ export const menuEntries = [
 				title: "Projeler",
 				icon: "mdi mdi-format-list-bulleted-square",
 				page: "/project/list"
+			},
+			{
+				id: uniqueID(),
+				title: "ProjelerPrime",
+				icon: "mdi mdi-format-list-bulleted-square",
+				page: "/project/list2"
 			},
 			{
 				id: uniqueID(),
@@ -197,6 +209,12 @@ export const menuEntries = [
 				icon: "mdi mdi-chart-areaspline",
 				title: "Depo Durumları",
 				page: "/warehouse/live"
+			},
+			{
+				id: uniqueID(),
+				icon: "mdi mdi-sitemap",
+				title: "Stok Çıkışı",
+				page: "/item/consumption"
 			},
 		]
 	},

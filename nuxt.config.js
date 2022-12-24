@@ -92,6 +92,7 @@ module.exports = {
 	modules: [
 		'@nuxtjs/axios',
 		'@nuxtjs/google-analytics',
+		'primevue/nuxt',
 		[
 			'nuxt-i18n', {
 				defaultLocale: 'en',
@@ -125,6 +126,11 @@ module.exports = {
 		]
 		// '@nuxtjs/webpack-profile'
 	],
+	primevue: {
+    theme: 'nova',
+    ripple: true,
+    components: ['Column', 'Button', 'DataTable', 'InputText', 'Toolbar', 'FileUpload'],
+  },
 	googleAnalytics: {
 		id: (mode === 'universal') ? 'UA-136690566-3' : 'UA-136690566-4',
 		// disable for development
@@ -222,6 +228,7 @@ module.exports = {
 	*/
 	build: {
 		// analyze: true,
+		transpile: ['primevue'],
 		progress: true,
 		babel: {
 			plugins: [
