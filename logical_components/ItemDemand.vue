@@ -196,7 +196,7 @@ export default {
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
-			{ data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date"},
+			{ data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date", render: function(data, ev, row) { return  dateToStr(row.createdDate, 'YYYY.MM.DD'); }},
 			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "itemExplanation", title: "Stok Açıklaması", visible: true, },
             { data: "partNo", title: "Parça Kodu", visible: true, },
@@ -251,7 +251,6 @@ export default {
                         return {
                             ...d,
                             newRecord: false,
-                            createdDate: dateToStr(d.createdDate, 'YYYY.MM.DD'),
                         };
                     });
                 }

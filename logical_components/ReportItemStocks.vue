@@ -87,6 +87,8 @@ export default {
 			select: true,
 			searching: true,
 			paging: true,
+            "order": [[1, 'asc']],
+			pageLength: 25,
             buttons: [
 					{
 						extend: "excelHtml5",

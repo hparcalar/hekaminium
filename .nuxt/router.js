@@ -65,6 +65,7 @@ const _ae311ba0 = () => interopDefault(import('..\\pages\\forms\\wizard\\step1.v
 const _ae14ec9e = () => interopDefault(import('..\\pages\\forms\\wizard\\step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
 const _adf8bd9c = () => interopDefault(import('..\\pages\\forms\\wizard\\step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
 const _70555981 = () => interopDefault(import('..\\pages\\item-category\\list.vue' /* webpackChunkName: "pages/item-category/list" */))
+const _3378e093 = () => interopDefault(import('..\\pages\\item\\consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
 const _4d888056 = () => interopDefault(import('..\\pages\\item\\list.vue' /* webpackChunkName: "pages/item/list" */))
 const _36d88beb = () => interopDefault(import('..\\pages\\layout\\boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
 const _acb1657a = () => interopDefault(import('..\\pages\\layout\\mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
@@ -419,6 +420,10 @@ export const routerOptions = {
     path: "/item-category/list",
     component: _70555981,
     name: "item-category-list"
+  }, {
+    path: "/item/consumption",
+    component: _3378e093,
+    name: "item-consumption"
   }, {
     path: "/item/list",
     component: _4d888056,

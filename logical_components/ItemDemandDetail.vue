@@ -133,6 +133,7 @@ export default {
             netQuantity: 0,
 			demandStatus: 0,
             demandDate: null,
+            createdDate: null,
             newRecord: true,
             partNo: '',
             partDimensions: '',
@@ -199,6 +200,9 @@ export default {
             // #region VALIDATE ROW DATA
             if (!this.formData.demandDate)
                 this.formData.demandDate = self.$moment().format('YYYY-DD-MM');
+            
+            if(!this.createdDate)
+                this.formData.createdDate = self.$moment().format('YYYY-MM-DD')
 
             const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
             if (selectedItem)

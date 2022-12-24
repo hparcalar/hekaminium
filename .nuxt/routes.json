@@ -429,6 +429,13 @@
     "_name": "_70555981"
   },
   {
+    "name": "item-consumption",
+    "path": "/item/consumption",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item\\\\consumption.vue",
+    "chunkName": "pages/item/consumption",
+    "_name": "_3378e093"
+  },
+  {
     "name": "item-list",
     "path": "/item/list",
     "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item\\\\list.vue",
