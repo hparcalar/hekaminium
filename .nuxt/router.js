@@ -12,6 +12,7 @@ const _cf41416e = () => interopDefault(import('../pages/item-category/index.vue'
 const _17e8f547 = () => interopDefault(import('../pages/login_page.vue' /* webpackChunkName: "pages/login_page" */))
 const _2099c050 = () => interopDefault(import('../pages/login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
 const _f8529d08 = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
+const _1765aa00 = () => interopDefault(import('../pages/process/index.vue' /* webpackChunkName: "pages/process/index" */))
 const _3b280b2a = () => interopDefault(import('../pages/project/index.vue' /* webpackChunkName: "pages/project/index" */))
 const _37b7ab52 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
 const _1681618c = () => interopDefault(import('../pages/staffpermit/index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
@@ -114,6 +115,7 @@ const _01fb2b89 = () => interopDefault(import('../pages/plugins/tour.vue' /* web
 const _f6adbc62 = () => interopDefault(import('../pages/plugins/tree.vue' /* webpackChunkName: "pages/plugins/tree" */))
 const _7c798f1c = () => interopDefault(import('../pages/plugins/vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
 const _10767cd4 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
+const _61d570e0 = () => interopDefault(import('../pages/process/list.vue' /* webpackChunkName: "pages/process/list" */))
 const _3805aaa9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
 const _011dddd4 = () => interopDefault(import('../pages/project/fieldservice/index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
 const _e52e3914 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
@@ -206,6 +208,10 @@ export const routerOptions = {
     path: "/plant",
     component: _f8529d08,
     name: "plant"
+  }, {
+    path: "/process",
+    component: _1765aa00,
+    name: "process"
   }, {
     path: "/project",
     component: _3b280b2a,
@@ -617,6 +623,10 @@ export const routerOptions = {
     path: "/plugins/vue_good_table",
     component: _10767cd4,
     name: "plugins-vue_good_table"
+  }, {
+    path: "/process/list",
+    component: _61d570e0,
+    name: "process-list"
   }, {
     path: "/project-category/list",
     component: _3805aaa9,

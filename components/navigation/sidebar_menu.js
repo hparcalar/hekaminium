@@ -240,6 +240,12 @@ export const menuEntries = [
 				title: "Stok Kategorisi",
 				icon: "mdi mdi-folder-multiple",
 				page: "/item-category/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Proses",
+				icon: "mdi mdi-wrench",
+				page: "/process/list"
 			}
 		]
 	},

@@ -56,6 +56,13 @@
     "_name": "_f8529d08"
   },
   {
+    "name": "process",
+    "path": "/process",
+    "component": "/home/hakan/Projects/hekaminium/pages/process/index.vue",
+    "chunkName": "pages/process/index",
+    "_name": "_1765aa00"
+  },
+  {
     "name": "project",
     "path": "/project",
     "component": "/home/hakan/Projects/hekaminium/pages/project/index.vue",
@@ -776,6 +783,13 @@
     "component": "/home/hakan/Projects/hekaminium/pages/plugins/vue_good_table.vue",
     "chunkName": "pages/plugins/vue_good_table",
     "_name": "_10767cd4"
+  },
+  {
+    "name": "process-list",
+    "path": "/process/list",
+    "component": "/home/hakan/Projects/hekaminium/pages/process/list.vue",
+    "chunkName": "pages/process/list",
+    "_name": "_61d570e0"
   },
   {
     "name": "project-category-list",

@@ -42,6 +42,20 @@ export function dateToStr(dateString, format) {
     return bytes;
  }
 
+ export function blobToBase64(blob) {
+  return new Promise((resolve, _) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.readAsDataURL(blob);
+  });
+}
+
+ export function uint8ArrayToBase64(array){
+  var decoder = new TextDecoder('utf8');
+  var b64encoded = Buffer.from(array).toString('base64'); //btoa(decoder.decode(array));
+  return b64encoded;
+ }
+
   export function parseLocaleNumber(stringNumber, locale) {
     var thousandSeparator = Intl.NumberFormat(locale).format(11111).replace(/\p{Number}/gu, '');
     var decimalSeparator = Intl.NumberFormat(locale).format(1.1).replace(/\p{Number}/gu, '');

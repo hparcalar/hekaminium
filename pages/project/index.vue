@@ -274,16 +274,17 @@
 														</div>
 													</div>
 												</li>
+												<!-- ORDER LIST CONTENT -->
 												<li>
 													<div class="sc-padding-medium sc-padding-remove-top">
 														<div class="uk-margin-medium uk-margin-remove-left">
 															<div class="uk-width-auto@s" style="position: relative; float:right;">
-																<div id="sc-dt-buttonsDemand"></div>
+																<div id="sc-dt-buttonsOrder"></div>
 															</div>
 															<client-only>
 																<Datatable id="sc-dt-orders-table" ref="orderListTable" :data="orderList"
 																	:options="dtOptions" :customColumns="dtOrderCols" :buttons="true"
-																	@initComplete="dtButtonsInitialize"
+																	@initComplete="dtButtonsInitializeOrder"
 																	:show-summary="true" :summary-items="['overallTotal', 'forexOverallTotal']"
 																	:customEvents="[{ name: 'select', function: clickOrderRow }]">
 																</Datatable>
@@ -296,13 +297,13 @@
 													<div class="sc-padding-medium sc-padding-remove-top">
 														<div class="uk-margin-medium uk-margin-remove-left">
 															<div class="uk-width-auto@s" style="position: relative; float:right;">
-																<div id="sc-dt-buttonsDemand"></div>
+																<div id="sc-dt-buttonsReceipt"></div>
 															</div>
 															<!-- :show-summary="true" :summary-items="['overallTotal', 'forexOverallTotal']" -->
 															<client-only>
 																<Datatable id="sc-dt-receipts-table" ref="receiptsListTable" :data="receiptList"
-																	:options="dtOptions" :customColumns="dtReceiptCols" :buttons="true"
-																	@initComplete="dtButtonsInitialize"
+																	:options="dtOptionsReceipt" :customColumns="dtReceiptCols" :buttons="true"
+																	@initComplete="dtButtonsReceiptInitialize"
 																	:customEvents="[{ name: 'select', function: clickReceiptRow }]">
 																</Datatable>
 															</client-only>
@@ -601,16 +602,31 @@ export default {
 			searching: true,
 			paging: true,
 			buttons: [
-				/* {
-					extend: "copyHtml5",
+				{
+					extend: "excelHtml5",
 					className: "sc-button",
-					text: 'Kopyala'
+					text: 'Excel '
 				},
 				{
-					extend: "csvHtml5",
-					className: "sc-button",
-					text: 'CSV '
-				}, */
+					extend: "pdfHtml5",
+					className: "sc-button sc-button-icon",
+					text: '<i class="mdi mdi-file-pdf md-color-red-800"></i>'
+				},
+				{
+					extend: "print",
+					className: "sc-button sc-button-icon",
+					text: '<i class="mdi mdi-printer"></i>',
+					title: 'Yazdır',
+					autoPrint: true
+				}
+			],
+		},
+		dtOptionsReceipt: {
+			autoWidth: false,
+			select: true,
+			searching: true,
+			paging: true,
+			buttons: [
 				{
 					extend: "excelHtml5",
 					className: "sc-button",
@@ -1271,6 +1287,20 @@ export default {
         .buttons()
         .container()
         .appendTo(document.getElementById("sc-dt-buttonsDemand"));
+    },
+	dtButtonsInitializeOrder() {
+      // append buttons to custom container
+      this.$refs.orderListTable.$dt
+        .buttons()
+        .container()
+        .appendTo(document.getElementById("sc-dt-buttonsOrder"));
+    },
+	dtButtonsReceiptInitialize() {
+      // append buttons to custom container
+      this.$refs.receiptsListTable.$dt
+        .buttons()
+        .container()
+        .appendTo(document.getElementById("sc-dt-buttonsReceipt"));
 
       // const ls = JSON.parse( localStorage.getItem( 'demandListTableView' ) );
       // this.$refs.buttonsTable.headers.forEach( (value, i) => {

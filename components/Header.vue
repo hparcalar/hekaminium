@@ -183,6 +183,11 @@
 								<span v-show="!alertsEmpty" class="sc-indicator md-bg-color-red-600"></span>
 							</span>
 						</a>
+						<a href="javascript:void(0)" @click="requestSpeech">
+							<span class="mdi mdi-microphone uk-display-inline-block">
+								
+							</span>
+						</a>
 						<div class="uk-navbar-dropdown md-bg-grey-100">
 							<div class="sc-padding sc-padding-small-ends">
 								<ul id="sc-header-alerts" class="uk-list uk-margin-remove">
@@ -246,7 +251,8 @@ import ScTopMenu from '~/components/topmenu/TopMenu.vue';
 import { scHelpers } from "~/assets/js/utils";
 import { useUserSession, logoutUser } from '~/composable/userSession';
 import { useApi } from '~/composable/useApi';
-import { dateToStr } from "~/composable/useHelpers";
+import { dateToStr, blobToBase64 } from "~/composable/useHelpers";
+import * as flacEncoder from '~/composable/useFlaclib';
 import moment from "~/plugins/moment";
 
 const { uniqueID } = scHelpers;
@@ -349,7 +355,18 @@ export default {
 		offcanvasExpanded: false,
 		offcanvasPresent: false,
 		lastKeyUpForSearch: null,
+		encoder: null,
 		searchData: '',
+		micDataBase64: '',
+		micData: [],
+		audioContext: null,
+		audioInput: null,
+		microphone_stream: null,
+		BUFF_SIZE: 4096,
+		gain_node: null,
+		script_processor_node: null,
+		script_processor_fft_node: null,
+		analyserNode: null,
 		foundData: [],
 		logo: require('~/assets/img/logo.png'),
 		alertsEmpty: true,
@@ -555,6 +572,166 @@ export default {
 		}
 	},
 	methods: {
+		requestSpeech(){
+			this.initSpeechApi();
+			this.requestMic();
+
+		},
+		process_microphone_buffer(event){
+			var i, N, inp, microphone_output_buffer;
+
+			microphone_output_buffer = event.inputBuffer.getChannelData(0); // just mono - 1 channel for now
+			// console.log(microphone_output_buffer);
+
+			this.encoder.postMessage({ cmd: 'encode', buf: microphone_output_buffer});
+		},
+		show_some_data(given_typed_array, num_row_to_display, label){
+			var size_buffer = given_typed_array.length;
+			var index = 0;
+			var max_index = num_row_to_display;
+
+			console.log("__________ " + label);
+
+			for (; index < max_index && index < size_buffer; index += 1) {
+				console.log(given_typed_array[index]);
+			}
+		},
+		sendVoiceToApi(){
+			try {
+				const self = this;
+				const authIns = self.$google.api.auth2.getAuthInstance();
+				if (authIns.isSignedIn.get() && authIns.currentUser.Oa.uv.gw == 'heka@progenar.com'){
+					console.log(self.$google.api);
+					self.$google.api.client.speech.speech.recognize({
+						"audio": {
+							"content": self.micDataBase64
+						},
+						"config": {
+							"encoding": "FLAC",
+							"languageCode": "tr-TR",
+							"sampleRateHertz": 44100,
+						}
+					}).then((response) => {
+						console.log(response);
+						if (response.status == 200 
+							&& response.result.results && response.result.results.length > 0){
+								var bestResult = response.result.results[0].alternatives[0].transcript;
+								if (bestResult.includes('sipariş') && bestResult.includes('getir')){
+									self.$router.push('/purchasing/item-order/list');
+								}
+						}
+					});
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		async stop_microphone(){
+			if (this.audioContext){
+				var flacData = this.encoder.postMessage({ cmd: 'finish' });
+				console.log(flacData);
+				this.microphone_stream.disconnect();
+				this.script_processor_node.disconnect();
+				this.audioContext.close();
+
+				this.micDataBase64 = await blobToBase64(flacData);
+				this.micDataBase64 = this.micDataBase64.replace('data:audio/flac;base64,', '');
+				console.log(this.micDataBase64);
+				
+				this.audioContext = null;
+				this.microphone_stream = null;
+				this.script_processor_node = null;
+
+				this.sendVoiceToApi();
+			}
+		},
+		start_microphone(stream){
+			this.encoder = flacEncoder;
+			if (this.audioContext){
+				this.stop_microphone();
+				return;
+			}
+
+			this.micData = [];
+			this.micDataBase64 = '';
+			this.audioContext = new AudioContext();
+			// this.gain_node = this.audioContext.createGain();
+			// this.gain_node.connect( this.audioContext.destination );
+
+			this.microphone_stream = this.audioContext.createMediaStreamSource(stream);
+			// this.microphone_stream.connect(this.gain_node); 
+
+			this.script_processor_node = this.audioContext.createScriptProcessor(this.BUFF_SIZE, 1, 1);
+			this.script_processor_node.onaudioprocess = this.process_microphone_buffer;
+
+			this.microphone_stream.connect(this.script_processor_node);
+			this.script_processor_node.connect(this.audioContext.destination);
+
+			this.encoder
+				.postMessage({ cmd: 'init', config: { samplerate: 44100, bps: 16, channels: 1, compression: 5 } });
+		},
+		requestMic(){
+			try {
+				const self = this;
+
+				if (!navigator.getUserMedia)
+					navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+								navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+				if (navigator.getUserMedia){
+					navigator.getUserMedia({audio:true}, 
+						function(stream) {
+							self.start_microphone(stream);
+						},
+						function(e) {
+							
+						}
+					);
+				} else {  }
+
+				// navigator.mediaDevices.getUserMedia({ audio: true })
+				// .then(function(stream) {
+				// 	console.log('You let me use your mic!')
+				// })
+				// .catch(function(err) {
+				// 	console.log('No mic for you!')
+				// });
+			} catch (error) {
+				console.log(error);
+			}
+		},
+		initSpeechApi(){
+			try {
+				const self = this;
+				this.$google.api.load('auth2', {
+					callback: function(dg) {
+						self.$google.api.client.init({
+							apiKey: 'AIzaSyD7Qg97gRwKeoqCpjACKTsLzV0vTdSAPOw',
+							clientId: '756662015988-6s0gq2tj2v0mbu3lmiigsdnnul89ec71.apps.googleusercontent.com',
+							discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4','https://speech.googleapis.com/$discovery/rest?version=v1'],
+							scope: "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/cloud-platform",
+							plugin_name: 'chat',
+						}).then(function(){
+							const authIns = self.$google.api.auth2.getAuthInstance();
+							if (!authIns.isSignedIn.get() || authIns.currentUser.Oa.uv.gw != 'heka@progenar.com'){
+								authIns.signIn();
+							}
+						});
+					},
+					onerror: function() {
+						// Handle loading error.
+						// alert('gapi.client failed to load!');
+					},
+					timeout: 5000, // 5 seconds.
+					ontimeout: function() {
+						// Handle timeout.
+						// alert('gapi.client could not load in a timely manner!');
+					}
+				});
+			} catch (error) {
+				
+			}
+		},
 		toggleMainSidebar () {
 			let state = !this.sidebarMainExpanded;
 			this.$store.commit('sidebarMainToggle', state);

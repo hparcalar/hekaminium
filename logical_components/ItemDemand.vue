@@ -60,7 +60,7 @@
                     </legend>
                     <div class="uk-margin-medium uk-margin-remove-left">
                         <div class="uk-grid">
-                            <div class="uk-width-1-5@l">
+                            <div class="uk-width-2-5@l">
                                 <div class="uk-button-group sc-padding-remove-left" style="height:34px;">
                                     <button type="button" @click="showNewDemandDetail" class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
                                         <span data-uk-icon="icon: plus" class="uk-icon"></span>
@@ -78,9 +78,26 @@
                                          class="sc-button sc-button-warning sc-button-small" style="height:34px;">
                                         S: {{ selectedDemandDetail.relatedOrderNo }}
                                     </button>
-                                </div>     
+                                    <button v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false" type="button" @click="showNewAttachment" style="height:34px;"
+                                        class="sc-button sc-button-success sc-button-small">
+                                        <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+                                        Dosya Ekle
+                                    </button>
+                                </div>   
+                                <div v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false" class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">
+									
+									<div class="uk-margin-medium uk-margin-remove-left">
+										<client-only>
+											<Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList" :options="dtAttachmentOptions"
+												:customColumns="dtAttachmentCols" :buttons="true"
+												:customEvents="[{ name: 'select', function: clickAttachmentRow }]">
+											</Datatable>
+										</client-only>
+									</div>
+
+								</div>
                             </div>
-                            <div class="uk-width-4-5@l">
+                            <div class="uk-width-3-5@l">
                                 <ItemDemandDetail
                                     :detail-object="selectedDemandDetail"
                                     :total-detail-count="details.length"
@@ -88,6 +105,14 @@
                                     @onDetailSubmit="onDetailSaved"
                                 />
                             </div>
+                        </div>
+
+                        <div class="uk-flex-middle uk-grid-small uk-grid" data-uk-grid>
+                            
+                            <div class="uk-width-auto@s">
+                                <div id="sc-dt-buttons"></div>
+                            </div>
+                            
                         </div>
                         
                         <client-only>
@@ -97,6 +122,7 @@
                                 :data="details"
                                 :options="dtOptions"
                                 :customColumns="dtDetailCols"
+                                @initComplete="dtButtonsInitialized"
                                 :buttons="true"
                                 :customEvents="[{ name: 'select', function: clickDetail }, { name:'deselect', function: deselectDetail }]"
                             ></Datatable>
@@ -117,6 +143,16 @@
                 </div>
             </form>
         </div>
+
+        <div id="dlgAttachment" class="uk-modal" data-uk-modal stack="true">
+			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
+				<div class="uk-modal-body">
+					<AttachmentForm v-if="refreshAttachmentForm == true" :record-object="selectedAttachmentRow"
+						:is-dialog="true" :dialog-container="'dlgAttachment'"
+						@onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 
@@ -159,6 +195,7 @@ export default {
 	components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
 		Select2: process.client ? () => import('~/components/Select2') : null,
+        AttachmentForm: process.client ? () => import("~/logical_components/AttachmentForm") : null,
         ItemDemandDetail,
 		ScInput,
 		ScTextarea,
@@ -175,6 +212,20 @@ export default {
             isContracted: false,
             explanation: '',
 		},
+        selectedAttachmentRow: { id:0, recordType:2, recordId: 0 },
+        attachmentList: [],
+        refreshAttachmentForm: false,
+        dtAttachmentOptions: {
+			autoWidth: false,
+			select: true,
+			searching: false,
+			paging: false,
+		},
+		dtAttachmentCols: [
+			{ data: "title", title: "Başlık", visible: true },
+			{ data: "fileName", title: "Dosya Adı", visible: true, },
+			{ data: "explanation", title: "Açıklama", visible: true, },
+		],
         isMounting: false,
         details: [],
         projects: [],
@@ -192,6 +243,25 @@ export default {
             },
 			searching: false,
 			paging: false,
+            buttons: [
+                {
+                    extend: "excelHtml5",
+                    className: "sc-button",
+                    text: 'Excel '
+                },
+                {
+                    extend: "pdfHtml5",
+                    className: "sc-button sc-button-icon",
+                    text: '<i class="mdi mdi-file-pdf md-color-red-800"></i>'
+                },
+                {
+                    extend: "print",
+                    className: "sc-button sc-button-icon",
+                    text: '<i class="mdi mdi-printer"></i>',
+                    title: 'Yazdır',
+                    autoPrint: true
+                }
+            ]
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
@@ -229,6 +299,9 @@ export default {
         this.isMounting = false;
 	},
 	methods: {
+        dtButtonsInitialized(){
+            this.$refs.demandDetailsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
+        },
         async bindModel(){
             const api = useApi();
             try {
@@ -363,6 +436,14 @@ export default {
 			});
             
         },
+        async bindAttachments(){
+			const api = useApi();
+			try {
+				this.attachmentList = (await api.get('Attachment/OfRecord/2/' + this.selectedDemandDetail.id)).data;
+			} catch (error) {
+
+			}
+		},
         removeDemandDetail(){
             if (this.selectedDemandDetail){
                 const demandIndex = this.details.indexOf(this.selectedDemandDetail);
@@ -394,16 +475,44 @@ export default {
         showNewDemandDetail(){
             this.selectedDemandDetail = { id:0 };
         },
-        clickDetail: function (e, dt, type, indexes){
+        showNewAttachment(){
+			const self = this;
+			this.selectedAttachmentRow = { id:0, recordType:2, recordId: self.selectedDemandDetail.id };
+			this.showAttachment();
+		},
+        closeAttachmentDialog() {
+			const modalElement = document.getElementById('dlgAttachment');
+			UIkit.modal(modalElement).hide();
+		},
+		async onSubmitAttachment(){
+			this.closeAttachmentDialog();
+			await this.bindAttachments();
+		},
+		showAttachment(){
+			this.refreshAttachmentForm = false;
+			setTimeout(() => { this.refreshAttachmentForm = true; }, 100);
+
+			const modalElement = document.getElementById('dlgAttachment');
+			modalElement.width = window.innerWidth * 0.7;
+			modalElement.height = window.innerHeight * 0.8;
+			UIkit.modal(modalElement).show();
+		},
+        clickDetail:async function (e, dt, type, indexes){
             try {
                 this.selectedDemandDetail = this.details[indexes[0]];   
+                await this.bindAttachments();
             } catch (error) {
                 
             }
         },
         deselectDetail: function(){
             this.selectedDemandDetail = { id:0 };
-        }
+        },
+        clickAttachmentRow: function (e, dt, type, indexes) {
+			const selIndex = indexes[0];
+			this.selectedAttachmentRow = this.attachmentList[selIndex];
+			this.showAttachment();
+		},
 	},
     watch: {
         recordId: async function(newVal, oldVal) {

@@ -164,8 +164,8 @@ export default {
 				...d,
 				totalCost: d.totalCost * d.quantity,
 				totalForexCost: d.totalForexCost * d.quantity,
-				offerForexPrice: d.offerForexPrice * d.quantity,
-				offerPrice: d.offerPrice * d.quantity,
+				offerForexPrice: d.offerForexPrice,
+				offerPrice: d.offerPrice,
 			}
 		});
 
