@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _51d079c8 = () => interopDefault(import('../pages/account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
+const _1ae606b9 = () => interopDefault(import('../pages/attachment-category/index.vue' /* webpackChunkName: "pages/attachment-category/index" */))
 const _5704df63 = () => interopDefault(import('../pages/firm/index.vue' /* webpackChunkName: "pages/firm/index" */))
 const _d45ff384 = () => interopDefault(import('../pages/firm-category/index.vue' /* webpackChunkName: "pages/firm-category/index" */))
 const _4f8bc410 = () => interopDefault(import('../pages/item/index.vue' /* webpackChunkName: "pages/item/index" */))
@@ -17,6 +18,7 @@ const _3b280b2a = () => interopDefault(import('../pages/project/index.vue' /* we
 const _37b7ab52 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
 const _1681618c = () => interopDefault(import('../pages/staffpermit/index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
 const _218eb8d4 = () => interopDefault(import('../pages/warehouse/index.vue' /* webpackChunkName: "pages/warehouse/index" */))
+const _2945ba07 = () => interopDefault(import('../pages/attachment-category/list.vue' /* webpackChunkName: "pages/attachment-category/list" */))
 const _93b0609e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _3aaefa45 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
 const _61e5f6d6 = () => interopDefault(import('../pages/components/animations.vue' /* webpackChunkName: "pages/components/animations" */))
@@ -117,6 +119,7 @@ const _7c798f1c = () => interopDefault(import('../pages/plugins/vector_maps.vue'
 const _10767cd4 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
 const _61d570e0 = () => interopDefault(import('../pages/process/list.vue' /* webpackChunkName: "pages/process/list" */))
 const _3805aaa9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
+const _99c2ce96 = () => interopDefault(import('../pages/project/docview.vue' /* webpackChunkName: "pages/project/docview" */))
 const _011dddd4 = () => interopDefault(import('../pages/project/fieldservice/index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
 const _e52e3914 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
 const _367a5b6f = () => interopDefault(import('../pages/purchasing/internal-demand/index.vue' /* webpackChunkName: "pages/purchasing/internal-demand/index" */))
@@ -181,6 +184,10 @@ export const routerOptions = {
     component: _51d079c8,
     name: "account_auth"
   }, {
+    path: "/attachment-category",
+    component: _1ae606b9,
+    name: "attachment-category"
+  }, {
     path: "/firm",
     component: _5704df63,
     name: "firm"
@@ -228,6 +235,10 @@ export const routerOptions = {
     path: "/warehouse",
     component: _218eb8d4,
     name: "warehouse"
+  }, {
+    path: "/attachment-category/list",
+    component: _2945ba07,
+    name: "attachment-category-list"
   }, {
     path: "/components/accordion",
     component: _93b0609e,
@@ -631,6 +642,10 @@ export const routerOptions = {
     path: "/project-category/list",
     component: _3805aaa9,
     name: "project-category-list"
+  }, {
+    path: "/project/docview",
+    component: _99c2ce96,
+    name: "project-docview"
   }, {
     path: "/project/fieldservice",
     component: _011dddd4,

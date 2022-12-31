@@ -79,6 +79,12 @@ export const menuEntries = [
 			},
 			{
 				id: uniqueID(),
+				title: "Döküman İzleme",
+				icon: "mdi mdi-document",
+				page: "/project/docview"
+			},
+			{
+				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
 				title: "Güncel Durum Analizi",
 				page: "/project/live-analysis"
@@ -362,6 +368,15 @@ export const menuEntries = [
 		id: uniqueID(),
 		title: "İşletmeler",
 		page: "/plant/list",
+		icon: "mdi mdi-office-building",
+		visible: function(){
+			return checkAuth('SystemSection');
+		},
+	},
+	{
+		id: uniqueID(),
+		title: "Döküman Tipi",
+		page: "/attachment-category/list",
 		icon: "mdi mdi-office-building",
 		visible: function(){
 			return checkAuth('SystemSection');

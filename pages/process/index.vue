@@ -32,6 +32,13 @@
 										<label>Proses Sırası</label>
 									</ScInput>
 								</div>
+								<div>
+									<client-only>
+										<Select2 v-model="formData.processType" :options="procTypeList"
+											:settings="{ 'width': '100%', 'placeholder': 'Proses Türü', 'allowClear': true }">
+										</Select2>
+									</client-only>
+								</div>
 							</div>
 						</fieldset>
 
@@ -80,7 +87,12 @@ export default {
 			processName: '',
             processOrder: null,
 			isActive: true,
+			processType: 0,
 		},
+		procTypeList: [
+			{ id: 0, text: 'Genel' },
+			{ id:1, text: 'Kesim' }
+		]
 	}),
 	computed: {
 		

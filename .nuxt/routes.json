@@ -7,6 +7,13 @@
     "_name": "_51d079c8"
   },
   {
+    "name": "attachment-category",
+    "path": "/attachment-category",
+    "component": "/home/hakan/Projects/hekaminium/pages/attachment-category/index.vue",
+    "chunkName": "pages/attachment-category/index",
+    "_name": "_1ae606b9"
+  },
+  {
     "name": "firm",
     "path": "/firm",
     "component": "/home/hakan/Projects/hekaminium/pages/firm/index.vue",
@@ -89,6 +96,13 @@
     "component": "/home/hakan/Projects/hekaminium/pages/warehouse/index.vue",
     "chunkName": "pages/warehouse/index",
     "_name": "_218eb8d4"
+  },
+  {
+    "name": "attachment-category-list",
+    "path": "/attachment-category/list",
+    "component": "/home/hakan/Projects/hekaminium/pages/attachment-category/list.vue",
+    "chunkName": "pages/attachment-category/list",
+    "_name": "_2945ba07"
   },
   {
     "name": "components-accordion",
@@ -797,6 +811,13 @@
     "component": "/home/hakan/Projects/hekaminium/pages/project-category/list.vue",
     "chunkName": "pages/project-category/list",
     "_name": "_3805aaa9"
+  },
+  {
+    "name": "project-docview",
+    "path": "/project/docview",
+    "component": "/home/hakan/Projects/hekaminium/pages/project/docview.vue",
+    "chunkName": "pages/project/docview",
+    "_name": "_99c2ce96"
   },
   {
     "name": "project-fieldservice",

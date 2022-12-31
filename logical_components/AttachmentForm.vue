@@ -5,9 +5,17 @@
                 <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
                     <div class="uk-child-width-1-3@m uk-grid" data-uk-grid>
                         <div class="uk-width-1-2@m">
-                            <ScInput v-model="formData.title">
+                            <!-- <ScInput v-model="formData.title">
                                 <label>Başlık</label>
-                            </ScInput>
+                            </ScInput> -->
+
+                            <client-only>
+                                <Select2
+                                    v-model="selectedCategory"
+                                    :options="attachmentCategories"
+                                    :settings="{ 'width': '100%', 'placeholder': 'Döküman Tipi', 'allowClear': true }"
+                                ></Select2>
+                            </client-only>
                         </div>
                         <div class="uk-width-1-2@m">
                             <ScInput v-model="formData.explanation">
@@ -44,15 +52,15 @@
                         </div>
 
                         <!-- file preview -->
-                        <div v-if="formData.fileContent && formData.fileContent.length > 0" class="uk-width-2-2@m">
+                        <div v-show="formData.fileContent && formData.fileContent.length > 0" class="uk-width-2-2@m">
                             <img v-if="formData.fileType.startsWith('image')" class="preview-img"
                                 @dblclick="showFullImage"
                                 :src="'data:'+ formData.fileType +';base64,' + formData.fileContent"
                             />
                             <vue-pdf-app 
-                                v-else-if="formData.fileType.includes('pdf')" 
+                                v-show="formData.fileType.includes('pdf') && getArrayBufferContent != null" 
                                 class="preview-pdf"
-                                :pdf="getArrayBufferContent()"
+                                :pdf="getArrayBufferContent"
                                 :page-number="1"
                                 ></vue-pdf-app>
                         </div>
@@ -126,9 +134,16 @@ export default {
             fileExtension: '',
             title: '',
             explanation: '',
-        }
+        },
+        selectedCategory: null,
+        attachmentCategories: [],
 	}),
 	computed: {
+        getArrayBufferContent(){
+            if (this.formData.fileContent && this.formData.fileContent.length > 0)
+                return base64ToArrayBuffer(this.formData.fileContent).buffer;
+            return null;
+        },
 	},
 	async mounted () {
 		await this.bindModel();
@@ -145,16 +160,30 @@ export default {
         async bindModel(){
             const api = useApi();
             try {
+                this.attachmentCategories = (await api.get('Attachment/Category')).data
+                    .map((d) => {
+                        return {
+                            ...d,
+                            id: d.id,
+                            text: d.categoryName,
+                        };
+                    });
+
                 const attachmentData = (await api.get('Attachment/' + this.recordObject.id)).data;
                 if (attachmentData && attachmentData.id > 0)
                     this.formData = attachmentData;
+
+                if (this.formData.title && this.formData.title.length > 0){
+                    const foundElement = this.attachmentCategories.find(d => d.categoryName == this.formData.title);
+                    if (foundElement){
+                        this.selectedCategory = foundElement.id;
+                    }
+                }
             } catch (error) {
 
             }
         },
-        getArrayBufferContent(){
-            return base64ToArrayBuffer(this.formData.fileContent).buffer;
-        },
+        
         async onDownload(){
             const self = this;
             var blob = new Blob([base64ToArrayBuffer(self.formData.fileContent)], { type: self.formData.fileType });
@@ -178,6 +207,9 @@ export default {
                 this.formData.recordType = this.recordObject.recordType;
                 this.formData.recordId = this.recordObject.recordId;
                 this.formData.isOfferDoc = this.recordObject.isOfferDoc;
+                if (this.selectedCategory && this.selectedCategory.toString() != '0'){
+                    this.formData.title = this.attachmentCategories.find(d => parseInt(d.id) == parseInt(this.selectedCategory)).categoryName;
+                }
 
                 // save attachment headers first
                 const postResult = await api.post('Attachment',{...this.formData, fileContent: null, })
@@ -185,7 +217,7 @@ export default {
                     this.formData.id = postResult.data.recordId
 
                     // upload file and update attachment content
-                    if (this.formData.fileContent != null && postResult.data.recordId > 0) {
+                    if (this.formData.fileContent != null && this.formData.fileContent.length > 0 && postResult.data.recordId > 0) {
                         let postFormData = new FormData()
                         postFormData.append('fileData', this.formData.fileContent)
                         this.showNotification('Dosya sunucuya yükleniyor. Lütfen bekleyiniz.', false, 'info', true)
@@ -204,7 +236,8 @@ export default {
 
                         if (postFileResult.data.result) {
                             this.showNotification('Dosya başarıyla yüklendi.', false, 'success');
-                        } else this.showNotification('Dosyayı karşıya yüklerken bir hata oluştu.', false, 'error');
+                        } 
+                        // else this.showNotification('Dosyayı karşıya yüklerken bir hata oluştu.', false, 'error');
                     }
                     await this.bindModel();
                     this.$emit('onSubmit');

@@ -101,6 +101,7 @@
                                 <ItemDemandDetail
                                     :detail-object="selectedDemandDetail"
                                     :total-detail-count="details.length"
+                                    :process-list="processList"
                                     :is-dialog="false"
                                     @onDetailSubmit="onDetailSaved"
                                 />
@@ -147,7 +148,7 @@
         <div id="dlgAttachment" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<AttachmentForm v-if="refreshAttachmentForm == true" :record-object="selectedAttachmentRow"
+					<AttachmentForm v-show="refreshAttachmentForm == true" :record-object="selectedAttachmentRow"
 						:is-dialog="true" :dialog-container="'dlgAttachment'"
 						@onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
 				</div>
@@ -212,6 +213,7 @@ export default {
             isContracted: false,
             explanation: '',
 		},
+        processList: [],
         selectedAttachmentRow: { id:0, recordType:2, recordId: 0 },
         attachmentList: [],
         refreshAttachmentForm: false,
@@ -314,6 +316,18 @@ export default {
                         };
                     })
 
+                const procData = (await api.get('Process')).data;
+                if (procData){
+                    this.processList = procData.filter(d => d.processType > 0)
+                        .map((d) => {
+                            return {
+                                ...d,
+                                text: d.processName,
+                                isChecked: false,
+                            }
+                        });
+                }
+
                 const getData = (await api.get('ItemDemand/' + this.formData.id)).data;
                 if (getData && getData.id > 0){
                     getData.projectId = getData.projectId ? getData.projectId.toString() : null;
@@ -349,7 +363,7 @@ export default {
                     detailRow.partNo = detailRow.partNo ?? '';
                     detailRow.partDimensions = detailRow.partDimensions ?? '';
                     this.details.push(detailRow);
-                    this.showNewDemandDetail();
+                    // this.showNewDemandDetail();
                 }
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
@@ -363,6 +377,8 @@ export default {
                         existingDetail.demandDate = detailRow.demandDate;
                         existingDetail.partNo = detailRow.partNo ?? '';
                         existingDetail.partDimensions = detailRow.partDimensions ?? '';
+                        existingDetail.processList = detailRow.processList;
+                        existingDetail.partList = detailRow.partList;
                         // existingDetail.newDetail = detailRow.newDetail;
                     }
                 }
@@ -397,8 +413,8 @@ export default {
 
                     if (this.isDialog)
                         UIkit.modal(document.getElementById(this.dialogContainer)).hide();
-                    else
-                        this.$router.go(-1);
+                    // else
+                    //     this.$router.go(-1);
                 }
                 else
                     this.showNotification(postResult.errorMessage, false, 'error');
@@ -473,7 +489,24 @@ export default {
 			UIkit.notification(text, config);
 		},
         showNewDemandDetail(){
-            this.selectedDemandDetail = { id:0 };
+            const lastRow = this.details.length > 0 ? this.details[this.details.length - 1] : null;
+
+            const newRow = { id: 0 };
+            // if (lastRow){
+            //     if (lastRow.processList){
+            //         newRow.processList = lastRow.processList.map((d) => {
+            //             return {
+            //                 ...d,
+            //                 id: 0,
+            //             }
+            //         });
+            //         newRow.partWidth = lastRow.partWidth;
+            //         newRow.partHeight = lastRow.partHeight;
+            //         newRow.partThickness = lastRow.partThickness;
+            //     }
+            // }
+
+            this.selectedDemandDetail = newRow;
         },
         showNewAttachment(){
 			const self = this;
@@ -490,7 +523,7 @@ export default {
 		},
 		showAttachment(){
 			this.refreshAttachmentForm = false;
-			setTimeout(() => { this.refreshAttachmentForm = true; }, 100);
+			setTimeout(() => { this.refreshAttachmentForm = true; }, 200);
 
 			const modalElement = document.getElementById('dlgAttachment');
 			modalElement.width = window.innerWidth * 0.7;
@@ -499,7 +532,7 @@ export default {
 		},
         clickDetail:async function (e, dt, type, indexes){
             try {
-                this.selectedDemandDetail = this.details[indexes[0]];   
+                this.selectedDemandDetail = this.details[indexes[0]];
                 await this.bindAttachments();
             } catch (error) {
                 

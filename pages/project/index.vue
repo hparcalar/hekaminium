@@ -78,7 +78,7 @@
 										<div>
 											<ScInput v-model="formData.startDate" :config="{ wrap: true, dateFormat: 'Y-m-d' }" v-flatpickr
 												mode="outline">
-												<label>Başlama Tarihi</label>
+												<label>Ön Ödeme Tarihi</label>
 											</ScInput>
 										</div>
 										<div>

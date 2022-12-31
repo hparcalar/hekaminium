@@ -356,6 +356,7 @@ export default {
 		offcanvasPresent: false,
 		lastKeyUpForSearch: null,
 		encoder: null,
+		micResponseStr: '',
 		searchData: '',
 		micDataBase64: '',
 		micData: [],
@@ -601,7 +602,7 @@ export default {
 				const self = this;
 				const authIns = self.$google.api.auth2.getAuthInstance();
 				if (authIns.isSignedIn.get() && authIns.currentUser.Oa.uv.gw == 'heka@progenar.com'){
-					console.log(self.$google.api);
+					// console.log(self.$google.api);
 					self.$google.api.client.speech.speech.recognize({
 						"audio": {
 							"content": self.micDataBase64
