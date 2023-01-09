@@ -12,6 +12,7 @@
 						</h4>
 
                         <div class="uk-flex uk-flex-right" style="position:absolute; right:1px; top:1px;padding-top:10px;">
+                            <input type="text" placeholder="Arama" autocomplete="off" v-model="documentSearch" style="margin-right:5px;" />
                             <button 
                                 :class="{ 'filter-selected': isPdfFiltered }"
                                 type="button" v-if="formData.viewCategory == 3 || formData.viewCategory == 4" style="padding-top:1px;" @click="applyFilterFileType('application/pdf')" 
@@ -73,31 +74,33 @@
                         <div class="viewer-container">
                             <!-- project view -->
                             <div v-if="formData.viewCategory == 0" class="uk-grid uk-child-width-1-2@m">
-                                <div v-for="(pr, prIndex) in projectList" :key="prIndex" style="margin-top:5px;">
+                                <div v-for="(pr, prIndex) in projectList" :key="prIndex" v-show="documentSearch.length == 0 || ((new RegExp(documentSearch, 'i')).test(pr.projectName))" style="margin-top:5px;">
                                     <button type="button" style="width:100%;height:50px;" @click="switchToCategoryView(pr)"
                                         class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-                                        {{ (prIndex + 1).toString() + '. ' }} {{  pr.projectName  }}
+                                        {{  pr.projectName  }}
                                     </button>
                                 </div>
                             </div>
 
                             <!-- category view -->
                             <div v-if="formData.viewCategory == 1" class="uk-grid uk-child-width-1-2@m">
-                                <div v-for="(cat, catIndex) in categoryList" :key="catIndex" style="margin-top:5px;">
+                                <div v-for="(cat, catIndex) in categoryList" :key="catIndex" v-show="documentSearch.length == 0 || ((new RegExp(documentSearch, 'i')).test(cat.itemName))" style="margin-top:5px;">
                                     <button type="button" style="width:100%;height:50px;" @click="switchToElementView(cat)"
                                         class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                                        {{ (catIndex + 1).toString() + '. ' }} {{  cat.itemName  }}
+                                        {{  cat.itemName  }}
                                     </button>
                                 </div>
                             </div>
 
                             <!-- element view -->
                             <div v-if="formData.viewCategory == 2" class="uk-grid uk-child-width-1-2@m">
-                                <div v-for="(elm, elIndex) in elementList" :key="elIndex" style="margin-top:5px;">
+                                <div v-for="(elm, elIndex) in elementList" :key="elIndex" 
+                                    v-show="documentSearch.length == 0 || ((new RegExp(documentSearch, 'i')).test(elm.partNo + ' ' + elm.partDimensions + ' ' + elm.itemExplanation + ' ' + elm.quantity + ' adet'))"
+                                    style="margin-top:5px;">
                                     <button type="button" style="width:100%;height:60px;text-transform: none !important;" @click="switchToDocumentView(elm)"
                                         class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                                        {{ (elIndex + 1).toString() + '. ' }} 
-                                        {{  (elm.partNo && elm.partNo.length > 0 ? elm.partNo + ' / ' : '') 
+                                        <!-- {{ (elIndex + 1).toString() + '. ' }}  -->
+                                        {{  (elm.partNo && elm.partNo.length > 0 ? elm.partNo + '&nbsp;&nbsp; | &nbsp;&nbsp;' : '') 
                                             + elm.partDimensions + ' / ' + elm.quantity + ' adet'  }}
                                         <div v-if="elm.itemExplanation && elm.itemExplanation.length > 0" style="margin-top:0px;font-size:small;font-weight:normal;">
                                             <i style="float:right;">{{ elm.itemExplanation }}</i>
@@ -108,7 +111,14 @@
 
                             <!-- document view -->
                             <div v-if="formData.viewCategory == 3" class="uk-grid uk-child-width-1-2@m">
-                                <div v-for="(doc, docIndex) in documentList" :key="docIndex" style="margin-top:5px;position: relative;">
+                                <div v-for="(doc, docIndex) in documentList" :key="docIndex" 
+                                    v-show="documentSearch.length == 0 || ((new RegExp(documentSearch, 'i')).test(doc.partNo + ' ' + doc.partHeight + ' mm ' + ' ' + doc.partQuantity + ' adet ' + doc.partType ))"
+                                    style="margin-top:5px;position: relative;">
+                                    <button type="button" @click="directDownloadDocument(doc)" 
+                                        style="position:absolute;right:0px;top:5px;"
+                                        class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+                                        <span data-uk-icon="icon: download" class="uk-icon"></span>
+                                    </button>
                                     <img v-show="doc.fileType == 'application/pdf'" 
                                         v-rjs="require('~/assets/img/pdf.png')" :src="pdfLogo" style="position:absolute;left:25px;top:2px;" width="15" height="25" />
                                     <img v-show="doc.fileType == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'" 
@@ -119,8 +129,8 @@
                                         v-rjs="require('~/assets/img/img.png')" :src="imgLogo" style="position:absolute;left:25px;top:2px;" width="15" height="25" />
                                     <button type="button" style="width:100%;height:60px;text-transform: none !important;" @click="showDocument(doc)"
                                         class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                                        {{ (docIndex + 1).toString() + '. ' }} {{  (doc.partNo && doc.partNo.length > 0 ? doc.partNo : selectedElement.partNo)
-                                             + (doc.partHeight ? ' / ' + doc.partHeight + ' mm' + ' / ' : '') + (doc.partQuantity ? doc.partQuantity + ' adet / ' : '') + (doc.partType ?? '')  }}
+                                        {{  (doc.partNo && doc.partNo.length > 0 ? doc.partNo : (selectedElement.partNo))
+                                             + (doc.partHeight ? '&nbsp;&nbsp; | &nbsp;&nbsp;' + doc.partHeight + ' mm' + ' / ' : '') + (doc.partQuantity ? doc.partQuantity + ' adet / ' : '') + (doc.partType ?? '')  }}
                                         <!-- <div v-if="selectedElement.itemExplanation && selectedElement.itemExplanation.length > 0" style="margin-top:0px;font-size:small;font-weight:normal;">
                                             <i style="float:right;">{{ selectedElement.itemExplanation }}</i>
                                         </div> -->
@@ -130,7 +140,14 @@
 
                             <!-- project files view -->
                             <div v-if="formData.viewCategory == 4" class="uk-grid uk-child-width-1-2@m">
-                                <div v-for="(doc, docIndex) in projectDocumentList" :key="docIndex" style="margin-top:5px; position: relative;">
+                                <div v-for="(doc, docIndex) in projectDocumentList" :key="docIndex" 
+                                    v-show="documentSearch.length == 0 || ((new RegExp(documentSearch, 'i')).test(doc.title + ' ' + doc.explanation ))"
+                                    style="margin-top:5px; position: relative;">
+                                    <button type="button" @click="directDownloadProjectDocument(doc)" 
+                                        style="position:absolute;right:0px;top:5px;"
+                                        class="sc-button sc-button-success sc-button-small uk-margin-small-right">
+                                        <span data-uk-icon="icon: download" class="uk-icon"></span>
+                                    </button>
                                     <img v-show="doc.fileType == 'application/pdf'" 
                                         v-rjs="require('~/assets/img/pdf.png')" :src="pdfLogo" style="position:absolute;left:25px;top:2px;" width="15" height="25" />
                                     <img v-show="doc.fileType == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'" 
@@ -141,7 +158,7 @@
                                         v-rjs="require('~/assets/img/img.png')" :src="imgLogo" style="position:absolute;left:25px;top:2px;" width="15" height="25" />
                                     <button type="button" style="width:100%;height:50px;" @click="showProjectDocument(doc)"
                                         class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                                        {{ (docIndex + 1).toString() + '. ' }} {{  doc.title + ' / ' + doc.explanation  }}
+                                        {{  doc.title + '&nbsp;&nbsp; | &nbsp;&nbsp;' + doc.explanation  }}
                                     </button>
                                 </div>
                             </div>
@@ -162,6 +179,10 @@
                 :page-number="1"
                 ></vue-pdf-app>
         </div>
+
+        <modal :is-open="formData.showPreviewImage" :click-outside="() => formData.showPreviewImage = false">
+                <img :src="imagePreviewArray[0]" width="100%" />
+        </modal>
 
         <!-- dxf viewer -->
         <!-- <DxfViewerPage :dxfUrl="dxfUrl">
@@ -197,6 +218,8 @@ import { useApi } from '~/composable/useApi';
 import { base64ToArrayBuffer } from '~/composable/useHelpers';
 import VuePdfApp from "vue-pdf-app";
 import "vue-pdf-app/dist/icons/main.css";
+import Modal from 'vue-slim-modal';
+import "vue-slim-modal/themes/default.css";
 // import DxfViewerPage from "~/components/DxfViewerPage";
 
 if(process.client) {
@@ -208,6 +231,7 @@ export default {
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
         VuePdfApp,
+        Modal,
         // DxfViewerPage,
 		ScInput,
 		ScTextarea,
@@ -226,10 +250,13 @@ export default {
             elementId: null,
             viewCategory: 0,
             showPreview: false,
+            showPreviewImage: false,
             previewData: null,
             showAllProjects: false,
         },
+        documentSearch: '',
         selectedProject: {},
+        imagePreviewArray: [],
         selectedCategory: {},
         selectedElement: {},
         allProjectList: [],
@@ -431,13 +458,15 @@ export default {
             this.formData.projectId = project.id;
             await this.bindCategories();
 
+            this.documentSearch = '';
             this.formData.viewCategory = 1;
         },
         async switchToElementView(category){
             this.selectedCategory = category;
             this.formData.itemId = category.id;
             await this.bindElements();
-
+            
+            this.documentSearch = '';
             this.formData.viewCategory = 2;
         }, 
         async switchToDocumentView(element){
@@ -445,11 +474,13 @@ export default {
             this.formData.elementId = element.id;
             await this.bindDocuments();
 
+            this.documentSearch = '';
             this.formData.viewCategory = 3;
         },
         async switchToProjectDocView(){
             await this.bindProjectDocuments();
 
+            this.documentSearch = '';
             this.formData.viewCategory = 4;
         },
         async downloadDocument(fileData){
@@ -460,20 +491,24 @@ export default {
             link.download = fileData.fileName;
             link.click();
         },
-        async showDocument(doc){
-            if (doc.fileType){
-                if (!doc.fileType)
-                    doc.fileType = 'application/pdf';
+        async directDownloadDocument(doc){
+            try {
+                const fType = doc.fileType;
+                if (!fType)
+                    fType = 'application/pdf';
 
                 const api = useApi();
+                this.showNotification('Dosya indirilmeye hazırlanıyor lütfen bekleyiniz.', false, 'warning');
                 if (doc.attachmentId && doc.attachmentId > 0){
                     try {
                         const atcData = (await api.get('Attachment/' + doc.attachmentId)).data;
-                        if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0)
+                        if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0){
                             doc.partBase64 = atcData.contentBase64;
                             doc.partFile = atcData.fileContent;
+                        }
+                            
                     } catch (error) {
-                        
+                        this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
                     }
                 }
                 else if (doc.id > 0){
@@ -484,7 +519,72 @@ export default {
                             doc.partFile = partData.partFile;
                         }
                     } catch (error) {
-                        
+                        this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
+                    }
+                }
+
+                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: 'document' });
+            } catch (error) {
+                this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
+            }
+        },
+        async directDownloadProjectDocument(doc){
+            try {
+                const fType = doc.fileType;
+                if (!fType)
+                    fType = 'application/pdf';
+
+                const api = useApi();
+                this.showNotification('Dosya indirilmeye hazırlanıyor lütfen bekleyiniz.', false, 'warning');
+                try {
+                    const api = useApi();
+                    const atcData = (await api.get('Attachment/' + doc.id)).data;
+                    if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0) {
+                        doc.partBase64 = atcData.contentBase64;
+                        doc.partFile = atcData.fileContent;
+                    }
+                } catch (error) {
+                    this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
+                }
+
+                if (doc.partFile == null){
+                    this.showNotification('İçeriği boş dosya indirilemez.', false, 'error');
+                    return;
+                }
+
+                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: 'document' });
+            } catch (error) {
+                this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
+            }
+        },
+        async showDocument(doc){
+            if (doc.fileType){
+                if (!doc.fileType)
+                    doc.fileType = 'application/pdf';
+
+                const api = useApi();
+                this.showNotification('Dosya yükleniyor lütfen bekleyiniz.', false, 'warning');
+                if (doc.attachmentId && doc.attachmentId > 0){
+                    try {
+                        const atcData = (await api.get('Attachment/' + doc.attachmentId)).data;
+                        if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0){
+                            doc.partBase64 = atcData.contentBase64;
+                            doc.partFile = atcData.fileContent;
+                        }
+                            
+                    } catch (error) {
+                        this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
+                    }
+                }
+                else if (doc.id > 0){
+                    try {
+                        const partData = (await api.get('Project/' + this.selectedProject.id + '/PartDocument/' + doc.id)).data;
+                        if (partData && partData.partFile != null && partData.partFile.length > 0){
+                            doc.partBase64 = partData.partBase64;
+                            doc.partFile = partData.partFile;
+                        }
+                    } catch (error) {
+                        this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
                     }
                 }
 
@@ -513,6 +613,12 @@ export default {
                     this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
                 }
                 else if (doc.fileType.includes('image/')){
+                    this.imagePreviewArray = [ 'data:'+  doc.fileType +';base64,' + doc.partBase64 ];
+                        this.formData.showPreviewImage = true;
+                    // this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
+                }
+                else
+                {
                     this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
                 }
             }
@@ -524,12 +630,14 @@ export default {
 
                     try {
                         const api = useApi();
+                        this.showNotification('Dosya yükleniyor lütfen bekleyiniz.', false, 'warning');
                         const atcData = (await api.get('Attachment/' + doc.id)).data;
-                        if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0)
+                        if (atcData && atcData.fileContent != null && atcData.fileContent.length > 0) {
                             doc.partBase64 = atcData.contentBase64;
                             doc.partFile = atcData.fileContent;
+                        }
                     } catch (error) {
-                        
+                        this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
                     }
 
                     if (doc.partFile == null){
@@ -562,6 +670,11 @@ export default {
                         this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
                     }
                     else if (doc.fileType.includes('image/')){
+                        this.imagePreviewArray = [ 'data:'+  doc.fileType +';base64,' + doc.partBase64 ];
+                        this.formData.showPreviewImage = true;
+                        // this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
+                    }
+                    else{
                         this.downloadDocument({ fileContent: doc.partFile, fileType: doc.fileType, fileName: 'document' });
                     }
             }
@@ -586,8 +699,11 @@ export default {
                 this.formData.viewCategory = 1;
             else
                 this.formData.viewCategory--;
+
+            this.documentSearch = '';
         },
         homeView(){
+            this.documentSearch = '';
             this.formData.viewCategory = 0;
         },
         showNotification (text, pos, status, persistent) {

@@ -69,7 +69,7 @@ import PrettyRadio from 'pretty-checkbox-vue/radio';
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { getQS } from '~/composable/useHelpers';
-import { useUserSession } from '../../../composable/userSession';
+import { useUserSession } from '~/composable/userSession';
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -94,7 +94,7 @@ export default {
             sections: [],
 		},
         sectionList: [
-            { sectionKey: 'SystemSection', title: 'Sistem Yönetimi', canRead: false, canWrite: false, canDelete: false, },
+            { sectionKey: 'SystemSection', title: 'Sistem Yönetimi', canRead: false, canWrite: false, canDelete: false },
             { sectionKey: 'Definitions', title: 'Tanım Yönetimi', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ProjectBudgetView', title: 'Proje Bedeli Görüntüleme', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ItemDemandApproval', title: 'Malzeme Talebi Onaylama', canRead: false, canWrite: false, canDelete: false, },

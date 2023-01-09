@@ -98,7 +98,7 @@ export default {
         },
 	},
 	async mounted () {
-		
+		this.bindModel();
 	},
     watch: {
         previewData: { handler:function(newVal, oldVal){
@@ -110,6 +110,7 @@ export default {
     },
 	methods: {
         bindModel(){
+            console.log(this.previewData);
             if (this.previewData){
                 this.formData.partBase64 = this.previewData.partBase64;
                 this.formData.partType = this.previewData.fileType;

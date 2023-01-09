@@ -182,11 +182,11 @@
                                                 Intl.NumberFormat('tr-TR').format(firmSum.overallTotal)
                                         }}
                                     </span>
-                                    <button v-show="firmIsOrdered(firm.id)" type="button"
-                                        @click="showItemOrder(firm.id)" style="float:right;"
+                                    <button v-for="(ord, ordIndex) in getFirmOrderList(firm.id)" :key="ordIndex" v-show="firmIsOrdered(firm.id)" type="button"
+                                        @click="showItemOrder(ord)" style="float:right;"
                                         class="sc-button sc-button-primary sc-button-small uk-margin-small-right">
                                         <span data-uk-icon="icon: link" class="uk-icon"></span>Sipariş: {{
-                                                getFirmOrderNo(firm.id)
+                                                getFirmOrderNo(ord)
                                         }}
                                     </button>
                                 </h6>
@@ -416,7 +416,7 @@ export default {
             }
         },
         offerIsOrdered() {
-            return this.formData.details.some(d => d.orderDetail && d.orderDetail.id > 0);
+            return !this.formData.details.some(d => !d.orderDetail || d.orderDetail.id == 0);
         }
     },
     beforeDestroy() {
@@ -558,6 +558,19 @@ export default {
 
             }
         },
+        getFirmOrderList(firmId){
+            var orders = this.formData.details.filter(d => d.acceptedFirmId == firmId && d.orderDetail && d.orderDetail.id > 0)
+                .map(d => d.orderDetail);
+            
+            var uniqueOrders = [];
+            for (let i = 0; i < orders.length; i++) {
+                const element = orders[i];
+                if (!uniqueOrders.some(d => d.itemOrderId == element.itemOrderId))
+                    uniqueOrders.push(element);
+            }
+
+            return uniqueOrders;
+        },
         async onSubmit(stayInForm = false) {
             try {
                 if (!this.formData.receiptDate) {
@@ -628,7 +641,7 @@ export default {
                             const firmCluster = [];
 
                             // resolve accepted offer details
-                            const offerDetails = self.formData.details.filter(d => d.acceptedFirmId != null)
+                            const offerDetails = self.formData.details.filter(d => d.acceptedFirmId != null && (!d.orderDetail || d.orderDetail.id == 0))
                                 .map((d) => {
                                     return {
                                         ...d,
@@ -1012,22 +1025,23 @@ export default {
         firmIsOrdered(firmId) {
             return this.formData && this.formData.details && this.formData.details.some(d => d.acceptedFirmId == firmId && d.orderDetail);
         },
-        getFirmOrderNo(firmId) {
+        getFirmOrderNo(order) {
+            console.log(order);
             let orderNo = '';
             try {
-                const orderedDetail = this.formData.details.find(d => d.acceptedFirmId == firmId);
-                if (orderedDetail.orderDetail)
-                    orderNo = orderedDetail.orderDetail.receiptNo;
+                orderNo = order.receiptNo;
+                // const orderedDetail = this.formData.details.find(d => d.acceptedFirmId == firmId);
+                // if (orderedDetail.orderDetail)
+                //     orderNo = orderedDetail.orderDetail.receiptNo;
             } catch (error) {
 
             }
 
             return orderNo;
         },
-        showItemOrder(firmId) {
+        showItemOrder(order) {
             try {
-                const orderedDetail = this.formData.details.find(d => d.acceptedFirmId == firmId);
-                this.$router.push('/purchasing/item-order?id=' + orderedDetail.orderDetail.itemOrderId);
+                this.$router.push('/purchasing/item-order?id=' + order.itemOrderId);
                 // if (orderedDetail.orderDetail){
                 //     window.open('/purchasing/item-order?id=' + orderedDetail.orderDetail.itemOrderId, '_blank');
                 // }

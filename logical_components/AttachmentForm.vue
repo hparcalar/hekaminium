@@ -217,7 +217,7 @@ export default {
                     this.formData.id = postResult.data.recordId
 
                     // upload file and update attachment content
-                    if (this.formData.fileContent != null && this.formData.fileContent.length > 0 && postResult.data.recordId > 0) {
+                    if (this.formData.fileContent != null && postResult.data.recordId > 0) {
                         let postFormData = new FormData()
                         postFormData.append('fileData', this.formData.fileContent)
                         this.showNotification('Dosya sunucuya yükleniyor. Lütfen bekleyiniz.', false, 'info', true)

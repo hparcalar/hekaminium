@@ -104,6 +104,7 @@
                                     :process-list="processList"
                                     :is-dialog="false"
                                     @onDetailSubmit="onDetailSaved"
+                                    @partDialogOpen="onPartDialogOpen"
                                 />
                             </div>
                         </div>
@@ -121,6 +122,7 @@
                                 id="sc-dt-details-table"
                                 ref="demandDetailsTable"
                                 :data="details"
+                                :part-dialog-visible="!attachmentDialogVisible"
                                 :options="dtOptions"
                                 :customColumns="dtDetailCols"
                                 @initComplete="dtButtonsInitialized"
@@ -148,7 +150,7 @@
         <div id="dlgAttachment" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<AttachmentForm v-show="refreshAttachmentForm == true" :record-object="selectedAttachmentRow"
+					<AttachmentForm v-if="refreshAttachmentForm == true && attachmentDialogVisible" :record-object="selectedAttachmentRow"
 						:is-dialog="true" :dialog-container="'dlgAttachment'"
 						@onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
 				</div>
@@ -213,6 +215,7 @@ export default {
             isContracted: false,
             explanation: '',
 		},
+        attachmentDialogVisible: false,
         processList: [],
         selectedAttachmentRow: { id:0, recordType:2, recordId: 0 },
         attachmentList: [],
@@ -301,6 +304,9 @@ export default {
         this.isMounting = false;
 	},
 	methods: {
+        onPartDialogOpen(){
+            this.attachmentDialogVisible = false;
+        },
         dtButtonsInitialized(){
             this.$refs.demandDetailsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
         },
@@ -522,6 +528,7 @@ export default {
 			await this.bindAttachments();
 		},
 		showAttachment(){
+            this.attachmentDialogVisible = true;
 			this.refreshAttachmentForm = false;
 			setTimeout(() => { this.refreshAttachmentForm = true; }, 200);
 

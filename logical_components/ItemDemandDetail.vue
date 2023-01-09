@@ -192,7 +192,7 @@
         <div id="dlgImageAction" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<ImageAction v-show="refreshImageDialog"
+					<ImageAction v-if="refreshImageDialog && partDialogVisible"
 						:preview-data="selectedPart"
 						:is-dialog="true"
 						:dialog-container="'dlgImageAction'"
@@ -227,6 +227,10 @@ export default {
             default: { id:0 },
             required: true,
         },
+        partDialogVisible: {
+            type: Boolean,
+            default: false,
+        },
         processList: {
             type: Array,
             default: [],
@@ -244,7 +248,7 @@ export default {
             default: '',
         }
     },
-    emits: ['onDetailSubmit'],
+    emits: ['onDetailSubmit', 'partDialogOpen'],
 	components: {
 		Select2: process.client ? () => import('~/components/Select2') : null,
         ItemDefinition: process.client ? () => import('~/definition_components/ItemDefinition') : null,
@@ -394,6 +398,8 @@ export default {
         },
         showPartFileDialog(part){
             this.selectedPart = part;
+            this.partDialogVisible = true;
+            this.$emit('partDialogOpen');
             this.refreshImageDialog = false;
 			setTimeout(() => { this.refreshImageDialog = true; }, 500);
 
