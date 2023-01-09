@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '../layouts/error.vue'
+import NuxtError from '..\\layouts\\error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,19 +13,19 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_pluginutils_58c61206 from 'nuxt_plugin_pluginutils_58c61206' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
-import nuxt_plugin_pluginrouting_163bb908 from 'nuxt_plugin_pluginrouting_163bb908' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
-import nuxt_plugin_pluginmain_05670f67 from 'nuxt_plugin_pluginmain_05670f67' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
-import nuxt_plugin_googleanalytics_165c1a68 from 'nuxt_plugin_googleanalytics_165c1a68' // Source: ./google-analytics.js (mode: 'client')
-import nuxt_plugin_axios_188e12fe from 'nuxt_plugin_axios_188e12fe' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_componentsglobal_65822712 from 'nuxt_plugin_componentsglobal_65822712' // Source: ../plugins/components.global.js (mode: 'all')
-import nuxt_plugin_directivesclient_62899358 from 'nuxt_plugin_directivesclient_62899358' // Source: ../plugins/directives.client.js (mode: 'client')
-import nuxt_plugin_filters_2dd71012 from 'nuxt_plugin_filters_2dd71012' // Source: ../plugins/filters.js (mode: 'all')
-import nuxt_plugin_mixinsclient_17bef234 from 'nuxt_plugin_mixinsclient_17bef234' // Source: ../plugins/mixins.client.js (mode: 'client')
-import nuxt_plugin_wavesclient_1c42c07c from 'nuxt_plugin_wavesclient_1c42c07c' // Source: ../plugins/waves.client.js (mode: 'client')
-import nuxt_plugin_retinaclient_15ff09a2 from 'nuxt_plugin_retinaclient_15ff09a2' // Source: ../plugins/retina.client.js (mode: 'client')
-import nuxt_plugin_vueVisibleclient_0d907940 from 'nuxt_plugin_vueVisibleclient_0d907940' // Source: ../plugins/vueVisible.client.js (mode: 'client')
-import nuxt_plugin_vuegoogleapis_2fb356b0 from 'nuxt_plugin_vuegoogleapis_2fb356b0' // Source: ../plugins/vue-googleapis.js (mode: 'all')
+import nuxt_plugin_pluginutils_c7f1556e from 'nuxt_plugin_pluginutils_c7f1556e' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
+import nuxt_plugin_pluginrouting_6d87b454 from 'nuxt_plugin_pluginrouting_6d87b454' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
+import nuxt_plugin_pluginmain_4b5c90ca from 'nuxt_plugin_pluginmain_4b5c90ca' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_googleanalytics_a935817e from 'nuxt_plugin_googleanalytics_a935817e' // Source: .\\google-analytics.js (mode: 'client')
+import nuxt_plugin_axios_45ab7bc5 from 'nuxt_plugin_axios_45ab7bc5' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_componentsglobal_65822712 from 'nuxt_plugin_componentsglobal_65822712' // Source: ..\\plugins\\components.global.js (mode: 'all')
+import nuxt_plugin_directivesclient_62899358 from 'nuxt_plugin_directivesclient_62899358' // Source: ..\\plugins\\directives.client.js (mode: 'client')
+import nuxt_plugin_filters_2dd71012 from 'nuxt_plugin_filters_2dd71012' // Source: ..\\plugins\\filters.js (mode: 'all')
+import nuxt_plugin_mixinsclient_17bef234 from 'nuxt_plugin_mixinsclient_17bef234' // Source: ..\\plugins\\mixins.client.js (mode: 'client')
+import nuxt_plugin_wavesclient_1c42c07c from 'nuxt_plugin_wavesclient_1c42c07c' // Source: ..\\plugins\\waves.client.js (mode: 'client')
+import nuxt_plugin_retinaclient_15ff09a2 from 'nuxt_plugin_retinaclient_15ff09a2' // Source: ..\\plugins\\retina.client.js (mode: 'client')
+import nuxt_plugin_vueVisibleclient_0d907940 from 'nuxt_plugin_vueVisibleclient_0d907940' // Source: ..\\plugins\\vueVisible.client.js (mode: 'client')
+import nuxt_plugin_vuegoogleapis_2fb356b0 from 'nuxt_plugin_vuegoogleapis_2fb356b0' // Source: ..\\plugins\\vue-googleapis.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -219,24 +219,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_pluginutils_58c61206 === 'function') {
-    await nuxt_plugin_pluginutils_58c61206(app.context, inject)
+  if (typeof nuxt_plugin_pluginutils_c7f1556e === 'function') {
+    await nuxt_plugin_pluginutils_c7f1556e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginrouting_163bb908 === 'function') {
-    await nuxt_plugin_pluginrouting_163bb908(app.context, inject)
+  if (typeof nuxt_plugin_pluginrouting_6d87b454 === 'function') {
+    await nuxt_plugin_pluginrouting_6d87b454(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_pluginmain_05670f67 === 'function') {
-    await nuxt_plugin_pluginmain_05670f67(app.context, inject)
+  if (typeof nuxt_plugin_pluginmain_4b5c90ca === 'function') {
+    await nuxt_plugin_pluginmain_4b5c90ca(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_googleanalytics_165c1a68 === 'function') {
-    await nuxt_plugin_googleanalytics_165c1a68(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_a935817e === 'function') {
+    await nuxt_plugin_googleanalytics_a935817e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_188e12fe === 'function') {
-    await nuxt_plugin_axios_188e12fe(app.context, inject)
+  if (typeof nuxt_plugin_axios_45ab7bc5 === 'function') {
+    await nuxt_plugin_axios_45ab7bc5(app.context, inject)
   }
 
   if (typeof nuxt_plugin_componentsglobal_65822712 === 'function') {

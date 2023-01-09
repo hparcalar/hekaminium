@@ -361,6 +361,21 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Kullanıcı",
 				page: "/user/member/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Personel",
+				page: "/user/employee/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Departman",
+				page: "/user/department/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Check In",
+				page: "/user/checkIn/list"
 			}
 		]
 	},

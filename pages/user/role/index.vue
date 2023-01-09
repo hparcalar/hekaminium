@@ -1,64 +1,74 @@
 <template>
-	<div id="sc-page-wrapper">
-		<div id="sc-page-content">
-			<div class="uk-flex-center uk-grid" data-uk-grid>
-				<div class="uk-width-2-3@l">
-					<div class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
-                         sc-round sc-border md-bg-grey-100
+    <div id="sc-page-wrapper">
+        <div id="sc-page-content">
+            <div class="uk-flex-center uk-grid" data-uk-grid>
+                <div class="uk-width-2-3@l">
+                    <div class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
+                        sc-round sc-border md-bg-grey-100
                     ">
-						<span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-						<h4 class="md-color-gray-600 uk-margin-remove">
-							Rol Tanımı
-						</h4>
-					</div>
-					<form>
-						<fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
-							<legend class="uk-legend">
-								Genel Bilgiler
-							</legend>
-							<div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
-								<div>
-									<ScInput v-model="formData.roleCode">
-										<label>Rol Kodu</label>
-									</ScInput>
-								</div>
-								<div>
-									<ScInput v-model="formData.roleName">
-										<label>Rol Adı</label>
-									</ScInput>
-								</div>
-							</div>
-						</fieldset>
-
+                        <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
+                        <h4 class="md-color-gray-600 uk-margin-remove">
+                            Rol Tanımı
+                        </h4>
+                    </div>
+                    <form>
                         <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
                             <legend class="uk-legend">
-								Yetki Tanımları
-							</legend>
+                                Genel Bilgiler
+                            </legend>
                             <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
-                                <div v-for="(item, index) in sectionList" :key="index">
-                                    <PrettyCheck class="p-icon" v-model="item.canRead" :value="false" >
-                                        <i slot="extra" class="icon mdi mdi-check"></i> {{ item.title }}
-                                    </PrettyCheck>
+                                <div>
+                                    <ScInput v-model="formData.roleCode">
+                                        <label>Rol Kodu</label>
+                                    </ScInput>
+                                </div>
+                                <div>
+                                    <ScInput v-model="formData.roleName">
+                                        <label>Rol Adı</label>
+                                    </ScInput>
                                 </div>
                             </div>
                         </fieldset>
 
-						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: check" class="uk-icon"></span>
-							</button>
-							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
-							</button>
+                        <fieldset class="uk-fieldset uk-fieldset-alt md-bg-white sc-padding-medium">
+                            <legend class="uk-legend">
+                                Yetki Tanımları
+                            </legend>
+                            <div class="uk-child-width-1-2@m uk-grid" data-uk-grid>
+                                <div v-for="(item, index) in sectionList" :key="index">
+                                    <PrettyCheck class="p-icon" v-model="item.canRead" :value="false">
+                                        <i slot="extra" class="icon mdi mdi-check"></i> {{ item.title }}
+                                    </PrettyCheck>
+                                    <div>
+                                        <div v-for="(child, childIndex) in item.children" :key="childIndex"
+                                            style="marginLeft: 15px">
+                                            <PrettyCheck class="p-icon" v-model="child.canRead" :value="false">
+                                                <i slot="extra" class="icon mdi mdi-check"></i> {{ child.title }}
+                                            </PrettyCheck>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="uk-margin-large-top">
+                            <button type="button" @click="onSubmit"
+                                class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                                <span data-uk-icon="icon: check" class="uk-icon"></span>
+                            </button>
+                            <button type="button" @click="onCancel"
+                                class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                                <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
+                            </button>
                             <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
-								<span data-uk-icon="icon: trash" class="uk-icon"></span>
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+                                <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -71,30 +81,36 @@ import { useApi } from '~/composable/useApi';
 import { getQS } from '~/composable/useHelpers';
 import { useUserSession } from '../../../composable/userSession';
 
-if(process.client) {
-	require('~/plugins/inputmask');	
+if (process.client) {
+    require('~/plugins/inputmask');
 }
 
 export default {
-	name: 'RoleForm',
-	components: {
-		Select2: process.client ? () => import('~/components/Select2') : null,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
+    name: 'RoleForm',
+    components: {
+        Select2: process.client ? () => import('~/components/Select2') : null,
+        ScInput,
+        ScTextarea,
+        PrettyRadio,
         PrettyCheck
-	},
-	data: () => ({
-		formData: {
+    },
+    data: () => ({
+        formData: {
             id: 0,
-			roleCode: '',
-			roleName: '',
+            roleCode: '',
+            roleName: '',
             plantId: null,
-			isActive: true,
+            isActive: true,
             sections: [],
-		},
+        },
         sectionList: [
-            { sectionKey: 'SystemSection', title: 'Sistem Yönetimi', canRead: false, canWrite: false, canDelete: false, },
+            {
+                sectionKey: 'SystemSection', title: 'Sistem Yönetimi', canRead: false, canWrite: false, canDelete: false,
+                children: [
+                    { sectionKey: 'PermissionSection', title: 'Yetki Yönetimi', canRead: false, canWrite: false, canDelete: false, },
+                    { sectionKey: 'StockSection', title: 'Stok Yönetimi', canRead: false, canWrite: false, canDelete: false, },
+                ]
+            },
             { sectionKey: 'Definitions', title: 'Tanım Yönetimi', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ProjectBudgetView', title: 'Proje Bedeli Görüntüleme', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'ItemDemandApproval', title: 'Malzeme Talebi Onaylama', canRead: false, canWrite: false, canDelete: false, },
@@ -102,42 +118,57 @@ export default {
             { sectionKey: 'ProjectManagement', title: 'Proje Yönetimi', canRead: false, canWrite: false, canDelete: false, },
             { sectionKey: 'StaffPermit', title: 'Personel İzin Yönetimi', canRead: false, canWrite: false, canDelete: false, },
         ]
-	}),
-	computed: {
-		
-	},
-	async mounted () {
+    }),
+    computed: {
+
+    },
+    async mounted() {
         const qsId = getQS('id');
         if (qsId) this.formData.id = parseInt(qsId);
         else this.formData.id = 0;
 
-		await this.bindModel();
-	},
-	methods: {
-        async bindModel(){
+        await this.bindModel();
+    },
+    methods: {
+        async bindModel() {
             // set default plant which belongs to new user
             const userSession = useUserSession();
             this.formData.plantId = userSession.user.plantId;
 
             const api = useApi();
             try {
-                const getData = (await api.get('User/Role/' + this.formData.id)).data;   
-                if (getData && getData.id > 0){
+                const getData = (await api.get('User/Role/' + this.formData.id)).data;
+                if (getData && getData.id > 0) {
                     this.formData = getData;
-                    
+
                     // clear or assign visual auth section parameters
                     for (let i = 0; i < this.sectionList.length; i++) {
                         const section = this.sectionList[i];
-                        if (this.formData.sections.some(d => d.sectionKey == section.sectionKey)){
+                        if (this.formData.sections.some(d => d.sectionKey == section.sectionKey)) {
                             const dataSection = this.formData.sections.find(d => d.sectionKey == section.sectionKey);
                             section.canRead = dataSection.canRead;
                         }
-                        else{
+                        else {
                             section.canRead = false;
                         }
                     }
+                    for (let i = 0; i < this.sectionList.length; i++) {
+                        const section = this.sectionList[i];
+                        if (section.children) {
+                            for (let j = 0; j < section.children.length; j++) {
+                                const child = section.children[j];
+                                if (this.formData.sections.some(d => d.sectionKey == child.sectionKey)) {
+                                    const dataSection = this.formData.sections.find(d => d.sectionKey == child.sectionKey);
+                                    child.canRead = dataSection.canRead;
+                                }
+                                else {
+                                    child.canRead = false;
+                                }
+                            }
+                        }
+                    }
                 }
-                else{
+                else {
                     // if not found clear all auth sections
                     for (let i = 0; i < this.sectionList.length; i++) {
                         const section = this.sectionList[i];
@@ -145,21 +176,43 @@ export default {
                     }
                 }
             } catch (error) {
-                
+
             }
         },
-		async onSubmit(){
+        async onSubmit() {
             try {
-                this.formData.sections = this.sectionList.map((d) => {
+                /* this.formData.sections = this.sectionList.map((d) => {
                     return {
                         ...d,
                         id: 0,
                     };
-                });
+                }); */
+
+                this.formData.sections = [];
+                for (let i = 0; i < this.sectionList.length; i++) {
+                    const section = this.sectionList[i];
+                    this.formData.sections.push({
+                        ...section,
+                        id: 0,
+                    });
+                }
+
+                for (let i = 0; i < this.sectionList.length; i++) {
+                    const section = this.sectionList[i];
+                    if (section.children) {
+                        for (let j = 0; j < section.children.length; j++) {
+                            const child = section.children[j];
+                            this.formData.sections.push({
+                                ...child,
+                                id: 0,
+                            });
+                        }
+                    }
+                }
 
                 const api = useApi();
                 const postResult = (await api.post('User/Role', this.formData)).data;
-                if (postResult.result){
+                if (postResult.result) {
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
 
@@ -171,27 +224,27 @@ export default {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
         },
-        onCancel(){
+        onCancel() {
             this.$router.push('/user/role/list');
         },
-        async onDelete(){
+        async onDelete() {
 
         },
-        showNotification (text, pos, status, persistent) {
-			var config = {};
-			config.timeout = persistent ? !persistent : 3000;
-			if(status) {
-				config.status = status;
-			}
-			if(pos) {
-				config.pos = pos;
-			}
-			UIkit.notification(text, config);
-		}
-	}
+        showNotification(text, pos, status, persistent) {
+            var config = {};
+            config.timeout = persistent ? !persistent : 3000;
+            if (status) {
+                config.status = status;
+            }
+            if (pos) {
+                config.pos = pos;
+            }
+            UIkit.notification(text, config);
+        }
+    }
 }
 </script>
 
 <style lang="scss">
-	@import '~scss/vue/_pretty_checkboxes';
+@import '~scss/vue/_pretty_checkboxes';
 </style>
