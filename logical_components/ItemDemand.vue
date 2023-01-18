@@ -116,8 +116,61 @@
                             </div>
                             
                         </div>
+
+                        <div>
+                            <DataTable :value="details" responsiveLayout="scroll" editMode="cell"
+                                :selection.sync="selectedDemandDetail"
+                                @row-select="clickDetail"
+                                selectionMode="single"
+                                sortField="lineNumber" :sortOrder="1"
+                                class="editable-cells-table" @cell-edit-complete="onCellEditComplete">
+                                <Column field="lineNumber" header="#" sortable></Column>
+                                <Column field="createdDate" header="Eklenme Tarihi" sortable>
+                                    <template #body="slotProps">
+                                        {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+                                    </template>
+                                </Column>
+                                <Column field="itemId" header="Stok">
+                                    <template #editor="slotProps">
+                                        <client-only v-show="isDialog == false">
+                                            <Select2
+                                                v-model="slotProps.data[slotProps.column.field]"
+                                                :options="itemList"
+                                                :settings="{ 'width': '100%', 'placeholder': 'Stok', 'allowClear': true }"
+                                            ></Select2>
+                                        </client-only>
+                                    </template>
+                                    <template #body="slotProps">
+                                        {{ slotProps.data[slotProps.column.field] ? itemList.find(m => m.id == slotProps.data[slotProps.column.field]).itemName : '' }}
+                                    </template>
+                                </Column>
+                                <Column field="itemExplanation" header="Açıklama">
+                                    <template #editor="slotProps">
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                    </template>
+                                </Column>
+                                <Column field="partNo" header="Parça Kodu">
+                                    <template #editor="slotProps">
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                    </template>
+                                </Column>
+                                <Column field="partDimensions" header="Boyutlar">
+                                    <template #editor="slotProps">
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                    </template>
+                                </Column>
+                                <Column field="quantity" header="Miktar">
+                                    <template #editor="slotProps">
+                                        <InputNumber v-model="slotProps.data[slotProps.column.field]" mode="decimal" :minFractionDigits="2" :maxFracionDigits="2" />
+                                    </template>
+                                </Column>
+                                <Column field="statusText" header="Durum"></Column>
+                            </DataTable>
+                        </div>
+
+                       
                         
-                        <client-only>
+                        <!-- <client-only>
                             <Datatable
                                 id="sc-dt-details-table"
                                 ref="demandDetailsTable"
@@ -129,7 +182,7 @@
                                 :buttons="true"
                                 :customEvents="[{ name: 'select', function: clickDetail }, { name:'deselect', function: deselectDetail }]"
                             ></Datatable>
-                        </client-only>
+                        </client-only> -->
                     </div>
                 </fieldset>
 
@@ -168,6 +221,8 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import ItemDemandDetail from './ItemDemandDetail.vue';
 import { useApi } from '~/composable/useApi';
 import { useUserSession } from '~/composable/userSession';
+import { dateToStr, strToDate } from "~/composable/useHelpers";
+import moment from 'moment';
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -216,6 +271,7 @@ export default {
             explanation: '',
 		},
         attachmentDialogVisible: false,
+        itemList: [],
         processList: [],
         selectedAttachmentRow: { id:0, recordType:2, recordId: 0 },
         attachmentList: [],
@@ -270,6 +326,8 @@ export default {
 		},
 		dtDetailCols: [
 			{ data: "lineNumber", title: "Satır No", visible: true, },
+            // { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date"},
+            { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date", render: function(data, ev, row) { return dateToStr(row.createdDate, 'YYYY.MM.DD'); }},
 			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "itemExplanation", title: "Stok Açıklaması", visible: true, },
             { data: "partNo", title: "Parça Kodu", visible: true, },
@@ -304,6 +362,14 @@ export default {
         this.isMounting = false;
 	},
 	methods: {
+        onCellEditComplete(event){
+            let {data, newValue, field} = event;
+            data[field] = newValue;
+            // if (newValue.trim().length > 0)
+            //     data[field] = newValue;
+            // else
+            //     event.preventDefault();
+        },
         onPartDialogOpen(){
             this.attachmentDialogVisible = false;
         },
@@ -312,6 +378,7 @@ export default {
         },
         async bindModel(){
             const api = useApi();
+            const self = this;
             try {
                 const projData = (await api.get('Project/Demandable')).data;
                 if (projData)
@@ -334,6 +401,9 @@ export default {
                         });
                 }
 
+                const itemData = (await api.get('Item')).data
+                this.itemList = itemData.map((d) => {return { ...d, text: d.itemName }})
+
                 const getData = (await api.get('ItemDemand/' + this.formData.id)).data;
                 if (getData && getData.id > 0){
                     getData.projectId = getData.projectId ? getData.projectId.toString() : null;
@@ -342,6 +412,8 @@ export default {
                         return {
                             ...d,
                             newRecord: false,
+                            item: self.itemList.find(m => m.id == d.itemId),
+                            // createdDate: dateToStr(d.createdDate, 'YYYY.MM.DD'),
                         };
                     });
                 }
@@ -369,7 +441,7 @@ export default {
                     detailRow.partNo = detailRow.partNo ?? '';
                     detailRow.partDimensions = detailRow.partDimensions ?? '';
                     this.details.push(detailRow);
-                    // this.showNewDemandDetail();
+                    this.showNewDemandDetail();
                 }
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
@@ -472,14 +544,17 @@ export default {
                 if (demandIndex > -1){
                     this.details.splice(demandIndex, 1);
 
+                    const sortedDetails = this.details.sort((a,b) => a.lineNumber - b.lineNumber)
+
                     let lineNumber = 1;
-                    for (let i = 0; i < this.details.length; i++) {
-                        const row = this.details[i];
+                    for (let i = 0; i < sortedDetails.length; i++) {
+                        const realIndex = this.details.indexOf(sortedDetails[i]);
+                        const row = this.details[realIndex];
                         row.lineNumber = lineNumber;
                         lineNumber++;
                     }
 
-                    this.showNewDemandDetail();
+                    this.selectedDemandDetail = {id:0};
                 }
             }
         },
@@ -495,9 +570,22 @@ export default {
 			UIkit.notification(text, config);
 		},
         showNewDemandDetail(){
-            const lastRow = this.details.length > 0 ? this.details[this.details.length - 1] : null;
+            const self = this;
+            const lastRow = this.details.length > 0 ? this.details.sort((a,b) => b.lineNumber - a.lineNumber)[0] : null;
 
-            const newRow = { id: 0 };
+            const newRow = { id: 0, newRecord: true,
+                    lineNumber: lastRow ? lastRow.lineNumber + 1 : this.details.length + 1, createdDate: self.$moment().format('YYYY-MM-DD'),
+                    demandStatus: 0,
+                };
+
+            newRow.id = newRow.lineNumber;
+            newRow.statusText = newRow.demandStatus == 0 ? 'Onay bekleniyor' :
+                                newRow.demandStatus == 1 ? 'Onaylandı' :
+                                newRow.demandStatus == 2 ? 'Sipariş verildi' :
+                                newRow.demandStatus == 3 ? 'Sipariş teslim alındı' : 
+                                newRow.demandStatus == 4 ? 'Sipariş iptal edildi' : '';
+            
+            this.details.push(newRow);
             // if (lastRow){
             //     if (lastRow.processList){
             //         newRow.processList = lastRow.processList.map((d) => {
@@ -513,6 +601,9 @@ export default {
             // }
 
             this.selectedDemandDetail = newRow;
+        },
+        convertDateToStr(prm){
+            return dateToStr(prm)
         },
         showNewAttachment(){
 			const self = this;
@@ -537,9 +628,9 @@ export default {
 			modalElement.height = window.innerHeight * 0.8;
 			UIkit.modal(modalElement).show();
 		},
-        clickDetail:async function (e, dt, type, indexes){
+        clickDetail:async function (event){
             try {
-                this.selectedDemandDetail = this.details[indexes[0]];
+                // this.selectedDemandDetail = this.details[indexes[0]];
                 await this.bindAttachments();
             } catch (error) {
                 

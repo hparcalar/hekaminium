@@ -264,10 +264,10 @@ export default {
 			{ data: "quantity", title: "Miktar", visible: true, },
             // { data: "projectName", title: "Proje", visible: true, },
             { data: "forexCode", title: "Döviz", visible: true, },
-            { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(data); } },
+            { data: "unitPrice", title: "Birim Fiyat", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(data); } },
             { data: "taxRate", title: "Kdv %", visible: true, },
-            { data: "overallTotal", title: "Tutar (Döviz)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? data : 0); } },
-            { data: "overallTotal", title: "Tutar (TL)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.forexId > 0 ? data * row.forexRate : data); } },
+            { data: "overallTotal", title: "Tutar (Döviz)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.forexId > 0 ? data : 0); } },
+            { data: "overallTotal", title: "Tutar (TL)", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.forexId > 0 ? data * row.forexRate : data); } },
 			{ data: "statusText", title: "Durum", visible: true, },
 		],
         selectedOrderDetail: {
@@ -282,7 +282,7 @@ export default {
                         (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * d.quantity)
                         .reduce((a,b) => a + b);
 
-                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                        return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(subTotal);
                 }
                 
                 return "0";
@@ -295,7 +295,7 @@ export default {
                         (d.forexId && d.forexId > 0 ? (d.unitPrice) : 0) * d.quantity)
                         .reduce((a,b) => a + b);
 
-                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                        return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(subTotal);
                 }
                 
                 return "0";
@@ -309,7 +309,7 @@ export default {
                     + (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * (d.taxRate / 100.0))) * d.quantity)
                     .reduce((a,b) => a + b);
 
-                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                    return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(subTotal);
                 }
                 
                 return "0";
@@ -323,7 +323,7 @@ export default {
                         + (d.taxIncluded == true ? d.unitPrice : (d.unitPrice * (d.taxRate / 100.0)))) * d.quantity
                     ).reduce((a,b) => a + b);
 
-                    return new Intl.NumberFormat("tr-TR").format(subTotal);
+                    return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(subTotal);
                 }
                 
                 return "0";

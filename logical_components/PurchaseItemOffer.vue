@@ -60,7 +60,9 @@
                                     <span v-for="(firmSum, sumIndex) in sumOfFirmDetails(firm, false)"
                                         :key="firmSum.forexId" class="firm-summary">
                                         <b>{{ firmSum.forexCode }}</b>: {{ new
-                                                Intl.NumberFormat('tr-TR').format(firmSum.overallTotal)
+                                                Intl.NumberFormat('tr-TR', {
+                                                    maximumFractionDigits: 2
+                                                }).format(firmSum.overallTotal)
                                         }}
                                     </span>
                                 </h6>
@@ -179,7 +181,9 @@
                                     <span v-for="firmSum in sumOfFirmDetails(firm.id, true)" :key="firmSum.forexId"
                                         class="firm-summary">
                                         <b>{{ firmSum.forexCode }}</b>: {{ new
-                                                Intl.NumberFormat('tr-TR').format(firmSum.overallTotal)
+                                                Intl.NumberFormat('tr-TR', {
+                                                    maximumFractionDigits: 2
+                                                }).format(firmSum.overallTotal)
                                         }}
                                     </span>
                                     <button v-for="(ord, ordIndex) in getFirmOrderList(firm.id)" :key="ordIndex" v-show="firmIsOrdered(firm.id)" type="button"
@@ -205,7 +209,10 @@
                                         <td>{{ item.itemExplanation }}</td>
                                         <td>{{ getForexCode(getFirmPriceOfDetail(item, firm.id).forexId) }}</td>
                                         <td>{{ getFirmPriceOfDetail(item, firm.id).overallForexTotal }}</td>
-                                        <td>{{ getFirmPriceOfDetail(item, firm.id).overallTotal }}</td>
+                                        <!-- <td>{{ getFirmPriceOfDetail(item, firm.id).overallTotal }}</td> -->
+                                        <td>{{ new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 })
+                                                .format(getFirmPriceOfDetail(item, firm.id).overallTotal)
+                                        }}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -213,7 +220,7 @@
                             <p v-for="(orderSum, sumIndex) in sumOfOrder()" :key="orderSum.forexId"
                                 style="margin-top:2px;margin-bottom:2px;" class="firm-summary">
                                 <b>{{ orderSum.forexCode }}</b>: {{ new
-                                        Intl.NumberFormat('tr-TR').format(orderSum.overallTotal)
+                                        Intl.NumberFormat('tr-TR', { maximumFractionDigits: 2 }).format(orderSum.overallTotal)
                                 }}
                             </p>
                         </div>

@@ -3,7 +3,7 @@
         <div class="uk-width-3-3@l">
             <form>
                 <fieldset class="uk-fieldset uk-fieldset-alt uk-background-muted sc-padding-medium">
-                    <div class="uk-child-width-1-3@m uk-grid sc-padding-remove-top uk-margin-remove-top" data-uk-grid>
+                    <!-- <div class="uk-child-width-1-3@m uk-grid sc-padding-remove-top uk-margin-remove-top" data-uk-grid>
                         <div>
                             <ScInput v-model="formData.lineNumber" :type="'number'" :read-only="true">
                                 <label>Satır No</label>
@@ -56,11 +56,11 @@
                         <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-margin-medium uk-margin-remove-top uk-width-1-5@m" style="height:34px;">
                             <span :data-uk-icon="'icon: ' + detailObject.id > 0 ? 'check' : 'check'" class="uk-icon"></span> {{ detailObject.id > 0 ? 'Kaydet' : 'Ekle' }}
                         </button>
-                    </div>
+                    </div> -->
                     <div class="uk-grid sc-padding-remove-top sc-padding-remove-right uk-margin-small">
                         <div class="uk-child-width-1-2@m uk-width-1-3@m uk-grid" style="margin-left:0px; padding-left:0px;" data-uk-grid>
                             <div v-for="(item, index) in processList" :key="index">
-                                <PrettyCheck class="p-icon" v-model="item.isChecked" :value="false" >
+                                <PrettyCheck class="p-icon" v-model="item.isChecked" @change="onProcCheckChanged" :value="false" >
                                     <i slot="extra" class="icon mdi mdi-check"></i> {{ item.text }}
                                 </PrettyCheck>
                             </div>
@@ -265,6 +265,7 @@ export default {
 			itemId: null,
             itemName: '',
             itemExplanation: '',
+            createdDate: null,
             explanation: '',
             unitId: null,
             quantity: null,
@@ -353,6 +354,9 @@ export default {
                 
             }
         },
+        onProcCheckChanged(newValue){
+            this.onSubmit();
+        },
         getArrayBufferContent(base64Str){
             return base64ToArrayBuffer(base64Str).buffer;
         },
@@ -428,6 +432,9 @@ export default {
             // #region VALIDATE ROW DATA
             if (!this.formData.demandDate)
                 this.formData.demandDate = self.$moment().format('YYYY-DD-MM');
+
+            if(!this.createdDate)
+                this.formData.createdDate = self.$moment().format('YYYY-MM-DD')
 
             const selectedItem = this.itemList.find(d => d.id == this.formData.itemId);
             if (selectedItem)

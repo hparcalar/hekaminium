@@ -66,6 +66,8 @@
 		"nuxt": "^2.15.7",
 		"nuxt-i18n": "^6.27.1",
 		"pretty-checkbox-vue": "^1.1.9",
+		"primeicons": "^6.0.1",
+		"primevue": "^2.8.0",
 		"push.js": "^1.0.12",
 		"raty-js": "^2.9.0",
 		"sass-loader": "^10.1.1",

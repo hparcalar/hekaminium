@@ -450,6 +450,13 @@
     "_name": "_7c11e112"
   },
   {
+    "name": "item-consumption",
+    "path": "/item/consumption",
+    "component": "/home/hakan/Projects/hekaminium/pages/item/consumption.vue",
+    "chunkName": "pages/item/consumption",
+    "_name": "_3118f9c1"
+  },
+  {
     "name": "item-list",
     "path": "/item/list",
     "component": "/home/hakan/Projects/hekaminium/pages/item/list.vue",
@@ -876,6 +883,20 @@
     "_name": "_e78b8e58"
   },
   {
+    "name": "user-department",
+    "path": "/user/department",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/department/index.vue",
+    "chunkName": "pages/user/department/index",
+    "_name": "_13013de7"
+  },
+  {
+    "name": "user-employee",
+    "path": "/user/employee",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/employee/index.vue",
+    "chunkName": "pages/user/employee/index",
+    "_name": "_47a694c3"
+  },
+  {
     "name": "user-member",
     "path": "/user/member",
     "component": "/home/hakan/Projects/hekaminium/pages/user/member/index.vue",
@@ -1126,6 +1147,27 @@
     "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-receipt/list.vue",
     "chunkName": "pages/purchasing/item-receipt/list",
     "_name": "_46a6f640"
+  },
+  {
+    "name": "user-checkIn-list",
+    "path": "/user/checkIn/list",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/list.vue",
+    "chunkName": "pages/user/checkIn/list",
+    "_name": "_14ce9eb2"
+  },
+  {
+    "name": "user-department-list",
+    "path": "/user/department/list",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/department/list.vue",
+    "chunkName": "pages/user/department/list",
+    "_name": "_532035ce"
+  },
+  {
+    "name": "user-employee-list",
+    "path": "/user/employee/list",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/employee/list.vue",
+    "chunkName": "pages/user/employee/list",
+    "_name": "_b2d37a86"
   },
   {
     "name": "user-member-list",

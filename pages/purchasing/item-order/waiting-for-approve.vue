@@ -112,7 +112,7 @@ export default {
 				{ data: "forexRate", title: "Kur", visible: true, },
 				{ data: "unitPrice", title: "Birim Fiyat", visible: true, },
 				{ data: "overallTotal", title: "Tutar (Döviz)", visible: true, },
-				{ data: "overallTotal", title: "Tutar (TL)", visible: true, render: function (data, ev, row) { return row.forexId ? row.overallTotal * row.forexRate : row.overallTotal } },
+				{ data: "overallTotal", title: "Tutar (TL)", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.forexId ? row.overallTotal * row.forexRate : row.overallTotal); } },
 				{ data: "denialExplanation", title: "Red Nedeni", visible: true, },
 			],
 			dtDHeaders: [],

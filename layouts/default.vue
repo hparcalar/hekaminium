@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div spellcheck="false">
 		<Header ref="mainHeader" />
 		<FancyToolbar v-show="vxFancyToolbarActive"></FancyToolbar>
 		<Sidebar v-show="!vxTopMenuActive" />

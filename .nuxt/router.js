@@ -68,6 +68,7 @@ const _bf335a7a = () => interopDefault(import('../pages/forms/wizard/step1.vue' 
 const _bf172b78 = () => interopDefault(import('../pages/forms/wizard/step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
 const _befafc76 = () => interopDefault(import('../pages/forms/wizard/step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
 const _7c11e112 = () => interopDefault(import('../pages/item-category/list.vue' /* webpackChunkName: "pages/item-category/list" */))
+const _3118f9c1 = () => interopDefault(import('../pages/item/consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
 const _98fb8230 = () => interopDefault(import('../pages/item/list.vue' /* webpackChunkName: "pages/item/list" */))
 const _59763cb2 = () => interopDefault(import('../pages/layout/boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
 const _ee0367f2 = () => interopDefault(import('../pages/layout/mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
@@ -128,6 +129,8 @@ const _16cf2d38 = () => interopDefault(import('../pages/purchasing/item-offer/in
 const _a4106054 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
 const _574ed200 = () => interopDefault(import('../pages/purchasing/item-receipt/index.vue' /* webpackChunkName: "pages/purchasing/item-receipt/index" */))
 const _e78b8e58 = () => interopDefault(import('../pages/staffpermit/list.vue' /* webpackChunkName: "pages/staffpermit/list" */))
+const _13013de7 = () => interopDefault(import('../pages/user/department/index.vue' /* webpackChunkName: "pages/user/department/index" */))
+const _47a694c3 = () => interopDefault(import('../pages/user/employee/index.vue' /* webpackChunkName: "pages/user/employee/index" */))
 const _6a51cfa2 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
 const _e9d63cea = () => interopDefault(import('../pages/user/role/index.vue' /* webpackChunkName: "pages/user/role/index" */))
 const _3a00d88c = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
@@ -164,6 +167,9 @@ const _44925408 = () => interopDefault(import('../pages/purchasing/item-offer/li
 const _07104d6c = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
 const _153dc566 = () => interopDefault(import('../pages/purchasing/item-order/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-order/waiting-for-approve" */))
 const _46a6f640 = () => interopDefault(import('../pages/purchasing/item-receipt/list.vue' /* webpackChunkName: "pages/purchasing/item-receipt/list" */))
+const _14ce9eb2 = () => interopDefault(import('../pages/user/checkIn/list.vue' /* webpackChunkName: "pages/user/checkIn/list" */))
+const _532035ce = () => interopDefault(import('../pages/user/department/list.vue' /* webpackChunkName: "pages/user/department/list" */))
+const _b2d37a86 = () => interopDefault(import('../pages/user/employee/list.vue' /* webpackChunkName: "pages/user/employee/list" */))
 const _aa5cbc5e = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
 const _8d718616 = () => interopDefault(import('../pages/user/role/list.vue' /* webpackChunkName: "pages/user/role/list" */))
 const _195a46c0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -437,6 +443,10 @@ export const routerOptions = {
     component: _7c11e112,
     name: "item-category-list"
   }, {
+    path: "/item/consumption",
+    component: _3118f9c1,
+    name: "item-consumption"
+  }, {
     path: "/item/list",
     component: _98fb8230,
     name: "item-list"
@@ -679,6 +689,14 @@ export const routerOptions = {
     component: _e78b8e58,
     name: "staffpermit-list"
   }, {
+    path: "/user/department",
+    component: _13013de7,
+    name: "user-department"
+  }, {
+    path: "/user/employee",
+    component: _47a694c3,
+    name: "user-employee"
+  }, {
     path: "/user/member",
     component: _6a51cfa2,
     name: "user-member"
@@ -822,6 +840,18 @@ export const routerOptions = {
     path: "/purchasing/item-receipt/list",
     component: _46a6f640,
     name: "purchasing-item-receipt-list"
+  }, {
+    path: "/user/checkIn/list",
+    component: _14ce9eb2,
+    name: "user-checkIn-list"
+  }, {
+    path: "/user/department/list",
+    component: _532035ce,
+    name: "user-department-list"
+  }, {
+    path: "/user/employee/list",
+    component: _b2d37a86,
+    name: "user-employee-list"
   }, {
     path: "/user/member/list",
     component: _aa5cbc5e,

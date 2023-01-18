@@ -54,7 +54,83 @@
           </div>
         </ScCardHeader>
         <ScCardBody>
-          <client-only>
+          <DataTable :value="visualData" responsiveLayout="scroll"
+              @row-select="onRowSelect"
+              columnResizeMode="fit"
+              dataKey="id"
+              :paginator="true" showGridlines :rows="13" :filters.sync="filterGeneral"
+              selectionMode="single" filterDisplay="row"
+              sortField="receiptDate" :sortOrder="-1"
+              :globalFilterFields="['receiptDate','lastUpdateDate','receiptNo','projectName','explanation','userName', 'statusText']"
+              >
+              <template #header>
+                <div class="flex justify-content-between">
+                    <Button type="button" icon="pi pi-filter-slash" label="Temizle" class="p-button-outlined" @click="clearGeneralFilter()" />
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search" />
+                        <InputText v-model="filterGeneral['global'].value" placeholder="Genel Arama" />
+                    </span>
+                </div>
+            </template>
+            <template #empty>
+                Hiç talep yok.
+            </template>
+            <template #loading>
+                Yükleniyor. Lütfen bekleyiniz.
+            </template>
+              <Column field="receiptDate" header="Tarih" sortable >
+                <template #body="slotProps">
+                    {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="lastUpdateDate" header="G. Tarihi" sortable >
+                <template #body="slotProps">
+                    {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="receiptNo" header="Talep No" sortable :style="{width:'5%'}" :headerStyle="{width: '5%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+              <Column field="projectName" header="Proje" sortable :style="{width:'20%'}" :headerStyle="{width: '20%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+              <Column field="explanation" header="Açıklama" sortable :style="{width:'20%'}" :headerStyle="{width: '20%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+              <Column field="userName" header="Oluşturan" sortable :style="{width:'10%'}" :headerStyle="{width: '10%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+              <Column field="isContractedText" header="Türü" sortable :style="{width:'5%'}" :headerStyle="{width: '5%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+              <Column field="demandStatus" header="Durum" sortable>
+                <template #body="{data}">
+                    <span :class="'demand-badge status-' + data.demandStatus">{{data.statusText}}</span>
+                </template>
+                <template #filter="{filterModel, filterCallback}">
+                    <client-only>
+                        <Select2
+                            v-model="filterModel.value"
+                            @change="filterCallback"
+                            :options="statusList"
+                            :settings="{ 'width': '100%', 'placeholder': 'Durum', 'allowClear': true }"
+                        ></Select2>
+                    </client-only>
+                </template>
+              </Column>
+          </DataTable>
+
+          <!-- <client-only>
             <Datatable
               id="sc-dt-demands-list-table"
               ref="buttonsTable"
@@ -65,7 +141,7 @@
               :customEvents="[{ name: 'select', function: clickDetail }]"
               @initComplete="dtButtonsInitialized"
             ></Datatable>
-          </client-only>
+          </client-only> -->
         </ScCardBody>
       </ScCard>
     </div>
@@ -75,6 +151,7 @@
 import PrettyCheck from "pretty-checkbox-vue/check";
 import { useApi } from "~/composable/useApi";
 import { dateToStr } from "~/composable/useHelpers";
+import {FilterMatchMode,FilterOperator} from 'primevue/api/';
 import moment from '~/plugins/moment'
 
 export default {
@@ -84,11 +161,24 @@ export default {
       ? () => import("~/components/datatables/Datatables")
       : null,
     PrettyCheck,
+    Select2: process.client ? () => import('~/components/Select2') : null,
   },
   data: () => {
     return {
       visualData: [],
       lastUpdateDate: null,
+      filterGeneral: {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // id: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.CONTAINS }] },
+        // receiptDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // lastUpdateDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        receiptNo: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        userName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        isContractedText: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        projectName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        explanation: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        demandStatus: { value: null, matchMode: FilterMatchMode.CONTAINS },
+      },
       dtColumns: [
         { data: "receiptDate", title: "Tarih", type: "date", visible: true },
         { data: "lastUpdateDate", title: "Son Güncellenme Tarihi", type: "date", visible: true, width: "10%"},
@@ -105,6 +195,16 @@ export default {
           },
         },
         { data: "statusText", title: "Durum", visible: true },
+      ],
+      statusList: [
+        { text: 'Onay bekliyor', id: 0 },
+        { text: 'Onaylandı', id: 1 },
+        { text: 'Sipariş oluşturuldu', id: 2 },
+        { text: 'Sipariş teslim alındı', id: 3 },
+        { text: 'İptal edildi', id: 4 },
+        { text: 'Teklif bekleniyor', id: 5 },
+        { text: 'Sipariş iletildi', id: 6 },
+        { text: 'Kısmi teslim alındı', id: 7 },
       ],
       dtDHeaders: [],
       dtDOptions: {
@@ -146,8 +246,9 @@ export default {
 		const tmpList = rawData.map((d) => {
       return {
         ...d,
-        receiptDate: dateToStr(d.receiptDate),
-        lastUpdateDate: d.lastUpdateDate!=null ? self.$moment(d.lastUpdateDate).format('DD.MM.YYYY'): "-",
+        isContractedText: d.isContracted ? 'Fason' : '-',
+        // receiptDate: dateToStr(d.receiptDate),
+        // lastUpdateDate: d.lastUpdateDate!=null ? self.$moment(d.lastUpdateDate).format('DD.MM.YYYY'): "-",
       };
     });
 
@@ -160,6 +261,9 @@ export default {
     }
   },
   methods: {
+    clearGeneralFilter(){
+      this.filterGeneral.global.value = null;
+    },
     dtButtonsInitialized() {
       // append buttons to custom container
       this.$refs.buttonsTable.$dt
@@ -176,9 +280,17 @@ export default {
       // 	})
       // });
     },
+    convertDateToStr(prm){
+            return dateToStr(prm)
+        },
     toggleCol(e, col) {
       var column = this.$refs.buttonsTable.$dt.column(col);
       column.visible(e).draw("page");
+    },
+    onRowSelect(event){
+      this.$router.push(
+        "/purchasing/item-demand?id=" + event.data.id
+      );
     },
     clickDetail: function (e, dt, type, indexes) {
       this.$router.push(
@@ -201,4 +313,12 @@ export default {
 .bg-warning {
   background-color: #ebd810;
 }
+.demand-badge{padding:5px; border-radius:3px; border:1px solid #afafaf; font-weight: bold;}
+.status-0{ background-color:white; }
+.status-1{ background-color: lightblue; }
+.status-2{ background-color:lightblue; }
+.status-3{ background-color: greenyellow; }
+.status-4{ background-color: red; }
+.status-7{ background-color: green; }
+.status-6{ background-color: orange; }
 </style>

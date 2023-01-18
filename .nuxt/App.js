@@ -7,6 +7,12 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '../node_modules/uikit/dist/css/uikit.css'
 
+import '../node_modules/primevue/resources/themes/nova/theme.css'
+
+import '../node_modules/primevue/resources/primevue.min.css'
+
+import '../node_modules/primeicons/primeicons.css'
+
 import _6f6c098b from '../layouts/default.vue'
 import _866813ca from '../layouts/login_page.vue'
 

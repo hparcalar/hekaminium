@@ -36,13 +36,139 @@
 					</div>
 				</ScCardHeader>
 				<ScCardBody>
-					<client-only>
+					<DataTable :value="visualData" responsiveLayout="scroll"
+						v-on:filter="onFilter"
+						ref="dtable"
+						@row-select="clickDetail"
+						columnResizeMode="fit"
+						dataKey="id"
+						:paginator="true" showGridlines :rows="13" :filters.sync="filterGeneral"
+						selectionMode="single" filterDisplay="row"
+						sortField="projectCode" :sortOrder="-1"
+						:globalFilterFields="['projectCode','projectName','projectCategoryName','firmName','quantity','forexName', 'totalCost','totalForexCost','profitRate','offerPrice','offerForexPrice','projectStatusText']"
+						>
+						<template #header>
+							<div style="float:right;text-align:right;">
+								<Button icon="pi pi-external-link" label="Dışarı Aktar" @click="exportToCsv($event)" />
+							</div>
+							<div class="flex justify-content-between">
+								<Button type="button" icon="pi pi-filter-slash" label="Temizle" class="p-button-outlined" @click="clearGeneralFilter()" />
+								<span class="p-input-icon-left">
+									<i class="pi pi-search" />
+									<InputText v-model="filterGeneral['global'].value" placeholder="Genel Arama" />
+								</span>
+							</div>
+						</template>
+						<template #empty>
+							Hiç proje yok.
+						</template>
+						<template #loading>
+							Yükleniyor. Lütfen bekleyiniz.
+						</template>
+						<Column field="projectCode" header="Proje Kodu" sortable>
+							<template #filter="{filterModel, filterCallback}">
+								<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column field="projectName" header="Proje Adı" sortable :style="{width: '20%'}" :headerStyle="{width: '20%'}">
+							<template #filter="{filterModel, filterCallback}">
+								<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column field="projectCategoryName" header="Kategori" sortable>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column field="firmName" header="Müşteri" sortable :style="{width: '10%'}" :headerStyle="{width: '10%'}">
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column field="quantity" header="Proje Adedi" sortable>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="forexName" header="Döviz" sortable>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="totalCost" header="Maliyet (TL)" sortable>
+							<template #body="slotProps">
+								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="totalForexCost" header="Maliyet (Dvz)" sortable>
+							<template #body="slotProps">
+								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="profitRate" header="Kar Marjı (%)" sortable>
+							<template #body="slotProps">
+								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="offerPrice" header="Bedel (TL)" sortable>
+							<template #body="slotProps">
+								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column v-if="hasViewAuth('ProjectBudgetView')" field="offerForexPrice" header="Bedel (Dvz)" sortable>
+							<template #body="slotProps">
+								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+							<InputText v-model="filterModel.value" @input="filterCallback()" />
+							</template>
+						</Column>
+						<Column field="projectStatus" header="Durum" sortable>
+							<template #body="{data}">
+								<span :class="'project-badge status-' + data.projectStatus">{{data.projectStatusText}}</span>
+							</template>
+							<template #filter="{filterModel, filterCallback}">
+								<client-only>
+									<Select2
+										v-model="filterModel.value"
+										@change="filterCallback"
+										:options="statusList"
+										:settings="{ 'width': '100%', 'placeholder': 'Durum', 'allowClear': true }"
+									></Select2>
+								</client-only>
+							</template>
+						</Column>
+						<ColumnGroup type="footer" v-if="hasViewAuth('ProjectBudgetView')">
+							<Row>
+								<Column footer="Toplam: " :colspan="6" :footerStyle="{'text-align': 'right'}"></Column>
+								<Column :footer="sumTotalCost" />
+								<Column :footer="sumForexTotalCost" />
+								<Column footer="" />
+								<Column :footer="sumOfferPrice" />
+								<Column :footer="sumOfferForexPrice" />
+								<Column footer="" />
+							</Row>
+						</ColumnGroup>
+					</DataTable>
+					<!-- <client-only>
 						<Datatable id="sc-dt-buttons-table" ref="buttonsTable" :data="visualData" :options="dtDOptions"
 							:customColumns="dtColumns" :buttons="true" :customEvents="[{ name: 'select', function: clickDetail }]"
 							@initComplete="dtButtonsInitialized"
 							:show-summary="true" :summary-items="['totalCost', 'offerPrice', 'offerForexPrice', 'totalForexCost']"
 							></Datatable>
-					</client-only>
+					</client-only> -->
 				</ScCardBody>
 			</ScCard>
 		</div>
@@ -52,16 +178,24 @@
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { useUserSession } from '~/composable/userSession';
+import { numberToStr } from '~/composable/useHelpers';
+import {FilterMatchMode,FilterOperator} from 'primevue/api/';
 
 export default {
 	name: 'ProjectList',
 	components: {
-		Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		PrettyCheck
+		// Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
+		PrettyCheck,
+		Select2: process.client ? () => import('~/components/Select2') : null,
 	},
 	data: () => {
 		return {
+			filteredData: [],
 			visualData: [],
+			sumTotalCost: 0,
+			sumForexTotalCost: 0,
+			sumOfferPrice: 0,
+			sumOfferForexPrice: 0,
 			dtColumns: [
 				{ data: "projectCode", title: "Proje Kodu", visible: true, },
 				{ data: "projectName", title: "Proje Adı", width: "40%", visible: true, },
@@ -119,39 +253,33 @@ export default {
 						autoPrint: true
 					}
 				]
-			}
+			},
+			filterGeneral: {
+				global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				projectCode: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				projectName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				projectCategoryName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				firmName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				quantity: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				forexName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				totalCost: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				totalForexCost: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				profitRate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				offerPrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				offerForexPrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
+				projectStatus: { value: null, matchMode: FilterMatchMode.CONTAINS },
+			},
+			statusList: [
+				{ id:0, text:'Oluşturuldu' },
+				{ id:1, text:'Teklif verilecek' },
+				{ id:2, text:'Teklif verildi' },
+				{ id:3, text:'Onaylandı' },
+				{ id:4, text:'Tamamlandı' },
+				{ id:5, text:'İptal edildi' }
+			]
 		}
 	},
-	beforeMount() {
-		const costCol = this.dtColumns.find(d => d.data == 'forexName');
-		if (costCol) {
-			costCol.visible = this.hasViewAuth('ProjectBudgetView');
-		}
-
-		const budgetCol = this.dtColumns.find(d => d.data == 'offerForexPrice');
-		if (budgetCol) {
-			budgetCol.visible = this.hasViewAuth('ProjectBudgetView');
-		}
-
-		const budgetColLocal = this.dtColumns.find(d => d.data == 'offerPrice');
-		if (budgetColLocal) {
-			budgetColLocal.visible = this.hasViewAuth('ProjectBudgetView');
-		}
-
-		const profitCol = this.dtColumns.find(d => d.data == 'profitRate');
-		if (profitCol) {
-			profitCol.visible = this.hasViewAuth('ProjectBudgetView');
-		}
-
-		const totalCostCol = this.dtColumns.find(d => d.data == 'totalForexCost');
-		if (totalCostCol) {
-			totalCostCol.visible = this.hasViewAuth('ProjectBudgetView');
-		}
-
-		const totalCostColLocal = this.dtColumns.find(d => d.data == 'totalCost');
-		if (totalCostColLocal) {
-			totalCostColLocal.visible = this.hasViewAuth('ProjectBudgetView');
-		}
+	computed: {
 	},
 	async mounted() {
 		let targetUri = 'Project';
@@ -172,25 +300,55 @@ export default {
 		this.visualData = rawData;
 	},
 	methods: {
-		dtButtonsInitialized() {
-			// append buttons to custom container
-			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
+		onFilter(event){
+			this.filteredData = event.filteredValue;
 
-			// const ls = JSON.parse( localStorage.getItem( 'projectListTableView' ) );
-			// this.$refs.buttonsTable.headers.forEach( (value, i) => {
-			// 	this.dtDHeaders.push({
-			// 		'name': value,
-			// 		checked: ls.columns[i].visible,
-			// 		disabled: i === 0
-			// 	})
-			// });
+			// calculate summaries
+			let sum = 0;
+			if (this.filteredData && this.filteredData.length > 0){
+				sum = this.filteredData.map((d) => d.totalCost).reduce((a,b) => a + b);
+			}
+			else
+				sum = 0;
+			this.sumTotalCost = this.convertNumberToStr(sum);
+
+			sum = 0;
+			if (this.filteredData && this.filteredData.length > 0){
+				sum = this.filteredData.map((d) => d.totalForexCost).reduce((a,b) => a + b);
+			}
+			else
+				sum = 0;
+			this.sumForexTotalCost = this.convertNumberToStr(sum);
+
+			sum = 0;
+			if (this.filteredData && this.filteredData.length > 0){
+				sum = this.filteredData.map((d) => d.offerPrice).reduce((a,b) => a + b);
+			}
+			else
+				sum = 0;
+			this.sumOfferPrice = this.convertNumberToStr(sum);
+
+			sum = 0;
+			if (this.filteredData && this.filteredData.length > 0){
+				sum = this.filteredData.map((d) => d.offerForexPrice).reduce((a,b) => a + b);
+			}
+			else
+				sum = 0;
+			this.sumOfferForexPrice = this.convertNumberToStr(sum);
+		},
+		exportToCsv(){
+			console.log(this.$refs.dtable);
+			// this.$refs.dtable.exportCSV();
+		},
+		convertNumberToStr(number){
+			return numberToStr(number);
 		},
 		toggleCol(e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);
 			column.visible(e).draw('page');
 		},
-		clickDetail: function (e, dt, type, indexes) {
-			this.$router.push('/project?id=' + this.visualData[indexes[0]].id);
+		clickDetail: function (event) {
+			this.$router.push('/project?id=' + event.data.id);
 		},
 		newRecord() {
 			this.$router.push('/project');
@@ -212,4 +370,12 @@ export default {
 @import "~scss/common/variables_mixins";
 @import "~scss/plugins/datatables";
 @import '~scss/vue/_pretty_checkboxes';
+
+.project-badge{padding:5px; border-radius:3px; border:1px solid #afafaf; font-weight: bold; }
+.status-0{ background-color:white; }
+.status-1{ background-color: orange; }
+.status-2{ background-color:lightblue; }
+.status-3{ background-color: rgb(84, 167, 240); }
+.status-4{ background-color: greenyellow; }
+.status-5{ background-color: red; }
 </style>

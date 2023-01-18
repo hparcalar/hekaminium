@@ -204,6 +204,12 @@ export const menuEntries = [
 				title: "Depo Durumları",
 				page: "/warehouse/live"
 			},
+			{
+				id: uniqueID(),
+				icon: "mdi mdi-arrow-decision",
+				title: "Stok Çıkışı",
+				page: "/item/consumption"
+			},
 		]
 	},
 	{
@@ -361,6 +367,21 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Kullanıcı",
 				page: "/user/member/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Personel",
+				page: "/user/employee/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Departman",
+				page: "/user/department/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Check In",
+				page: "/user/checkIn/list"
 			}
 		]
 	},

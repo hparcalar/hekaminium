@@ -5,6 +5,10 @@ export function getQS(key){
     return value;
 }
 
+export function numberToStr(numberData){
+  return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(numberData);
+}
+
 export function dateToStr(dateString, format) {
     const moment = require('moment');
 

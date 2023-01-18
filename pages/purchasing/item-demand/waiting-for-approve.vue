@@ -269,7 +269,7 @@
     <div id="dlgItemDemandDetail" class="uk-modal" data-uk-modal stack="true">
       <div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
         <div class="uk-modal-body">
-          <ItemDemandDetail
+          <ExItemDemandDetail
             v-if="
               refreshDemandDialog &&
               selectedDemandRow &&
@@ -300,8 +300,8 @@ export default {
       ? () => import("~/components/datatables/Datatables")
       : null,
     Select2: process.client ? () => import("~/components/Select2") : null,
-    ItemDemandDetail: process.client
-      ? () => import("~/logical_components/ItemDemandDetail")
+    ExItemDemandDetail: process.client
+      ? () => import("~/logical_components/ExItemDemandDetail")
       : null,
     PrettyCheck,
     ScInput,
