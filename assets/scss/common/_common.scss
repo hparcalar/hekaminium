@@ -976,3 +976,27 @@ body > .sc-overlay {
 .p-column-filter-row .p-column-filter-element .select2-container {
 	margin-top:0px !important;
 }
+
+td .p-inputtext{
+	font-size: small;
+    padding: 2px;
+    max-width: none;
+    width: 99%;
+}
+
+td .select2-container{margin-top:0px;}
+td .select2-container--default .select2-selection--single{
+	height: auto;
+	padding:2px;
+	border-radius:0px;
+}
+td .select2-container--default .select2-selection--single .select2-selection__rendered{
+	font-size:small;
+	height:auto;
+	line-height: normal;
+}
+
+td .select2-container--default .select2-selection--single .select2-selection__arrow{
+	height:20px;
+}
+.p-dialog-mask{z-index:2000}

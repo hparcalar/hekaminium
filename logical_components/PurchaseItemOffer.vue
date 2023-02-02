@@ -329,6 +329,7 @@ export default {
             firmOptions: [],
             firmPrices: [],
         },
+        isSaving: false,
         isMounting: false,
         refreshDetailForm: false,
         refreshDemandList: false,
@@ -579,9 +580,13 @@ export default {
             return uniqueOrders;
         },
         async onSubmit(stayInForm = false) {
+            if (this.isSaving)
+                return;
+            this.isSaving = true;
             try {
                 if (!this.formData.receiptDate) {
                     this.showNotification('Tarih seçmelisiniz.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
@@ -624,17 +629,21 @@ export default {
                     }
                     else {
                         await this.bindModel();
+                        this.isSaving = false;
                         return true;
                     }
                 }
                 else {
                     this.showNotification(postResult.errorMessage, false, 'error');
+                    this.isSaving = false;
                     return false;
                 }
             } catch (error) {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
+                this.isSaving = false;
                 return false;
             }
+            this.isSaving = false;
         },
         async createItemOrder() {
             if (process.client) {

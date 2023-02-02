@@ -883,6 +883,13 @@
     "_name": "_e78b8e58"
   },
   {
+    "name": "user-checkIn",
+    "path": "/user/checkIn",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/index.vue",
+    "chunkName": "pages/user/checkIn/index",
+    "_name": "_bf0c9124"
+  },
+  {
     "name": "user-department",
     "path": "/user/department",
     "component": "/home/hakan/Projects/hekaminium/pages/user/department/index.vue",
@@ -1147,6 +1154,13 @@
     "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-receipt/list.vue",
     "chunkName": "pages/purchasing/item-receipt/list",
     "_name": "_46a6f640"
+  },
+  {
+    "name": "user-checkIn-checkIn",
+    "path": "/user/checkIn/checkIn",
+    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/checkIn.vue",
+    "chunkName": "pages/user/checkIn/checkIn",
+    "_name": "_7427f469"
   },
   {
     "name": "user-checkIn-list",

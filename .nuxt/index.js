@@ -16,6 +16,9 @@ import { createStore } from './store.js'
 import nuxt_plugin_pluginutils_58c61206 from 'nuxt_plugin_pluginutils_58c61206' // Source: ./nuxt-i18n/plugin.utils.js (mode: 'all')
 import nuxt_plugin_pluginrouting_163bb908 from 'nuxt_plugin_pluginrouting_163bb908' // Source: ./nuxt-i18n/plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_05670f67 from 'nuxt_plugin_pluginmain_05670f67' // Source: ./nuxt-i18n/plugin.main.js (mode: 'all')
+import nuxt_plugin_calendarplugin214d1ed5_a5f38f8a from 'nuxt_plugin_calendarplugin214d1ed5_a5f38f8a' // Source: ./calendar.plugin.214d1ed5.js (mode: 'all')
+import nuxt_plugin_tooltipplugin050eb416_0ce52b9a from 'nuxt_plugin_tooltipplugin050eb416_0ce52b9a' // Source: ./tooltip.plugin.050eb416.js (mode: 'all')
+import nuxt_plugin_dialogplugin692d54df_59ffd522 from 'nuxt_plugin_dialogplugin692d54df_59ffd522' // Source: ./dialog.plugin.692d54df.js (mode: 'all')
 import nuxt_plugin_rowplugin7a1bcc2d_cdd4a100 from 'nuxt_plugin_rowplugin7a1bcc2d_cdd4a100' // Source: ./row.plugin.7a1bcc2d.js (mode: 'all')
 import nuxt_plugin_columngroupplugin6bff767c_0e6ba3b2 from 'nuxt_plugin_columngroupplugin6bff767c_0e6ba3b2' // Source: ./columngroup.plugin.6bff767c.js (mode: 'all')
 import nuxt_plugin_fileuploadplugin55a0bed4_120ce78e from 'nuxt_plugin_fileuploadplugin55a0bed4_120ce78e' // Source: ./fileupload.plugin.55a0bed4.js (mode: 'all')
@@ -240,6 +243,18 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_pluginmain_05670f67 === 'function') {
     await nuxt_plugin_pluginmain_05670f67(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_calendarplugin214d1ed5_a5f38f8a === 'function') {
+    await nuxt_plugin_calendarplugin214d1ed5_a5f38f8a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_tooltipplugin050eb416_0ce52b9a === 'function') {
+    await nuxt_plugin_tooltipplugin050eb416_0ce52b9a(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_dialogplugin692d54df_59ffd522 === 'function') {
+    await nuxt_plugin_dialogplugin692d54df_59ffd522(app.context, inject)
   }
 
   if (typeof nuxt_plugin_rowplugin7a1bcc2d_cdd4a100 === 'function') {

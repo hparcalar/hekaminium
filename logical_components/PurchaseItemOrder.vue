@@ -239,6 +239,7 @@ export default {
             receiptType: 1,
 			receiptStatus: 0,
 		},
+        isSaving: false,
         isMounting: false,
         refreshDetailForm: false,
         refreshDemandList: false,
@@ -483,15 +484,20 @@ export default {
             }
         },
 		async onSubmit(){
+            if (this.isSaving)
+                return;
+            this.isSaving = true;
             try {
                 if (!this.formData.receiptDate){
                     this.showNotification('Tarih seçmelisiniz.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
                 if (!this.formData.isContracted && this.details.some(d => !d.itemId && (!d.demandConsumes || d.demandConsumes.length == 0)))
                 {
                     this.showNotification('Stok seçilmeyen kalemler mevcut olduğu için kaydedilemez.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
@@ -512,6 +518,7 @@ export default {
 
                 if (!forexOk){
                     this.showNotification('Sipariş fişi farklı döviz cinsleri içeremez.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
@@ -548,6 +555,7 @@ export default {
             } catch (error) {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
+            this.isSaving = false;
         },
         onCancel(){
             if (this.isDialog)

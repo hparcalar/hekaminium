@@ -493,11 +493,9 @@ export default {
         },
         async directDownloadDocument(doc){
             try {
-                const fType = doc.fileType;
-                if (!fType)
-                    fType = 'application/pdf';
-
+                const self = this;
                 const api = useApi();
+                console.log(doc);
                 this.showNotification('Dosya indirilmeye hazırlanıyor lütfen bekleyiniz.', false, 'warning');
                 if (doc.attachmentId && doc.attachmentId > 0){
                     try {
@@ -514,6 +512,7 @@ export default {
                 else if (doc.id > 0){
                     try {
                         const partData = (await api.get('Project/' + this.selectedProject.id + '/PartDocument/' + doc.id)).data;
+                        console.log(partData);
                         if (partData && partData.partFile != null && partData.partFile.length > 0){
                             doc.partBase64 = partData.partBase64;
                             doc.partFile = partData.partFile;
@@ -523,17 +522,33 @@ export default {
                     }
                 }
 
-                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: 'document' });
+                let fType = doc.fileType;
+                var byteBuffer = base64ToArrayBuffer(doc.partFile);
+                if (byteBuffer.length >= 4){
+                    if (byteBuffer[0] == 73 && byteBuffer[1] == 83 && byteBuffer[2] == 79 && byteBuffer[3] == 45){
+                        doc.fileName = (self.selectedElement.partNo && self.selectedElement.partNo.length > 0 ? self.selectedElement.partNo 
+                            : (doc.partNo && doc.partNo.length > 0 ? doc.partNo : 'DOCUMENT')) + '.STEP';
+                        doc.fileType = 'application/octet-stream';
+                    }
+                }
+
+                if (!fType)
+                    fType = 'application/pdf';
+
+                if (!doc.fileName || doc.fileName.length == 0){
+                    doc.fileName = (self.selectedElement.partNo && self.selectedElement.partNo.length > 0 ? self.selectedElement.partNo 
+                            : (doc.partNo && doc.partNo.length > 0 ? doc.partNo : 'DOCUMENT'));
+                }
+
+
+                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: doc.fileName });
             } catch (error) {
                 this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
             }
         },
         async directDownloadProjectDocument(doc){
             try {
-                const fType = doc.fileType;
-                if (!fType)
-                    fType = 'application/pdf';
-
+                const self = this;
                 const api = useApi();
                 this.showNotification('Dosya indirilmeye hazırlanıyor lütfen bekleyiniz.', false, 'warning');
                 try {
@@ -552,7 +567,20 @@ export default {
                     return;
                 }
 
-                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: 'document' });
+                let fType = doc.fileType;
+                var byteBuffer = base64ToArrayBuffer(doc.partFile);
+                if (byteBuffer.length >= 4){
+                    if (byteBuffer[0] == 73 && byteBuffer[1] == 83 && byteBuffer[2] == 79 && byteBuffer[3] == 45){
+                        // doc.fileName = (self.selectedElement.partNo && self.selectedElement.partNo.length > 0 ? self.selectedElement.partNo 
+                        //     : (doc.partNo && doc.partNo.length > 0 ? doc.partNo : 'DOCUMENT')) + '.STEP';
+                        doc.fileType = 'application/octet-stream';
+                    }
+                }
+
+                if (!fType)
+                    fType = 'application/pdf';
+
+                this.downloadDocument({ fileContent: doc.partFile, fileType: fType, fileName: doc.fileName });
             } catch (error) {
                 this.showNotification('Dosya yüklenemedi. Lütfen tekrar deneyiniz.', false, 'error');
             }

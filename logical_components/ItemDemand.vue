@@ -1,5 +1,5 @@
 <template>
-	<div class="uk-flex-center uk-grid" data-uk-grid>
+    <div class="uk-flex-center uk-grid" data-uk-grid>
         <div class="uk-width-3-3@l">
             <div v-show="isDialog == false" class="uk-flex uk-flex-middle uk-margin-bottom md-bg-grey-100 sc-round sc-padding sc-padding-medium-ends
                     sc-round sc-border md-bg-grey-100
@@ -9,10 +9,19 @@
                     Satın Alma Talebi
                 </h4>
                 <div class="uk-width-1-6">
-                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-small uk-margin-medium uk-margin-remove-top uk-width-1-1@m">
-                        <span data-uk-icon="icon: check" class="uk-icon"></span>
-                        <span>Kaydet</span>
-                    </button>
+                    <div>
+                        <button type="button" @click="onSubmit"
+                            class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+                            <span data-uk-icon="icon: check" class="uk-icon"></span>
+                        </button>
+                        <button type="button" @click="onCancel"
+                            class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
+                            <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
+                        </button>
+                        <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                            <span data-uk-icon="icon: trash" class="uk-icon"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <form>
@@ -29,18 +38,17 @@
                         <div class="uk-width-2-3@m uk-child-width-1-2@m uk-grid">
                             <div>
                                 <client-only v-show="isDialog == false">
-                                    <Select2
-                                        v-model="formData.projectId"
-                                        :options="projects"
-                                        :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }"
-                                    ></Select2>
+                                    <Select2 v-model="formData.projectId" :options="projects"
+                                        :settings="{ 'width': '100%', 'placeholder': 'Proje', 'allowClear': true }">
+                                    </Select2>
                                 </client-only>
                                 <ScInput v-show="isDialog == true" :value="currentProjectName" :read-only="true">
                                     <label>Proje</label>
                                 </ScInput>
                             </div>
-                            <div>
-                                <PrettyCheck name="isActive" v-model="formData.isContracted" :value="true" class="p-icon">
+                            <div style="padding-top:20px;padding-left:40px;">
+                                <PrettyCheck name="isActive" v-model="formData.isContracted" :value="true"
+                                    class="p-icon">
                                     <i slot="extra" class="icon mdi mdi-check"></i>
                                     Fason
                                 </PrettyCheck>
@@ -62,114 +70,139 @@
                         <div class="uk-grid">
                             <div class="uk-width-2-5@l">
                                 <div class="uk-button-group sc-padding-remove-left" style="height:34px;">
-                                    <button type="button" @click="showNewDemandDetail" class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
+                                    <button type="button" @click="showNewDemandDetail"
+                                        class="sc-button sc-button-default sc-button-small uk-width-expand"
+                                        style="height:34px;">
                                         <span data-uk-icon="icon: plus" class="uk-icon"></span>
                                     </button>
-                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0" type="button" @click="removeDemandDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand" style="height:34px;">
+                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0" type="button"
+                                        @click="removeDemandDetail"
+                                        class="sc-button sc-button-danger sc-button-small uk-width-expand"
+                                        style="height:34px;">
                                         <span data-uk-icon="icon: trash" class="uk-icon"></span>
                                     </button>
-                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOfferId > 0" 
+                                    <button
+                                        v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOfferId > 0"
                                         type="button" @click="showOfferForm(selectedDemandDetail.relatedOfferId)"
-                                         class="sc-button sc-button-primary sc-button-small" style="height:34px;">
-                                        T: {{ selectedDemandDetail.relatedOfferNo }}
+                                        class="sc-button sc-button-primary sc-button-small" style="height:34px;">
+                                        Talep: {{ selectedDemandDetail.relatedOfferNo }}
                                     </button>
-                                    <button v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOrderId > 0" 
+                                    <button
+                                        v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOrderId > 0"
                                         type="button" @click="showOrderForm(selectedDemandDetail.relatedOrderId)"
-                                         class="sc-button sc-button-warning sc-button-small" style="height:34px;">
-                                        S: {{ selectedDemandDetail.relatedOrderNo }}
+                                        class="sc-button sc-button-warning sc-button-small" style="height:34px;">
+                                        Sipariş: {{ selectedDemandDetail.relatedOrderNo }}
                                     </button>
-                                    <button v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false" type="button" @click="showNewAttachment" style="height:34px;"
+                                    <button v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false"
+                                        type="button" @click="showNewAttachment" style="height:34px;"
                                         class="sc-button sc-button-success sc-button-small">
                                         <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
                                         Dosya Ekle
                                     </button>
-                                </div>   
-                                <div v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false" class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">
-									
-									<div class="uk-margin-medium uk-margin-remove-left">
-										<client-only>
-											<Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList" :options="dtAttachmentOptions"
-												:customColumns="dtAttachmentCols" :buttons="true"
-												:customEvents="[{ name: 'select', function: clickAttachmentRow }]">
-											</Datatable>
-										</client-only>
-									</div>
+                                </div>
+                                <!-- <div v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false"
+                                    class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">
 
-								</div>
+                                    <div class="uk-margin-medium uk-margin-remove-left">
+                                        <client-only>
+                                            <Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList"
+                                                :options="dtAttachmentOptions" :customColumns="dtAttachmentCols"
+                                                :buttons="true"
+                                                :customEvents="[{ name: 'select', function: clickAttachmentRow }]">
+                                            </Datatable>
+                                        </client-only>
+                                    </div>
+
+                                </div> -->
                             </div>
                             <div class="uk-width-3-5@l">
-                                <ItemDemandDetail
-                                    :detail-object="selectedDemandDetail"
-                                    :total-detail-count="details.length"
-                                    :process-list="processList"
-                                    :is-dialog="false"
-                                    @onDetailSubmit="onDetailSaved"
-                                    @partDialogOpen="onPartDialogOpen"
-                                />
+                                <!-- itemdemanddetail was here -->
                             </div>
                         </div>
 
                         <div class="uk-flex-middle uk-grid-small uk-grid" data-uk-grid>
-                            
+
                             <div class="uk-width-auto@s">
                                 <div id="sc-dt-buttons"></div>
                             </div>
-                            
-                        </div>
 
+                        </div>
+                        <br>
                         <div>
                             <DataTable :value="details" responsiveLayout="scroll" editMode="cell"
-                                :selection.sync="selectedDemandDetail"
-                                @row-select="clickDetail"
-                                selectionMode="single"
-                                sortField="lineNumber" :sortOrder="1"
-                                class="editable-cells-table" @cell-edit-complete="onCellEditComplete">
-                                <Column field="lineNumber" header="#" sortable></Column>
-                                <Column field="createdDate" header="Eklenme Tarihi" sortable>
+                                :selection.sync="selectedDemandDetail" @row-select="clickDetail" selectionMode="single"
+                                sortField="lineNumber" :sortOrder="1" class="editable-cells-table"
+                                @cell-edit-complete="onCellEditComplete">
+                                <Column field="lineNumber" header="#" sortable
+                                    :style="{ width: '5%', 'max-width': '5%' }"
+                                    :headerStyle="{ width: '5%', 'max-width': '5%' }"></Column>
+                                <Column field="createdDate" header="Eklenme" sortable
+                                    :style="{ width: '7%', 'max-width': '7%' }"
+                                    :headerStyle="{ width: '7%', 'max-width': '7%' }">
                                     <template #body="slotProps">
                                         {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
                                     </template>
                                 </Column>
-                                <Column field="itemId" header="Stok">
+                                <Column field="itemId" header="Stok" :style="{ width: '15%', 'max-width': '15%' }"
+                                    :headerStyle="{ width: '15%', 'max-width': '15%' }">
                                     <template #editor="slotProps">
                                         <client-only v-show="isDialog == false">
-                                            <Select2
-                                                v-model="slotProps.data[slotProps.column.field]"
+                                            <Select2 v-model="slotProps.data[slotProps.column.field]"
                                                 :options="itemList"
-                                                :settings="{ 'width': '100%', 'placeholder': 'Stok', 'allowClear': true }"
-                                            ></Select2>
+                                                :settings="{ 'width': '100%', 'placeholder': 'Stok', 'allowClear': true }">
+                                            </Select2>
                                         </client-only>
                                     </template>
                                     <template #body="slotProps">
-                                        {{ slotProps.data[slotProps.column.field] ? itemList.find(m => m.id == slotProps.data[slotProps.column.field]).itemName : '' }}
+                                        {{
+                                            slotProps.data[slotProps.column.field] ? itemList.find(m => m.id ==
+                                                slotProps.data[slotProps.column.field]).itemName : ''
+                                        }}
                                     </template>
                                 </Column>
-                                <Column field="itemExplanation" header="Açıklama">
+                                <Column field="itemExplanation" header="Açıklama"
+                                    :style="{ width: '25%', 'max-width': '25%' }"
+                                    :headerStyle="{ width: '25%', 'max-width': '25%' }">
                                     <template #editor="slotProps">
                                         <InputText v-model="slotProps.data[slotProps.column.field]" />
                                     </template>
                                 </Column>
-                                <Column field="partNo" header="Parça Kodu">
+                                <Column field="partNo" header="Parça Kodu" :style="{ width: '10%', 'max-width': '10%' }"
+                                    :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
                                         <InputText v-model="slotProps.data[slotProps.column.field]" />
                                     </template>
                                 </Column>
-                                <Column field="partDimensions" header="Boyutlar">
+                                <Column field="partDimensions" header="Boyutlar"
+                                    :style="{ width: '10%', 'max-width': '10%' }"
+                                    :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
                                         <InputText v-model="slotProps.data[slotProps.column.field]" />
                                     </template>
                                 </Column>
-                                <Column field="quantity" header="Miktar">
+                                <Column field="quantity" header="Miktar" :style="{ width: '10%', 'max-width': '10%' }"
+                                    :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
-                                        <InputNumber v-model="slotProps.data[slotProps.column.field]" mode="decimal" :minFractionDigits="2" :maxFracionDigits="2" />
+                                        <InputNumber v-model="slotProps.data[slotProps.column.field]" mode="decimal"
+                                            :minFractionDigits="2" :maxFracionDigits="2" />
                                     </template>
                                 </Column>
                                 <Column field="statusText" header="Durum"></Column>
+                                <Column header="#">
+                                    <template #body="slotProps">
+                                        <Button label="" icon="pi pi-sliders-h"
+                                            :class="'p-button-sm' && slotProps.data.processList && slotProps.data.processList.length > 0 ? 'p-button-success ' : 'p-button-outlined p-button-danger'"
+                                            v-tooltip="'Kesim Bilgileri'" @click="showCuttingDetail(slotProps.data)" />
+                                        <Button label="" icon="pi pi-file"
+                                        :class="'p-button-sm' && p-button-success"
+                                        v-tooltip="'Dosyalar'" @click="showFoldersDialog(slotProps.data)" />
+                                    </template>
+                                </Column>
                             </DataTable>
                         </div>
 
-                       
-                        
+
+
                         <!-- <client-only>
                             <Datatable
                                 id="sc-dt-details-table"
@@ -186,29 +219,38 @@
                     </div>
                 </fieldset>
 
-                <div class="uk-margin-large-top">
-                    <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
-                        <span data-uk-icon="icon: check" class="uk-icon"></span>
-                    </button>
-                    <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
-                        <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
-                    </button>
-                    <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
-                        <span data-uk-icon="icon: trash" class="uk-icon"></span>
-                    </button>
-                </div>
+               -
             </form>
         </div>
 
-        <div id="dlgAttachment" class="uk-modal" data-uk-modal stack="true">
-			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
-				<div class="uk-modal-body">
-					<AttachmentForm v-if="refreshAttachmentForm == true && attachmentDialogVisible" :record-object="selectedAttachmentRow"
-						:is-dialog="true" :dialog-container="'dlgAttachment'"
-						@onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
-				</div>
-			</div>
-		</div>
+        <Dialog header="Dosya" :visible="refreshAttachmentForm" :modal="true" @update:visible="hideHandler"
+            :style="{ width: '75vw' , 'z-index':'5000 !important' }">
+            <AttachmentForm v-if="refreshAttachmentForm == true && attachmentDialogVisible"
+                :record-object="selectedAttachmentRow" :is-dialog="true" :dialog-container="'dlgAttachment'"
+                @onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
+        </Dialog>
+
+        <Dialog header="Kesim Bilgileri" :visible="isCuttingVisible" :modal="true"
+            @update:visible="isCuttingVisible = $event" :style="{ width: '75vw', 'z-index': '2000 !important' }">
+            <ItemDemandDetail :detail-object="selectedDemandDetail" :total-detail-count="details.length"
+                :process-list="processList" :is-dialog="false" @onDetailSubmit="onDetailSaved"
+                @partDialogOpen="onPartDialogOpen" />
+        </Dialog>
+
+        <Dialog header="Dosyalar" :visible="isFolderDialog" :modal="true"
+            @update:visible="isFolderDialog = $event" :style="{ width: '75vw' , 'z-index':'3000 !important' }">
+            <div v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false"
+                class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">
+                <div class="uk-margin-medium uk-margin-remove-left">
+                    <client-only>
+                        <Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList"
+                            :options="dtAttachmentOptions" :customColumns="dtAttachmentCols" :buttons="true"
+                            :customEvents="[{ name: 'select', function: clickAttachmentRow }]">
+                        </Datatable>
+                    </client-only>
+                </div>
+            </div>
+        </Dialog>
     </div>
 </template>
 
@@ -224,12 +266,12 @@ import { useUserSession } from '~/composable/userSession';
 import { dateToStr, strToDate } from "~/composable/useHelpers";
 import moment from 'moment';
 
-if(process.client) {
-	require('~/plugins/inputmask');	
+if (process.client) {
+    require('~/plugins/inputmask');
 }
 
 export default {
-	name: 'ItemDemand',
+    name: 'ItemDemand',
     emits: ['onDemandSaved', 'onCancel'],
     props: {
         recordId: {
@@ -250,60 +292,63 @@ export default {
             default: '',
         },
     },
-	components: {
+    components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		Select2: process.client ? () => import('~/components/Select2') : null,
+        Select2: process.client ? () => import('~/components/Select2') : null,
         AttachmentForm: process.client ? () => import("~/logical_components/AttachmentForm") : null,
         ItemDemandDetail,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
+        ScInput,
+        ScTextarea,
+        PrettyRadio,
         PrettyCheck
-	},
-	data: () => ({
-		formData: {
+    },
+    data: () => ({
+        formData: {
             id: 0,
-			receiptNo: '',
-			projectId: null,
+            receiptNo: '',
+            projectId: null,
             plantId: null,
-			demandStatus: 0,
+            demandStatus: 0,
             isContracted: false,
             explanation: '',
-		},
+        },
         attachmentDialogVisible: false,
+        isCuttingVisible: false,
+        isFolderDialog: false,
         itemList: [],
         processList: [],
-        selectedAttachmentRow: { id:0, recordType:2, recordId: 0 },
+        selectedAttachmentRow: { id: 0, recordType: 2, recordId: 0 },
         attachmentList: [],
         refreshAttachmentForm: false,
         dtAttachmentOptions: {
-			autoWidth: false,
-			select: true,
-			searching: false,
-			paging: false,
-		},
-		dtAttachmentCols: [
-			{ data: "title", title: "Başlık", visible: true },
-			{ data: "fileName", title: "Dosya Adı", visible: true, },
-			{ data: "explanation", title: "Açıklama", visible: true, },
-		],
+            autoWidth: false,
+            select: true,
+            searching: false,
+            paging: false,
+        },
+        dtAttachmentCols: [
+            { data: "title", title: "Başlık", visible: true },
+            { data: "fileName", title: "Dosya Adı", visible: true, },
+            { data: "explanation", title: "Açıklama", visible: true, },
+        ],
+        isSaving: false,
         isMounting: false,
         details: [],
         projects: [],
         dtOptions: {
-			select: {
+            select: {
                 style: 'single'
             },
-            rowCallback: function(row, data, index) {
+            rowCallback: function (row, data, index) {
                 if (data.demandStatus == 2) {
-                    $('td',row).addClass("bg-light-blue");
+                    $('td', row).addClass("bg-light-blue");
                 }
                 else if (data.demandStatus == 3) {
-                    $('td',row).addClass("bg-success");
+                    $('td', row).addClass("bg-success");
                 }
             },
-			searching: false,
-			paging: false,
+            searching: false,
+            paging: false,
             buttons: [
                 {
                     extend: "excelHtml5",
@@ -323,26 +368,26 @@ export default {
                     autoPrint: true
                 }
             ]
-		},
-		dtDetailCols: [
-			{ data: "lineNumber", title: "Satır No", visible: true, },
+        },
+        dtDetailCols: [
+            { data: "lineNumber", title: "Satır No", visible: true, },
             // { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date"},
-            { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date", render: function(data, ev, row) { return dateToStr(row.createdDate, 'YYYY.MM.DD'); }},
-			{ data: "itemName", title: "Stok Adı", visible: true, render: function(data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
+            { data: "createdDate", title: "Eklenme Tarihi", visible: true, type: "date", render: function (data, ev, row) { return dateToStr(row.createdDate, 'YYYY.MM.DD'); } },
+            { data: "itemName", title: "Stok Adı", visible: true, render: function (data, ev, row) { return row.itemId && row.itemId > 0 ? row.itemName : row.itemExplanation; } },
             { data: "itemExplanation", title: "Stok Açıklaması", visible: true, },
             { data: "partNo", title: "Parça Kodu", visible: true, },
             { data: "partDimensions", title: "Boyutlar", visible: true, },
-			{ data: "quantity", title: "Miktar", visible: true, },
-			{ data: "statusText", title: "Durum", visible: true, },
-		],
+            { data: "quantity", title: "Miktar", visible: true, },
+            { data: "statusText", title: "Durum", visible: true, },
+        ],
         selectedDemandDetail: {
             id: 0,
         },
         bindComplete: false
-	}),
-	computed: {
-		currentProjectName() {
-            if (this.formData.projectId > 0){
+    }),
+    computed: {
+        currentProjectName() {
+            if (this.formData.projectId > 0) {
                 var project = this.projects.find(d => d.id == this.formData.projectId);
                 if (project)
                     return project.text;
@@ -350,33 +395,38 @@ export default {
 
             return '';
         }
-	},
-	async mounted () {
+    },
+    async mounted() {
         this.isMounting = true;
         this.formData.id = this.recordId;
 
         if (this.projectId && this.projectId > 0)
             this.formData.projectId = this.projectId;
 
-		await this.bindModel();
+        await this.bindModel();
         this.isMounting = false;
-	},
-	methods: {
-        onCellEditComplete(event){
-            let {data, newValue, field} = event;
+    },
+    methods: {
+        onCellEditComplete(event) {
+            let { data, newValue, field } = event;
             data[field] = newValue;
-            // if (newValue.trim().length > 0)
-            //     data[field] = newValue;
-            // else
-            //     event.preventDefault();
         },
-        onPartDialogOpen(){
+        showCuttingDetail(data) {
+            this.selectedDemandDetail = data;
+            this.isCuttingVisible = true
+        },
+        async showFoldersDialog(data){
+            this.selectedDemandDetail = data;
+            await this.bindAttachments();
+            this.isFolderDialog = true
+        },
+        onPartDialogOpen() {
             this.attachmentDialogVisible = false;
         },
-        dtButtonsInitialized(){
+        dtButtonsInitialized() {
             this.$refs.demandDetailsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
         },
-        async bindModel(){
+        async bindModel() {
             const api = useApi();
             const self = this;
             try {
@@ -390,7 +440,7 @@ export default {
                     })
 
                 const procData = (await api.get('Process')).data;
-                if (procData){
+                if (procData) {
                     this.processList = procData.filter(d => d.processType > 0)
                         .map((d) => {
                             return {
@@ -402,10 +452,10 @@ export default {
                 }
 
                 const itemData = (await api.get('Item')).data
-                this.itemList = itemData.map((d) => {return { ...d, text: d.itemName }})
+                this.itemList = itemData.map((d) => { return { ...d, text: d.itemName } })
 
                 const getData = (await api.get('ItemDemand/' + this.formData.id)).data;
-                if (getData && getData.id > 0){
+                if (getData && getData.id > 0) {
                     getData.projectId = getData.projectId ? getData.projectId.toString() : null;
                     this.formData = getData;
                     this.details = this.formData.details.map((d) => {
@@ -417,7 +467,7 @@ export default {
                         };
                     });
                 }
-                else{
+                else {
                     this.formData.receiptNo = getData.receiptNo;
                     this.details.splice(0, this.details.length);
                 }
@@ -426,16 +476,16 @@ export default {
 
             }
         },
-        showOfferForm(itemOfferId){
+        showOfferForm(itemOfferId) {
             this.$router.push('/purchasing/item-offer?id=' + itemOfferId);
         },
-        showOrderForm(itemOrderId){
+        showOrderForm(itemOrderId) {
             this.$router.push('/purchasing/item-order?id=' + itemOrderId);
         },
-        onDetailSaved(detailParam){
+        onDetailSaved(detailParam) {
             const detailRow = detailParam.data;
-            if (detailParam.action == 'save'){
-                if (detailRow.id == 0){
+            if (detailParam.action == 'save') {
+                if (detailRow.id == 0) {
                     detailRow.newRecord = true;
                     detailRow.id = detailRow.lineNumber;
                     detailRow.partNo = detailRow.partNo ?? '';
@@ -445,7 +495,7 @@ export default {
                 }
                 else {
                     const existingDetail = this.details.find(d => d.id == detailRow.id);
-                    if (existingDetail){
+                    if (existingDetail) {
                         // detailRow.newDetail = false;
 
                         existingDetail.lineNumber = detailRow.lineNumber;
@@ -463,16 +513,22 @@ export default {
             }
             this.bindComplete = true
         },
-		async onSubmit(){
-            if (!this.formData.explanation || this.formData.explanation.length <= 0){
+        async onSubmit() {
+            if (this.isSaving)
+                return;
+
+            this.isSaving = true;
+
+            if (!this.formData.explanation || this.formData.explanation.length <= 0) {
                 this.showNotification('Açıklama girmelisiniz.', false, 'error');
+                this.isSaving = false;
                 return;
             }
 
             this.bindComplete = false
             this.$emit("onSaved")
             try {
-                this.formData.details = this.details.map((d) => {
+                this.formData.details = this.details.filter(d => d.itemId > 0 || (d.itemExplanation && d.itemExplanation.length > 0)).map((d) => {
                     return {
                         ...d,
                         id: d.newRecord == true ? 0 : d.id,
@@ -484,10 +540,12 @@ export default {
                 this.formData.plantId = session.user.plantId;
                 const api = useApi();
                 const postResult = (await api.post('ItemDemand', this.formData)).data;
-                if (postResult.result){
+                if (postResult.result) {
                     this.showNotification('Kayıt başarılı', false, 'success');
                     this.formData.id = postResult.recordId;
                     this.$emit('onDemandSaved');
+
+                    await this.bindModel();
 
                     if (this.isDialog)
                         UIkit.modal(document.getElementById(this.dialogContainer)).hide();
@@ -499,21 +557,23 @@ export default {
             } catch (error) {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
+
+            this.isSaving = false;
         },
-        onCancel(){
+        onCancel() {
             if (this.isDialog)
                 this.$emit('onCancel'); //UIkit.modal(document.getElementById(this.dialogContainer)).hide();
             else
                 this.$router.push('/purchasing/item-demand/list');
         },
-        async onDelete(){
+        async onDelete() {
             const self = this;
             UIkit.modal.confirm('Bu talebi silmek istediğinizden emin misiniz?').then(
-				async function () {
-					try {
+                async function () {
+                    try {
                         const api = useApi();
                         const delResult = (await api.delete('ItemDemand/' + self.formData.id)).data;
-                        if (delResult.result){
+                        if (delResult.result) {
                             self.showNotification('Silme işlemi başarılı', false, 'success');
                             self.$emit('onDemandSaved');
 
@@ -525,26 +585,26 @@ export default {
                         else
                             self.showNotification(delResult.errorMessage, false, 'error');
                     } catch (error) {
-                        
-                    }
-			});
-            
-        },
-        async bindAttachments(){
-			const api = useApi();
-			try {
-				this.attachmentList = (await api.get('Attachment/OfRecord/2/' + this.selectedDemandDetail.id)).data;
-			} catch (error) {
 
-			}
-		},
-        removeDemandDetail(){
-            if (this.selectedDemandDetail){
+                    }
+                });
+
+        },
+        async bindAttachments() {
+            const api = useApi();
+            try {
+                this.attachmentList = (await api.get('Attachment/OfRecord/2/' + this.selectedDemandDetail.id)).data;
+            } catch (error) {
+
+            }
+        },
+        removeDemandDetail() {
+            if (this.selectedDemandDetail) {
                 const demandIndex = this.details.indexOf(this.selectedDemandDetail);
-                if (demandIndex > -1){
+                if (demandIndex > -1) {
                     this.details.splice(demandIndex, 1);
 
-                    const sortedDetails = this.details.sort((a,b) => a.lineNumber - b.lineNumber)
+                    const sortedDetails = this.details.sort((a, b) => a.lineNumber - b.lineNumber)
 
                     let lineNumber = 1;
                     for (let i = 0; i < sortedDetails.length; i++) {
@@ -554,37 +614,38 @@ export default {
                         lineNumber++;
                     }
 
-                    this.selectedDemandDetail = {id:0};
+                    this.selectedDemandDetail = { id: 0 };
                 }
             }
         },
-        showNotification (text, pos, status, persistent) {
-			var config = {};
-			config.timeout = persistent ? !persistent : 3000;
-			if(status) {
-				config.status = status;
-			}
-			if(pos) {
-				config.pos = pos;
-			}
-			UIkit.notification(text, config);
-		},
-        showNewDemandDetail(){
+        showNotification(text, pos, status, persistent) {
+            var config = {};
+            config.timeout = persistent ? !persistent : 3000;
+            if (status) {
+                config.status = status;
+            }
+            if (pos) {
+                config.pos = pos;
+            }
+            UIkit.notification(text, config);
+        },
+        showNewDemandDetail() {
             const self = this;
-            const lastRow = this.details.length > 0 ? this.details.sort((a,b) => b.lineNumber - a.lineNumber)[0] : null;
+            const lastRow = this.details.length > 0 ? this.details.sort((a, b) => b.lineNumber - a.lineNumber)[0] : null;
 
-            const newRow = { id: 0, newRecord: true,
-                    lineNumber: lastRow ? lastRow.lineNumber + 1 : this.details.length + 1, createdDate: self.$moment().format('YYYY-MM-DD'),
-                    demandStatus: 0,
-                };
+            const newRow = {
+                id: 0, newRecord: true,
+                lineNumber: lastRow ? lastRow.lineNumber + 1 : this.details.length + 1, createdDate: self.$moment().format('YYYY-MM-DD'),
+                demandStatus: 0,
+            };
 
             newRow.id = newRow.lineNumber;
             newRow.statusText = newRow.demandStatus == 0 ? 'Onay bekleniyor' :
-                                newRow.demandStatus == 1 ? 'Onaylandı' :
-                                newRow.demandStatus == 2 ? 'Sipariş verildi' :
-                                newRow.demandStatus == 3 ? 'Sipariş teslim alındı' : 
-                                newRow.demandStatus == 4 ? 'Sipariş iptal edildi' : '';
-            
+                newRow.demandStatus == 1 ? 'Onaylandı' :
+                    newRow.demandStatus == 2 ? 'Sipariş verildi' :
+                        newRow.demandStatus == 3 ? 'Sipariş teslim alındı' :
+                            newRow.demandStatus == 4 ? 'Sipariş iptal edildi' : '';
+
             this.details.push(newRow);
             // if (lastRow){
             //     if (lastRow.processList){
@@ -602,51 +663,59 @@ export default {
 
             this.selectedDemandDetail = newRow;
         },
-        convertDateToStr(prm){
+        convertDateToStr(prm) {
             return dateToStr(prm)
         },
-        showNewAttachment(){
-			const self = this;
-			this.selectedAttachmentRow = { id:0, recordType:2, recordId: self.selectedDemandDetail.id };
-			this.showAttachment();
-		},
+        showNewAttachment() {
+            const self = this;
+            this.selectedAttachmentRow = { id: 0, recordType: 2, recordId: self.selectedDemandDetail.id };
+            this.showAttachment();
+        },
+        hideHandler(event) {
+            this.refreshAttachmentForm = event;
+            this.isFolderDialog = true
+        },
         closeAttachmentDialog() {
-			const modalElement = document.getElementById('dlgAttachment');
-			UIkit.modal(modalElement).hide();
-		},
-		async onSubmitAttachment(){
-			this.closeAttachmentDialog();
-			await this.bindAttachments();
-		},
-		showAttachment(){
+            this.attachmentDialogVisible = false;
+            this.refreshAttachmentForm = false;
+            this.isFolderDialog = true
+            // const modalElement = document.getElementById('dlgAttachment');
+            // UIkit.modal(modalElement).hide();
+        },
+        async onSubmitAttachment() {
+            this.closeAttachmentDialog();
+            await this.bindAttachments();
+        },
+        showAttachment() {
+            this.isFolderDialog = false;
             this.attachmentDialogVisible = true;
-			this.refreshAttachmentForm = false;
-			setTimeout(() => { this.refreshAttachmentForm = true; }, 200);
+            this.refreshAttachmentForm = true;
+            // setTimeout(() => { this.refreshAttachmentForm = true; }, 200);
 
-			const modalElement = document.getElementById('dlgAttachment');
-			modalElement.width = window.innerWidth * 0.7;
-			modalElement.height = window.innerHeight * 0.8;
-			UIkit.modal(modalElement).show();
-		},
-        clickDetail:async function (event){
+            // const modalElement = document.getElementById('dlgAttachment');
+            // modalElement.width = window.innerWidth * 0.7;
+            // modalElement.height = window.innerHeight * 0.8;
+            // UIkit.modal(modalElement).show();
+        },
+        clickDetail: async function (event) {
             try {
                 // this.selectedDemandDetail = this.details[indexes[0]];
                 await this.bindAttachments();
             } catch (error) {
-                
+
             }
         },
-        deselectDetail: function(){
-            this.selectedDemandDetail = { id:0 };
+        deselectDetail: function () {
+            this.selectedDemandDetail = { id: 0 };
         },
         clickAttachmentRow: function (e, dt, type, indexes) {
-			const selIndex = indexes[0];
-			this.selectedAttachmentRow = this.attachmentList[selIndex];
-			this.showAttachment();
-		},
-	},
+            const selIndex = indexes[0];
+            this.selectedAttachmentRow = this.attachmentList[selIndex];
+            this.showAttachment();
+        },
+    },
     watch: {
-        recordId: async function(newVal, oldVal) {
+        recordId: async function (newVal, oldVal) {
             // if (!this.isMounting){
             //     this.formData.id = this.recordId;
             //     await this.bindModel();
@@ -655,13 +724,13 @@ export default {
             this.formData.id = this.recordId;
             await this.bindModel();
         },
-        projectId: function(newVal, oldVal) {
+        projectId: function (newVal, oldVal) {
             if (this.formData)
                 this.formData.projectId = newVal;
         },
         details: {
-            handler: function(newVal, oldVal){
-                if(this.bindComplete){
+            handler: function (newVal, oldVal) {
+                if (this.bindComplete) {
                     this.$emit('onChange');
                 }
             },
@@ -672,14 +741,15 @@ export default {
 </script>
 
 <style lang="scss">
-	@import '~scss/vue/_pretty_checkboxes';
-    @import "~scss/plugins/datatables";
+@import '~scss/vue/_pretty_checkboxes';
+@import "~scss/plugins/datatables";
 </style>
 <style type="text/css">
-.bg-success{
+.bg-success {
     background-color: #11bf48;
 }
-.bg-light-blue{
+
+.bg-light-blue {
     background-color: #70c0e6;
 }
 </style>

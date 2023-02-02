@@ -59,7 +59,7 @@
                     </div> -->
                     <div class="uk-grid sc-padding-remove-top sc-padding-remove-right uk-margin-small">
                         <div class="uk-child-width-1-2@m uk-width-1-3@m uk-grid" style="margin-left:0px; padding-left:0px;" data-uk-grid>
-                            <div v-for="(item, index) in processList" :key="index">
+                            <div v-for="(item, index) in defaultProcessList" :key="index">
                                 <PrettyCheck class="p-icon" v-model="item.isChecked" @change="onProcCheckChanged" :value="false" >
                                     <i slot="extra" class="icon mdi mdi-check"></i> {{ item.text }}
                                 </PrettyCheck>
@@ -189,7 +189,18 @@
 			</div>
 		</div>
 
-        <div id="dlgImageAction" class="uk-modal" data-uk-modal stack="true">
+        <Dialog header="Kesim Bilgileri" :visible="partDialogVisible && refreshImageDialog" :modal="true"
+            @update:visible="partDialogVisible = $event" :style="{ width: '75vw', 'z-index': '5000 !important' }">
+            <ImageAction v-if="refreshImageDialog && partDialogVisible"
+						:preview-data="selectedPart"
+						:is-dialog="true"
+						:dialog-container="'dlgImageAction'"
+						@onSubmit="onSubmitImage"
+						@onCancel="onCloseImage"
+					/>
+        </Dialog>
+
+        <!-- <div id="dlgImageAction" class="uk-modal" data-uk-modal stack="true" :style="{ 'z-index':'5000 !important' }">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
 					<ImageAction v-if="refreshImageDialog && partDialogVisible"
@@ -201,7 +212,7 @@
 					/>
 				</div>
 			</div>
-		</div>
+		</div> -->
     </div>
 </template>
 
@@ -290,12 +301,13 @@ export default {
         },
         selectedPart: { id:0, lineNumber: 0 },
         itemList: [],
+        defaultProcessList: [],
         refreshItemDialog: false,
         refreshImageDialog: false,
 	}),
     computed: {
         hasCuttingProcess(){
-            return this.processList.some(d => d.processType == 1 && d.isChecked && d.isChecked == true);
+            return this.defaultProcessList.some(d => d.processType == 1 && d.isChecked && d.isChecked == true);
         }
     },
 	async mounted () {
@@ -303,6 +315,9 @@ export default {
 	},
 	methods: {
         async bindModel(){
+            if (!this.defaultProcessList || this.defaultProcessList.length == 0)
+                this.defaultProcessList = this.processList;
+
             const api = useApi();
             try {
                 this.itemList = (await api.get('Item')).data.map((d) => {
@@ -316,6 +331,28 @@ export default {
             }
 
             this.formData = this.detailObject;
+            if (!this.formData){
+                this.formData = {
+                    id: 0,
+                    lineNumber: 0,
+                    itemId: null,
+                    itemName: '',
+                    itemExplanation: '',
+                    createdDate: null,
+                    explanation: '',
+                    unitId: null,
+                    quantity: null,
+                    netQuantity: 0,
+                    demandStatus: 0,
+                    demandDate: null,
+                    newRecord: true,
+                    partNo: '',
+                    partDimensions: '',
+                    processList: [],
+                    partList: [],
+                };
+            }
+
             try {
                 this.formData.itemId = this.formData.itemId ? this.formData.itemId.toString() : null;   
             } catch (error) {
@@ -325,10 +362,10 @@ export default {
                 this.formData.lineNumber = this.totalDetailCount + 1;
             }
 
-            if (this.formData.processList){
+            if (this.formData.processList && this.formData.processList.length > 0){
                 for (let i = 0; i < this.formData.processList.length; i++) {
                     const checkedProc = this.formData.processList[i];
-                    const listItem = this.processList.find(d => d.id == checkedProc.processId);
+                    const listItem = this.defaultProcessList.find(d => d.id == checkedProc.processId);
                     if (listItem){
                         listItem.isChecked = true;
                     }
@@ -336,6 +373,12 @@ export default {
                     {
                         listItem.isChecked = false;
                     }
+                }
+            }
+            else{
+                for (let i = 0; i < this.defaultProcessList.length; i++) {
+                    const element = this.defaultProcessList[i];
+                    element.isChecked = false;
                 }
             }
         },
@@ -378,6 +421,7 @@ export default {
             this.onSubmit();
             $('#txtPartCode').focus();
             this.calculateTotalQuantity();
+            this.refreshImageDialog = false;
         },
         onPartDelete(){
             if (this.selectedPart && this.selectedPart.lineNumber > 0 && confirm('Bu parçayı silmek istediğinizden emin misiniz?')){
@@ -401,16 +445,17 @@ export default {
             this.selectedPart = part;
         },
         showPartFileDialog(part){
+            console.log(part);
             this.selectedPart = part;
             this.partDialogVisible = true;
             this.$emit('partDialogOpen');
             this.refreshImageDialog = false;
 			setTimeout(() => { this.refreshImageDialog = true; }, 500);
 
-			const modalElement = document.getElementById('dlgImageAction');
-			modalElement.width = window.innerWidth * 0.7;
-			modalElement.height = window.innerHeight * 0.8;
-			UIkit.modal(modalElement).show();
+			// const modalElement = document.getElementById('dlgImageAction');
+			// modalElement.width = window.innerWidth * 0.7;
+			// modalElement.height = window.innerHeight * 0.8;
+			// UIkit.modal(modalElement).show();
         },
         clearSelectedPart(){
             this.selectedPart = { id:0, lineNumber: 0 };
@@ -457,7 +502,7 @@ export default {
             if (!this.formData.processList)
                 this.formData.processList = [];
 
-            const selectedProcs = this.processList.filter(d => d.isChecked && d.isChecked == true);
+            const selectedProcs = this.defaultProcessList.filter(d => d.isChecked && d.isChecked == true);
             for (let i = 0; i < selectedProcs.length; i++) {
                 const sProc = selectedProcs[i];
                 if (!this.formData.processList.some(d => d.processId == sProc.id)){
@@ -480,18 +525,28 @@ export default {
                 action: 'cancel',
                 data: this.formData,
             });
-            UIkit.modal(document.getElementById(this.dialogContainer)).hide();
+
+            if (this.dialogContainer){
+                try {
+                    UIkit.modal(document.getElementById(this.dialogContainer)).hide();       
+                } catch (error) {
+                    
+                }
+            }
         },
         onSubmitImage(data){
             this.selectedPart.partBase64 = data.partBase64;
             this.selectedPart.fileType = data.partType;
-            const modalElement = document.getElementById('dlgImageAction');
-			UIkit.modal(modalElement).hide();
+            // const modalElement = document.getElementById('dlgImageAction');
+			// UIkit.modal(modalElement).hide();
             this.onPartSubmit();
+            
         },
         onCloseImage(){
-            const modalElement = document.getElementById('dlgImageAction');
-			UIkit.modal(modalElement).hide();
+            // const modalElement = document.getElementById('dlgImageAction');
+			// UIkit.modal(modalElement).hide();
+            this.refreshImageDialog = false;
+            
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};
@@ -523,16 +578,23 @@ export default {
             handler: async function (newVal, oldVal) {
                 try {
                     if (newVal.id != oldVal.id){
-                        for (let i = 0; i < this.processList.length; i++) {
-                            const element = this.processList[i];
+                        for (let i = 0; i < this.defaultProcessList.length; i++) {
+                            const element = this.defaultProcessList[i];
                             element.isChecked = false;
                         }
-                    }   
+
+                        await this.bindModel();
+                    }
+                    
                 } catch (error) {
                     
                 }
-
-                await this.bindModel();
+            },
+            deep: true,
+        },
+        processList: {
+            handler: async function(newVal, oldVal){
+                this.defaultProcessList = newVal;
             },
             deep: true,
         },

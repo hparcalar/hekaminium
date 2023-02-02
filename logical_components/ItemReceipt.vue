@@ -255,6 +255,7 @@ export default {
         isMounting: false,
         refreshDetailForm: false,
         refreshOrderList: false,
+        isSaving: false,
         details: [],
         firms: [],
         receiptTypeList: [],
@@ -466,14 +467,19 @@ export default {
             }
         },
 		async onSubmit(){
+            if (this.isSaving)
+                return;
+            this.isSaving = true;
             try {
                 if (!this.formData.receiptDate){
                     this.showNotification('Tarih seçmelisiniz.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
                 if (parseInt(this.formData.inWarehouseId ?? '0') <= 0){
                     this.showNotification('Depo seçmelisiniz.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
@@ -494,6 +500,7 @@ export default {
 
                 if (!forexOk){
                     this.showNotification('İrsaliye farklı döviz cinsleri içeremez.', false, 'error');
+                    this.isSaving = false;
                     return;
                 }
 
@@ -506,8 +513,6 @@ export default {
 
                 const session = useUserSession();
                 this.formData.plantId = session.user.plantId;
-
-                console.log(this.formData);
 
                 const api = useApi();
                 const postResult = (await api.post('ItemReceipt', this.formData)).data;
@@ -526,6 +531,7 @@ export default {
             } catch (error) {
                 this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
             }
+            this.isSaving = false;
         },
         onCancel(){
             if (this.isDialog)

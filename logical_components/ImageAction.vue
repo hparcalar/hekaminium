@@ -23,7 +23,7 @@
                     Kapat
                 </button>
             </div>
-            <div v-show="formData && formData.partBase64 && formData.partBase64.length > 0 && (!formData.partType || formData.partType.length == 0 || formData.partType == 'application/pdf')" 
+            <div v-show="formData && formData.partBase64 && formData.partBase64.length > 0 && (formData.partType && formData.partType == 'application/pdf')" 
                 class="uk-margin-medium uk-margin-remove-left uk-width-2-2@m">
                 <!-- <img :src="'data:image/png;base64,' + formData.partBase64" style="width:100%;" /> -->
                 <vue-pdf-app 
@@ -91,7 +91,7 @@ export default {
 	}),
 	computed: {
         getArrayBufferContent(){
-            if ((!this.formData.partType || this.formData.partType.length == 0 || this.formData.partType == 'application/pdf') 
+            if ((this.formData.partType && this.formData.partType == 'application/pdf') 
                 && this.formData.partBase64 && this.formData.partBase64.length > 0)
                 return base64ToArrayBuffer(this.formData.partBase64).buffer;
             return null;
@@ -110,7 +110,7 @@ export default {
     },
 	methods: {
         bindModel(){
-            console.log(this.previewData);
+            console.log('binding');
             if (this.previewData){
                 this.formData.partBase64 = this.previewData.partBase64;
                 this.formData.partType = this.previewData.fileType;
@@ -140,6 +140,8 @@ export default {
                 this.formData.partBase64 = (await blobToBase64(fileData))
                     .replace('data:image/jpeg;base64,', '')
                     .replace('data:application/pdf;base64,', '')
+                    .replace('data:application/octet-stream;base64,', '')
+                    .replace('data:application/STEP;base64,', '')
                     .replace('data:image/png;base64,', '')
                     .replace('data:image/jpg;base64,', '')
                     .replace('data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,', '');

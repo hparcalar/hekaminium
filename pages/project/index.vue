@@ -154,31 +154,152 @@
 															<hr class="uk-divider-vertical" style="height:35px;" />
 															<div v-show="selectedCostItemRow && selectedCostItemRow.id > 0"
 																class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
-																<button type="button" @click="showCostItem"
-																	class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
-																	<span data-uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"></span>
-																	Düzenle
-																</button>
-																<button v-show="selectedCostItemIndexes.length > 0" @click="deleteCostItem"
+																<button v-show="selectedCostItemRow != null && selectedCostItemRow.id > 0" @click="deleteCostItem"
 																	type="button" class="sc-button sc-button-danger sc-button-small uk-width-1-4"
 																	style="height:34px;">
 																	<span data-uk-icon="icon: trash" class="uk-margin-small-right uk-icon"></span>
 																	Sil
 																</button>
 															</div>
-
 														</div>
 														<div class="uk-margin-medium uk-margin-remove-left">
 															<div class="uk-width-auto@s" style="position: relative; float:right;">
 																<div id="sc-dt-buttons"></div>
 															</div>
-															<client-only>
+															<div>
+																<DataTable :value="formData.costItems" responsiveLayout="scroll" editMode="cell"
+																	:selection.sync="selectedCostItemRow" @row-select="clickCostItemRow" selectionMode="single"
+																	sortField="lineNumber" :sortOrder="1" class="editable-cells-table"
+																	@cell-edit-complete="onCellEditComplete">
+																	<Column field="lineNumber" header="#" sortable
+																		:style="{ width: '5%', 'max-width': '5%' }"
+																		:headerStyle="{ width: '5%', 'max-width': '5%' }"></Column>
+																	<Column field="itemId" header="Stok" :style="{ width: '15%', 'max-width': '15%' }"
+																		:headerStyle="{ width: '15%', 'max-width': '15%' }">
+																		<template #editor="slotProps">
+																			<client-only>
+																				<Select2 v-model="slotProps.data[slotProps.column.field]"
+																					:options="itemList"
+																					:settings="{ 'width': '100%', 'placeholder': 'Stok', 'allowClear': true }">
+																				</Select2>
+																			</client-only>
+																		</template>
+																		<template #body="slotProps">
+																			{{
+																				slotProps.data[slotProps.column.field] ? itemList.find(m => m.id ==
+																					slotProps.data[slotProps.column.field]).text : ''
+																			}}
+																		</template>
+																	</Column>
+																	<Column field="costName" header="Açıklama"
+																		:style="{ width: '15%', 'max-width': '15%' }"
+																		:headerStyle="{ width: '15%', 'max-width': '15%' }">
+																		<template #editor="slotProps">
+																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																		</template>
+																	</Column>
+																	<Column field="partNo" header="Parça Kodu" :style="{ width: '7%', 'max-width': '7%' }"
+																		:headerStyle="{ width: '7%', 'max-width': '7%' }">
+																		<template #editor="slotProps">
+																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																		</template>
+																	</Column>
+																	<Column field="partDimensions" header="Boyutlar"
+																		:style="{ width: '8%', 'max-width': '8%' }"
+																		:headerStyle="{ width: '8%', 'max-width': '8%' }">
+																		<template #editor="slotProps">
+																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																		</template>
+																	</Column>
+																	<Column field="quantity" header="Miktar" :style="{ width: '7%', 'max-width': '7%' }"
+																		:headerStyle="{ width: '7%', 'max-width': '7%' }">
+																		<template #editor="slotProps">
+																			<InputNumber v-model="slotProps.data[slotProps.column.field]" 
+																				@blur="calculateCostItemRow"
+																				mode="decimal"
+																				:minFractionDigits="2" :maxFracionDigits="2" />
+																		</template>
+																	</Column>
+																	<Column field="forexId" header="Döviz Cinsi" :style="{ width: '10%', 'max-width': '10%' }"
+																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
+																		<template #editor="slotProps">
+																			<client-only>
+																				<Select2 v-model="slotProps.data[slotProps.column.field]"
+																					@change="updateLiveForexRateOfCostItem"
+																					:options="forexList"
+																					:settings="{ 'width': '100%', 'placeholder': 'Döviz Cinsi', 'allowClear': true }">
+																				</Select2>
+																			</client-only>
+																		</template>
+																		<template #body="slotProps">
+																			{{
+																				slotProps.data[slotProps.column.field] ? forexList.find(m => m.id ==
+																					slotProps.data[slotProps.column.field]).text : ''
+																			}}
+																		</template>
+																	</Column>
+																	<Column field="unitPrice" header="Birim Fiyat" :style="{ width: '10%', 'max-width': '10%' }"
+																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
+																		<template #editor="slotProps">
+																			<InputNumber 
+																				@blur="calculateCostItemRow"
+																				v-model="slotProps.data[slotProps.column.field]" mode="decimal"
+																				:minFractionDigits="2" :maxFracionDigits="2" />
+																		</template>
+																		<template #body="slotProps">
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																		</template>
+																	</Column>
+																	<Column field="forexRate" header="Döviz Kuru" :style="{ width: '10%', 'max-width': '10%' }"
+																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
+																		<template #editor="slotProps">
+																			<InputNumber @blur="calculateCostItemRow" v-model="slotProps.data[slotProps.column.field]" mode="decimal"
+																				:minFractionDigits="2" :maxFracionDigits="2" />
+																		</template>
+																		<template #body="slotProps">
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																		</template>
+																	</Column>
+																	<Column field="overallTotal" header="Tutar (TL)" :style="{ width: '10%', 'max-width': '10%' }"
+																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
+																		<template #editor="slotProps">
+																			<InputNumber :read-only="true" v-model="slotProps.data[slotProps.column.field]" mode="decimal"
+																				:minFractionDigits="2" :maxFracionDigits="2" />
+																		</template>
+																		<template #body="slotProps">
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																		</template>
+																	</Column>
+																	<Column field="forexOverallTotal" header="Tutar (Döviz)" :style="{ width: '10%', 'max-width': '10%' }"
+																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
+																		<template #editor="slotProps">
+																			<InputNumber :read-only="true" v-model="slotProps.data[slotProps.column.field]" mode="decimal"
+																				:minFractionDigits="2" :maxFracionDigits="2" />
+																		</template>
+																		<template #body="slotProps">
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																		</template>
+																	</Column>
+
+																	<!-- <Column header="#">
+																		<template #body="slotProps">
+																			<Button label="" icon="pi pi-sliders-h"
+																				:class="'p-button-sm' && slotProps.data.processList && slotProps.data.processList.length > 0 ? 'p-button-success ' : 'p-button-outlined p-button-danger'"
+																				v-tooltip="'Kesim Bilgileri'" @click="showCuttingDetail(slotProps.data)" />
+																			<Button label="" icon="pi pi-file"
+																			:class="'p-button-sm' && p-button-success"
+																			v-tooltip="'Dosyalar'" @click="showFoldersDialog(slotProps.data)" />
+																		</template>
+																	</Column> -->
+																</DataTable>
+															</div>
+															<!-- <client-only>
 																<Datatable id="sc-dt-cost-items-table" ref="costItemsTable" :data="formData.costItems"
 																	:options="dtOptions" :customColumns="dtCostItemCols" :buttons="true"
 																	@initComplete="dtButtonsInitialized"
 																	:customEvents="[{ name: 'select', function: clickCostItemRow }, { name: 'deselect', function: deselectCostItemRow }]">
 																</Datatable>
-															</client-only>
+															</client-only> -->
 														</div>
 														<div class="uk-grid">
 															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
@@ -572,6 +693,8 @@ export default {
 		refreshCostItemForm: false,
 		refreshServiceForm: false,
 		refreshAttachmentForm: false,
+		isSaving: false,
+		itemList: [],
 		attachmentList: [],
 		offerDocList: [],
 		categories: [],
@@ -878,6 +1001,15 @@ export default {
 						return {
 							id: d.id.toString(),
 							text: d.forexName,
+						};
+					});
+
+				const itemData = (await api.get('Item')).data;
+				if (itemData)
+					this.itemList = itemData.map((d) => {
+						return {
+							id: d.id.toString(),
+							text: d.itemName,
 						};
 					});
 
@@ -1211,6 +1343,9 @@ export default {
 			}
 		},
 		async onSubmit() {
+			if (this.isSaving)
+				return;
+			this.isSaving = true;
 			try {
 				const postData = {
 					...this.formData,
@@ -1243,10 +1378,34 @@ export default {
 			} catch (error) {
 				this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
 			}
+			this.isSaving = false;
 		},
 		onCancel() {
 			this.$router.push('/project/list');
 		},
+		calculateCostItemRow(){
+			if (this.selectedCostItemRow != null){
+				try {
+					const subTotal = this.selectedCostItemRow.quantity * this.selectedCostItemRow.unitPrice;
+
+					let forexRate = 1;
+					if(this.selectedCostItemRow.forexId && this.selectedCostItemRow.forexId > 0)
+						forexRate = this.selectedCostItemRow.forexRate;
+
+					this.selectedCostItemRow.forexOverallTotal = subTotal;
+					this.selectedCostItemRow.overallTotal = this.selectedCostItemRow.forexOverallTotal * forexRate;
+				} catch (error) {
+					
+				}
+			}
+
+			this.calculateProjectCost();
+			this.calculateTotal();
+		},
+		onCellEditComplete(event) {
+            let { data, newValue, field } = event;
+            data[field] = newValue;
+        },
 		async onDelete() {
 			const self = this;
 			UIkit.modal.confirm('Bu projeyi silmek istediğinizden emin misiniz?').then(
@@ -1422,33 +1581,28 @@ export default {
 		deleteCostItem() {
 			const self = this;
 
-			UIkit.modal.confirm('Seçilen kalemleri silmek istediğinizden emin misiniz?').then(
+			UIkit.modal.confirm('Seçilen kalemi silmek istediğinizden emin misiniz?').then(
 				async function () {
 					const itemsToDelete = [];
-					for (let i = 0; i < self.selectedCostItemIndexes.length; i++) {
-						const item = self.formData.costItems[self.selectedCostItemIndexes[i]];
-						itemsToDelete.push(item);
-					}
 
-					for (let i = 0; i < itemsToDelete.length; i++) {
-						const element = itemsToDelete[i];
-						const costIndex = self.formData.costItems.indexOf(element);
-						if (costIndex > -1) {
+					if (self.selectedCostItemRow != null){
+						const costIndex = self.formData.costItems.indexOf(self.selectedCostItemRow);
+						if (costIndex > -1){
 							self.formData.costItems.splice(costIndex, 1);
+
+							// renumarate items
+							for (let i = 0; i < self.formData.costItems.length; i++) {
+								const element = self.formData.costItems[i];
+								element.lineNumber = i + 1;
+							}
+
+							self.selectedCostItemIndexes = [];
+							self.selectedCostItemRow = null;
+
+							self.calculateTotal();
+							self.calculateProjectCost();
 						}
 					}
-
-					// renumarate items
-					for (let i = 0; i < self.formData.costItems.length; i++) {
-						const element = self.formData.costItems[i];
-						element.lineNumber = i + 1;
-					}
-
-					self.selectedCostItemIndexes = [];
-					self.selectedCostItemRow = null;
-
-					self.calculateTotal();
-					self.calculateProjectCost();
 				});
 		},
 		async approveDetails() {
@@ -1590,10 +1744,10 @@ export default {
 			const orderRow = this.receiptList[selIndex];
 			window.open('/purchasing/item-receipt?id=' + orderRow.itemReceiptId, 'blank');
 		},
-		clickCostItemRow: function (e, dt, type, indexes) {
-			const selIndex = indexes[0];
-			this.selectedCostItemIndexes.push(selIndex);
-			this.selectedCostItemRow = this.formData.costItems[selIndex];
+		clickCostItemRow: function (event) {
+			// const selIndex = indexes[0];
+			// this.selectedCostItemIndexes.push(selIndex);
+			// this.selectedCostItemRow = this.formData.costItems[selIndex];
 		},
 		deselectCostItemRow: function (e, dt, type, indexes) {
 			const selIndex = indexes[0];
@@ -1692,6 +1846,30 @@ export default {
 				}
 			} catch (error) {
 				this.formData.forexRate = null;
+			}
+		},
+		async updateLiveForexRateOfCostItem(val) {
+			const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+
+			try {
+				// US DOLLAR, EURO
+				const api = axios.create();
+				const data = (await api.get(reqUri)).data;
+
+				this.selectedCostItemRow.forexId = val.toString();
+
+				const selectedForex = this.forexList.find(d => d.id == parseInt(val));
+
+				const searchCode = selectedForex.text == 'EUR' ? 'EURO' :
+					selectedForex.text == 'USD' ? 'US DOLLAR' : selectedForex.text;
+
+				const foundForex = data.TCMB_AnlikKurBilgileri.find(d => d.CurrencyName == searchCode);
+				if (foundForex) {
+					this.selectedCostItemRow.forexRate = foundForex.ForexSelling;
+					this.calculateCostItemRow();
+				}
+			} catch (error) {
+				this.selectedCostItemRow.forexRate = null;
 			}
 		}
 	},
