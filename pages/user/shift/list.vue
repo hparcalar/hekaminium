@@ -170,7 +170,7 @@ export default {
             totalMinutes: parseInt(d.totalHour),
             requiredMinutes: parseInt((this.endDate - this.startDate) / 864e5) * 450,
             totalHours: parseInt(d.totalHour / 60) + "." + ('0' + parseInt(d.totalHour % 60)).slice(-2),
-            diffMinute: (parseInt((this.endDate - this.startDate) / 864e5) * 450) - (parseInt(d.totalHour))
+            diffMinute: (parseInt(d.totalHour)) - (parseInt((this.endDate - this.startDate) / 864e5) * 450)
           };
         })
       }

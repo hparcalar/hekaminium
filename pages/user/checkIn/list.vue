@@ -6,7 +6,7 @@
           <div class="uk-flex-middle uk-grid-small uk-grid" data-uk-grid>
             <div class="uk-flex-1">
               <ScCardTitle>
-                Check In
+                Giriş/Çıkış Raporu
                 <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
                   <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
                   Yeni

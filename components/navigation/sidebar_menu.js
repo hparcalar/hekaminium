@@ -380,7 +380,7 @@ export const menuEntries = [
 			},
 			{
 				id: uniqueID(),
-				title: "Check In",
+				title: "Giriş/Çıkış Raporu",
 				page: "/user/checkIn/list"
 			},
 			{

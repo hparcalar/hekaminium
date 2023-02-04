@@ -8,7 +8,7 @@
                       ">
               <span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
               <h4 class="md-color-gray-600 uk-margin-remove">
-                Check In
+                Giriş/Çıkış Kaydı
               </h4>
             </div>
             <form>
