@@ -2,1206 +2,1213 @@
   {
     "name": "account_auth",
     "path": "/account_auth",
-    "component": "/home/hakan/Projects/hekaminium/pages/account_auth.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\account_auth.vue",
     "chunkName": "pages/account_auth",
-    "_name": "_51d079c8"
+    "_name": "_df818fc2"
   },
   {
     "name": "attachment-category",
     "path": "/attachment-category",
-    "component": "/home/hakan/Projects/hekaminium/pages/attachment-category/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\attachment-category\\\\index.vue",
     "chunkName": "pages/attachment-category/index",
-    "_name": "_1ae606b9"
+    "_name": "_5c71cecf"
   },
   {
     "name": "firm",
     "path": "/firm",
-    "component": "/home/hakan/Projects/hekaminium/pages/firm/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\firm\\\\index.vue",
     "chunkName": "pages/firm/index",
-    "_name": "_5704df63"
+    "_name": "_4ced1382"
   },
   {
     "name": "firm-category",
     "path": "/firm-category",
-    "component": "/home/hakan/Projects/hekaminium/pages/firm-category/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\firm-category\\\\index.vue",
     "chunkName": "pages/firm-category/index",
-    "_name": "_d45ff384"
+    "_name": "_666e8e2a"
   },
   {
     "name": "item",
     "path": "/item",
-    "component": "/home/hakan/Projects/hekaminium/pages/item/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item\\\\index.vue",
     "chunkName": "pages/item/index",
-    "_name": "_4f8bc410"
+    "_name": "_7efc0a4a"
   },
   {
     "name": "item-category",
     "path": "/item-category",
-    "component": "/home/hakan/Projects/hekaminium/pages/item-category/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item-category\\\\index.vue",
     "chunkName": "pages/item-category/index",
-    "_name": "_cf41416e"
+    "_name": "_946b5302"
   },
   {
     "name": "login_page",
     "path": "/login_page",
-    "component": "/home/hakan/Projects/hekaminium/pages/login_page.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\login_page.vue",
     "chunkName": "pages/login_page",
-    "_name": "_17e8f547"
+    "_name": "_594061ec"
   },
   {
     "name": "login_page_auth",
     "path": "/login_page_auth",
-    "component": "/home/hakan/Projects/hekaminium/pages/login_page_auth.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\login_page_auth.vue",
     "chunkName": "pages/login_page_auth",
-    "_name": "_2099c050"
+    "_name": "_9178ef26"
   },
   {
     "name": "plant",
     "path": "/plant",
-    "component": "/home/hakan/Projects/hekaminium/pages/plant/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plant\\\\index.vue",
     "chunkName": "pages/plant/index",
-    "_name": "_f8529d08"
+    "_name": "_4cb4fdac"
   },
   {
     "name": "process",
     "path": "/process",
-    "component": "/home/hakan/Projects/hekaminium/pages/process/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\process\\\\index.vue",
     "chunkName": "pages/process/index",
-    "_name": "_1765aa00"
+    "_name": "_3f047fe8"
   },
   {
     "name": "project",
     "path": "/project",
-    "component": "/home/hakan/Projects/hekaminium/pages/project/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project\\\\index.vue",
     "chunkName": "pages/project/index",
-    "_name": "_3b280b2a"
+    "_name": "_58f4b604"
   },
   {
     "name": "project-category",
     "path": "/project-category",
-    "component": "/home/hakan/Projects/hekaminium/pages/project-category/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project-category\\\\index.vue",
     "chunkName": "pages/project-category/index",
-    "_name": "_37b7ab52"
+    "_name": "_5d11864b"
   },
   {
     "name": "staffpermit",
     "path": "/staffpermit",
-    "component": "/home/hakan/Projects/hekaminium/pages/staffpermit/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\staffpermit\\\\index.vue",
     "chunkName": "pages/staffpermit/index",
-    "_name": "_1681618c"
+    "_name": "_2de7415c"
   },
   {
     "name": "warehouse",
     "path": "/warehouse",
-    "component": "/home/hakan/Projects/hekaminium/pages/warehouse/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\warehouse\\\\index.vue",
     "chunkName": "pages/warehouse/index",
-    "_name": "_218eb8d4"
+    "_name": "_2934b058"
   },
   {
     "name": "attachment-category-list",
     "path": "/attachment-category/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/attachment-category/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\attachment-category\\\\list.vue",
     "chunkName": "pages/attachment-category/list",
-    "_name": "_2945ba07"
+    "_name": "_75b59731"
   },
   {
     "name": "components-accordion",
     "path": "/components/accordion",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/accordion.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\accordion.vue",
     "chunkName": "pages/components/accordion",
-    "_name": "_93b0609e"
+    "_name": "_ae6d19c6"
   },
   {
     "name": "components-alert",
     "path": "/components/alert",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/alert.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\alert.vue",
     "chunkName": "pages/components/alert",
-    "_name": "_3aaefa45"
+    "_name": "_43b9989e"
   },
   {
     "name": "components-animations",
     "path": "/components/animations",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/animations.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\animations.vue",
     "chunkName": "pages/components/animations",
-    "_name": "_61e5f6d6"
+    "_name": "_790e7e2c"
   },
   {
     "name": "components-avatars",
     "path": "/components/avatars",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/avatars.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\avatars.vue",
     "chunkName": "pages/components/avatars",
-    "_name": "_49dd283a"
+    "_name": "_725cfa4f"
   },
   {
     "name": "components-badge_label",
     "path": "/components/badge_label",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/badge_label.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\badge_label.vue",
     "chunkName": "pages/components/badge_label",
-    "_name": "_a3486cfe"
+    "_name": "_7f2241ed"
   },
   {
     "name": "components-base",
     "path": "/components/base",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/base.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\base.vue",
     "chunkName": "pages/components/base",
-    "_name": "_11a4ce78"
+    "_name": "_b96490e8"
   },
   {
     "name": "components-breadcrumb",
     "path": "/components/breadcrumb",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/breadcrumb.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\breadcrumb.vue",
     "chunkName": "pages/components/breadcrumb",
-    "_name": "_6b65312c"
+    "_name": "_2be0317e"
   },
   {
     "name": "components-buttons",
     "path": "/components/buttons",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/buttons.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\buttons.vue",
     "chunkName": "pages/components/buttons",
-    "_name": "_5a84c5aa"
+    "_name": "_1c5f57d4"
   },
   {
     "name": "components-cards",
     "path": "/components/cards",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/cards.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\cards.vue",
     "chunkName": "pages/components/cards",
-    "_name": "_f76c0668"
+    "_name": "_27be3638"
   },
   {
     "name": "components-color_palette",
     "path": "/components/color_palette",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/color_palette.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\color_palette.vue",
     "chunkName": "pages/components/color_palette",
-    "_name": "_63791008"
+    "_name": "_1c831d74"
   },
   {
     "name": "components-drop_dropdowns",
     "path": "/components/drop_dropdowns",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/drop_dropdowns.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\drop_dropdowns.vue",
     "chunkName": "pages/components/drop_dropdowns",
-    "_name": "_7e05dcce"
+    "_name": "_2934b1ad"
   },
   {
     "name": "components-fab_buttons",
     "path": "/components/fab_buttons",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/fab_buttons.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\fab_buttons.vue",
     "chunkName": "pages/components/fab_buttons",
-    "_name": "_5220ebf2"
+    "_name": "_22e7645e"
   },
   {
     "name": "components-fancy_footer",
     "path": "/components/fancy_footer",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/fancy_footer.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\fancy_footer.vue",
     "chunkName": "pages/components/fancy_footer",
-    "_name": "_0f815878"
+    "_name": "_5789ed8c"
   },
   {
     "name": "components-fancy_toolbar",
     "path": "/components/fancy_toolbar",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/fancy_toolbar.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\fancy_toolbar.vue",
     "chunkName": "pages/components/fancy_toolbar",
-    "_name": "_0e0a8b6e"
+    "_name": "_71d6ce4c"
   },
   {
     "name": "components-filters",
     "path": "/components/filters",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/filters.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\filters.vue",
     "chunkName": "pages/components/filters",
-    "_name": "_e35045b8"
+    "_name": "_25a36b90"
   },
   {
     "name": "components-footer",
     "path": "/components/footer",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/footer.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\footer.vue",
     "chunkName": "pages/components/footer",
-    "_name": "_0009e082"
+    "_name": "_69c656d4"
   },
   {
     "name": "components-grid",
     "path": "/components/grid",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/grid.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\grid.vue",
     "chunkName": "pages/components/grid",
-    "_name": "_e993df26"
+    "_name": "_1cdef981"
   },
   {
     "name": "components-height",
     "path": "/components/height",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/height.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\height.vue",
     "chunkName": "pages/components/height",
-    "_name": "_0433160e"
+    "_name": "_6173ebbc"
   },
   {
     "name": "components-icons",
     "path": "/components/icons",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/icons.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\icons.vue",
     "chunkName": "pages/components/icons",
-    "_name": "_4004b503"
+    "_name": "_390e2322"
   },
   {
     "name": "components-lists",
     "path": "/components/lists",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/lists.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\lists.vue",
     "chunkName": "pages/components/lists",
-    "_name": "_49ef0ffe"
+    "_name": "_25396d2c"
   },
   {
     "name": "components-masonry",
     "path": "/components/masonry",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/masonry.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\masonry.vue",
     "chunkName": "pages/components/masonry",
-    "_name": "_3d99fb24"
+    "_name": "_787e90da"
   },
   {
     "name": "components-modals_dialogs",
     "path": "/components/modals_dialogs",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/modals_dialogs.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\modals_dialogs.vue",
     "chunkName": "pages/components/modals_dialogs",
-    "_name": "_3150be8e"
+    "_name": "_4f8f40cd"
   },
   {
     "name": "components-notifications",
     "path": "/components/notifications",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/notifications.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\notifications.vue",
     "chunkName": "pages/components/notifications",
-    "_name": "_1d4e7ed1"
+    "_name": "_534ee786"
   },
   {
     "name": "components-overlay",
     "path": "/components/overlay",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/overlay.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\overlay.vue",
     "chunkName": "pages/components/overlay",
-    "_name": "_abcd6a0e"
+    "_name": "_4164d965"
   },
   {
     "name": "components-pagination",
     "path": "/components/pagination",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/pagination.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\pagination.vue",
     "chunkName": "pages/components/pagination",
-    "_name": "_80b868fe"
+    "_name": "_21369595"
   },
   {
     "name": "components-progress_spinners",
     "path": "/components/progress_spinners",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/progress_spinners.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\progress_spinners.vue",
     "chunkName": "pages/components/progress_spinners",
-    "_name": "_47e5aa96"
+    "_name": "_858abbbe"
   },
   {
     "name": "components-scrollable",
     "path": "/components/scrollable",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/scrollable.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\scrollable.vue",
     "chunkName": "pages/components/scrollable",
-    "_name": "_5d00130e"
+    "_name": "_82da45bc"
   },
   {
     "name": "components-slider",
     "path": "/components/slider",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/slider.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\slider.vue",
     "chunkName": "pages/components/slider",
-    "_name": "_2566de70"
+    "_name": "_8f40f648"
   },
   {
     "name": "components-sortable",
     "path": "/components/sortable",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/sortable.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\sortable.vue",
     "chunkName": "pages/components/sortable",
-    "_name": "_3e6beec2"
+    "_name": "_32f047b3"
   },
   {
     "name": "components-swipe_list",
     "path": "/components/swipe_list",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/swipe_list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\swipe_list.vue",
     "chunkName": "pages/components/swipe_list",
-    "_name": "_0f2495ea"
+    "_name": "_70b75ffe"
   },
   {
     "name": "components-tables",
     "path": "/components/tables",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/tables.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\tables.vue",
     "chunkName": "pages/components/tables",
-    "_name": "_52bcf44c"
+    "_name": "_1dcfe860"
   },
   {
     "name": "components-tabs",
     "path": "/components/tabs",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/tabs.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\tabs.vue",
     "chunkName": "pages/components/tabs",
-    "_name": "_433cdca5"
+    "_name": "_5634748e"
   },
   {
     "name": "components-timeline",
     "path": "/components/timeline",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/timeline.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\timeline.vue",
     "chunkName": "pages/components/timeline",
-    "_name": "_3bdff730"
+    "_name": "_3436437c"
   },
   {
     "name": "components-toolbar",
     "path": "/components/toolbar",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/toolbar.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\toolbar.vue",
     "chunkName": "pages/components/toolbar",
-    "_name": "_2e9304a4"
+    "_name": "_7442d9e0"
   },
   {
     "name": "components-tooltips",
     "path": "/components/tooltips",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/tooltips.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\tooltips.vue",
     "chunkName": "pages/components/tooltips",
-    "_name": "_cdd2fd12"
+    "_name": "_29867eea"
   },
   {
     "name": "components-transitions",
     "path": "/components/transitions",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/transitions.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\transitions.vue",
     "chunkName": "pages/components/transitions",
-    "_name": "_8c5b2632"
+    "_name": "_eace355a"
   },
   {
     "name": "components-width",
     "path": "/components/width",
-    "component": "/home/hakan/Projects/hekaminium/pages/components/width.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\components\\\\width.vue",
     "chunkName": "pages/components/width",
-    "_name": "_e2714ca2"
+    "_name": "_323b931b"
   },
   {
     "name": "dashboard-v1",
     "path": "/dashboard/v1",
-    "component": "/home/hakan/Projects/hekaminium/pages/dashboard/v1.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\dashboard\\\\v1.vue",
     "chunkName": "pages/dashboard/v1",
-    "_name": "_03c63078"
+    "_name": "_39c1dd3a"
   },
   {
     "name": "dashboard-v2",
     "path": "/dashboard/v2",
-    "component": "/home/hakan/Projects/hekaminium/pages/dashboard/v2.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\dashboard\\\\v2.vue",
     "chunkName": "pages/dashboard/v2",
-    "_name": "_03d447f9"
+    "_name": "_39cff4bb"
   },
   {
     "name": "firm-category-list",
     "path": "/firm-category/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/firm-category/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\firm-category\\\\list.vue",
     "chunkName": "pages/firm-category/list",
-    "_name": "_670b35e2"
+    "_name": "_6dc60076"
   },
   {
     "name": "firm-list",
     "path": "/firm/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/firm/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\firm\\\\list.vue",
     "chunkName": "pages/firm/list",
-    "_name": "_22f4241d"
+    "_name": "_67597c7e"
   },
   {
     "name": "forms-dynamic_fields",
     "path": "/forms/dynamic_fields",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/dynamic_fields.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\dynamic_fields.vue",
     "chunkName": "pages/forms/dynamic_fields",
-    "_name": "_39cde9bb"
+    "_name": "_492cab93"
   },
   {
     "name": "forms-regular_elements",
     "path": "/forms/regular_elements",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/regular_elements.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\regular_elements.vue",
     "chunkName": "pages/forms/regular_elements",
-    "_name": "_322a2a3c"
+    "_name": "_364053d8"
   },
   {
     "name": "forms-validation",
     "path": "/forms/validation",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/validation.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\validation.vue",
     "chunkName": "pages/forms/validation",
-    "_name": "_96999f0a"
+    "_name": "_5cac9e53"
   },
   {
     "name": "forms-wizard",
     "path": "/forms/wizard",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/wizard.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wizard.vue",
     "chunkName": "pages/forms/wizard",
     "children": [
       {
         "name": "forms-wizard-step1",
         "path": "step1",
-        "component": "/home/hakan/Projects/hekaminium/pages/forms/wizard/step1.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wizard\\\\step1.vue",
         "chunkName": "pages/forms/wizard/step1",
-        "_name": "_bf335a7a"
+        "_name": "_ae311ba0"
       },
       {
         "name": "forms-wizard-step2",
         "path": "step2",
-        "component": "/home/hakan/Projects/hekaminium/pages/forms/wizard/step2.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wizard\\\\step2.vue",
         "chunkName": "pages/forms/wizard/step2",
-        "_name": "_bf172b78"
+        "_name": "_ae14ec9e"
       },
       {
         "name": "forms-wizard-step3",
         "path": "step3",
-        "component": "/home/hakan/Projects/hekaminium/pages/forms/wizard/step3.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wizard\\\\step3.vue",
         "chunkName": "pages/forms/wizard/step3",
-        "_name": "_befafc76"
+        "_name": "_adf8bd9c"
       }
     ],
-    "_name": "_71222d26"
+    "_name": "_78390345"
   },
   {
     "name": "item-category-list",
     "path": "/item-category/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/item-category/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item-category\\\\list.vue",
     "chunkName": "pages/item-category/list",
-    "_name": "_7c11e112"
+    "_name": "_70555981"
   },
   {
     "name": "item-consumption",
     "path": "/item/consumption",
-    "component": "/home/hakan/Projects/hekaminium/pages/item/consumption.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item\\\\consumption.vue",
     "chunkName": "pages/item/consumption",
-    "_name": "_3118f9c1"
+    "_name": "_3378e093"
   },
   {
     "name": "item-list",
     "path": "/item/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/item/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\item\\\\list.vue",
     "chunkName": "pages/item/list",
-    "_name": "_98fb8230"
+    "_name": "_4d888056"
   },
   {
     "name": "layout-boxed",
     "path": "/layout/boxed",
-    "component": "/home/hakan/Projects/hekaminium/pages/layout/boxed.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\layout\\\\boxed.vue",
     "chunkName": "pages/layout/boxed",
-    "_name": "_59763cb2"
+    "_name": "_36d88beb"
   },
   {
     "name": "layout-mini_sidebar",
     "path": "/layout/mini_sidebar",
-    "component": "/home/hakan/Projects/hekaminium/pages/layout/mini_sidebar.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\layout\\\\mini_sidebar.vue",
     "chunkName": "pages/layout/mini_sidebar",
-    "_name": "_ee0367f2"
+    "_name": "_acb1657a"
   },
   {
     "name": "layout-offcanvas_sidebar",
     "path": "/layout/offcanvas_sidebar",
-    "component": "/home/hakan/Projects/hekaminium/pages/layout/offcanvas_sidebar.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\layout\\\\offcanvas_sidebar.vue",
     "chunkName": "pages/layout/offcanvas_sidebar",
-    "_name": "_2fcb1fbe"
+    "_name": "_37665736"
   },
   {
     "name": "layout-top_menu",
     "path": "/layout/top_menu",
-    "component": "/home/hakan/Projects/hekaminium/pages/layout/top_menu.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\layout\\\\top_menu.vue",
     "chunkName": "pages/layout/top_menu",
-    "_name": "_020a399c"
+    "_name": "_42058e50"
   },
   {
     "name": "pages-blank",
     "path": "/pages/blank",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/blank.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\blank.vue",
     "chunkName": "pages/pages/blank",
-    "_name": "_1e8e0317"
+    "_name": "_3904c396"
   },
   {
     "name": "pages-blank_header_expanded",
     "path": "/pages/blank_header_expanded",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/blank_header_expanded.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\blank_header_expanded.vue",
     "chunkName": "pages/pages/blank_header_expanded",
-    "_name": "_d98fa1fa"
+    "_name": "_310c63be"
   },
   {
     "name": "pages-chat",
     "path": "/pages/chat",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/chat.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\chat.vue",
     "chunkName": "pages/pages/chat",
-    "_name": "_5bafff65"
+    "_name": "_021ceef2"
   },
   {
     "name": "pages-contact_list",
     "path": "/pages/contact_list",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/contact_list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\contact_list.vue",
     "chunkName": "pages/pages/contact_list",
-    "_name": "_312e75ea"
+    "_name": "_53edbd0c"
   },
   {
     "name": "pages-contact_list_single",
     "path": "/pages/contact_list_single",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/contact_list_single.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\contact_list_single.vue",
     "chunkName": "pages/pages/contact_list_single",
-    "_name": "_0ccd3626"
+    "_name": "_5154338b"
   },
   {
     "name": "pages-data_visualization",
     "path": "/pages/data_visualization",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/data_visualization.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\data_visualization.vue",
     "chunkName": "pages/pages/data_visualization",
-    "_name": "_4353e5c8"
+    "_name": "_d2501a84"
   },
   {
     "name": "pages-gallery",
     "path": "/pages/gallery",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/gallery.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\gallery.vue",
     "chunkName": "pages/pages/gallery",
-    "_name": "_3b73c956"
+    "_name": "_29bb66f3"
   },
   {
     "name": "pages-help_faq",
     "path": "/pages/help_faq",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/help_faq.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\help_faq.vue",
     "chunkName": "pages/pages/help_faq",
-    "_name": "_035ccaa5"
+    "_name": "_aade1a72"
   },
   {
     "path": "/pages/invoices",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/invoices.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\invoices.vue",
     "chunkName": "pages/pages/invoices",
     "children": [
       {
         "name": "pages-invoices",
         "path": "",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/invoices/index.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\invoices\\\\index.vue",
         "chunkName": "pages/pages/invoices/index",
-        "_name": "_4560b9b6"
+        "_name": "_d7095566"
       },
       {
         "name": "pages-invoices-new",
         "path": "new",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/invoices/new.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\invoices\\\\new.vue",
         "chunkName": "pages/pages/invoices/new",
-        "_name": "_39d38684"
+        "_name": "_8d83c84a"
       },
       {
         "name": "pages-invoices-id",
         "path": ":id",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/invoices/_id.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\invoices\\\\_id.vue",
         "chunkName": "pages/pages/invoices/_id",
-        "_name": "_261db19e"
+        "_name": "_b4ef7216"
       }
     ],
-    "_name": "_9689551a"
+    "_name": "_5bef7d95"
   },
   {
     "name": "pages-issues",
     "path": "/pages/issues",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/issues.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\issues.vue",
     "chunkName": "pages/pages/issues",
     "children": [
       {
         "name": "pages-issues-details",
         "path": "details",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/issues/details.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\issues\\\\details.vue",
         "chunkName": "pages/pages/issues/details",
         "children": [
           {
             "name": "pages-issues-details-id",
             "path": ":id?",
-            "component": "/home/hakan/Projects/hekaminium/pages/pages/issues/details/_id.vue",
+            "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\issues\\\\details\\\\_id.vue",
             "chunkName": "pages/pages/issues/details/_id",
-            "_name": "_0c74f3e5"
+            "_name": "_b2244fbe"
           }
         ],
-        "_name": "_0b24d33a"
+        "_name": "_5ff23e2e"
       },
       {
         "name": "pages-issues-list",
         "path": "list",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/issues/list.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\issues\\\\list.vue",
         "chunkName": "pages/pages/issues/list",
-        "_name": "_8129fe54"
+        "_name": "_26006987"
       }
     ],
-    "_name": "_28a2d487"
+    "_name": "_01a69d29"
   },
   {
     "path": "/pages/mailbox",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/mailbox.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\mailbox.vue",
     "chunkName": "pages/pages/mailbox",
     "children": [
       {
         "name": "pages-mailbox",
         "path": "",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/mailbox/index.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\mailbox\\\\index.vue",
         "chunkName": "pages/pages/mailbox/index",
-        "_name": "_3dab660c"
+        "_name": "_50b7638d"
       },
       {
         "name": "pages-mailbox-compose",
         "path": "compose",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/mailbox/compose.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\mailbox\\\\compose.vue",
         "chunkName": "pages/pages/mailbox/compose",
-        "_name": "_07385c8c"
+        "_name": "_85f4e0e6"
       },
       {
         "name": "pages-mailbox-message-id",
         "path": "message/:id?",
-        "component": "/home/hakan/Projects/hekaminium/pages/pages/mailbox/message/_id.vue",
+        "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\mailbox\\\\message\\\\_id.vue",
         "chunkName": "pages/pages/mailbox/message/_id",
-        "_name": "_11a6084c"
+        "_name": "_29339528"
       }
     ],
-    "_name": "_0214a892"
+    "_name": "_466af755"
   },
   {
     "name": "pages-notes",
     "path": "/pages/notes",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/notes.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\notes.vue",
     "chunkName": "pages/pages/notes",
-    "_name": "_27924204"
+    "_name": "_26fc45bc"
   },
   {
     "name": "pages-poi_listing",
     "path": "/pages/poi_listing",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/poi_listing.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\poi_listing.vue",
     "chunkName": "pages/pages/poi_listing",
-    "_name": "_5c298cdc"
+    "_name": "_ff14f3a0"
   },
   {
     "name": "pages-pricing_tables",
     "path": "/pages/pricing_tables",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/pricing_tables.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\pricing_tables.vue",
     "chunkName": "pages/pages/pricing_tables",
-    "_name": "_2effe86a"
+    "_name": "_588a126d"
   },
   {
     "name": "pages-settings",
     "path": "/pages/settings",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/settings.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\settings.vue",
     "chunkName": "pages/pages/settings",
-    "_name": "_0bb30830"
+    "_name": "_9a319f5c"
   },
   {
     "name": "pages-task_board",
     "path": "/pages/task_board",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/task_board.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\task_board.vue",
     "chunkName": "pages/pages/task_board",
-    "_name": "_4ad905f9"
+    "_name": "_14b8a4ca"
   },
   {
     "name": "pages-user_profile",
     "path": "/pages/user_profile",
-    "component": "/home/hakan/Projects/hekaminium/pages/pages/user_profile.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\pages\\\\user_profile.vue",
     "chunkName": "pages/pages/user_profile",
-    "_name": "_06ed11c2"
+    "_name": "_29ac58e4"
   },
   {
     "name": "plant-list",
     "path": "/plant/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/plant/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plant\\\\list.vue",
     "chunkName": "pages/plant/list",
-    "_name": "_cff9aa38"
+    "_name": "_1ddace98"
   },
   {
     "name": "plugins-ajax",
     "path": "/plugins/ajax",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/ajax.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\ajax.vue",
     "chunkName": "pages/plugins/ajax",
-    "_name": "_21f94f51"
+    "_name": "_b32ac12a"
   },
   {
     "name": "plugins-calendar",
     "path": "/plugins/calendar",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/calendar.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\calendar.vue",
     "chunkName": "pages/plugins/calendar",
-    "_name": "_4b63e4ef"
+    "_name": "_cfc8cfee"
   },
   {
     "name": "plugins-calendar_events",
     "path": "/plugins/calendar_events",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/calendar_events.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\calendar_events.vue",
     "chunkName": "pages/plugins/calendar_events",
-    "_name": "_ce3cface"
+    "_name": "_40ee0382"
   },
   {
     "name": "plugins-charts",
     "path": "/plugins/charts",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/charts.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\charts.vue",
     "chunkName": "pages/plugins/charts",
-    "_name": "_fa9f4674"
+    "_name": "_9fe3e340"
   },
   {
     "name": "plugins-code_editor",
     "path": "/plugins/code_editor",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/code_editor.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\code_editor.vue",
     "chunkName": "pages/plugins/code_editor",
-    "_name": "_4144e344"
+    "_name": "_d69e65f8"
   },
   {
     "name": "plugins-data_grid",
     "path": "/plugins/data_grid",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/data_grid.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\data_grid.vue",
     "chunkName": "pages/plugins/data_grid",
-    "_name": "_37f9ae4c"
+    "_name": "_2e41d900"
   },
   {
     "name": "plugins-datatables",
     "path": "/plugins/datatables",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/datatables.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\datatables.vue",
     "chunkName": "pages/plugins/datatables",
-    "_name": "_52cdfd80"
+    "_name": "_5065521a"
   },
   {
     "name": "plugins-diff_tool",
     "path": "/plugins/diff_tool",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/diff_tool.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\diff_tool.vue",
     "chunkName": "pages/plugins/diff_tool",
-    "_name": "_74e82831"
+    "_name": "_81b24f52"
   },
   {
     "name": "plugins-gantt_chart",
     "path": "/plugins/gantt_chart",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/gantt_chart.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\gantt_chart.vue",
     "chunkName": "pages/plugins/gantt_chart",
-    "_name": "_4a39dc92"
+    "_name": "_00e5c990"
   },
   {
     "name": "plugins-google_maps",
     "path": "/plugins/google_maps",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/google_maps.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\google_maps.vue",
     "chunkName": "pages/plugins/google_maps",
-    "_name": "_17701f88"
+    "_name": "_acc9a23c"
   },
   {
     "name": "plugins-idle_timeout",
     "path": "/plugins/idle_timeout",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/idle_timeout.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\idle_timeout.vue",
     "chunkName": "pages/plugins/idle_timeout",
-    "_name": "_4ace3927"
+    "_name": "_3fe2cf41"
   },
   {
     "name": "plugins-image_cropper",
     "path": "/plugins/image_cropper",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/image_cropper.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\image_cropper.vue",
     "chunkName": "pages/plugins/image_cropper",
-    "_name": "_360d8948"
+    "_name": "_38e89324"
   },
   {
     "name": "plugins-push_notifications",
     "path": "/plugins/push_notifications",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/push_notifications.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\push_notifications.vue",
     "chunkName": "pages/plugins/push_notifications",
-    "_name": "_43405474"
+    "_name": "_5f6e6f0e"
   },
   {
     "name": "plugins-tour",
     "path": "/plugins/tour",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/tour.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\tour.vue",
     "chunkName": "pages/plugins/tour",
-    "_name": "_01fb2b89"
+    "_name": "_f32708ba"
   },
   {
     "name": "plugins-tree",
     "path": "/plugins/tree",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/tree.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\tree.vue",
     "chunkName": "pages/plugins/tree",
-    "_name": "_f6adbc62"
+    "_name": "_091a71e9"
   },
   {
     "name": "plugins-vector_maps",
     "path": "/plugins/vector_maps",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/vector_maps.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\vector_maps.vue",
     "chunkName": "pages/plugins/vector_maps",
-    "_name": "_7c798f1c"
+    "_name": "_77167718"
   },
   {
     "name": "plugins-vue_good_table",
     "path": "/plugins/vue_good_table",
-    "component": "/home/hakan/Projects/hekaminium/pages/plugins/vue_good_table.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\plugins\\\\vue_good_table.vue",
     "chunkName": "pages/plugins/vue_good_table",
-    "_name": "_10767cd4"
+    "_name": "_0be78da0"
   },
   {
     "name": "process-list",
     "path": "/process/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/process/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\process\\\\list.vue",
     "chunkName": "pages/process/list",
-    "_name": "_61d570e0"
+    "_name": "_19ebdef8"
   },
   {
     "name": "project-category-list",
     "path": "/project-category/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/project-category/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project-category\\\\list.vue",
     "chunkName": "pages/project-category/list",
-    "_name": "_3805aaa9"
+    "_name": "_d279ff96"
   },
   {
     "name": "project-docview",
     "path": "/project/docview",
-    "component": "/home/hakan/Projects/hekaminium/pages/project/docview.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project\\\\docview.vue",
     "chunkName": "pages/project/docview",
-    "_name": "_99c2ce96"
+    "_name": "_ab05e4ee"
   },
   {
     "name": "project-fieldservice",
     "path": "/project/fieldservice",
-    "component": "/home/hakan/Projects/hekaminium/pages/project/fieldservice/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project\\\\fieldservice\\\\index.vue",
     "chunkName": "pages/project/fieldservice/index",
-    "_name": "_011dddd4"
+    "_name": "_4910f323"
   },
   {
     "name": "project-list",
     "path": "/project/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/project/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project\\\\list.vue",
     "chunkName": "pages/project/list",
-    "_name": "_e52e3914"
+    "_name": "_60c6bf22"
   },
   {
     "name": "purchasing-internal-demand",
     "path": "/purchasing/internal-demand",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/internal-demand/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\internal-demand\\\\index.vue",
     "chunkName": "pages/purchasing/internal-demand/index",
-    "_name": "_367a5b6f"
+    "_name": "_262e42fa"
   },
   {
     "name": "purchasing-item-demand",
     "path": "/purchasing/item-demand",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-demand/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-demand\\\\index.vue",
     "chunkName": "pages/purchasing/item-demand/index",
-    "_name": "_3a5d6259"
+    "_name": "_fc5aa960"
   },
   {
     "name": "purchasing-item-offer",
     "path": "/purchasing/item-offer",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-offer/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-offer\\\\index.vue",
     "chunkName": "pages/purchasing/item-offer/index",
-    "_name": "_16cf2d38"
+    "_name": "_2176ed46"
   },
   {
     "name": "purchasing-item-order",
     "path": "/purchasing/item-order",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-order/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-order\\\\index.vue",
     "chunkName": "pages/purchasing/item-order/index",
-    "_name": "_a4106054"
+    "_name": "_61d1f12b"
   },
   {
     "name": "purchasing-item-receipt",
     "path": "/purchasing/item-receipt",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-receipt/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-receipt\\\\index.vue",
     "chunkName": "pages/purchasing/item-receipt/index",
-    "_name": "_574ed200"
+    "_name": "_03eccf7e"
   },
   {
     "name": "staffpermit-list",
     "path": "/staffpermit/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/staffpermit/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\staffpermit\\\\list.vue",
     "chunkName": "pages/staffpermit/list",
-    "_name": "_e78b8e58"
+    "_name": "_63b11f04"
   },
   {
     "name": "user-checkIn",
     "path": "/user/checkIn",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\checkIn\\\\index.vue",
     "chunkName": "pages/user/checkIn/index",
-    "_name": "_bf0c9124"
+    "_name": "_a73f5d56"
   },
   {
     "name": "user-department",
     "path": "/user/department",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/department/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\department\\\\index.vue",
     "chunkName": "pages/user/department/index",
-    "_name": "_13013de7"
+    "_name": "_3bf03480"
   },
   {
     "name": "user-employee",
     "path": "/user/employee",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/employee/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\employee\\\\index.vue",
     "chunkName": "pages/user/employee/index",
-    "_name": "_47a694c3"
+    "_name": "_6971ecb8"
   },
   {
     "name": "user-member",
     "path": "/user/member",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/member/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\member\\\\index.vue",
     "chunkName": "pages/user/member/index",
-    "_name": "_6a51cfa2"
+    "_name": "_4a926438"
   },
   {
     "name": "user-role",
     "path": "/user/role",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/role/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\role\\\\index.vue",
     "chunkName": "pages/user/role/index",
-    "_name": "_e9d63cea"
+    "_name": "_5b9b56dc"
   },
   {
     "name": "warehouse-list",
     "path": "/warehouse/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/warehouse/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\warehouse\\\\list.vue",
     "chunkName": "pages/warehouse/list",
-    "_name": "_3a00d88c"
+    "_name": "_7210098c"
   },
   {
     "name": "warehouse-live",
     "path": "/warehouse/live",
-    "component": "/home/hakan/Projects/hekaminium/pages/warehouse/live.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\warehouse\\\\live.vue",
     "chunkName": "pages/warehouse/live",
-    "_name": "_3e4c01da"
+    "_name": "_765b32da"
   },
   {
     "name": "forms-advanced_elements-checkbox_radio",
     "path": "/forms/advanced_elements/checkbox_radio",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/checkbox_radio.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\checkbox_radio.vue",
     "chunkName": "pages/forms/advanced_elements/checkbox_radio",
-    "_name": "_6b60c37c"
+    "_name": "_6c61a789"
   },
   {
     "name": "forms-advanced_elements-color_picker",
     "path": "/forms/advanced_elements/color_picker",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/color_picker.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\color_picker.vue",
     "chunkName": "pages/forms/advanced_elements/color_picker",
-    "_name": "_dffdb0b2"
+    "_name": "_4415aaf4"
   },
   {
     "name": "forms-advanced_elements-date_picker",
     "path": "/forms/advanced_elements/date_picker",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/date_picker.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\date_picker.vue",
     "chunkName": "pages/forms/advanced_elements/date_picker",
-    "_name": "_5aa560dc"
+    "_name": "_0cf6a2b6"
   },
   {
     "name": "forms-advanced_elements-date_range_picker",
     "path": "/forms/advanced_elements/date_range_picker",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/date_range_picker.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\date_range_picker.vue",
     "chunkName": "pages/forms/advanced_elements/date_range_picker",
-    "_name": "_e7ea1a58"
+    "_name": "_52b577a7"
   },
   {
     "name": "forms-advanced_elements-inputmask",
     "path": "/forms/advanced_elements/inputmask",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/inputmask.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\inputmask.vue",
     "chunkName": "pages/forms/advanced_elements/inputmask",
-    "_name": "_6b42c249"
+    "_name": "_0f066bc8"
   },
   {
     "name": "forms-advanced_elements-multiselect",
     "path": "/forms/advanced_elements/multiselect",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/multiselect.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\multiselect.vue",
     "chunkName": "pages/forms/advanced_elements/multiselect",
-    "_name": "_62f989c8"
+    "_name": "_ec5e2e4a"
   },
   {
     "name": "forms-advanced_elements-range_slider",
     "path": "/forms/advanced_elements/range_slider",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/range_slider.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\range_slider.vue",
     "chunkName": "pages/forms/advanced_elements/range_slider",
-    "_name": "_5fd06060"
+    "_name": "_13e4e3ad"
   },
   {
     "name": "forms-advanced_elements-rating",
     "path": "/forms/advanced_elements/rating",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/rating.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\rating.vue",
     "chunkName": "pages/forms/advanced_elements/rating",
-    "_name": "_5d9cf69a"
+    "_name": "_4ef537a7"
   },
   {
     "name": "forms-advanced_elements-select2",
     "path": "/forms/advanced_elements/select2",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/select2.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\select2.vue",
     "chunkName": "pages/forms/advanced_elements/select2",
-    "_name": "_4ac64609"
+    "_name": "_f713b2c8"
   },
   {
     "name": "forms-advanced_elements-switches",
     "path": "/forms/advanced_elements/switches",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/switches.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\switches.vue",
     "chunkName": "pages/forms/advanced_elements/switches",
-    "_name": "_39253c1f"
+    "_name": "_35716dec"
   },
   {
     "name": "forms-advanced_elements-time_picker",
     "path": "/forms/advanced_elements/time_picker",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/advanced_elements/time_picker.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\advanced_elements\\\\time_picker.vue",
     "chunkName": "pages/forms/advanced_elements/time_picker",
-    "_name": "_0c85d9da"
+    "_name": "_20947226"
   },
   {
     "name": "forms-examples-advertising_evaluation_form",
     "path": "/forms/examples/advertising_evaluation_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/advertising_evaluation_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\advertising_evaluation_form.vue",
     "chunkName": "pages/forms/examples/advertising_evaluation_form",
-    "_name": "_2f3b5108"
+    "_name": "_406739b9"
   },
   {
     "name": "forms-examples-booking_form",
     "path": "/forms/examples/booking_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/booking_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\booking_form.vue",
     "chunkName": "pages/forms/examples/booking_form",
-    "_name": "_7ae54b5e"
+    "_name": "_44c536cd"
   },
   {
     "name": "forms-examples-car_rental_form",
     "path": "/forms/examples/car_rental_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/car_rental_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\car_rental_form.vue",
     "chunkName": "pages/forms/examples/car_rental_form",
-    "_name": "_16b09950"
+    "_name": "_77774381"
   },
   {
     "name": "forms-examples-checkout_form",
     "path": "/forms/examples/checkout_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/checkout_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\checkout_form.vue",
     "chunkName": "pages/forms/examples/checkout_form",
-    "_name": "_41933ad9"
+    "_name": "_989e856c"
   },
   {
     "name": "forms-examples-contact_forms",
     "path": "/forms/examples/contact_forms",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/contact_forms.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\contact_forms.vue",
     "chunkName": "pages/forms/examples/contact_forms",
-    "_name": "_d825dee8"
+    "_name": "_060a92fd"
   },
   {
     "name": "forms-examples-job_application_form",
     "path": "/forms/examples/job_application_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/job_application_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\job_application_form.vue",
     "chunkName": "pages/forms/examples/job_application_form",
-    "_name": "_97a300ee"
+    "_name": "_4a9f8bf8"
   },
   {
     "name": "forms-examples-medical_history_form",
     "path": "/forms/examples/medical_history_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/medical_history_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\medical_history_form.vue",
     "chunkName": "pages/forms/examples/medical_history_form",
-    "_name": "_6bd30171"
+    "_name": "_02440de0"
   },
   {
     "name": "forms-examples-registration_form",
     "path": "/forms/examples/registration_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/registration_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\registration_form.vue",
     "chunkName": "pages/forms/examples/registration_form",
-    "_name": "_58ce4274"
+    "_name": "_1d5dc0b7"
   },
   {
     "name": "forms-examples-rental_application_form",
     "path": "/forms/examples/rental_application_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/rental_application_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\rental_application_form.vue",
     "chunkName": "pages/forms/examples/rental_application_form",
-    "_name": "_47bbed4a"
+    "_name": "_5551d67b"
   },
   {
     "name": "forms-examples-transaction_feedback_form",
     "path": "/forms/examples/transaction_feedback_form",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/examples/transaction_feedback_form.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\examples\\\\transaction_feedback_form.vue",
     "chunkName": "pages/forms/examples/transaction_feedback_form",
-    "_name": "_49225e59"
+    "_name": "_48e2bf4a"
   },
   {
     "name": "forms-wysiwyg-ckeditor",
     "path": "/forms/wysiwyg/ckeditor",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/wysiwyg/ckeditor.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wysiwyg\\\\ckeditor.vue",
     "chunkName": "pages/forms/wysiwyg/ckeditor",
-    "_name": "_3a36a9ce"
+    "_name": "_2b2b50b8"
   },
   {
     "name": "forms-wysiwyg-quill",
     "path": "/forms/wysiwyg/quill",
-    "component": "/home/hakan/Projects/hekaminium/pages/forms/wysiwyg/quill.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\forms\\\\wysiwyg\\\\quill.vue",
     "chunkName": "pages/forms/wysiwyg/quill",
-    "_name": "_61f0591e"
+    "_name": "_35912a32"
   },
   {
     "name": "project-fieldservice-list",
     "path": "/project/fieldservice/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/project/fieldservice/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\project\\\\fieldservice\\\\list.vue",
     "chunkName": "pages/project/fieldservice/list",
-    "_name": "_6231700a"
+    "_name": "_0d92cf46"
   },
   {
     "name": "purchasing-internal-demand-list",
     "path": "/purchasing/internal-demand/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/internal-demand/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\internal-demand\\\\list.vue",
     "chunkName": "pages/purchasing/internal-demand/list",
-    "_name": "_2fce12de"
+    "_name": "_20571cb4"
   },
   {
     "name": "purchasing-item-demand-list",
     "path": "/purchasing/item-demand/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-demand/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-demand\\\\list.vue",
     "chunkName": "pages/purchasing/item-demand/list",
-    "_name": "_d4b72b32"
+    "_name": "_af12b2e0"
   },
   {
     "name": "purchasing-item-demand-my-demands",
     "path": "/purchasing/item-demand/my-demands",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-demand/my-demands.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-demand\\\\my-demands.vue",
     "chunkName": "pages/purchasing/item-demand/my-demands",
-    "_name": "_7dee68f0"
+    "_name": "_1a032259"
   },
   {
     "name": "purchasing-item-demand-waiting-for-approve",
     "path": "/purchasing/item-demand/waiting-for-approve",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-demand/waiting-for-approve.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-demand\\\\waiting-for-approve.vue",
     "chunkName": "pages/purchasing/item-demand/waiting-for-approve",
-    "_name": "_ea32e2e0"
+    "_name": "_eb9d4972"
   },
   {
     "name": "purchasing-item-offer-list",
     "path": "/purchasing/item-offer/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-offer/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-offer\\\\list.vue",
     "chunkName": "pages/purchasing/item-offer/list",
-    "_name": "_44925408"
+    "_name": "_c90b5a3a"
   },
   {
     "name": "purchasing-item-order-list",
     "path": "/purchasing/item-order/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-order/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-order\\\\list.vue",
     "chunkName": "pages/purchasing/item-order/list",
-    "_name": "_07104d6c"
+    "_name": "_54d9b955"
   },
   {
     "name": "purchasing-item-order-waiting-for-approve",
     "path": "/purchasing/item-order/waiting-for-approve",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-order/waiting-for-approve.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-order\\\\waiting-for-approve.vue",
     "chunkName": "pages/purchasing/item-order/waiting-for-approve",
-    "_name": "_153dc566"
+    "_name": "_0247c5e2"
   },
   {
     "name": "purchasing-item-receipt-list",
     "path": "/purchasing/item-receipt/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/purchasing/item-receipt/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\purchasing\\\\item-receipt\\\\list.vue",
     "chunkName": "pages/purchasing/item-receipt/list",
-    "_name": "_46a6f640"
+    "_name": "_6225d77f"
   },
   {
     "name": "user-checkIn-checkIn",
     "path": "/user/checkIn/checkIn",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/checkIn.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\checkIn\\\\checkIn.vue",
     "chunkName": "pages/user/checkIn/checkIn",
-    "_name": "_7427f469"
+    "_name": "_20cfb090"
   },
   {
     "name": "user-checkIn-list",
     "path": "/user/checkIn/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/checkIn/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\checkIn\\\\list.vue",
     "chunkName": "pages/user/checkIn/list",
-    "_name": "_14ce9eb2"
+    "_name": "_7849abeb"
   },
   {
     "name": "user-department-list",
     "path": "/user/department/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/department/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\department\\\\list.vue",
     "chunkName": "pages/user/department/list",
-    "_name": "_532035ce"
+    "_name": "_7ceb3760"
   },
   {
     "name": "user-employee-list",
     "path": "/user/employee/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/employee/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\employee\\\\list.vue",
     "chunkName": "pages/user/employee/list",
-    "_name": "_b2d37a86"
+    "_name": "_bad9a488"
   },
   {
     "name": "user-member-list",
     "path": "/user/member/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/member/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\member\\\\list.vue",
     "chunkName": "pages/user/member/list",
-    "_name": "_aa5cbc5e"
+    "_name": "_e42f9eb0"
   },
   {
     "name": "user-role-list",
     "path": "/user/role/list",
-    "component": "/home/hakan/Projects/hekaminium/pages/user/role/list.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\role\\\\list.vue",
     "chunkName": "pages/user/role/list",
-    "_name": "_8d718616"
+    "_name": "_4c645984"
+  },
+  {
+    "name": "user-shift-list",
+    "path": "/user/shift/list",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\user\\\\shift\\\\list.vue",
+    "chunkName": "pages/user/shift/list",
+    "_name": "_fa239040"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/hakan/Projects/hekaminium/pages/index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\ButanMakina\\\\HekaminiumWeb\\\\hekaminium\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_195a46c0"
+    "_name": "_2695b4fd"
   }
 ]

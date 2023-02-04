@@ -382,6 +382,11 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Check In",
 				page: "/user/checkIn/list"
+			},
+			{
+				id: uniqueID(),
+				title: "Mesai Raporu",
+				page: "/user/shift/list"
 			}
 		]
 	},

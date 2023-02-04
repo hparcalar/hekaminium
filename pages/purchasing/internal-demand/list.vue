@@ -7,15 +7,8 @@
             <div class="uk-flex-1">
               <ScCardTitle>
                 İç Üretim Talepleri
-                <button
-                  type="button"
-                  @click="newRecord"
-                  class="sc-button sc-button-small uk-margin-small-left"
-                >
-                  <span
-                    data-uk-icon="icon: plus"
-                    class="uk-margin-small-right uk-icon"
-                  ></span>
+                <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+                  <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
                   Yeni
                 </button>
               </ScCardTitle>
@@ -27,23 +20,11 @@
               <!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
 								Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
 							</button> -->
-              <div
-                class="uk-dropdown uk-width-small"
-                data-uk-drop="mode: click"
-              >
+              <div class="uk-dropdown uk-width-small" data-uk-drop="mode: click">
                 <div class="sc-padding-small">
-                  <div
-                    v-for="(checkbox, index) in dtDHeaders"
-                    :key="index"
-                    class="uk-margin-small"
-                  >
-                    <PrettyCheck
-                      class="p-icon"
-                      :value="index"
-                      :checked="checkbox.checked"
-                      :disabled="checkbox.disabled"
-                      @change="toggleCol($event, index)"
-                    >
+                  <div v-for="(checkbox, index) in dtDHeaders" :key="index" class="uk-margin-small">
+                    <PrettyCheck class="p-icon" :value="index" :checked="checkbox.checked" :disabled="checkbox.disabled"
+                      @change="toggleCol($event, index)">
                       <i slot="extra" class="icon mdi mdi-check"></i>
                       {{ checkbox.name }}
                     </PrettyCheck>
@@ -54,7 +35,7 @@
           </div>
         </ScCardHeader>
         <ScCardBody>
-          <client-only>
+          <!-- <client-only>
             <Datatable
               id="sc-dt-demands-list-table"
               ref="buttonsTable"
@@ -65,7 +46,69 @@
               :customEvents="[{ name: 'select', function: clickDetail }]"
               @initComplete="dtButtonsInitialized"
             ></Datatable>
-          </client-only>
+          </client-only> -->
+          <DataTable :value="visualData" responsiveLayout="scroll" @row-select="onRowSelect" columnResizeMode="fit"
+            dataKey="id" :paginator="true" showGridlines :rows="13" :filters.sync="filterGeneral" selectionMode="single"
+            filterDisplay="row" sortField="receiptDate" :sortOrder="-1"
+            :globalFilterFields="['receiptDate', 'lastUpdateDate', 'receiptNo', 'explanation', 'userName', 'statusText']">
+            <template #header>
+              <div class="flex justify-content-between">
+                <Button type="button" icon="pi pi-filter-slash" label="Temizle" class="p-button-outlined"
+                  @click="clearGeneralFilter()" />
+                <span class="p-input-icon-left">
+                  <i class="pi pi-search" />
+                  <InputText v-model="filterGeneral['global'].value" placeholder="Genel Arama" />
+                </span>
+              </div>
+            </template>
+            <template #empty>
+              Hiç talep yok.
+            </template>
+            <template #loading>
+              Yükleniyor. Lütfen bekleyiniz.
+            </template>
+            <Column field="receiptDate" header="Tarih" sortable>
+              <template #body="slotProps">
+                {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+              </template>
+            </Column>
+            <Column field="lastUpdateDate" header="G. Tarihi" sortable>
+              <template #body="slotProps">
+                {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+              </template>
+            </Column>
+            <Column field="receiptNo" header="Talep No" sortable :style="{ width: '10%' }" :headerStyle="{ width: '10%' }">
+              <template #filter="{ filterModel, filterCallback }">
+                <InputText v-model="filterModel.value" @input="filterCallback()" />
+              </template>
+            </Column>
+            <Column field="explanation" header="Açıklama" sortable :style="{ width: '20%' }" :headerStyle="{ width: '20%' }">
+              <template #filter="{ filterModel, filterCallback }">
+                <InputText v-model="filterModel.value" @input="filterCallback()" />
+              </template>
+            </Column>
+            <Column field="userName" header="Oluşturan" sortable :style="{ width: '10%' }" :headerStyle="{ width: '10%' }">
+              <template #filter="{ filterModel, filterCallback }">
+                <InputText v-model="filterModel.value" @input="filterCallback()" />
+              </template>
+            </Column>
+            <Column field="isContractedText" header="Türü" sortable :style="{ width: '5%' }" :headerStyle="{ width: '5%' }">
+              <template #filter="{ filterModel, filterCallback }">
+                <InputText v-model="filterModel.value" @input="filterCallback()" />
+              </template>
+            </Column>
+            <Column field="demandStatus" header="Durum" sortable>
+              <template #body="{ data }">
+                <span :class="'demand-badge status-' + data.demandStatus">{{ data.statusText }}</span>
+              </template>
+              <template #filter="{ filterModel, filterCallback }">
+                <client-only>
+                  <Select2 v-model="filterModel.value" @change="filterCallback" :options="statusList"
+                    :settings="{ 'width': '100%', 'placeholder': 'Durum', 'allowClear': true }"></Select2>
+                </client-only>
+              </template>
+            </Column>
+          </DataTable>
         </ScCardBody>
       </ScCard>
     </div>
@@ -75,6 +118,7 @@
 import PrettyCheck from "pretty-checkbox-vue/check";
 import { useApi } from "~/composable/useApi";
 import { dateToStr } from "~/composable/useHelpers";
+import {FilterMatchMode,FilterOperator} from 'primevue/api/';
 import moment from '~/plugins/moment'
 
 export default {
@@ -84,14 +128,26 @@ export default {
       ? () => import("~/components/datatables/Datatables")
       : null,
     PrettyCheck,
+    Select2: process.client ? () => import('~/components/Select2') : null,
   },
   data: () => {
     return {
       visualData: [],
       lastUpdateDate: null,
+      filterGeneral: {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // id: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.CONTAINS }] },
+        // receiptDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // lastUpdateDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        receiptNo: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        userName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        isContractedText: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        explanation: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        demandStatus: { value: null, matchMode: FilterMatchMode.CONTAINS },
+      },
       dtColumns: [
         { data: "receiptDate", title: "Tarih", type: "date", visible: true },
-        { data: "lastUpdateDate", title: "Son Güncellenme Tarihi", type: "date", visible: true, width: "10%"},
+        { data: "lastUpdateDate", title: "Son Güncellenme Tarihi", type: "date", visible: true, width: "10%" },
         { data: "receiptNo", title: "Talep No", visible: true },
         { data: "explanation", title: "Açıklama", visible: true },
         { data: "userName", title: "Oluşturan", visible: true },
@@ -104,6 +160,16 @@ export default {
           },
         },
         { data: "statusText", title: "Durum", visible: true },
+      ],
+      statusList: [
+        { text: 'Onay bekliyor', id: 0 },
+        { text: 'Onaylandı', id: 1 },
+        { text: 'Sipariş oluşturuldu', id: 2 },
+        { text: 'Sipariş teslim alındı', id: 3 },
+        { text: 'İptal edildi', id: 4 },
+        { text: 'Teklif bekleniyor', id: 5 },
+        { text: 'Sipariş iletildi', id: 6 },
+        { text: 'Kısmi teslim alındı', id: 7 },
       ],
       dtDHeaders: [],
       dtDOptions: {
@@ -142,11 +208,12 @@ export default {
     const api = useApi();
     const self = this;
     const rawData = (await api.get("ItemDemand")).data;
-		const tmpList = rawData.map((d) => {
+    const tmpList = rawData.map((d) => {
       return {
         ...d,
-        receiptDate: dateToStr(d.receiptDate),
-        lastUpdateDate: d.lastUpdateDate!=null ? self.$moment(d.lastUpdateDate).format('DD.MM.YYYY'): "-",
+        isContractedText: d.isContracted ? 'Fason' : '-',
+        //receiptDate: dateToStr(d.receiptDate),
+        //lastUpdateDate: d.lastUpdateDate != null ? self.$moment(d.lastUpdateDate).format('DD.MM.YYYY') : "-",
       };
     });
     this.visualData = tmpList.filter(d => d.projectName == null || d.projectName == "");
@@ -158,6 +225,12 @@ export default {
     }
   },
   methods: {
+    clearGeneralFilter(){
+      this.filterGeneral.global.value = null;
+    },
+    convertDateToStr(prm){
+        return dateToStr(prm)
+    },
     dtButtonsInitialized() {
       // append buttons to custom container
       this.$refs.buttonsTable.$dt
@@ -177,6 +250,11 @@ export default {
     toggleCol(e, col) {
       var column = this.$refs.buttonsTable.$dt.column(col);
       column.visible(e).draw("page");
+    },
+    onRowSelect(event){
+      this.$router.push(
+        "/purchasing/internal-demand?id=" + event.data.id
+      );
     },
     clickDetail: function (e, dt, type, indexes) {
       this.$router.push(

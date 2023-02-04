@@ -40,7 +40,7 @@
 					</div>
 				</ScCardHeader>
 				<ScCardBody>
-					<client-only>
+					<!-- <client-only>
 						<Datatable
 							id="sc-dt-purchase-item-receipt-list-table"
 							ref="buttonsTable"
@@ -51,7 +51,63 @@
                             :customEvents="[{ name: 'select', function: clickDetail }]"
 							@initComplete="dtButtonsInitialized"
 						></Datatable>
-					</client-only>
+					</client-only> -->
+
+					<DataTable :value="visualData" responsiveLayout="scroll"
+              @row-select="onRowSelect"
+              columnResizeMode="fit"
+              dataKey="id"
+              :paginator="true" showGridlines :rows="13" :filters.sync="filterGeneral"
+              selectionMode="single" filterDisplay="row"
+              sortField="receiptDate" :sortOrder="-1"
+              :globalFilterFields="['receiptDate','receiptNo','firmName','explanation','userName', 'statusText']"
+              >
+              <template #header>
+                <div class="flex justify-content-between">
+                    <Button type="button" icon="pi pi-filter-slash" label="Temizle" class="p-button-outlined" @click="clearGeneralFilter()" />
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search" />
+                        <InputText v-model="filterGeneral['global'].value" placeholder="Genel Arama" />
+                    </span>
+                </div>
+            </template>
+            <template #empty>
+                Hiç sipariş yok.
+            </template>
+            <template #loading>
+                Yükleniyor. Lütfen bekleyiniz.
+            </template>
+              <Column field="receiptDate" header="Tarih" sortable :style="{width:'10%'}" :headerStyle="{width: '10%'}">
+                <template #body="slotProps">
+                    {{ convertDateToStr(slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="receiptNo" header="İrsaliye No" sortable :style="{width:'10%'}" :headerStyle="{width: '10%'}">
+                <template #body="slotProps">
+                    {{ (slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="documentNo" header="Belge No" sortable :style="{width:'10%'}" :headerStyle="{width: '10%'}">
+                <template #body="slotProps">
+                    {{ (slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="receiptTypeText" header="Hareket Türü" sortable :style="{width:'20%'}" :headerStyle="{width: '20%'}">
+                <template #body="slotProps">
+                    {{ (slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+              <Column field="firmName" header="Firma" sortable :style="{width:'10%'}" :headerStyle="{width: '10%'}">
+                <template #filter="{filterModel, filterCallback}">
+                  <InputText v-model="filterModel.value" @input="filterCallback()" />
+                </template>
+              </Column>
+							<Column field="explanation" header="Açıklama" sortable :style="{width:'15%'}" :headerStyle="{width: '15%'}">
+                <template #body="slotProps">
+                    {{ (slotProps.data[slotProps.column.field]) }}
+                </template>
+              </Column>
+          </DataTable>
 				</ScCardBody>
 			</ScCard>
         </div>
@@ -61,16 +117,31 @@
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { dateToStr } from '~/composable/useHelpers';
+import {FilterMatchMode,FilterOperator} from 'primevue/api/';
 
 export default {
     name: 'PurchaseItemReceiptList',
     components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		PrettyCheck
+		PrettyCheck,
+		Select2: process.client ? () => import('~/components/Select2') : null,
     },
     data: () => {
 		return {
 			visualData: [],
+			filterGeneral: {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // id: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.CONTAINS }] },
+        // receiptDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        // lastUpdateDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //receiptNo: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        firmName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //userName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //isContractedText: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //projectName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //explanation: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        //receiptStatus: { value: null, matchMode: FilterMatchMode.CONTAINS },
+      },
 			dtColumns: [
 				{ data: "receiptDate", title: "Tarih", type:'date', visible: true, },
 				{ data: "receiptNo", title: "İrsaliye No", visible: true, },
@@ -119,7 +190,7 @@ export default {
         this.visualData = rawData.map((d) => {
             return {
                 ...d,
-                receiptDate: dateToStr(d.receiptDate),
+                //receiptDate: dateToStr(d.receiptDate),
             };
         });
 
@@ -131,6 +202,17 @@ export default {
 		
     },
     methods: {
+			clearGeneralFilter(){
+				this.filterGeneral.global.value = null;
+			},
+			convertDateToStr(prm){
+					return dateToStr(prm)
+			},
+			onRowSelect(event){
+				this.$router.push(
+					"/purchasing/item-receipt?id=" + event.data.id
+				);
+			},
         dtButtonsInitialized () {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));

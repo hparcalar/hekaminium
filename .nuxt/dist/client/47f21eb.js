@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{527:function(w,n,o){var d=o(532);window.jQuery=window.$=d}}]);
