@@ -11,6 +11,7 @@
                   type="button"
                   @click="newRecord"
                   class="sc-button sc-button-small uk-margin-small-left"
+                  v-show="hasViewAuth('Demand',1)"
                 >
                   <span
                     data-uk-icon="icon: plus"
@@ -153,6 +154,7 @@ import { useApi } from "~/composable/useApi";
 import { dateToStr } from "~/composable/useHelpers";
 import {FilterMatchMode,FilterOperator} from 'primevue/api/';
 import moment from '~/plugins/moment'
+import { useUserSession } from "~/composable/userSession";
 
 export default {
   name: "DemandList",
@@ -264,6 +266,14 @@ export default {
     clearGeneralFilter(){
       this.filterGeneral.global.value = null;
     },
+    hasViewAuth(sectionKey,authCode){
+			if (process.client){
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey, authCode);
+			}
+			return false;
+		},
     dtButtonsInitialized() {
       // append buttons to custom container
       this.$refs.buttonsTable.$dt

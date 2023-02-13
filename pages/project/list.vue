@@ -7,7 +7,7 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Projeler
-								<button type="button" @click="newRecord" v-show="this.hasViewAuth('ProjectManagement')"
+								<button type="button" @click="newRecord" v-show="this.hasViewAuth('Project',1)"
 									class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
@@ -90,12 +90,12 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="forexName" header="Döviz" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="forexName" header="Döviz" sortable>
 							<template #filter="{filterModel, filterCallback}">
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="totalCost" header="Maliyet (TL)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="totalCost" header="Maliyet (TL)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -103,7 +103,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="totalForexCost" header="Maliyet (Dvz)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="totalForexCost" header="Maliyet (Dvz)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -111,7 +111,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="profitRate" header="Kar Marjı (%)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="profitRate" header="Kar Marjı (%)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -119,7 +119,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="offerPrice" header="Bedel (TL)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="offerPrice" header="Bedel (TL)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -127,7 +127,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView')" field="offerForexPrice" header="Bedel (Dvz)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="offerForexPrice" header="Bedel (Dvz)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -150,7 +150,7 @@
 								</client-only>
 							</template>
 						</Column>
-						<ColumnGroup type="footer" v-if="hasViewAuth('ProjectBudgetView')">
+						<ColumnGroup type="footer" v-if="hasViewAuth('ProjectBudgetView',1)">
 							<Row>
 								<Column footer="Toplam: " :colspan="6" :footerStyle="{'text-align': 'right'}"></Column>
 								<Column :footer="sumTotalCost" />
@@ -283,7 +283,7 @@ export default {
 	},
 	async mounted() {
 		let targetUri = 'Project';
-		if (!this.hasViewAuth('ProjectManagement'))
+		if (!this.hasViewAuth('Project',0))
 			targetUri = 'Project/AfterCreated';
 
 		const api = useApi();
@@ -353,11 +353,11 @@ export default {
 		newRecord() {
 			this.$router.push('/project');
 		},
-		hasViewAuth(sectionKey) {
+		hasViewAuth(sectionKey,authCode) {
 			if (process.client) {
 				const session = useUserSession();
 				if (session && session.checkAuthSection)
-					return session.checkAuthSection(sectionKey);
+					return session.checkAuthSection(sectionKey,authCode);
 			}
 
 			return false;

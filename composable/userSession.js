@@ -28,9 +28,20 @@ export const useUserSession = () => {
       this.user = newUser; 
       localStorage.setItem('user', JSON.stringify(newUser));
     },
-    checkAuthSection(sectionKey){
+    checkAuthSection(sectionKey,authCode){
       try {
-        return this.user.sections.some(d => d.SectionKey == sectionKey && d.CanRead == true); 
+        if(authCode == 0){
+          return this.user.sections.some(d => d.SectionKey == sectionKey && d.CanRead == true); 
+        } 
+        else if(authCode == 1){
+          return this.user.sections.some(d => d.SectionKey == sectionKey && d.CanWrite == true);
+        }
+        else if(authCode == 2){
+          return this.user.sections.some(d => d.SectionKey == sectionKey && d.CanDelete == true);
+        }
+        else{
+          return false;
+        }
       } catch (error) {
         return false;
       }

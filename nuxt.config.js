@@ -133,7 +133,7 @@ module.exports = {
 	primevue: {
 		theme: 'nova',
 		ripple: true,
-		components: ['Column', 'Button', 'DataTable', 'InputText', 'InputNumber', 'Dropdown','Toolbar', 'FileUpload', 'ColumnGroup','Row', 'Dialog', 'Tooltip', 'Calendar'],
+		components: ['Column', 'Button', 'DataTable', 'InputText', 'InputNumber', 'Dropdown','Toolbar', 'FileUpload', 'ColumnGroup','Row', 'Dialog', 'Tooltip', 'Calendar', 'ToggleButton'],
 	},
 	googleAnalytics: {
 		id: (mode === 'universal') ? 'UA-136690566-3' : 'UA-136690566-4',

@@ -12,7 +12,7 @@
 				style="display: flex; justify-content: center;"
 				data-uk-grid
 			>
-				<div v-show="showWidgets" @click="hasViewAuth('ItemDemandApproval') ? $router.push('/purchasing/item-demand/waiting-for-approve') :  $router.push('/')">
+				<div v-show="showWidgets" @click="hasViewAuth('WaitingDemands',1) ? $router.push('/purchasing/item-demand/waiting-for-approve') :  $router.push('/')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-cyan-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-clock md-color-white sc-icon-24"></i>
@@ -29,7 +29,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets" @click="hasViewAuth('ItemOrderApproval') ? $router.push('/purchasing/item-order/waiting-for-approve') :  $router.push('/')">
+				<div v-show="showWidgets" @click="hasViewAuth('WaitingOrders',1) ? $router.push('/purchasing/item-order/waiting-for-approve') :  $router.push('/')">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-red-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-clock md-color-white sc-icon-24"></i>
@@ -46,7 +46,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-light-green-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-icon-24"></i>
@@ -63,7 +63,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-amber-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>
@@ -80,7 +80,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView')">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-purple-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>
@@ -1023,11 +1023,11 @@ export default {
 
 			this.chartLoaded = true
     },
-		hasViewAuth(sectionKey){
+		hasViewAuth(sectionKey,authCode){
 			if (process.client){
 				const session = useUserSession();
 				if (session && session.checkAuthSection)
-					return session.checkAuthSection(sectionKey);
+					return session.checkAuthSection(sectionKey,authCode);
 			}
 			return false;
 		},

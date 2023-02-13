@@ -7,7 +7,8 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Firmalar
-                                <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+								<button type="button" @click="newRecord" v-show="hasViewAuth('FirmAndProjectCategories',1)"
+									class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
 								</button>
@@ -60,6 +61,7 @@
 <script>
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
+import { useUserSession } from "~/composable/userSession";
 
 export default {
     name: 'FirmList',
@@ -151,6 +153,14 @@ export default {
 		},
         clickDetail: function (e, dt, type, indexes){
 			this.$router.push('/firm?id=' + this.visualData[indexes[0]].id);
+        },
+				hasViewAuth(sectionKey,authCode){
+            if (process.client){
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
         },
         newRecord(){
             this.$router.push('/firm');

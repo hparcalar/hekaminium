@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_pluginutils_c7f1556e from 'nuxt_plugin_pluginutils_c7f1556e' // Source: .\\nuxt-i18n\\plugin.utils.js (mode: 'all')
 import nuxt_plugin_pluginrouting_6d87b454 from 'nuxt_plugin_pluginrouting_6d87b454' // Source: .\\nuxt-i18n\\plugin.routing.js (mode: 'all')
 import nuxt_plugin_pluginmain_4b5c90ca from 'nuxt_plugin_pluginmain_4b5c90ca' // Source: .\\nuxt-i18n\\plugin.main.js (mode: 'all')
+import nuxt_plugin_togglebuttonplugin6a0d154a_97327020 from 'nuxt_plugin_togglebuttonplugin6a0d154a_97327020' // Source: .\\togglebutton.plugin.6a0d154a.js (mode: 'all')
 import nuxt_plugin_calendarplugin6d0595fc_66f3239c from 'nuxt_plugin_calendarplugin6d0595fc_66f3239c' // Source: .\\calendar.plugin.6d0595fc.js (mode: 'all')
 import nuxt_plugin_tooltipplugin6f7e038f_07a8babc from 'nuxt_plugin_tooltipplugin6f7e038f_07a8babc' // Source: .\\tooltip.plugin.6f7e038f.js (mode: 'all')
 import nuxt_plugin_dialogplugin032b118c_12ca6460 from 'nuxt_plugin_dialogplugin032b118c_12ca6460' // Source: .\\dialog.plugin.032b118c.js (mode: 'all')
@@ -243,6 +244,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_pluginmain_4b5c90ca === 'function') {
     await nuxt_plugin_pluginmain_4b5c90ca(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_togglebuttonplugin6a0d154a_97327020 === 'function') {
+    await nuxt_plugin_togglebuttonplugin6a0d154a_97327020(app.context, inject)
   }
 
   if (typeof nuxt_plugin_calendarplugin6d0595fc_66f3239c === 'function') {

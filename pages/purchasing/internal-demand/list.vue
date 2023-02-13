@@ -7,7 +7,8 @@
             <div class="uk-flex-1">
               <ScCardTitle>
                 İç Üretim Talepleri
-                <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+                <button type="button" @click="newRecord" v-show="hasViewAuth('Demand',1)"
+                  class="sc-button sc-button-small uk-margin-small-left">
                   <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
                   Yeni
                 </button>
@@ -119,6 +120,7 @@ import PrettyCheck from "pretty-checkbox-vue/check";
 import { useApi } from "~/composable/useApi";
 import { dateToStr } from "~/composable/useHelpers";
 import {FilterMatchMode,FilterOperator} from 'primevue/api/';
+import { useUserSession } from "~/composable/userSession";
 import moment from '~/plugins/moment'
 
 export default {
@@ -246,6 +248,14 @@ export default {
       // 		disabled: i === 0
       // 	})
       // });
+    },
+    hasViewAuth(sectionKey,authCode){
+        if (process.client){
+            const session = useUserSession();
+            if (session && session.checkAuthSection)
+                return session.checkAuthSection(sectionKey, authCode);
+        }
+        return false;
     },
     toggleCol(e, col) {
       var column = this.$refs.buttonsTable.$dt.column(col);

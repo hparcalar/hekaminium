@@ -10,7 +10,7 @@
                 </h4>
                 <div class="uk-width-1-6">
                     <div>
-                        <button type="button" @click="onSubmit"
+                        <button type="button" @click="onSubmit" v-show="hasViewAuth('Demand',1)"
                             class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
                             <span data-uk-icon="icon: check" class="uk-icon"></span>
                         </button>
@@ -18,7 +18,8 @@
                             class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
                             <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
                         </button>
-                        <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                        <button type="button" @click="onDelete" v-show="hasViewAuth('Demand',2)"
+                            class="sc-button sc-button-danger sc-button-medium">
                             <span data-uk-icon="icon: trash" class="uk-icon"></span>
                         </button>
                     </div>
@@ -422,6 +423,14 @@ export default {
         },
         onPartDialogOpen() {
             this.attachmentDialogVisible = false;
+        },
+        hasViewAuth(sectionKey,authCode){
+            if (process.client){
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
         },
         dtButtonsInitialized() {
             this.$refs.demandDetailsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));

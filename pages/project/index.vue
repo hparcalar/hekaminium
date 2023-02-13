@@ -38,7 +38,7 @@
 									Dosyalar
 								</a>
 							</li>
-							<li v-if="hasViewAuth('ProjectManagement')">
+							<li v-if="hasViewAuth('Project',1)">
 								<a href="javascript:void(0)">
 									Teklif Dökümanı
 								</a>
@@ -97,7 +97,7 @@
 												<label>Proje Adedi</label>
 											</ScInput>
 										</div>
-										<div v-show="hasViewAuth('ProjectManagement')">
+										<div v-show="hasViewAuth('Project',1)">
 											<client-only v-if="!formData.cloudDocId || formData.cloudDocId.length <= 0">
 												<Select2 v-model="formData.offerType" :options="offerTypeList"
 													:settings="{ 'width': '100%', 'placeholder': 'Teklif Türü', 'allowClear': true }">
@@ -302,39 +302,39 @@
 															</client-only> -->
 														</div>
 														<div class="uk-grid">
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="fTotalForexCost" :read-only="true">
 																	<label>Toplam Maliyet (Döviz)</label>
 																</ScInput>
 															</div>
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="fTotalCost" :read-only="true">
 																	<label>Toplam Maliyet (TL)</label>
 																</ScInput>
 															</div>
-															<div class="uk-width-2-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-2-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="formData.profitRate" @change="calculateTotal" type="number">
 																	<label>Kar Marjı(%)</label>
 																</ScInput>
 															</div>
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<client-only>
 																	<Select2 v-model="formData.forexId" :options="forexList" @change="updateLiveForexRate"
 																		:settings="{ 'width': '100%', 'placeholder': 'Döviz Cinsi', 'allowClear': true }">
 																		<label>Döviz Cinsi</label></Select2>
 																</client-only>
 															</div>
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="formData.forexRate" @change="calculateForexTotal" type="number">
 																	<label>Döviz Kuru</label>
 																</ScInput>
 															</div>
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="fOfferForexPrice" @change="calculateLocalTotal">
 																	<label>Döviz Bedeli</label>
 																</ScInput>
 															</div>
-															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+															<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																<ScInput v-model="fOfferPrice" @change="calculateForexTotal">
 																	<label>TL Bedeli</label>
 																</ScInput>
@@ -356,7 +356,7 @@
 															</button>
 															<hr class="uk-divider-vertical" style="height:35px;" />
 															<div
-																v-show="hasViewAuth('ItemDemandApproval') && selectedDemandRow && selectedDemandRow.id > 0"
+																v-show="hasViewAuth('WaitingDemands',1) && selectedDemandRow && selectedDemandRow.id > 0"
 																class="uk-button-group sc-padding-remove-left uk-width-expand" style="height:34px;">
 																<button type="button" @click="showDemand"
 																	class="sc-button sc-button-default sc-button-small uk-width-1-4" style="height:34px;">
@@ -429,12 +429,12 @@
 																</Datatable>
 															</client-only>
 															<div class="uk-grid">
-																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																	<ScInput v-model="totalReceiptsLocal" :read-only="true">
 																		<label>Toplam Tutar (TL)</label>
 																	</ScInput>
 																</div>
-																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView')">
+																<div class="uk-width-1-2" v-show="hasViewAuth('ProjectBudgetView',1)">
 																	<ScInput v-model="totalReceiptsForex" :read-only="true">
 																		<label>Toplam Tutar (Döviz)</label>
 																	</ScInput>
@@ -520,7 +520,7 @@
 
 								</div>
 							</li>
-							<li v-show="hasViewAuth('ProjectManagement')">
+							<li v-show="hasViewAuth('Project',1)">
 								<!-- OFFERS DOCS -->
 								<div class="sc-padding-medium sc-padding-remove-top">
 									<div class="uk-flex-left uk-grid">
@@ -550,7 +550,7 @@
 					</div>
 					<form>
 						<div class="uk-grid" data-uk-grid>
-							<div class="uk-width-1-6@m" v-show="hasViewAuth('ProjectManagement')" style="margin-top:3px;">
+							<div class="uk-width-1-6@m" v-show="hasViewAuth('Project',1)" style="margin-top:3px;">
 								<client-only>
 									<Select2 v-model="formData.projectStatus" :options="statusList"
 										:settings="{ 'width': '100%', 'placeholder': 'Proje Durumu', 'allowClear': true }"><label>Proje
@@ -558,7 +558,7 @@
 								</client-only>
 							</div>
 							<div class="uk-margin-medium-top uk-width-expand@m">
-								<button type="button" @click="onSubmit"
+								<button type="button" @click="onSubmit" v-show="hasViewAuth('Project',1)"
 									class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
 									<span data-uk-icon="icon: check" class="uk-icon"></span>
 								</button>
@@ -566,7 +566,8 @@
 									class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
 									<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
 								</button>
-								<button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+								<button type="button" @click="onDelete" v-show="hasViewAuth('Project',2)"
+									class="sc-button sc-button-danger sc-button-medium">
 									<span data-uk-icon="icon: trash" class="uk-icon"></span>
 								</button>
 							</div>
@@ -967,7 +968,7 @@ export default {
 	beforeMount() {
 		const costCol = this.dtCostItemCols.find(d => d.data == 'overallTotal');
 		if (costCol) {
-			costCol.visible = this.hasViewAuth('ProjectBudgetView');
+			costCol.visible = this.hasViewAuth('ProjectBudgetView',1);
 		}
 	},
 	methods: {
@@ -1078,7 +1079,7 @@ export default {
 				await this.bindAttachments();
 				this.calculateProjectCost();
 
-				if (this.hasViewAuth('ProjectManagement'))
+				if (this.hasViewAuth('Project',1))
 					this.initCloud();
 				
 				// this.calculateTotal();
@@ -1659,11 +1660,11 @@ export default {
 					}
 				});
 		},
-		hasViewAuth(sectionKey) {
+		hasViewAuth(sectionKey,authCode) {
 			if (process.client) {
 				const session = useUserSession();
 				if (session && session.checkAuthSection)
-					return session.checkAuthSection(sectionKey);
+					return session.checkAuthSection(sectionKey,authCode);
 			}
 			return false;
 		},

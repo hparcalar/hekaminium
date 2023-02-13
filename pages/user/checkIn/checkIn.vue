@@ -34,7 +34,7 @@
                 </div>
               </fieldset>
               <div class="uk-margin-large-top">
-                <button type="button" @click="onSubmit"
+                <button type="button" @click="onSubmit" v-show="hasViewAuth('Report',1)"
                   class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
                   <span data-uk-icon="icon: check" class="uk-icon"></span>
                 </button>
@@ -174,14 +174,14 @@
         }
         UIkit.notification(text, config);
       },
-      hasViewAuth(sectionKey) {
-        if (process.client) {
-          const session = useUserSession();
-          if (session && session.checkAuthSection)
-            return session.checkAuthSection(sectionKey);
-        }
-        return false;
-      },
+      hasViewAuth(sectionKey,authCode){
+            if (process.client){
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
+        },
     }
   }
   </script>

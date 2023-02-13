@@ -7,7 +7,8 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Satın Alma İrsaliyeleri
-                                <button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+								<button type="button" @click="newRecord" v-show="hasViewAuth('OfferOrderReceipt',1)"
+									class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
 								</button>
@@ -118,6 +119,7 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { dateToStr } from '~/composable/useHelpers';
 import {FilterMatchMode,FilterOperator} from 'primevue/api/';
+import { useUserSession } from "~/composable/userSession";
 
 export default {
     name: 'PurchaseItemReceiptList',
@@ -213,6 +215,14 @@ export default {
 					"/purchasing/item-receipt?id=" + event.data.id
 				);
 			},
+			hasViewAuth(sectionKey,authCode){
+            if (process.client){
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
+        },
         dtButtonsInitialized () {
 			// append buttons to custom container
 			this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));

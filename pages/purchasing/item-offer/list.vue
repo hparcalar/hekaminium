@@ -7,7 +7,8 @@
 						<div class="uk-flex-1">
 							<ScCardTitle>
 								Satın Alma Teklifleri
-								<button type="button" @click="newRecord" class="sc-button sc-button-small uk-margin-small-left">
+								<button type="button" @click="newRecord" v-show="hasViewAuth('OfferOrderReceipt',1)"
+									class="sc-button sc-button-small uk-margin-small-left">
 									<span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
 									Yeni
 								</button>
@@ -108,6 +109,7 @@
 import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import { dateToStr } from '~/composable/useHelpers';
+import { useUserSession } from "~/composable/userSession";
 import { FilterMatchMode, FilterOperator } from 'primevue/api/';
 
 export default {
@@ -211,6 +213,14 @@ export default {
 			this.$router.push(
 				"/purchasing/item-offer?id=" + event.data.id
 			);
+		},
+		hasViewAuth(sectionKey,authCode){
+				if (process.client){
+						const session = useUserSession();
+						if (session && session.checkAuthSection)
+								return session.checkAuthSection(sectionKey, authCode);
+				}
+				return false;
 		},
 		toggleCol(e, col) {
 			var column = this.$refs.buttonsTable.$dt.column(col);

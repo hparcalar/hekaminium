@@ -31,13 +31,15 @@
 						</fieldset>
 
 						<div class="uk-margin-large-top">
-							<button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
+							<button type="button" @click="onSubmit" v-show="hasViewAuth('FirmAndProjectCategories',1)"
+								class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
 								<span data-uk-icon="icon: check" class="uk-icon"></span>
 							</button>
 							<button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
 								<span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
 							</button>
-                            <button type="button" @click="onDelete" class="sc-button sc-button-danger sc-button-medium">
+                            <button type="button" @click="onDelete" v-show="hasViewAuth('FirmAndProjectCategories',1)"
+															class="sc-button sc-button-danger sc-button-medium">
 								<span data-uk-icon="icon: trash" class="uk-icon"></span>
 							</button>
 						</div>
@@ -55,6 +57,7 @@ import ScTextarea from '~/components/Textarea'
 import PrettyRadio from 'pretty-checkbox-vue/radio';
 import { useApi } from '../../composable/useApi';
 import { getQS } from '../../composable/useHelpers'
+import { useUserSession } from "~/composable/userSession";
 
 if(process.client) {
 	require('~/plugins/inputmask');	
@@ -117,6 +120,14 @@ export default {
         },
         async onDelete(){
 
+        },
+				hasViewAuth(sectionKey,authCode){
+            if (process.client){
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};

@@ -12,7 +12,10 @@ function checkAuth(sectionKey){
 
 export const menuEntries = [
 	{
-		section_title: "Süreçler"
+		section_title: "Süreçler",
+		visible: function(){
+			return checkAuth('Demand');
+		},
 	},
 	{
 		id: uniqueID(),
@@ -21,36 +24,54 @@ export const menuEntries = [
 		page: "/purchasing",
 		isOpen: false,
 		level: 0,
+		visible: function(){
+			return checkAuth('Demand');
+		},
 		submenu: [
 			{
 				id: uniqueID(),
 				title: "Talep",
 				icon: "mdi mdi-human-handsup",
-				page: "/purchasing/item-demand/list"
+				page: "/purchasing/item-demand/list",
+				visible: function(){
+					return checkAuth('Demand');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "İç Üretim",
 				icon: "mdi mdi-human-handsup",
-				page: "/purchasing/internal-demand/list"
+				page: "/purchasing/internal-demand/list",
+				visible: function(){
+					return checkAuth('Demand');
+				},
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-offer",
 				title: "Teklif",
-				page: "/purchasing/item-offer/list"
+				page: "/purchasing/item-offer/list",
+				visible: function(){
+					return checkAuth('OfferOrderReceipt');
+				},
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
 				title: "Sipariş",
-				page: "/purchasing/item-order/list"
+				page: "/purchasing/item-order/list",
+				visible: function(){
+					return checkAuth('OfferOrderReceipt');
+				},
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-receipt",
 				title: "İrsaliye",
-				page: "/purchasing/item-receipt/list"
+				page: "/purchasing/item-receipt/list",
+				visible: function(){
+					return checkAuth('OfferOrderReceipt');
+				},
 			},
 			{
 				id: uniqueID(),
@@ -58,7 +79,7 @@ export const menuEntries = [
 				icon: "mdi mdi-clock",
 				page: "/purchasing/item-demand/waiting-for-approve",
 				visible: function(){
-					return checkAuth('ItemDemandApproval');
+					return checkAuth('WaitingDemands');
 				},
 			},
 		]
@@ -70,24 +91,37 @@ export const menuEntries = [
 		page: "/project",
 		isOpen: false,
 		level: 0,
+		visible: function(){
+			return checkAuth('Project');
+		},
 		submenu: [
 			{
 				id: uniqueID(),
 				title: "Projeler",
 				icon: "mdi mdi-format-list-bulleted-square",
-				page: "/project/list"
+				page: "/project/list",
+				visible: function(){
+					return checkAuth('Project');
+				},
+				
 			},
 			{
 				id: uniqueID(),
 				title: "Döküman İzleme",
 				icon: "mdi mdi-document",
-				page: "/project/docview"
+				page: "/project/docview",
+				visible: function(){
+					return checkAuth('Document');
+				},
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-bookmark-outline",
 				title: "Güncel Durum Analizi",
-				page: "/project/live-analysis"
+				page: "/project/live-analysis",
+				visible: function(){
+					return checkAuth('Document');
+				},
 			},
 			{
 				id: uniqueID(),
@@ -95,14 +129,17 @@ export const menuEntries = [
 				icon: "mdi mdi-clock",
 				page: "/purchasing/item-order/waiting-for-approve",
 				visible: function(){
-					return checkAuth('ItemOrderApproval');
+					return checkAuth('WaitingOrders');
 				},
 			},
 			{
 				id: uniqueID(),
 				title: "Saha Servisleri",
 				icon: "mdi mdi-wrench",
-				page: "/project/fieldservice/list"
+				page: "/project/fieldservice/list",
+				visible: function(){
+					return checkAuth('FieldServices');
+				},
 			},
 		]
 	},
@@ -202,13 +239,19 @@ export const menuEntries = [
 				id: uniqueID(),
 				icon: "mdi mdi-chart-areaspline",
 				title: "Depo Durumları",
-				page: "/warehouse/live"
+				page: "/warehouse/live",
+				visible: function(){
+					return checkAuth('WarehouseStatuses');
+				},
 			},
 			{
 				id: uniqueID(),
 				icon: "mdi mdi-arrow-decision",
 				title: "Stok Çıkışı",
-				page: "/item/consumption"
+				page: "/item/consumption",
+				visible: function(){
+					return checkAuth('StockOut');
+				},
 			},
 		]
 	},
@@ -217,11 +260,14 @@ export const menuEntries = [
 		title: "İzinler",
 		icon: "mdi mdi-calendar-text",
 		page: "/staffpermit/list",
+		visible: function(){
+			return checkAuth('StaffPermit');
+		},
 	},
 	{
 		section_title: "TANIMLAR",
 		visible: function(){
-			return checkAuth('Definitions');
+			return checkAuth('StockAndWarehouse');
 		},
 	},
 	{
@@ -231,7 +277,7 @@ export const menuEntries = [
 		icon: "mdi mdi-archive",
 		isOpen: false,
 		visible: function(){
-			return checkAuth('Definitions');
+			return checkAuth('StockAndWarehouse');
 		},
 		level: 0,
 		submenu: [
@@ -239,25 +285,37 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Stok",
 				icon: "mdi mdi-sitemap",
-				page: "/item/list"
+				page: "/item/list",
+				visible: function(){
+					return checkAuth('StockAndWarehouse');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "Depo",
 				icon: "mdi mdi-warehouse",
-				page: "/warehouse/list"
+				page: "/warehouse/list",
+				visible: function(){
+					return checkAuth('StockAndWarehouse');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "Stok Kategorisi",
 				icon: "mdi mdi-folder-multiple",
-				page: "/item-category/list"
+				page: "/item-category/list",
+				visible: function(){
+					return checkAuth('StockAndWarehouse');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "Proses",
 				icon: "mdi mdi-wrench",
-				page: "/process/list"
+				page: "/process/list",
+				visible: function(){
+					return checkAuth('Process');
+				},
 			}
 		]
 	},
@@ -268,7 +326,7 @@ export const menuEntries = [
 		icon: "mdi mdi-account-supervisor-circle",
 		isOpen: false,
 		visible: function(){
-			return checkAuth('Definitions');
+			return checkAuth('FirmAndProjectCategories');
 		},
 		level: 0,
 		submenu: [
@@ -276,19 +334,28 @@ export const menuEntries = [
 				id: uniqueID(),
 				title: "Firma",
 				icon: "mdi mdi-account-box",
-				page: "/firm/list"
+				page: "/firm/list",
+				visible: function(){
+					return checkAuth('FirmAndProjectCategories');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "Firma Kategorisi",
 				icon: "mdi mdi-folder-multiple",
-				page: "/firm-category/list"
+				page: "/firm-category/list",
+				visible: function(){
+					return checkAuth('FirmAndProjectCategories');
+				},
 			},
 			{
 				id: uniqueID(),
 				title: "Proje Kategorisi",
 				icon: "mdi mdi-folder-multiple",
-				page: "/project-category/list"
+				page: "/project-category/list",
+				visible: function(){
+					return checkAuth('FirmAndProjectCategories');
+				},
 			}
 		]
 	},
@@ -344,7 +411,7 @@ export const menuEntries = [
 	{
 		section_title: "SİSTEM",
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('Employee');
 		},
 	},
 	{
@@ -354,39 +421,57 @@ export const menuEntries = [
 		icon: "mdi mdi-account-key",
 		isOpen: false,
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('Employee');
 		},
 		level: 0,
 		submenu: [
 			{
 				id: uniqueID(),
 				title: "Rol",
-				page: "/user/role/list"
+				page: "/user/role/list",
+				visible: function(){
+					return checkAuth('Role');
+				}
 			},
 			{
 				id: uniqueID(),
 				title: "Kullanıcı",
-				page: "/user/member/list"
+				page: "/user/member/list",
+				visible: function(){
+					return checkAuth('Employee');
+				}
 			},
 			{
 				id: uniqueID(),
 				title: "Personel",
-				page: "/user/employee/list"
+				page: "/user/employee/list",
+				visible: function(){
+					return checkAuth('Employee');
+				}
 			},
 			{
 				id: uniqueID(),
 				title: "Departman",
-				page: "/user/department/list"
+				page: "/user/department/list",
+				visible: function(){
+					return checkAuth('Employee');
+				}
 			},
 			{
 				id: uniqueID(),
 				title: "Giriş/Çıkış Raporu",
-				page: "/user/checkIn/list"
+				page: "/user/checkIn/list",
+				visible: function(){
+					return checkAuth('Report');
+				}
 			},
 			{
 				id: uniqueID(),
 				title: "Mesai Raporu",
-				page: "/user/shift/list"
+				page: "/user/shift/list",
+				visible: function(){
+					return checkAuth('Report');
+				}
 			}
 		]
 	},
@@ -396,7 +481,7 @@ export const menuEntries = [
 		page: "/plant/list",
 		icon: "mdi mdi-office-building",
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('WaitingDemands');
 		},
 	},
 	{
@@ -405,7 +490,7 @@ export const menuEntries = [
 		page: "/attachment-category/list",
 		icon: "mdi mdi-office-building",
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('WaitingDemands');
 		},
 	},
 	{
@@ -414,7 +499,7 @@ export const menuEntries = [
 		page: "/settings",
 		icon: "mdi mdi-tune",
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('Application');
 		},
 	},
 	{
@@ -423,7 +508,7 @@ export const menuEntries = [
 		page: "/backup",
 		icon: "mdi mdi-backup-restore",
 		visible: function(){
-			return checkAuth('SystemSection');
+			return checkAuth('Application');
 		},
 	},
 ];
