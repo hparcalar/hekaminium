@@ -127,7 +127,7 @@ export default {
     async mounted (){
         const api = useApi();
         const session = useUserSession();
-        const targetRoute = this.hasViewAuth('StaffPermit') ? 'StaffPermit' : 'StaffPermit/' + session.user.id;
+        const targetRoute = this.hasViewAuth('StaffPermit',0) ? 'StaffPermit' : 'StaffPermit/' + session.user.id;
         const rawData = (await api.get(targetRoute)).data;
 
         this.visualData = rawData;
@@ -148,11 +148,11 @@ export default {
         newRecord(){
             this.$router.push('/staffpermit');
         },
-        hasViewAuth(sectionKey){
+        hasViewAuth(sectionKey,authCode){
 			if (process.client){
 				const session = useUserSession();
 				if (session && session.checkAuthSection)
-					return session.checkAuthSection(sectionKey);
+					return session.checkAuthSection(sectionKey,authCode);
 			}
 			return false;
 		},
