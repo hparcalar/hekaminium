@@ -8,6 +8,7 @@ const _df818fc2 = () => interopDefault(import('..\\pages\\account_auth.vue' /* w
 const _5c71cecf = () => interopDefault(import('..\\pages\\attachment-category\\index.vue' /* webpackChunkName: "pages/attachment-category/index" */))
 const _4ced1382 = () => interopDefault(import('..\\pages\\firm\\index.vue' /* webpackChunkName: "pages/firm/index" */))
 const _666e8e2a = () => interopDefault(import('..\\pages\\firm-category\\index.vue' /* webpackChunkName: "pages/firm-category/index" */))
+const _3135986a = () => interopDefault(import('..\\pages\\invoice\\index.vue' /* webpackChunkName: "pages/invoice/index" */))
 const _7efc0a4a = () => interopDefault(import('..\\pages\\item\\index.vue' /* webpackChunkName: "pages/item/index" */))
 const _946b5302 = () => interopDefault(import('..\\pages\\item-category\\index.vue' /* webpackChunkName: "pages/item-category/index" */))
 const _594061ec = () => interopDefault(import('..\\pages\\login_page.vue' /* webpackChunkName: "pages/login_page" */))
@@ -67,6 +68,7 @@ const _78390345 = () => interopDefault(import('..\\pages\\forms\\wizard.vue' /* 
 const _ae311ba0 = () => interopDefault(import('..\\pages\\forms\\wizard\\step1.vue' /* webpackChunkName: "pages/forms/wizard/step1" */))
 const _ae14ec9e = () => interopDefault(import('..\\pages\\forms\\wizard\\step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
 const _adf8bd9c = () => interopDefault(import('..\\pages\\forms\\wizard\\step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
+const _f656a394 = () => interopDefault(import('..\\pages\\invoice\\list.vue' /* webpackChunkName: "pages/invoice/list" */))
 const _70555981 = () => interopDefault(import('..\\pages\\item-category\\list.vue' /* webpackChunkName: "pages/item-category/list" */))
 const _3378e093 = () => interopDefault(import('..\\pages\\item\\consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
 const _4d888056 = () => interopDefault(import('..\\pages\\item\\list.vue' /* webpackChunkName: "pages/item/list" */))
@@ -85,6 +87,7 @@ const _aade1a72 = () => interopDefault(import('..\\pages\\pages\\help_faq.vue' /
 const _5bef7d95 = () => interopDefault(import('..\\pages\\pages\\invoices.vue' /* webpackChunkName: "pages/pages/invoices" */))
 const _d7095566 = () => interopDefault(import('..\\pages\\pages\\invoices\\index.vue' /* webpackChunkName: "pages/pages/invoices/index" */))
 const _8d83c84a = () => interopDefault(import('..\\pages\\pages\\invoices\\new.vue' /* webpackChunkName: "pages/pages/invoices/new" */))
+const _4a9a7a32 = () => interopDefault(import('..\\pages\\pages\\invoices\\test.vue' /* webpackChunkName: "pages/pages/invoices/test" */))
 const _b4ef7216 = () => interopDefault(import('..\\pages\\pages\\invoices\\_id.vue' /* webpackChunkName: "pages/pages/invoices/_id" */))
 const _01a69d29 = () => interopDefault(import('..\\pages\\pages\\issues.vue' /* webpackChunkName: "pages/pages/issues" */))
 const _5ff23e2e = () => interopDefault(import('..\\pages\\pages\\issues\\details.vue' /* webpackChunkName: "pages/pages/issues/details" */))
@@ -204,6 +207,10 @@ export const routerOptions = {
     path: "/firm-category",
     component: _666e8e2a,
     name: "firm-category"
+  }, {
+    path: "/invoice",
+    component: _3135986a,
+    name: "invoice"
   }, {
     path: "/item",
     component: _7efc0a4a,
@@ -442,6 +449,10 @@ export const routerOptions = {
       name: "forms-wizard-step3"
     }]
   }, {
+    path: "/invoice/list",
+    component: _f656a394,
+    name: "invoice-list"
+  }, {
     path: "/item-category/list",
     component: _70555981,
     name: "item-category-list"
@@ -512,6 +523,10 @@ export const routerOptions = {
       path: "new",
       component: _8d83c84a,
       name: "pages-invoices-new"
+    }, {
+      path: "test",
+      component: _4a9a7a32,
+      name: "pages-invoices-test"
     }, {
       path: ":id",
       component: _b4ef7216,
