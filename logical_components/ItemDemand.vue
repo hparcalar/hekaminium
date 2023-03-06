@@ -224,21 +224,21 @@
             </form>
         </div>
 
-        <Dialog header="Dosya" :visible="refreshAttachmentForm" :modal="true" @update:visible="hideHandler"
+        <Dialog header="Dosya" :visible="refreshAttachmentForm" :close-on-escape="true" :dismissable-mask="true" :modal="true" @update:visible="hideHandler"
             :style="{ width: '75vw' , 'z-index':'5000 !important' }">
             <AttachmentForm v-if="refreshAttachmentForm == true && attachmentDialogVisible"
                 :record-object="selectedAttachmentRow" :is-dialog="true" :dialog-container="'dlgAttachment'"
                 @onCancel="closeAttachmentDialog" @onSubmit="onSubmitAttachment" />
         </Dialog>
 
-        <Dialog header="Kesim Bilgileri" :visible="isCuttingVisible" :modal="true"
+        <Dialog header="Kesim Bilgileri" :visible="isCuttingVisible" :dismissable-mask="true" :close-on-escape="true" :modal="true"
             @update:visible="isCuttingVisible = $event" :style="{ width: '75vw', 'z-index': '2000 !important' }">
             <ItemDemandDetail :detail-object="selectedDemandDetail" :total-detail-count="details.length"
                 :process-list="processList" :is-dialog="false" @onDetailSubmit="onDetailSaved"
                 @partDialogOpen="onPartDialogOpen" />
         </Dialog>
 
-        <Dialog header="Dosyalar" :visible="isFolderDialog" :modal="true"
+        <Dialog header="Dosyalar" :visible="isFolderDialog" :dismissable-mask="true" :close-on-escape="true" :modal="true"
             @update:visible="isFolderDialog = $event" :style="{ width: '75vw' , 'z-index':'3000 !important' }">
             <div v-if="selectedDemandDetail && selectedDemandDetail.newRecord == false"
                 class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">

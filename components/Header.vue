@@ -254,6 +254,7 @@ import { useApi } from '~/composable/useApi';
 import { dateToStr, blobToBase64 } from "~/composable/useHelpers";
 import * as flacEncoder from '~/composable/useFlaclib';
 import moment from "~/plugins/moment";
+import { getEventListeners } from 'events';
 
 const { uniqueID } = scHelpers;
 
@@ -571,6 +572,35 @@ export default {
 			this.user.name = userSession.user.name;
 			this.user.plantCode = userSession.user.plantCode;
 		}
+
+		var keydown = null;
+
+		window.onkeydown = function(e) {
+			if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
+				( e.keyCode == 191 ) ) {
+					let toggler = UIkit.toggle('.nav-overlay',{
+						target: '.nav-overlay',
+						animation : 'uk-animation-slide-top'
+					});
+					toggler.toggle();
+				e.preventDefault();
+				keydown = new Date().getTime();
+			}
+
+			return true;
+		}
+		
+		window.onblur = function() {
+			if ( keydown !== null ) {
+				var delta = new Date().getTime() - keydown;
+				if ( delta >= 0 && delta < 1000 )
+				{
+					
+				}
+
+				keydown = null;
+			}
+		};
 	},
 	methods: {
 		requestSpeech(){
@@ -757,12 +787,32 @@ export default {
 			window.location.href = '/login_page';
 		},
 		goToDemand(demandId){
-            this.$router.push('/purchasing/item-demand?id=' + demandId);
+			if (this.$router.currentRoute.name == 'purchasing-item-demand'){
+				this.$router.push('/purchasing/item-demand?id=' + demandId);
+				setTimeout(() => {
+					window.location.href = this.$router.currentRoute.fullPath;
+				}, 300);
+			}
+			else
+            	this.$router.push('/purchasing/item-demand?id=' + demandId);
         },
 		goToOffer(offerId){
-			this.$router.push('/purchasing/item-offer?id=' + offerId);
+			if (this.$router.currentRoute.name == 'purchasing-item-offer'){
+				this.$router.push('/purchasing/item-offer?id=' + offerId);
+				setTimeout(() => {
+					window.location.href = this.$router.currentRoute.fullPath;
+				}, 300);
+			}
+			else
+				this.$router.push('/purchasing/item-offer?id=' + offerId);
 		},
 		goToOrder(orderId){
+			if (this.$router.currentRoute.name == 'purchasing-item-order'){
+				this.$router.push('/purchasing/item-order?id=' + orderId);
+				setTimeout(() => {
+					window.location.href = this.$router.currentRoute.fullPath;
+				}, 300);
+			}
 			this.$router.push('/purchasing/item-order?id=' + orderId);
 		},
 		tryForSearch(){

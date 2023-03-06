@@ -206,8 +206,8 @@ export default {
 				{ data: "totalCost", title: "Maliyet (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.totalCost); } },
 				{ data: "totalForexCost", title: "Maliyet (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.totalForexCost); } },
 				{ data: "profitRate", title: "Kar Marjı %", visible: false, },
-				{ data: "offerPrice", title: "Bedeli (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerPrice * row.quantity); } },
-				{ data: "offerForexPrice", title: "Bedeli (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerForexPrice * row.quantity); } },
+				{ data: "offerPrice", title: "Bedeli (TL)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerPrice); } },
+				{ data: "offerForexPrice", title: "Bedeli (Döviz)", visible: false, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(row.offerForexPrice); } },
 				{ data: "projectStatusText", title: "Durum", visible: true, },
 			],
 			dtDHeaders: [],
@@ -290,8 +290,8 @@ export default {
 		const rawData = (await api.get(targetUri)).data.map((d) => {
 			return {
 				...d,
-				totalCost: d.totalCost * d.quantity,
-				totalForexCost: d.totalForexCost * d.quantity,
+				totalCost: d.totalCost,
+				totalForexCost: d.totalForexCost,
 				offerForexPrice: d.offerForexPrice,
 				offerPrice: d.offerPrice,
 			}
@@ -337,8 +337,8 @@ export default {
 			this.sumOfferForexPrice = this.convertNumberToStr(sum);
 		},
 		exportToCsv(){
-			console.log(this.$refs.dtable);
-			// this.$refs.dtable.exportCSV();
+			// console.log(this.$refs.dtable);
+			this.$refs.dtable.exportCSV();
 		},
 		convertNumberToStr(number){
 			return numberToStr(number);

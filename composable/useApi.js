@@ -1,9 +1,9 @@
 import axios, { AxiosInstance } from 'axios'
 import { useUserSession } from '~/composable/userSession';
 
-const baseUrl = 'http://localhost:5063/';
+// const baseUrl = 'http://localhost:5063/';
 // const baseUrl = 'http://37.148.209.136:5000';
-//const baseUrl = 'https://app.hekarobotics.com:4000/';
+const baseUrl = 'https://app.hekarobotics.com:4000/';
 
 let api;
 

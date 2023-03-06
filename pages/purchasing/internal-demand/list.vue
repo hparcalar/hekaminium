@@ -262,9 +262,8 @@ export default {
       column.visible(e).draw("page");
     },
     onRowSelect(event){
-      this.$router.push(
-        "/purchasing/internal-demand?id=" + event.data.id
-      );
+      const routeData = this.$router.resolve("/purchasing/internal-demand?id=" + event.data.id);
+      window.open(routeData.href, '_blank');
     },
     clickDetail: function (e, dt, type, indexes) {
       this.$router.push(

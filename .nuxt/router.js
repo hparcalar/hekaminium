@@ -4,181 +4,180 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _df818fc2 = () => interopDefault(import('..\\pages\\account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
-const _5c71cecf = () => interopDefault(import('..\\pages\\attachment-category\\index.vue' /* webpackChunkName: "pages/attachment-category/index" */))
-const _4ced1382 = () => interopDefault(import('..\\pages\\firm\\index.vue' /* webpackChunkName: "pages/firm/index" */))
-const _666e8e2a = () => interopDefault(import('..\\pages\\firm-category\\index.vue' /* webpackChunkName: "pages/firm-category/index" */))
-const _3135986a = () => interopDefault(import('..\\pages\\invoice\\index.vue' /* webpackChunkName: "pages/invoice/index" */))
-const _7efc0a4a = () => interopDefault(import('..\\pages\\item\\index.vue' /* webpackChunkName: "pages/item/index" */))
-const _946b5302 = () => interopDefault(import('..\\pages\\item-category\\index.vue' /* webpackChunkName: "pages/item-category/index" */))
-const _594061ec = () => interopDefault(import('..\\pages\\login_page.vue' /* webpackChunkName: "pages/login_page" */))
-const _9178ef26 = () => interopDefault(import('..\\pages\\login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
-const _4cb4fdac = () => interopDefault(import('..\\pages\\plant\\index.vue' /* webpackChunkName: "pages/plant/index" */))
-const _3f047fe8 = () => interopDefault(import('..\\pages\\process\\index.vue' /* webpackChunkName: "pages/process/index" */))
-const _58f4b604 = () => interopDefault(import('..\\pages\\project\\index.vue' /* webpackChunkName: "pages/project/index" */))
-const _5d11864b = () => interopDefault(import('..\\pages\\project-category\\index.vue' /* webpackChunkName: "pages/project-category/index" */))
-const _2de7415c = () => interopDefault(import('..\\pages\\staffpermit\\index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
-const _2934b058 = () => interopDefault(import('..\\pages\\warehouse\\index.vue' /* webpackChunkName: "pages/warehouse/index" */))
-const _75b59731 = () => interopDefault(import('..\\pages\\attachment-category\\list.vue' /* webpackChunkName: "pages/attachment-category/list" */))
-const _ae6d19c6 = () => interopDefault(import('..\\pages\\components\\accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
-const _43b9989e = () => interopDefault(import('..\\pages\\components\\alert.vue' /* webpackChunkName: "pages/components/alert" */))
-const _790e7e2c = () => interopDefault(import('..\\pages\\components\\animations.vue' /* webpackChunkName: "pages/components/animations" */))
-const _725cfa4f = () => interopDefault(import('..\\pages\\components\\avatars.vue' /* webpackChunkName: "pages/components/avatars" */))
-const _7f2241ed = () => interopDefault(import('..\\pages\\components\\badge_label.vue' /* webpackChunkName: "pages/components/badge_label" */))
-const _b96490e8 = () => interopDefault(import('..\\pages\\components\\base.vue' /* webpackChunkName: "pages/components/base" */))
-const _2be0317e = () => interopDefault(import('..\\pages\\components\\breadcrumb.vue' /* webpackChunkName: "pages/components/breadcrumb" */))
-const _1c5f57d4 = () => interopDefault(import('..\\pages\\components\\buttons.vue' /* webpackChunkName: "pages/components/buttons" */))
-const _27be3638 = () => interopDefault(import('..\\pages\\components\\cards.vue' /* webpackChunkName: "pages/components/cards" */))
-const _1c831d74 = () => interopDefault(import('..\\pages\\components\\color_palette.vue' /* webpackChunkName: "pages/components/color_palette" */))
-const _2934b1ad = () => interopDefault(import('..\\pages\\components\\drop_dropdowns.vue' /* webpackChunkName: "pages/components/drop_dropdowns" */))
-const _22e7645e = () => interopDefault(import('..\\pages\\components\\fab_buttons.vue' /* webpackChunkName: "pages/components/fab_buttons" */))
-const _5789ed8c = () => interopDefault(import('..\\pages\\components\\fancy_footer.vue' /* webpackChunkName: "pages/components/fancy_footer" */))
-const _71d6ce4c = () => interopDefault(import('..\\pages\\components\\fancy_toolbar.vue' /* webpackChunkName: "pages/components/fancy_toolbar" */))
-const _25a36b90 = () => interopDefault(import('..\\pages\\components\\filters.vue' /* webpackChunkName: "pages/components/filters" */))
-const _69c656d4 = () => interopDefault(import('..\\pages\\components\\footer.vue' /* webpackChunkName: "pages/components/footer" */))
-const _1cdef981 = () => interopDefault(import('..\\pages\\components\\grid.vue' /* webpackChunkName: "pages/components/grid" */))
-const _6173ebbc = () => interopDefault(import('..\\pages\\components\\height.vue' /* webpackChunkName: "pages/components/height" */))
-const _390e2322 = () => interopDefault(import('..\\pages\\components\\icons.vue' /* webpackChunkName: "pages/components/icons" */))
-const _25396d2c = () => interopDefault(import('..\\pages\\components\\lists.vue' /* webpackChunkName: "pages/components/lists" */))
-const _787e90da = () => interopDefault(import('..\\pages\\components\\masonry.vue' /* webpackChunkName: "pages/components/masonry" */))
-const _4f8f40cd = () => interopDefault(import('..\\pages\\components\\modals_dialogs.vue' /* webpackChunkName: "pages/components/modals_dialogs" */))
-const _534ee786 = () => interopDefault(import('..\\pages\\components\\notifications.vue' /* webpackChunkName: "pages/components/notifications" */))
-const _4164d965 = () => interopDefault(import('..\\pages\\components\\overlay.vue' /* webpackChunkName: "pages/components/overlay" */))
-const _21369595 = () => interopDefault(import('..\\pages\\components\\pagination.vue' /* webpackChunkName: "pages/components/pagination" */))
-const _858abbbe = () => interopDefault(import('..\\pages\\components\\progress_spinners.vue' /* webpackChunkName: "pages/components/progress_spinners" */))
-const _82da45bc = () => interopDefault(import('..\\pages\\components\\scrollable.vue' /* webpackChunkName: "pages/components/scrollable" */))
-const _8f40f648 = () => interopDefault(import('..\\pages\\components\\slider.vue' /* webpackChunkName: "pages/components/slider" */))
-const _32f047b3 = () => interopDefault(import('..\\pages\\components\\sortable.vue' /* webpackChunkName: "pages/components/sortable" */))
-const _70b75ffe = () => interopDefault(import('..\\pages\\components\\swipe_list.vue' /* webpackChunkName: "pages/components/swipe_list" */))
-const _1dcfe860 = () => interopDefault(import('..\\pages\\components\\tables.vue' /* webpackChunkName: "pages/components/tables" */))
-const _5634748e = () => interopDefault(import('..\\pages\\components\\tabs.vue' /* webpackChunkName: "pages/components/tabs" */))
-const _3436437c = () => interopDefault(import('..\\pages\\components\\timeline.vue' /* webpackChunkName: "pages/components/timeline" */))
-const _7442d9e0 = () => interopDefault(import('..\\pages\\components\\toolbar.vue' /* webpackChunkName: "pages/components/toolbar" */))
-const _29867eea = () => interopDefault(import('..\\pages\\components\\tooltips.vue' /* webpackChunkName: "pages/components/tooltips" */))
-const _eace355a = () => interopDefault(import('..\\pages\\components\\transitions.vue' /* webpackChunkName: "pages/components/transitions" */))
-const _323b931b = () => interopDefault(import('..\\pages\\components\\width.vue' /* webpackChunkName: "pages/components/width" */))
-const _39c1dd3a = () => interopDefault(import('..\\pages\\dashboard\\v1.vue' /* webpackChunkName: "pages/dashboard/v1" */))
-const _39cff4bb = () => interopDefault(import('..\\pages\\dashboard\\v2.vue' /* webpackChunkName: "pages/dashboard/v2" */))
-const _6dc60076 = () => interopDefault(import('..\\pages\\firm-category\\list.vue' /* webpackChunkName: "pages/firm-category/list" */))
-const _67597c7e = () => interopDefault(import('..\\pages\\firm\\list.vue' /* webpackChunkName: "pages/firm/list" */))
-const _492cab93 = () => interopDefault(import('..\\pages\\forms\\dynamic_fields.vue' /* webpackChunkName: "pages/forms/dynamic_fields" */))
-const _364053d8 = () => interopDefault(import('..\\pages\\forms\\regular_elements.vue' /* webpackChunkName: "pages/forms/regular_elements" */))
-const _5cac9e53 = () => interopDefault(import('..\\pages\\forms\\validation.vue' /* webpackChunkName: "pages/forms/validation" */))
-const _78390345 = () => interopDefault(import('..\\pages\\forms\\wizard.vue' /* webpackChunkName: "pages/forms/wizard" */))
-const _ae311ba0 = () => interopDefault(import('..\\pages\\forms\\wizard\\step1.vue' /* webpackChunkName: "pages/forms/wizard/step1" */))
-const _ae14ec9e = () => interopDefault(import('..\\pages\\forms\\wizard\\step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
-const _adf8bd9c = () => interopDefault(import('..\\pages\\forms\\wizard\\step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
-const _f656a394 = () => interopDefault(import('..\\pages\\invoice\\list.vue' /* webpackChunkName: "pages/invoice/list" */))
-const _70555981 = () => interopDefault(import('..\\pages\\item-category\\list.vue' /* webpackChunkName: "pages/item-category/list" */))
-const _3378e093 = () => interopDefault(import('..\\pages\\item\\consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
-const _4d888056 = () => interopDefault(import('..\\pages\\item\\list.vue' /* webpackChunkName: "pages/item/list" */))
-const _36d88beb = () => interopDefault(import('..\\pages\\layout\\boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
-const _acb1657a = () => interopDefault(import('..\\pages\\layout\\mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
-const _37665736 = () => interopDefault(import('..\\pages\\layout\\offcanvas_sidebar.vue' /* webpackChunkName: "pages/layout/offcanvas_sidebar" */))
-const _42058e50 = () => interopDefault(import('..\\pages\\layout\\top_menu.vue' /* webpackChunkName: "pages/layout/top_menu" */))
-const _3904c396 = () => interopDefault(import('..\\pages\\pages\\blank.vue' /* webpackChunkName: "pages/pages/blank" */))
-const _310c63be = () => interopDefault(import('..\\pages\\pages\\blank_header_expanded.vue' /* webpackChunkName: "pages/pages/blank_header_expanded" */))
-const _021ceef2 = () => interopDefault(import('..\\pages\\pages\\chat.vue' /* webpackChunkName: "pages/pages/chat" */))
-const _53edbd0c = () => interopDefault(import('..\\pages\\pages\\contact_list.vue' /* webpackChunkName: "pages/pages/contact_list" */))
-const _5154338b = () => interopDefault(import('..\\pages\\pages\\contact_list_single.vue' /* webpackChunkName: "pages/pages/contact_list_single" */))
-const _d2501a84 = () => interopDefault(import('..\\pages\\pages\\data_visualization.vue' /* webpackChunkName: "pages/pages/data_visualization" */))
-const _29bb66f3 = () => interopDefault(import('..\\pages\\pages\\gallery.vue' /* webpackChunkName: "pages/pages/gallery" */))
-const _aade1a72 = () => interopDefault(import('..\\pages\\pages\\help_faq.vue' /* webpackChunkName: "pages/pages/help_faq" */))
-const _5bef7d95 = () => interopDefault(import('..\\pages\\pages\\invoices.vue' /* webpackChunkName: "pages/pages/invoices" */))
-const _d7095566 = () => interopDefault(import('..\\pages\\pages\\invoices\\index.vue' /* webpackChunkName: "pages/pages/invoices/index" */))
-const _8d83c84a = () => interopDefault(import('..\\pages\\pages\\invoices\\new.vue' /* webpackChunkName: "pages/pages/invoices/new" */))
-const _4a9a7a32 = () => interopDefault(import('..\\pages\\pages\\invoices\\test.vue' /* webpackChunkName: "pages/pages/invoices/test" */))
-const _b4ef7216 = () => interopDefault(import('..\\pages\\pages\\invoices\\_id.vue' /* webpackChunkName: "pages/pages/invoices/_id" */))
-const _01a69d29 = () => interopDefault(import('..\\pages\\pages\\issues.vue' /* webpackChunkName: "pages/pages/issues" */))
-const _5ff23e2e = () => interopDefault(import('..\\pages\\pages\\issues\\details.vue' /* webpackChunkName: "pages/pages/issues/details" */))
-const _b2244fbe = () => interopDefault(import('..\\pages\\pages\\issues\\details\\_id.vue' /* webpackChunkName: "pages/pages/issues/details/_id" */))
-const _26006987 = () => interopDefault(import('..\\pages\\pages\\issues\\list.vue' /* webpackChunkName: "pages/pages/issues/list" */))
-const _466af755 = () => interopDefault(import('..\\pages\\pages\\mailbox.vue' /* webpackChunkName: "pages/pages/mailbox" */))
-const _50b7638d = () => interopDefault(import('..\\pages\\pages\\mailbox\\index.vue' /* webpackChunkName: "pages/pages/mailbox/index" */))
-const _85f4e0e6 = () => interopDefault(import('..\\pages\\pages\\mailbox\\compose.vue' /* webpackChunkName: "pages/pages/mailbox/compose" */))
-const _29339528 = () => interopDefault(import('..\\pages\\pages\\mailbox\\message\\_id.vue' /* webpackChunkName: "pages/pages/mailbox/message/_id" */))
-const _26fc45bc = () => interopDefault(import('..\\pages\\pages\\notes.vue' /* webpackChunkName: "pages/pages/notes" */))
-const _ff14f3a0 = () => interopDefault(import('..\\pages\\pages\\poi_listing.vue' /* webpackChunkName: "pages/pages/poi_listing" */))
-const _588a126d = () => interopDefault(import('..\\pages\\pages\\pricing_tables.vue' /* webpackChunkName: "pages/pages/pricing_tables" */))
-const _9a319f5c = () => interopDefault(import('..\\pages\\pages\\settings.vue' /* webpackChunkName: "pages/pages/settings" */))
-const _14b8a4ca = () => interopDefault(import('..\\pages\\pages\\task_board.vue' /* webpackChunkName: "pages/pages/task_board" */))
-const _29ac58e4 = () => interopDefault(import('..\\pages\\pages\\user_profile.vue' /* webpackChunkName: "pages/pages/user_profile" */))
-const _1ddace98 = () => interopDefault(import('..\\pages\\plant\\list.vue' /* webpackChunkName: "pages/plant/list" */))
-const _b32ac12a = () => interopDefault(import('..\\pages\\plugins\\ajax.vue' /* webpackChunkName: "pages/plugins/ajax" */))
-const _cfc8cfee = () => interopDefault(import('..\\pages\\plugins\\calendar.vue' /* webpackChunkName: "pages/plugins/calendar" */))
-const _40ee0382 = () => interopDefault(import('..\\pages\\plugins\\calendar_events.vue' /* webpackChunkName: "pages/plugins/calendar_events" */))
-const _9fe3e340 = () => interopDefault(import('..\\pages\\plugins\\charts.vue' /* webpackChunkName: "pages/plugins/charts" */))
-const _d69e65f8 = () => interopDefault(import('..\\pages\\plugins\\code_editor.vue' /* webpackChunkName: "pages/plugins/code_editor" */))
-const _2e41d900 = () => interopDefault(import('..\\pages\\plugins\\data_grid.vue' /* webpackChunkName: "pages/plugins/data_grid" */))
-const _5065521a = () => interopDefault(import('..\\pages\\plugins\\datatables.vue' /* webpackChunkName: "pages/plugins/datatables" */))
-const _81b24f52 = () => interopDefault(import('..\\pages\\plugins\\diff_tool.vue' /* webpackChunkName: "pages/plugins/diff_tool" */))
-const _00e5c990 = () => interopDefault(import('..\\pages\\plugins\\gantt_chart.vue' /* webpackChunkName: "pages/plugins/gantt_chart" */))
-const _acc9a23c = () => interopDefault(import('..\\pages\\plugins\\google_maps.vue' /* webpackChunkName: "pages/plugins/google_maps" */))
-const _3fe2cf41 = () => interopDefault(import('..\\pages\\plugins\\idle_timeout.vue' /* webpackChunkName: "pages/plugins/idle_timeout" */))
-const _38e89324 = () => interopDefault(import('..\\pages\\plugins\\image_cropper.vue' /* webpackChunkName: "pages/plugins/image_cropper" */))
-const _5f6e6f0e = () => interopDefault(import('..\\pages\\plugins\\push_notifications.vue' /* webpackChunkName: "pages/plugins/push_notifications" */))
-const _f32708ba = () => interopDefault(import('..\\pages\\plugins\\tour.vue' /* webpackChunkName: "pages/plugins/tour" */))
-const _091a71e9 = () => interopDefault(import('..\\pages\\plugins\\tree.vue' /* webpackChunkName: "pages/plugins/tree" */))
-const _77167718 = () => interopDefault(import('..\\pages\\plugins\\vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
-const _0be78da0 = () => interopDefault(import('..\\pages\\plugins\\vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
-const _19ebdef8 = () => interopDefault(import('..\\pages\\process\\list.vue' /* webpackChunkName: "pages/process/list" */))
-const _d279ff96 = () => interopDefault(import('..\\pages\\project-category\\list.vue' /* webpackChunkName: "pages/project-category/list" */))
-const _ab05e4ee = () => interopDefault(import('..\\pages\\project\\docview.vue' /* webpackChunkName: "pages/project/docview" */))
-const _4910f323 = () => interopDefault(import('..\\pages\\project\\fieldservice\\index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
-const _60c6bf22 = () => interopDefault(import('..\\pages\\project\\list.vue' /* webpackChunkName: "pages/project/list" */))
-const _262e42fa = () => interopDefault(import('..\\pages\\purchasing\\internal-demand\\index.vue' /* webpackChunkName: "pages/purchasing/internal-demand/index" */))
-const _fc5aa960 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
-const _2176ed46 = () => interopDefault(import('..\\pages\\purchasing\\item-offer\\index.vue' /* webpackChunkName: "pages/purchasing/item-offer/index" */))
-const _61d1f12b = () => interopDefault(import('..\\pages\\purchasing\\item-order\\index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
-const _03eccf7e = () => interopDefault(import('..\\pages\\purchasing\\item-receipt\\index.vue' /* webpackChunkName: "pages/purchasing/item-receipt/index" */))
-const _63b11f04 = () => interopDefault(import('..\\pages\\staffpermit\\list.vue' /* webpackChunkName: "pages/staffpermit/list" */))
-const _a73f5d56 = () => interopDefault(import('..\\pages\\user\\checkIn\\index.vue' /* webpackChunkName: "pages/user/checkIn/index" */))
-const _3bf03480 = () => interopDefault(import('..\\pages\\user\\department\\index.vue' /* webpackChunkName: "pages/user/department/index" */))
-const _6971ecb8 = () => interopDefault(import('..\\pages\\user\\employee\\index.vue' /* webpackChunkName: "pages/user/employee/index" */))
-const _4a926438 = () => interopDefault(import('..\\pages\\user\\member\\index.vue' /* webpackChunkName: "pages/user/member/index" */))
-const _5b9b56dc = () => interopDefault(import('..\\pages\\user\\role\\index.vue' /* webpackChunkName: "pages/user/role/index" */))
-const _7210098c = () => interopDefault(import('..\\pages\\warehouse\\list.vue' /* webpackChunkName: "pages/warehouse/list" */))
-const _765b32da = () => interopDefault(import('..\\pages\\warehouse\\live.vue' /* webpackChunkName: "pages/warehouse/live" */))
-const _6c61a789 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
-const _4415aaf4 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
-const _0cf6a2b6 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
-const _52b577a7 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\date_range_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_range_picker" */))
-const _0f066bc8 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\inputmask.vue' /* webpackChunkName: "pages/forms/advanced_elements/inputmask" */))
-const _ec5e2e4a = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\multiselect.vue' /* webpackChunkName: "pages/forms/advanced_elements/multiselect" */))
-const _13e4e3ad = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\range_slider.vue' /* webpackChunkName: "pages/forms/advanced_elements/range_slider" */))
-const _4ef537a7 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\rating.vue' /* webpackChunkName: "pages/forms/advanced_elements/rating" */))
-const _f713b2c8 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\select2.vue' /* webpackChunkName: "pages/forms/advanced_elements/select2" */))
-const _35716dec = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\switches.vue' /* webpackChunkName: "pages/forms/advanced_elements/switches" */))
-const _20947226 = () => interopDefault(import('..\\pages\\forms\\advanced_elements\\time_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/time_picker" */))
-const _406739b9 = () => interopDefault(import('..\\pages\\forms\\examples\\advertising_evaluation_form.vue' /* webpackChunkName: "pages/forms/examples/advertising_evaluation_form" */))
-const _44c536cd = () => interopDefault(import('..\\pages\\forms\\examples\\booking_form.vue' /* webpackChunkName: "pages/forms/examples/booking_form" */))
-const _77774381 = () => interopDefault(import('..\\pages\\forms\\examples\\car_rental_form.vue' /* webpackChunkName: "pages/forms/examples/car_rental_form" */))
-const _989e856c = () => interopDefault(import('..\\pages\\forms\\examples\\checkout_form.vue' /* webpackChunkName: "pages/forms/examples/checkout_form" */))
-const _060a92fd = () => interopDefault(import('..\\pages\\forms\\examples\\contact_forms.vue' /* webpackChunkName: "pages/forms/examples/contact_forms" */))
-const _4a9f8bf8 = () => interopDefault(import('..\\pages\\forms\\examples\\job_application_form.vue' /* webpackChunkName: "pages/forms/examples/job_application_form" */))
-const _02440de0 = () => interopDefault(import('..\\pages\\forms\\examples\\medical_history_form.vue' /* webpackChunkName: "pages/forms/examples/medical_history_form" */))
-const _1d5dc0b7 = () => interopDefault(import('..\\pages\\forms\\examples\\registration_form.vue' /* webpackChunkName: "pages/forms/examples/registration_form" */))
-const _5551d67b = () => interopDefault(import('..\\pages\\forms\\examples\\rental_application_form.vue' /* webpackChunkName: "pages/forms/examples/rental_application_form" */))
-const _48e2bf4a = () => interopDefault(import('..\\pages\\forms\\examples\\transaction_feedback_form.vue' /* webpackChunkName: "pages/forms/examples/transaction_feedback_form" */))
-const _2b2b50b8 = () => interopDefault(import('..\\pages\\forms\\wysiwyg\\ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
-const _35912a32 = () => interopDefault(import('..\\pages\\forms\\wysiwyg\\quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
-const _0d92cf46 = () => interopDefault(import('..\\pages\\project\\fieldservice\\list.vue' /* webpackChunkName: "pages/project/fieldservice/list" */))
-const _20571cb4 = () => interopDefault(import('..\\pages\\purchasing\\internal-demand\\list.vue' /* webpackChunkName: "pages/purchasing/internal-demand/list" */))
-const _af12b2e0 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
-const _1a032259 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\my-demands.vue' /* webpackChunkName: "pages/purchasing/item-demand/my-demands" */))
-const _eb9d4972 = () => interopDefault(import('..\\pages\\purchasing\\item-demand\\waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
-const _c90b5a3a = () => interopDefault(import('..\\pages\\purchasing\\item-offer\\list.vue' /* webpackChunkName: "pages/purchasing/item-offer/list" */))
-const _54d9b955 = () => interopDefault(import('..\\pages\\purchasing\\item-order\\list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
-const _0247c5e2 = () => interopDefault(import('..\\pages\\purchasing\\item-order\\waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-order/waiting-for-approve" */))
-const _6225d77f = () => interopDefault(import('..\\pages\\purchasing\\item-receipt\\list.vue' /* webpackChunkName: "pages/purchasing/item-receipt/list" */))
-const _20cfb090 = () => interopDefault(import('..\\pages\\user\\checkIn\\checkIn.vue' /* webpackChunkName: "pages/user/checkIn/checkIn" */))
-const _7849abeb = () => interopDefault(import('..\\pages\\user\\checkIn\\list.vue' /* webpackChunkName: "pages/user/checkIn/list" */))
-const _7ceb3760 = () => interopDefault(import('..\\pages\\user\\department\\list.vue' /* webpackChunkName: "pages/user/department/list" */))
-const _bad9a488 = () => interopDefault(import('..\\pages\\user\\employee\\list.vue' /* webpackChunkName: "pages/user/employee/list" */))
-const _e42f9eb0 = () => interopDefault(import('..\\pages\\user\\member\\list.vue' /* webpackChunkName: "pages/user/member/list" */))
-const _4c645984 = () => interopDefault(import('..\\pages\\user\\role\\list.vue' /* webpackChunkName: "pages/user/role/list" */))
-const _fa239040 = () => interopDefault(import('..\\pages\\user\\shift\\list.vue' /* webpackChunkName: "pages/user/shift/list" */))
-const _2695b4fd = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _51d079c8 = () => interopDefault(import('../pages/account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
+const _1ae606b9 = () => interopDefault(import('../pages/attachment-category/index.vue' /* webpackChunkName: "pages/attachment-category/index" */))
+const _5704df63 = () => interopDefault(import('../pages/firm/index.vue' /* webpackChunkName: "pages/firm/index" */))
+const _d45ff384 = () => interopDefault(import('../pages/firm-category/index.vue' /* webpackChunkName: "pages/firm-category/index" */))
+const _5f35fa3e = () => interopDefault(import('../pages/invoice/index.vue' /* webpackChunkName: "pages/invoice/index" */))
+const _4f8bc410 = () => interopDefault(import('../pages/item/index.vue' /* webpackChunkName: "pages/item/index" */))
+const _cf41416e = () => interopDefault(import('../pages/item-category/index.vue' /* webpackChunkName: "pages/item-category/index" */))
+const _17e8f547 = () => interopDefault(import('../pages/login_page.vue' /* webpackChunkName: "pages/login_page" */))
+const _2099c050 = () => interopDefault(import('../pages/login_page_auth.vue' /* webpackChunkName: "pages/login_page_auth" */))
+const _f8529d08 = () => interopDefault(import('../pages/plant/index.vue' /* webpackChunkName: "pages/plant/index" */))
+const _1765aa00 = () => interopDefault(import('../pages/process/index.vue' /* webpackChunkName: "pages/process/index" */))
+const _3b280b2a = () => interopDefault(import('../pages/project/index.vue' /* webpackChunkName: "pages/project/index" */))
+const _37b7ab52 = () => interopDefault(import('../pages/project-category/index.vue' /* webpackChunkName: "pages/project-category/index" */))
+const _1681618c = () => interopDefault(import('../pages/staffpermit/index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
+const _218eb8d4 = () => interopDefault(import('../pages/warehouse/index.vue' /* webpackChunkName: "pages/warehouse/index" */))
+const _2945ba07 = () => interopDefault(import('../pages/attachment-category/list.vue' /* webpackChunkName: "pages/attachment-category/list" */))
+const _93b0609e = () => interopDefault(import('../pages/components/accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
+const _3aaefa45 = () => interopDefault(import('../pages/components/alert.vue' /* webpackChunkName: "pages/components/alert" */))
+const _61e5f6d6 = () => interopDefault(import('../pages/components/animations.vue' /* webpackChunkName: "pages/components/animations" */))
+const _49dd283a = () => interopDefault(import('../pages/components/avatars.vue' /* webpackChunkName: "pages/components/avatars" */))
+const _a3486cfe = () => interopDefault(import('../pages/components/badge_label.vue' /* webpackChunkName: "pages/components/badge_label" */))
+const _11a4ce78 = () => interopDefault(import('../pages/components/base.vue' /* webpackChunkName: "pages/components/base" */))
+const _6b65312c = () => interopDefault(import('../pages/components/breadcrumb.vue' /* webpackChunkName: "pages/components/breadcrumb" */))
+const _5a84c5aa = () => interopDefault(import('../pages/components/buttons.vue' /* webpackChunkName: "pages/components/buttons" */))
+const _f76c0668 = () => interopDefault(import('../pages/components/cards.vue' /* webpackChunkName: "pages/components/cards" */))
+const _63791008 = () => interopDefault(import('../pages/components/color_palette.vue' /* webpackChunkName: "pages/components/color_palette" */))
+const _7e05dcce = () => interopDefault(import('../pages/components/drop_dropdowns.vue' /* webpackChunkName: "pages/components/drop_dropdowns" */))
+const _5220ebf2 = () => interopDefault(import('../pages/components/fab_buttons.vue' /* webpackChunkName: "pages/components/fab_buttons" */))
+const _0f815878 = () => interopDefault(import('../pages/components/fancy_footer.vue' /* webpackChunkName: "pages/components/fancy_footer" */))
+const _0e0a8b6e = () => interopDefault(import('../pages/components/fancy_toolbar.vue' /* webpackChunkName: "pages/components/fancy_toolbar" */))
+const _e35045b8 = () => interopDefault(import('../pages/components/filters.vue' /* webpackChunkName: "pages/components/filters" */))
+const _0009e082 = () => interopDefault(import('../pages/components/footer.vue' /* webpackChunkName: "pages/components/footer" */))
+const _e993df26 = () => interopDefault(import('../pages/components/grid.vue' /* webpackChunkName: "pages/components/grid" */))
+const _0433160e = () => interopDefault(import('../pages/components/height.vue' /* webpackChunkName: "pages/components/height" */))
+const _4004b503 = () => interopDefault(import('../pages/components/icons.vue' /* webpackChunkName: "pages/components/icons" */))
+const _49ef0ffe = () => interopDefault(import('../pages/components/lists.vue' /* webpackChunkName: "pages/components/lists" */))
+const _3d99fb24 = () => interopDefault(import('../pages/components/masonry.vue' /* webpackChunkName: "pages/components/masonry" */))
+const _3150be8e = () => interopDefault(import('../pages/components/modals_dialogs.vue' /* webpackChunkName: "pages/components/modals_dialogs" */))
+const _1d4e7ed1 = () => interopDefault(import('../pages/components/notifications.vue' /* webpackChunkName: "pages/components/notifications" */))
+const _abcd6a0e = () => interopDefault(import('../pages/components/overlay.vue' /* webpackChunkName: "pages/components/overlay" */))
+const _80b868fe = () => interopDefault(import('../pages/components/pagination.vue' /* webpackChunkName: "pages/components/pagination" */))
+const _47e5aa96 = () => interopDefault(import('../pages/components/progress_spinners.vue' /* webpackChunkName: "pages/components/progress_spinners" */))
+const _5d00130e = () => interopDefault(import('../pages/components/scrollable.vue' /* webpackChunkName: "pages/components/scrollable" */))
+const _2566de70 = () => interopDefault(import('../pages/components/slider.vue' /* webpackChunkName: "pages/components/slider" */))
+const _3e6beec2 = () => interopDefault(import('../pages/components/sortable.vue' /* webpackChunkName: "pages/components/sortable" */))
+const _0f2495ea = () => interopDefault(import('../pages/components/swipe_list.vue' /* webpackChunkName: "pages/components/swipe_list" */))
+const _52bcf44c = () => interopDefault(import('../pages/components/tables.vue' /* webpackChunkName: "pages/components/tables" */))
+const _433cdca5 = () => interopDefault(import('../pages/components/tabs.vue' /* webpackChunkName: "pages/components/tabs" */))
+const _3bdff730 = () => interopDefault(import('../pages/components/timeline.vue' /* webpackChunkName: "pages/components/timeline" */))
+const _2e9304a4 = () => interopDefault(import('../pages/components/toolbar.vue' /* webpackChunkName: "pages/components/toolbar" */))
+const _cdd2fd12 = () => interopDefault(import('../pages/components/tooltips.vue' /* webpackChunkName: "pages/components/tooltips" */))
+const _8c5b2632 = () => interopDefault(import('../pages/components/transitions.vue' /* webpackChunkName: "pages/components/transitions" */))
+const _e2714ca2 = () => interopDefault(import('../pages/components/width.vue' /* webpackChunkName: "pages/components/width" */))
+const _03c63078 = () => interopDefault(import('../pages/dashboard/v1.vue' /* webpackChunkName: "pages/dashboard/v1" */))
+const _03d447f9 = () => interopDefault(import('../pages/dashboard/v2.vue' /* webpackChunkName: "pages/dashboard/v2" */))
+const _670b35e2 = () => interopDefault(import('../pages/firm-category/list.vue' /* webpackChunkName: "pages/firm-category/list" */))
+const _22f4241d = () => interopDefault(import('../pages/firm/list.vue' /* webpackChunkName: "pages/firm/list" */))
+const _39cde9bb = () => interopDefault(import('../pages/forms/dynamic_fields.vue' /* webpackChunkName: "pages/forms/dynamic_fields" */))
+const _322a2a3c = () => interopDefault(import('../pages/forms/regular_elements.vue' /* webpackChunkName: "pages/forms/regular_elements" */))
+const _96999f0a = () => interopDefault(import('../pages/forms/validation.vue' /* webpackChunkName: "pages/forms/validation" */))
+const _71222d26 = () => interopDefault(import('../pages/forms/wizard.vue' /* webpackChunkName: "pages/forms/wizard" */))
+const _bf335a7a = () => interopDefault(import('../pages/forms/wizard/step1.vue' /* webpackChunkName: "pages/forms/wizard/step1" */))
+const _bf172b78 = () => interopDefault(import('../pages/forms/wizard/step2.vue' /* webpackChunkName: "pages/forms/wizard/step2" */))
+const _befafc76 = () => interopDefault(import('../pages/forms/wizard/step3.vue' /* webpackChunkName: "pages/forms/wizard/step3" */))
+const _c1d27c3c = () => interopDefault(import('../pages/invoice/list.vue' /* webpackChunkName: "pages/invoice/list" */))
+const _7c11e112 = () => interopDefault(import('../pages/item-category/list.vue' /* webpackChunkName: "pages/item-category/list" */))
+const _3118f9c1 = () => interopDefault(import('../pages/item/consumption.vue' /* webpackChunkName: "pages/item/consumption" */))
+const _98fb8230 = () => interopDefault(import('../pages/item/list.vue' /* webpackChunkName: "pages/item/list" */))
+const _59763cb2 = () => interopDefault(import('../pages/layout/boxed.vue' /* webpackChunkName: "pages/layout/boxed" */))
+const _ee0367f2 = () => interopDefault(import('../pages/layout/mini_sidebar.vue' /* webpackChunkName: "pages/layout/mini_sidebar" */))
+const _2fcb1fbe = () => interopDefault(import('../pages/layout/offcanvas_sidebar.vue' /* webpackChunkName: "pages/layout/offcanvas_sidebar" */))
+const _020a399c = () => interopDefault(import('../pages/layout/top_menu.vue' /* webpackChunkName: "pages/layout/top_menu" */))
+const _1e8e0317 = () => interopDefault(import('../pages/pages/blank.vue' /* webpackChunkName: "pages/pages/blank" */))
+const _d98fa1fa = () => interopDefault(import('../pages/pages/blank_header_expanded.vue' /* webpackChunkName: "pages/pages/blank_header_expanded" */))
+const _5bafff65 = () => interopDefault(import('../pages/pages/chat.vue' /* webpackChunkName: "pages/pages/chat" */))
+const _312e75ea = () => interopDefault(import('../pages/pages/contact_list.vue' /* webpackChunkName: "pages/pages/contact_list" */))
+const _0ccd3626 = () => interopDefault(import('../pages/pages/contact_list_single.vue' /* webpackChunkName: "pages/pages/contact_list_single" */))
+const _4353e5c8 = () => interopDefault(import('../pages/pages/data_visualization.vue' /* webpackChunkName: "pages/pages/data_visualization" */))
+const _3b73c956 = () => interopDefault(import('../pages/pages/gallery.vue' /* webpackChunkName: "pages/pages/gallery" */))
+const _035ccaa5 = () => interopDefault(import('../pages/pages/help_faq.vue' /* webpackChunkName: "pages/pages/help_faq" */))
+const _9689551a = () => interopDefault(import('../pages/pages/invoices.vue' /* webpackChunkName: "pages/pages/invoices" */))
+const _4560b9b6 = () => interopDefault(import('../pages/pages/invoices/index.vue' /* webpackChunkName: "pages/pages/invoices/index" */))
+const _39d38684 = () => interopDefault(import('../pages/pages/invoices/new.vue' /* webpackChunkName: "pages/pages/invoices/new" */))
+const _261db19e = () => interopDefault(import('../pages/pages/invoices/_id.vue' /* webpackChunkName: "pages/pages/invoices/_id" */))
+const _28a2d487 = () => interopDefault(import('../pages/pages/issues.vue' /* webpackChunkName: "pages/pages/issues" */))
+const _0b24d33a = () => interopDefault(import('../pages/pages/issues/details.vue' /* webpackChunkName: "pages/pages/issues/details" */))
+const _0c74f3e5 = () => interopDefault(import('../pages/pages/issues/details/_id.vue' /* webpackChunkName: "pages/pages/issues/details/_id" */))
+const _8129fe54 = () => interopDefault(import('../pages/pages/issues/list.vue' /* webpackChunkName: "pages/pages/issues/list" */))
+const _0214a892 = () => interopDefault(import('../pages/pages/mailbox.vue' /* webpackChunkName: "pages/pages/mailbox" */))
+const _3dab660c = () => interopDefault(import('../pages/pages/mailbox/index.vue' /* webpackChunkName: "pages/pages/mailbox/index" */))
+const _07385c8c = () => interopDefault(import('../pages/pages/mailbox/compose.vue' /* webpackChunkName: "pages/pages/mailbox/compose" */))
+const _11a6084c = () => interopDefault(import('../pages/pages/mailbox/message/_id.vue' /* webpackChunkName: "pages/pages/mailbox/message/_id" */))
+const _27924204 = () => interopDefault(import('../pages/pages/notes.vue' /* webpackChunkName: "pages/pages/notes" */))
+const _5c298cdc = () => interopDefault(import('../pages/pages/poi_listing.vue' /* webpackChunkName: "pages/pages/poi_listing" */))
+const _2effe86a = () => interopDefault(import('../pages/pages/pricing_tables.vue' /* webpackChunkName: "pages/pages/pricing_tables" */))
+const _0bb30830 = () => interopDefault(import('../pages/pages/settings.vue' /* webpackChunkName: "pages/pages/settings" */))
+const _4ad905f9 = () => interopDefault(import('../pages/pages/task_board.vue' /* webpackChunkName: "pages/pages/task_board" */))
+const _06ed11c2 = () => interopDefault(import('../pages/pages/user_profile.vue' /* webpackChunkName: "pages/pages/user_profile" */))
+const _cff9aa38 = () => interopDefault(import('../pages/plant/list.vue' /* webpackChunkName: "pages/plant/list" */))
+const _21f94f51 = () => interopDefault(import('../pages/plugins/ajax.vue' /* webpackChunkName: "pages/plugins/ajax" */))
+const _4b63e4ef = () => interopDefault(import('../pages/plugins/calendar.vue' /* webpackChunkName: "pages/plugins/calendar" */))
+const _ce3cface = () => interopDefault(import('../pages/plugins/calendar_events.vue' /* webpackChunkName: "pages/plugins/calendar_events" */))
+const _fa9f4674 = () => interopDefault(import('../pages/plugins/charts.vue' /* webpackChunkName: "pages/plugins/charts" */))
+const _4144e344 = () => interopDefault(import('../pages/plugins/code_editor.vue' /* webpackChunkName: "pages/plugins/code_editor" */))
+const _37f9ae4c = () => interopDefault(import('../pages/plugins/data_grid.vue' /* webpackChunkName: "pages/plugins/data_grid" */))
+const _52cdfd80 = () => interopDefault(import('../pages/plugins/datatables.vue' /* webpackChunkName: "pages/plugins/datatables" */))
+const _74e82831 = () => interopDefault(import('../pages/plugins/diff_tool.vue' /* webpackChunkName: "pages/plugins/diff_tool" */))
+const _4a39dc92 = () => interopDefault(import('../pages/plugins/gantt_chart.vue' /* webpackChunkName: "pages/plugins/gantt_chart" */))
+const _17701f88 = () => interopDefault(import('../pages/plugins/google_maps.vue' /* webpackChunkName: "pages/plugins/google_maps" */))
+const _4ace3927 = () => interopDefault(import('../pages/plugins/idle_timeout.vue' /* webpackChunkName: "pages/plugins/idle_timeout" */))
+const _360d8948 = () => interopDefault(import('../pages/plugins/image_cropper.vue' /* webpackChunkName: "pages/plugins/image_cropper" */))
+const _43405474 = () => interopDefault(import('../pages/plugins/push_notifications.vue' /* webpackChunkName: "pages/plugins/push_notifications" */))
+const _01fb2b89 = () => interopDefault(import('../pages/plugins/tour.vue' /* webpackChunkName: "pages/plugins/tour" */))
+const _f6adbc62 = () => interopDefault(import('../pages/plugins/tree.vue' /* webpackChunkName: "pages/plugins/tree" */))
+const _7c798f1c = () => interopDefault(import('../pages/plugins/vector_maps.vue' /* webpackChunkName: "pages/plugins/vector_maps" */))
+const _10767cd4 = () => interopDefault(import('../pages/plugins/vue_good_table.vue' /* webpackChunkName: "pages/plugins/vue_good_table" */))
+const _61d570e0 = () => interopDefault(import('../pages/process/list.vue' /* webpackChunkName: "pages/process/list" */))
+const _3805aaa9 = () => interopDefault(import('../pages/project-category/list.vue' /* webpackChunkName: "pages/project-category/list" */))
+const _99c2ce96 = () => interopDefault(import('../pages/project/docview.vue' /* webpackChunkName: "pages/project/docview" */))
+const _011dddd4 = () => interopDefault(import('../pages/project/fieldservice/index.vue' /* webpackChunkName: "pages/project/fieldservice/index" */))
+const _e52e3914 = () => interopDefault(import('../pages/project/list.vue' /* webpackChunkName: "pages/project/list" */))
+const _367a5b6f = () => interopDefault(import('../pages/purchasing/internal-demand/index.vue' /* webpackChunkName: "pages/purchasing/internal-demand/index" */))
+const _3a5d6259 = () => interopDefault(import('../pages/purchasing/item-demand/index.vue' /* webpackChunkName: "pages/purchasing/item-demand/index" */))
+const _16cf2d38 = () => interopDefault(import('../pages/purchasing/item-offer/index.vue' /* webpackChunkName: "pages/purchasing/item-offer/index" */))
+const _a4106054 = () => interopDefault(import('../pages/purchasing/item-order/index.vue' /* webpackChunkName: "pages/purchasing/item-order/index" */))
+const _574ed200 = () => interopDefault(import('../pages/purchasing/item-receipt/index.vue' /* webpackChunkName: "pages/purchasing/item-receipt/index" */))
+const _e78b8e58 = () => interopDefault(import('../pages/staffpermit/list.vue' /* webpackChunkName: "pages/staffpermit/list" */))
+const _bf0c9124 = () => interopDefault(import('../pages/user/checkIn/index.vue' /* webpackChunkName: "pages/user/checkIn/index" */))
+const _13013de7 = () => interopDefault(import('../pages/user/department/index.vue' /* webpackChunkName: "pages/user/department/index" */))
+const _47a694c3 = () => interopDefault(import('../pages/user/employee/index.vue' /* webpackChunkName: "pages/user/employee/index" */))
+const _6a51cfa2 = () => interopDefault(import('../pages/user/member/index.vue' /* webpackChunkName: "pages/user/member/index" */))
+const _e9d63cea = () => interopDefault(import('../pages/user/role/index.vue' /* webpackChunkName: "pages/user/role/index" */))
+const _3a00d88c = () => interopDefault(import('../pages/warehouse/list.vue' /* webpackChunkName: "pages/warehouse/list" */))
+const _3e4c01da = () => interopDefault(import('../pages/warehouse/live.vue' /* webpackChunkName: "pages/warehouse/live" */))
+const _6b60c37c = () => interopDefault(import('../pages/forms/advanced_elements/checkbox_radio.vue' /* webpackChunkName: "pages/forms/advanced_elements/checkbox_radio" */))
+const _dffdb0b2 = () => interopDefault(import('../pages/forms/advanced_elements/color_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/color_picker" */))
+const _5aa560dc = () => interopDefault(import('../pages/forms/advanced_elements/date_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_picker" */))
+const _e7ea1a58 = () => interopDefault(import('../pages/forms/advanced_elements/date_range_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/date_range_picker" */))
+const _6b42c249 = () => interopDefault(import('../pages/forms/advanced_elements/inputmask.vue' /* webpackChunkName: "pages/forms/advanced_elements/inputmask" */))
+const _62f989c8 = () => interopDefault(import('../pages/forms/advanced_elements/multiselect.vue' /* webpackChunkName: "pages/forms/advanced_elements/multiselect" */))
+const _5fd06060 = () => interopDefault(import('../pages/forms/advanced_elements/range_slider.vue' /* webpackChunkName: "pages/forms/advanced_elements/range_slider" */))
+const _5d9cf69a = () => interopDefault(import('../pages/forms/advanced_elements/rating.vue' /* webpackChunkName: "pages/forms/advanced_elements/rating" */))
+const _4ac64609 = () => interopDefault(import('../pages/forms/advanced_elements/select2.vue' /* webpackChunkName: "pages/forms/advanced_elements/select2" */))
+const _39253c1f = () => interopDefault(import('../pages/forms/advanced_elements/switches.vue' /* webpackChunkName: "pages/forms/advanced_elements/switches" */))
+const _0c85d9da = () => interopDefault(import('../pages/forms/advanced_elements/time_picker.vue' /* webpackChunkName: "pages/forms/advanced_elements/time_picker" */))
+const _2f3b5108 = () => interopDefault(import('../pages/forms/examples/advertising_evaluation_form.vue' /* webpackChunkName: "pages/forms/examples/advertising_evaluation_form" */))
+const _7ae54b5e = () => interopDefault(import('../pages/forms/examples/booking_form.vue' /* webpackChunkName: "pages/forms/examples/booking_form" */))
+const _16b09950 = () => interopDefault(import('../pages/forms/examples/car_rental_form.vue' /* webpackChunkName: "pages/forms/examples/car_rental_form" */))
+const _41933ad9 = () => interopDefault(import('../pages/forms/examples/checkout_form.vue' /* webpackChunkName: "pages/forms/examples/checkout_form" */))
+const _d825dee8 = () => interopDefault(import('../pages/forms/examples/contact_forms.vue' /* webpackChunkName: "pages/forms/examples/contact_forms" */))
+const _97a300ee = () => interopDefault(import('../pages/forms/examples/job_application_form.vue' /* webpackChunkName: "pages/forms/examples/job_application_form" */))
+const _6bd30171 = () => interopDefault(import('../pages/forms/examples/medical_history_form.vue' /* webpackChunkName: "pages/forms/examples/medical_history_form" */))
+const _58ce4274 = () => interopDefault(import('../pages/forms/examples/registration_form.vue' /* webpackChunkName: "pages/forms/examples/registration_form" */))
+const _47bbed4a = () => interopDefault(import('../pages/forms/examples/rental_application_form.vue' /* webpackChunkName: "pages/forms/examples/rental_application_form" */))
+const _49225e59 = () => interopDefault(import('../pages/forms/examples/transaction_feedback_form.vue' /* webpackChunkName: "pages/forms/examples/transaction_feedback_form" */))
+const _3a36a9ce = () => interopDefault(import('../pages/forms/wysiwyg/ckeditor.vue' /* webpackChunkName: "pages/forms/wysiwyg/ckeditor" */))
+const _61f0591e = () => interopDefault(import('../pages/forms/wysiwyg/quill.vue' /* webpackChunkName: "pages/forms/wysiwyg/quill" */))
+const _6231700a = () => interopDefault(import('../pages/project/fieldservice/list.vue' /* webpackChunkName: "pages/project/fieldservice/list" */))
+const _2fce12de = () => interopDefault(import('../pages/purchasing/internal-demand/list.vue' /* webpackChunkName: "pages/purchasing/internal-demand/list" */))
+const _d4b72b32 = () => interopDefault(import('../pages/purchasing/item-demand/list.vue' /* webpackChunkName: "pages/purchasing/item-demand/list" */))
+const _7dee68f0 = () => interopDefault(import('../pages/purchasing/item-demand/my-demands.vue' /* webpackChunkName: "pages/purchasing/item-demand/my-demands" */))
+const _ea32e2e0 = () => interopDefault(import('../pages/purchasing/item-demand/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-demand/waiting-for-approve" */))
+const _44925408 = () => interopDefault(import('../pages/purchasing/item-offer/list.vue' /* webpackChunkName: "pages/purchasing/item-offer/list" */))
+const _07104d6c = () => interopDefault(import('../pages/purchasing/item-order/list.vue' /* webpackChunkName: "pages/purchasing/item-order/list" */))
+const _153dc566 = () => interopDefault(import('../pages/purchasing/item-order/waiting-for-approve.vue' /* webpackChunkName: "pages/purchasing/item-order/waiting-for-approve" */))
+const _46a6f640 = () => interopDefault(import('../pages/purchasing/item-receipt/list.vue' /* webpackChunkName: "pages/purchasing/item-receipt/list" */))
+const _7427f469 = () => interopDefault(import('../pages/user/checkIn/checkIn.vue' /* webpackChunkName: "pages/user/checkIn/checkIn" */))
+const _14ce9eb2 = () => interopDefault(import('../pages/user/checkIn/list.vue' /* webpackChunkName: "pages/user/checkIn/list" */))
+const _532035ce = () => interopDefault(import('../pages/user/department/list.vue' /* webpackChunkName: "pages/user/department/list" */))
+const _b2d37a86 = () => interopDefault(import('../pages/user/employee/list.vue' /* webpackChunkName: "pages/user/employee/list" */))
+const _aa5cbc5e = () => interopDefault(import('../pages/user/member/list.vue' /* webpackChunkName: "pages/user/member/list" */))
+const _8d718616 = () => interopDefault(import('../pages/user/role/list.vue' /* webpackChunkName: "pages/user/role/list" */))
+const _14403ec6 = () => interopDefault(import('../pages/user/shift/list.vue' /* webpackChunkName: "pages/user/shift/list" */))
+const _195a46c0 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -193,706 +192,702 @@ export const routerOptions = {
 
   routes: [{
     path: "/account_auth",
-    component: _df818fc2,
+    component: _51d079c8,
     name: "account_auth"
   }, {
     path: "/attachment-category",
-    component: _5c71cecf,
+    component: _1ae606b9,
     name: "attachment-category"
   }, {
     path: "/firm",
-    component: _4ced1382,
+    component: _5704df63,
     name: "firm"
   }, {
     path: "/firm-category",
-    component: _666e8e2a,
+    component: _d45ff384,
     name: "firm-category"
   }, {
     path: "/invoice",
-    component: _3135986a,
+    component: _5f35fa3e,
     name: "invoice"
   }, {
     path: "/item",
-    component: _7efc0a4a,
+    component: _4f8bc410,
     name: "item"
   }, {
     path: "/item-category",
-    component: _946b5302,
+    component: _cf41416e,
     name: "item-category"
   }, {
     path: "/login_page",
-    component: _594061ec,
+    component: _17e8f547,
     name: "login_page"
   }, {
     path: "/login_page_auth",
-    component: _9178ef26,
+    component: _2099c050,
     name: "login_page_auth"
   }, {
     path: "/plant",
-    component: _4cb4fdac,
+    component: _f8529d08,
     name: "plant"
   }, {
     path: "/process",
-    component: _3f047fe8,
+    component: _1765aa00,
     name: "process"
   }, {
     path: "/project",
-    component: _58f4b604,
+    component: _3b280b2a,
     name: "project"
   }, {
     path: "/project-category",
-    component: _5d11864b,
+    component: _37b7ab52,
     name: "project-category"
   }, {
     path: "/staffpermit",
-    component: _2de7415c,
+    component: _1681618c,
     name: "staffpermit"
   }, {
     path: "/warehouse",
-    component: _2934b058,
+    component: _218eb8d4,
     name: "warehouse"
   }, {
     path: "/attachment-category/list",
-    component: _75b59731,
+    component: _2945ba07,
     name: "attachment-category-list"
   }, {
     path: "/components/accordion",
-    component: _ae6d19c6,
+    component: _93b0609e,
     name: "components-accordion"
   }, {
     path: "/components/alert",
-    component: _43b9989e,
+    component: _3aaefa45,
     name: "components-alert"
   }, {
     path: "/components/animations",
-    component: _790e7e2c,
+    component: _61e5f6d6,
     name: "components-animations"
   }, {
     path: "/components/avatars",
-    component: _725cfa4f,
+    component: _49dd283a,
     name: "components-avatars"
   }, {
     path: "/components/badge_label",
-    component: _7f2241ed,
+    component: _a3486cfe,
     name: "components-badge_label"
   }, {
     path: "/components/base",
-    component: _b96490e8,
+    component: _11a4ce78,
     name: "components-base"
   }, {
     path: "/components/breadcrumb",
-    component: _2be0317e,
+    component: _6b65312c,
     name: "components-breadcrumb"
   }, {
     path: "/components/buttons",
-    component: _1c5f57d4,
+    component: _5a84c5aa,
     name: "components-buttons"
   }, {
     path: "/components/cards",
-    component: _27be3638,
+    component: _f76c0668,
     name: "components-cards"
   }, {
     path: "/components/color_palette",
-    component: _1c831d74,
+    component: _63791008,
     name: "components-color_palette"
   }, {
     path: "/components/drop_dropdowns",
-    component: _2934b1ad,
+    component: _7e05dcce,
     name: "components-drop_dropdowns"
   }, {
     path: "/components/fab_buttons",
-    component: _22e7645e,
+    component: _5220ebf2,
     name: "components-fab_buttons"
   }, {
     path: "/components/fancy_footer",
-    component: _5789ed8c,
+    component: _0f815878,
     name: "components-fancy_footer"
   }, {
     path: "/components/fancy_toolbar",
-    component: _71d6ce4c,
+    component: _0e0a8b6e,
     name: "components-fancy_toolbar"
   }, {
     path: "/components/filters",
-    component: _25a36b90,
+    component: _e35045b8,
     name: "components-filters"
   }, {
     path: "/components/footer",
-    component: _69c656d4,
+    component: _0009e082,
     name: "components-footer"
   }, {
     path: "/components/grid",
-    component: _1cdef981,
+    component: _e993df26,
     name: "components-grid"
   }, {
     path: "/components/height",
-    component: _6173ebbc,
+    component: _0433160e,
     name: "components-height"
   }, {
     path: "/components/icons",
-    component: _390e2322,
+    component: _4004b503,
     name: "components-icons"
   }, {
     path: "/components/lists",
-    component: _25396d2c,
+    component: _49ef0ffe,
     name: "components-lists"
   }, {
     path: "/components/masonry",
-    component: _787e90da,
+    component: _3d99fb24,
     name: "components-masonry"
   }, {
     path: "/components/modals_dialogs",
-    component: _4f8f40cd,
+    component: _3150be8e,
     name: "components-modals_dialogs"
   }, {
     path: "/components/notifications",
-    component: _534ee786,
+    component: _1d4e7ed1,
     name: "components-notifications"
   }, {
     path: "/components/overlay",
-    component: _4164d965,
+    component: _abcd6a0e,
     name: "components-overlay"
   }, {
     path: "/components/pagination",
-    component: _21369595,
+    component: _80b868fe,
     name: "components-pagination"
   }, {
     path: "/components/progress_spinners",
-    component: _858abbbe,
+    component: _47e5aa96,
     name: "components-progress_spinners"
   }, {
     path: "/components/scrollable",
-    component: _82da45bc,
+    component: _5d00130e,
     name: "components-scrollable"
   }, {
     path: "/components/slider",
-    component: _8f40f648,
+    component: _2566de70,
     name: "components-slider"
   }, {
     path: "/components/sortable",
-    component: _32f047b3,
+    component: _3e6beec2,
     name: "components-sortable"
   }, {
     path: "/components/swipe_list",
-    component: _70b75ffe,
+    component: _0f2495ea,
     name: "components-swipe_list"
   }, {
     path: "/components/tables",
-    component: _1dcfe860,
+    component: _52bcf44c,
     name: "components-tables"
   }, {
     path: "/components/tabs",
-    component: _5634748e,
+    component: _433cdca5,
     name: "components-tabs"
   }, {
     path: "/components/timeline",
-    component: _3436437c,
+    component: _3bdff730,
     name: "components-timeline"
   }, {
     path: "/components/toolbar",
-    component: _7442d9e0,
+    component: _2e9304a4,
     name: "components-toolbar"
   }, {
     path: "/components/tooltips",
-    component: _29867eea,
+    component: _cdd2fd12,
     name: "components-tooltips"
   }, {
     path: "/components/transitions",
-    component: _eace355a,
+    component: _8c5b2632,
     name: "components-transitions"
   }, {
     path: "/components/width",
-    component: _323b931b,
+    component: _e2714ca2,
     name: "components-width"
   }, {
     path: "/dashboard/v1",
-    component: _39c1dd3a,
+    component: _03c63078,
     name: "dashboard-v1"
   }, {
     path: "/dashboard/v2",
-    component: _39cff4bb,
+    component: _03d447f9,
     name: "dashboard-v2"
   }, {
     path: "/firm-category/list",
-    component: _6dc60076,
+    component: _670b35e2,
     name: "firm-category-list"
   }, {
     path: "/firm/list",
-    component: _67597c7e,
+    component: _22f4241d,
     name: "firm-list"
   }, {
     path: "/forms/dynamic_fields",
-    component: _492cab93,
+    component: _39cde9bb,
     name: "forms-dynamic_fields"
   }, {
     path: "/forms/regular_elements",
-    component: _364053d8,
+    component: _322a2a3c,
     name: "forms-regular_elements"
   }, {
     path: "/forms/validation",
-    component: _5cac9e53,
+    component: _96999f0a,
     name: "forms-validation"
   }, {
     path: "/forms/wizard",
-    component: _78390345,
+    component: _71222d26,
     name: "forms-wizard",
     children: [{
       path: "step1",
-      component: _ae311ba0,
+      component: _bf335a7a,
       name: "forms-wizard-step1"
     }, {
       path: "step2",
-      component: _ae14ec9e,
+      component: _bf172b78,
       name: "forms-wizard-step2"
     }, {
       path: "step3",
-      component: _adf8bd9c,
+      component: _befafc76,
       name: "forms-wizard-step3"
     }]
   }, {
     path: "/invoice/list",
-    component: _f656a394,
+    component: _c1d27c3c,
     name: "invoice-list"
   }, {
     path: "/item-category/list",
-    component: _70555981,
+    component: _7c11e112,
     name: "item-category-list"
   }, {
     path: "/item/consumption",
-    component: _3378e093,
+    component: _3118f9c1,
     name: "item-consumption"
   }, {
     path: "/item/list",
-    component: _4d888056,
+    component: _98fb8230,
     name: "item-list"
   }, {
     path: "/layout/boxed",
-    component: _36d88beb,
+    component: _59763cb2,
     name: "layout-boxed"
   }, {
     path: "/layout/mini_sidebar",
-    component: _acb1657a,
+    component: _ee0367f2,
     name: "layout-mini_sidebar"
   }, {
     path: "/layout/offcanvas_sidebar",
-    component: _37665736,
+    component: _2fcb1fbe,
     name: "layout-offcanvas_sidebar"
   }, {
     path: "/layout/top_menu",
-    component: _42058e50,
+    component: _020a399c,
     name: "layout-top_menu"
   }, {
     path: "/pages/blank",
-    component: _3904c396,
+    component: _1e8e0317,
     name: "pages-blank"
   }, {
     path: "/pages/blank_header_expanded",
-    component: _310c63be,
+    component: _d98fa1fa,
     name: "pages-blank_header_expanded"
   }, {
     path: "/pages/chat",
-    component: _021ceef2,
+    component: _5bafff65,
     name: "pages-chat"
   }, {
     path: "/pages/contact_list",
-    component: _53edbd0c,
+    component: _312e75ea,
     name: "pages-contact_list"
   }, {
     path: "/pages/contact_list_single",
-    component: _5154338b,
+    component: _0ccd3626,
     name: "pages-contact_list_single"
   }, {
     path: "/pages/data_visualization",
-    component: _d2501a84,
+    component: _4353e5c8,
     name: "pages-data_visualization"
   }, {
     path: "/pages/gallery",
-    component: _29bb66f3,
+    component: _3b73c956,
     name: "pages-gallery"
   }, {
     path: "/pages/help_faq",
-    component: _aade1a72,
+    component: _035ccaa5,
     name: "pages-help_faq"
   }, {
     path: "/pages/invoices",
-    component: _5bef7d95,
+    component: _9689551a,
     children: [{
       path: "",
-      component: _d7095566,
+      component: _4560b9b6,
       name: "pages-invoices"
     }, {
       path: "new",
-      component: _8d83c84a,
+      component: _39d38684,
       name: "pages-invoices-new"
     }, {
-      path: "test",
-      component: _4a9a7a32,
-      name: "pages-invoices-test"
-    }, {
       path: ":id",
-      component: _b4ef7216,
+      component: _261db19e,
       name: "pages-invoices-id"
     }]
   }, {
     path: "/pages/issues",
-    component: _01a69d29,
+    component: _28a2d487,
     name: "pages-issues",
     children: [{
       path: "details",
-      component: _5ff23e2e,
+      component: _0b24d33a,
       name: "pages-issues-details",
       children: [{
         path: ":id?",
-        component: _b2244fbe,
+        component: _0c74f3e5,
         name: "pages-issues-details-id"
       }]
     }, {
       path: "list",
-      component: _26006987,
+      component: _8129fe54,
       name: "pages-issues-list"
     }]
   }, {
     path: "/pages/mailbox",
-    component: _466af755,
+    component: _0214a892,
     children: [{
       path: "",
-      component: _50b7638d,
+      component: _3dab660c,
       name: "pages-mailbox"
     }, {
       path: "compose",
-      component: _85f4e0e6,
+      component: _07385c8c,
       name: "pages-mailbox-compose"
     }, {
       path: "message/:id?",
-      component: _29339528,
+      component: _11a6084c,
       name: "pages-mailbox-message-id"
     }]
   }, {
     path: "/pages/notes",
-    component: _26fc45bc,
+    component: _27924204,
     name: "pages-notes"
   }, {
     path: "/pages/poi_listing",
-    component: _ff14f3a0,
+    component: _5c298cdc,
     name: "pages-poi_listing"
   }, {
     path: "/pages/pricing_tables",
-    component: _588a126d,
+    component: _2effe86a,
     name: "pages-pricing_tables"
   }, {
     path: "/pages/settings",
-    component: _9a319f5c,
+    component: _0bb30830,
     name: "pages-settings"
   }, {
     path: "/pages/task_board",
-    component: _14b8a4ca,
+    component: _4ad905f9,
     name: "pages-task_board"
   }, {
     path: "/pages/user_profile",
-    component: _29ac58e4,
+    component: _06ed11c2,
     name: "pages-user_profile"
   }, {
     path: "/plant/list",
-    component: _1ddace98,
+    component: _cff9aa38,
     name: "plant-list"
   }, {
     path: "/plugins/ajax",
-    component: _b32ac12a,
+    component: _21f94f51,
     name: "plugins-ajax"
   }, {
     path: "/plugins/calendar",
-    component: _cfc8cfee,
+    component: _4b63e4ef,
     name: "plugins-calendar"
   }, {
     path: "/plugins/calendar_events",
-    component: _40ee0382,
+    component: _ce3cface,
     name: "plugins-calendar_events"
   }, {
     path: "/plugins/charts",
-    component: _9fe3e340,
+    component: _fa9f4674,
     name: "plugins-charts"
   }, {
     path: "/plugins/code_editor",
-    component: _d69e65f8,
+    component: _4144e344,
     name: "plugins-code_editor"
   }, {
     path: "/plugins/data_grid",
-    component: _2e41d900,
+    component: _37f9ae4c,
     name: "plugins-data_grid"
   }, {
     path: "/plugins/datatables",
-    component: _5065521a,
+    component: _52cdfd80,
     name: "plugins-datatables"
   }, {
     path: "/plugins/diff_tool",
-    component: _81b24f52,
+    component: _74e82831,
     name: "plugins-diff_tool"
   }, {
     path: "/plugins/gantt_chart",
-    component: _00e5c990,
+    component: _4a39dc92,
     name: "plugins-gantt_chart"
   }, {
     path: "/plugins/google_maps",
-    component: _acc9a23c,
+    component: _17701f88,
     name: "plugins-google_maps"
   }, {
     path: "/plugins/idle_timeout",
-    component: _3fe2cf41,
+    component: _4ace3927,
     name: "plugins-idle_timeout"
   }, {
     path: "/plugins/image_cropper",
-    component: _38e89324,
+    component: _360d8948,
     name: "plugins-image_cropper"
   }, {
     path: "/plugins/push_notifications",
-    component: _5f6e6f0e,
+    component: _43405474,
     name: "plugins-push_notifications"
   }, {
     path: "/plugins/tour",
-    component: _f32708ba,
+    component: _01fb2b89,
     name: "plugins-tour"
   }, {
     path: "/plugins/tree",
-    component: _091a71e9,
+    component: _f6adbc62,
     name: "plugins-tree"
   }, {
     path: "/plugins/vector_maps",
-    component: _77167718,
+    component: _7c798f1c,
     name: "plugins-vector_maps"
   }, {
     path: "/plugins/vue_good_table",
-    component: _0be78da0,
+    component: _10767cd4,
     name: "plugins-vue_good_table"
   }, {
     path: "/process/list",
-    component: _19ebdef8,
+    component: _61d570e0,
     name: "process-list"
   }, {
     path: "/project-category/list",
-    component: _d279ff96,
+    component: _3805aaa9,
     name: "project-category-list"
   }, {
     path: "/project/docview",
-    component: _ab05e4ee,
+    component: _99c2ce96,
     name: "project-docview"
   }, {
     path: "/project/fieldservice",
-    component: _4910f323,
+    component: _011dddd4,
     name: "project-fieldservice"
   }, {
     path: "/project/list",
-    component: _60c6bf22,
+    component: _e52e3914,
     name: "project-list"
   }, {
     path: "/purchasing/internal-demand",
-    component: _262e42fa,
+    component: _367a5b6f,
     name: "purchasing-internal-demand"
   }, {
     path: "/purchasing/item-demand",
-    component: _fc5aa960,
+    component: _3a5d6259,
     name: "purchasing-item-demand"
   }, {
     path: "/purchasing/item-offer",
-    component: _2176ed46,
+    component: _16cf2d38,
     name: "purchasing-item-offer"
   }, {
     path: "/purchasing/item-order",
-    component: _61d1f12b,
+    component: _a4106054,
     name: "purchasing-item-order"
   }, {
     path: "/purchasing/item-receipt",
-    component: _03eccf7e,
+    component: _574ed200,
     name: "purchasing-item-receipt"
   }, {
     path: "/staffpermit/list",
-    component: _63b11f04,
+    component: _e78b8e58,
     name: "staffpermit-list"
   }, {
     path: "/user/checkIn",
-    component: _a73f5d56,
+    component: _bf0c9124,
     name: "user-checkIn"
   }, {
     path: "/user/department",
-    component: _3bf03480,
+    component: _13013de7,
     name: "user-department"
   }, {
     path: "/user/employee",
-    component: _6971ecb8,
+    component: _47a694c3,
     name: "user-employee"
   }, {
     path: "/user/member",
-    component: _4a926438,
+    component: _6a51cfa2,
     name: "user-member"
   }, {
     path: "/user/role",
-    component: _5b9b56dc,
+    component: _e9d63cea,
     name: "user-role"
   }, {
     path: "/warehouse/list",
-    component: _7210098c,
+    component: _3a00d88c,
     name: "warehouse-list"
   }, {
     path: "/warehouse/live",
-    component: _765b32da,
+    component: _3e4c01da,
     name: "warehouse-live"
   }, {
     path: "/forms/advanced_elements/checkbox_radio",
-    component: _6c61a789,
+    component: _6b60c37c,
     name: "forms-advanced_elements-checkbox_radio"
   }, {
     path: "/forms/advanced_elements/color_picker",
-    component: _4415aaf4,
+    component: _dffdb0b2,
     name: "forms-advanced_elements-color_picker"
   }, {
     path: "/forms/advanced_elements/date_picker",
-    component: _0cf6a2b6,
+    component: _5aa560dc,
     name: "forms-advanced_elements-date_picker"
   }, {
     path: "/forms/advanced_elements/date_range_picker",
-    component: _52b577a7,
+    component: _e7ea1a58,
     name: "forms-advanced_elements-date_range_picker"
   }, {
     path: "/forms/advanced_elements/inputmask",
-    component: _0f066bc8,
+    component: _6b42c249,
     name: "forms-advanced_elements-inputmask"
   }, {
     path: "/forms/advanced_elements/multiselect",
-    component: _ec5e2e4a,
+    component: _62f989c8,
     name: "forms-advanced_elements-multiselect"
   }, {
     path: "/forms/advanced_elements/range_slider",
-    component: _13e4e3ad,
+    component: _5fd06060,
     name: "forms-advanced_elements-range_slider"
   }, {
     path: "/forms/advanced_elements/rating",
-    component: _4ef537a7,
+    component: _5d9cf69a,
     name: "forms-advanced_elements-rating"
   }, {
     path: "/forms/advanced_elements/select2",
-    component: _f713b2c8,
+    component: _4ac64609,
     name: "forms-advanced_elements-select2"
   }, {
     path: "/forms/advanced_elements/switches",
-    component: _35716dec,
+    component: _39253c1f,
     name: "forms-advanced_elements-switches"
   }, {
     path: "/forms/advanced_elements/time_picker",
-    component: _20947226,
+    component: _0c85d9da,
     name: "forms-advanced_elements-time_picker"
   }, {
     path: "/forms/examples/advertising_evaluation_form",
-    component: _406739b9,
+    component: _2f3b5108,
     name: "forms-examples-advertising_evaluation_form"
   }, {
     path: "/forms/examples/booking_form",
-    component: _44c536cd,
+    component: _7ae54b5e,
     name: "forms-examples-booking_form"
   }, {
     path: "/forms/examples/car_rental_form",
-    component: _77774381,
+    component: _16b09950,
     name: "forms-examples-car_rental_form"
   }, {
     path: "/forms/examples/checkout_form",
-    component: _989e856c,
+    component: _41933ad9,
     name: "forms-examples-checkout_form"
   }, {
     path: "/forms/examples/contact_forms",
-    component: _060a92fd,
+    component: _d825dee8,
     name: "forms-examples-contact_forms"
   }, {
     path: "/forms/examples/job_application_form",
-    component: _4a9f8bf8,
+    component: _97a300ee,
     name: "forms-examples-job_application_form"
   }, {
     path: "/forms/examples/medical_history_form",
-    component: _02440de0,
+    component: _6bd30171,
     name: "forms-examples-medical_history_form"
   }, {
     path: "/forms/examples/registration_form",
-    component: _1d5dc0b7,
+    component: _58ce4274,
     name: "forms-examples-registration_form"
   }, {
     path: "/forms/examples/rental_application_form",
-    component: _5551d67b,
+    component: _47bbed4a,
     name: "forms-examples-rental_application_form"
   }, {
     path: "/forms/examples/transaction_feedback_form",
-    component: _48e2bf4a,
+    component: _49225e59,
     name: "forms-examples-transaction_feedback_form"
   }, {
     path: "/forms/wysiwyg/ckeditor",
-    component: _2b2b50b8,
+    component: _3a36a9ce,
     name: "forms-wysiwyg-ckeditor"
   }, {
     path: "/forms/wysiwyg/quill",
-    component: _35912a32,
+    component: _61f0591e,
     name: "forms-wysiwyg-quill"
   }, {
     path: "/project/fieldservice/list",
-    component: _0d92cf46,
+    component: _6231700a,
     name: "project-fieldservice-list"
   }, {
     path: "/purchasing/internal-demand/list",
-    component: _20571cb4,
+    component: _2fce12de,
     name: "purchasing-internal-demand-list"
   }, {
     path: "/purchasing/item-demand/list",
-    component: _af12b2e0,
+    component: _d4b72b32,
     name: "purchasing-item-demand-list"
   }, {
     path: "/purchasing/item-demand/my-demands",
-    component: _1a032259,
+    component: _7dee68f0,
     name: "purchasing-item-demand-my-demands"
   }, {
     path: "/purchasing/item-demand/waiting-for-approve",
-    component: _eb9d4972,
+    component: _ea32e2e0,
     name: "purchasing-item-demand-waiting-for-approve"
   }, {
     path: "/purchasing/item-offer/list",
-    component: _c90b5a3a,
+    component: _44925408,
     name: "purchasing-item-offer-list"
   }, {
     path: "/purchasing/item-order/list",
-    component: _54d9b955,
+    component: _07104d6c,
     name: "purchasing-item-order-list"
   }, {
     path: "/purchasing/item-order/waiting-for-approve",
-    component: _0247c5e2,
+    component: _153dc566,
     name: "purchasing-item-order-waiting-for-approve"
   }, {
     path: "/purchasing/item-receipt/list",
-    component: _6225d77f,
+    component: _46a6f640,
     name: "purchasing-item-receipt-list"
   }, {
     path: "/user/checkIn/checkIn",
-    component: _20cfb090,
+    component: _7427f469,
     name: "user-checkIn-checkIn"
   }, {
     path: "/user/checkIn/list",
-    component: _7849abeb,
+    component: _14ce9eb2,
     name: "user-checkIn-list"
   }, {
     path: "/user/department/list",
-    component: _7ceb3760,
+    component: _532035ce,
     name: "user-department-list"
   }, {
     path: "/user/employee/list",
-    component: _bad9a488,
+    component: _b2d37a86,
     name: "user-employee-list"
   }, {
     path: "/user/member/list",
-    component: _e42f9eb0,
+    component: _aa5cbc5e,
     name: "user-member-list"
   }, {
     path: "/user/role/list",
-    component: _4c645984,
+    component: _8d718616,
     name: "user-role-list"
   }, {
     path: "/user/shift/list",
-    component: _fa239040,
+    component: _14403ec6,
     name: "user-shift-list"
   }, {
     path: "/",
-    component: _2695b4fd,
+    component: _195a46c0,
     name: "index"
   }],
 

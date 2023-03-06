@@ -210,9 +210,8 @@ export default {
 			return dateToStr(prm)
 		},
 		onRowSelect(event) {
-			this.$router.push(
-				"/purchasing/item-offer?id=" + event.data.id
-			);
+			const routeData = this.$router.resolve("/purchasing/item-offer?id=" + event.data.id);
+      		window.open(routeData.href, '_blank');
 		},
 		hasViewAuth(sectionKey,authCode){
 				if (process.client){

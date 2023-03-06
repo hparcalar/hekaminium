@@ -71,7 +71,7 @@
 
 										<div>
 											<client-only>
-												<Select2 v-model="formData.firmId" :options="firms"
+												<Select2 v-model="formData.firmId" :options="firms" @change="onFirmChanged"
 													:settings="{ 'width': '100%', 'placeholder': 'Müşteri', 'allowClear': true }"></Select2>
 											</client-only>
 										</div>
@@ -93,7 +93,7 @@
 											</ScInput>
 										</div>
 										<div>
-											<ScInput v-model="formData.quantity" type="number">
+											<ScInput v-model="formData.quantity" @change="calculateProjectCost()" type="number">
 												<label>Proje Adedi</label>
 											</ScInput>
 										</div>
@@ -167,7 +167,7 @@
 																<div id="sc-dt-buttons"></div>
 															</div>
 															<div>
-																<DataTable :value="formData.costItems" responsiveLayout="scroll" editMode="cell"
+																<DataTable :value="formData.costItems" id="dtlCostItem" responsiveLayout="scroll" editMode="cell"
 																	:selection.sync="selectedCostItemRow" @row-select="clickCostItemRow" selectionMode="single"
 																	sortField="lineNumber" :sortOrder="1" class="editable-cells-table"
 																	@cell-edit-complete="onCellEditComplete">
@@ -558,7 +558,7 @@
 								</client-only>
 							</div>
 							<div class="uk-margin-medium-top uk-width-expand@m">
-								<button type="button" @click="onSubmit" v-show="hasViewAuth('Project',1)"
+								<button type="button" :disabled="isSaving" @click="onSubmit" v-show="hasViewAuth('Project',1)"
 									class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
 									<span data-uk-icon="icon: check" class="uk-icon"></span>
 								</button>
@@ -670,7 +670,7 @@ export default {
 			budget: null,
 			plantId: null,
 			isActive: true,
-			projectCategoryId: '',
+			projectCategoryId: '1',
 			firmId: '',
 			projectStatus: '0',
 			quantity: 1,
@@ -684,7 +684,7 @@ export default {
 			costItems: [],
 			attachments: [],
 			cloudDocId: '',
-			offerType: '1',
+			offerType: '2',
 		},
 		selectedDemandRow: { id: 0, itemDemandId: 0 },
 		selectedServiceRow: { id: 0 },
@@ -990,6 +990,7 @@ export default {
 				if (firmData)
 					this.firms = firmData.map((d) => {
 						return {
+							...d,
 							id: d.id.toString(),
 							text: d.firmName,
 							code: d.firmCode,
@@ -1046,12 +1047,12 @@ export default {
 						responsiblePerson: '',
 						meetingExplanation: '',
 						criticalExplanation: '',
-						startDate: null,
-						deadlineDate: null,
+						startDate: self.$moment().format('YYYY-MM-DD'),
+						deadlineDate: self.$moment().format('YYYY-MM-DD'),
 						budget: null,
 						plantId: null,
 						isActive: true,
-						projectCategoryId: '',
+						projectCategoryId: '1',
 						firmId: '',
 						projectStatus: '0',
 						quantity: 1,
@@ -1063,6 +1064,7 @@ export default {
 						totalCost: null,
 						totalForexCost: null,
 						costItems: [],
+						offerType: '2',
 					};
 
 					if (getData.projectCode)
@@ -1381,6 +1383,12 @@ export default {
 			}
 			this.isSaving = false;
 		},
+		async onFirmChanged(firmId){
+			const relatedFirm = this.firms.find(d => d.id == firmId.toString());
+			if (relatedFirm){
+				this.formData.responsiblePerson = relatedFirm.authorText;
+			}
+		},
 		onCancel() {
 			this.$router.push('/project/list');
 		},
@@ -1523,10 +1531,15 @@ export default {
 			await this.bindAttachments();
 		},
 		showNewCostItem() {
-			this.selectedCostItemRow = { id: 0 };
-			this.showCostItem();
+			var nextNumber = 1;
+			if (this.formData.costItems && this.formData.costItems.length > 0){
+				nextNumber = this.formData.costItems.map((d) => d.lineNumber).sort((a,b) => b - a)[0];
+				nextNumber++;
+			}
+			this.selectedCostItemRow = { id: 0, lineNumber: nextNumber, unitPrice:0, forexId: null, quantity:0, forexRate: null, overallTotal: 0, forexOverallTotal: 0 };
+			this.formData.costItems.push(this.selectedCostItemRow);
 		},
-		showCostItem() {
+		showCostItem() { // old form function
 			this.refreshCostItemForm = false;
 			setTimeout(() => { this.refreshCostItemForm = true; }, 100);
 
@@ -1778,6 +1791,9 @@ export default {
 				if (this.formData && this.formData.costItems && this.formData.costItems.length > 0) {
 					const totalCost = this.formData.costItems.map((d) => d.overallTotal).reduce((a, b) => a + b);
 					this.formData.totalCost = totalCost;
+					if (this.formData.quantity > 0){
+						this.formData.totalCost = totalCost * this.formData.quantity;
+					}
 
 					if (this.formData.forexId && this.formData.forexId > 0 && this.formData.forexRate > 0) {
 						this.formData.totalForexCost = this.formData.totalCost / this.formData.forexRate;
@@ -1790,11 +1806,12 @@ export default {
 			} catch (error) {
 
 			}
+			this.calculateTotal();
 		},
 		calculateTotal() {
-			let totalVal = 0;
-			if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
-				totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a, b) => a + b);
+			let totalVal = this.formData.totalCost;
+			// if (this.formData && this.formData.costItems && this.formData.costItems.length > 0)
+			// 	totalVal = this.formData.costItems.map(d => d.overallTotal).reduce((a, b) => a + b);
 
 			this.formData.offerPrice = totalVal + (totalVal * this.formData.profitRate / 100.0);
 

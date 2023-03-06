@@ -68,11 +68,15 @@
                 </fieldset>
             </div>
             <div v-show="isDialog == true" class="uk-margin-large-top">
-                <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
+                <button type="button" @click="createNewAttachment" class="sc-button sc-button-success sc-button uk-margin-small-right">
+                    <span data-uk-icon="icon: plus" class="uk-margin-small-right uk-icon"></span>
+                    Yeni
+                </button>
+                <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button uk-margin-small-right">
                     <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
                     Kaydet
                 </button>
-                <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
+                <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button uk-margin-small-right">
                     <span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
                     Kapat
                 </button>
@@ -132,7 +136,7 @@ export default {
             isOfferDoc: false,
             fileType: '',
             fileExtension: '',
-            title: '',
+            title: 'Teknik Şartname',
             explanation: '',
         },
         selectedCategory: null,
@@ -183,7 +187,28 @@ export default {
 
             }
         },
-        
+        createNewAttachment(){
+            const self = this;
+
+            this.formData = {
+                ...self.formData,
+                id: 0,
+                title: 'Teknik Şartname',
+                fileContent: null,
+                fileType: '',
+                fileName: '',
+                explanation: '',
+            };
+
+            if (this.formData.title && this.formData.title.length > 0){
+                const foundElement = this.attachmentCategories.find(d => d.categoryName == this.formData.title);
+                if (foundElement){
+                    this.selectedCategory = foundElement.id;
+                }
+            }
+
+            this.recordObject.id = 0;
+        },
         async onDownload(){
             const self = this;
             var blob = new Blob([base64ToArrayBuffer(self.formData.fileContent)], { type: self.formData.fileType });

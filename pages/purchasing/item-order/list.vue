@@ -243,9 +243,8 @@ export default {
 					return dateToStr(prm)
 			},
 			onRowSelect(event){
-				this.$router.push(
-					"/purchasing/item-order?id=" + event.data.id
-				);
+				const routeData = this.$router.resolve("/purchasing/item-order?id=" + event.data.id);
+      			window.open(routeData.href, '_blank');
 			},
 			hasViewAuth(sectionKey,authCode){
 					if (process.client){

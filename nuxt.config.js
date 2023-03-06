@@ -91,7 +91,8 @@ module.exports = {
 	],
 	router: {
 		middleware: ['redirect'],
-		base: process.env.NODE_ENV !== 'production' || !serveFromSubFolder ? '/' : '/' + dist
+		base: process.env.NODE_ENV !== 'production' || !serveFromSubFolder ? '/' : '/' + dist,
+		key: 'fullPath',
 	},
 	modules: [
 		'@nuxtjs/axios',

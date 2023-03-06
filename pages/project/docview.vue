@@ -220,6 +220,7 @@ import VuePdfApp from "vue-pdf-app";
 import "vue-pdf-app/dist/icons/main.css";
 import Modal from 'vue-slim-modal';
 import "vue-slim-modal/themes/default.css";
+import { useUserSession } from '~/composable/userSession';
 // import DxfViewerPage from "~/components/DxfViewerPage";
 
 if(process.client) {
@@ -437,7 +438,11 @@ export default {
             const api = useApi();
 
             try {
+                const isProjectManager = this.hasViewAuth("ProjectBudgetView", 1);
                 const data = (await api.get('Attachment/OfRecord/1/' + this.selectedProject.id)).data;
+                
+                if (!isProjectManager)
+                    data = data.filter(m => m.isOfferDoc != true);
 
                 if (this.documentTypeFilter.length > 0){
                     const filterList = this.documentTypeFilter;
@@ -450,7 +455,7 @@ export default {
                 else
                     this.projectDocumentList = data;
             } catch (error) {
-                
+                console.log(error);
             }
         },
         async switchToCategoryView(project){
@@ -734,6 +739,14 @@ export default {
             this.documentSearch = '';
             this.formData.viewCategory = 0;
         },
+        hasViewAuth(sectionKey,authCode) {
+			if (process.client) {
+				const session = useUserSession();
+				if (session && session.checkAuthSection)
+					return session.checkAuthSection(sectionKey,authCode);
+			}
+			return false;
+		},
         showNotification (text, pos, status, persistent) {
 			var config = {};
 			config.timeout = persistent ? !persistent : 3000;
