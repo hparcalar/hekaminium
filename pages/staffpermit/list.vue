@@ -127,7 +127,7 @@ export default {
     async mounted (){
         const api = useApi();
         const session = useUserSession();
-        const targetRoute = this.hasViewAuth('StaffPermit',0) ? 'StaffPermit' : 'StaffPermit/' + session.user.id;
+        const targetRoute = this.hasViewAuth('StaffPermit',1) ? 'StaffPermit' : 'StaffPermit/' + session.user.id;
         const rawData = (await api.get(targetRoute)).data;
 
         this.visualData = rawData;

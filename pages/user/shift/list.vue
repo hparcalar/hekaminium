@@ -9,25 +9,6 @@
                 Mesai Raporu
               </ScCardTitle>
             </div>
-            <div class="uk-width-auto@s">
-              <div id="sc-dt-buttons"></div>
-            </div>
-            <div class="uk-width-auto@s">
-              <!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
-              Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
-            </button> -->
-              <div class="uk-dropdown uk-width-small" data-uk-drop="mode: click">
-                <div class="sc-padding-small">
-                  <div v-for="(checkbox, index) in dtDHeaders" :key="index" class="uk-margin-small">
-                    <PrettyCheck class="p-icon" :value="index" :checked="checkbox.checked" :disabled="checkbox.disabled"
-                      @change="toggleCol($event, index)">
-                      <i slot="extra" class="icon mdi mdi-check"></i>
-                      {{ checkbox.name }}
-                    </PrettyCheck>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </ScCardHeader>
         <ScCardBody>
@@ -39,7 +20,6 @@
                   @date-select="bindList" :showSeconds="false" placeholder="Time" />
               </div>
             </div>
-
             <div style="margin-left:20px;">
               <label for="endDate">Bitiş</label>
               <div class="field col-12 md:col-4">
@@ -48,9 +28,22 @@
               </div>
             </div>
           </div>
-          <DataTable :value="visualData" responsiveLayout="scroll" ref="dtable"
+          <DataTable :value="visualData" responsiveLayout="scroll" ref="dtable" :filters.sync="filterGeneral" filterDisplay="row"
             columnResizeMode="fit" dataKey="id" :paginator="true" showGridlines :rows="25" selectionMode="single"
-            sortField="id" :sortOrder="-1">
+            sortField="id" :sortOrder="-1" :globalFilterFields="['employeeName']">
+            <template #header>
+              <div style="float:right;text-align:right;">
+                <Button icon="pi pi-external-link" label="Dışarı Aktar" @click="exportToCsv($event)" />
+              </div>
+              <div class="flex justify-content-between">
+                <Button type="button" icon="pi pi-filter-slash" label="Temizle" class="p-button-outlined"
+                  @click="clearGeneralFilter()" />
+                <span class="p-input-icon-left">
+                  <i class="pi pi-search" />
+                  <InputText v-model="filterGeneral['global'].value" placeholder="Genel Arama" />
+                </span>
+              </div>
+            </template>
             <template #empty>
               Hiç kayıt yok.
             </template>
@@ -84,11 +77,12 @@ import PrettyCheck from 'pretty-checkbox-vue/check';
 import { useApi } from '~/composable/useApi';
 import moment from 'moment';
 import ScInput from '~/components/Input'
+import { FilterMatchMode, FilterOperator } from 'primevue/api/';
+import * as XLSX from 'xlsx';
 
 export default {
-  name: 'RoleList',
+  name: 'ShiftList',
   components: {
-    Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
     PrettyCheck,
     ScInput,
   },
@@ -97,48 +91,10 @@ export default {
       startDate: moment().toDate(),
       endDate: moment().toDate(),
       visualData: [],
-      dtColumns: [
-        { data: "id", title: "#", visible: true, },
-        { data: "employeeName", title: "Ad Soyad", visible: true, },
-      ],
-      dtDHeaders: [],
-      dtDOptions: {
-        select: true,
-        "stateSave": false,
-        "order": [
-          [0, "desc"]
-        ],
-        pageLength: 50,
-        buttons: [
-          // {
-          // 	extend: "copyHtml5",
-          // 	className: "sc-button",
-          // 	text: 'Kopyala'
-          // },
-          // {
-          // 	extend: "csvHtml5",
-          // 	className: "sc-button",
-          // 	text: 'CSV '
-          // },
-          {
-            extend: "excelHtml5",
-            className: "sc-button",
-            text: 'Excel '
-          },
-          {
-            extend: "pdfHtml5",
-            className: "sc-button sc-button-icon",
-            text: '<i class="mdi mdi-file-pdf md-color-red-800"></i>'
-          },
-          {
-            extend: "print",
-            className: "sc-button sc-button-icon",
-            text: '<i class="mdi mdi-printer"></i>',
-            title: 'Yazdır',
-            autoPrint: true
-          }
-        ]
-      }
+      filterGeneral: {
+        global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        employeeName: { value: null, matchMode: FilterMatchMode.CONTAINS },
+      },
     }
   },
   async mounted() {
@@ -175,13 +131,36 @@ export default {
         })
       }
     },
-    dtButtonsInitialized() {
-      // append buttons to custom container
-      this.$refs.buttonsTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
+    clearGeneralFilter(){
+      this.filterGeneral.global.value = null;
     },
-    toggleCol(e, col) {
-      var column = this.$refs.buttonsTable.$dt.column(col);
-      column.visible(e).draw('page');
+    exportToCsv() {
+      var ShiftList = this.visualData.reduce((ShiftList, shift) => {
+        ShiftList.push({
+          'Personel': shift.employeeName,
+          'Toplam Süre(dk)': shift.totalMinutes,
+          'Gerekli Süre(dk)': shift.requiredMinutes,
+          'Fark(dk)': shift.diffMinute,
+          'Toplam Süre(saat)': shift.totalHours,
+          
+        })
+        return ShiftList;
+      }, [])
+      
+      ShiftList.sort(function (a, b) {
+        if (a.Personel < b.Personel) {
+          return -1;
+        }
+        if (a.Personel > b.Personel) {
+          return 1;
+        }
+        return 0;
+      });
+
+      var shiftWs = XLSX.utils.json_to_sheet(ShiftList)
+      var wb = XLSX.utils.book_new()
+      XLSX.utils.book_append_sheet(wb, shiftWs, 'Shift list')
+      XLSX.writeFile(wb, 'Mesai Listesi.xlsx')
     },
     /* clickDetail: function (e) {
       this.$router.push('/user/shift?id=' + e.data.id);

@@ -5,13 +5,18 @@
                 <div class="uk-flex-1">
                     <ScCardTitle>
                         Depo Durumları
+                        <button type="button" @click="stocktaking" v-show="hasViewAuth('WarehouseStatuses', 1)"
+                            class="sc-button sc-button-small uk-margin-small-left">
+                            <span data-uk-icon="icon: future" class="uk-margin-small-right uk-icon"></span>
+                            Stok Sayımı
+                        </button>
                     </ScCardTitle>
                 </div>
                 <div class="uk-width-auto@s">
                     <div id="sc-dt-buttons"></div>
                 </div>
                 <div class="uk-width-auto@s">
-                    
+
                 </div>
             </div>
         </ScCardHeader>
@@ -20,16 +25,10 @@
                 <div class="uk-width-3-3@l">
                     <div class="uk-margin-medium uk-margin-remove-left">
                         <client-only>
-                            <Datatable
-                                id="sc-dt-report-item-stocks-table"
-                                ref="stocksTable"
-                                :data="details"
-                                :options="dtOptions"
-                                :customColumns="dtDetailCols"
-                                :buttons="true"
+                            <Datatable id="sc-dt-report-item-stocks-table" ref="stocksTable" :data="details"
+                                :options="dtOptions" :customColumns="dtDetailCols" :buttons="true"
                                 :customEvents="[{ name: 'select', function: clickDemandRow }, { name: 'deselect', function: deselectDemandRow }]"
-                                @initComplete="dtButtonsInitialized"
-                            ></Datatable>
+                                @initComplete="dtButtonsInitialized"></Datatable>
                         </client-only>
                     </div>
                     <div v-show="isDialog == true" class="uk-margin-large-top">
@@ -37,7 +36,8 @@
                             <span data-uk-icon="icon: check" class="uk-margin-small-right uk-icon"></span>
                             Aktar
                         </button> -->
-                        <button type="button" @click="onCancel" class="sc-button sc-button-default sc-button-large uk-margin-small-right">
+                        <button type="button" @click="onCancel"
+                            class="sc-button sc-button-default sc-button-large uk-margin-small-right">
                             <span data-uk-icon="icon: arrow-left" class="uk-margin-small-right uk-icon"></span>
                             Kapat
                         </button>
@@ -59,12 +59,12 @@ import { useApi } from '~/composable/useApi';
 import { useUserSession } from '~/composable/userSession';
 import { dateToStr } from '~/composable/useHelpers';
 
-if(process.client) {
-	require('~/plugins/inputmask');	
+if (process.client) {
+    require('~/plugins/inputmask');
 }
 
 export default {
-	name: 'ReportItemStocks',
+    name: 'ReportItemStocks',
     emits: ['onCancel'],
     props: {
         isDialog: {
@@ -72,63 +72,63 @@ export default {
             default: false,
         },
     },
-	components: {
+    components: {
         Datatable: process.client ? () => import('~/components/datatables/Datatables') : null,
-		Select2: process.client ? () => import('~/components/Select2') : null,
-		ScInput,
-		ScTextarea,
-		PrettyRadio,
+        Select2: process.client ? () => import('~/components/Select2') : null,
+        ScInput,
+        ScTextarea,
+        PrettyRadio,
         PrettyCheck
-	},
-	data: () => ({
+    },
+    data: () => ({
         details: [],
         selectedDemandIndexes: [],
         dtOptions: {
-			select: true,
-			searching: true,
-			paging: true,
+            select: true,
+            searching: true,
+            paging: true,
             "order": [[1, 'asc']],
-			pageLength: 25,
+            pageLength: 25,
             buttons: [
-					{
-						extend: "excelHtml5",
-						className: "sc-button",
-						text: 'Excel '
-					},
-					{
-						extend: "pdfHtml5",
-						className: "sc-button sc-button-icon",
-						text: '<i class="mdi mdi-file-pdf md-color-red-800"></i>'
-					},
-					{
-						extend: "print",
-						className: "sc-button sc-button-icon",
-						text: '<i class="mdi mdi-printer"></i>',
-						title: 'Yazdır',
-						autoPrint: true
-					}
-				]
-		},
-		dtDetailCols: [
-			{ data: "warehouseName", title: "Depo", visible: true, type:'date' },
-			{ data: "itemCode", title: "Stok Kodu", visible: true, },
-			{ data: "itemName", title: "Stok Adı", visible: true, },
-            { data: "inQuantity", title: "Giriş", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.inQuantity); }  },
-			{ data: "outQuantity", title: "Çıkış", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.outQuantity); }  },
-			{ data: "totalQuantity", title: "Kalan", visible: true, render: function(data, ev, row){ return new Intl.NumberFormat("tr-TR").format(row.totalQuantity); }  },
-		],
-	}),
-	computed: {
-	},
-	async mounted () {
-		await this.bindModel();
-	},
-	methods: {
-        dtButtonsInitialized () {
-			// append buttons to custom container
-			this.$refs.stocksTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
-		},
-        async bindModel(){
+                {
+                    extend: "excelHtml5",
+                    className: "sc-button",
+                    text: 'Excel '
+                },
+                {
+                    extend: "pdfHtml5",
+                    className: "sc-button sc-button-icon",
+                    text: '<i class="mdi mdi-file-pdf md-color-red-800"></i>'
+                },
+                {
+                    extend: "print",
+                    className: "sc-button sc-button-icon",
+                    text: '<i class="mdi mdi-printer"></i>',
+                    title: 'Yazdır',
+                    autoPrint: true
+                }
+            ]
+        },
+        dtDetailCols: [
+            { data: "warehouseName", title: "Depo", visible: true, type: 'date' },
+            { data: "itemCode", title: "Stok Kodu", visible: true, },
+            { data: "itemName", title: "Stok Adı", visible: true, },
+            { data: "inQuantity", title: "Giriş", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(row.inQuantity); } },
+            { data: "outQuantity", title: "Çıkış", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(row.outQuantity); } },
+            { data: "totalQuantity", title: "Kalan", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(row.totalQuantity); } },
+        ],
+    }),
+    computed: {
+    },
+    async mounted() {
+        await this.bindModel();
+    },
+    methods: {
+        dtButtonsInitialized() {
+            // append buttons to custom container
+            this.$refs.stocksTable.$dt.buttons().container().appendTo(document.getElementById('sc-dt-buttons'));
+        },
+        async bindModel() {
             const api = useApi();
             try {
                 this.details = (await api.get('Warehouse/ItemStocks')).data
@@ -141,34 +141,45 @@ export default {
 
             }
         },
-        onCancel(){
+        onCancel() {
             if (this.isDialog)
                 this.$emit('onCancel');
         },
-        showNotification (text, pos, status, persistent) {
-			var config = {};
-			config.timeout = persistent ? !persistent : 3000;
-			if(status) {
-				config.status = status;
-			}
-			if(pos) {
-				config.pos = pos;
-			}
-			UIkit.notification(text, config);
-		},
-        clickDemandRow: function (e, dt, type, indexes){
+        showNotification(text, pos, status, persistent) {
+            var config = {};
+            config.timeout = persistent ? !persistent : 3000;
+            if (status) {
+                config.status = status;
+            }
+            if (pos) {
+                config.pos = pos;
+            }
+            UIkit.notification(text, config);
+        },
+        clickDemandRow: function (e, dt, type, indexes) {
             // const selIndex = indexes[0];
             // const rowId = this.details[selIndex].itemDemandId;
-			// this.$router.push('/purchasing/item-demand?id=' + rowId);
+            // this.$router.push('/purchasing/item-demand?id=' + rowId);
         },
-        deselectDemandRow: function(e, dt, type, indexes){
-            
-        }
-	},
+        deselectDemandRow: function (e, dt, type, indexes) {
+
+        },
+        stocktaking(){
+            this.$router.push('/warehouse/stocktaking');
+        },
+        hasViewAuth(sectionKey, authCode) {
+            if (process.client) {
+                const session = useUserSession();
+                if (session && session.checkAuthSection)
+                    return session.checkAuthSection(sectionKey, authCode);
+            }
+            return false;
+        },
+    },
 }
 </script>
 
 <style lang="scss">
-	@import '~scss/vue/_pretty_checkboxes';
-    @import "~scss/plugins/datatables";
+@import '~scss/vue/_pretty_checkboxes';
+@import "~scss/plugins/datatables";
 </style>

@@ -139,6 +139,7 @@ export default {
 				children: [
 					{ sectionKey: 'Demand', title: 'Talep', canRead: false, canWrite: false, canDelete: false, },
 					{ sectionKey: 'OfferOrderReceipt', title: 'Teklif/Sipariş/İrsaliye', canRead: false, canWrite: false, canDelete: false, },
+					{ sectionKey: 'Invoice', title: 'Fatura', canRead: false, canWrite: false, canDelete: false, },
 					{ sectionKey: 'WaitingDemands', title: 'Bekleyen Talepler', canRead: false, canWrite: false, canDelete: false, },
 				]
 			},

@@ -1036,8 +1036,7 @@ export default {
 						};
 					});
 
-					this.formData = getData;
-				}
+					this.formData = getData;				}
 				else {
 					this.formData = {
 						id: 0,
@@ -1363,7 +1362,6 @@ export default {
 				postData.projectStatus = !postData.projectStatus || postData.projectStatus.length == 0 ? 0 : parseInt(postData.projectStatus);
 				postData.projectCategoryId = !postData.projectCategoryId || postData.projectCategoryId.length == 0 ? null : parseInt(postData.projectCategoryId);
 				postData.forexId = !postData.forexId || postData.forexId.length == 0 ? null : parseInt(postData.forexId);
-
 				const api = useApi();
 				const postResult = (await api.post('Project', postData)).data;
 				if (postResult.result) {

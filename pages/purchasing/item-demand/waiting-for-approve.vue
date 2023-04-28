@@ -473,8 +473,6 @@ export default {
         };
       });
 
-      console.error(this.visualData);
-
       this.firmList = (await api.get("Firm")).data.map((d) => {
         return {
           id: d.id,

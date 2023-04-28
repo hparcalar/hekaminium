@@ -189,12 +189,14 @@ export default {
         const api = useApi();
         const rawData = (await api.get('ItemReceipt/List/0')).data;
 
-        this.visualData = rawData.map((d) => {
+				this.visualData = rawData.filter((d => d.receiptType != 4))
+
+        /* this.visualData = rawData.map((d) => {
             return {
                 ...d,
                 //receiptDate: dateToStr(d.receiptDate),
             };
-        });
+        }); */
 
 		// if (this.$refs.buttonsTable){
 		// 	this.$refs.buttonsTable.$dt.state().clear()

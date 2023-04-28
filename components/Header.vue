@@ -576,8 +576,8 @@ export default {
 		var keydown = null;
 
 		window.onkeydown = function(e) {
-			if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) ||
-				( e.keyCode == 191 ) ) {
+			if ( ( e.keyCode == 70 && ( e.ctrlKey || e.metaKey ) ) 
+				/* || ( e.keyCode == 191 ) */ ) {
 					let toggler = UIkit.toggle('.nav-overlay',{
 						target: '.nav-overlay',
 						animation : 'uk-animation-slide-top'

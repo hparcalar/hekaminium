@@ -261,11 +261,12 @@ export default {
 
                         if (postFileResult.data.result) {
                             this.showNotification('Dosya başarıyla yüklendi.', false, 'success');
+                            this.$emit('onSubmit');
                         } 
                         // else this.showNotification('Dosyayı karşıya yüklerken bir hata oluştu.', false, 'error');
                     }
                     await this.bindModel();
-                    this.$emit('onSubmit');
+                    
                 } else this.showNotification(postResult.data.errorMessage, false, 'error');
             } catch (error) {
                 this.showNotification(error, false, 'error');

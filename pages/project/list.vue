@@ -90,7 +90,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="forexName" header="Döviz" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',0)" field="forexName" header="Döviz" sortable>
 							<template #filter="{filterModel, filterCallback}">
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
@@ -119,7 +119,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="offerPrice" header="Bedel (TL)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',0)" field="offerPrice" header="Bedel (TL)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -127,7 +127,7 @@
 							<InputText v-model="filterModel.value" @input="filterCallback()" />
 							</template>
 						</Column>
-						<Column v-if="hasViewAuth('ProjectBudgetView',1)" field="offerForexPrice" header="Bedel (Dvz)" sortable>
+						<Column v-if="hasViewAuth('ProjectBudgetView',0)" field="offerForexPrice" header="Bedel (Dvz)" sortable>
 							<template #body="slotProps">
 								{{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
 							</template>
@@ -340,6 +340,9 @@ export default {
 			// console.log(this.$refs.dtable);
 			this.$refs.dtable.exportCSV();
 		},
+		clearGeneralFilter(){
+      this.filterGeneral.global.value = null;
+    },
 		convertNumberToStr(number){
 			return numberToStr(number);
 		},

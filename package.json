@@ -99,7 +99,8 @@
 		"vue2-touch-events": "^3.2.2",
 		"vuedraggable": "^2.24.3",
 		"vuelidate": "^0.7.6",
-		"worker-loader": "^3.0.8"
+		"worker-loader": "^3.0.8",
+		"xlsx": "^0.18.5"
 	},
 	"devDependencies": {
 		"@node-minify/core": "^6.2.0",

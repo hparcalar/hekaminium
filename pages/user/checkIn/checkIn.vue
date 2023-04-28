@@ -124,11 +124,12 @@
           let self = this;
           const api = useApi();
           if(this.formData){
-            this.formData.cardNo = this.employee.find(x => x.id == this.formData.employeeId).employeeCardNo
-            let now = self.$moment(this.formData.processDate).format('YYYY-MM-DD HH:mm:ss')
-            this.formData.processDate = now.substring(0, 10) + 'T' + now.substring(11, 19)
+            //this.formData.cardNo = this.employee.find(x => x.id == this.formData.employeeId).employeeCardNo
+            //let now = self.$moment(this.formData.processDate).format('YYYY-MM-DD HH:mm:ss')
+            //this.formData.processDate = now.substring(0, 10) + 'T' + now.substring(11, 19)
+            this.formData.processDate = self.$moment(this.formData.processDate, 'DD-MM-YYYY HH:mm').toDate()
           }
-          const postResult = (await api.post('EmployeeCheckIn', this.formData)).data;
+          const postResult = (await api.post('EmployeeCheckIn/Edit', this.formData)).data;
           if (postResult.result) {
             this.showNotification('Kayıt başarılı', false, 'success');
             this.formData.id = postResult.recordId;

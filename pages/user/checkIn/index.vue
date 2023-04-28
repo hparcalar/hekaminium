@@ -30,23 +30,23 @@
                     </ScInput>
                   </div>
                   <div class="uk-width-1-2@m">
-                    <ScInput v-model="formData.processDate" read-only>
-                      <label>İşlem Tarihi</label>
+                    <ScInput v-model="formData.processDate">
+                      <label>Giriş Tarihi</label>
                     </ScInput>
                   </div>
                   <div class="uk-width-1-2@m">
-                    <ScInput v-model="formData.processType" read-only>
-                      <label>İşlem Tipi</label>
+                    <ScInput v-model="formData.exitDate">
+                      <label>Çıkış Tarihi</label>
                     </ScInput>
                   </div>
                 </div>
               </fieldset>
   
               <div class="uk-margin-large-top">
-                <!-- <button type="button" @click="onSubmit"
+                <button type="button" @click="onSubmit"
                   class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
                   <span data-uk-icon="icon: check" class="uk-icon"></span>
-                </button> -->
+                </button>
                 <button type="button" @click="onCancel"
                   class="sc-button sc-button-default sc-button-medium uk-margin-small-right">
                   <span data-uk-icon="icon: arrow-left" class="uk-icon"></span>
@@ -91,18 +91,13 @@
     data: () => ({
       formData: {
         id: 0,
-        employeeCode: null,
         employeeName: null,
         employeeCardNo: null,
-        employeeHourlyWage: null,
-        employeePhone: null,
-        employeeAddress: null,
-        departmentId: null,
         employeeId: null,
         processDate : null,
+        exitDate: null,
         processType: null,
       },
-      departments: [],
     }),
     async mounted() {
       const qsId = getQS('id');
@@ -128,9 +123,10 @@
           const getData = (await api.get('EmployeeCheckIn/' + this.formData.id)).data;
           if (getData) {
             const employeeData = (await api.get('Employee/' + getData.employeeId)).data;
-            getData.employeeName = employeeData.employeeName;
+            //getData.employeeName = employeeData.employeeName;
             getData.employeeCardNo = employeeData.employeeCardNo;
             getData.processDate =  self.$moment(getData.processDate).format('DD-MM-YYYY HH:mm');
+            getData.exitDate = getData.exitDate ? self.$moment(getData.exitDate).format('DD-MM-YYYY HH:mm') : "";
             getData.processType == 0 ? getData.processType = "Giriş" : getData.processType = "Çıkış"; 
             this.formData = getData;
           }
@@ -138,23 +134,35 @@
   
         }
       },
-      /* async onSubmit() {
+      async onSubmit() {
         try {
           const api = useApi();
-          const postResult = (await api.post('CheckIn', this.formData)).data;
+
+          const postPrm = {...this.formData};
+
+          postPrm.processDate = this.$moment(postPrm.processDate, 'DD-MM-YYYY HH:mm').toDate() //.format('YYYY-DD-MM[T]HH:mm:ss')
+          //this.formData.processDate = now.substring(0, 10) + 'T' + now.substring(11, 19)
+          if(postPrm.exitDate){
+            postPrm.exitDate = this.$moment(postPrm.exitDate, 'DD-MM-YYYY HH:mm').toDate() //.format('YYYY-DD-MM[T]HH:mm:ss')
+            //this.formData.exitDate = now.substring(0, 10) + 'T' + now.substring(11, 19)
+          }
+          if (postPrm.exitDate.length == 0)
+          postPrm.exitDate = null;
+          postPrm.processType = postPrm.processType == 'Çıkış' ? 1 : 0;
+          const postResult = (await api.post('EmployeeCheckIn/Edit', postPrm)).data;
           if (postResult.result) {
             this.showNotification('Kayıt başarılı', false, 'success');
             this.formData.id = postResult.recordId;
   
-            this.$router.go(-1);
+            //this.$router.go(-1);
           }
           else
             this.showNotification(postResult.errorMessage, false, 'error');
+
         } catch (error) {
           this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
         }
-        console.error(this.formData)
-      }, */
+      },
       onCancel() {
         this.$router.push('/user/checkIn/list');
       },

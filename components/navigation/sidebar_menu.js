@@ -102,8 +102,16 @@ export const menuEntries = [
 				page: "/project/list",
 				visible: function(){
 					return checkAuth('Project');
+				},				
+			},
+			{
+				id: uniqueID(),
+				title: "Fatura Takibi",
+				icon: "mdi mdi-format-list-bulleted-square",
+				page: "/project/invoice-track/list",
+				visible: function(){
+					return checkAuth('ProjectBudgetView');
 				},
-				
 			},
 			{
 				id: uniqueID(),
@@ -251,6 +259,15 @@ export const menuEntries = [
 				page: "/item/consumption",
 				visible: function(){
 					return checkAuth('StockOut');
+				},
+			},
+			{
+				id: uniqueID(),
+				icon: "mdi mdi-arrow-decision",
+				title: "Stok Sayımı",
+				page: "/warehouse/stocktaking/list",
+				visible: function(){
+					return checkAuth('WarehouseStatuses');
 				},
 			},
 		]

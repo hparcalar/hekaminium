@@ -11,7 +11,7 @@
                   type="button"
                   @click="newRecord"
                   class="sc-button sc-button-small uk-margin-small-left"
-                  v-show="hasViewAuth('Demand',1)"
+                  v-show="hasViewAuth('Invoice',1)"
                 >
                   <span
                     data-uk-icon="icon: plus"
@@ -20,37 +20,6 @@
                   Yeni
                 </button>
               </ScCardTitle>
-            </div>
-            <div class="uk-width-auto@s">
-              <div id="sc-dt-buttons"></div>
-            </div>
-            <div class="uk-width-auto@s">
-              <!-- <button class="sc-button sc-button-primary sc-button-flex" type="button">
-								Sütun Seç <i class="mdi mdi-chevron-down uk-margin-small-left"></i>
-							</button> -->
-              <div
-                class="uk-dropdown uk-width-small"
-                data-uk-drop="mode: click"
-              >
-                <div class="sc-padding-small">
-                  <div
-                    v-for="(checkbox, index) in dtDHeaders"
-                    :key="index"
-                    class="uk-margin-small"
-                  >
-                    <PrettyCheck
-                      class="p-icon"
-                      :value="index"
-                      :checked="checkbox.checked"
-                      :disabled="checkbox.disabled"
-                      @change="toggleCol($event, index)"
-                    >
-                      <i slot="extra" class="icon mdi mdi-check"></i>
-                      {{ checkbox.name }}
-                    </PrettyCheck>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </ScCardHeader>

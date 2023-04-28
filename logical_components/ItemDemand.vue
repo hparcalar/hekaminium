@@ -195,32 +195,14 @@
                                             :class="'p-button-sm' && slotProps.data.processList && slotProps.data.processList.length > 0 ? 'p-button-success ' : 'p-button-outlined p-button-danger'"
                                             v-tooltip="'Kesim Bilgileri'" @click="showCuttingDetail(slotProps.data)" />
                                         <Button label="" icon="pi pi-file"
-                                        :class="'p-button-sm' && p-button-success"
+                                        :class="'p-button-sm'"
                                         v-tooltip="'Dosyalar'" @click="showFoldersDialog(slotProps.data)" />
                                     </template>
                                 </Column>
                             </DataTable>
                         </div>
-
-
-
-                        <!-- <client-only>
-                            <Datatable
-                                id="sc-dt-details-table"
-                                ref="demandDetailsTable"
-                                :data="details"
-                                :part-dialog-visible="!attachmentDialogVisible"
-                                :options="dtOptions"
-                                :customColumns="dtDetailCols"
-                                @initComplete="dtButtonsInitialized"
-                                :buttons="true"
-                                :customEvents="[{ name: 'select', function: clickDetail }, { name:'deselect', function: deselectDetail }]"
-                            ></Datatable>
-                        </client-only> -->
                     </div>
                 </fieldset>
-
-               -
             </form>
         </div>
 

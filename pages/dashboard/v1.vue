@@ -46,7 +46,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',1)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-light-green-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-icon-24"></i>
@@ -63,7 +63,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',1)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-amber-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>
@@ -80,7 +80,7 @@
 						</div>
 					</ScCard>
 				</div>
-				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',0)">
+				<div v-show="showWidgets && this.hasViewAuth('ProjectBudgetView',1)">
 					<ScCard class="sc-widget uk-flex">
 						<div class="uk-width-1-4 md-bg-purple-600 uk-flex-middle uk-flex uk-flex-center">
 							<i class="mdi mdi-currency-try md-color-white sc-widget-addon"></i>

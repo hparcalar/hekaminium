@@ -138,7 +138,6 @@
             })
           if (getData) {
             this.formData = getData;
-            console.error(this.formData)
           }
         } catch (error) {
   
@@ -159,7 +158,6 @@
         } catch (error) {
           this.showNotification('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz.', false, 'error');
         }
-        console.error(this.formData)
       },
       onCancel() {
         this.$router.push('/user/employee/list');
