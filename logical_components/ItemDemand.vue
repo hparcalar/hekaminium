@@ -86,7 +86,7 @@
                                         v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOfferId > 0"
                                         type="button" @click="showOfferForm(selectedDemandDetail.relatedOfferId)"
                                         class="sc-button sc-button-primary sc-button-small" style="height:34px;">
-                                        Talep: {{ selectedDemandDetail.relatedOfferNo }}
+                                        Teklif: {{ selectedDemandDetail.relatedOfferNo }}
                                     </button>
                                     <button
                                         v-show="selectedDemandDetail && selectedDemandDetail.id > 0 && selectedDemandDetail.relatedOrderId > 0"
@@ -165,27 +165,27 @@
                                     :style="{ width: '25%', 'max-width': '25%' }"
                                     :headerStyle="{ width: '25%', 'max-width': '25%' }">
                                     <template #editor="slotProps">
-                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
                                     </template>
                                 </Column>
                                 <Column field="partNo" header="Parça Kodu" :style="{ width: '10%', 'max-width': '10%' }"
                                     :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
-                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
                                     </template>
                                 </Column>
                                 <Column field="partDimensions" header="Boyutlar"
                                     :style="{ width: '10%', 'max-width': '10%' }"
                                     :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
-                                        <InputText v-model="slotProps.data[slotProps.column.field]" />
+                                        <InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
                                     </template>
                                 </Column>
                                 <Column field="quantity" header="Miktar" :style="{ width: '10%', 'max-width': '10%' }"
                                     :headerStyle="{ width: '10%', 'max-width': '10%' }">
                                     <template #editor="slotProps">
                                         <InputNumber v-model="slotProps.data[slotProps.column.field]" mode="decimal"
-                                            :minFractionDigits="2" :maxFracionDigits="2" />
+                                            :minFractionDigits="2" :maxFracionDigits="2" onFocus="this.select()" />
                                     </template>
                                 </Column>
                                 <Column field="statusText" header="Durum"></Column>
@@ -197,6 +197,9 @@
                                         <Button label="" icon="pi pi-file"
                                         :class="'p-button-sm'"
                                         v-tooltip="'Dosyalar'" @click="showFoldersDialog(slotProps.data)" />
+                                        <Button label="" icon="pi pi-copy"
+                                        :class="'p-button-sm'"
+                                        v-tooltip="'Kopyala'" @click="copyLine(slotProps.data)" />
                                     </template>
                                 </Column>
                             </DataTable>
@@ -217,7 +220,7 @@
             @update:visible="isCuttingVisible = $event" :style="{ width: '75vw', 'z-index': '2000 !important' }">
             <ItemDemandDetail :detail-object="selectedDemandDetail" :total-detail-count="details.length"
                 :process-list="processList" :is-dialog="false" @onDetailSubmit="onDetailSaved"
-                @partDialogOpen="onPartDialogOpen" />
+                @partDialogOpen="onPartDialogOpen" :parent-part="parentPart" :parent-show-part="parentShowPart"/>
         </Dialog>
 
         <Dialog header="Dosyalar" :visible="isFolderDialog" :dismissable-mask="true" :close-on-escape="true" :modal="true"
@@ -226,10 +229,37 @@
                 class="sc-padding-medium sc-padding-remove-top" style="margin-top:5px;">
                 <div class="uk-margin-medium uk-margin-remove-left">
                     <client-only>
-                        <Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList"
+                        <!-- <Datatable id="sc-dt-atc-table" ref="atcTable" :data="attachmentList"
                             :options="dtAttachmentOptions" :customColumns="dtAttachmentCols" :buttons="true"
                             :customEvents="[{ name: 'select', function: clickAttachmentRow }]">
-                        </Datatable>
+                        </Datatable> -->
+
+                        <Button label="Yeni" icon="pi pi-plus"
+                            :class="'p-button-sm'" style="margin-bottom: 15px;"
+                            v-tooltip="'Sil'" @click="showNewAttachment" />
+                        <DataTable :value="attachmentList" responsiveLayout="scroll"
+                            :selection.sync="selectedAttachmentRow" @row-select="clickAttachmentRow" selectionMode="single"
+                            sortField="lineNumber" :sortOrder="1" >
+                            <Column field="title" header="Başlık" sortable
+                                :style="{ width: '20%', 'max-width': '20%' }"
+                                :headerStyle="{ width: '20%', 'max-width': '20%' }"></Column>
+                            <Column field="fileName" header="Dosya Adı" sortable
+                                :style="{ width: '30%', 'max-width': '30%' }"
+                                :headerStyle="{ width: '30%', 'max-width': '30%' }"></Column>
+                            <Column field="explanation" header="Açıklama" sortable
+                                :style="{ width: '45%', 'max-width': '45%' }"
+                                :headerStyle="{ width: '45%', 'max-width': '45%' }"></Column>
+                            <Column header="#">
+                                <template #body="slotProps"
+                                    :style="{ width: '5%', 'max-width': '5%' }"
+                                    :headerStyle="{ width: '5%', 'max-width': '5%' }">
+                                    <Button v-if="slotProps.data.isPart != true" label="" icon="pi pi-trash"
+                                    :class="'p-button-sm p-button-danger'"
+                                    v-tooltip="'Sil'" @click="deleteAttachment(slotProps.data)" />
+                                </template>
+                            </Column>
+                        </DataTable>
+
                     </client-only>
                 </div>
             </div>
@@ -303,6 +333,8 @@ export default {
         selectedAttachmentRow: { id: 0, recordType: 2, recordId: 0 },
         attachmentList: [],
         refreshAttachmentForm: false,
+        parentPart: null,
+        parentShowPart: false,
         dtAttachmentOptions: {
             autoWidth: false,
             select: true,
@@ -445,6 +477,16 @@ export default {
                 const itemData = (await api.get('Item')).data
                 this.itemList = itemData.map((d) => { return { ...d, text: d.itemName } })
 
+                this.itemList.sort(function (a, b) {
+                    if (a.itemName < b.itemName) {
+                        return -1;
+                    }
+                    if (a.itemName > b.itemName) {
+                        return 1;
+                    }
+                    return 0;
+                });
+
                 const getData = (await api.get('ItemDemand/' + this.formData.id)).data;
                 if (getData && getData.id > 0) {
                     getData.projectId = getData.projectId ? getData.projectId.toString() : null;
@@ -585,9 +627,41 @@ export default {
             const api = useApi();
             try {
                 this.attachmentList = (await api.get('Attachment/OfRecord/2/' + this.selectedDemandDetail.id)).data;
+
+                for (let index = 0; index < this.selectedDemandDetail.partList.length; index++) {
+                    const item = this.selectedDemandDetail.partList[index];
+                    item.isPart=true;
+                    item.title = item.partNo;
+                    item.explanation = item.partType;
+                    item.fileName = item.fileType;
+                    this.attachmentList.push(item)
+                }
             } catch (error) {
 
             }
+        },
+        async deleteAttachment(selectedAttachment) {
+            this.isFolderDialog = false;
+            const self = this;
+            UIkit.modal.confirm('Bu dosyayı silmek istediğinizden emin misiniz?').then(
+                async function () {
+                    try {
+                        const api = useApi();
+                        const delResult = (await api.delete('Attachment/' + selectedAttachment.id)).data;
+                        if (delResult.result) {
+                            self.showNotification('Silme işlemi başarılı', false, 'success');
+                            self.bindAttachments();
+                        }
+                        else
+                            self.showNotification(delResult.errorMessage, false, 'error');
+                    } catch (error) {
+                    }
+                    self.isFolderDialog = true;
+                },
+                async function () {
+                    self.isFolderDialog = true;
+                }
+            );
         },
         removeDemandDetail() {
             if (this.selectedDemandDetail) {
@@ -696,13 +770,61 @@ export default {
 
             }
         },
+        copyLine(selectedDemandDetail){
+            const self = this;
+            const lastRow = this.details.length > 0 ? this.details.sort((a, b) => b.lineNumber - a.lineNumber)[0] : null;
+
+            const newRow = {
+                id: 0, newRecord: true,
+                lineNumber: selectedDemandDetail.lineNumber + 1, createdDate: self.$moment().format('YYYY-MM-DD'),
+                demandStatus: 0,
+            };
+
+            newRow.id = newRow.lineNumber;
+            newRow.statusText = newRow.demandStatus == 0 ? 'Onay bekleniyor' :"";
+            
+
+            newRow.itemName = selectedDemandDetail.itemName;
+            newRow.itemId = selectedDemandDetail.itemId;
+            newRow.explanation = selectedDemandDetail.explanation;
+            newRow.itemExplanation = selectedDemandDetail.itemExplanation;
+            newRow.partNo = selectedDemandDetail.partNo;
+            newRow.partDimensions = selectedDemandDetail.partDimensions;
+            newRow.quantity = selectedDemandDetail.quantity;
+
+            this.details.splice(selectedDemandDetail,0,newRow);
+            
+            const sortedDetails = this.details.sort((a, b) => a.lineNumber - b.lineNumber)
+
+            let lineNumber = 1;
+            for (let i = 0; i < sortedDetails.length; i++) {
+                const realIndex = this.details.indexOf(sortedDetails[i]);
+                const row = this.details[realIndex];
+                row.lineNumber = lineNumber;
+                lineNumber++;
+            }
+        },
         deselectDetail: function () {
             this.selectedDemandDetail = { id: 0 };
         },
-        clickAttachmentRow: function (e, dt, type, indexes) {
+        /* clickAttachmentRow: function (e, dt, type, indexes) {
             const selIndex = indexes[0];
             this.selectedAttachmentRow = this.attachmentList[selIndex];
             this.showAttachment();
+        }, */
+        clickAttachmentRow: function (event) {
+            this.selectedAttachmentRow = event.data;
+            if(event.data.isPart){
+                this.isFolderDialog = false;
+                this.parentPart = event.data;
+                this.parentShowPart = true;
+                //this.onPartDialogOpen = true;
+                //this.refreshAttachmentForm = true;
+                //this.bindAttachments();
+                this.isCuttingVisible = true;
+            }
+            else
+                this.showAttachment();
         },
     },
     watch: {
@@ -727,6 +849,15 @@ export default {
             },
             deep: true
         },
+        isCuttingVisible: function (newVal, oldVal){
+            if(newVal == false){
+                if(this.parentShowPart == true){
+                    this.isFolderDialog = true;
+                }
+                this.parentShowPart = false;
+                this.parentPart = null;
+            }
+        }
     }
 }
 </script>

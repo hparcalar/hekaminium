@@ -136,7 +136,7 @@ export default {
             isOfferDoc: false,
             fileType: '',
             fileExtension: '',
-            title: 'Teknik Şartname',
+            title: 'Teknik Resim',
             explanation: '',
         },
         selectedCategory: null,
@@ -193,7 +193,7 @@ export default {
             this.formData = {
                 ...self.formData,
                 id: 0,
-                title: 'Teknik Şartname',
+                title: 'Teknik Resim',
                 fileContent: null,
                 fileType: '',
                 fileName: '',

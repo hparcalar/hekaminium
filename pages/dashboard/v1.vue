@@ -1018,7 +1018,7 @@ export default {
 			this.offeredProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(offeredProjectSum));
 			this.approvedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(approvedProjectSum));
 			this.completedProjectTotal = (new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'try', maximumFractionDigits: 2 }).format(completedProjectSum));
-			this.pendingDemandCount = pendingDemandsData.length;
+			this.pendingDemandCount = pendingDemandsData.filter(d => d.demandStatus != 4).length;
       this.pendingOrderCount = pendingOrdersData.length;
 
 			this.chartLoaded = true

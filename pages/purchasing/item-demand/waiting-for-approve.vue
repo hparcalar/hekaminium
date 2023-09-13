@@ -465,7 +465,7 @@ export default {
       const api = useApi();
       const rawData = (await api.get("ItemDemand/WaitingForApprove")).data;
 
-      this.visualData = rawData.map((d) => {
+      this.visualData = rawData.filter(d => d.demandStatus != 4).map((d) => {
         return {
           ...d,
           demandDate: dateToStr(d.demandDate, 'YYYY.MM.DD'),

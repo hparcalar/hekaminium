@@ -148,6 +148,15 @@ export default {
             }
 
             this.itemList = this.tmpList.filter(d => d.itemCategoryId > 5);
+            this.itemList.sort(function (a, b) {
+                if (a.text < b.text) {
+                    return -1;
+                }
+                if (a.text > b.text) {
+                    return 1;
+                }
+                return 0;
+            });
             this.formData = this.detailObject;
             try {
                 this.formData.itemId = this.formData.itemId ? this.formData.itemId.toString() : null;   

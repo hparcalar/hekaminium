@@ -16,7 +16,7 @@
             @row-select="clickDetail" columnResizeMode="fit" dataKey="id" :paginator="true" showGridlines :rows="13"
             :filters.sync="filterGeneral" selectionMode="single" filterDisplay="row" sortField="projectCode"
             :sortOrder="-1"
-            :globalFilterFields="['projectCode', 'projectName', 'firmName', 'forexName', 'offerPrice', 'offerForexPrice', 'explanation']">
+            :globalFilterFields="['projectCode', 'projectName', 'firmName', 'forexName', 'invoicePrice', 'invoiceForexPrice', 'explanation']">
             <template #header>
               <div style="float:right;text-align:right;">
                 <Button icon="pi pi-external-link" label="Dışarı Aktar" @click="exportToCsv($event)" />
@@ -59,19 +59,19 @@
                 <InputText v-model="filterModel.value" @input="filterCallback()" />
               </template>
             </Column>
-            <Column v-if="hasViewAuth('ProjectBudgetView', 0)" field="offerPrice" header="Bedel (TL)" sortable
+            <Column v-if="hasViewAuth('ProjectBudgetView', 0)" field="invoicePrice" header="Bedel (TL)" sortable
               :style="{ width: '10%' }" :headerStyle="{ width: '10%' }">
               <template #body="slotProps">
-                {{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+                {{ slotProps.data[slotProps.column.field] != null ? convertNumberToStr(slotProps.data[slotProps.column.field]) : "" }}
               </template>
               <template #filter="{ filterModel, filterCallback }">
                 <InputText v-model="filterModel.value" @input="filterCallback()" />
               </template>
             </Column>
-            <Column v-if="hasViewAuth('ProjectBudgetView', 0)" field="offerForexPrice" header="Bedel (Döviz)" sortable
+            <Column v-if="hasViewAuth('ProjectBudgetView', 0)" field="invoiceForexPrice" header="Bedel (Döviz)" sortable
               :style="{ width: '10%' }" :headerStyle="{ width: '10%' }">
               <template #body="slotProps">
-                {{ convertNumberToStr(slotProps.data[slotProps.column.field]) }}
+                {{ slotProps.data[slotProps.column.field] != null ?  convertNumberToStr(slotProps.data[slotProps.column.field]) : "" }}
               </template>
               <template #filter="{ filterModel, filterCallback }">
                 <InputText v-model="filterModel.value" @input="filterCallback()" />
@@ -184,8 +184,8 @@ export default {
         projectName: { value: null, matchMode: FilterMatchMode.CONTAINS },
         firmName: { value: null, matchMode: FilterMatchMode.CONTAINS },
         forexName: { value: null, matchMode: FilterMatchMode.CONTAINS },
-        offerPrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
-        offerForexPrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        invoicePrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
+        invoiceForexPrice: { value: null, matchMode: FilterMatchMode.CONTAINS },
         expiryExplanation: { value: null, matchMode: FilterMatchMode.CONTAINS },
         expiryStartDate: { value: null, matchMode: FilterMatchMode.CONTAINS },
         expiryTime: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -222,6 +222,8 @@ export default {
           ...d,
           offerForexPrice: d.offerForexPrice,
           offerPrice: d.offerPrice,
+          invoicePrice: d.invoicePrice,
+          invoiceOfferPrice: d.invoiceOfferPrice,
           expiryStartDate: d.expiryStartDate != null ? moment(d.expiryStartDate).format('YYYY.MM.DD') : '',
           expiryEndDate: d.expiryEndDate != null ? moment(d.expiryEndDate).format('YYYY.MM.DD') : '',
         }
@@ -236,7 +238,7 @@ export default {
       let sum = 0;
       sum = 0;
       if (this.filteredData && this.filteredData.length > 0) {
-        sum = this.filteredData.map((d) => d.offerPrice).reduce((a, b) => a + b);
+        sum = this.filteredData.map((d) => d.invoicePrice).reduce((a, b) => a + b);
       }
       else
         sum = 0;
@@ -244,7 +246,7 @@ export default {
 
       sum = 0;
       if (this.filteredData && this.filteredData.length > 0) {
-        sum = this.filteredData.map((d) => d.offerForexPrice).reduce((a, b) => a + b);
+        sum = this.filteredData.map((d) => d.invoiceForexPrice).reduce((a, b) => a + b);
       }
       else
         sum = 0;
@@ -261,6 +263,8 @@ export default {
           'Döviz Kuru': track.forexRate != null ? track.forexRate.toFixed(2) : '',
           'Proje Bedeli(TL)': track.offerPrice != null ? track.offerPrice.toFixed(2) : '',
           'Proje Bedeli(Döviz)': track.offerForexPrice != null ? track.offerForexPrice.toFixed(2) : '',
+          'Proje Fatura Bedeli(TL)': track.invoicePrice != null ? track.invoicePrice.toFixed(2) : '',
+          'Proje Fatura Bedeli(Döviz)': track.invoiceOfferPrice != null ? track.invoiceForexPrice.toFixed(2) : '',
           'Vade Başlangıç Tarihi': track.expiryStartDate != null ? moment(track.expiryStartDate).format('YYYY.MM.DD') : "",
           'Vade Bitiş Tarihi': track.expiryEndDate != null ? moment(track.expiryEndDate).format('YYYY.MM.DD') : "",
           'Vade Süresi': track.expiryTime,

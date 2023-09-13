@@ -15,7 +15,7 @@
                 Termin
               </th>
               <th class="uk-text-nowrap">
-                Sipariş No
+                İrsaliye No
               </th>
               <th class="uk-text-nowrap">
                 Tedarikçi
@@ -31,9 +31,18 @@
 
           <tr v-for="item in details" :key="item.id">
             <td>
-              <button type="button" @click="expandOrderDetail(item)"
+              <!-- <PrettyCheck name="isSelected"
+                  v-model="item.isSelected" class="p-icon" size="xl">
+                  <i slot="extra" class="icon mdi mdi-check"></i>
+              </PrettyCheck> -->
+              <button type="button" @click="expandReceiptDetail(item)"
                 class="sc-button sc-button-default sc-button-small uk-margin-small-right">
                 <span :data-uk-icon="'icon:' + (item.expanded ? 'minus' : 'plus')" class="uk-icon"></span>
+              </button>
+              <hr>
+              <button type="button" @click="selectReceipt(item)"
+                class="sc-button sc-button-default sc-button-small uk-margin-small-right">
+                <span> {{ item.isSelected ? "Çıkar" : "Ekle" }} </span>
               </button>
             </td>
             <td v-if="item.expanded" colspan="6">
@@ -41,9 +50,9 @@
               <table class="uk-table uk-table-striped uk-table-responsive uk-table-small" style="width:100%">
                 <thead>
                   <tr>
-                    <th class="uk-text-nowrap">
+                    <!-- <th class="uk-text-nowrap">
                       SEÇ
-                    </th>
+                    </th> -->
                     <th class="uk-text-nowrap">
                       Stok Adı
                     </th>
@@ -56,34 +65,22 @@
                     <th class="uk-text-nowrap">
                       Açıklama
                     </th>
-                    <th class="uk-text-nowrap">
-                      Talep Eden
-                    </th>
-                    <th class="uk-text-nowrap">
-                      Talep Miktar
-                    </th>
-                    <th class="uk-text-nowrap">
-                      Kalan Miktar
-                    </th>
                   </tr>
                 </thead>
-                <!-- <tbody>
-                                    <tr v-for="demand in item.demandConsumes" :key="demand.id" :class="{'selected-detail': demand.isSelected}">
-                                        <td>
-                                            <PrettyCheck name="isSelected"
-                                                v-model="demand.isSelected" class="p-icon">
-                                                <i slot="extra" class="icon mdi mdi-check"></i>
-                                            </PrettyCheck>
-                                        </td>
-                                        <td>{{ demand.itemName }}</td>
-                                        <td>{{ demand.partNo }}</td>
-                                        <td>{{ demand.partDimensions }}</td>
-                                        <td>{{ demand.itemExplanation }}</td>
-                                        <td>{{ demand.userName }}</td>
-                                        <td>{{ demand.demandQuantity }}</td>
-                                        <td>{{ demand.remainingQuantity }}</td>
-                                    </tr>
-                                </tbody> -->
+                <tbody>
+                  <tr :key="item.id" :class="{'selected-detail': item.isSelected}">
+                      <!-- <td>
+                          <PrettyCheck name="isSelected"
+                              v-model="item.isSelected" class="p-icon">
+                              <i slot="extra" class="icon mdi mdi-check"></i>
+                          </PrettyCheck>
+                      </td> -->
+                      <td>{{ item.itemName }}</td>
+                      <td>{{ item.partNo }}</td>
+                      <td>{{ item.partDimensions }}</td>
+                      <td>{{ item.itemExplanation }}</td>
+                  </tr>
+              </tbody>
               </table>
             </td>
             <td v-if="!item.expanded">{{ fDateToStr(item.receiptDate) }}</td>
@@ -94,17 +91,6 @@
             <td v-if="!item.expanded">{{ item.quantity }}</td>
           </tr>
         </table>
-        <!-- <client-only>
-                    <Datatable
-                        id="sc-dt-open-purchase-orders-table"
-                        ref="buttonsTable"
-                        :data="details"
-                        :options="dtOptions"
-                        :customColumns="dtDetailCols"
-                        :buttons="true"
-                        :customEvents="[{ name: 'select', function: clickOrderRow }, { name: 'deselect', function: deselectOrderRow }]"
-                    ></Datatable>
-                </client-only> -->
       </div>
       <div v-show="isDialog == true" class="uk-margin-large-top">
         <button type="button" @click="onSubmit" class="sc-button sc-button-primary sc-button-large uk-margin-small-right">
@@ -136,8 +122,8 @@ if (process.client) {
 }
 
 export default {
-  name: 'OpenPurchaseOrderList',
-  emits: ['onOrdersSelected', 'onCancel'],
+  name: 'OpenReceiptList',
+  emits: ['onReceiptsSelected', 'onCancel'],
   props: {
     isDialog: {
       type: Boolean,
@@ -158,7 +144,7 @@ export default {
   },
   data: () => ({
     details: [],
-    selectedOrderIndexes: [],
+    selectedReceiptIndexes: [],
     dtOptions: {
       select: true,
       searching: true,
@@ -187,7 +173,7 @@ export default {
       try {
         const prmFirmId = this.firmId;
         this.details = (await api.get('Invoice/OpenDetails')).data
-          /* .filter(d => d.firmId == prmFirmId) */
+          .filter(d => d.firmId == prmFirmId) 
           .map((d) => {
             return {
               ...d,
@@ -211,21 +197,15 @@ export default {
       const submittedDetails = [];
 
       for (let i = 0; i < this.details.length; i++) {
-        const orderDetail = this.details[i];
-        if (orderDetail.demandConsumes && orderDetail.demandConsumes.some(m => m.isSelected == true)) {
-          const selectedDetails = orderDetail.demandConsumes.filter(m => m.isSelected == true);
-          for (let j = 0; j < selectedDetails.length; j++) {
-            const consuming = selectedDetails[j];
+        const receiptDetail = this.details[i];
+        if (receiptDetail && receiptDetail.isSelected == true) {
+          const selectedDetails = receiptDetail;
+          
+            const consuming = selectedDetails;
             submittedDetails.push({
               ...consuming,
-              unitPrice: 0,
-              forexId: null,
-              taxRate: 0,
-              overallTotal: 0,
-              forexCode: '',
-              quantity: consuming.remainingQuantity,
             });
-          }
+          
         }
       }
 
@@ -234,7 +214,7 @@ export default {
         return;
       }
 
-      this.$emit('onOrdersSelected', submittedDetails);
+      this.$emit('onReceiptsSelected', submittedDetails);
     },
     onCancel() {
       if (this.isDialog)
@@ -251,19 +231,33 @@ export default {
       }
       UIkit.notification(text, config);
     },
-    clickOrderRow: function (e, dt, type, indexes) {
+    clickReceiptRow: function (e, dt, type, indexes) {
       const selIndex = indexes[0];
-      this.selectedOrderIndexes.push(selIndex);
+      this.selectedReceiptIndexes.push(selIndex);
     },
-    deselectOrderRow: function (e, dt, type, indexes) {
+    deselectReceiptRow: function (e, dt, type, indexes) {
       const selIndex = indexes[0];
-      this.selectedOrderIndexes = this.selectedOrderIndexes.filter(d => d != selIndex);
+      this.selectedReceiptIndexes = this.selectedReceiptIndexes.filter(d => d != selIndex);
     },
-    expandOrderDetail(item) {
-      if (!item.expanded)
+    expandReceiptDetail(item) {
+      if (!item.expanded){
         item.expanded = true;
-      else
+      }
+      else{
         item.expanded = !item.expanded;
+      }
+    },
+    selectReceipt(item){
+      if (item.isSelected) {
+        item.isSelected = false;
+        item.expanded = !item.expanded;
+        item.expanded = !item.expanded;
+      }
+      else {
+        item.isSelected = true;
+        item.expanded = !item.expanded;
+        item.expanded = !item.expanded;
+      }
     }
   },
   watch: {

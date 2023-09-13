@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _df818fc2 = () => interopDefault(import('..\\pages\\account_auth.vue' /* webpackChunkName: "pages/account_auth" */))
 const _5c71cecf = () => interopDefault(import('..\\pages\\attachment-category\\index.vue' /* webpackChunkName: "pages/attachment-category/index" */))
+const _06832be3 = () => interopDefault(import('..\\pages\\car\\index.vue' /* webpackChunkName: "pages/car/index" */))
 const _4ced1382 = () => interopDefault(import('..\\pages\\firm\\index.vue' /* webpackChunkName: "pages/firm/index" */))
 const _666e8e2a = () => interopDefault(import('..\\pages\\firm-category\\index.vue' /* webpackChunkName: "pages/firm-category/index" */))
 const _3135986a = () => interopDefault(import('..\\pages\\invoice\\index.vue' /* webpackChunkName: "pages/invoice/index" */))
@@ -20,6 +21,8 @@ const _5d11864b = () => interopDefault(import('..\\pages\\project-category\\inde
 const _2de7415c = () => interopDefault(import('..\\pages\\staffpermit\\index.vue' /* webpackChunkName: "pages/staffpermit/index" */))
 const _2934b058 = () => interopDefault(import('..\\pages\\warehouse\\index.vue' /* webpackChunkName: "pages/warehouse/index" */))
 const _75b59731 = () => interopDefault(import('..\\pages\\attachment-category\\list.vue' /* webpackChunkName: "pages/attachment-category/list" */))
+const _62356010 = () => interopDefault(import('..\\pages\\car\\detail.vue' /* webpackChunkName: "pages/car/detail" */))
+const _c78b70c6 = () => interopDefault(import('..\\pages\\car\\list.vue' /* webpackChunkName: "pages/car/list" */))
 const _ae6d19c6 = () => interopDefault(import('..\\pages\\components\\accordion.vue' /* webpackChunkName: "pages/components/accordion" */))
 const _43b9989e = () => interopDefault(import('..\\pages\\components\\alert.vue' /* webpackChunkName: "pages/components/alert" */))
 const _790e7e2c = () => interopDefault(import('..\\pages\\components\\animations.vue' /* webpackChunkName: "pages/components/animations" */))
@@ -203,6 +206,10 @@ export const routerOptions = {
     component: _5c71cecf,
     name: "attachment-category"
   }, {
+    path: "/car",
+    component: _06832be3,
+    name: "car"
+  }, {
     path: "/firm",
     component: _4ced1382,
     name: "firm"
@@ -258,6 +265,14 @@ export const routerOptions = {
     path: "/attachment-category/list",
     component: _75b59731,
     name: "attachment-category-list"
+  }, {
+    path: "/car/detail",
+    component: _62356010,
+    name: "car-detail"
+  }, {
+    path: "/car/list",
+    component: _c78b70c6,
+    name: "car-list"
   }, {
     path: "/components/accordion",
     component: _ae6d19c6,

@@ -351,7 +351,9 @@ export default {
 			column.visible(e).draw('page');
 		},
 		clickDetail: function (event) {
-			this.$router.push('/project?id=' + event.data.id);
+			//this.$router.push('/project?id=' + event.data.id);
+			const routeData = this.$router.resolve("/project?id=" + event.data.id);
+      window.open(routeData.href, '_blank');
 		},
 		newRecord() {
 			this.$router.push('/project');

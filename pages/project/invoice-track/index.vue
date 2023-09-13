@@ -56,6 +56,16 @@
                   </ScInput>
                 </div>
                 <div>
+                  <ScInput v-model="formData.invoicePrice">
+                    <label>Fatura Bedeli(TL)</label>
+                  </ScInput>
+                </div>
+                <div>
+                  <ScInput v-model="formData.invoiceForexPrice">
+                    <label>Fatura Bedeli(Döviz)</label>
+                  </ScInput>
+                </div>
+                <div>
                   <ScInput v-model="formData.expiryStartDate" :config="{ wrap: true, dateFormat: 'Y-m-d' }" v-flatpickr
                     mode="outline">
                     <label>Vade Başlangıç Tarihi</label>
@@ -132,6 +142,8 @@ export default {
 			offerPrice: null,
 			forexRate: null,
 			offerForexPrice: null,
+      invoicePrice: null,
+      invoiceForexPrice: null,
 			isInvoiced: false,
       expiryExplanation: '',
       expiryStartDate: null,
@@ -187,6 +199,8 @@ export default {
           getData.offerPrice = getData.offerPrice == null ? '' : getData.offerPrice.toFixed(2);
           getData.offerForexPrice = getData.offerPrice == null ? '' : getData.forexId == 0 ? '' : getData.offerForexPrice.toFixed(2);
           getData.forexRate = getData.forexRate == null ? '' : getData.forexRate.toFixed(2);
+          getData.invoicePrice = getData.invoicePrice == null ? getData.offerPrice : getData.invoicePrice.toFixed(2);
+          getData.invoiceForexPrice = getData.invoiceForexPrice == null ? getData.offerForexPrice : getData.invoiceForexPrice.toFixed(2);
 
           this.formData = getData;
         }
@@ -207,6 +221,8 @@ export default {
           expiryExplanation: this.formData.expiryExplanation,
           expiryStartDate: this.formData.expiryStartDate ? this.$moment(this.formData.expiryStartDate).format('YYYY-MM-DD') : null,
           expiryEndDate: this.formData.expiryEndDate ? this.$moment(this.formData.expiryEndDate).format('YYYY-MM-DD') : null,
+          invoicePrice: this.formData.invoicePrice,
+          invoiceForexPrice: this.formData.invoiceForexPrice
         };
         const result = await api.post('Project/ExpiryEdit', postData);
         if (result.data.result) {

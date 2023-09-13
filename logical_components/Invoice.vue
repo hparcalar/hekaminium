@@ -42,7 +42,7 @@
 						<div class="uk-child-width-1-2@m uk-grid">
 							<div>
 								<client-only>
-									<Select2 v-model="formData.firmId" :options="firms"
+									<Select2 v-model="formData.firmId" :options="firms" @change="firmChanged"
 										:settings="{ 'width': '100%', 'placeholder': 'Firma', 'allowClear': true }">
 										<label>Firma</label>
 									</Select2>
@@ -75,21 +75,21 @@
 						<div class="uk-grid">
 							<div class="uk-width-1-4@l">
 								<div class="uk-button-group sc-padding-remove-left" style="height:34px;">
-									<button type="button" @click="showNewOrderDetail"
+									<button type="button" @click="showNewReceiptDetail"
 										class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
 										<span data-uk-icon="icon: plus" class="uk-icon"></span>
 									</button>
-									<button v-show="selectedOrderDetail && selectedOrderDetail.id > 0" type="button"
-										@click="showOrderDetail" class="sc-button sc-button-default sc-button-small uk-width-expand"
+									<button v-show="selectedReceiptDetail && selectedReceiptDetail.id > 0" type="button"
+										@click="showReceiptDetail" class="sc-button sc-button-default sc-button-small uk-width-expand"
 										style="height:34px;">
 										<span data-uk-icon="icon: pencil" class="uk-icon"></span>
 									</button>
-									<button v-show="selectedOrderDetail && selectedOrderDetail.id > 0" type="button"
-										@click="removeOrderDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand"
+									<button v-show="selectedReceiptDetail && selectedReceiptDetail.id > 0" type="button"
+										@click="removeReceiptDetail" class="sc-button sc-button-danger sc-button-small uk-width-expand"
 										style="height:34px;">
 										<span data-uk-icon="icon: trash" class="uk-icon"></span>
 									</button>
-									<button v-show="selectedOrderDetail && selectedOrderDetail.itemDemandDetailId > 0"
+									<button v-show="selectedReceiptDetail && selectedReceiptDetail.itemDemandDetailId > 0"
 										uk-tooltip="Talep Bağlantısı" type="button" @click="openDemandForm"
 										class="sc-button sc-button-default sc-button-small uk-width-expand" style="height:34px;">
 										<span data-uk-icon="icon: link" class="uk-icon"></span>
@@ -124,7 +124,7 @@
 				</fieldset>
 
 				<div class="uk-margin-large-top">
-					<button type="button" @click="showOpenOrders" v-show="hasViewAuth('Invoice', 1)"
+					<button type="button" @click="showOpenReceipts" v-show="hasViewAuth('Invoice', 1)"
 						class="sc-button sc-button-primary sc-button-medium uk-margin-small-right">
 						<span data-uk-icon="icon: list" class="uk-margin-small-right uk-icon"></span>
 						irsaliyeler
@@ -145,21 +145,21 @@
 			</form>
 		</div>
 
-		<div id="dlgOrderDetail" class="uk-modal" data-uk-modal stack="true">
+		<div id="dlgReceiptDetail" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<ItemReceiptDetail v-show="refreshDetailForm == true" :detail-object="selectedOrderDetail"
+					<ItemReceiptDetail v-show="refreshDetailForm == true" :detail-object="selectedReceiptDetail"
 						:total-detail-count="details.length" :is-dialog="true" @onDetailSubmit="onDetailSaved"
 						@onCancel="closeDetailDialog" />
 				</div>
 			</div>
 		</div>
 
-		<div id="dlgOpenOrders" class="uk-modal" data-uk-modal stack="true">
+		<div id="dlgOpenReceipts" class="uk-modal" data-uk-modal stack="true">
 			<div class="uk-modal-dialog uk-width-2-3" uk-overflow-auto>
 				<div class="uk-modal-body">
-					<OpenReceiptList v-show="refreshOrderList == true" :is-dialog="true" :firm-id="fFirmId"
-						@onOrdersSelected="onOrdersSelected" @onCancel="onOrdersClosed" />
+					<OpenReceiptList v-show="refreshReceiptList == true" :is-dialog="true" :firm-id="fFirmId"
+						@onReceiptsSelected="onReceiptsSelected" @onCancel="onReceiptsClosed" />
 				</div>
 			</div>
 		</div>
@@ -185,8 +185,8 @@ if (process.client) {
 }
 
 export default {
-	name: 'PurchaseItemOrder',
-	emits: ['onOrderSaved', 'onCancel'],
+	name: 'Invoice',
+	emits: ['onReceiptSaved', 'onCancel'],
 	props: {
 		section: {
 			required: true,
@@ -234,7 +234,7 @@ export default {
 		selectedInvoiceType: '0',
 		isMounting: false,
 		refreshDetailForm: false,
-		refreshOrderList: false,
+		refreshReceiptList: false,
 		isSaving: false,
 		details: [],
 		firms: [],
@@ -258,13 +258,12 @@ export default {
 			{ data: "partNo", title: "Parça Kodu", visible: true, },
 			{ data: "partDimensions", title: "Boyutlar", visible: true, },
 			{ data: "quantity", title: "Miktar", visible: true, },
-			{ data: "projectName", title: "Proje", visible: true, },
 			{ data: "forexCode", title: "Döviz", visible: true, },
 			{ data: "unitPrice", title: "Birim Fiyat", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(data); } },
 			{ data: "taxRate", title: "Kdv %", visible: true, },
 			{ data: "overallTotal", title: "Tutar", visible: true, render: function (data, ev, row) { return new Intl.NumberFormat("tr-TR").format(data); } },
 		],
-		selectedOrderDetail: {
+		selectedReceiptDetail: {
 			id: 0,
 		}
 	}),
@@ -273,8 +272,8 @@ export default {
 			get: function () {
 				if (this.details && this.details.length > 0) {
 					const subTotal = this.details.map(d =>
-						(d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice)
-						+ (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * d.unitPrice) : d.unitPrice) * (d.taxRate / 100.0)))
+						(d.forexId && d.forexId > 0 ? (d.forexRate * (d.unitPrice * d.quantity)) : (d.unitPrice * d.quantity))
+						+ (d.taxIncluded == true ? 0 : (d.forexId && d.forexId > 0 ? (d.forexRate * (d.unitPrice * d.quantity)) : (d.unitPrice * d.quantity)) * (d.taxRate / 100.0)))
 						.reduce((a, b) => a + b);
 
 					return new Intl.NumberFormat("tr-TR").format(subTotal);
@@ -287,10 +286,10 @@ export default {
 			get: function () {
 				if (this.details && this.details.length > 0) {
 					const subTotal = this.details.map(d =>
-						(d.forexId && d.forexId > 0 ? d.unitPrice : 0)
-						+ (d.taxIncluded == true ? d.unitPrice : (d.unitPrice * (d.taxRate / 100.0)))
+						(d.forexId && d.forexId > 0 ? (d.unitPrice * d.quantity) : 0)
+						+ (d.taxIncluded == true ? (d.unitPrice * d.quantity) : ((d.unitPrice * d.quantity) * (d.taxRate / 100.0)))
 					).reduce((a, b) => a + b);
-
+					
 					return new Intl.NumberFormat("tr-TR").format(subTotal);
 				}
 
@@ -413,7 +412,7 @@ export default {
 					detailRow.newRecord = true;
 					detailRow.id = detailRow.lineNumber;
 					this.details.push(detailRow);
-					this.showNewOrderDetail();
+					this.showNewReceiptDetail();
 				}
 				else {
 					const existingDetail = this.details.find(d => d.id == detailRow.id);
@@ -519,7 +518,7 @@ export default {
 		},
 		async onDelete() {
 			const self = this;
-			UIkit.modal.confirm('Bu irsaliyeyi silmek istediğinizden emin misiniz?').then(
+			UIkit.modal.confirm('Bu faturayı silmek istediğinizden emin misiniz?').then(
 				async function () {
 					try {
 						const api = useApi();
@@ -540,15 +539,15 @@ export default {
 					}
 				});
 		},
-		removeOrderDetail() {
+		removeReceiptDetail() {
 			const self = this;
 			UIkit.modal.confirm('Seçilen irsaliye kalemini silmek istediğinizden emin misiniz?').then(
 				function () {
-					if (self.selectedOrderDetail) {
-						const foundElement = self.details.find(d => d.id == self.selectedOrderDetail.id);
-						const orderIndex = self.details.indexOf(foundElement);
-						if (orderIndex > -1) {
-							self.details.splice(orderIndex, 1);
+					if (self.selectedReceiptDetail) {
+						const foundElement = self.details.find(d => d.id == self.selectedReceiptDetail.id);
+						const receiptIndex = self.details.indexOf(foundElement);
+						if (receiptIndex > -1) {
+							self.details.splice(receiptIndex, 1);
 
 							let lineNumber = 1;
 							for (let i = 0; i < self.details.length; i++) {
@@ -558,7 +557,7 @@ export default {
 							}
 						}
 
-						self.selectedOrderDetail = { id: 0 };
+						self.selectedReceiptDetail = { id: 0 };
 					}
 				});
 
@@ -574,16 +573,16 @@ export default {
 			}
 			UIkit.notification(text, config);
 		},
-		showNewOrderDetail() {
-			this.selectedOrderDetail = { id: 0 };
-			this.showOrderDetail();
+		showNewReceiptDetail() {
+			this.selectedReceiptDetail = { id: 0 };
+			this.showReceiptDetail();
 		},
-		showOrderDetail() {
+		showReceiptDetail() {
 			try {
 				this.refreshDetailForm = false;
 				setTimeout(() => { this.refreshDetailForm = true; }, 100);
 
-				const modalElement = document.getElementById('dlgOrderDetail');
+				const modalElement = document.getElementById('dlgReceiptDetail');
 				modalElement.width = window.innerWidth * 0.7;
 				modalElement.height = window.innerHeight * 0.8;
 				UIkit.modal(modalElement).show();
@@ -591,19 +590,22 @@ export default {
 
 			}
 		},
+		firmChanged(){
+			this.details = [];
+		},
 		closeDetailDialog() {
-			const modalElement = document.getElementById('dlgOrderDetail');
+			const modalElement = document.getElementById('dlgReceiptDetail');
 			UIkit.modal(modalElement).hide();
 		},
 		clickDetail: function (e, dt, type, indexes) {
 			try {
-				this.selectedOrderDetail = { ...this.details[indexes[0]] };
+				this.selectedReceiptDetail = { ...this.details[indexes[0]] };
 			} catch (error) {
 
 			}
 		},
 		deselectDetail: function () {
-			this.selectedOrderDetail = { id: 0 };
+			this.selectedReceiptDetail = { id: 0 };
 		},
 		onDemandsClosed() {
 			const modalElement = document.getElementById('dlgApprovedDemands');
@@ -612,7 +614,7 @@ export default {
 		async openDemandForm() {
 			try {
 				const api = useApi();
-				const demandDetail = (await api.get('ItemDemand/Detail/' + this.selectedOrderDetail.itemDemandDetailId)).data;
+				const demandDetail = (await api.get('ItemDemand/Detail/' + this.selectedReceiptDetail.itemDemandDetailId)).data;
 				if (demandDetail) {
 					window.open('/purchasing/item-demand?id=' + demandDetail.itemDemandId, '_blank');
 				}
@@ -628,35 +630,35 @@ export default {
 			}
 			return false;
 		},
-		showOpenOrders() {
+		showOpenReceipts() {
 			if (this.fFirmId <= 0) {
-				this.showNotification('Açık siparişleri görüntülemek için önce firma seçmelisiniz.', false, 'error');
+				this.showNotification('Açık irsaliyeleri görüntülemek için önce firma seçmelisiniz.', false, 'error');
 				return;
 			}
 
-			this.refreshOrderList = false;
-			setTimeout(() => { this.refreshOrderList = true; }, 100);
+			this.refreshReceiptList = false;
+			setTimeout(() => { this.refreshReceiptList = true; }, 100);
 
-			const modalElement = document.getElementById('dlgOpenOrders');
+			const modalElement = document.getElementById('dlgOpenReceipts');
 			modalElement.width = window.innerWidth * 0.7;
 			modalElement.height = window.innerHeight * 0.8;
 			UIkit.modal(modalElement).show();
 		},
-		onOrdersSelected(selectedOrders) {
+		onReceiptsSelected(selectedReceipts) {
 			const self = this;
 
-			if (selectedOrders && selectedOrders.length > 0) {
-				for (let i = 0; i < selectedOrders.length; i++) {
-					const orderDetail = selectedOrders[i];
+			if (selectedReceipts && selectedReceipts.length > 0) {
+				for (let i = 0; i < selectedReceipts.length; i++) {
+					const receiptDetail = selectedReceipts[i];
 
 					var newRow = {};
 					newRow.newRecord = true;
-					newRow.itemOrderDetailId = orderDetail.itemOrderDetailId;
-					newRow.itemDemandDetailId = orderDetail.itemDemandDetailId;
-					// newRow.orderConsumes = [
+					newRow.itemReceiptDetailId = receiptDetail.itemReceiptDetailId;
+					newRow.itemDemandDetailId = receiptDetail.itemDemandDetailId;
+					// newRow.receiptConsumes = [
 					//     {
-					//         itemOrderDetailId: orderDetail.id,
-					//         consumeNetQuantity: orderDetail.quantity,
+					//         itemreceiptDetailId: receiptDetail.id,
+					//         consumeNetQuantity: receiptDetail.quantity,
 					//     }
 					// ]
 					// newRow.itemDemandDetailId = demandDetail.id; -- old algorithm
@@ -667,33 +669,33 @@ export default {
 					newRow.lineNumber = totalCount + 1;
 					newRow.id = newRow.lineNumber;
 
-					newRow.itemId = orderDetail.itemId;
-					newRow.itemName = orderDetail.itemName;
-					newRow.quantity = orderDetail.quantity;
-					newRow.projectId = orderDetail.projectId;
-					newRow.forexId = orderDetail.forexId;
-					newRow.forexRate = orderDetail.forexRate;
-					newRow.taxIncluded = orderDetail.taxIncluded;
-					newRow.taxRate = orderDetail.taxRate;
-					newRow.explanation = orderDetail.explanation;
-					newRow.unitId = orderDetail.unitId;
-					newRow.unitPrice = orderDetail.unitPrice;
+					newRow.itemId = receiptDetail.itemId;
+					newRow.itemName = receiptDetail.itemName;
+					newRow.quantity = receiptDetail.quantity;
+					newRow.projectId = receiptDetail.projectId;
+					newRow.forexId = receiptDetail.forexId;
+					newRow.forexRate = receiptDetail.forexRate;
+					newRow.taxIncluded = receiptDetail.taxIncluded;
+					newRow.taxRate = receiptDetail.taxRate;
+					newRow.explanation = receiptDetail.explanation;
+					newRow.unitId = receiptDetail.unitId;
+					newRow.unitPrice = receiptDetail.unitPrice;
 					newRow.receiptStatus = 0;
-					newRow.overallTotal = orderDetail.overallTotal;
-					newRow.forexCode = orderDetail.forexCode;
-					newRow.partNo = orderDetail.partNo;
-					newRow.partDimensions = orderDetail.partDimensions;
-					newRow.projectName = orderDetail.projectName;
-					newRow.itemExplanation = orderDetail.itemExplanation;
+					newRow.overallTotal = receiptDetail.overallTotal;
+					newRow.forexCode = receiptDetail.forexCode;
+					newRow.partNo = receiptDetail.partNo;
+					newRow.partDimensions = receiptDetail.partDimensions;
+					newRow.projectName = receiptDetail.projectName;
+					newRow.itemExplanation = receiptDetail.itemExplanation;
 
 					self.details.push(newRow);
 				}
 			}
 
-			this.onOrdersClosed();
+			this.onReceiptsClosed();
 		},
-		onOrdersClosed() {
-			const modalElement = document.getElementById('dlgOpenOrders');
+		onReceiptsClosed() {
+			const modalElement = document.getElementById('dlgOpenReceipts');
 			UIkit.modal(modalElement).hide();
 		},
 	},

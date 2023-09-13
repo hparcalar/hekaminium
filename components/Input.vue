@@ -145,6 +145,7 @@ export default {
 			this.inputFocused = true;
 			if(this.focus) {
 				this.focus();
+				this.select();
 			}
 			this.$emit('focus');
 		},

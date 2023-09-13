@@ -362,7 +362,7 @@ export default {
 			UIkit.modal(modalElement).hide();
 		},
         async updateLiveForexRate(val){
-            const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+            const reqUri = 'https://hasanadiguzel.com.tr/api/kurgetir';
 
             try {
                 // US DOLLAR, EURO

@@ -136,7 +136,7 @@ export default {
                         return {
                             ...d,
                         };
-                    });
+                    }).filter(x => x.totalQuantity > 0);
             } catch (error) {
 
             }

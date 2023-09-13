@@ -163,6 +163,9 @@
                                                 </button>
                                                 
                                                 <a v-else @click="showPartFileDialog(part)">Yükle</a>
+                                                <button v-if="part.partBase64 && part.partBase64.length > 0" type="button" @click="deleteCuttingAttachment(part)" class="sc-button sc-button-danger sc-button-small btn-focusable">
+                                                    <span :data-uk-icon="'icon: trash'" class="uk-icon"></span>
+                                                </button>
                                             </td>
                                         </tr>
                                     </table>
@@ -257,6 +260,14 @@ export default {
         dialogContainer: {
             type: String,
             default: '',
+        },
+        parentShowPart: {
+            type: Boolean,
+            default: false,
+        },
+        parentPart: {
+            type: Object,
+            default: null,
         }
     },
     emits: ['onDetailSubmit', 'partDialogOpen'],
@@ -312,6 +323,9 @@ export default {
     },
 	async mounted () {
 		await this.bindModel();
+        if(this.parentShowPart == true){
+            this.showPartFileDialog(this.parentPart)
+        }
 	},
 	methods: {
         async bindModel(){
@@ -545,8 +559,21 @@ export default {
         onCloseImage(){
             // const modalElement = document.getElementById('dlgImageAction');
 			// UIkit.modal(modalElement).hide();
+            this.parentShowPart=false;
+            this.partDialogVisible = false;
+            this.parentPart = null;
             this.refreshImageDialog = false;
             
+        },
+        deleteCuttingAttachment(data){
+            var index = this.formData.partList.findIndex(x => x.id == data.id);
+            if (index > -1) {
+                this.formData.partList.splice(index, 1);
+            }
+            this.$emit('onDetailSubmit', {
+                action: 'save',
+                data: this.formData,
+            });
         },
         showNotification (text, pos, status, persistent) {
 			var config = {};

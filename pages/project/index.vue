@@ -7,8 +7,11 @@
                          sc-round sc-border md-bg-grey-100
                     ">
 						<span class="uk-margin-right md-color-gray-600 mdi mdi-office-building"></span>
-						<h4 class="md-color-gray-600 uk-margin-remove">
+						<h4 class="md-color-gray-600 uk-margin-remove uk-width-5-6">
 							Proje Tanımı
+						</h4>
+						<h4 class="md-color-gray-600 uk-margin-remove uk-width-1-6">
+							{{ this.formData.projectName ?? "" }} 
 						</h4>
 					</div>
 					<div>
@@ -195,20 +198,20 @@
 																		:style="{ width: '15%', 'max-width': '15%' }"
 																		:headerStyle="{ width: '15%', 'max-width': '15%' }">
 																		<template #editor="slotProps">
-																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																			<InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
 																		</template>
 																	</Column>
 																	<Column field="partNo" header="Parça Kodu" :style="{ width: '7%', 'max-width': '7%' }"
 																		:headerStyle="{ width: '7%', 'max-width': '7%' }">
 																		<template #editor="slotProps">
-																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																			<InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
 																		</template>
 																	</Column>
 																	<Column field="partDimensions" header="Boyutlar"
 																		:style="{ width: '8%', 'max-width': '8%' }"
 																		:headerStyle="{ width: '8%', 'max-width': '8%' }">
 																		<template #editor="slotProps">
-																			<InputText v-model="slotProps.data[slotProps.column.field]" />
+																			<InputText v-model="slotProps.data[slotProps.column.field]" onFocus="this.select()"/>
 																		</template>
 																	</Column>
 																	<Column field="quantity" header="Miktar" :style="{ width: '7%', 'max-width': '7%' }"
@@ -217,7 +220,7 @@
 																			<InputNumber v-model="slotProps.data[slotProps.column.field]" 
 																				@blur="calculateCostItemRow"
 																				mode="decimal"
-																				:minFractionDigits="2" :maxFracionDigits="2" />
+																				:minFractionDigits="2" :maxFracionDigits="2" onFocus="this.select()"/>
 																		</template>
 																	</Column>
 																	<Column field="forexId" header="Döviz Cinsi" :style="{ width: '10%', 'max-width': '10%' }"
@@ -244,10 +247,10 @@
 																			<InputNumber 
 																				@blur="calculateCostItemRow"
 																				v-model="slotProps.data[slotProps.column.field]" mode="decimal"
-																				:minFractionDigits="2" :maxFracionDigits="2" />
+																				:minFractionDigits="1" :maxFracionDigits="1" onFocus="this.select()"/>
 																		</template>
 																		<template #body="slotProps">
-																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 1 }).format(slotProps.data[slotProps.column.field]) }}
 																		</template>
 																	</Column>
 																	<Column field="forexRate" header="Döviz Kuru" :style="{ width: '10%', 'max-width': '10%' }"
@@ -264,20 +267,20 @@
 																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
 																		<template #editor="slotProps">
 																			<InputNumber :read-only="true" v-model="slotProps.data[slotProps.column.field]" mode="decimal"
-																				:minFractionDigits="2" :maxFracionDigits="2" />
+																				:minFractionDigits="1" :maxFracionDigits="1" />
 																		</template>
 																		<template #body="slotProps">
-																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 1 }).format(slotProps.data[slotProps.column.field]) }}
 																		</template>
 																	</Column>
 																	<Column field="forexOverallTotal" header="Tutar (Döviz)" :style="{ width: '10%', 'max-width': '10%' }"
 																		:headerStyle="{ width: '10%', 'max-width': '10%' }">
 																		<template #editor="slotProps">
 																			<InputNumber :read-only="true" v-model="slotProps.data[slotProps.column.field]" mode="decimal"
-																				:minFractionDigits="2" :maxFracionDigits="2" />
+																				:minFractionDigits="1" :maxFracionDigits="1" />
 																		</template>
 																		<template #body="slotProps">
-																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 2 }).format(slotProps.data[slotProps.column.field]) }}
+																			{{ new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 1 }).format(slotProps.data[slotProps.column.field]) }}
 																		</template>
 																	</Column>
 
@@ -895,7 +898,7 @@ export default {
 		},
 		fOfferPrice: {
 			get: function () {
-				return this.formData.offerPrice > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.offerPrice) : null;
+				return this.formData.offerPrice > 0 ? new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(this.formData.offerPrice) : null;
 			},
 			set: function (val) {
 				if (!val || val.length == 0)
@@ -909,7 +912,7 @@ export default {
 		},
 		fOfferForexPrice: {
 			get: function () {
-				return this.formData.offerForexPrice > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.offerForexPrice) : null;
+				return this.formData.offerForexPrice > 0 ? new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(this.formData.offerForexPrice) : null;
 			},
 			set: function (val) {
 				if (!val || val.length == 0)
@@ -923,19 +926,19 @@ export default {
 		},
 		fTotalCost: {
 			get: function () {
-				return this.formData.totalCost > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.totalCost) : null;
+				return this.formData.totalCost > 0 ? new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(this.formData.totalCost) : null;
 			}
 		},
 		fTotalForexCost: {
 			get: function () {
-				return this.formData.totalForexCost > 0 ? new Intl.NumberFormat("tr-TR").format(this.formData.totalForexCost) : null;
+				return this.formData.totalForexCost > 0 ? new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(this.formData.totalForexCost) : null;
 			}
 		},
 		totalReceiptsLocal: {
 			get: function(){
 				try {
 					const total = this.receiptList.filter(d => d.forexCode.length == 0).map(d => d.overallTotal).reduce((a,b) => a + b);
-					return new Intl.NumberFormat("tr-TR").format(total);
+					return new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(total);
 				} catch (error) {
 				}
 
@@ -946,7 +949,7 @@ export default {
 			get: function(){
 				try {
 					const total = this.receiptList.filter(d => d.forexCode.length > 0).map(d => d.forexOverallTotal).reduce((a,b) => a + b);
-					return new Intl.NumberFormat("tr-TR").format(total);
+					return new Intl.NumberFormat("tr-TR",{ maximumFractionDigits: 1}).format(total);
 				} catch (error) {
 				}
 
@@ -1036,7 +1039,9 @@ export default {
 						};
 					});
 
-					this.formData = getData;				}
+					this.formData = getData;
+					this.updateLiveForexRate(this.formData.forexId);
+				}
 				else {
 					this.formData = {
 						id: 0,
@@ -1534,7 +1539,8 @@ export default {
 				nextNumber = this.formData.costItems.map((d) => d.lineNumber).sort((a,b) => b - a)[0];
 				nextNumber++;
 			}
-			this.selectedCostItemRow = { id: 0, lineNumber: nextNumber, unitPrice:0, forexId: null, quantity:0, forexRate: null, overallTotal: 0, forexOverallTotal: 0 };
+			this.selectedCostItemRow = { id: 0, lineNumber: nextNumber, unitPrice:0, forexId: 2, quantity:0, forexRate: null, overallTotal: 0, forexOverallTotal: 0 };
+			this.updateLiveForexRateOfCostItem(this.selectedCostItemRow.forexId);
 			this.formData.costItems.push(this.selectedCostItemRow);
 		},
 		showCostItem() { // old form function
@@ -1794,7 +1800,8 @@ export default {
 					}
 
 					if (this.formData.forexId && this.formData.forexId > 0 && this.formData.forexRate > 0) {
-						this.formData.totalForexCost = this.formData.totalCost / this.formData.forexRate;
+						//this.formData.totalForexCost = this.formData.totalCost / this.formData.forexRate;
+						this.formData.totalForexCost = this.formData.costItems.map((d) => d.forexOverallTotal).reduce((a, b) => a + b);
 					}
 					else
 						this.formData.totalForexCost = null;
@@ -1817,8 +1824,10 @@ export default {
 			if (this.formData.forexId && this.formData.forexId > 0)
 				forexRate = this.formData.forexRate;
 
-			if (forexRate && forexRate > 0)
-				this.formData.offerForexPrice = this.formData.offerPrice / forexRate;
+			if (forexRate && forexRate > 0 && this.formData.costItems.length > 0){
+				this.formData.offerForexPrice = this.formData.costItems.map((d) => d.forexOverallTotal).reduce((a, b) => a + b)
+				this.formData.offerForexPrice = this.formData.offerForexPrice + (this.formData.offerForexPrice * this.formData.profitRate / 100);
+			}
 			else
 				this.formData.offerForexPrice = null;
 		},
@@ -1841,7 +1850,13 @@ export default {
 				this.formData.offerPrice = this.formData.offerForexPrice * forexRate;
 		},
 		async updateLiveForexRate(val) {
-			const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+			const reqUri = 'https://hasanadiguzel.com.tr/api/kurgetir';
+
+			if(!val > 0){
+				this.formData.forexRate = 1;
+				this.calculateTotal();
+				console.error("tesettt")
+			}
 
 			try {
 				// US DOLLAR, EURO
@@ -1865,7 +1880,12 @@ export default {
 			}
 		},
 		async updateLiveForexRateOfCostItem(val) {
-			const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+			const reqUri = 'https://hasanadiguzel.com.tr/api/kurgetir';
+
+			if(!val > 0){
+				this.selectedCostItemRow.forexRate = 1;
+				this.calculateCostItemRow();
+			}
 
 			try {
 				// US DOLLAR, EURO

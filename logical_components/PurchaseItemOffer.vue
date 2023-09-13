@@ -986,7 +986,7 @@ export default {
         async updateLiveForexRate(val, detail, firmId) {
             const firmPrice = this.getFirmPriceOfDetail(detail, firmId);
 
-            const reqUri = 'http://hasanadiguzel.com.tr/api/kurgetir';
+            const reqUri = 'https://hasanadiguzel.com.tr/api/kurgetir';
 
             try {
                 // US DOLLAR, EURO

@@ -53,6 +53,21 @@
                       <label>Adresi</label>
                     </ScInput>
                   </div>
+                  <div class="uk-width-1-2@m">
+                    <ScInput v-model="formData.dateOfStart" :config="{ wrap: true, dateFormat: 'Y-m-d' }" v-flatpickr mode="outline">
+                      <label>Başlangıç Tarihi</label>
+                    </ScInput>
+                  </div>
+                  <div class="uk-width-1-2@m">
+                    <ScInput v-model="formData.severancePay" read-only>
+                      <label>Kıdem Tazminatı Tutarı</label>
+                    </ScInput>
+                  </div>
+                  <div class="uk-width-1-2@m">
+                    <ScInput v-model="formData.dateOfEnd" :config="{ wrap: true, dateFormat: 'Y-m-d' }" v-flatpickr mode="outline">
+                      <label>İşten Ayrılma Tarihi</label>
+                    </ScInput>
+                  </div>
                 </div>
               </fieldset>
   
@@ -86,6 +101,7 @@
   import { useApi } from '~/composable/useApi';
   import { getQS } from '~/composable/useHelpers';
   import { useUserSession } from '~/composable/userSession';
+  import { dateToStr, strToDate } from "~/composable/useHelpers";
   import moment from '~/plugins/moment'
   
   if (process.client) {
@@ -112,6 +128,8 @@
         employeePhone: null,
         employeeAddress: null,
         departmentId: null,
+        dateOfStart: null,
+        dateOfEnd: null
       },
       departments: [],
     }),
@@ -138,6 +156,8 @@
             })
           if (getData) {
             this.formData = getData;
+            this.formData.dateOfStart = this.formData.dateOfStart.substring(0,10)
+            this.formData.dateOfEnd = this.formData.dateOfEnd.substring(0,10)
           }
         } catch (error) {
   
@@ -188,6 +208,9 @@
   
             }
           });
+      },
+      convertDateToStr(prm) {
+        return dateToStr(prm)
       },
       showNotification(text, pos, status, persistent) {
         var config = {};

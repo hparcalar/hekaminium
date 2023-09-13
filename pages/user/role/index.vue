@@ -188,6 +188,12 @@ export default {
 					{ sectionKey: 'Application', title: 'Uygulama Ayarları', canRead: false, canWrite: false, canDelete: false, },
 				]
 			},
+			{
+				sectionKey: 'CarManagementSection', title: 'Araç Yönetimi', canRead: false, canWrite: false, canDelete: false,
+				children: [
+					{ sectionKey: 'CarService', title: 'Araç Servisi', canRead: false, canWrite: false, canDelete: false, },
+				]
+			},
 		]
 	}),
 	computed: {
