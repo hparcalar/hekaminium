@@ -552,6 +552,15 @@ export const menuEntries = [
   },
   {
     id: uniqueID(),
+    title: "Remote Ofis",
+    page: "/remote-office",
+    icon: "mdi mdi-tune",
+    visible: function () {
+      return checkAuth("Application");
+    },
+  },
+  {
+    id: uniqueID(),
     title: "Veri Yedekleme",
     page: "/backup",
     icon: "mdi mdi-backup-restore",

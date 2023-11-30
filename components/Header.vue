@@ -604,7 +604,7 @@ export default {
 	},
 	methods: {
 		requestSpeech(){
-			this.initSpeechApi();
+			// this.initSpeechApi();
 			this.requestMic();
 
 		},
@@ -731,38 +731,38 @@ export default {
 				console.log(error);
 			}
 		},
-		initSpeechApi(){
-			try {
-				const self = this;
-				this.$google.api.load('auth2', {
-					callback: function(dg) {
-						self.$google.api.client.init({
-							apiKey: 'AIzaSyD7Qg97gRwKeoqCpjACKTsLzV0vTdSAPOw',
-							clientId: '756662015988-6s0gq2tj2v0mbu3lmiigsdnnul89ec71.apps.googleusercontent.com',
-							discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4','https://speech.googleapis.com/$discovery/rest?version=v1'],
-							scope: "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/cloud-platform",
-							plugin_name: 'chat',
-						}).then(function(){
-							const authIns = self.$google.api.auth2.getAuthInstance();
-							if (!authIns.isSignedIn.get() || authIns.currentUser.Oa.uv.gw != 'heka@progenar.com'){
-								authIns.signIn();
-							}
-						});
-					},
-					onerror: function() {
-						// Handle loading error.
-						// alert('gapi.client failed to load!');
-					},
-					timeout: 5000, // 5 seconds.
-					ontimeout: function() {
-						// Handle timeout.
-						// alert('gapi.client could not load in a timely manner!');
-					}
-				});
-			} catch (error) {
+		// initSpeechApi(){
+		// 	try {
+		// 		const self = this;
+		// 		this.$google.api.load('auth2', {
+		// 			callback: function(dg) {
+		// 				self.$google.api.client.init({
+		// 					apiKey: 'AIzaSyD7Qg97gRwKeoqCpjACKTsLzV0vTdSAPOw',
+		// 					clientId: '756662015988-6s0gq2tj2v0mbu3lmiigsdnnul89ec71.apps.googleusercontent.com',
+		// 					discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4','https://speech.googleapis.com/$discovery/rest?version=v1'],
+		// 					scope: "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/cloud-platform",
+		// 					plugin_name: 'chat',
+		// 				}).then(function(){
+		// 					const authIns = self.$google.api.auth2.getAuthInstance();
+		// 					if (!authIns.isSignedIn.get() || authIns.currentUser.Oa.uv.gw != 'heka@progenar.com'){
+		// 						authIns.signIn();
+		// 					}
+		// 				});
+		// 			},
+		// 			onerror: function() {
+		// 				// Handle loading error.
+		// 				// alert('gapi.client failed to load!');
+		// 			},
+		// 			timeout: 5000, // 5 seconds.
+		// 			ontimeout: function() {
+		// 				// Handle timeout.
+		// 				// alert('gapi.client could not load in a timely manner!');
+		// 			}
+		// 		});
+		// 	} catch (error) {
 				
-			}
-		},
+		// 	}
+		// },
 		toggleMainSidebar () {
 			let state = !this.sidebarMainExpanded;
 			this.$store.commit('sidebarMainToggle', state);
